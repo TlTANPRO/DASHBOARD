@@ -166,14 +166,14 @@ async function main() {
     try {
       await req("PATCH", `/v1/databases/${DBS.kpi}`, {
         properties: {
-          "KPI": { title: {} },
+          "KPI": { rich_text: {} },
           "Tipe": { select: { options: [
             { name: "Personal", color: "blue" },
             { name: "Divisi", color: "green" }
           ]}}
         }
       });
-      console.log("  + Added 'KPI' (title) + 'Tipe' (Personal/Divisi)");
+      console.log("  + Added 'KPI' (rich_text) + 'Tipe' (Personal/Divisi)");
     } catch (e) {
       console.error("  FAIL add properties:", e.message);
       return;
@@ -223,7 +223,7 @@ async function main() {
     try {
       await req("PATCH", `/v1/pages/${r.id}`, {
         properties: {
-          "KPI": { title: [{ text: { content: r.kpiName } }] },
+          "KPI": { rich_text: [{ text: { content: r.kpiName } }] },
           "KPI ID": { title: [{ text: { content: slug } }] },
           "Tipe": { select: { name: "Personal" } },
         }
@@ -277,7 +277,7 @@ async function main() {
         parent: { database_id: DBS.kpi },
         properties: {
           "KPI ID": { title: [{ text: { content: slug } }] },
-          "KPI": { title: [{ text: { content: d.nama } }] },
+          "KPI": { rich_text: [{ text: { content: d.nama } }] },
           "PIC": { select: { name: d.pic } },
           "Divisi": { select: { name: d.divisi } },
           "Periode": { select: { name: "Bulanan" } },
@@ -287,7 +287,7 @@ async function main() {
           "Status": { select: { name: "On Track" } },
           "Tipe": { select: { name: "Divisi" } },
           "Catatan": { rich_text: [{ text: { content: `[Divisi] ${d.note}` } }] },
-          "Edit_Time": { rich_text: [{ text: { content: new Date().toISOString() } }] },
+          "Edit_Time": { rich_text: [{ text: { content: process.env.MIGRATION_TS || "" } }] },
         }
       });
       console.log(`  [${i+1}/${DIVISI_KPI.length}] + ${d.nama}`);
