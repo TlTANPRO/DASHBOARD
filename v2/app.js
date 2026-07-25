@@ -1167,26 +1167,9 @@ function renderLeaderboard() {
 }
 
 // ============================================================
-// 03 KPI SCORE CARD
+// 03 KPI SCORE CARD (deprecated V2.1 — content moved to Referensi accordion in index.html)
 // ============================================================
-function renderKPI5D() {
-  const dim = [
-    {nama: "Hasil", bobot: "40%", desc: "Output terukur (closing, lead, progres, konten)"},
-    {nama: "Peran", bobot: "20%", desc: "Cross-support + cover role + generalis"},
-    {nama: "Kompetisi", bobot: "15%", desc: "Ranking leaderboard internal divisi"},
-    {nama: "Disiplin", bobot: "15%", desc: "Tertib + SOP + dashboard updated"},
-    {nama: "Growth", bobot: "10%", desc: "Improvement skill + coaching + cert baru"},
-  ];
-  $("#kpi-dimensi").innerHTML = dim.map(d => `
-    <div class="bento-card span-4">
-      <div class="bento-eyebrow">Dimensi ${dim.indexOf(d)+1}</div>
-      <div style="display:flex;align-items:baseline;gap:var(--space-3);flex-wrap:wrap">
-        <div class="bento-title" style="margin-bottom:0">${d.nama}</div>
-        <div style="font-family:var(--font-mono);color:var(--accent);font-weight:600">${d.bobot}</div>
-      </div>
-      <div class="bento-foot" style="margin-top:var(--space-2)">${d.desc}</div>
-    </div>`).join('');
-}
+function renderKPI5D() { /* no-op: 5D dim shown in Referensi section */ }
 
 // ============================================================
 // FILTER BAR WIRE-UP
@@ -1336,7 +1319,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   fillPICDropdowns();
 
   // V1 sections (always render)
-  renderPIC(); renderKPI5D();
+  renderPIC();
 
   // V2 sections (after seed + login)
   seedDemo();
