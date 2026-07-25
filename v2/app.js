@@ -60,14 +60,16 @@ function showLoginModal() {
   openModal("Login Dashboard V2", `
     <form id="login-form">
       <div class="form-row">
-        <label>Pilih PIC</label>
+        <label>Pilih PIC
         <select class="select" name="pic" required>
           ${cfg.picList.map(p => `<option value="${p}">${p}</option>`).join("")}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>PIN (4-6 digit)</label>
+        <label>PIN (4-6 digit)
         <input class="input" type="password" name="pin" inputmode="numeric" maxlength="6" pattern="[0-9]{4,6}" required />
+        </label>
       </div>
       <p class="muted" style="font-size:0.75rem;margin-bottom:var(--space-3)">
         Mode <strong>${cfg.mode}</strong>. Mode demo: PIN apapun diterima. Mode live: Worker verify via /auth/login.
@@ -557,55 +559,65 @@ function kpiFormHTML(r = {}) {
   return `<form id="kpi-form">
     <div class="form-grid">
       <div class="form-row">
-        <label>KPI ID</label>
+        <label>KPI ID
         <input class="input" name="kpiId" value="${r["KPI ID"] || r.kpiId || "KPI-2026-" + Date.now().toString().slice(-4)}" required />
+        </label>
       </div>
       <div class="form-row">
-        <label>PIC</label>
+        <label>PIC
         <select class="select" name="PIC" required>
           ${sel(r.PIC || Session.pic, cfg.picList)}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Divisi</label>
+        <label>Divisi
         <select class="select" name="Divisi" required>
           ${sel(r.Divisi || "", cfg.divisiList)}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Periode</label>
+        <label>Periode
         <select class="select" name="Periode" required>
           ${sel(r.Periode || "Mingguan", ["Mingguan", "Bulanan", "Kuartalan"])}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Target</label>
+        <label>Target
         <input class="input" type="number" name="Target" value="${r.Target || 0}" required />
+        </label>
       </div>
       <div class="form-row">
-        <label>Realisasi</label>
+        <label>Realisasi
         <input class="input" type="number" name="Realisasi" value="${r.Realisasi || 0}" required />
+        </label>
       </div>
       <div class="form-row">
-        <label>Satuan</label>
+        <label>Satuan
         <select class="select" name="Satuan">
           ${sel(r.Satuan || "%", ["%", "Unit", "Rp", "Closing", "Lead", "Jam"])}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Status</label>
+        <label>Status
         <select class="select" name="Status">
           ${sel(r.Status || "On Track", ["On Track", "At Risk", "Off Track", "Achieved"])}
         </select>
+        </label>
       </div>
     </div>
     <div class="form-row">
-      <label>Catatan</label>
+      <label>Catatan
       <textarea class="textarea" name="Catatan">${r.Catatan || ""}</textarea>
+      </label>
     </div>
     <div class="form-row">
-      <label>Bukti (URL)</label>
+      <label>Bukti (URL)
       <input class="input" type="url" name="Bukti" value="${r.Bukti || ""}" />
+      </label>
     </div>
     <div style="display:flex;gap:var(--space-2);justify-content:flex-end;margin-top:var(--space-4)">
       <button type="button" class="btn btn-ghost" id="form-cancel">Batal</button>
@@ -731,58 +743,69 @@ function progFormHTML(r = {}) {
   return `<form id="prog-form">
     <div class="form-grid">
       <div class="form-row">
-        <label>Program ID</label>
+        <label>Program ID
         <input class="input" name="programId" value="${r["Program ID"] || r.programId || "PROG-2026-" + Date.now().toString().slice(-4)}" required />
+        </label>
       </div>
       <div class="form-row">
-        <label>PIC Penanggung Jawab</label>
+        <label>PIC Penanggung Jawab
         <select class="select" name="pic" required>
           ${cfg.picList.map(p => `<option ${r.pic === p ? "selected" : ""}>${p}</option>`).join("")}
         </select>
+        </label>
       </div>
       <div class="form-row" style="grid-column:1/-1">
-        <label>Nama Program</label>
+        <label>Nama Program
         <input class="input" name="nama" value="${r.nama || ""}" required />
+        </label>
       </div>
       <div class="form-row">
-        <label>Quarter</label>
+        <label>Quarter
         <select class="select" name="Quarter">
           <option ${r.Quarter === "Q1" ? "selected" : ""}>Q1</option>
           <option ${r.Quarter === "Q2" ? "selected" : ""}>Q2</option>
           <option ${r.Quarter === "Q3" ? "selected" : ""}>Q3</option>
           <option ${r.Quarter === "Q4" ? "selected" : ""}>Q4</option>
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Tahun</label>
+        <label>Tahun
         <input class="input" type="number" name="Tahun" value="${r.Tahun || 2026}" />
+        </label>
       </div>
       <div class="form-row">
-        <label>Tanggal Mulai</label>
+        <label>Tanggal Mulai
         <input class="input" type="date" name="Mulai" value="${r.Mulai || todayISO()}" />
+        </label>
       </div>
       <div class="form-row">
-        <label>Deadline</label>
+        <label>Deadline
         <input class="input" type="date" name="Deadline" value="${r.Deadline || ""}" />
+        </label>
       </div>
       <div class="form-row">
-        <label>Progress (%)</label>
+        <label>Progress (%)
         <input class="input" type="number" min="0" max="100" name="Progress" value="${r.Progress || 0}" />
+        </label>
       </div>
       <div class="form-row">
-        <label>Status</label>
+        <label>Status
         <select class="select" name="Status">
           ${["Planning", "On Track", "At Risk", "Delayed", "Done", "Cancelled"].map(s => `<option ${r.Status === s ? "selected" : ""}>${s}</option>`).join("")}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Budget (Rp)</label>
+        <label>Budget (Rp)
         <input class="input" type="number" name="budget" value="${r.budget || 0}" />
+        </label>
       </div>
     </div>
     <div class="form-row">
-      <label>Risiko</label>
+      <label>Risiko
       <textarea class="textarea" name="risiko">${r.risiko || ""}</textarea>
+      </label>
     </div>
     <div style="display:flex;gap:var(--space-2);justify-content:flex-end;margin-top:var(--space-4)">
       <button type="button" class="btn btn-ghost" id="form-cancel">Batal</button>
@@ -945,61 +968,72 @@ function jobFormHTML(r = {}) {
   return `<form id="job-form">
     <div class="form-grid">
       <div class="form-row">
-        <label>Jobdesk ID</label>
+        <label>Jobdesk ID
         <input class="input" name="jobdeskId" value="${r["Jobdesk ID"] || r.jobdeskId || "JOB-" + todayISO().replace(/-/g, "") + "-" + (Session.pic || "X").split(" ")[0] + "-" + Date.now().toString().slice(-3)}" required />
+        </label>
       </div>
       <div class="form-row">
-        <label>PIC</label>
+        <label>PIC
         <select class="select" name="PIC" required>
           ${cfg.picList.map(p => `<option ${r.PIC === p || (!r.PIC && p === Session.pic) ? "selected" : ""}>${p}</option>`).join("")}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Tanggal</label>
+        <label>Tanggal
         <input class="input" type="date" name="Tanggal" value="${r.Tanggal || todayISO()}" required />
+        </label>
       </div>
       <div class="form-row">
-        <label>Kategori</label>
+        <label>Kategori
         <select class="select" name="Kategori">
           ${["Harian", "Mingguan", "Bulanan"].map(s => `<option ${r.Kategori === s ? "selected" : ""}>${s}</option>`).join("")}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Prioritas</label>
+        <label>Prioritas
         <select class="select" name="Prioritas">
           ${["P1", "P2", "P3"].map(s => `<option ${r.Prioritas === s ? "selected" : ""}>${s}</option>`).join("")}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Status</label>
+        <label>Status
         <select class="select" name="Status">
           ${["To Do", "In Progress", "Done", "Blocked"].map(s => `<option ${r.Status === s ? "selected" : ""}>${s}</option>`).join("")}
         </select>
+        </label>
       </div>
       <div class="form-row">
-        <label>Approval</label>
+        <label>Approval
         <select class="select" name="Approval">
           ${["Pending", "Approved", "Rejected"].map(s => `<option ${(r.Approval || "Pending") === s ? "selected" : ""}>${s}</option>`).join("")}
         </select>
+        </label>
       </div>
     </div>
     <div class="form-row">
-      <label>Jobdesk</label>
+      <label>Jobdesk
       <textarea class="textarea" name="Jobdesk" required>${r.Jobdesk || r.jobdesk || ""}</textarea>
+      </label>
     </div>
     <div class="form-grid">
       <div class="form-row">
-        <label>Target Output</label>
+        <label>Target Output
         <textarea class="textarea" name="target">${r.target || r["Target Output"] || ""}</textarea>
+        </label>
       </div>
       <div class="form-row">
-        <label>Actual Output</label>
+        <label>Actual Output
         <textarea class="textarea" name="actual">${r.actual || r["Actual Output"] || ""}</textarea>
+        </label>
       </div>
     </div>
     <div class="form-row">
-      <label>Bukti (URL)</label>
+      <label>Bukti (URL)
       <input class="input" type="url" name="Bukti" value="${r.Bukti || ""}" />
+      </label>
     </div>
     <div style="display:flex;gap:var(--space-2);justify-content:flex-end;margin-top:var(--space-4)">
       <button type="button" class="btn btn-ghost" id="form-cancel">Batal</button>
