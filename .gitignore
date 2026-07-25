@@ -5,3 +5,6 @@ __pycache__/
 
 # V2 secrets (real config)
 v2/config.js
+
+# Notion setup output (regenerate dengan create-notion-dbs.js)
+scripts/notion-ids.json

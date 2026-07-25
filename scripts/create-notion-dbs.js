@@ -67,7 +67,7 @@ function textProp(name) { return { [name]: { rich_text: {} } }; }
 function numProp(name) { return { [name]: { number: { format: "number" } } }; }
 function dateProp(name) { return { [name]: { date: {} } }; }
 function urlProp(name) { return { [name]: { url: {} } }; }
-function titleProp(name) { return [name]: { title: {} } };
+function titleProp(name) { return { [name]: { title: {} } }; }
 
 const SCHEMAS = {
   kpi: {
@@ -162,41 +162,27 @@ async function main() {
   } catch (e) { console.log("  search fail (lanjut create):", e.message); }
 
   if (!parentPageId) {
-    console.log("Step 2: create parent page...");
+    console.log("Step 2: cari halaman yang sudah di-share ke integration...");
     try {
-      const page = await req("POST", "/v1/pages", {
-        parent: { type: "workspace", workspace: true },
-        properties: {
-          title: { title: [{ text: { content: "DASHBOARD PERUSAHAAN V2" } }] },
-        },
-        children: [
-          {
-            object: "block",
-            type: "heading_1",
-            heading_1: {
-              rich_text: [{ type: "text", text: { content: "Database Operasional — 12 PIC" } }],
-            },
-          },
-          {
-            object: "block",
-            type: "paragraph",
-            paragraph: {
-              rich_text: [{ type: "text", text: { content: "4 inline DB di bawah. Edit via Notion atau via Dashboard V2." } }],
-            },
-          },
-        ],
+      const search = await req("POST", "/v1/search", {
+        page_size: 50,
+        filter: { value: "page", property: "object" },
       });
-      parentPageId = page.id;
-      console.log("  Created:", parentPageId);
-    } catch (e) {
-      console.error("FAIL create page:", e.message);
-      console.error("\nFallback: bikin manual di Notion. Share page ke integration 'Dashboard V2'.");
-      console.error("Lanjut step 3, paste parentPageId manual.\n");
-      parentPageId = process.argv[2];
-      if (!parentPageId) {
-        console.error("Usage: node create-notion-dbs.js <parent_page_id>");
-        process.exit(1);
+      if (search.results.length > 0) {
+        parentPageId = search.results[0].id;
+        const t = search.results[0].properties?.title?.title?.[0]?.plain_text || "(untitled)";
+        console.log("  Found accessible page:", parentPageId, "|", t);
+        console.log("  Using as parent (4 DB akan dibuat di dalam page ini).");
+      } else {
+        throw new Error("No page accessible. Share satu page ke integration dulu.");
       }
+    } catch (e) {
+      console.error("FAIL:", e.message);
+      console.error("\nCara fix:");
+      console.error("1. Buka Notion web, bikin page baru (mis. 'DASHBOARD')");
+      console.error("2. Click ... di page -> Connections -> add 'Dashboard V2'");
+      console.error("3. Re-run script");
+      process.exit(1);
     }
   }
 
