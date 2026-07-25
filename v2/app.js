@@ -1327,67 +1327,10 @@ function refreshAll() {
   loadProgram();
   loadJobdesk();
   loadSOW();
-  renderLeaderboard();
+  // renderLeaderboard() disabled — section hidden
   if (Session.isOwner()) renderMasterView();
   renderAlertBadge();
   renderAlertPanel($("#alerts-list"));
-  updateHeroStats();
-}
-
-async function updateHeroStats() {
-  const cfg = window.DASHBOARD_CONFIG;
-  // Skip when DEMO mode (no Worker)
-  if (cfg.mode !== "live") return;
-  // Fetch counts from each DB in parallel
-  const ids = cfg.databases;
-  const counts = {};
-  await Promise.all(Object.entries(ids).map(async ([key, id]) => {
-    try {
-      const res = await fetch(cfg.workerBase + "/notion/v1/databases/" + id + "/query", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Notion-Version": cfg.notionVersion,
-        },
-        body: JSON.stringify({ page_size: 100 }),
-      });
-      const data = await res.json();
-      counts[key] = (data.results || []).length;
-    } catch (e) { counts[key] = 0; }
-  }));
-  // Update hero stat
-  const elKpiCount = $("#kpi-count");
-  const elProgCount = $("#prog-count");
-  const elJobCount = $("#job-count");
-  const elSowCount = $("#sow-count");
-  const elDbCount = $("#db-count");
-  if (elKpiCount) elKpiCount.textContent = counts.kpi + " data";
-  if (elProgCount) elProgCount.textContent = counts.program + " program";
-  if (elJobCount) elJobCount.textContent = counts.jobdesk + " jobdesk";
-  if (elSowCount) elSowCount.textContent = counts.sow + " SOW";
-  if (elDbCount) elDbCount.textContent = "4";
-  // Coverage: count unique PIC yang punya jobdesk hari ini / 12
-  let coveredPics = 0;
-  try {
-    const today = todayISO();
-    const r = await fetch(cfg.workerBase + "/notion/v1/databases/" + ids.jobdesk + "/query", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Notion-Version": cfg.notionVersion,
-      },
-      body: JSON.stringify({ page_size: 100, filter: { property: "Tanggal", date: { equals: today } } }),
-    });
-    const d = await r.json();
-    const pics = new Set((d.results || [])
-      .map(x => (x.properties && x.properties["PIC"] && x.properties["PIC"].select && x.properties["PIC"].select.name) || null)
-      .filter(Boolean));
-    coveredPics = pics.size;
-  } catch (e) { coveredPics = 0; }
-  const cov = $("#coverage-value");
-  const covFoot = $("#coverage-foot");
-  if (cov) cov.textContent = coveredPics + "/12";
-  if (covFoot) covFoot.textContent = "PIC input jobdesk hari ini";
 }
 
 function toggleOwnerUI() {

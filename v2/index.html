@@ -904,7 +904,6 @@ footer a:hover { color: var(--accent-hover); }
         <span id="session-text">Belum login</span>
         <button id="login-btn" type="button">Login</button>
       </span>
-      <a href="../" class="session-pill" style="text-decoration:none">↩ Arsip</a>
     </div>
   </div>
 </header>
@@ -921,7 +920,6 @@ footer a:hover { color: var(--accent-hover); }
       <a class="nav-link" href="#v2-sow">SOW</a>
       <a class="nav-link" href="#alerts">Alerts</a>
       <a class="nav-link owner-only" id="nav-master" href="#v2-master" hidden>Master Control</a>
-      <a class="nav-link" href="#leaderboard">Leaderboard</a>
     </div>
   </div>
 </nav>
@@ -932,29 +930,6 @@ footer a:hover { color: var(--accent-hover); }
 <section class="hero" id="hero">
   <div class="hero-eyebrow">Live · 25 Juli 2026</div>
   <h1 class="hero-title">Dashboard <em>Syahfalah</em></h1>
-  <p class="hero-sub">Dashboard internal PT Syahfalah Global + Lembayung Wanantara Padha. Notion sebagai database, dashboard sebagai viewer + editor. 12 PIC, 4 divisi, CRUD penuh untuk KPI, SOW, Program Kerja, Jobdesk Harian.</p>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-label">PIC</div>
-      <div class="hero-stat-value tnum">12</div>
-      <div class="hero-stat-foot">2 owner + 1 chief + 9 staff</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-label">Notion DB</div>
-      <div class="hero-stat-value tnum" id="db-count">4</div>
-      <div class="hero-stat-foot">KPI · SOW · Program · Jobdesk</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-label">Mode</div>
-      <div class="hero-stat-value tnum" id="mode-label" style="font-size:1.25rem">DEMO</div>
-      <div class="hero-stat-foot" id="mode-foot">Belum terhubung ke Notion</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-label">Coverage</div>
-      <div class="hero-stat-value success tnum" id="coverage-value">—</div>
-      <div class="hero-stat-foot" id="coverage-foot">PIC dengan data lengkap</div>
-    </div>
-  </div>
 </section>
 
 <!-- STRUKTUR -->
@@ -1127,25 +1102,19 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
-<!-- LEADERBOARD -->
-<section class="section" id="leaderboard">
+<!-- LEADERBOARD (hidden per user request 25 Jul) -->
+<section class="section hide" id="leaderboard" hidden>
   <div class="section-label">
     <h2 class="section-title">Leaderboard</h2>
-    <span class="section-sub">Peringkat PIC per divisi</span>
   </div>
-  <div id="leaderboard-grid">
-    <p class="muted">Memuat…</p>
-  </div>
+  <div id="leaderboard-grid"></div>
 </section>
 
 </main>
 
 <footer>
-  <div>Dashboard Syahfalah · PT Syahfalah Global + Lembayung Wanantara Padha</div>
   <div class="meta">
-    <span id="footer-version">v2.1 · 25 Jul 2026</span>
-    <span>·</span>
-    <span>Notion + Cloudflare Worker + GitHub Pages</span>
+    <span id="footer-version">v2.1</span>
   </div>
 </footer>
 
