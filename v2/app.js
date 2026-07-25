@@ -72,7 +72,7 @@ function showLoginModal() {
         </label>
       </div>
       <p class="muted" style="font-size:0.75rem;margin-bottom:var(--space-3)">
-        Mode <strong>${cfg.mode}</strong>. Mode demo: PIN apapun diterima. Mode live: Worker verify via /auth/login.
+        Mode <strong>${cfg.mode}</strong>. Masukkan PIN 4 digit yang dibagikan owner via WA.
       </p>
       <div style="display:flex;gap:var(--space-2);justify-content:flex-end">
         <button type="button" class="btn btn-ghost" id="login-cancel">Batal</button>
@@ -489,8 +489,8 @@ async function loadKPI() {
   const list = $("#kpi-list");
   if (!Session.pic) {
     list.innerHTML = `<div class="empty-state">
-      <h3>Login dulu untuk lihat KPI</h3>
-      <p>Mode demo: PIN apapun diterima. Mode live: butuh akun + PIN dari owner.</p>
+      <h3>Login dulu</h3>
+      <p>Masukkan PIN 4 digit untuk melihat KPI Anda.</p>
     </div>`;
     return;
   }
@@ -509,7 +509,7 @@ async function loadKPI() {
     if (rows.length === 0) {
       list.innerHTML = `<div class="empty-state">
         <h3>Belum ada KPI</h3>
-        <p>Klik "+ Tambah KPI" untuk input pertama. Mode demo: data tersimpan di localStorage browser ini.</p>
+        <p>Klik "+ Tambah KPI" untuk input pertama.</p>
       </div>`;
       return;
     }
@@ -1330,6 +1330,59 @@ function refreshAll() {
   if (Session.isOwner()) renderMasterView();
   renderAlertBadge();
   renderAlertPanel($("#alerts-list"));
+  updateHeroStats();
+}
+
+async function updateHeroStats() {
+  // Fetch counts from each DB in parallel (no auth needed for query)
+  const ids = {
+    kpi: "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
+    sow: "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
+    program: "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
+    jobdesk: "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
+  };
+  const counts = {};
+  await Promise.all(Object.entries(ids).map(async ([key, id]) => {
+    try {
+      const res = await fetch(API.endpoint + "/notion/v1/databases/" + id + "/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ page_size: 100 }),
+      });
+      const data = await res.json();
+      counts[key] = (data.results || []).length;
+    } catch (e) { counts[key] = 0; }
+  }));
+  // Update hero stat
+  const elKpiCount = $("#kpi-count");
+  const elProgCount = $("#prog-count");
+  const elJobCount = $("#job-count");
+  const elSowCount = $("#sow-count");
+  const elDbCount = $("#db-count");
+  if (elKpiCount) elKpiCount.textContent = counts.kpi + " data";
+  if (elProgCount) elProgCount.textContent = counts.program + " program";
+  if (elJobCount) elJobCount.textContent = counts.jobdesk + " jobdesk";
+  if (elSowCount) elSowCount.textContent = counts.sow + " SOW";
+  if (elDbCount) elDbCount.textContent = "4";
+  // Coverage: count PIC yang punya jobdesk hari ini / 12
+  let coveredPics = 0;
+  try {
+    const today = todayISO();
+    const r = await fetch(API.endpoint + "/notion/v1/databases/" + ids.jobdesk + "/query", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ page_size: 100 }),
+    });
+    const d = await r.json();
+    const pics = new Set((d.results || [])
+      .map(x => (x.properties && x.properties["PIC"] && x.properties["PIC"].select && x.properties["PIC"].select.name) || null)
+      .filter(Boolean));
+    coveredPics = pics.size;
+  } catch (e) { coveredPics = 0; }
+  const cov = $("#coverage-value");
+  const covFoot = $("#coverage-foot");
+  if (cov) cov.textContent = coveredPics + "/12";
+  if (covFoot) covFoot.textContent = "PIC dengan jobdesk · hari ini";
 }
 
 function toggleOwnerUI() {

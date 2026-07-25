@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<title>DASHBOARD PERUSAHAAN V2 — PT Syahfalah + Lembayung</title>
-<meta name="description" content="Dashboard operasional V2 — Notion-backed. 12 PIC, KPI Tracker, SOW, Program Kerja, Jobdesk Harian." />
+<title>Dashboard Syahfalah — Internal PT Syahfalah + Lembayung</title>
+<meta name="description" content="Dashboard internal PT Syahfalah Global + Lembayung Wanantara Padha. Notion sebagai database, dashboard sebagai viewer + editor. 12 PIC, 4 divisi, CRUD penuh untuk KPI, SOW, Program Kerja, Jobdesk Harian." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%231F4E79'/%3E%3Ctext x='12' y='16' text-anchor='middle' font-family='monospace' font-size='10' fill='white' font-weight='bold'%3EDP2%3C/text%3E%3C/svg%3E" />
 <style>
 /* === V2.1 DESIGN TOKENS (25 Jul 2026) === */
@@ -890,8 +890,8 @@ footer a:hover { color: var(--accent-hover); }
     <div class="brand">
       <div class="brand-mark">DP2</div>
       <div class="brand-text">
-        <div class="brand-name">DASHBOARD PERUSAHAAN V2</div>
-        <div class="brand-sub">PT Syahfalah + Lembayung · 25 Jul 2026</div>
+        <div class="brand-name">Dashboard Syahfalah</div>
+        <div class="brand-sub">PT Syahfalah Global + Lembayung · 25 Jul 2026</div>
       </div>
     </div>
     <div style="display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap">
@@ -904,7 +904,7 @@ footer a:hover { color: var(--accent-hover); }
         <span id="session-text">Belum login</span>
         <button id="login-btn" type="button">Login</button>
       </span>
-      <a href="../" class="session-pill" style="text-decoration:none">↩ V1</a>
+      <a href="../" class="session-pill" style="text-decoration:none">↩ Arsip</a>
     </div>
   </div>
 </header>
@@ -913,21 +913,15 @@ footer a:hover { color: var(--accent-hover); }
 <nav class="nav" aria-label="Section navigation">
   <div class="shell">
     <div class="nav-inner">
-      <a class="nav-link" href="#hero">↑ Hero</a>
-      <a class="nav-link" href="#struktur">01 · Struktur</a>
-      <a class="nav-link v2-new" href="#v2-kpi">★ KPI Tracker</a>
-      <a class="nav-link v2-new" href="#v2-program">★ Program Kerja</a>
-      <a class="nav-link v2-new" href="#v2-jobdesk">★ Jobdesk Harian</a>
-      <a class="nav-link v2-new" href="#v2-sow">★ My SOW</a>
-      <a class="nav-link v2-new" href="#alerts">! Alerts</a>
-      <a class="nav-link v2-new owner-only" id="nav-master" href="#v2-master" hidden>★ Master Control</a>
-      <a class="nav-link" href="#leaderboard">02 · Leaderboard</a>
-      <a class="nav-link" href="#kpi">03 · KPI Score</a>
-      <a class="nav-link" href="#fee">04 · Fee Media</a>
-      <a class="nav-link" href="#pricing">05 · Pricing</a>
-      <a class="nav-link" href="#stb">06 · STB</a>
-      <a class="nav-link" href="#manager">07 · Manager</a>
-      <a class="nav-link" href="#glosarium">08 · Glosarium</a>
+      <a class="nav-link" href="#hero">Ringkasan</a>
+      <a class="nav-link" href="#struktur">Struktur</a>
+      <a class="nav-link" href="#v2-kpi">KPI</a>
+      <a class="nav-link" href="#v2-program">Program</a>
+      <a class="nav-link" href="#v2-jobdesk">Jobdesk</a>
+      <a class="nav-link" href="#v2-sow">SOW</a>
+      <a class="nav-link" href="#alerts">Alerts</a>
+      <a class="nav-link owner-only" id="nav-master" href="#v2-master" hidden>Master Control</a>
+      <a class="nav-link" href="#leaderboard">Leaderboard</a>
     </div>
   </div>
 </nav>
@@ -936,51 +930,49 @@ footer a:hover { color: var(--accent-hover); }
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-eyebrow">V2 LIVE · Notion-backed · 25 Juli 2026</div>
-  <h1 class="hero-title">Buku Management <em>→ operasional</em>.</h1>
-  <p class="hero-sub">Dashboard internal PT Syahfalah + Lembayung. Notion sebagai database, dashboard sebagai viewer + editor. 12 PIC, 4 divisi, CRUD penuh untuk KPI, SOW, Program Kerja, Jobdesk Harian.</p>
+  <div class="hero-eyebrow">Live · 25 Juli 2026</div>
+  <h1 class="hero-title">Dashboard <em>Syahfalah</em></h1>
+  <p class="hero-sub">Dashboard internal PT Syahfalah Global + Lembayung Wanantara Padha. Notion sebagai database, dashboard sebagai viewer + editor. 12 PIC, 4 divisi, CRUD penuh untuk KPI, SOW, Program Kerja, Jobdesk Harian.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-label">12 PIC</div>
+      <div class="hero-stat-label">PIC</div>
       <div class="hero-stat-value tnum">12</div>
       <div class="hero-stat-foot">2 owner + 1 chief + 9 staff</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-label">Notion DBs</div>
+      <div class="hero-stat-label">Notion DB</div>
       <div class="hero-stat-value tnum" id="db-count">4</div>
       <div class="hero-stat-foot">KPI · SOW · Program · Jobdesk</div>
     </div>
     <div class="hero-stat">
       <div class="hero-stat-label">Mode</div>
       <div class="hero-stat-value tnum" id="mode-label" style="font-size:1.25rem">DEMO</div>
-      <div class="hero-stat-foot" id="mode-foot">Fallback static · Notion belum connect</div>
+      <div class="hero-stat-foot" id="mode-foot">Belum terhubung ke Notion</div>
     </div>
     <div class="hero-stat">
       <div class="hero-stat-label">Coverage</div>
-      <div class="hero-stat-value success tnum">19/19</div>
-      <div class="hero-stat-foot">Buku Management V5.0</div>
+      <div class="hero-stat-value success tnum" id="coverage-value">—</div>
+      <div class="hero-stat-foot" id="coverage-foot">PIC dengan data lengkap</div>
     </div>
   </div>
 </section>
 
-<!-- 01 STRUKTUR -->
+<!-- STRUKTUR -->
 <section class="section" id="struktur">
   <div class="section-label">
-    <span class="section-num">01</span>
-    <h2 class="section-title">Struktur Organisasi · 12 PIC</h2>
-    <span class="section-sub">Mada = B10 PIC, back-end only</span>
+    <h2 class="section-title">Struktur Organisasi</h2>
+    <span class="section-sub">12 PIC</span>
   </div>
   <div class="pic-grid" id="pic-grid">
-    <p class="muted">Memuat 12 PIC…</p>
+    <p class="muted">Memuat struktur…</p>
   </div>
 </section>
 
-<!-- V2-A KPI TRACKER (CRUD) -->
+<!-- KPI TRACKER (CRUD) -->
 <section class="section" id="v2-kpi">
   <div class="section-label">
-    <span class="section-num">★</span>
-    <h2 class="section-title">V2-A · KPI Tracker</h2>
-    <span class="section-sub">CRUD · Notion DB1 · butuh login</span>
+    <h2 class="section-title">KPI</h2>
+    <span class="section-sub" id="kpi-count">—</span>
   </div>
 
   <div class="filter-bar">
@@ -1008,12 +1000,11 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
-<!-- V2-C PROGRAM KERJA (CRUD) -->
+<!-- PROGRAM KERJA (CRUD) -->
 <section class="section" id="v2-program">
   <div class="section-label">
-    <span class="section-num">★</span>
-    <h2 class="section-title">V2-C · Program Kerja</h2>
-    <span class="section-sub">CRUD · Notion DB3 · butuh login</span>
+    <h2 class="section-title">Program Kerja</h2>
+    <span class="section-sub" id="prog-count">—</span>
   </div>
 
   <div class="filter-bar">
@@ -1038,12 +1029,11 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
-<!-- V2-D JOBDESK HARIAN (CRUD) -->
+<!-- JOBDESK HARIAN (CRUD) -->
 <section class="section" id="v2-jobdesk">
   <div class="section-label">
-    <span class="section-num">★</span>
-    <h2 class="section-title">V2-D · Jobdesk Harian + Target</h2>
-    <span class="section-sub">CRUD · Notion DB4 · auto-filter hari ini</span>
+    <h2 class="section-title">Jobdesk Harian</h2>
+    <span class="section-sub" id="job-count">—</span>
   </div>
 
   <div class="filter-bar">
@@ -1064,12 +1054,11 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
-<!-- V2-B MY SOW (view + filter) -->
+<!-- SCOPE OF WORK (view + filter) -->
 <section class="section" id="v2-sow">
   <div class="section-label">
-    <span class="section-num">★</span>
-    <h2 class="section-title">V2-B · Scope of Work</h2>
-    <span class="section-sub">View + filter · Notion DB2</span>
+    <h2 class="section-title">Scope of Work</h2>
+    <span class="section-sub" id="sow-count">—</span>
   </div>
 
   <div class="filter-bar">
@@ -1090,24 +1079,22 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
-<!-- V2-F ALERTS (V2.1) -->
+<!-- ALERTS -->
 <section class="section" id="alerts">
   <div class="section-label">
-    <span class="section-num">!</span>
-    <h2 class="section-title">Alerts Aktif</h2>
-    <span class="section-sub">Real-time rules · KPI/Jobdesk/SOW</span>
+    <h2 class="section-title">Alerts</h2>
+    <span class="section-sub" id="alerts-count">—</span>
   </div>
   <div id="alerts-list">
     <p class="muted">Memuat alert…</p>
   </div>
 </section>
 
-<!-- V2-E MASTER CONTROL (V2.1 — owner only) -->
+<!-- MASTER CONTROL (owner only) -->
 <section class="section owner-only" id="v2-master" hidden>
   <div class="section-label">
-    <span class="section-num">★</span>
-    <h2 class="section-title">Master Control · 12 PIC</h2>
-    <span class="section-sub">Owner only · drill-down per PIC</span>
+    <h2 class="section-title">Master Control</h2>
+    <span class="section-sub">Owner only · 12 PIC</span>
   </div>
 
   <div class="filter-bar">
@@ -1140,62 +1127,25 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
-<!-- 02 LEADERBOARD (singkat) -->
+<!-- LEADERBOARD -->
 <section class="section" id="leaderboard">
   <div class="section-label">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Top 3 per Divisi</h2>
+    <h2 class="section-title">Leaderboard</h2>
+    <span class="section-sub">Top 3 per divisi</span>
   </div>
   <div id="leaderboard-grid">
     <p class="muted">Memuat…</p>
   </div>
 </section>
 
-<!-- 03 REFERENSI RINGKAS -->
-<section class="section" id="referensi">
-  <div class="section-label">
-    <span class="section-num">03</span>
-    <h2 class="section-title">Referensi</h2>
-  </div>
-  <details>
-    <summary>KPI 5 Dimensi</summary>
-    <ul class="muted" style="margin-top:var(--space-2)">
-      <li>Hasil 40% · Peran 20% · Kompetisi 15% · Disiplin 15% · Growth 10%</li>
-    </ul>
-  </details>
-  <details>
-    <summary>Fee Media · 3 Pilar</summary>
-    <ul class="muted" style="margin-top:var(--space-2)">
-      <li>Base pool Rp 500rb/closing · min 6 konten/minggu · cair akhir bulan</li>
-    </ul>
-  </details>
-  <details>
-    <summary>STB · 3 Wajib + Punishment</summary>
-    <ul class="muted" style="margin-top:var(--space-2)">
-      <li>Dokumen lengkap · Foto sebelum/sesudah · Serah terima + tanda tangan</li>
-      <li>Punishment 5 jenjang: teguran, SP1, SP2, SP3, terminasi</li>
-    </ul>
-  </details>
-  <details>
-    <summary>Manager 3 Sifat Wajib</summary>
-    <ul class="muted" style="margin-top:var(--space-2)">
-      <li>Tertib · Pahami · Generalis</li>
-    </ul>
-  </details>
-</section>
-
 </main>
 
 <footer>
-  <div>DASHBOARD PERUSAHAAN V2 · PT Syahfalah Global · Lembayung Wanantara Padha</div>
+  <div>Dashboard Syahfalah · PT Syahfalah Global + Lembayung Wanantara Padha</div>
   <div class="meta">
-    <span>V2 · 25 Jul 2026</span>
+    <span id="footer-version">v2.1 · 25 Jul 2026</span>
     <span>·</span>
     <span>Notion + Cloudflare Worker + GitHub Pages</span>
-    <span>·</span>
-    <a href="../">V1 dashboard (read-only)</a>
-    <span>·</span>
-    <a href="./docs/SETUP.md">Setup guide</a>
   </div>
 </footer>
 
