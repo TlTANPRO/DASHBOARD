@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "name": "coaching-scripts-additional",
+    "version": "1.0",
+    "deskripsi": "Coaching scripts tambahan untuk skenario spesifik: komplain teknis, sales objection kompleks, krisis media, negosiasi dengan supplier. V4.0 - Bab 54.",
+    "ref": "content/v4-final/bab-54-coaching-scripts-additional.md + dibuat 24 Jul 2026"
+  },
+  "scripts_komplain_teknis": [
+    {
+      "id": "SCT-001",
+      "judul": "Konsumen marah besar karena atap bocor (di dalam garansi)",
+      "konteks": "Konsumen menelepon dengan nada tinggi, mengomel, mengancam akan viralkan di sosmed",
+      "script": {
+        "step_1_acknowledge": "'Bapak/Ibu [Nama], saya Novita dari PT Syahfalah. Saya turut prihatin dengan kejadian ini. Saya paham betul rasanya atap bocor pasti sangat mengganggu, apalagi [sebutkan detail dari konsumen, misal: 'keluarga baru pindah' atau 'sedang ada tamu']'",
+        "step_2_empati": "'Bapak/Ibu pasti kesal, dan kami juga tidak mau Bapak/Ibu kecewa. Ini pasti ada yang kurang di proses quality control kami. Saya minta maaf sebesar-besarnya.'",
+        "step_3_solusi_langsung": "'Saya akan langsung kirim tukang standby ke lokasi hari ini juga, max 2 jam lagi. Tukang akan cek, dokumentasi, dan langsung eksekusi perbaikan. Saya juga akan kabari Rizal (kepala proyek) supaya ikut supervise.'",
+        "step_4_followup": "'Setelah tukang selesai, saya akan WhatsApp Bapak/Ibu untuk konfirmasi. Kalau masih ada rembesan, kami datang lagi. Garansi 1 bulan kami cover penuh, Bapak/Ibu tidak perlu bayar apa-apa.'",
+        "step_5_close_dengan_action_plan": "'Sekali lagi saya mohon maaf. Saya catat di sistem kami: unit [nomor], komplain atap bocor [tanggal], akan di-follow up max [tanggal]. Boleh saya konfirmasi nomor WhatsApp yang aktif untuk update?'"
+      },
+      "principle": "Acknowledge, Empati, Solusi langsung, Follow-up, Close dengan action plan (AESFC)",
+      "dont_do": ["Tidak否认 masalah", "Tidak menyalahkan konsumen", "Tidak berjanji tanpa bisa deliver", "Tidak menghindari telepon"]
+    },
+    {
+      "id": "SCT-002",
+      "judul": "Konsumen minta refund karena banyak defect",
+      "konteks": "Konsumen mengancam minta refund, sudah 2 minggu setelah BAST, defect: atap bocor, dinding retak, keramik popping",
+      "script": {
+        "step_1_validasi": "'Bapak/Ibu, saya paham kekecewaan Bapak/Ibu. Kalau saya di posisi Bapak/Ibu, saya juga akan kecewa. Ini banyak defect sekaligus, dan kami harus bertanggung jawab.'",
+        "step_2_penjelasan_refund": "'Tentang permintaan refund, sesuai kontrak dan akad jual beli, refund hanya bisa dilakukan dalam kondisi [sebutkan, misal: cacat total atau cacat hukum]. Defect seperti yang Bapak/Ibu alami masuk kategori garansi workmanship, dan kami wajib repair sesuai standar.'",
+        "step_3_solusi_konkrit": "'Saya usulkan: Rizal visit lagi dalam 1x24 jam, kami buat RAB repair detail, eksekusi max 14 hari, dan tim kami standby di unit Bapak/Ibu 7 hari setelah repair selesai untuk memastikan 100% beres. Sebagai kompensasi, kami tambah [sebutkan, misal: garansi 1 bulan extra atau voucher Rp 500rb].'",
+        "step_4_opsi_jika_konsumen_tetap_minta_refund": "'Bapak/Ibu, kalau setelah kami repair dan masih ada defect, kami akan evaluasikan lagi. Tapi tolong beri kami kesempatan dulu untuk prove. Saya akan buat timeline tertulis dan ditandatangani kedua pihak.'",
+        "step_5_eskalasi_jika_diperlukan": "'Bapak/Ibu, kalau di tengah jalan Bapak/Ibu masih merasa tidak puas, kita bisa mediasi via notaris atau via LPSK. Saya yakin kami bisa selesaikan baik-baik.'"
+      },
+      "principle": "Validasi, Edukasi, Solusi konkret + kompensasi, Opsi mediasi, Eskalasi fair",
+      "dont_do": ["Langsung tolak refund", "Tidak validasi perasaan konsumen", "Tidak tawarkan kompensasi"]
+    }
+  ],
+  "scripts_sales_objection": [
+    {
+      "id": "SSO-001",
+      "judul": "Lead: 'Saya masih pikir-pikir dulu' (umum)",
+      "konteks": "Lead tertarik tapi belum yakin, biasanya karena belum decide atau ada hidden concern",
+      "script": {
+        "open_question": "'Bapak/Ibu, boleh tahu apa yang membuat Bapak/Ibu masih pikir-pikir? Apakah tentang harganya, lokasinya, atau mungkin prosedur KPR-nya?'",
+        "if_harga": "'Saya paham, 166 juta itu angka yang tidak kecil. Tapi coba Bapak/Ibu bandingkan: cicilan KPR FLPP subsidi cuma Rp 1.2-1.5 juta/bulan, lebih murah dari sewa kos di kota. Plus Bapak/Ibu dapat SHM atas nama sendiri, ini investasi jangka panjang.'",
+        "if_prosedur": "'Soal prosedur, banyak konsumen kami awalnya juga bingung. Tapi kami ada tim khusus (Novita) yang bantu Bapak/Ibu dari awal sampai akad, dokumen kami siapkan, bank kami damping. Bapak/Ibu tinggal datang tanda tangan.'",
+        "if_lokasi": "'Lokasi kami [sebutkan]. Akses 5 menit ke [landmark]. Tetangga sudah ada yang tinggal, lingkungan sudah terbentuk. Plus, garansi 1 bulan kami cover penuh, jadi kalau ada apa-apa setelah pindah, kami tanggung jawab.'",
+        "close": "'Bapak/Ibu, bagaimana kalau kita mulai dengan survey lokasi dulu? Tidak ada kewajiban. Saya bisa antar weekend ini, dan Bapak/Ibu bisa lihat unit siap huni yang #RumahSubsidiSiapHuni. Deal?'"
+      }
+    },
+    {
+      "id": "SSO-002",
+      "judul": "Lead: 'Developer lain lebih murah 5-10 juta'",
+      "konteks": "Lead sudah survey competitor, bandingkan harga, kita lebih mahal (atau sama)",
+      "script": {
+        "acknowledge": "'Bapak/Ibu sudah survey tempat lain juga, bagus. Boleh tahu developer mana saja yang sudah Bapak/Ibu survey?'",
+        "differentiation": "'Kami di PT Syahfalah fokus ke #RumahSubsidiSiapHuni - unit sudah selesai, tidak perlu renovasi, semua sudah include. Developer lain mungkin harganya lebih murah, tapi konsumen kami banyak yang cerita harus renovasi lagi 20-30 juta. Jadi total jadi lebih mahal.'",
+        "garansi": "'Plus, kami kasih garansi 1 bulan setelah serah terima. Kalau ada defect workmanship, kami repair gratis. Developer lain biasanya tidak kasih garansi serinci ini.'",
+        "value_calc": "'Coba hitung: Developer A 156 juta + renovasi 25 juta = 181 juta. Kami 166 juta, siap huni, garansi 1 bulan. Total lebih hemat 15 juta, plus tidak perlu pusing renovasi.'",
+        "close": "'Bapak/Ibu, angka bicara sendiri. Kami juga ada banyak testimoni konsumen yang sudah membuktikan. Boleh saya share beberapa? Atau langsung survey lokasi?'"
+      }
+    },
+    {
+      "id": "SSO-003",
+      "judul": "Lead: 'Saya belum yakin KPR-nya disetujui bank'",
+      "konteks": "Lead khawatir KPR ditolak, biasanya karena belum coba atau pernah ditolak bank lain",
+      "script": {
+        "validate": "'Paham, kekhawatiran ini wajar. KPR memang perlu dokumen lengkap dan BI checking oke.'",
+        "education": "'Kabar baiknya, kami sudah kerja sama dengan 3 bank: BTN, BCA, BNI. Jadi kalau satu bank tidak approve, kami bantu ke bank lain. Approval rate kami di 2025 75%, cukup tinggi.'",
+        "pre_screening": "'Supaya Bapak/Ibu tidak buang waktu, saya bisa bantu pre-screening gratis dulu. Bapak/Ibu cukup share slip gaji 3 bulan + KTP, kami simulasi ke bank officer kami. Kalau memang eligible, baru kita lanjut. Kalau belum, kami kasih tahu dokumen apa yang perlu disiapkan.'",
+        "trust_building": "'Saya juga bisa share cerita konsumen kami yang awalnya ragu tapi akhirnya approve. Banyak yang awalnya KPR ditolak bank lain, lalu kami bantu sampai approve di bank kami.'",
+        "close": "'Bapak/Ibu, tidak ada ruginya coba pre-screening dulu. Gratis, tidak ada komitmen. Deal?'"
+      }
+    }
+  ],
+  "scripts_krisis_media": [
+    {
+      "id": "SKM-001",
+      "judul": "Postingan negatif viral di IG (konsumen komplain, 100+ likes)",
+      "konteks": "Konsumen posting di IG story + feed, komplain rumah defect, mulai viral",
+      "script_response": {
+        "step_1_respon_cepat_4_jam": "Balas di kolom komentar IG: 'Bapak/Ibu [Nama], terima kasih sudah melapor. Saya Novita, Admin PT Syahfalah. Saya akan DM Bapak/Ibu untuk follow up. Kami bertanggung jawab penuh dan akan selesaikan dalam 1x24 jam.'",
+        "step_2_dm_followup": "DM langsung: 'Bapak/Ibu, saya Novita. Saya sudah koordinasi dengan Rizal (kepala proyek) dan Rizal akan visit lokasi besok. Saya juga akan koordinasikan dengan Pak Ardian (owner) untuk pastikan solusinya. Saya minta maaf, mohon beri kami kesempatan untuk prove.'",
+        "step_3_post_tindak_lanjut": "Setelah visit dan repair, posting tindak lanjut di IG (dengan izin konsumen): 'Update: Tim kami sudah visit unit Bapak [Nama] di Cluster Lavender No 7. Roof repair selesai, dinding retak sudah diplester ulang, dan keramik sudah diganti. Foto before-after terlampir. Terima kasih sudah percayakan kami. Kami terus improve untuk konsumen lain.'",
+        "step_4_follow_up_konsumen_puas": "Jika konsumen sudah puas, minta izin konsumen untuk posting testimoni perbaikan (positive story). Ini jadi modal untuk krisis berikutnya",
+        "step_5_post_mortem_internal": "Mada + Rizal + Bu Nisya + Pak Ardian meeting: apa yang bisa dipelajari, bagaimana prevent recurrence"
+      },
+      "principle": "Respon cepat (4 jam), Personal touch, Akuntabilitas, Transformasi krisis jadi cerita positif, Post-mortem",
+      "jangan": ["Menghapus komentar negatif (akan viral lebih cepat)", "Menyalahkan konsumen di publik", "Mengabaikan"]
+    },
+    {
+      "id": "SKM-002",
+      "judul": "Media lokal minta statement tentang kasus hukum (misal: sengketa lahan)",
+      "konteks": "Wartawan media lokal (Jember Post, Surya) minta konfirmasi tentang kasus hukum",
+      "script_response": {
+        "step_1_jangan_komentar_dulu": "WAJIB Bu Nisya atau Pak Ardian yang bicara, bukan PIC lapangan. Mada + tim media hanya acknowledge terima infonya",
+        "step_2_jawaban_formal": "'Terima kasih sudah mengkonfirmasi. Kami dari PT Syahfalah menghormati proses hukum yang berlaku. Untuk saat ini kami belum bisa memberikan statement detail karena kasus sedang dalam proses [mediasi/gugatan]. Mohon bersabar, kami akan update jika ada perkembangan signifikan. Kontak person: Bu Nisya [nomor WA formal].'",
+        "step_3_jangan_kasih_speaking_point": "Semua statement keluar harus melalui Bu Nisya (legal) + Pak Ardian (owner). Tidak ada statement ad hoc dari tim lapangan",
+        "step_4_post_mortem_dan_reputasi": "Mada + Reni monitor coverage. Jika ada framing negatif, Bu Nisya + Pak Ardian decide apakah perlu kirim hak jawab"
+      },
+      "principle": "Sentralisasi statement, Formal, Tidak ad hoc, Lindungi reputasi"
+    }
+  ],
+  "scripts_negosiasi_supplier": [
+    {
+      "id": "SNS-001",
+      "judul": "Negosiasi harga semen dengan supplier (minta diskon 5%)",
+      "konteks": "Sinta nego semen dengan supplier existing, volume beli 100 sak/bulan",
+      "script": {
+        "value_proposition": "'Pak [Nama], kami beli rutin 100 sak per bulan, sudah 6 bulan. Volume lumayan besar. Kalau bisa kasih Rp [harga target] per sak, kami komitmen order 100 sak/bulan sampai akhir tahun. Deal?'",
+        "if_supplier_hesitate": "'Kalau [harga target] tidak bisa, gimana kalau [harga sedikit lebih tinggi] tapi ada bonus free delivery atau tempo 60 hari? Kami butuh fleksibilitas cashflow.'",
+        "lock_in_jangka_panjang": "'Kalau deal, kami buatkan MoU 6 bulan. Harga fixed, kami order rutin, Bapak tidak perlu cari customer lain untuk produk semen ke kami. Win-win.'",
+        "backup_plan": "'Kalau belum bisa deal sekarang, tidak apa-apa. Saya cek dulu ke supplier lain [nama]. Tapi kalau nanti Bapak berubah pikiran, kabari ya.'"
+      }
+    }
+  ]
+}

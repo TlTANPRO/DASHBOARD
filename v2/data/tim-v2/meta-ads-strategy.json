@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "name": "meta-ads-strategy",
+    "version": "1.0",
+    "deskripsi": "Strategi Meta Ads + channel mix. Disusun dari analisa META ADS 2023-2026 + best practice Q3 2026."
+  },
+  "budget": {
+    "q3_total": 15000000,
+    "per_bulan": 5000000,
+    "allocation": {
+      "fb_lead_gen": 40,
+      "ig_brand_awareness": 25,
+      "ig_reels_engagement": 20,
+      "retargeting_remarketing": 10,
+      "test_experimental": 5
+    }
+  },
+  "audience_persona": [
+    {
+      "nama": "First Home Buyer (FLPP)",
+      "usia": "25-35",
+      "lokasi": "Jember + Lumajang + sekitarnya (radius 50km)",
+      "interest": ["Properti", "Rumah KPR", "Bantuan rumah subsidi", "BTN KPR"],
+      "platform": "FB (terbukti convert) + IG secondary",
+      "pain_point": "Uang muka, prosedur ribet, takut tertipu developer",
+      "hook_creative": "DP ringan mulai 1%, SHM diurus, akad difasilitasi"
+    },
+    {
+      "nama": "Upgrade Home (Komersial)",
+      "usia": "30-45",
+      "lokasi": "Jember kota + sub-urban",
+      "interest": ["Rumah cluster modern", "Design minimalis", "Investasi properti"],
+      "platform": "IG (visualisasi) + TikTok (tren)",
+      "pain_point": "Ingin upgrade tapi harga cluster premium",
+      "hook_creative": "Cluster eksklusif, desain modern, lingkungan asri"
+    },
+    {
+      "nama": "Investor Properti",
+      "usia": "35-55",
+      "lokasi": "Jember + luar kota",
+      "interest": ["Investasi passive income", "Sewa properti", "ROI properti"],
+      "platform": "Web + YouTube + LinkedIn",
+      "pain_point": "Risiko vacancy, lokasi strategis",
+      "hook_creative": "ROI 8-12% per tahun, lokasi berkembang, okupansi 95%"
+    }
+  ],
+  "creative_principles": {
+    "fb_lead_gen": {
+      "format": "Carousel 3-5 slide + form lead",
+      "headline": "Maks 8 kata, benefit-led (DP ringan, SHM cepat)",
+      "body": "Spesifik angka + social proof + CTA",
+      "cta": "Konsultasi Gratis / Hubungi Marketing",
+      "image": "Foto unit jadi (bukan render) + foto customer STB",
+      "duration": "Refresh setiap 2 minggu (avoid ad fatigue)"
+    },
+    "ig_brand_awareness": {
+      "format": "Reels 15-30 detik + carousel 3 slide",
+      "tone": "Aspirational + lifestyle",
+      "hook_3_detik": "Pertanyaan provocative atau before-after visual"
+    },
+    "retargeting": {
+      "trigger": "Kunjungi web 30 hari, engage IG/TikTok 14 hari, view FB video 50%+",
+      "offer": "Voucher konsultasi 30 menit, e-book 'Panduan Beli Rumah Pertama'"
+    }
+  },
+  "kpi_meta_ads": {
+    "cpl_target_idr": 15000,
+    "ctr_min_pct": 1.5,
+    "cpm_max_idr": 50000,
+    "frequency_max": 3,
+    "lead_quality_score_min": 6
+  },
+  "channel_mix_target": {
+    "fb_ads": 35,
+    "ig_organic": 20,
+    "tiktok_organic": 20,
+    "web_seo": 10,
+    "walk_in_referral": 10,
+    "exhibition_event": 5
+  },
+  "testing_roadmap": [
+    {"q": "Q3 2026", "test": "TikTok Spark Ads (boost organic viral)", "budget": "Rp 1.5jt", "kpi": "CPL < Rp 10jt"},
+    {"q": "Q3 2026", "test": "YouTube Shorts konsistensi", "budget": "Rp 500rb", "kpi": "View duration > 40%"},
+    {"q": "Q4 2026", "test": "Google Search Ads untuk keyword 'rumah KPR Jember'", "budget": "Rp 2jt", "kpi": "CPL < Rp 20jt"},
+    {"q": "Q4 2026", "test": "Kolaborasi KOL lokal (2-3 orang)", "budget": "Rp 3jt", "kpi": "Reach > 50K + 20 lead"}
+  ]
+}

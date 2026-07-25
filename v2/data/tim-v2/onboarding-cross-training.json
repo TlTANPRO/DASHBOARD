@@ -1,0 +1,168 @@
+{
+  "_meta": {
+    "name": "onboarding-cross-training",
+    "version": "3.0",
+    "deskripsi": "30-day onboarding + cross-training + admin_polyvalent_track. V3: Admin (Novita/Sinta) wajib polyvalent 4 skill dalam 3 bulan (meeting 24 Jul 2026 point 9).",
+    "ref": "content/v2-developer/bab-29-onboarding.md + revisi 24 Jul 2026 + meeting 24 Jul 2026 point 9"
+  },
+  "admin_polyvalent_track_v5": {
+    "filosofi": "Admin V4 = filing robot, stuck di 1 skill. Admin V5 = polyvalent yang bisa cover 4 area: Customer Service, KPP (Komunikasi, Pemberkasan, Pembayaran), Legal draft ringan, Konten support. Dalam 3 bulan = certified polyvalent.",
+    "alasan_polyvalent": [
+      "Backup plan kalau admin resign/cuti (zero single-point-of-failure)",
+      "Career path untuk admin (dari P0 ke P1 lebih cepat)",
+      "Kualitas kerja lebih tinggi (cross-perspective)",
+      "Perusahaan lebih fleksibel (1 orang bisa cover 2-3 fungsi)"
+    ],
+    "skill_4_area": [
+      {
+        "skill": "customer_service",
+        "definisi": "Handle customer complaint, after-sales response, satisfaction survey, komplain handling",
+        "tools": ["WA Business", "Email", "Dashboard V2 (tab Customer Service)"],
+        "metrik_kelulusan": "Response time < 30 menit, komplain resolved 95%+ dalam SLA",
+        "durasi_belajar": "Bulan 1 (1 minggu shadow + 1 minggu eksekusi supervisi)"
+      },
+      {
+        "skill": "kpp_pemberkasan_pembayaran",
+        "definisi": "KPP = Komunikasi + Pemberkasan + Pembayaran. Handle kelengkapan berkas FLPP, komunikasi bank, tracking pembayaran, follow-up konsumen",
+        "tools": ["Sikase FLPP", "Bank portal (BTN/BSI/Mandiri)", "Notaris tracker", "Excel rekap"],
+        "metrik_kelulusan": "Berkas 0 reject, on-time submission 100%, lead time < 14 hari kerja",
+        "durasi_belajar": "Bulan 1-2 (cross training dengan admin senior / Bu Nisya)"
+      },
+      {
+        "skill": "legal_draft_ringan",
+        "definisi": "Draft surat sederhana, draft klausul tambahan yang sudah ada template, review kontrak template (bukan create from scratch)",
+        "tools": ["Template kontrak", "Buku Saku Legal", "Konsultasi Bu Nisya"],
+        "metrik_kelulusan": "Draft review-approved Bu Nisya 90%+ (tidak perlu banyak revisi), zero error fatal",
+        "durasi_belajar": "Bulan 2 (2 minggu shadow Bu Nisya + 2 minggu eksekusi supervisi)"
+      },
+      {
+        "skill": "konten_support",
+        "definisi": "Support tim media: caption writing, broadcast WA template, repost story, dokumentasi visual (foto, video simple)",
+        "tools": ["Canva", "CapCut", "WA Business", "Dashboard V2 (tab Media)"],
+        "metrik_kelulusan": "Caption approved Rifki/Reni 85%+, broadcast on-time, dokumentasi event lengkap",
+        "durasi_belajar": "Bulan 3 (1 minggu shadow Reni + 2 minggu eksekusi + 1 minggu mandiri)"
+      }
+    ],
+    "timeline_3_bulan": {
+      "bulan_1": "Skill 1 (CS) + Skill 2 (KPP) — fokus dual skill paling kritikal",
+      "bulan_2": "Skill 3 (Legal draft) — tambah skill non-rutin",
+      "bulan_3": "Skill 4 (Konten support) — finalisasi, plus ujian polyvalent",
+      "ujian_polyvalent": "Akhir bulan 3: Novita/Sinta presentasi 4 skill ke Mada + Bu Nisya + owner. Lulus = sertifikat + naik ke P1 senior admin. Tidak lulus = extend 1 bulan + coaching."
+    },
+    "polyvalent_certified_benefit": {
+      "grading": "Naik P0 → P1 senior admin (gaji pokok +Rp 300rb, tunjangan +Rp 200rb)",
+      "fee_lebih_tinggi": "Mel/closing file naik 50% (Novita Rp 200rb → Rp 300rb, Sinta Rp 150rb → Rp 225rb)",
+      "job_title": "Bisa pakai title 'Senior Admin' di LinkedIn/business card",
+      "career_path": "P1 senior admin → P2 admin manager (jika tim admin > 3 orang)"
+    },
+    "tracking_per_bulan": {
+      "dashboard_v2": "Tab 'Polyvalent Progress' — checklist 4 skill + status (belum/sedang/lulus)",
+      "report_mingguan": "Novita/Sinta submit update ke Mada setiap Jumat",
+      "report_bulanan": "Mada rekap ke owner + Bu Nisya (legal anchor)",
+      "ujian_panel": "Mada + Bu Nisya + Owner (akhir bulan 3)"
+    }
+  },
+  "onboarding_30_hari": [
+    {"hari": "1-3", "agenda": "Orientasi umum: profil perusahaan, struktur, SOP, dashboard V2, K3", "pic_lead": "Pak Ardian + Bu Nisya", "output": "New hire paham big picture, akses dashboard, tanda tangan kontrak"},
+    {"hari": "4-7", "agenda": "Pelajari SOP divisi sendiri + cross-training 1 divisi lain (1-2 jam/hari)", "pic_lead": "Mada + kepala divisi", "output": "PIC bisa eksekusi task dasar divisi sendiri"},
+    {"hari": "8-14", "agenda": "Job shadow + observasi langsung", "pic_lead": "PIC senior divisinya", "output": "PIC paham task harian + mingguan"},
+    {"hari": "15-21", "agenda": "Eksekusi task dengan supervisi (1-on-1 dengan kepala divisi)", "pic_lead": "Kepala divisi", "output": "PIC eksekusi 80% task dengan supervisi minimal"},
+    {"hari": "22-28", "agenda": "Eksekusi task mandiri + rotasi ke divisi backup (cross-training)", "pic_lead": "Mada", "output": "PIC eksekusi 100% task mandiri, kenal 1 divisi backup"},
+    {"hari": "29-30", "agenda": "Evaluasi 30 hari + KPI baseline + feedback dua arah", "pic_lead": "Mada + Pak Ardian", "output": "Konfirmasi lanjut probation atau perpanjang"}
+  ],
+  "probation_3_bulan": {
+    "evaluasi_bulanan": "Mada + kepala divisi lakukan review 1-on-1 setiap akhir bulan",
+    "kpi_baseline": "SOP compliance, response time, inisiatif, kerja sama tim",
+    "outcome": "Lolos probation = kontrak 1 tahun perpanjang. Tidak lolos = exit interview + pesangon sesuai UU"
+  },
+  "cross_training_matrix_v2": {
+    "Riza_DigitalMarketing": {
+      "primary_skill": "Ads management, content kalender, KOL outreach",
+      "backup_pic": "Yudi/Sdek (operasional marketing harian jika Riza izin)",
+      "wakil_strategis": "Mada (jika Riza cuti > 3 hari)",
+      "cross_train_ke": ["Rifki (konten visual)", "Reni (broadcast)"],
+      "periode_rotasi": "1 minggu/3 bulan"
+    },
+    "Mada_ChiefofStaff": {
+      "primary_skill": "Operasional harian, lintas divisi, eksekusi strategis",
+      "backup_pic": "Pak Ardian (jika Mada cuti/izin) + Bu Nisya (legal operations)",
+      "cross_train_ke": ["Rizal (proyek)", "Riza (marketing)"],
+      "periode_rotasi": "Tetap, by exception jika Mada off"
+    },
+    "Rizal_ProyekTripleRole": {
+      "primary_skill": "Site manager, RAB, strategic planning, PIC utama proyek",
+      "backup_pic": "Amir (cover harian) + Mada (strategic decision saat Rizal cuti > 3 hari)",
+      "cross_train_ke": ["Sinta (purchasing)", "Novita (administrasi progres)"],
+      "periode_rotasi": "1 minggu/quarter"
+    },
+    "Yudi_Sdek": {
+      "primary_skill": "Closing customer, front desk, showroom",
+      "backup_pic": "Reta (back-up closing) + Riza (backup digital marketing jika Yudi cover closing)",
+      "wakil_strategis": "Mada (strategic decision closing diskon)",
+      "cross_train_ke": ["Reni (broadcast ke konsumen)", "Novita (administrasi closing)"],
+      "periode_rotasi": "1 minggu/2 bulan"
+    },
+    "Amir_ProyekMarketing": {
+      "primary_skill": "Cover proyek harian + marketing support",
+      "backup_pic": "Rizal (proyek lead) + Reta (marketing support)",
+      "cross_train_ke": ["Rifki (konten)"],
+      "periode_rotasi": "1 minggu/2 bulan"
+    },
+    "Rifki_MediaKreatif": {
+      "primary_skill": "Desain grafis, video editing, social media content",
+      "backup_pic": "Reni (konten) + Reta (konten sederhana)",
+      "cross_train_ke": ["Riza (digital ads)"],
+      "periode_rotasi": "1 minggu/2 bulan"
+    },
+    "Reni_MediaBroadcast": {
+      "primary_skill": "Broadcast WA, social media engagement, KOL outreach",
+      "backup_pic": "Rifki (konten) + Reta (broadcast sederhana)",
+      "cross_train_ke": ["Riza (digital ads)"],
+      "periode_rotasi": "1 minggu/2 bulan"
+    },
+    "Reta_ClosingEngagement": {
+      "primary_skill": "Closing customer, broadcast, social proof, dokumentasi",
+      "backup_pic": "Yudi/Sdek (closing) + Reni (broadcast)",
+      "cross_train_ke": ["Riza (digital marketing)"],
+      "periode_rotasi": "1 minggu/2 bulan"
+    },
+    "Novita_Admin": {
+      "primary_skill": "Administrasi umum, absensi, arsip, customer service",
+      "backup_pic": "Sinta (cross admin) + Reni (admin media)",
+      "cross_train_ke": ["Sinta (purchasing admin)"],
+      "periode_rotasi": "1 minggu/2 bulan"
+    },
+    "Sinta_Purchasing": {
+      "primary_skill": "Purchasing, supplier management, invoice, inventory",
+      "backup_pic": "Novita (purchasing admin ringan) + Rizal (strategic procurement)",
+      "cross_train_ke": ["Novita (admin umum)"],
+      "periode_rotasi": "1 minggu/2 bulan"
+    },
+    "BuNisya_Legal": {
+      "primary_skill": "Legal oversight, kontrak, izin, BPN tracking",
+      "backup_pic": "Pak Ardian (jika Bu Nisya cuti, untuk legal approval) + Novita (admin legal ringan)",
+      "cross_train_ke": ["Pak Ardian (cross legal)"],
+      "periode_rotasi": "By exception"
+    },
+    "PakArdian_Owner": {
+      "primary_skill": "Strategic decision, profit sharing, expansion",
+      "backup_pic": "Bu Nisya (jika Pak Ardian off) + Mada (eksekusi harian)",
+      "cross_train_ke": ["Tidak ada — owner tidak dirotasi"],
+      "periode_rotasi": "Tetap"
+    }
+  },
+  "training_plan_2026": {
+    "q3": [
+      {"agenda": "Digital marketing deep-dive untuk Riza", "pic_lead": "Konsultan external + Riza", "budget": "Rp 3 juta"},
+      {"agenda": "SOP proyek update untuk Rizal + Amir", "pic_lead": "Rizal", "budget": "Internal"},
+      {"agenda": "Closing script + objection handling untuk Yudi + Reta", "pic_lead": "Reta + Mada", "budget": "Internal"},
+      {"agenda": "Konten kreator upskill untuk Rifki + Reni", "pic_lead": "Konsultan creative", "budget": "Rp 2 juta"}
+    ],
+    "q4": [
+      {"agenda": "Leadership training untuk Mada + Bu Nisya", "pic_lead": "External trainer", "budget": "Rp 5 juta"},
+      {"agenda": "Negotiation untuk Sinta (supplier)", "pic_lead": "Pak Ardian", "budget": "Internal"},
+      {"agenda": "Customer service excellence untuk Novita + Reni", "pic_lead": "External trainer", "budget": "Rp 2 juta"},
+      {"agenda": "Cross-training batch 2: Reta + Yudi ke marketing, Sinta + Novita ke legal", "pic_lead": "Mada", "budget": "Internal"}
+    ]
+  }
+}

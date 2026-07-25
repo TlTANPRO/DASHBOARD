@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "name": "coaching-sop",
+    "version": "1.0",
+    "deskripsi": "SOP coaching & performance improvement plan. Referensi Mada KPI 100% coaching.",
+    "metodologi": "SBI (Situation-Behavior-Impact) + GROW (Goal-Reality-Options-Will)"
+  },
+  "coaching_cycle": {
+    "frekuensi": "Mingguan (30 menit per PIC)",
+    "pic_lead": "Mada",
+    "tools": ["Dashboard V2", "1-on-1 notes", "PIP tracker"],
+    "agenda_template": [
+      "Review KPI minggu lalu (5 menit)",
+      "PIC cerita 1 win + 1 challenge (10 menit)",
+      "Mada coaching pakai SBI feedback (10 menit)",
+      "Set action item minggu depan (5 menit)"
+    ]
+  },
+  "performance_tier": [
+    {
+      "tier": "Top Performer",
+      "criteria": "KPI >110% di semua indikator",
+      "treatment": "Public recognition + bonus tambahan + mentor untuk junior + project khusus"
+    },
+    {
+      "tier": "On Track",
+      "criteria": "KPI 90-110%",
+      "treatment": "Standard coaching mingguan + development plan"
+    },
+    {
+      "tier": "At Risk",
+      "criteria": "KPI 70-89% di 1+ indikator",
+      "treatment": "Mingguan coaching + target spesifik 2 minggu ke depan + visibility Owner"
+    },
+    {
+      "tier": "Underperformer",
+      "criteria": "KPI <70% 2 minggu berturut-turut",
+      "treatment": "PIP formal 30 hari + visibility Owner + coaching 2x seminggu"
+    },
+    {
+      "tier": "Critical",
+      "criteria": "KPI <50% 1 bulan atau pelanggaran etika",
+      "treatment": "Kontrak kerja reviewed + Owner meeting + opsi PHK atau rotasi"
+    }
+  ],
+  "pip_template": {
+    "duration_hari": 30,
+    "komponen": [
+      "Performance gap diagnosis (1 halaman)",
+      "Target spesifik 30 hari (3-5 KPI hard targets)",
+      "Support yang diberikan (coaching, tools, training)",
+      "Review checkpoint (minggu 1, 2, 3)",
+      "Konsekuensi jika miss (rotasi, kontrak review, PHK)"
+    ],
+    "pic_signoff": ["PIC", "Mada (supervisor)", "Pak Ardian (jika level kepala)"]
+  },
+  "coaching_per_role": {
+    "Mada_ke_marketing": "Fokus ke conversion rate, lead handling speed, closing technique",
+    "Mada_ke_proyek": "Fokus ke timeline, budget variance, QC",
+    "Mada_ke_media": "Fokus ke lead generation dari konten, engagement",
+    "Mada_ke_admin": "Fokus ke zero-error, response time, akad on-time"
+  }
+}

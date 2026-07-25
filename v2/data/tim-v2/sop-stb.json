@@ -1,0 +1,124 @@
+{
+  "_meta": {
+    "name": "sop-stb",
+    "version": "1.0",
+    "deskripsi": "SOP STB (Serah Terima Bangunan) 3 Wajib + Punishment Berjenjang. V5.0 meeting 24 Jul 2026 point 10. STB = critical handoff point antara proyek ke konsumen.",
+    "ref": "meeting 24 Jul 2026 point 10 + sop-subkontraktor.json + spec-teknis-type36.json"
+  },
+  "filosofi_stb_v5": {
+    "definisi_stb": "STB = Serah Terima Bangunan. Proses formal handover dari perusahaan ke konsumen setelah rumah jadi + layak huni. Termasuk BAST (Berita Acara Serah Terima), dokumen legal, garansi, dan komitment after-sales.",
+    "kenapa_3_wajib_dan_punishment": "STB sering di-skip atau di-sembarangan. Rumah jadi = langsung 'serah', tanpa dokumen lengkap. Risiko: komplain konsumen 30 hari pasca STB naik, garansi tidak valid, sertifikat lambat, BPN reject. V5.0 = wajib 3 hal + punishment jika di-skip.",
+    "siapa_bertanggung_jawab": "Rizal (site manager) lead STB + Novita (admin dokumen) + Bu Nisya (legal dokumen STB) + Mada (overall sign-off)"
+  },
+  "tiga_wajib_stb": [
+    {
+      "no": 1,
+      "wajib": "Report Harian Auto Dashboard",
+      "deskripsi": "Saat STB dilakukan, Rizal/Novita harus update Dashboard V2 (tab STB) dalam 24 jam: unit ID, konsumen, tanggal STB, foto unit, status dokumen, signature konsumen.",
+      "pic_responsible": "Rizal (data teknis) + Novita (upload dokumen)",
+      "tools": "Dashboard V2 tab STB + Google Drive foto",
+      "deadline": "24 jam setelah STB fisik",
+      "kegagalan": "Tidak update dashboard > 24 jam = STB belum dianggap selesai secara administratif"
+    },
+    {
+      "no": 2,
+      "wajib": "Notion Page Reminder Per Project",
+      "deskripsi": "Setiap project (cluster) punya Notion page yang berisi timeline, milestone, dokumentasi STB. Update per project harus konsisten. Mada review Notion page mingguan.",
+      "pic_responsible": "Rizal (update content) + Mada (review mingguan)",
+      "tools": "Notion (workspace) + reminder system",
+      "deadline": "Update mingguan + saat ada STB",
+      "kegagalan": "Notion page out-of-date > 2 minggu = warning ke Rizal, escalate Owner"
+    },
+    {
+      "no": 3,
+      "wajib": "Dokumen STB + Masa Kadaluarsa (Maks 6 Bulan BAST)",
+      "deskripsi": "Semua dokumen STB (BAST, garansi book, spesifikasi teknis, sertifikat dalam proses) harus lengkap. Masa berlaku dokumen = 6 bulan sejak BAST. Setelah 6 bulan = dokumen expire, harus refresh/re-issue.",
+      "pic_responsible": "Novita (dokumen) + Bu Nisya (legal validasi)",
+      "tools": "Master-db dokumen + reminder system",
+      "deadline": "Dokumen lengkap saat STB + refresh setiap 6 bulan",
+      "kegagalan": "Dokumen expire > 6 bulan = garansi hangus, sertifikat SHM lambat, BPN komplain"
+    }
+  ],
+  "punishment_berjenjang": {
+    "prinsip": "Punishment berjenjang, mulai ringan ke berat. Punishment bukan balas dendam, tapi ensure compliance. Setiap jenjang ada remedi yang jelas (bisa naik ke atas, atau tetap stuck).",
+    "jenjang": [
+      {
+        "jenjang": 1,
+        "pelanggaran": "Skip 1 wajib STB (misal: tidak update Notion 2 minggu)",
+        "konsekuensi": "Lembur tidak dibayar (maks 8 jam lembur hangus)",
+        "remedi": "Lengkapi wajib yang ke-skip + coaching 1-on-1 Mada",
+        "pic_bertanggung_jawab": "PIC yang skip wajib"
+      },
+      {
+        "jenjang": 2,
+        "pelanggaran": "Skip 2 wajib STB (misal: tidak ada report harian + Notion out-of-date)",
+        "konsekuensi": "Hari Minggu masuk kerja (libur hangus, piket proyek)",
+        "remedi": "Lengkapi 2 wajib + coaching 1-on-1 Mada + 2 minggu visibility",
+        "pic_bertanggung_jawab": "PIC yang skip wajib + atasan langsung (Rizal untuk STB)"
+      },
+      {
+        "jenjang": 3,
+        "pelanggaran": "Skip 3 wajib STB (full skip) ATAU konsumen komplain pasca STB karena dokumen tidak lengkap",
+        "konsekuensi": "Tambah KPI khusus: ke rumah user + minta maaf + buat konten tentang lesson learned (1 bulan berturut-turut)",
+        "remedi": "Lengkapi 3 wajib + visit konsumen + 1 bulan pembinaan Mada",
+        "pic_bertanggung_jawab": "PIC yang skip + Rizal (untuk STB)"
+      },
+      {
+        "jenjang": 4,
+        "pelanggaran": "Skip 3 wajib + repeat (2 STB berturut skip) ATAU dokumen expire > 6 bulan tanpa refresh + BPN reject sertifikat",
+        "konsekuensi": "POTONG GAJI 1 bulan (atau 50% bulan berikut, tergantung severity). Coaching formal 30 hari + visibility Owner.",
+        "remedi": "30 hari pembinaan Mada + Owner meeting + re-evaluasi kontrak",
+        "pic_bertanggung_jawab": "PIC yang skip + Rizal + Mada (escalation)"
+      },
+      {
+        "jenjang": 5,
+        "pelanggaran": "Skip 3 wajib + repeat 3x ATAU sertifikat SHM konsumen reject karena dokumen cacat permanen",
+        "konsekuensi": "Kontrak kerja reviewed + Owner meeting + opsi PHK atau rotasi ke fungsi yang tidak terkait STB",
+        "remedi": "Exit interview + pesangon sesuai UU",
+        "pic_bertanggung_jawab": "Owner + Mada + Bu Nisya"
+      }
+    ],
+    "proses_punishment": [
+      "Step 1: Identifikasi pelanggaran oleh Mada (via Dashboard V2 report mingguan)",
+      "Step 2: Validasi pelanggaran oleh Bu Nisya (untuk aspek legal)",
+      "Step 3: Meeting PIC yang melanggar + Mada + Bu Nisya (jika legal)",
+      "Step 4: Penetapan jenjang punishment + remedi",
+      "Step 5: Eksekusi punishment + tracking",
+      "Step 6: Review 30 hari (apakah punishment efektif, naik/turun jenjang)"
+    ],
+    "catatan_penting": [
+      "Punishment tidak berlaku jika kegagalan di luar kontrol PIC (misal: BPN delay, vendor material telat)",
+      "Punishment harus konsisten (tidak boleh pilih kasih)",
+      "Punishment = learning moment, bukan balas dendam. Coaching tetap utama.",
+      "PIC yang compliant 6 bulan berturut-turut = 'STB Champion' award + publikasi dashboard"
+    ]
+  },
+  "kpi_stb": {
+    "stb_compliance_rate": {
+      "definisi": "% STB yang compliant 3 wajib",
+      "target": "100%",
+      "tracking": "Dashboard V2 auto + audit Bu Nisya mingguan"
+    },
+    "konsumen_komplain_pasca_stb": {
+      "definisi": "Jumlah komplain konsumen dalam 30 hari pasca STB",
+      "target": "< 2/STB",
+      "tracking": "Novita + Dashboard V2 tab Customer Service"
+    },
+    "dokumen_stb_expired": {
+      "definisi": "Jumlah dokumen STB yang expire > 6 bulan tanpa refresh",
+      "target": "0",
+      "tracking": "Bu Nisya + Master-db dokumen"
+    },
+    "notion_page_uptodate": {
+      "definisi": "% Notion page yang update mingguan",
+      "target": "100%",
+      "tracking": "Mada review mingguan"
+    }
+  },
+  "tracking_dan_reporting": {
+    "tools": ["Dashboard V2 (tab STB)", "Notion (project pages)", "Master-db dokumen", "Google Drive (foto STB)"],
+    "report_mingguan": "Bu Nisya + Mada review Dashboard V2 setiap Senin pagi",
+    "report_bulanan": "Laporan STB ke Owner (compliance, komplain, dokumen expired, punishment)",
+    "report_quarterly": "Audit eksternal (jika ada) + lesson learned + SOP update"
+  }
+}

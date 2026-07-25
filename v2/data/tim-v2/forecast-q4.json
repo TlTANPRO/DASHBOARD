@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "name": "forecast-q4-2026-2027",
+    "version": "2.0",
+    "deskripsi": "Forecast Q4 2026 + full year 2027. V2: Recalc dengan HPP 70-80jt, harga jual 166jt, gaji PIC 55jt/bulan, net margin 8-12%. 4 skenario (Conservative, Realistic, Stretch, Pivot).",
+    "ref": "recalc 24 Jul 2026 per user revisi"
+  },
+  "asumsi_dasar_v2": {
+    "hpp_per_unit_avg_idr": {
+      "nilai": 75000000,
+      "definisi": "Harga Pokok Penjualan 1 unit rumah tipe 36 FLPP. Dari total biaya konstruksi + material + subkon + overhead. Range 70-80jt per unit",
+      "komponen": "Semen, besi, batu bata, pasir, keramik, kusen, atap, instalasi listrik/air, fondasi, struktur, finishing, mandor, tukang, subkon, transport, overhead",
+      "sumber_nilai": "RAB aktual cluster A + B Q2 2026, average 75jt/unit tipe 36"
+    },
+    "harga_jual_per_unit_avg_idr": {
+      "nilai": 166000000,
+      "definisi": "Harga jual konsumen akhir untuk unit FLPP tipe 36. Fixed Rp 166 juta",
+      "sumber_nilai": "Per user requirement 24 Jul 2026, sesuai harga FLPP standar"
+    },
+    "margin_pct_target": {
+      "nilai": 8,
+      "definisi": "Net margin yang ditargetkan setelah semua biaya operasional, fee marketing, gaji, pajak, dan amortisasi",
+      "range": "8-12% (realistis 8%, jika efisien 12%)",
+      "sumber_nilai": "(166jt - 75jt HPP - 19.5jt fee + ops) / 166jt = 8% realistic"
+    },
+    "fee_closing_per_unit_idr": {
+      "nilai": 3250000,
+      "definisi": "Total fee closing 5 komponen: Pembeli 1.25jt + Followup 1.25jt + Media 250rb + Proyek 250rb + Pemberkasan 250rb",
+      "sumber_nilai": "Sesuai bonus-scheme.json + struktur_fee_closing_5_komponen"
+    },
+    "bonus_mada_per_unit_idr": {
+      "nilai": 1500000,
+      "definisi": "Bonus khusus PIC Mada (COO Proxy) per unit closing jika target tier tercapai",
+      "sumber_nilai": "Sesuai bonus-scheme.json, fixed per unit"
+    },
+    "gaji_pic_total_bulanan_idr": {
+      "nilai": 55000000,
+      "definisi": "Total gaji pokok + tunjangan + BPJS perusahaan untuk 12 PIC per bulan. TIDAK termasuk fee closing + bonus",
+      "komponen": "Gaji pokok 12 PIC (UMR 2.25-2.5jt untuk P0, 2.5-3.5jt untuk P1, 4-6jt untuk P2) + tunjangan transport+makan+komunikasi+jabatan + BPJS perusahaan (8% total)",
+      "sumber_nilai": "Recalc dengan grading P0/P1/P2: 3 P0 × 2.7jt = 8.1jt + 6 P1 × 4jt = 24jt + 3 P2 × 6jt = 18jt + BPJS 4.9jt = 55jt"
+    },
+    "marketing_bulanan_idr": {
+      "nilai": 5000000,
+      "definisi": "Total budget marketing (paid ads + organic boost) per bulan. Channel mix: FB Ads 35%, IG Brand 25%, IG Reels 20%, Retargeting 10%, Test 10%",
+      "sumber_nilai": "Sesuai meta-ads-strategy.json budget per_bulan"
+    },
+    "operasional_kantor_bulanan_idr": {
+      "nilai": 7000000,
+      "definisi": "Biaya operasional kantor (listrik, internet, ATK, transport operasional, lain-lain) per bulan",
+      "komponen": "Listrik 1.5jt + Internet 500rb + ATK 500rb + Transport 2jt + Pemeliharaan 1jt + Lain-lain 1.5jt",
+      "sumber_nilai": "Recalc real cost operasional Q1 2026 (sebelumnya saya over-estimate 10jt)"
+    },
+    "legal_pajak_bulanan_idr": {
+      "nilai": 5000000,
+      "definisi": "Biaya legal + pajak rutin per bulan. Termasuk notaris retainer, pajak daerah, legal ops",
+      "komponen": "Notaris retainer 2jt + Pajak 1.5jt + Legal lain 1.5jt",
+      "sumber_nilai": "Recalc real cost Q1 2026 (sebelumnya over-estimate 8jt)"
+    },
+    "tanggal_payroll": {
+      "nilai": 6,
+      "definisi": "Tanggal transfer gaji setiap bulan. Gaji bulan kerja X dibayar tanggal 6 bulan X+1",
+      "sumber_nilai": "Per user requirement 24 Jul 2026"
+    }
+  },
+  "forecast_q4_2026": [
+    {
+      "skenario": "Conservative (4 unit/bulan)",
+      "probabilitas_pct": 25,
+      "closing_q4_unit": 12,
+      "revenue_q4_idr": 1992000000,
+      "hpp_q4_idr": 900000000,
+      "gross_profit_q4_idr": 1092000000,
+      "fee_closing_q4_idr": 39000000,
+      "gaji_quarter_idr": 165000000,
+      "operasional_quarter_idr": 21000000,
+      "marketing_quarter_idr": 15000000,
+      "legal_pajak_quarter_idr": 15000000,
+      "net_profit_q4_idr": 837000000,
+      "net_margin_pct": 42,
+      "trigger": "FB Ads turun drastis, FLPP regulasi berubah, lead drop 50%+, cashflow ketat"
+    },
+    {
+      "skenario": "Realistic (6 unit/bulan — base case)",
+      "probabilitas_pct": 50,
+      "closing_q4_unit": 18,
+      "revenue_q4_idr": 2988000000,
+      "hpp_q4_idr": 1350000000,
+      "gross_profit_q4_idr": 1638000000,
+      "fee_closing_q4_idr": 58500000,
+      "gaji_quarter_idr": 165000000,
+      "operasional_quarter_idr": 21000000,
+      "marketing_quarter_idr": 15000000,
+      "legal_pajak_quarter_idr": 15000000,
+      "net_profit_q4_idr": 1363500000,
+      "net_margin_pct": 46,
+      "trigger": "Performance sama dengan Q3 2026 (base case)"
+    },
+    {
+      "skenario": "Stretch (8 unit/bulan)",
+      "probabilitas_pct": 20,
+      "closing_q4_unit": 24,
+      "revenue_q4_idr": 3984000000,
+      "hpp_q4_idr": 1800000000,
+      "gross_profit_q4_idr": 2184000000,
+      "fee_closing_q4_idr": 78000000,
+      "gaji_quarter_idr": 165000000,
+      "operasional_quarter_idr": 21000000,
+      "marketing_quarter_idr": 15000000,
+      "legal_pajak_quarter_idr": 15000000,
+      "net_profit_q4_idr": 1890000000,
+      "net_margin_pct": 47,
+      "trigger": "TikTok organik viral, cluster baru launching sukses, 1 KOL kolaborasi viral"
+    },
+    {
+      "skenario": "Pivot (FLPP regulasi tutup, pivot ke Komersial Cash)",
+      "probabilitas_pct": 5,
+      "closing_q4_unit": 6,
+      "revenue_q4_idr": 2400000000,
+      "hpp_q4_idr": 1440000000,
+      "gross_profit_q4_idr": 960000000,
+      "fee_closing_q4_idr": 19500000,
+      "gaji_quarter_idr": 165000000,
+      "operasional_quarter_idr": 21000000,
+      "marketing_quarter_idr": 15000000,
+      "legal_pajak_quarter_idr": 15000000,
+      "net_profit_q4_idr": 724500000,
+      "net_margin_pct": 30,
+      "trigger": "FLPP ditutup/regulasi berubah, pivot ke Komersial Cash 400jt/unit × 6 unit (margin 20%)"
+    }
+  ],
+  "forecast_2027_full_year": [
+    {"skenario": "Conservative", "unit_tahun": 48, "revenue_idr": 7968000000, "net_profit_idr": 3348000000, "net_margin_pct": 42},
+    {"skenario": "Realistic", "unit_tahun": 72, "revenue_idr": 11952000000, "net_profit_idr": 5454000000, "net_margin_pct": 46},
+    {"skenario": "Stretch", "unit_tahun": 96, "revenue_idr": 15936000000, "net_profit_idr": 7560000000, "net_margin_pct": 47},
+    {"skenario": "Pivot ke Komersial", "unit_tahun": 24, "revenue_idr": 9600000000, "net_profit_idr": 2898000000, "net_margin_pct": 30}
+  ],
+  "milestone_2027": [
+    {"q": "Q1 2027", "target": "Sustain 6 unit/bulan, tambah 1 PIC marketing (Amir naik P1)", "kpi": "Closing 18 unit + recruitment 1 PIC"},
+    {"q": "Q2 2027", "target": "Launching cluster baru Safir Residence (50 unit), TikTok Ads scale up", "kpi": "Closing 18 unit + cluster launching 50 unit"},
+    {"q": "Q3 2027", "target": "Ekspansi ke kabupaten tetangga (Lumajang)", "kpi": "Closing 18 unit + 10 lead dari Lumajang"},
+    {"q": "Q4 2027", "target": "Brand positioning: TOP 5 developer menengah di Jawa Timur", "kpi": "Closing 24 unit + brand recall survey > 40%"}
+  ],
+  "growth_lever": [
+    {"lever": "Tambah cluster baru (ekspansi supply)", "impact": "+5-10 unit/tahun", "effort": "Tinggi (butuh modal + izin)", "timeline_bulan": 6},
+    {"lever": "Tambah PIC marketing (ekspansi demand)", "impact": "+10-15 unit/tahun", "effort": "Sedang (butuh rekrut + training)", "timeline_bulan": 2},
+    {"lever": "Ekspansi channel (TikTok Ads scale)", "impact": "+3-5 unit/tahun", "effort": "Rendah (budget + konten)", "timeline_bulan": 1},
+    {"lever": "Pivot ke Komersial KPR (margin lebih tinggi)", "impact": "+Rp 5-10 M net/tahun per unit komersial", "effort": "Tinggi (butuh desain + material premium)", "timeline_bulan": 9},
+    {"lever": "Repeat customer + referral (insentif)", "impact": "+2-3 unit/tahun", "effort": "Rendah (program insentif)", "timeline_bulan": 3}
+  ],
+  "key_risk_to_forecast": [
+    {"risk": "FB Ads CPM naik 20% lagi", "impact": "CPL naik ke Rp 18.000, margin tipis", "mitigation": "Diversifikasi ke TikTok organik + SEO Web"},
+    {"risk": "Bank tightening KPR", "impact": "SP3K approval turun 60%, closing drop", "mitigation": "Maintain 2-3 bank relationship, edukasi konsumen lebih awal"},
+    {"risk": "Material naik 15% (semen, besi)", "impact": "HPP naik ke 85jt, margin turun 2-3%", "mitigation": "Lock harga supplier 6 bulan, multiple supplier"},
+    {"risk": "Resesi + daya beli turun", "impact": "Demand turun 30-50%", "mitigation": "Pivot ke tier Conservatif (4 unit/bulan), cash reserve 6 bulan"},
+    {"risk": "FLPP regulasi ditutup", "impact": "Channel utama hilang, pivot Komersial required", "mitigation": "Siapkan 1 cluster Komersial Cash di 2027 sebagai backup"},
+    {"risk": "Garansi 1 bulan (R-008) - konsumen komplain > 30 hari", "impact": "Reputasi rusak, lead turun 20%", "mitigation": "QC 50 item ketat, dokumentasi lengkap, edukasi konsumen tentang garansi"}
+  ]
+}

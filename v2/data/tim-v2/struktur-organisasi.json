@@ -1,0 +1,334 @@
+{
+  "_meta": {
+    "name": "struktur-organisasi",
+    "version": "3.0",
+    "deskripsi": "Hierarki formal + reporting line + decision matrix 12 PIC. V2: Rizal triple role (Pelaksana + Perencanaan + PIC Proyek). Backup PIC include Yudi/Sdek + Mada. | V3.0: tambah delegation_matrix anti-owner-centris per meeting 24 Jul 2026.",
+    "ref": "content/v1-management/bab-02-struktur-organisasi.md + revisi 24 Jul 2026",
+    "no_owner_centris": true
+  },
+  "level_hierarki": [
+    {
+      "level": 1,
+      "title": "Owner / Director",
+      "pic": "Pak Ardian",
+      "role_fungsi": "Pemegang saham, strategic decision maker, final approval",
+      "reports_to": null,
+      "direct_subordinates": [
+        "Bu Nisya (Co-Director)",
+        "Mada (COO proxy)"
+      ],
+      "approval_threshold": {
+        "pengeluaran": "> Rp 10 juta",
+        "kontrak": "Semua kontrak > Rp 50 juta atau jangka panjang",
+        "rekrutmen": "Semua level",
+        "ekspansi": "Proyek baru, cabang baru, mitra strategis"
+      }
+    },
+    {
+      "level": 2,
+      "title": "Co-Director + COO Proxy",
+      "pic": [
+        "Bu Nisya",
+        "Mada"
+      ],
+      "role_fungsi": "Bu Nisya = Legal oversight. Mada = operasional harian + eksekusi lintas divisi",
+      "reports_to": "Pak Ardian",
+      "direct_subordinates": "Semua PIC level 3 (kepala divisi & ketua tim)"
+    },
+    {
+      "level": 3,
+      "title": "Kepala Divisi + Ketua Tim",
+      "role_fungsi": "Kepala masing-masing divisi, lead tim 1-3 PIC operasional, accountable ke Mada untuk hasil",
+      "pic": {
+        "legal": "Bu Nisya (kalau dihitung sebagai kepala)",
+        "marketing": "Mada (juga Kepala Kantor)",
+        "proyek_pelaksana": "Rizal (juga Kepala Perencanaan + PIC Proyek Utama)",
+        "operasional": "Novita (admin) + Sinta (purchasing)",
+        "media": "Reni (ketua media) + Rifki (ketua kreatif)"
+      },
+      "reports_to": "Mada (untuk eksekusi) / Bu Nisya (untuk legal)",
+      "direct_subordinates": "PIC operasional di divisinya"
+    },
+    {
+      "level": 4,
+      "title": "PIC Operasional",
+      "role_fungsi": "Pelaksana harian di masing-masing fungsi (marketing, proyek, media, admin). Update dashboard real-time + laporan ke kepala divisi",
+      "pic": [
+        "Riza (Digital Marketing)",
+        "Yudi/Sdek (Closing + Front Desk)",
+        "Amir (cover proyek+marketing)",
+        "Reta"
+      ],
+      "reports_to": "Kepala divisi masing-masing (Mada/Rizal/Reni)",
+      "direct_subordinates": null
+    }
+  ],
+  "rizal_triple_role": {
+    "title_1": "Kepala Pelaksana Proyek (Site Manager)",
+    "title_2": "Kepala Perencanaan Proyek (Strategic Planner)",
+    "title_3": "PIC Utama Proyek (Project Owner)",
+    "scope_pelaksana": "Lead harian site, manage mandor + subkon, QC onsite, daily log, handover material",
+    "scope_perencanaan": "RAB, schedule, material planning, risk proyek, critical path, progress report",
+    "scope_pic_utama": "Reporting ke Mada, accountable ke Owner untuk delivery, eskalasi blocker > 24 jam",
+    "wakil_proyek": "Amir (cover harian jika Rizal off-site) + Mada (strategic decision saat Rizal cuti > 3 hari)"
+  },
+  "agenda_harian_semua_karyawan": {
+    "jam_kerja_inti": "08.00-16.30 (Senin-Jumat), 08.00-16.00 (Sabtu)",
+    "agenda_wajib": [
+      {
+        "waktu": "08.00-08.30",
+        "agenda": "Daily standup (semua PIC, online/offline)",
+        "pic_lead": "Mada",
+        "output": "Briefing report + assignment lead"
+      },
+      {
+        "waktu": "08.30-12.00",
+        "agenda": "CORE WORK BLOCK 1 (deep work, no meeting, no WA chat kecuali urgent)",
+        "output": "Progress task utama"
+      },
+      {
+        "waktu": "12.00-13.00",
+        "agenda": "Istirahat + makan",
+        "output": "Recharge"
+      },
+      {
+        "waktu": "13.00-16.00",
+        "agenda": "CORE WORK BLOCK 2 (meeting internal boleh, customer-facing)",
+        "output": "Selesai task + meeting"
+      },
+      {
+        "waktu": "16.00-16.30",
+        "agenda": "Recap + submit daily report via Dashboard V2",
+        "output": "Daily log + handover jika ada"
+      },
+      {
+        "waktu": "16.30",
+        "agenda": "Pulang (atau lembur jika urgent + approval Mada)",
+        "output": "—"
+      }
+    ],
+    "variasi_divisi": {
+      "proyek": "Start 07.00 di site (Rizal, Amir, mandor). Recap 16.00, pulang 16.30",
+      "marketing": "Boleh WFH pagi 1x/minggu (Senin), recap via WA grup 16.00",
+      "media": "Flexible 30 menit, wajib hadir briefing pagi",
+      "owner": "By exception, tidak terikat jam"
+    }
+  },
+  "agenda_publifikasi_harian_wajib": {
+    "judul": "30 Detik Publikasi — Wajib Semua Karyawan",
+    "tujuan": "Membantu penjualan perumahan via organic reach + word-of-mouth dari internal team",
+    "task_harian": [
+      "Like + komen 3 post IG/FB perusahaan setiap hari (WAJIB 100% PIC setiap hari)",
+      "Share 1 post/story ke WA pribadi/story (rotating PIC, jadwal mingguan di Dashboard V2)",
+      "Update status WA minimal 1x/minggu pakai template (rotating Senin-Jumat)",
+      "Reply komen di IG/FB perusahaan saat luang (tim media cek harian)",
+      "Kirim 1 broadcast ke 5 teman/keluarga tentang unit ready stock (template di Notion)",
+      "Tag 2 orang di post perusahaan (jika relevan, max 1x/post)"
+    ],
+    "task_mingguan": [
+      "Submit screenshot like/share/komen setiap Jumat 16.00 ke Dashboard V2 tab Engagement Internal",
+      "PIC media rekap compliance publikasi, lapor ke Mada setiap Senin pagi"
+    ],
+    "compliance_kpi": "5% dari appraisal bulanan. Compliance < 80% = pengurang bonus",
+    "tracking": "Dashboard V2 tab 'Engagement Internal' — PIC submit foto + counter",
+    "insentif": "PIC dengan engagement publikasi tertinggi per bulan dapat 'Brand Ambassador Award' + voucher Rp 200rb"
+  },
+  "handover_sop_24_jam": {
+    "judul": "SOP Handover 24-Jam (PIC Sakit / Izin / Cuti)",
+    "tujuan": "Tidak ada task yang stuck karena PIC tidak masuk. Backup ambil alih dengan SOP jelas",
+    "trigger_dan_sla": [
+      {
+        "kondisi": "PIC izin 1 hari (sakit ringan, urusan keluarga)",
+        "handover": "PIC lapor WA grup daily standup H-1, kasih tahu backup nama. Backup ambil alih task urgent via WA",
+        "durasi_handover": "5 menit"
+      },
+      {
+        "kondisi": "PIC izin 2-3 hari",
+        "handover": "PIC handover formal via WA dengan task list + deadline + PIC backup. Backup confirm",
+        "durasi_handover": "15 menit"
+      },
+      {
+        "kondisi": "PIC izin > 3 hari (sakit, opname)",
+        "handover": "Trigger handover formal (knowledge transfer 30 menit ke backup via video call atau langsung)",
+        "durasi_handover": "30-60 menit"
+      },
+      {
+        "kondisi": "PIC cuti panjang > 1 minggu (cuti tahunan, cuti hamil)",
+        "handover": "Handover formal + masa transisi. Backup full handle task sampai PIC kembali",
+        "durasi_handover": "2-3 hari (sebelum cuti)"
+      },
+      {
+        "kondisi": "PIC resign",
+        "handover": "Exit handover 1 bulan (sesuai SOP onboarding-cross-training.json)",
+        "durasi_handover": "1 bulan"
+      }
+    ],
+    "form": "Form Handover (Lamp-31) — baru dibuat di content/lampiran/",
+    "tracking": "Dashboard V2 tab 'Absensi + Handover' — auto-log saat PIC input izin",
+    "pic_default": "Mada (monitor compliance handover setiap Senin)"
+  },
+  "decision_matrix": [
+    {
+      "item": "Pengeluaran operasional rutin < Rp 1 juta",
+      "approve": "Mada",
+      "notif": "Pak Ardian via WA"
+    },
+    {
+      "item": "Pengeluaran Rp 1-10 juta",
+      "approve": "Mada + Bu Nisya",
+      "notif": "Pak Ardian via WA"
+    },
+    {
+      "item": "Pengeluaran > Rp 10 juta",
+      "approve": "Pak Ardian",
+      "notif": "-"
+    },
+    {
+      "item": "Kontrak konsumen FLPP",
+      "approve": "Bu Nisya",
+      "notif": "Mada"
+    },
+    {
+      "item": "Kontrak vendor/supplier < Rp 5 juta",
+      "approve": "Mada",
+      "notif": "Bu Nisya"
+    },
+    {
+      "item": "Kontrak vendor/supplier > Rp 5 juta",
+      "approve": "Pak Ardian",
+      "notif": "Bu Nisya"
+    },
+    {
+      "item": "Penerimaan karyawan baru",
+      "approve": "Mada (screening) + Pak Ardian (final)",
+      "notif": "Bu Nisya (untuk kontrak)"
+    },
+    {
+      "item": "Cuti / izin > 2 hari",
+      "approve": "Mada",
+      "notif": "Pak Ardian jika staff kepala"
+    },
+    {
+      "item": "Closing lead dengan diskon khusus",
+      "approve": "Mada (max 5%) / Pak Ardian (>5%)",
+      "notif": "Bu Nisya untuk aspek legal"
+    },
+    {
+      "item": "Iklan / paid promotion > Rp 5 juta / bulan",
+      "approve": "Pak Ardian",
+      "notif": "Mada"
+    },
+    {
+      "item": "Tukar jadwal / lembur tim proyek weekend",
+      "approve": "Rizal",
+      "notif": "Mada"
+    },
+    {
+      "item": "Pembelian material proyek > Rp 5 juta",
+      "approve": "Rizal + Sinta",
+      "notif": "Mada"
+    },
+    {
+      "item": "Handover PIC izin/sakit/cuti",
+      "approve": "Mada (PIC operasional) / Rizal (PIC proyek)",
+      "notif": "Pak Ardian jika kepala divisi"
+    }
+  ],
+  "meeting_cadence": [
+    {
+      "nama": "Daily Standup",
+      "waktu": "08.00-08.30",
+      "peserta": "Mada + seluruh PIC (online/offline)",
+      "pic_lead": "Mada",
+      "output": "Briefing report + assignment lead"
+    },
+    {
+      "nama": "Weekly Review",
+      "waktu": "Jumat 14.00-15.30",
+      "peserta": "Mada + seluruh PIC",
+      "pic_lead": "Mada",
+      "output": "Weekly report + KPI check"
+    },
+    {
+      "nama": "Monthly Evaluation",
+      "waktu": "Akhir bulan, Senin pertama 09.00-12.00",
+      "peserta": "Mada + seluruh PIC + Pak Ardian",
+      "pic_lead": "Pak Ardian",
+      "output": "Monthly evaluation + coaching plan"
+    },
+    {
+      "nama": "Quarterly Audit",
+      "waktu": "Akhir quarter, minggu pertama",
+      "peserta": "Pak Ardian + Mada + Bu Nisya + Rizal",
+      "pic_lead": "Pak Ardian",
+      "output": "Strategic review + profit/cashflow audit"
+    },
+    {
+      "nama": "1-on-1 Coaching",
+      "waktu": "Mingguan, 30 menit per PIC",
+      "peserta": "Mada + 1 PIC",
+      "pic_lead": "Mada",
+      "output": "Coaching notes + action item"
+    }
+  ],
+  "eskalasi_path": {
+    "level_1": "PIC → Mada (default)",
+    "level_2": "Mada → Pak Ardian (jika blocked > 24 jam atau > Rp 10 juta)",
+    "level_3": "Pak Ardian final (strategic decision)",
+    "level_legal": "Semua PIC → Bu Nisya (konsultasi legal kapan saja)"
+  },
+  "delegation_matrix": {
+    "deskripsi": "Authority tiap role untuk approve tanpa Owner. Tujuan: kurangi bottleneck Pak Ardian, push decision ke level operasional.",
+    "prinsip": "Owner hanya approve keputusan strategic &金额 > 50jt. Semua approval lain didelegasikan ke Mada/Bu Nisya/manager fungsi.",
+    "limit_per_role": {
+      "mada": {
+        "limit_idr": 5000000,
+        "scope": "Pengeluaran operasional, vendor routine, fee closing, reimbursement PIC, material proyek < 5jt",
+        "kewajiban": "WA notifikasi ke Owner setiap approval > 1jt (real-time, bukan akhir hari).",
+        "wakil": "Rizal (kalau Mada off-site > 1 hari)"
+      },
+      "bu_nisya": {
+        "limit_idr_kontrak": 50000000,
+        "scope": "Kontrak konsumen FLPP, kontrak vendor <= 50jt, addendum kontrak, legal opinion, sengketa konsumen",
+        "kewajiban": "Cross-check dengan Mada untuk keputusan > 10jt. Laporan bulanan ke Owner.",
+        "wakil": "Mada (legal-friendly decisions saat Bu Nisya unavailable)"
+      },
+      "rizal": {
+        "limit_idr": 3000000,
+        "scope": "Material proyek urgent, transport proyek, fee tukang, klaim material < 3jt",
+        "kewajiban": "Approval dalam 24 jam. Cross-check dengan Mada untuk material > 1jt.",
+        "wakil": "Amir (cover harian jika Rizal off-site)"
+      },
+      "manager_fungsi": {
+        "limit_idr": 1500000,
+        "scope": "Marketing lead ads budget, content production cost, design tools, kecil operasional",
+        "kewajiban": "Approval dalam 12 jam. Laporan mingguan ke Mada.",
+        "wakil": "Mada"
+      }
+    },
+    "owner_only": {
+      "limit_min_idr": 50000000,
+      "scope": [
+        "Pengeluaran > 50jt (capex, investasi, ekspansi)",
+        "Rekrutmen level manager ke atas",
+        "Kontrak jangka panjang > 1 tahun",
+        "Proyek baru / cluster baru / ekspansi lahan",
+        "Mitra strategis (bank KPR, notaris utama, vendor tier-1 baru)",
+        "Pivot bisnis / perubahan HPP / perubahan fee structure"
+      ],
+      "kewajiban": "Mengikuti meeting bulanan. WA confirmation real-time untuk urgent > 100jt."
+    },
+    "enforcement": {
+      "monitoring": "Setiap approval tanpa owner harus tercatat di master-db (kolom approved_by, timestamp, amount, justification).",
+      "audit": "Bu Nisya audit mingguan: cek approval Mada/Rizal/manajer fungsi vs actual. Temuan = form corrective.",
+      "punishment_pelanggaran": [
+        "Approve tanpa authority = warning 1 (dokumentasi HR)",
+        "Approve tanpa notifikasi ke Owner = potong fee closing bulan tersebut 50%",
+        "Approve melebihi limit tanpa escalation = warning 2 + pembinaan 1-on-1 Mada",
+        "Pattern 3x pelanggaran dalam 1 quarter = evaluasi performance, kemungkinan turun grading"
+      ]
+    },
+    "mulai_berlaku": "2026-08-01",
+    "review_cycle": "Quarterly (awal Oktober 2026, Januari 2027, dst). Adjust limit berdasarkan volume aktual."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "name": "sop-12-pic",
+    "version": "2.0",
+    "deskripsi": "SOP 12-komponen per 12 PIC. V2: Hapus daily report (kecuali teknis proyek) - fokus KPI produk. V5.0 meeting 24 Jul 2026 point 15.",
+    "ref": "sop-12-pic V1.0 + meeting 24 Jul 2026 point 15 + BAB 5.4"
+  },
+  "kebijakan_daily_report_v5": {
+    "prinsip": "V5.0 menghapus daily activity report untuk semua PIC kecuali teknis proyek (Rizal/Amir/mandor). Fokus: KPI produk, bukan aktivitas. PIC yang tidak punya KPI produk harian = tidak perlu daily report.",
+    "pic_wajib_daily_report": [
+      {"pic": "Rizal/Amir", "jenis": "Log proyek harian (material masuk, mandor, progress per-blok, defect)", "tujuan": "Track schedule + QC real-time", "format": "Dashboard V2 auto + foto"},
+      {"pic": "Sinta (Purchasing)", "jenis": "Material masuk log (qty, spek, vendor, retensi)", "tujuan": "Stopper kualitas real-time", "format": "Master-db purchasing"}
+    ],
+    "pic_tanpa_daily_report": [
+      {"pic": "Riza/Yudi/Reta/Media (Reni, Rifki, Reta)", "alasan": "Output = closing/posting, sudah tracked di leaderboard mingguan. Daily report = micromanage."},
+      {"pic": "Novita (Admin)", "alasan": "Output = berkas FLPP, on-time akad. Tracked via dashboard + email."},
+      {"pic": "Bu Nisya/Mada", "alasan": "Output = legal opinion, audit, approval. Tracked via log system."}
+    ],
+    "pengganti_daily_report": {
+      "mingguan": "Leaderboard + KPI Score Card per PIC (auto-report setiap Senin pagi)",
+      "bulanan": "Appraisal + coaching 3 pilar",
+      "real_time_alert": "Khusus PIC yang miss KPI > 20% → Mada ping via WA (bukan daily report)"
+    }
+  },
+  "komponen_standar": [
+    "kode_sop",
+    "judul",
+    "tujuan",
+    "ruang_lingkup",
+    "pic",
+    "trigger",
+    "langkah",
+    "form_terkait",
+    "output",
+    "sla",
+    "exception_handling",
+    "rollback_plan",
+    "kpi_terkait",
+    "cross_reference"
+  ],
+  "sop_list": [
+    {
+      "pic": "Mada",
+      "kode_sop": "MKT-SOP-2026-001",
+      "judul": "Briefing Pagi + Closing Coordination",
+      "tujuan": "Memastikan tim sinkron dan target closing harian tercapai",
+      "ruang_lingkup": "Setiap hari kerja pukul 08.00-08.30",
+      "trigger": "Jam 08.00 setiap hari kerja",
+      "langkah": [
+        "Cek absensi 12 PIC via dashboard",
+        "Brief lead masuk semalam",
+        "Assign lead baru ke Riza/Amir/Yudi",
+        "Update target hari ini"
+      ],
+      "form_terkait": "FORM-ABS-2026-001 (absensi harian)",
+      "output": "Briefing report + assignment lead harian",
+      "sla": "30 menit (08.00-08.30)",
+      "exception_handling": "Jika Mada absent → Riza supervise briefing",
+      "rollback_plan": "Briefing ditunda max 1 jam, dilaporkan ke Owner via WA",
+      "kpi_terkait": [
+        "Dashboard update real-time",
+        "Closing tim 6 unit/bulan"
+      ],
+      "cross_reference": "SOP-RZA-2026-001 (Riza follow-up lead)"
+    },
+    {
+      "pic": "Riza",
+      "kode_sop": "MKT-SOP-2026-002",
+      "judul": "Follow-up Lead + Closing",
+      "tujuan": "Convert lead menjadi closing",
+      "ruang_lingkup": "Lead dari semua channel (IG, FB, TikTok, Web, Walk-in)",
+      "trigger": "Lead baru masuk atau ada perubahan status lead",
+      "langkah": [
+        "Cek lead baru (08.30, 12.00, 16.00)",
+        "WA follow-up < 30 menit",
+        "Survey lokasi jika prospek tertarik",
+        "Closing call + input data ke master-db.json"
+      ],
+      "form_terkait": "FORM-LEAD-2026-001 (lead intake)",
+      "output": "Closing atau diskualifikasi lead + update master-db.json",
+      "sla": "Response < 30 menit, closing 4 unit/bulan",
+      "exception_handling": "Lead overload → Yudi/Amir back cover",
+      "rollback_plan": "Lead tidak qualified → status Disqualified di master-db.json",
+      "kpi_terkait": [
+        "Lead 200/bulan",
+        "Closing 2 unit/bulan",
+        "Conversion min 3%"
+      ],
+      "cross_reference": "SOP-MDA-2026-001 (briefing pagi)"
+    }
+  ]
+}

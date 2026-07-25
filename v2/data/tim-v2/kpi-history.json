@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "name": "kpi-history",
+    "version": "1.0",
+    "deskripsi": "History KPI per PIC. Auto-append saat PIC input dashboard."
+  },
+  "entries": []
+}

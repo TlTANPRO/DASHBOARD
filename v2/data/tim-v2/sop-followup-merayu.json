@@ -1,0 +1,129 @@
+{
+  "_meta": {
+    "name": "sop-followup-merayu",
+    "version": "1.0",
+    "deskripsi": "SOP Follow Up Merayu (bukan push, bukan pressure) - 7 step script. V5.0 meeting 24 Jul 2026 point 7. Berbeda dengan SOP closing hard-sell V4.",
+    "ref": "meeting 24 Jul 2026 point 7 + content/v2-developer/bab-27-followup-merayu.md"
+  },
+  "filosofi_followup_merayu": {
+    "definisi_merayu": "Merayu = memahami kebutuhan calon konsumen, membantu mereka mengambil keputusan yang tepat (bukan memaksa). Beda dengan hard-sell = pressure, manipulasi, janji palsu.",
+    "mengapa_merayu_bukan_push": [
+      "Trust > closing cepat. Konsumen yang dimeras = churn tinggi, no repeat order",
+      "Lead dari Riza = qualified. Tinggal persuade, jangan push",
+      "Closing rate V4 dengan push = 60%. Target V5 dengan merayu = 75% (repeat + referral ikut naik)",
+      "Brand long-term butuh konsumen happy, bukan konsumen 'menang' closing tapi nyesel"
+    ],
+    "prinsip_dasar": [
+      "Dengarkan dulu, baru bicara (rasio 70:30 listening vs talking)",
+      "Validasi perasaan konsumen ('saya paham bang, dulu saya juga begitu')",
+      "Pakai cerita, bukan data mentah (story selling > feature selling)",
+      "Tawarkan pilihan, bukan ultimatum (2-3 opsi, bukan yes/no)",
+      "Berikan waktu + ruang (konsumen yang dipaksa = kabur)"
+    ]
+  },
+  "script_7_step_merayu": {
+    "step_1_acknowledge": {
+      "nama": "Acknowledge (Pengakuan)",
+      "tujuan": "Bangun rapport, tunjukkan bahwa Anda dengar konsumen",
+      "durasi": "1-2 menit",
+      "script_contoh": [
+        "Terima kasih sudah hubungi kami, Pak [Nama]. Saya [Nama] dari [Perusahaan].",
+        "Saya paham, bangun rumah itu keputusan besar. Pasti banyak yang要考虑 (dipertimbangkan).",
+        "Boleh cerita dulu, Pak? Kira-kira yang jadi concern utama apa?"
+      ],
+      "indikator_sukses": "Konsumen mulai cerita concern-nya (dari diam jadi cerita)"
+    },
+    "step_2_mirror": {
+      "nama": "Mirror (Pencerminan)",
+      "tujuan": "Tunjukkan bahwa Anda paham persis apa yang konsumen rasakan",
+      "durasi": "2-3 menit",
+      "script_contoh": [
+        "Jadi kalau saya tangkep benar, yang Bapak khawatirin itu [ulangi concern dalam kata-kata sendiri]?",
+        "Betul Pak, banyak konsumen kami awalnya juga begitu. Wajar sekali.",
+        "Boleh tahu, selain itu ada lagi yang jadi pikiran?"
+      ],
+      "indikator_sukses": "Konsumen bilang 'iya betul' / 'persis itu Pak' = rapport terjalin"
+    },
+    "step_3_pain": {
+      "nama": "Pain (Rasa Sakit)",
+      "tujuan": "Gali lebih dalam dampak jika masalah tidak dipecahkan",
+      "durasi": "3-5 menit",
+      "script_contoh": [
+        "Kalau misalnya Bapak terus nyewa, per bulan Rp X juta. 5 tahun = Rp Y juta. Itu sudah bisa DP rumah.",
+        "Bapak masih harus siap kalau harga sewa naik tiap tahun, atau kalau owner jual bangunannya.",
+        "Untuk keluarga, kalau punya rumah sendiri, anak bisa sekolah tetap, tidak pindah-pindah."
+      ],
+      "indikator_sues": "Konsumen mulai bilang 'iya sih', 'memang benar' = pain terasa"
+    },
+    "step_4_solution": {
+      "nama": "Solution (Solusi)",
+      "tujuan": "Sambungkan solusi = rumah tipe 36 Selo dengan benefit yang relevan",
+      "durasi": "5-7 menit",
+      "script_contoh": [
+        "Jadi salah satu opsi yang sering dipertimbangkan konsumen kami adalah rumah tipe 36 di Selo.",
+        "Cicilan FLPP mulai Rp 1.5 jutaan per bulan, sama dengan sewa. Tapi 20 tahun lunas jadi milik Bapak.",
+        "Lokasi strategis, akses ke kota 15 menit, lingkungan sudah ada tetangga (cluster A sudah dihuni).",
+        "Sertifikat SHM, bukan girik. Aman secara legal."
+      ],
+      "indikator_sukes": "Konsumen tanya detail (cicilan, lokasi, sertifikat) = interest naik"
+    },
+    "step_5_story": {
+      "nama": "Story (Cerita)",
+      "tujuan": "Berikan social proof via testimoni/kasus nyata",
+      "durasi": "3-5 menit",
+      "script_contoh": [
+        "Bulan lalu, Pak [Nama lain] dari [Asal] juga awal-awal ragu. Setelah saya jelaskan, dia survey, dan akad 2 minggu kemudian.",
+        "Sekarang dia sudah serah terima, dan bulan lalu dia referensikan temannya ke kami.",
+        "Konsumen kami 70% dari referensi. Artinya orang puas biasanya cerita ke teman."
+      ],
+      "indikator_sukes": "Konsumen bilang 'wah ada testimoni juga ya' = trust naik"
+    },
+    "step_6_urgency": {
+      "nama": "Urgency (Ketersediaan)",
+      "tujuan": "Gunakan scarcity yang JUJUR (bukan fake urgency)",
+      "durasi": "1-2 menit",
+      "script_contoh": [
+        "Pak, untuk blok ini tersisa 3 unit lagi. Kalau Bapak tertarik, bisa kita survey minggu ini.",
+        "Harga promo FLPP biasanya berubah per quarter. Sekarang masih harga lama, tapi belum tahu 3 bulan lagi.",
+        "Tidak ada tekanan, Pak. Saya cuma mau info aja. Kalau belum siap, tidak apa-apa."
+      ],
+      "indikator_sukes": "Konsumen tanya 'masih ada unit ya?' / 'bisa survey kapan?' = siap closing"
+    },
+    "step_7_close": {
+      "nama": "Close (Penutup)",
+      "tujuan": "Tawarkan langkah konkret (survey / DP awal / diskusi keluarga)",
+      "durasi": "1-2 menit",
+      "script_contoh": [
+        "Bapak, saya usulkan kita survey lokasi dulu. Gratis, tidak ada komitmen. Bisa Sabtu ini atau minggu depan?",
+        "Atau kalau mau diskusi sama keluarga dulu, saya bisa kirimkan brosur + simulasi KPR ke WA Bapak. Nanti Bapak review, kita lanjut kalau sudah siap.",
+        "Boleh juga kita video call dengan istri Bapak, biar sekalian saya jelaskan ke beliau. Kapan enaknya?"
+      ],
+      "indikator_sukes": "Konsumen pilih salah satu opsi (survey/brosur/video call) = qualified lead"
+    }
+  },
+  "anti_pattern_yang_dihindari": {
+    "hard_sell": "Jangan pakai kata 'ayo', 'yuk', 'harus', 'sekarang juga'. Pakai 'bisa', 'boleh', 'jika Bapak siap'.",
+    "fake_urgency": "Jangan bilang 'hanya hari ini' kalau besok masih ada. Hanya pakai scarcity yang real (unit tersisa, harga berubah per quarter).",
+    "janji_palsu": "Jangan janjikan hal yang tidak pasti (misal: 'pasti naik 30% tahun depan' = manipulasi). Pakai data historis saja.",
+    "pressure_to_close": "Jangan kejar closing di percakapan pertama. Lead butuh 2-5x follow up sebelum siap. Sabar.",
+    "bandingin_kompetitor_jelek": "Jangan bilang 'developer lain jelek'. Fokus ke value kita, bukan menjelekkan orang lain.",
+    "ignore_signal_tidak_suka": "Kalau konsumen bilang 'saya pikir dulu' = TURUN. Jangan paksa. Follow up 3 hari kemudian dengan halus."
+  },
+  "kpi_dan_tracking": {
+    "metrik_merayu": {
+      "response_rate": "% lead yang dibalas dalam 5 menit (target > 80%)",
+      "rapport_score": "Self-rate 1-5 per percakapan, rata-rata per minggu (target > 4)",
+      "objection_resolved": "% keberatan yang di-resolve (target > 70%)",
+      "survey_booking_rate": "% lead yang booking survey setelah 3x follow up (target > 40%)",
+      "closing_rate": "% lead yang closing setelah survey (target > 50%)"
+    },
+    "tracking_tool": "Dashboard V2 tab 'Follow-Up Tracker' — log setiap percakapan + step mana yang sampai + outcome",
+    "report_mingguan": "Yudi/Reta submit ke Mada setiap Senin pagi",
+    "coaching_jika_miss": "Jika Yudi/Reta closing rate < 50% 2 minggu berturut → Mada coaching khusus + role-play 7 step"
+  },
+  "role_spesifik_pic": {
+    "yudi_sdek": "Follow up utama lead dari Riza (qualified digital) + walk-in. 70% kerja Yudi = follow up.",
+    "reta": "Follow up lead organik dari konten (closing_trigger) + community management. 50% kerja Reta = follow up, 50% = konten support.",
+    "mada_coaching": "Mada coaching Yudi/Reta tiap Jumat (role-play 7 step + review percakapan minggu lalu)"
+  }
+}

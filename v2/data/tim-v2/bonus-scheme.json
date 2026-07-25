@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "name": "bonus-scheme",
+    "version": "3.0",
+    "deskripsi": "Bonus scheme + payroll + fee closing 5 komponen. V3: Fee Media = closing-based (bukan posting-based), konten_pilar 3 kategori, BAB 56.5.",
+    "ref": "content/v2-developer/bab-31-bonus-scheme.md + revisi 24 Jul 2026 + meeting 24 Jul 2026 point 6"
+  },
+  "fee_media_closing_based_v5": {
+    "prinsip": "Fee media TIDAK dihitung dari jumlah posting. Fee media = output closing. Kalau konten tidak menghasilkan closing = tidak ada fee. Ini merubah V4 yang fee media = Rp 250rb flat per closing dari komponen 3, menjadi fee media dihitung dari closing-driven per pilar konten.",
+    "konten_pilar_kategori": [
+      {
+        "pilar": "product_knowledge",
+        "definisi": "Konten yang menjelaskan produk: tipe rumah, harga, spesifikasi, lokasi, keunggulan, simulated walk-through, denah, AHS visual",
+        "tujuan": "Lead paham produk → qualified lead naik → cost per lead turun",
+        "fee_persen_dari_total_media_fee": 30,
+        "contoh_topik": ["Tipe 36 specs & harga", "Simulasi KPR FLPP", "Lokasi Selo & akses", "Progress pembangunan Type 36"]
+      },
+      {
+        "pilar": "brand_awareness",
+        "definisi": "Konten yang membangun trust: testimonial konsumen, behind the scene, budaya kerja, komitmen perusahaan, portofolio proyek, achievement",
+        "tujuan": "Brand diingat → reach naik → organik lead masuk lebih banyak",
+        "fee_persen_dari_total_media_fee": 20,
+        "contoh_topik": ["Testimoni konsumen akad", "Behind the scene tim proyek", "Owner message", "Serah terima BAST"]
+      },
+      {
+        "pilar": "closing_trigger",
+        "definisi": "Konten yang punya hook 3 detik + CTA kuat + WA clone 4455 + urgency/scarcity → trigger closing langsung",
+        "tujuan": "Engaged follower = qualified lead → closing conversion naik",
+        "fee_persen_dari_total_media_fee": 50,
+        "contoh_topik": ["Promo akhir bulan", "Slot tersisa 3 unit", "Open house weekend", "Best price minggu ini", "Diskon khusus cluster tertentu"]
+      }
+    ],
+    "per_hitungan_fee": {
+      "base_pool_media_per_closing_idr": 500000,
+      "keterangan": "Total Rp 500rb per closing, dipecah sesuai % pilar + kontribusi PIC media per pilar",
+      "distribusi_pilar": {
+        "product_knowledge": "Rp 150rb per closing (30%)",
+        "brand_awareness": "Rp 100rb per closing (20%)",
+        "closing_trigger": "Rp 250rb per closing (50%)"
+      },
+      "pic_penerima_per_pilar": {
+        "product_knowledge": "Rifki (visual/teknis) — 60%, Reni (broadcast) — 40%",
+        "brand_awareness": "Reni (broadcast) — 50%, Rifki (visual) — 50%",
+        "closing_trigger": "Rifki (hook visual) — 50%, Reta (CTA + community) — 30%, Reni (broadcast) — 20%"
+      },
+      "trigger": "Hanya dibayar jika lead dari konten closing sukses jadi akad. Tracking via UTM + Dashboard V2.",
+      "contoh_perhitungan": "1 closing dengan lead dari konten closing_trigger: Rifki dapat Rp 250rb x 50% = Rp 125rb, Reta Rp 250rb x 30% = Rp 75rb, Reni Rp 250rb x 20% = Rp 50rb. Total pool Rp 250rb (50% dari Rp 500rb base) dipakai, sisanya (Rp 250rb untuk pilar lain) hangus jika konten pilar lain tidak menghasilkan lead."
+    },
+    "minimum_publish": {
+      "minimum_per_minggu": "6 konten (1/hari Senin-Sabtu, mix 3 pilar)",
+      "minimum_closing_trigger_per_bulan": "8 konten closing_trigger (rata-rata 2/minggu)",
+      "minimum_qualified_lead_dari_konten": "5 qualified lead/bulan (tracked via UTM)",
+      "konsekuensi_jika_tidak_terpenuhi": "Fee base pool diturunkan 50% (jadi Rp 250rb/closing). PIC yang konsisten tidak memenuhi 2 bulan berturut → pembinaan Mada + visibility owner."
+    },
+    "tracking_utm": {
+      "tool": "Dashboard V2 tab 'Media Attribution'",
+      "parameter": "utm_source=instagram, tiktok, facebook, organik / utm_medium=konten_pilar / utm_campaign=closing_trigger / utm_content=konten_id",
+      "report_frekuensi": "Mingguan (Sabtu malam) ke Mada, bulanan ke owner",
+      "atribut_lead_to_konten": "Lead yang masuk via WA clone 4455 = 1 source WA, tapi jika mereka attached konten_id / mention source = attributed ke konten tersebut"
+    },
+    "perbandingan_v4_ke_v5": {
+      "v4": "Fee media = Rp 250rb flat per closing, dibagi rata Rifki + Reni. Tidak peduli pilar apa yang closing.",
+      "v5": "Fee media = Rp 500rb base pool per closing, dipecah sesuai pilar yang PIC buat + kontribusi per PIC. Yang closing_trigger dapat 50% (Rp 250rb) — bigger reward for higher-impact content.",
+      "rasional": "V4 tidak ada insentif bikin konten closing_trigger. V5 = insentif proporsional terhadap dampak closing."
+    }
+  },
+  "payroll_policy_v2": {
+    "tanggal_payroll": 6,
+    "keterangan": "Gaji bulan kerja X dibayar tanggal 6 bulan X+1. Contoh: gaji kerja Juli 2026 dibayar 6 Agustus 2026",
+    "metode_transfer": "Bank transfer (BCA/BNI/Mandiri) ke rekening masing-masing PIC. Slip gaji via email + Dashboard V2",
+    "potongan": {
+      "bpjs_kesehatan": "1% dari gaji pokok (karyawan) + 4% (perusahaan)",
+      "bpjs_ketenagakerjaan": "2% JHT (1% karyawan + 1% perusahaan) + 1.74% JP (0.57% karyawan + 1.17% perusahaan) + 0.3% JKK (perusahaan)",
+      "pph_21": "Progresif 5-35% sesuai PTKP, dihitung oleh software payroll",
+      "pinjaman_karyawan": "Optional, ada surat pernyataan (max 50% gaji pokok)"
+    },
+    "thr": "1 bulan gaji pokok + tunjangan tetap, dibayar H-7 Lebaran. Tahun ke-2 = full, tahun ke-1 = prorata",
+    "koreksi_gaji": "Slip gaji di-review PIC 3 hari kerja, jika ada dispute -> lapor HR (Novita) max 5 hari kerja"
+  },
+  "grading_system": {
+    "P0_junior": {
+      "gaji_pokok_range": "Rp 2.25-2.5 juta (UMR Lumajang 2026)",
+      "tunjangan_total": "Rp 450-700rb (transport 200rb + makan 250rb + komunikasi 50-100rb)",
+      "jabatan_tunjangan": "0",
+      "total_bulanan": "Rp 2.7-3.2 juta",
+      "level_pic_contoh": "PIC Operasional (Amir, Novita, Sinta, Reni, Rifki, Reta - beberapa)"
+    },
+    "P1_senior": {
+      "gaji_pokok_range": "Rp 2.5-3.5 juta",
+      "tunjangan_total": "Rp 600-950rb (transport 250rb + makan 300rb + komunikasi 100-150rb + lain 100-200rb)",
+      "jabatan_tunjangan": "Rp 200-500rb (untuk PIC senior dengan leadership)",
+      "total_bulanan": "Rp 3.3-4.95 juta",
+      "level_pic_contoh": "PIC Senior / Ketua Tim kecil (Riza, Yudi/Sdek, Reni, Rifki, Reta)"
+    },
+    "P2_kepala": {
+      "gaji_pokok_range": "Rp 4-6 juta",
+      "tunjangan_total": "Rp 950rb-1.2jt (transport 400rb + makan 350rb + komunikasi 200rb + representasi 100-300rb)",
+      "jabatan_tunjangan": "Rp 500rb-1.2jt (untuk kepala divisi / triple role)",
+      "total_bulanan": "Rp 5.45-8.4 juta",
+      "level_pic_contoh": "Mada (COO proxy), Rizal (triple role), Riza (setelah promosi ke senior)"
+    },
+    "P3_owner": {
+      "gaji_pokok_range": "Tidak ada gaji pokok tetap (owner)",
+      "tunjangan_total": "Representasi + operasional owner",
+      "jabatan_tunjangan": "Tidak ada",
+      "total_bulanan": "Profit sharing + dividen (variable)",
+      "level_pic_contoh": "Pak Ardian (Owner), Bu Nisya (Co-Director)"
+    }
+  },
+  "fee_closing_5_komponen": {
+    "total_per_unit_idr": 3250000,
+    "keterangan": "Total fee yang dibayarkan untuk 1 unit closing sukses (FLPP atau Komersial). Dibagi 5 komponen PIC yang terlibat",
+    "komponen": [
+      {"komponen": "Fee Pembeli (lead generator)", "nilai_idr": 1250000, "penerima": "PIC yang bawa lead dari awal (closing)", "trigger": "Lead closing jadi akad"},
+      {"komponen": "Fee Follow-up", "nilai_idr": 1250000, "penerima": "PIC yang follow-up dari lead ke closing (sales)", "trigger": "Lead closing jadi akad"},
+      {"komponen": "Fee Media (ads + konten)", "nilai_idr": 250000, "penerima": "Tim media (Rifki + Reni), di-share rata", "trigger": "Lead closing jadi akad (qualified lead from organic/ads)"},
+      {"komponen": "Fee Proyek (handover + BAST)", "nilai_idr": 250000, "penerima": "Tim proyek (Rizal + Amir), di-share", "trigger": "BAST selesai"},
+      {"komponen": "Fee Pemberkasan (legal + akad)", "nilai_idr": 250000, "penerima": "Bu Nisya + Novita, di-share", "trigger": "Akad selesai + BPN SHM keluar"}
+    ],
+    "distribusi_detail": {
+      "contoh_Riza_yang_bawa_dari_awal": "Dapat komponen 1 (1.25jt) + bagian dari komponen 3 media (125rb). Total 1.375jt",
+      "contoh_Yudi_yang_followup": "Dapat komponen 2 (1.25jt) jika dia yang follow-up lead sampai closing",
+      "contoh_Reta_double_role": "Jika Reta yang bawa lead DAN follow-up (full cycle), dia dapat komponen 1+2 = 2.5jt"
+    }
+  },
+  "bonus_tier_mada": {
+    "nama": "Bonus COO Proxy (Mada)",
+    "rate_per_unit_idr": 1500000,
+    "keterangan": "Bonus khusus Mada per unit closing sukses, sebagai kompensasi cross-function leadership",
+    "trigger": "Closing sukses (sama dengan trigger fee closing)",
+    "tier_target": {
+      "below_4_unit_bulan": "Tidak ada bonus",
+      "4_unit_bulan": "Bonus 1jt/unit (50% dari rate)",
+      "6_unit_bulan": "Bonus 1.5jt/unit (100% dari rate, base case)",
+      "8_unit_bulan": "Bonus 2jt/unit (133% dari rate, stretch case)",
+      "10_unit_bulan": "Bonus 2.5jt/unit (167% dari rate, exceptional)"
+    }
+  },
+  "insentif_publikasi_wajib": {
+    "kategori": "30 Detik Publikasi compliance",
+    "nilai_pct_appraisal": 5,
+    "keterangan": "5% dari appraisal bulanan PIC tergantung compliance publikasi harian",
+    "threshold_compliance": {
+      "compliance_90_100_pct": "5% appraisal penuh (bonus)",
+      "compliance_80_89_pct": "3% appraisal",
+      "compliance_70_79_pct": "1% appraisal (minimum threshold)",
+      "compliance_below_70_pct": "0% appraisal + pembinaan"
+    },
+    "tracking": "Dashboard V2 tab 'Engagement Internal' — PIC submit counter like/share/komen via foto setiap Jumat"
+  },
+  "bonus_tahunan": {
+    "trigger": "Company profitable 12 bulan terakhir",
+    "nilai": "1 bulan gaji pokok + tunjangan tetap, dibayar di akhir tahun (Desember)",
+    "distribusi": "Prorata berdasarkan masa kerja (full jika 12 bulan, prorata jika < 12 bulan)"
+  },
+  "koreksi_dan_dispute": {
+    "komplain_gaji": "PIC lapor ke Novita (admin) max 5 hari kerja setelah slip gaji keluar. Novita rekap, Mada approve koreksi, payroll tim proses",
+    "fee_closing_dispute": "Jika ada dispute komponen fee (siapa yang bawa lead, siapa yang follow-up), PIC mediasi dengan Mada, decision max 7 hari"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "name": "sop-front-office-audit",
+    "version": "1.0",
+    "deskripsi": "SOP Front Office Audit (Mingguan Bu Nisya + Bulanan Mada). V5.0 meeting 24 Jul 2026 point 11. Audit = quality control, bukan policing. Tujuan: kepuasan kinerja user (konsumen) naik, error turun.",
+    "ref": "meeting 24 Jul 2026 point 11 + hr-policy.json (audit internal) + sop-customer-service.json"
+  },
+  "filosofi_audit_v5": {
+    "definisi_audit": "Audit = systematic review terhadap proses + output front office (CS, admin, customer service, publikasi, lead handling). Bukan untuk mencari kesalahan, tapi untuk improve sistem.",
+    "mengapa_audit_perlu": [
+      "Tanpa audit = error menumpuk, konsumen komplain, repeat order turun",
+      "Audit = early detection sebelum jadi masalah besar",
+      "Audit = kesempatan coaching, bukan pengadilan",
+      "Audit = memastikan SOP dipakai, bukan hanya ditulis"
+    ],
+    "prinsip_audit": [
+      "Audit = mencari SYSTEM FAILURE, bukan personal failure",
+      "Audit = forward-looking (preventif), bukan backward-looking (menyalahkan)",
+      "Audit = kolaboratif, bukan top-down",
+      "Audit = transparan, hasil dipublikasi ke PIC yang diaudit"
+    ]
+  },
+  "audit_cycle_2_level": {
+    "level_1_mingguan": {
+      "pic_audit": "Bu Nisya",
+      "scope": [
+        "Form CS (kelengkapan, response time, sopan santun)",
+        "Notulensi meeting (ada, lengkap, terdistribusi)",
+        "Arsip dokumen (rapi, mudah dicari, tidak hilang)",
+        "Template email/WA (sesuai brand guideline)",
+        "Customer feedback handling (response < 24 jam, resolved < 7 hari)"
+      ],
+      "frekuensi": "Setiap Jumat sore (1-2 jam)",
+      "metode": [
+        "Sample 5-10 dokumen/percakapan dari minggu ini",
+        "Cross-check dengan SOP berlaku",
+        "Catat finding di Dashboard V2 (tab Audit)",
+        "Brief PIC yang diaudit di Senin pagi (jika ada finding)"
+      ],
+      "output": "Audit report mingguan: list finding (minor/major) + rekomendasi + PIC yang perlu coaching"
+    },
+    "level_2_bulanan": {
+      "pic_audit": "Mada",
+      "scope": [
+        "Seluruh scope level 1 + cross-check implementasi",
+        "Konsumen satisfaction score (jika ada survey)",
+        "Repeat order rate + referral rate",
+        "Cross-divisi handoff quality (lead → closing → admin → STB)",
+        "Compliance SOP 12-komponen (cek apakah SOP dipakai)"
+      ],
+      "frekuensi": "Akhir bulan (3-4 jam)",
+      "metode": [
+        "Review 3-5 audit mingguan dari Bu Nisya",
+        "Sample 10-15 customer journey (end-to-end)",
+        "Interview 2-3 konsumen (jika ada yang mau)",
+        "Review Dashboard V2 (leaderboard, KPI Score Card)",
+        "Rekap ke Owner via laporan bulanan"
+      ],
+      "output": "Audit report bulanan: trend audit + systemic issue + rekomendasi SOP baru + PIC ranking compliance"
+    }
+  },
+  "report_ke_owner": {
+    "frekuensi": "Bulanan (akhir bulan)",
+    "format": "Dashboard V2 auto-report + email ke Owner (max 1 halaman)",
+    "isi": [
+      "Ringkasan audit cycle bulan ini",
+      "Jumlah finding (minor/major)",
+      "PIC dengan compliance terbaik (3 besar)",
+      "PIC yang perlu pembinaan (1-2 PIC, tanpa nama publish)",
+      "Rekomendasi systemic improvement",
+      "Update SOP enforcement"
+    ],
+    "decision_use": "Owner pakai untuk: validasi fee bonus, identifikasi gap sistem, approve SOP baru, ekspansi tim"
+  },
+  "reward_dan_punishment": {
+    "reward": {
+      "konsumen_puas": "PIC dengan konsumen satisfaction tertinggi per bulan = 'Customer Champion' award + voucher Rp 300rb + publikasi dashboard",
+      "compliance_tinggi": "PIC dengan audit finding < 1/bulan = 'Audit Champion' award + publikasi + sertifikat",
+      "zero_komplain": "PIC yang handle konsumen dengan zero komplain selama 3 bulan berturut = bonus khusus Rp 500rb"
+    },
+    "punishment": {
+      "minor_finding": "Reminder + coaching 30 menit (Bu Nisya atau Mada)",
+      "major_finding": "Wajib ikut coaching 1 minggu + visibility Owner (Mada report)",
+      "repeat_major_finding": "Coaching 1 bulan + bonus ditahan 1 siklus + pembinaan kontrak",
+      "systemic_failure": "PIC yang menyebabkan failure sistemik (misal: error yang menyebabkan konsumen流失) = Owner meeting + rotasi atau review kontrak"
+    }
+  },
+  "kpi_audit": {
+    "audit_finding_count": {
+      "minor": "Target < 5/bulan per PIC",
+      "major": "Target 0/bulan per PIC"
+    },
+    "konsumen_satisfaction_score": {
+      "definisi": "Skor 1-5 dari konsumen pasca-STB / pasca-service",
+      "target": "Rata-rata > 4.2"
+    },
+    "repeat_order_rate": {
+      "definisi": "% konsumen yang repeat order atau referensikan dalam 6 bulan pasca STB",
+      "target": "> 15%"
+    },
+    "response_time_compliance": {
+      "definisi": "% CS/Admin yang response < 24 jam",
+      "target": "> 90%"
+    },
+    "audit_action_completion": {
+      "definisi": "% rekomendasi audit yang dieksekusi dalam 30 hari",
+      "target": "> 80%"
+    }
+  },
+  "audit_tools": {
+    "dashboard_v2": "Tab Audit - log finding mingguan, trend bulanan, PIC compliance",
+    "template_audit_form": "FORM-AUDIT-2026-001 (Bu Nisya) + FORM-AUDIT-2026-002 (Mada)",
+    "sample_selection": "Random sampling 5-10 per minggu + purposive sampling untuk PIC yang baru",
+    "konsumen_interview": "WA/telpon 10-15 menit dengan konsumen yang baru STB (optional)",
+    "notion_audit_log": "Permanent record audit + rekomendasi + action item"
+  },
+  "differences_v4_ke_v5": {
+    "v4": "Audit = tahunan (saat ada masalah). Tidak ada audit cycle rutin. PIC tidak tahu kapan diaudit. Punishment = sporadis.",
+    "v5": "Audit = mingguan (Bu Nisya) + bulanan (Mada). PIC tahu schedule. Punishment = konsisten, berjenjang. Reward = untuk yang compliant."
+  }
+}

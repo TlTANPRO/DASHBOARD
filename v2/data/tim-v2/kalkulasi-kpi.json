@@ -1,0 +1,103 @@
+{
+  "_meta": {
+    "name": "kalkulasi-kpi",
+    "version": "2.0",
+    "deskripsi": "Formula kalkulasi KPI + threshold tiers + variance analysis + LEADERBOARD kompetisi sehat. V2: Leaderboard per divisi (meeting 24 Jul 2026 point 5).",
+    "ref": "kalkulasi-kpi V1.0 + meeting 24 Jul 2026 + BAB 55.5 Kompetisi"
+  },
+  "leaderboard_v5": {
+    "filsafat": "Kompetisi sehat = transparansi ranking + reward top performer + bukan untuk mempermalukan. Yang di-ranking: output + peran. Yang TIDAK di-ranking: masalah pribadi, kondisi kesehatan, hal di luar kontrol PIC.",
+    "divisi_diranking": [
+      {"divisi": "marketing", "pic_eligible": ["Riza", "Yudi/Sdek", "Reta"], "metrik_utama": "cost_per_closing", "metrik_sekonder": ["lead_to_survey", "sp3k_to_closing"]},
+      {"divisi": "proyek", "pic_eligible": ["Rizal", "Amir"], "metrik_utama": "budget_variance_pct", "metrik_sekonder": ["timeline_adherence", "defect_rate"]},
+      {"divisi": "media", "pic_eligible": ["Reni", "Rifki", "Reta (jika double role konten)"], "metrik_utama": "cost_per_qualified_lead", "metrik_sekonder": ["engagement_rate", "konten_pilar_compliance"]},
+      {"divisi": "admin", "pic_eligible": ["Novita", "Sinta"], "metrik_utama": "zero_error_rate", "metrik_sekonder": ["response_time", "polyvalent_skill_progress"]}
+    ],
+    "ranking_logic": {
+      "periode": "Bulanan (reset tiap awal bulan)",
+      "skor_formula": "(0.6 x metrik_utama_normalized) + (0.4 x rata-rata metrik_sekonder_normalized)",
+      "normalization": "0-100 scale, di mana 100 = best in class bulan ini, 0 = worst",
+      "tie_breaker": "PIC dengan cross-support lebih banyak = ranking lebih tinggi (insentif kolaborasi)"
+    },
+    "reward_top_3": {
+      "juara_1": {"hadiah": "Voucher Rp 500rb + publikasi internal dashboard + nama di 'Wall of Fame' + 1 cuti khusus (1 hari di luar jatah)", "syarat": "Skor 85+, tidak ada insiden disiplin"},
+      "juara_2": {"hadiah": "Voucher Rp 300rb + publikasi internal dashboard", "syarat": "Skor 75-84"},
+      "juara_3": {"hadiah": "Voucher Rp 150rb + publikasi internal dashboard", "syarat": "Skor 65-74"}
+    },
+    "bottom_treatment": {
+      "filosofi": "Bottom = butuh support, bukan dihukum. Coach by Mada, bukan dipublikasikan.",
+      "no_publish_ranking_bawah": "Hanya top-3 yang dipublikasi. Bottom 1-2 hanya notif privat ke Mada untuk coaching.",
+      "coaching_trigger": "Jika PIC di bottom-2 divisi sama 2 bulan berturut → coaching khusus Mada + 1-on-1 owner visibility"
+    },
+    "publikasi_internal": {
+      "channel": "Dashboard V2 tab 'Leaderboard' + WA grup internal setiap Senin pertama bulan",
+      "format": "Top-3 per divisi + highlight best improvement (PIC yang loncat 2+ ranking)",
+      "privasi": "Bottom TIDAK di-publish. Hanya internal notifikasi ke Mada untuk coaching."
+    },
+    "kpi_untuk_owner": {
+      "rekap_bulanan": "Owner dapat rekap: total closing tim, cost/closing rata-rata, leaderboard 4 divisi, PIC yang perlu perhatian",
+      "decision_use": "Owner pakai leaderboard untuk: validasi fee bonus, identifikasi PIC yang perlu promosi/demosi, ekspansi tim (PIC top performer = kandidat kepala divisi)"
+    }
+  },
+  "formula": {
+    "conversion_rate": {
+      "definisi": "Persentase lead yang closing dari total lead masuk",
+      "rumus": "(Closing / Lead masuk) * 100",
+      "contoh": "Riza: 6 closing / 200 lead = 3%",
+      "threshold": {"minimum": "3%", "good": "5%", "excellent": "7%"}
+    },
+    "lead_to_survey": {
+      "definisi": "Persentase lead yang sampai tahap survey",
+      "rumus": "(Survey / Lead masuk) * 100",
+      "contoh": "8 survey / 200 lead = 4%",
+      "threshold": {"minimum": "4%", "good": "8%", "excellent": "12%"}
+    },
+    "survey_to_sp3k": {
+      "definisi": "Persentase survey yang lanjut SP3K",
+      "rumus": "(SP3K / Survey) * 100",
+      "contoh": "8 SP3K / 8 survey = 100%",
+      "threshold": {"minimum": "70%", "good": "90%", "excellent": "100%"}
+    },
+    "sp3k_to_closing": {
+      "definisi": "Persentase SP3K yang closing (akad)",
+      "rumus": "(Closing / SP3K keluar) * 100",
+      "contoh": "6 closing / 8 SP3K = 75%",
+      "threshold": {"minimum": "60%", "good": "75%", "excellent": "90%"}
+    },
+    "response_time_lead": {
+      "definisi": "Waktu rata-rata PIC merespons lead baru",
+      "rumus": "Rata-rata (timestamp respon - timestamp lead masuk)",
+      "contoh": "25 menit",
+      "threshold": {"minimum": "<30 menit", "good": "<15 menit", "excellent": "<5 menit"}
+    },
+    "engagement_rate": {
+      "definisi": "Interaksi audience terhadap konten",
+      "rumus": "((likes+comments+saves+shares) / reach) * 100",
+      "contoh": "150 interaksi / 5000 reach = 3%",
+      "threshold": {"minimum": "3%", "good": "5%", "excellent": "8%"}
+    },
+    "cost_per_lead": {
+      "definisi": "Biaya iklan per lead qualified",
+      "rumus": "Total ad spend / Lead qualified",
+      "contoh": "Rp 3.000.000 / 200 lead = Rp 15.000/lead",
+      "threshold": {"minimum": "Rp 20.000", "good": "Rp 12.000", "excellent": "Rp 8.000"}
+    },
+    "cost_per_closing": {
+      "definisi": "Total marketing cost per closing",
+      "rumus": "(Ad spend + Gaji marketing + Fee) / Closing",
+      "contoh": "Rp 15jt closing = Rp 2,5jt cost/closing",
+      "threshold": {"minimum": "Rp 3.5jt", "good": "Rp 2jt", "excellent": "Rp 1.5jt"}
+    }
+  },
+  "variance_analysis": {
+    "weekly_check": "Selisih aktual vs target. Jika miss > 20%, wajib 1-on-1 dengan Mada.",
+    "monthly_review": "Akumulasi variance. Jika < 80% di 2+ KPI, trigger PIP.",
+    "quarterly_strategic": "Variance > 15% di target utama → review strategi + tier switch (dari Realistis ke Push atau Conservatif)."
+  },
+  "tier_switch_decision": {
+    "naik_tier": "Closing 3 bulan berturut > 110% dari tier aktif",
+    "turun_tier": "Closing 2 bulan berturut < 80% dari tier aktif",
+    "evaluator": "Pak Ardian + Mada (akhir quarter)",
+    "efek": "Target berubah untuk quarter berikutnya, fee_closing_total_per_unit tetap (komitmen grup)"
+  }
+}

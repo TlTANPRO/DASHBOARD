@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "name": "competitor-analysis",
+    "version": "1.0",
+    "deskripsi": "Analisis 5 developer kompetitor di Jember. Posisi, USP, harga, kelemahan, opportunity kita. V4.0 - Bab 59.",
+    "ref": "content/v4-final/bab-59-competitor-analysis.md + dibuat 24 Jul 2026"
+  },
+  "kompetitor_primer": [
+    {
+      "nama": "Perum Perumnas (Cabang Jember)",
+      "jenis": "BUMN",
+      "kekuatan": "Brand kuat, jaringan nasional, FLPP eligible, bank partner banyak, KPR ringan",
+      "kelemahan": "Lokasi sering kurang strategis, waktu tunggu panjang (6-12 bulan untuk akad), pelayanan lambat, tidak ada garansi formal, desain standar",
+      "harga_rata": "Rp 156-180 juta (tipe 36)",
+      "market_share_est_pct": 35,
+      "konsumen_target": "MBR yang fokus harga + aman (brand BUMN)",
+      "kita_vs_mereka": "Kita lebih cepat proses (target akad 30 hari), lebih flexible lokasi, ada garansi 1 bulan, desain lebih modern. Tapi brand kita masih lebih lemah",
+      "strategi_kita": "Highlight speed + garansi + desain modern, tawarkan #RumahSubsidiSiapHuni yang #SubsidiTanpaRenovasi"
+    },
+    {
+      "nama": "Developer Lokal A (Bumiputra Group)",
+      "jenis": "Swasta lokal",
+      "kekuatan": "Punya bank tanah luas di pusat kota, harga kompetitif, lokal network kuat",
+      "kelemahan": "Reputasi mixed (beberapa proyek molor 1-2 tahun), setelah jual kurang follow up, complaint handling lambat, KPR sering macet, desain monoton",
+      "harga_rata": "Rp 145-170 juta (tipe 36)",
+      "market_share_est_pct": 15,
+      "konsumen_target": "MBR yang cari harga paling murah",
+      "kita_vs_mereka": "Mereka lebih murah, tapi kita lebih reliable. Reputasi mereka banyak review negatif di Google Maps, kita belum",
+      "strategi_kita": "Bandingkan testimoni negatif mereka vs positif kita. Highlight dokumentasi, garansi, after-sales"
+    },
+    {
+      "nama": "Developer Lokal B (Bumi Hijau Residence)",
+      "jenis": "Swasta lokal",
+      "kekuatan": "Konsep green living, taman luas, lokasi premium (perbatasan kota), desain modern, segment menengah-atas",
+      "kelemahan": "Harga tinggi (di atas FLPP), tidak cover MBR, unit ready stock terbatas, KPR process ribet karena harga di atas FLPP",
+      "harga_rata": "Rp 350-500 juta (tipe 45)",
+      "market_share_est_pct": 8,
+      "konsumen_target": "Middle-upper class, keluarga muda profesional",
+      "kita_vs_mereka": "Mereka di tier berbeda. Mereka target komersial, kita target FLPP. Tidak kompetisi langsung",
+      "strategi_kita": "Kita di tier MBR/FLPP, mereka di tier komersial. Future: bisa pivot ke tier komersial juga, belajar dari mereka soal desain modern"
+    },
+    {
+      "nama": "Subsidi Cluster dari Bank BTN (program)",
+      "jenis": "Program BTN",
+      "kekuatan": "Subsidi penuh, KPR langsung dari bank, no developer intermediari, aman",
+      "kelemahan": "Lokasi jauh dari kota, unit sangat standar, tanpa garansi, tidak ada after-sales, lokasi tidak berkembang",
+      "harga_rata": "Rp 140-160 juta (tipe 36)",
+      "market_share_est_pct": 10,
+      "konsumen_target": "MBR dengan budget sangat ketat, location-flexible",
+      "kita_vs_mereka": "Mereka lebih murah, tapi lokasi tidak strategis. Kita lokasi lebih dekat kota + ada garansi + after-sales",
+      "strategi_kita": "Highlight lokasi + garansi + after-sales. Konsumen MBR yang punya pilihan (bukan yang sangat budget-tight) akan prefer kita"
+    },
+    {
+      "nama": "Pengembang Properti Online (Pinhome, Rumah123, dll) - listing",
+      "jenis": "Aggregator (bukan developer)",
+      "kekuatan": "Reach nasional, lead generation engine, verifikasi legalitas konsumen, platform terpercaya",
+      "kelemahan": "Listing kompetitif, banyak developer saingan di satu platform, lead cost tinggi, konsumen sering 'window shopping'",
+      "harga_rata": "Variable",
+      "market_share_est_pct": 25,
+      "konsumen_target": "Modern lead generation",
+      "kita_vs_mereka": "Mereka marketplace, kita developer. Kita MANFAAT platform mereka (listing) tapi juga punya direct channel (WA, IG, FB)",
+      "strategi_kita": "Listing di Pinhome + Rumah123 untuk visibility, fokus utama di direct channel (IG, FB, WA) untuk margin lebih tinggi"
+    }
+  ],
+  "posisi_kita_di_pasar": {
+    "sweet_spot": "MBR + first home buyer di Jember + Lumajang, cari rumah FLPP 166jt dengan kualitas, lokasi strategis, garansi jelas, dan #RumahSubsidiSiapHuni",
+    "differentiator_unik": [
+      "#RumahSubsidiSiapHuni (siap huni, no renovasi)",
+      "#SubsidiTanpaRenovasi (harga sudah include semuanya)",
+      "Garansi 1 bulan (kompetitor tidak kasih)",
+      "Speed (target akad 30 hari vs kompetitor 3-6 bulan)",
+      "Handover SOP (PIC backup jelas, handover 24-jam)"
+    ],
+    "competitive_moat": "Kompetitor dengan harga sama, lokasi sama, garansi ada = hampir tidak ada. Ini moat kita"
+  },
+  "win_rate_analysis": {
+    "lead_to_closing_target": "20-25% (6 closing dari 30 lead qualified)",
+    "current_win_rate_q1_2026": "15%",
+    "current_win_rate_q2_2026": "22%",
+    "target_win_rate_q3_2026": "25%",
+    "loss_reason_ranking": [
+      "1. Kehilangan ke kompetitor yang lebih murah (45% loss)",
+      "2. Lead tidak eligible KPR (20% loss)",
+      "3. Lead masih pikir-pikir / ghosting (20% loss)",
+      "4. Lead pilih rumah second / ngontrak (10% loss)",
+      "5. Lead tidak jadi beli karena alasan keluarga (5% loss)"
+    ]
+  },
+  "strategic_move_2026_2027": [
+    "Q3 2026: Listing agresif di Pinhome + Rumah123, optimasi SEO keyword 'rumah subsidi jember'",
+    "Q4 2026: Kampanye #RumahSubsidiSiapHuni viral (KOL + paid ads + billboard)",
+    "Q1 2027: Buka cluster baru 'Safir Residence' dengan konsep lebih modern (responds ke Bumi Hijau)",
+    "Q2 2027: Ekspansi ke Lumajang (kompetitor belum ada di sana), first-mover advantage",
+    "Q3 2027: Bangun brand recall survey, target 30% recall di Jember"
+  ]
+}

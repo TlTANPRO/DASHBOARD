@@ -1,0 +1,230 @@
+{
+  "_meta": {
+    "name": "hr-policy",
+    "version": "4.0",
+    "deskripsi": "HR policy V4: + pekerja_lepas_harian (V5.0 meeting 24 Jul point 19). Pattern per proyek / per milestone / per seasonal. HPP-flexible, bukan fixed payroll.",
+    "ref": "content/v1-management/bab-05-hr-system.md + revisi 24 Jul 2026 + meeting 24 Jul 2026 point 8 + point 19"
+  },
+  "pekerja_lepas_harian_v5": {
+    "filosofi": "V5.0 memperkenalkan pekerja lepas harian untuk fluktuatif workload. Bukan kontrak tetap, bukan freelancer abal-abal. Pattern: per proyek, per milestone, per seasonal. HPP-flexible, fixed cost jadi variabel.",
+    "kenapa_perlu": [
+      "Cluster launch = butuh extra mandor + tukang 2-3 minggu, setelah itu kembali normal. Fixed payroll = mahal saat idle.",
+      "Seasonal (Lebaran, Natal) = closing naik, butuh extra admin + CS temporary.",
+      "Specialty (sprei, instalasi listrik, hydrotest) = tidak butuh full-time, hanya per cluster",
+      "Efisiensi HPP: biaya hanya saat ada kerja, tidak ada fixed cost idle"
+    ],
+    "tiga_pattern": [
+      {
+        "pattern": "per_proyek",
+        "definisi": "Pekerja lepas direkrut per cluster / per unit. Punya milestone-based pay (DP + termin sesuai progress).",
+        "contoh": "Mandor cluster baru = fee Rp 5jt per unit yang selesai on-time. Tukang = Rp 150rb/hari untuk durasi 48 hari kerja.",
+        "kelebihan": "Pay sesuai hasil, kualitas terjaga (kalau telat = gaji dikurangi)",
+        "risiko": "Pekerja bisa pindah ke proyek lain yang lebih cepat bayar"
+      },
+      {
+        "pattern": "per_milestone",
+        "definisi": "Pekerja lepas dibayar per pencapaian milestone (fondasi, dinding, atap, finishing). Cocok untuk spesialisasi (tukang kayu, tukang las, instalasi).",
+        "contoh": "Tukang instalasi listrik = Rp 800rb per unit setelah instalasi lolos QC. Tukang hydrotest = Rp 1jt per unit setelah tes passed.",
+        "kelebihan": "Spesialisasi dapat premium, QC otomatis (gak dibayar kalau gak lulus)",
+        "risiko": "Spesialis langka, negosiasi harga tinggi"
+      },
+      {
+        "pattern": "per_seasonal",
+        "definisi": "Pekerja lepas untuk periode tertentu (Lebaran, Natal, akhir tahun). Temporary 1-2 bulan.",
+        "contoh": "Extra admin CS saat Lebaran = Rp 2.5jt/bulan untuk 2 bulan. Extra closing saat Natal = Rp 2jt/bulan + fee closing standar.",
+        "kelebihan": "Scalable saat peak season, tidak ada biaya saat low",
+        "risiko": "Kualitas bisa turun (tidak kenal budaya kerja), perlu training kilat"
+      }
+    ],
+    "perbedaan_dengan_kontrak_tetap": {
+      "kontrak_tetap": "Gaji fixed bulanan, tunjangan, BPJS, THR, fee benefit, evaluasi 3 bulan. Cocok untuk PIC operasional inti (Mada, Rizal, Novita, Sinta, Riza, Yudi, Reni, Rifki, Reta, Amir, Bu Nisya).",
+      "pekerja_lepas": "Bayar per hasil / per hari / per milestone. Tidak ada tunjangan, tidak ada BPJS (mandiri), tidak ada THR. Cocok untuk mandor, tukang, admin extra, spesialis."
+    },
+    "pembayaran_dan_pajak": {
+      "pembayaran": "Cash / transfer setelah milestone tercapai + disetujui Rizal/Mada",
+      "pajak": "PPh 21 final 5% untuk pekerja lepas di bawah Rp 50jt/tahun (UMR exemption). Di atas itu, progresif. Periksa dengan Bu Nisya per kasus.",
+      "kontrak": "SPK per proyek (template Bu Nisya), masa kerja spesifik, tidak ada ikatan pasca-proyek"
+    },
+    "hpp_impact": {
+      "v4_pattern_fixed": "Mandor tetap = Rp 4jt/bulan. 12 bulan = Rp 48jt/tahun untuk 1 mandor. Kalau cuma butuh 6 bulan = tetap bayar 12 bulan (waste Rp 24jt).",
+      "v5_pattern_lepas": "Mandor lepas per unit = Rp 5jt per unit. 12 unit/tahun = Rp 60jt. Tanpa idle cost. Output 100% ke production.",
+      "trade_off": "Pekerja lepas lebih mahal per unit (Rp 5jt vs Rp 4jt/bulan yang diprorate = Rp 4jt/unit kalau 1 unit/bulan). Tapi zero idle cost. Net: +Rp 12jt/tahun lebih mahal, tapi output 100%."
+    },
+    "risk_management": {
+      "kualitas_turun": "Mitigasi: SOP enforced + QC Rizal ketat + foto dokumentasi. Pekerja yang QC fail = tidak dibayar untuk unit itu.",
+      "loyalitas_rendah": "Mitigasi: Bonafid payment on-time (max 7 hari setelah milestone) + treat sebagai mitra, bukan bawahan. Beberapa pekerja lepas andalan sudah 3 tahun bersama.",
+      "safety_issue": "Mitigasi: K3 briefing + APD disediakan perusahaan. Pekerja lepas wajib ikut standup pagi + briefing safety."
+    },
+    "pic_responsible": {
+      "rizal": "PIC utama pekerja lepas proyek (mandor, tukang, spesialis)",
+      "novita": "PIC pekerja lepas admin/CS extra saat seasonal",
+      "mada": "Approve budget pekerja lepas + koordinasi cross-divisi"
+    }
+  },
+  "struktur_gaji_admin_v5": {
+    "filosofi": "Admin (Novita) gaji FIXED tidak dipotong. Fee admin (mel) dihitung PER CLOSING FILE, BUKAN per akad. Jadi kerjaan admin dapat insentif tanpa harus tergantung closing sukses (karena closing sukses ditentukan tim closing, bukan admin).",
+    "alasan_no_potong": [
+      "Admin tidak bisa kontrol closing - tim marketing/proyek yang kontrol",
+      "Potong gaji admin = demoralisasi, padahal kerjaan admin sudah benar (berkas lengkap, on-time)",
+      "Admin quality tinggi = customer experience tinggi = repeat order + referral"
+    ],
+    "komponen_gaji": {
+      "gaji_pokok_fixed": {
+        "novita": "Rp 2.7jt (P0 UMR + tunjangan transport+makan+komunikasi)",
+        "sinta": "Rp 2.9jt (P0 + tunjangan purchasing)",
+        "keterangan": "Gaji pokok + tunjangan TETAP tiap bulan, tidak dipotong KPI apapun"
+      },
+      "mel_per_closing_file": {
+        "novita": {
+          "per_closing_file_idr": 200000,
+          "trigger": "Berkas konsumen lengkap + masuk bank FLPP / notaris (siap akad)",
+          "maks_bulan": "10 closing file = Rp 2jt/bulan (cap, supaya tidak chase quantity > quality)",
+          "syarat_quality": "Zero error (berkas tidak ditolak bank, tidak ada dokumen yang missing, tidak ada revisi minor)"
+        },
+        "sinta": {
+          "per_closing_file_idr": 150000,
+          "trigger": "Material order lengkap + on-time delivery + invoice match SPK",
+          "maks_bulan": "10 closing file = Rp 1.5jt/bulan (cap)"
+        }
+      },
+      "polyvalent_bonus": {
+        "novita": "Rp 100rb per task polyvalent (CS, KPP draft, legal draft ringan) yang diambil dan selesai on-time. Maks Rp 500rb/bulan.",
+        "sinta": "Rp 100rb per task polyvalent (audit material, cek kualitas bangunan, audit netto/bruto progress) yang diambil dan selesai on-time. Maks Rp 500rb/bulan."
+      }
+    },
+    "perbandingan_v4_ke_v5": {
+      "v4": "Admin gaji pokok only. Tidak ada insentif. Kalau lembur atau kerja keras = tidak ada reward.",
+      "v5": "Admin fixed + mel (per closing file) + polyvalent bonus. Kerja lebih banyak & lebih baik = reward proporsional. Tetap ada cap supaya tidak ada race-to-the-bottom (quality > quantity)."
+    },
+    "tracking": {
+      "tool": "Dashboard V2 tab 'Admin Performance'",
+      "data": "Closing file count per admin, zero error rate, response time, polyvalent skill progress",
+      "report_frekuensi": "Mingguan ke Mada, bulanan ke owner",
+      "dispute_resolution": "Novita/Sinta lapor ke Mada max 3 hari kerja, Mada approve koreksi max 5 hari"
+    }
+  },
+  "absensi": {
+    "jam_kerja": "08.00-16.30 (Senin-Jumat), 08.00-16.00 (Sabtu)",
+    "toleransi_telat": "15 menit (max 2x/bulan, ke-3 = potongan 0.5 hari)",
+    "check_in_out": "Dashboard V2 (form absensi FORM-ABS-2026-001) + fingerprint di kantor",
+    "alpha_tanpa_kabar": "Potong 1 hari gaji + surat peringatan",
+    "ijin_pulang_cepat": "Wajib approval Mada via WA"
+  },
+  "cuti": {
+    "tahunan": "12 hari kerja / tahun (setelah 12 bulan kerja)",
+    "sakit": "Wajib surat dokter (1 hari) atau keterangan dokter (2+ hari)",
+    "izin_khusus": {
+      "pernikahan_sendiri": "3 hari",
+      "pernikahan_anak": "2 hari",
+      "istri_melahirkan": "2 hari",
+      "kematian_orang_tua_mertua_pasangan_anak": "2 hari",
+      "kematian_saudara_kandung": "1 hari",
+      "ibadah_haji": "40 hari (unpaid, setelah 5 tahun kerja)"
+    },
+    "approval": "Cuti 1-2 hari = Mada; >2 hari = Pak Ardian",
+    "blackout": "Minggu pertama bulan, akhir quarter (audit), launching cluster baru"
+  },
+  "lembur": {
+    "perhitungan": "1.5x gaji per jam untuk hari kerja, 2x untuk hari libur",
+    "maks_bulan": "40 jam / PIC / bulan (untuk kesehatan)",
+    "approval": "Mada (PIC operasional) atau Rizal (PIC proyek); notif Pak Ardian jika >20 jam/minggu",
+    "kompensasi": "Bisa pilih cash atau time-off (1.5x hours)"
+  },
+  "payroll": {
+    "tanggal_transfer": 6,
+    "logika": "Gaji bulan ini dibayar tanggal 6 bulan berikutnya. Contoh: gaji kerja Juli 2026 dibayar 6 Agustus 2026",
+    "dasar_hukum_umr": "Pergub Jatim / SK Bupati Lumajang 2025, UMR Rp 2.250.000 - 2.500.000",
+    "grading": "P0 (UMR standard), P1 (senior 2.5-3.5jt), P2 (kepala 4-6jt), P3 (owner/direksi = dividen)",
+    "komponen_lengkap": [
+      "Gaji pokok (sesuai grading)",
+      "Tunjangan transport (300-500rb sesuai grading)",
+      "Tunjangan makan (300-500rb sesuai grading)",
+      "Tunjangan komunikasi (100-200rb)",
+      "Tunjangan jabatan (500rb-1.5jt untuk P2)",
+      "Fee closing (variable, 5 komponen Rp 3.25jt/unit total)",
+      "Bonus Mada (Rp 1.5jt/unit jika target tercapai)",
+      "Bonus Bu Nisya (Rp 5jt/bulan fixed Q3 2026)",
+      "Insentif publikasi (200rb/bulan jika compliance >= 80%)",
+      "Potongan PPh 21 (sesuai PTKP)",
+      "Potongan BPJS PIC (1% kesehatan + 2% JHT = 3% total)"
+    ],
+    "slip_gaji": "Dikirim via WA + email setiap tanggal 6",
+    "thr": "1 bulan gaji pokok (H+7 Lebaran), prorata untuk kerja < 12 bulan",
+    "pph_21": "Ditanggung penerima, dipotong saat transfer"
+  },
+  "bpjs": {
+    "kesehatan": "Perusahaan 4% + PIC 1% (kelas 1, max 4 orang tanggungan)",
+    "ketenagakerjaan": "Perusahaan 3.7% (JHT 2% + JP 1% + JKK 0.24-1.74% + JKM 0.3%) + PIC 2% (JHT)",
+    "mulai_berlaku": "Bulan ke-2 setelah join"
+  },
+  "garansi_bangunan": {
+    "periode": "1 bulan setelah BAST (Berita Acara Serah Terima)",
+    "cakupan": "Defect material + workmanship (kualitas pekerjaan)",
+    "tidak_cakupan": "Kerusakan karena bencana alam, kelalaian konsumen, modifikasi sendiri, keausan normal",
+    "prosedur_komplain": "Konsumen lapor ke Novita (WA/email) → Novita buat tiket (Lamp-09) → Rizal cek lokasi dalam 3 hari → Fix dalam 14 hari (jika major) atau 7 hari (jika minor)",
+    "konskuensi_garansi_hangus": "Konsumen modifikasi sendiri, atau tidak lapor dalam 30 hari setelah defect muncul",
+    "risk_terkait": "Risk R-008 (konsumen komplain > 30 hari) — perlu coverage insurance untuk B2B reputational"
+  },
+  "publikasi_wajib": {
+    "judul": "30 Detik Publikasi — Wajib Semua Karyawan",
+    "task_harian": [
+      "Like + komen 3 post IG/FB perusahaan (100% PIC setiap hari)",
+      "Share 1 post/story ke WA pribadi (rotating, jadwal mingguan)",
+      "Update status WA 1x/minggu pakai template",
+      "Reply komen di IG/FB perusahaan saat luang",
+      "Kirim 1 broadcast ke 5 teman/keluarga tentang unit ready stock",
+      "Tag 2 orang di post perusahaan (jika relevan)"
+    ],
+    "task_mingguan": ["Submit screenshot like/share/komen setiap Jumat 16.00 ke Dashboard V2"],
+    "compliance_kpi": "5% dari appraisal bulanan, compliance < 80% = pengurang bonus",
+    "insentif": "PIC dengan engagement publikasi tertinggi per bulan = 'Brand Ambassador Award' + voucher Rp 200rb"
+  },
+  "handover_24_jam": {
+    "judul": "SOP Handover 24-Jam (PIC Sakit / Izin / Cuti)",
+    "trigger": "PIC izin 1 hari → handover 5 menit via WA. PIC izin 2-3 hari → handover 15 menit formal. PIC izin > 3 hari → handover 30-60 menit. PIC cuti > 1 minggu → handover 2-3 hari masa transisi. PIC resign → exit handover 1 bulan",
+    "form": "Lamp-31 (Form Handover)",
+    "tracking": "Dashboard V2 tab 'Absensi + Handover'",
+    "pic_default": "Mada monitor setiap Senin",
+    "backup_matrix": "Lihat onboarding-cross-training.json (Yudi/Sdek + Mada sebagai backup baru)"
+  },
+  "recruitment": {
+    "trigger": "PIC mengajukan + Mada approve + Pak Ardian final",
+    "proses": "Job posting (1 minggu) → Screening CV (Mada) → Interview 1 (Mada) → Interview 2 (Pak Ardian) → Offer → Onboarding 1 minggu",
+    "masa_percobaan": "3 bulan (evaluasi tiap bulan)",
+    "onboarding_checklist": [
+      "Kontrak kerja ditandatangani (Bu Nisya)",
+      "Akun dashboard V2 dibuat (Novita)",
+      "PIN login setup (Mada)",
+      "Briefing SOP kerja (Mada)",
+      "Tour kantor + introduce team (Novita)",
+      "Setup workstation (laptop, WA, email)",
+      "Minggu 1: 1-on-1 harian dengan Mada",
+      "Akhir bulan 1: evaluation checkpoint"
+    ]
+  },
+  "performance_appraisal": {
+    "frekuensi": "Triwulan (akhir Q1, Q2, Q3, Q4)",
+    "komponen": [
+      "KPI achievement 60%",
+      "Quality kerja 20% (QC check, defect rate, zero error)",
+      "Behavior & teamwork 10% (briefing, inisiatif, kolaborasi)",
+      "Innovation 10% (submit ide + impact)",
+      "Compliance publikasi 5% (engagement internal >= 80%)"
+    ],
+    "rating": [
+      {"rating": "Exceeds Expectations", "skor": "90-100", "akibat": "Bonus tambahan 1 bulan + publik recognition"},
+      {"rating": "Meets Expectations", "skor": "75-89", "akibat": "Standar, eligible bonus reguler"},
+      {"rating": "Below Expectations", "skor": "60-74", "akibat": "Coaching plan + tidak eligible bonus"},
+      {"rating": "Unsatisfactory", "skor": "<60", "akibat": "PIP + visibility Owner"}
+    ],
+    "tindak_lanjut": "Hasil appraisal didiskusikan 1-on-1 dengan Mada + Pak Ardian (untuk kepala)"
+  },
+  "career_path": {
+    "marketing": ["Marketing Exec (P0)", "Digital Marketing (P1) — Riza", "Senior Marketing (P1/P2)", "Ketua Media (P2)", "Kepala Marketing (P2)"],
+    "proyek": ["Site Worker (P0)", "Mandor (P0)", "QC Inspector (P0)", "Site Manager (P1)", "Kepala Proyek (P2) — Rizal"],
+    "admin": ["Admin Staff (P0)", "Senior Admin (P1) — Novita", "Admin Manager (P2)", "Finance Manager (P2)"],
+    "legal": ["Legal Staff (P0)", "Senior Legal (P1)", "Legal Manager (P2) — Bu Nisya", "Co-Director (P2/P3)"],
+    "media": ["Content Writer (P0) — Reta", "Content Creator (P1) — Rifki", "Ketua Kreatif (P1)", "Ketua Media (P2) — Reni", "Head of Media (P2)"],
+    "operasional_purchasing": ["Purchasing Staff (P0)", "Senior Purchasing (P1) — Sinta", "Purchasing Manager (P2)", "Operational Manager (P2)"]
+  }
+}

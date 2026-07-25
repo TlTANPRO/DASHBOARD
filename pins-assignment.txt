@@ -1,0 +1,45 @@
+=== PIN GENERATOR · DASHBOARD V2 ===
+
+Random 4-digit PIN per PIC, hash PBKDF2-SHA256.
+
+--- Distribution table (untuk owner share via WA) ---
+
+| PIC          | PIN  |
+|--------------|------|
+| Pak Ardian   | 6079  |
+| Bu Nisya     | 3644  |
+| Mada         | 1634  |
+| Riza         | 5960  |
+| Yudi (Sdek)  | 9243  |
+| Rizal        | 9908  |
+| Amir         | 5049  |
+| Novita       | 4635  |
+| Sinta        | 1116  |
+| Reni         | 9808  |
+| Rifki        | 9064  |
+| Reta         | 3318  |
+
+--- Worker secret (PINS) — paste ke `wrangler secret put PINS` ---
+
+{
+  "Pak Ardian": "pbkdf2$00810da049343917$dcb0fec0f31658a393598bc0a7ecd8cc2c7057c23d2949374a900ce22c9fb954",
+  "Bu Nisya": "pbkdf2$dd9d302911ee9c8f$37c92dc9cb1296eea91a9b6f40eb55f21e1de954826236004e4a88ce3af41f36",
+  "Mada": "pbkdf2$fc9ec16693ff053f$9009667828a04777593153caae053ec963fc515f30aa3f1cebe67d5bb9c66b5f",
+  "Riza": "pbkdf2$9a175f5a7b346748$9dee3cdeda685c5257c4b32a5af6eca08724c699c380c9d3975386e61442d5f1",
+  "Yudi (Sdek)": "pbkdf2$1e4c353ed1ce7550$b96c3f6e5eaa4fe33bc0ec654f69a2fbfae879847cdea982e7833ec225b0e85f",
+  "Rizal": "pbkdf2$b7415906015815d0$ec46f9917ccda4156518ca4cc0f284369aa1c32e7dedde3c57527f6bc28fd7ac",
+  "Amir": "pbkdf2$4535093a74242b85$9ceafdec25c4c221ec9ba186885b0247cba96104ebdab1c713f6f36ec3b4ba94",
+  "Novita": "pbkdf2$d44b9ad97eb8ae8d$54df042517906df75d855a7190ed871b16cec54217bf5e59d12544b4bbf959d2",
+  "Sinta": "pbkdf2$96e6cc4340349b93$2f53cf172cea4f88a2257d3b9b672d083d5440af80a36ed484dc7ccbc4287e2b",
+  "Reni": "pbkdf2$941f6eb889af03d0$dda4d8d1d16ef6cefcc6eb69777152172685b234bdce166e51ecc94e57551ff7",
+  "Rifki": "pbkdf2$211b552939a17737$42a5d3d5076db1ca5377a8ab18e9125964bb108ba249e68f9f440d9448005050",
+  "Reta": "pbkdf2$7cfdfb99fbeba419$ceadd95030954a3d0b0dfab0ae0421709bf67e7f27dfad6db82680c3f4ce5e31"
+}
+
+--- Cara set secret ---
+cd ../notion-proxy-worker
+wrangler secret put PINS
+(paste JSON di atas, satu baris)
+
+--- Test PIN verify ---
+Login di dashboard dengan PIN sesuai tabel → harus SUCCESS.

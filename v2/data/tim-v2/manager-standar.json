@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "name": "manager-standar",
+    "version": "1.0",
+    "deskripsi": "Manager Standard — 3 Sifat Wajib. V5.0 meeting 24 Jul 2026 point 17. Manager = PIC yang punya bawahan (Mada, Bu Nisya, Rizal, Reni, Riza setelah promosi). 3 sifat wajib: Tertib & Disiplin, Memahami Karyawan & Atasan, Generalis.",
+    "ref": "meeting 24 Jul 2026 point 17 + struktur-organisasi.json (level_hierarki) + jd-lengkap-12-pic.json"
+  },
+  "filosofi_manager_v5": {
+    "definisi_manager": "Manager V5 = PIC yang punya bawahan + bertanggung jawab atas hasil tim. BUKAN hanya senior PIC yang paling lama. Manager V5 = punya 3 sifat wajib yang dievaluasi setiap quarter.",
+    "kenapa_3_sifat_bukan_1": "Manager V4 = senior yang naik karena lama. Manager V5 = harus punya 3 sifat yang bisa dievaluasi. Kalau senior tidak punya 3 sifat = tetap PIC senior, bukan manager.",
+    "manager_di_perusahaan": [
+      {"nama": "Mada", "peran": "Chief of Staff (operasional) - supervise 11 PIC + lintas fungsi"},
+      {"nama": "Bu Nisya", "peran": "Co-Director (legal) - supervise 1 PIC (Novita admin legal) + audit"},
+      {"nama": "Rizal", "peran": "Kepala Pelaksana (proyek) - supervise 1 PIC (Amir) + mandor + subkon"},
+      {"nama": "Reni", "peran": "Ketua Media - supervise 2 PIC (Rifki, Reta)"},
+      {"nama": "Riza (jika promosi)", "peran": "Senior Digital Marketing - supervise junior marketing (jika ada)"}
+    ]
+  },
+  "tiga_sifat_wajib": [
+    {
+      "sifat": 1,
+      "nama": "Tertib & Disiplin",
+      "definisi": "Manager V5 harus jadi contoh tertib & disiplin untuk tim. Datang tepat waktu, pakai sistem (dashboard, SOP), tidak ada penundaan, konsisten.",
+      "mengapa_penting": "Tim lihat manager = role model. Kalau manager telat, tim juga telat. Kalau manager tidak pakai dashboard, tim juga tidak.",
+      "indikator": [
+        "Absensi 100% on-time (tidak pernah telat)",
+        "Dashboard V2 updated real-time (Mada), tepat waktu (Bu Nisya/Rizal/Reni)",
+        "SOP dipakai 100% oleh manager sendiri (audit finding manager = 0)",
+        "Reminder ke tim tepat waktu (tidak ada yang miss deadline karena manager lupa)"
+      ],
+      "konsekuensi_jika_melanggar": "Manager yang tidak tertib = otomatis grade C di KPI Score Card dimensi Disiplin. Jika 2 quarter berturut = pembinaan + tidak eligible bonus.",
+      "contoh_perilaku": [
+        "Mada daily standup 08.00-08.30 = manager on time, tim on time",
+        "Bu Nisya audit mingguan setiap Jumat sore konsisten = tim tahu kapan akan diaudit",
+        "Rizal briefing mandor pagi + sore on time = mandor juga disiplin"
+      ]
+    },
+    {
+      "sifat": 2,
+      "nama": "Memahami Karyawan & Atasan",
+      "definisi": "Manager V5 harus paham: (a) karakter + kekuatan + kelemahan masing-masing bawahan, (b) apa yang atasan (Pak Ardian / Bu Nisya / Mada) mau dan harapkan. Bukan asumsi, tapi observasi + komunikasi.",
+      "mengapa_penting": "Manager yang tidak paham bawahan = salah assign task, salah coaching, demotivasi. Manager yang tidak paham atasan = arah tim salah, kerja sia-sia.",
+      "indikator": [
+        "Bawahan jelas apa tugas + ekspektasi (1-on-1 setiap bulan, 30 menit)",
+        "Manager tahu kekuatan/kelemahan bawahan (matrix skill update tiap quarter)",
+        "Assign task sesuai kekuatan (bukan random atau siapa available)",
+        "Komunikasi ke atasan: report mingguan jelas, escalate blocker < 24 jam, tidak menyembunyikan masalah",
+        "Komunikasi ke bawahan: brief dengan jelas, tidak ambigu, ada feedback loop"
+      ],
+      "konsekuensi_jika_melanggar": "Manager yang salah assign = hasil tim buruk. Manager yang tidak lapor = Owner visibility rendah. 2 quarter berturut = pembinaan Owner.",
+      "contoh_perilaku": [
+        "Mada tahu Riza kuat di ads tapi lemah di leadership, assign lead gen ke Riza bukan ke Yudi yang lebih kuat di closing",
+        "Bu Nisya tahu Novita butuh strukturisasi detail, kasih template jelas (bukan 'urus legal' generic)",
+        "Rizal tahu Amir bisa cover tapi tidak bisa decide, kasih SOP lengkap + auto-approve untuk hal rutin"
+      ]
+    },
+    {
+      "sifat": 3,
+      "nama": "Generalis (Cross-Function)",
+      "definisi": "Manager V5 harus paham lintas fungsi, tidak hanya expertise sendiri. Bisa diskusi sama marketing, proyek, legal, admin dengan level yang sama. Paham big picture perusahaan.",
+      "mengapa_penting": "Manager pure spesialisasi = blind spot. Misal Rizal pure proyek = tidak paham closing, tidak bisa optimize lead-to-STB pipeline.",
+      "indikator": [
+        "Manager paham semua divisi (marketing, proyek, media, admin, legal) minimal di level overview",
+        "Manager bisa jadi penghubung antar divisi (Mada cross-function, Bu Nisya legal-bridge)",
+        "Manager bisa diskusi dengan PIC divisi lain tanpa gap komunikasi",
+        "Manager paham financial / pricing / margin (tidak hanya operasional)"
+      ],
+      "konsekuensi_jika_melanggar": "Manager pure spesialisasi = sering miss peluang cross-function. Grade C di dimensi Peran (cross-support).",
+      "contoh_perilaku": [
+        "Mada (Chief of Staff) cross-function semua divisi, lead standup lintas divisi",
+        "Bu Nisya (Co-Director) paham operasional meski fokus legal - bisa backup Mada",
+        "Rizal (Kepala Proyek) paham marketing & closing - bisa optimize delivery yang marketable"
+      ]
+    }
+  ],
+  "output_manager": {
+    "reminding": "Manager V5 = habit mengingatkan (bukan menyalahkan). Reminder sopan + jelas + tepat waktu. Bukan nag, bukan bully.",
+    "tertib": "Manager V5 = contoh tertib (sifat 1). Datang tepat waktu, pakai sistem, konsisten. Tim = follow.",
+    "optimasi": "Manager V5 = terus optimasi sistem. Bukan hanya jalan di sistem. Setiap quarter ada 1 improvement sistem yang dieksekusi."
+  },
+  "evaluasi_3_sifat": {
+    "frekuensi": "Quarterly (akhir Q1, Q2, Q3, Q4)",
+    "metode": [
+      "Self-assessment manager (1 halaman)",
+      "360 feedback: bawahan + atasan + peer (anonymous)",
+      "Observasi Owner langsung (1-2x per quarter)",
+      "KPI Score Card: dimensi Peran (sifat 2) + Disiplin (sifat 1) + cross-function (sifat 3)"
+    ],
+    "grading": [
+      {"skor": "90-100", "grade": "Manager A", "akibat": "Eligible bonus manager +1 bulan + kandidat Co-Director"},
+      {"skor": "75-89", "grade": "Manager B", "akibat": "Standar, eligible bonus reguler"},
+      {"skor": "60-74", "grade": "Manager C", "akibat": "Coaching 1-on-1 Mada/Bu Nisya + pembinaan 1 quarter"},
+      {"skor": "<60", "grade": "Manager D", "akibat": "Kontrak manager reviewed + rotasi ke PIC senior (non-managerial)"}
+    ],
+    "owner_action": "Owner meeting 1-on-1 dengan manager grade C/D setiap quarter. Manager A: visibility high untuk ekspansi."
+  },
+  "promosi_dari_PIC_ke_manager": {
+    "syarat": [
+      "PIC grade A 3 bulan berturut",
+      "Punya minimal 1 sifat dari 3 (idealnya 2+) di observasi Owner",
+      "Ada bawahan yang akan di-manage (tim harus ada, baru bisa jadi manager)",
+      "PIC senior tidak otomatis jadi manager (harus apply + interview Owner)"
+    ],
+    "proses": "Application + interview Owner + trial 3 bulan sebagai 'acting manager' + full manager jika lulus",
+    "gaji_impact": "Manager + jabatan tunjangan (500rb-1.5jt) + eligible fee manajerial (5% dari profit tim)"
+  },
+  "comparison_v4_ke_v5": {
+    "v4": "Manager = senior PIC yang paling lama. Tidak ada 3 sifat wajib, tidak ada evaluasi. Manager = 'gelar', bukan 'peran'.",
+    "v5": "Manager = PIC yang punya 3 sifat wajib + dievaluasi quarterly. Bukan gelar, tapi peran dengan accountability. Senior PIC yang tidak punya 3 sifat = tetap senior, bukan manager."
+  }
+}

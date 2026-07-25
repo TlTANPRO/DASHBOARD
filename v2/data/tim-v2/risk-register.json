@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "name": "risk-register",
+    "version": "2.0",
+    "deskripsi": "Risk register 9 risiko operasional + strategis. V2: Tambah R-008 (garansi 1 bulan - konsumen komplain > 30 hari), R-009 (HPP over-budget karena material naik). Severity diupdate dengan nilai loss aktual.",
+    "ref": "content/v2-developer/bab-32-risk-management.md + revisi 24 Jul 2026"
+  },
+  "risks": [
+    {
+      "id": "R-001",
+      "judul": "FB Ads CPM naik 20-30% di Q3 2026",
+      "kategori": "Marketing",
+      "severity": "HIGH",
+      "probabilitas_pct": 60,
+      "loss_potensial_idr": "Rp 200-400 juta/tahun (CPL naik dari Rp 12rb ke Rp 18rb)",
+      "dampak": "CPL naik, ROAS turun 30%, lead drop 30%",
+      "mitigasi": [
+        "Diversifikasi ke TikTok organik + SEO Web (long-term)",
+        "Eksperimen format Reels (3-5x lebih murah per reach vs static)",
+        "A/B testing copy + visual setiap 2 minggu",
+        "Retargeting pool maintenance 90 hari (max conversion value)"
+      ],
+      "owner": "Riza (PIC digital marketing)",
+      "review_cadence": "Mingguan (Dashboard V2 tab Ads Performance)"
+    },
+    {
+      "id": "R-002",
+      "judul": "Bank tightening KPR / FLPP regulasi berubah",
+      "kategori": "Sales / Banking",
+      "severity": "HIGH",
+      "probabilitas_pct": 30,
+      "loss_potensial_idr": "Rp 500 juta-1 M (SP3K approval turun 60%, closing drop 50%)",
+      "dampak": "Lead stuck di SP3K, closing drop, cashflow terganggu",
+      "mitigasi": [
+        "Maintain 3+ bank relationship (BTN, BCA, BNI, Mandiri, CIMB)",
+        "Edukasi konsumen lebih awal tentang KPR flow + dokumen (mengurangi rejection rate)",
+        "Siapkan pivot ke Komersial Cash (margin 25%) jika FLPP ditutup",
+        "Bangun relationship dengan bank officer (Sinta + Bu Nisya)"
+      ],
+      "owner": "Mada + Bu Nisya",
+      "review_cadence": "Bulanan"
+    },
+    {
+      "id": "R-003",
+      "judul": "Material konstruksi naik 15% (semen, besi)",
+      "kategori": "Proyek",
+      "severity": "MEDIUM",
+      "probabilitas_pct": 40,
+      "loss_potensial_idr": "Rp 100-200 juta/tahun (HPP naik 75jt → 85jt, margin turun 2-3%)",
+      "dampak": "Margin tipis, pricing pressure, HPP over-budget",
+      "mitigasi": [
+        "Lock harga supplier 6 bulan dengan MoU (Sinta lead)",
+        "Multiple supplier (3+ alternatif per material) untuk backup",
+        "Bangun buffer HPP 5% di RAB awal",
+        "Monitor tren material bulanan (Dashboard V2 tab Material Price Index)"
+      ],
+      "owner": "Sinta (purchasing) + Rizal (site)",
+      "review_cadence": "Bulanan (cek harga semen+besi)"
+    },
+    {
+      "id": "R-004",
+      "judul": "Resesi / daya beli konsumen turun 30%",
+      "kategori": "Makro",
+      "severity": "MEDIUM",
+      "probabilitas_pct": 20,
+      "loss_potensial_idr": "Rp 800 juta-1.5 M (closing turun 30-50%)",
+      "dampak": "Demand turun drastis, lead quality drop, closing mundur 3-6 bulan",
+      "mitigasi": [
+        "Pivot ke tier Conservatif (4 unit/bulan, target survival)",
+        "Cash reserve 6 bulan biaya operasional di top",
+        "Skema promo ringan (cashback 1% atau subsidi BPJSTK)",
+        "Tingkatkan repeat customer (insentif referral Rp 1 juta)"
+      ],
+      "owner": "Pak Ardian (strategic) + Mada (eksekusi)",
+      "review_cadence": "Quarterly (atau by trigger)"
+    },
+    {
+      "id": "R-005",
+      "judul": "Lead time konstruksi molor 2-3 bulan",
+      "kategori": "Proyek",
+      "severity": "MEDIUM",
+      "probabilitas_pct": 35,
+      "loss_potensial_idr": "Rp 50-150 juta/unit (kompensasi konsumen + opportunity cost)",
+      "dampak": "Akad molor, kompensasi konsumen 0.5-1% dari harga jual, reputasi rusak",
+      "mitigasi": [
+        "RAB + schedule detail dengan critical path method (Rizal lead)",
+        "Buffer time 2 minggu per fase (pondasi, struktur, finishing)",
+        "Kontrak subkontraktor dengan penalty clause (1% per hari keterlambatan)",
+        "Daily site report + weekly progress review (Dashboard V2 tab Proyek)"
+      ],
+      "owner": "Rizal (Kepala Proyek)",
+      "review_cadence": "Mingguan (progress meeting)"
+    },
+    {
+      "id": "R-006",
+      "judul": "Key person departure (Mada / Rizal / Riza)",
+      "kategori": "HR",
+      "severity": "HIGH",
+      "probabilitas_pct": 15,
+      "loss_potensial_idr": "Rp 100-300 juta (transisi + lost productivity 2-3 bulan)",
+      "dampak": "Operasional terhambat 2-3 bulan, knowledge hilang, rekrut ulang butuh waktu",
+      "mitigasi": [
+        "Cross-training matrix (lihat onboarding-cross-training.json)",
+        "Dokumentasi SOP di Notion (searchable, accessible 24/7)",
+        "Retention program: bonus loyalitas, suasana kerja sehat, growth path",
+        "Exit interview formal + handover 1 bulan"
+      ],
+      "owner": "Mada (HR) + Pak Ardian (retention)",
+      "review_cadance": "Quarterly"
+    },
+    {
+      "id": "R-007",
+      "judul": "Konsumen komplain (atap bocor, dinding retak, instalasi listrik) < 30 hari setelah BAST",
+      "kategori": "After-sales",
+      "severity": "MEDIUM",
+      "probabilitas_pct": 50,
+      "loss_potensial_idr": "Rp 5-15 juta/unit (biaya repair + kompensasi)",
+      "dampak": "Konsumen kecewa, review negatif, reputasi rusak, lead turun 20%",
+      "mitigasi": [
+        "QC 50-item checklist sebelum BAST (Rizal lead, Mada audit)",
+        "Garansi 1 bulan setelah BAST untuk defect material + workmanship",
+        "Tim Novita + tukang standby 7 hari setelah BAST (response < 24 jam)",
+        "Dokumentasi foto + video kondisi serah terima (lampiran BAST)"
+      ],
+      "owner": "Novita (customer service) + Rizal (teknis)",
+      "review_cadence": "Per unit serah terima + bulanan (rekap komplain)"
+    },
+    {
+      "id": "R-008",
+      "judul": "Konsumen komplain > 30 hari setelah BAST (di luar garansi)",
+      "kategori": "Reputasi",
+      "severity": "MEDIUM",
+      "probabilitas_pct": 25,
+      "loss_potensial_idr": "Rp 10-30 juta/unit + reputasi (review negatif viral)",
+      "dampak": "Konsumen posting review negatif di sosmed, viral, lead turun 30% di cluster tersebut",
+      "mitigasi": [
+        "Sosialisasi jelas tentang garansi 1 bulan sejak awal (konsumen tahu batas garansi)",
+        "Tawarkan after-sales service opsional (biaya konsumen) untuk kerusakan di luar garansi",
+        "Maintain hubungan baik dengan konsumen (broadcast ucapan hari raya, natal, dll)",
+        "Respon cepat di sosmed (1x24 jam) untuk klarifikasi + tawarkan solusi",
+        "Program referral insentif (Rp 1 juta untuk konsumen yang refer 1 closing)"
+      ],
+      "owner": "Reni (media) + Novita (customer service)",
+      "review_cadence": "Bulanan (monitor review + sosmed)"
+    },
+    {
+      "id": "R-009",
+      "judul": "HPP over-budget (lebih dari 80jt/unit)",
+      "kategori": "Proyek",
+      "severity": "HIGH",
+      "probabilitas_pct": 30,
+      "loss_potensial_idr": "Rp 5-15 juta/unit × volume = Rp 30-90 juta/quarter (margin terkikis)",
+      "dampak": "Margin tipis / negatif, RAB tidak akurat, profit tergerus",
+      "mitigasi": [
+        "RAB detail dengan quantity takeoff + analisa harga satuan (Rizal lead)",
+        "Monitoring realisasi vs RAB mingguan (Dashboard V2 tab HPP Real-time)",
+        "Buffer 5-10% di setiap pos RAB (standar industri)",
+        "Audit RAB setiap quarter oleh Bu Nisya (validasi angka)",
+        "Komite procurement: Rizal + Sinta + Mada approve > Rp 5 juta (sesuai decision matrix)"
+      ],
+      "owner": "Rizal (RAB) + Sinta (procurement) + Bu Nisya (audit)",
+      "review_cadence": "Mingguan (monitoring) + Quarterly (audit)"
+    }
+  ],
+  "risk_summary": {
+    "total_risks": 9,
+    "high_severity_count": 4,
+    "medium_severity_count": 5,
+    "low_severity_count": 0,
+    "total_potential_loss_idr": "Rp 2-4 M per tahun (worst case semua trigger)",
+    "review_meeting": "Quarterly Risk Review (Pak Ardian + Mada + Bu Nisya + Rizal)"
+  }
+}

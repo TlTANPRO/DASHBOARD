@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "name": "content-calendar-q3-2026",
+    "version": "2.0",
+    "deskripsi": "Content calendar 90 hari Q3 2026 (25 konten/bulan). V2: Hashtag primary diganti per user req (RumahSubsidiSiapHuni, SyahfalahProperty, LembayungProperty, SubsidiTanpaRenovasi).",
+    "ref": "content/v3-execution/bab-21-marketing-system.md + revisi 24 Jul 2026"
+  },
+  "content_pillar": [
+    {"pillar": "Edukasi (40%)", "topik_contoh": "Cara dapat FLPP, KPR flow, SHM proses, pajak properti, garansi bangunan, 'SubsidiTanpaRenovasi' USP", "format": "Carousel + Reels edukasi", "kpi": "Save + share rate > 3%"},
+    {"pillar": "Social proof (25%)", "topik_contoh": "Testimoni customer, before-after, dokumentasi akad, key handing", "format": "Reels + video pendek", "kpi": "Engagement rate > 5%"},
+    {"pillar": "Produk showcase (20%)", "topik_contoh": "Unit jadi, progress pembangunan, cluster tour, spec detail, 'RumahSubsidiSiapHuni' USP", "format": "Reels + carousel", "kpi": "Click to profile > 1%"},
+    {"pillar": "Behind the scene (10%)", "topik_contoh": "Mada daily, team work, owner presence, owner interview, Rizal site", "format": "Reels personal", "kpi": "Follower growth"},
+    {"pillar": "Promo + CTA (5%)", "topik_contoh": "Open house, promo diskon, event launching, hadiah", "format": "Reels + static CTA", "kpi": "Conversion ke WA"}
+  ],
+  "jadwal_juli_2026": {
+    "minggu_1": [
+      {"tanggal": "1 Jul", "platform": "FB+IG", "pillar": "Edukasi", "topik": "5 Syarat FLPP 2026 yang Wajib tahu", "format": "Carousel 5 slide", "pic": "Rifki", "status": "Posted"},
+      {"tanggal": "3 Jul", "platform": "IG Reels + TT", "pillar": "Social proof", "topik": "Penyerahan kunci Pak Ahmad (cluster A2 No 7)", "format": "Reels 30 detik", "pic": "Reta", "status": "Posted"},
+      {"tanggal": "5 Jul", "platform": "IG Reels", "pillar": "Produk", "topik": "Tour cluster Lavender 360° - #RumahSubsidiSiapHuni", "format": "Reels 60 detik", "pic": "Rifki", "status": "Posted"},
+      {"tanggal": "7 Jul", "platform": "FB+IG", "pillar": "Edukasi", "topik": "DP 1% vs DP 20% - bedanya apa", "format": "Carousel 7 slide", "pic": "Rifki", "status": "Posted"},
+      {"tanggal": "9 Jul", "platform": "IG Reels", "pillar": "Behind the scene", "topik": "Pagi di kantor Mada briefing", "format": "Reels 20 detik", "pic": "Reta", "status": "Posted"},
+      {"tanggal": "11 Jul", "platform": "FB+IG", "pillar": "Produk", "topik": "Progress pembangunan cluster B minggu ini", "format": "Carousel 6 foto", "pic": "Amir", "status": "Posted"},
+      {"tanggal": "13 Jul", "platform": "IG Reels", "pillar": "Social proof", "topik": "Testimoni Bu Rina - 'SubsidiTanpaRenovasi' worth it", "format": "Reels 45 detik", "pic": "Reta", "status": "Posted"}
+    ],
+    "minggu_2_4": "[Template 18 konten ulangan pattern minggu 1, dengan topik berbeda]"
+  },
+  "jadwal_agustus_2026": {
+    "tema_besar": "HUT RI ke-80 - 'Rumah untuk Pahlawan Ekonomi'",
+    "konten_fokus": ["Testimoni konsumen MBR", "Edukasi KPR mudah", "Promo kemerdekaan khusus", "Konsultasi gratis"],
+    "kolaborasi_khusus": "KOL lifestyle lokal (Fajar Wibowo, 50K followers)"
+  },
+  "jadwal_september_2026": {
+    "tema_besar": "Cluster Baru Launching - 'Safir Residence' #RumahSubsidiSiapHuni",
+    "konten_fokus": ["Teaser launching", "Sneak peek unit", "Pre-launch promo", "Launching event + doorprize"],
+    "event_highlight": "Open house 17-18 Sep 2026, target 50 walk-in"
+  },
+  "hashtag_strategy_v2": {
+    "primary": ["#RumahSubsidiSiapHuni", "#SyahfalahProperty", "#LembayungProperty", "#SubsidiTanpaRenovasi"],
+    "secondary": ["#FLPP2026", "#FirstHomeBuyer", "#RumahJember", "#PropertiJember", "#InvestasiProperti", "#RumahImpianNyataDiTangan"],
+    "trending_check": "Refresh setiap Senin pagi, lihat trending Jabodetabek + Jawa Timur",
+    "jumlah_per_post": "20-25 hashtag, tidak lebih"
+  },
+  "kolaborasi_kol_2026": [
+    {"nama": "Fajar Wibowo (lifestyle)", "followers": "50K", "deal": "Rp 1.5 juta, 1 Reels + 3 Story", "kpi": "Reach 20K + 5 lead"},
+    {"nama": "Mbak Dian (mom influencer)", "followers": "30K", "deal": "Rp 1 juta, 1 Reels + 2 Story", "kpi": "Reach 15K + 3 lead"},
+    {"nama": "Pak Heri (property senior)", "followers": "15K", "deal": "Rp 500 ribu, 1 carousel + 1 thread X", "kpi": "Reach 5K + 2 lead"}
+  ],
+  "kpi_evaluasi_bulanan": {
+    "reach_target": "50K/bulan",
+    "engagement_rate_target": "3.2%",
+    "lead_from_organic_target": "20 lead/bulan",
+    "follower_growth_target": "5%/bulan",
+    "save_rate_target": "2%"
+  }
+}

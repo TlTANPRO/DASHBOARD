@@ -1,0 +1,129 @@
+{
+  "_meta": {
+    "name": "definisi-target",
+    "version": "1.0",
+    "deskripsi": "Definisi target = PERAN, BUKAN output. V5.0 Phase 1 - BAB 5.3. Sumber: meeting 24 Jul 2026 point 4b. Setiap PIC punya definisi target yang menjelaskan peran penting mereka di perusahaan, sehingga tidak sekadar 'target = output' yang bisa di-mark tanpa dampak.",
+    "ref": "meeting 24 Jul 2026 + expansion manual 25 Jul 2026",
+    "tanggal": "2026-07-25"
+  },
+  "filsafat_target": {
+    "definisi_lama": "Target = output terukur (closing, posting, lead, unit).",
+    "definisi_baru": "Target = peran penting PIC di perusahaan. Jika PIC tidak menjalankan perannya, perusahaan dan tim lain akan kena dampak.",
+    "mengapa_peran_bukan_output": [
+      "Output bisa dimanipulasi (closing tanpa repeat order = bom waktu)",
+      "Peran stabil - PIC tahu kenapa mereka ada di perusahaan",
+      "Konsistensi peran menghasilkan output jangka panjang",
+      "Motivasi intrinsik > ekstrinsik"
+    ],
+    "cara_ukur_peran": [
+      "Apakah PIC menjalankan deliverable rutin per minggu?",
+      "Apakah PIC cross-support tim lain saat butuh?",
+      "Apakah PIC memperbaiki sistem, bukan cuma kerja di sistem?",
+      "Apakah PIC membawa masalah + solusi, atau hanya masalah?"
+    ]
+  },
+  "definisi_per_pic": [
+    {
+      "no": 1,
+      "pic": "Pak Ardian",
+      "inisial": "PA",
+      "target_peran": "Menjaga keberlanjutan bisnis + menciptakan ekspansi 1/tahun. Pak Ardian bukan pusat operasional - melainkan strategic enabler.",
+      "bukan_target_ini": "Menyetujui semua pengeluaran > 1jt (itu bottleneck, bukan peran)",
+      "dampak_jika_tidak_jalan": "Perusahaan tidak punya strategic direction. Ekspansi mandek. Tim bingung prioritas."
+    },
+    {
+      "no": 2,
+      "pic": "Bu Nisya",
+      "inisial": "BN",
+      "target_peran": "Menjaga legalitas + kualitas kontrak + melatih admin polyvalent skill legal. Bu Nisya bukan checker legal - melainkan legal system builder.",
+      "bukan_target_ini": "Cuma approve kontrak FLPP masuk (itu admin, bukan peran)",
+      "dampak_jika_tidak_jalan": "Kontrak rentan sengketa. Admin tidak berkembang. Front office audit jalan tanpa legal anchor."
+    },
+    {
+      "no": 3,
+      "pic": "Mada",
+      "inisial": "M",
+      "target_peran": "Mada = B10 PIC, back-end operasional & lintas fungsi. Tanpa Mada, 12 PIC jalan sendiri-sendiri. Mada bukan general manajer - melainkan operational conductor.",
+      "bukan_target_ini": "Closing hook pojok + handle front office (V4.2 pattern - V5.0 dilepas)",
+      "dampak_jika_tidak_jalan": "Approval bottleneck. PIC tidak terkoordinasi. KPI Score Card tidak konsolidasi. Standup tidak jalan."
+    },
+    {
+      "no": 4,
+      "pic": "Riza",
+      "inisial": "R",
+      "target_peran": "Menjaga lead quality + meng-hand-off ke closing. Riza bukan posting robot - melainkan lead strategist.",
+      "bukan_target_ini": "Posting banyak tanpa qualified lead (posting-based = vanity metric)",
+      "dampak_jika_tidak_jalan": "Closing tidak dapat lead. Marketing cost naik tanpa ROI. Yudi tidak punya closing material."
+    },
+    {
+      "no": 5,
+      "pic": "Yudi/Sdek",
+      "inisial": "Y",
+      "target_peran": "Menutup qualified lead jadi deal. Yudi bukan pushy salesman - melainkan persuader + customer experience.",
+      "bukan_target_ini": "Cuma handle walk-in (lead dari Riza yang 70% closing - itu yang utama)",
+      "dampak_jika_tidak_jalan": "Lead masuk jadi dingin. Closing rate turun. Repeat customer tidak ada. Testimonial kosong."
+    },
+    {
+      "no": 6,
+      "pic": "Rizal",
+      "inisial": "RZ",
+      "target_peran": "Membangun rumah 68jt/unit on-time, on-quality, on-budget. Rizal bukan site manager biasa - melainkan delivery owner + quality gate.",
+      "bukan_target_ini": "Cuma supervise mandor onsite (itu mandor, bukan site manager)",
+      "dampak_jika_tidak_jalan": "HPP membengkak. Schedule molor. Defect naik. Klaim retensi menumpuk. Subkon scorecard turun."
+    },
+    {
+      "no": 7,
+      "pic": "Amir",
+      "inisial": "A",
+      "target_peran": "Menjaga continuity proyek + content + polyvalent skill. Amir bukan cover serabutan - melainkan backup yang handal + multi-skilled.",
+      "bukan_target_ini": "Cuma bikin konten (konten = efek, bukan peran)",
+      "dampak_jika_tidak_jalan": "Rizal off-site = proyek mandek. Konten telat. Novita overload. Sistem tidak punya backup."
+    },
+    {
+      "no": 8,
+      "pic": "Novita",
+      "inisial": "N",
+      "target_peran": "Menjaga kelengkapan berkas + after-sales response. Novita bukan admin filing - melainkan customer experience guardian + polyvalent trainee.",
+      "bukan_target_ini": "Cuma filing (kurang peran - V5.0 tambah after-sales + polyvalent)",
+      "dampak_jika_tidak_jalan": "Berkas FLPP ditolak bank. After-sales komplain naik. Konsumen churn. Novita stuck di filing."
+    },
+    {
+      "no": 9,
+      "pic": "Sinta",
+      "inisial": "S",
+      "target_peran": "Menjaga kualitas material + best price + progress tracking. Sinta bukan admin order - melainkan quality stopper + auditor.",
+      "bukan_target_ini": "Cuma order material (quantity, bukan quality)",
+      "dampak_jika_tidak_jalan": "Material kwalitas rendah. Best price tidak dapat. Progress per-blok tidak akurat. Retensi naik. Klaim material membengkak."
+    },
+    {
+      "no": 10,
+      "pic": "Reni",
+      "inisial": "RN",
+      "target_peran": "Membangun brand + content pillar + team media. Reni bukan ketua kreatif - melainkan brand builder + team leader.",
+      "bukan_target_ini": "Cuma desain + posting (itu Reta + Rifki, bukan Reni)",
+      "dampak_jika_tidak_jalan": "Brand inkonsisten. Content pillar tidak jalan. Tim media tidak terkoordinasi. Closing attribution turun."
+    },
+    {
+      "no": 11,
+      "pic": "Rifki",
+      "inisial": "RF",
+      "target_peran": "Menghasilkan hook 3 detik + CTA kuat + output closing. Rifki bukan desain grafis - melainkan conversion creative.",
+      "bukan_target_ini": "Cuma desain estetik tanpa conversion (cantik tapi tidak closing)",
+      "dampak_jika_tidak_jalan": "Engagement turun. CTA lemah. WA clone 4455 tidak di-klik. Closing dari konten = 0."
+    },
+    {
+      "no": 12,
+      "pic": "Reta",
+      "inisial": "RT",
+      "target_peran": "Menjaga posting on-time + community management. Reta bukan operator posting - melainkan community manager.",
+      "bukan_target_ini": "Cuma posting tanpa reply (posting tanpa engagement = mati)",
+      "dampak_jika_tidak_jalan": "Follower turun. Komplain tidak tertangani. Sentimen negatif di kolom komentar. Brand rusak pelan-pelan."
+    }
+  ],
+  "komunikasi_target_ke_pic": {
+    "cara_jelaskan_saat_onboarding": "Target kamu BUKAN [closing/posting/lead] saja. Target kamu adalah: [definisi peran di atas]. Kalau kamu tidak jalan, [dampak] terjadi ke tim/perusahaan.",
+    "saat_review_bulanan": "Apakah kamu sudah menjalankan peranmu? Bukan: berapa closing/posting/lead kamu?",
+    "reward": "PIC yang menjalankan peran dengan baik = grading naik + fee closing. Bukan hanya berdasarkan angka output.",
+    "punishment": "PIC yang hanya kejar output tanpa peran = fee ditahan + pembinaan. Output tanpa peran = tidak sustainable."
+  }
+}

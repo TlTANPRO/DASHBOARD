@@ -1,0 +1,163 @@
+{
+  "_meta": {
+    "name": "succession-plan",
+    "version": "1.0",
+    "deskripsi": "Succession plan + exit strategy untuk Owner + 5 PIC kritis. Identify successors, ramp-up plan, knowledge transfer. V4.0 - Bab 63.",
+    "ref": "content/v4-final/bab-63-succession-plan.md + dibuat 24 Jul 2026"
+  },
+  "succession_overview": {
+    "judul": "Succession Plan & Exit Strategy",
+    "filosofi": "Succession bukan tentang siapa yang replace, tapi tentang continuity bisnis + sustainability knowledge. Plan dibuat sejak awal, bukan saat kritis",
+    "scope": "Owner (Pak Ardian) + 5 PIC kritis (Mada, Rizal, Riza, Bu Nisya, Yudi/Sdek)",
+    "horizon": "Jangka pendek (1-2 tahun), menengah (3-5 tahun), panjang (5-10 tahun)"
+  },
+  "succession_per_role": [
+    {
+      "role": "Pak Ardian (Owner / Director)",
+      "current_pic": "Pak Ardian",
+      "successor_primary": "Bu Nisya (Co-Director sudah in-line)",
+      "successor_secondary": "Mada (COO Proxy, potential Co-Director track)",
+      "successor_external": "Profesional eksternal dengan track record property (jika tidak ada internal)",
+      "ramp_up_plan_tahun": 5,
+      "knowledge_transfer": [
+        "Network bank, supplier, subkon, notaris - 1 tahun ramp up",
+        "Strategic decision making (approve > Rp 10jt) - 3 tahun supervised decision",
+        "Profit sharing calculation + tax planning - 2 tahun deep dive dengan konsultan",
+        "Brand + public speaking - 3 tahun exposure"
+      ],
+      "trigger_for_succession": "Pak Ardian decide semi-retire, atau health issue, atau ekspansi butuh partner",
+      "exit_strategy": "Profit sharing gradual transition, Bu Nisya + Mada buy-in saham secara bertahap, Pak Ardian retain 30% sebagai passive owner"
+    },
+    {
+      "role": "Bu Nisya (Co-Director + Legal)",
+      "current_pic": "Bu Nisya",
+      "successor_primary": "Novita (admin senior, sudah in-line untuk legal admin)",
+      "successor_external": "Konsultan hukum tetap (law firm retainer) untuk cover pekerjaan hukum",
+      "ramp_up_plan_tahun": 3,
+      "knowledge_transfer": [
+        "Izin property + BPN - 6 bulan shadow",
+        "Kontrak + drafting - 1 tahun supervised",
+        "Lisensi + kepatuhan - 1 tahun exposure",
+        "Sengketa hukum + mediasi - 1 tahun supervised"
+      ],
+      "trigger": "Bu Nisya cuti panjang, atau resign, atau fokus ke family",
+      "exit_strategy": "Hire associate lawyer (in-house) + retain law firm, Novita manage admin + filter"
+    },
+    {
+      "role": "Mada (COO Proxy + Chief of Staff)",
+      "current_pic": "Mada",
+      "successor_primary": "P1 senior yang di-promote (Reni atau Reta - yang paling capable operasional)",
+      "successor_secondary": "Hire eksternal senior operation (10+ tahun experience)",
+      "ramp_up_plan_tahun": 2,
+      "knowledge_transfer": [
+        "Cross-function operations - 1 bulan shadow",
+        "Decision making harian - 6 bulan supervised",
+        "Reporting ke owner - 1 tahun supervised",
+        "Coaching + 1-on-1 PIC - 6 bulan practiced"
+      ],
+      "trigger": "Mada promosi ke Co-Director, atau Mada resign, atau ekspansi butuh Mada ke cluster baru",
+      "exit_strategy": "Promote 1 P1 senior ke Mada track, 1 P1 lain naik ke P2 (Reni atau Reta). Hire 1 fresh P0/P1 untuk fill the gap"
+    },
+    {
+      "role": "Rizal (Triple Role Proyek)",
+      "current_pic": "Rizal",
+      "successor_primary": "Amir (proyek lead cover) + Mada (strategic decision backup)",
+      "successor_secondary": "Hire eksternal senior site manager (15+ tahun experience, track record proyek property)",
+      "ramp_up_plan_tahun": 3,
+      "knowledge_transfer": [
+        "Site management + mandor - 1 tahun shadow",
+        "RAB + quantity takeoff - 1 tahun supervised",
+        "Strategic planning + risk proyek - 1 tahun practiced",
+        "Subkon management - 6 bulan supervised"
+      ],
+      "trigger": "Rizal promosi ke P3 (kepala divisi + saham), atau Rizal resign, atau ekspansi butuh multi-site manager",
+      "exit_strategy": "Promote Amir ke P1 senior proyek, hire 1 sub-project manager baru, Mada get 1 arsitek konsultan tetap"
+    },
+    {
+      "role": "Riza (Digital Marketing PIC)",
+      "current_pic": "Riza",
+      "successor_primary": "Yudi/Sdek (operasional marketing harian, belajar ads)",
+      "successor_secondary": "Hire eksternal digital marketing specialist",
+      "ramp_up_plan_tahun": 2,
+      "knowledge_transfer": [
+        "Meta Ads + Google Ads - 3 bulan intensive",
+        "Content planning + KOL - 6 bulan shadow",
+        "Analytics + reporting - 1 tahun practiced",
+        "Budget allocation - 1 tahun supervised"
+      ],
+      "trigger": "Riza promosi ke P2, atau Riza resign, atau scaling butuh multi-PIC marketing",
+      "exit_strategy": "Promote Yudi/Sdek ke P1 senior marketing (jika capable), hire 1 fresh P0 social media"
+    },
+    {
+      "role": "Yudi/Sdek (Closing + Front Desk)",
+      "current_pic": "Yudi/Sdek",
+      "successor_primary": "Reta (closing + engagement, sudah similar scope)",
+      "successor_secondary": "Hire eksternal sales executive property",
+      "ramp_up_plan_tahun": 1,
+      "knowledge_transfer": [
+        "Showroom management - 1 bulan shadow",
+        "Closing script - 3 bulan supervised",
+        "Konsultasi KPR - 6 bulan practiced",
+        "Follow-up lead - 6 bulan supervised"
+      ],
+      "trigger": "Yudi/Sdek promosi ke P2 (jika dia ambassador kuat), atau resign",
+      "exit_strategy": "Promote Reta ke P1 closing, hire 1 fresh front desk + sales"
+    }
+  ],
+  "knowledge_management_system": {
+    "tool": "Notion (existing) - extend dengan structure baru",
+    "struktur_notion": {
+      "1_sop_dan_prosedur": "Semua SOP per divisi, versioned, searchable",
+      "2_decision_log": "Log keputusan strategis, why + what + outcome, agar successor bisa lihat pattern",
+      "3_kontak_dan_network": "Database bank officer, notaris, supplier, subkon, KOL - siapa PIC, kontak, MoU expiry",
+      "4_lesson_learned": "Setiap project selesai: what worked, what didn't, what to do differently",
+      "5_dashboard_history": "Screenshot dashboard periodik, untuk trend analysis",
+      "6_personal_knowledge": "Setiap PIC punya 'brain dump' area: apa yang hanya dia tahu (tacit knowledge)"
+    },
+    "cadence": "Quarterly review + update, Mada monitor compliance"
+  },
+  "exit_strategy_per_skenario": [
+    {
+      "skenario": "Pak Ardian pensiun / semi-retire",
+      "transition_plan": "Bu Nisya + Mada naik ke Co-Director, profit sharing bergeser, saham gradual buy-in",
+      "duration": "2-3 tahun transisi",
+      "komunikasi": "Internal announcement Q1, konsumen tetap di-assure continuity"
+    },
+    {
+      "skenario": "Mada resign ke kompetitor / startup",
+      "transition_plan": "Promote 1 P1 senior (Reni atau Reta) ke P2 COO Proxy, hire 1 fresh P0 untuk backup",
+      "duration": "1-2 bulan handover (sesuai SOP exit)",
+      "komunikasi": "Internal only, klien/konsumen tidak perlu tahu"
+    },
+    {
+      "skenario": "Ekspansi ke kota baru (Lumajang / Probolinggo)",
+      "transition_plan": "Mada atau Rizal relocate untuk 6-12 bulan, PIC existing handover sementara, hire 5-7 PIC baru di kota baru",
+      "duration": "6-12 bulan",
+      "komunikasi": "Klien existing di-assure, tim baru di-recruit dari lokal"
+    },
+    {
+      "skenario": "Pivot bisnis (henti FLPP, full Komersial)",
+      "transition_plan": "Rizal + Mada retrain untuk Komersial, Riza pivot ke higher-ticket marketing, Bu Nisya fokus kontrak premium",
+      "duration": "6-9 bulan pivot",
+      "komunikasi": "Internal + select klien (yang mau upgrade)"
+    },
+    {
+      "skenario": "Acquisition / merger dengan developer besar",
+      "transition_plan": "Bu Nisya lead legal + due diligence, Mada + Rizal manage operational integration, owner decide struktur partnership",
+      "duration": "3-6 bulan negosiasi + 12 bulan integration",
+      "komunikasi": "Internal full + klien utama di-informasikan"
+    }
+  ],
+  "monitoring_dan_review": {
+    "frekuensi": "Quarterly review (akhir quarter)",
+    "peserta": "Pak Ardian, Bu Nisya, Mada, Rizal, Riza",
+    "agenda": [
+      "Update successor readiness (siapa yang sudah ready, siapa yang perlu ramp up)",
+      "Knowledge management compliance (apakah SOP sudah up-to-date)",
+      "Risk concentration (apakah ada single point of failure)",
+      "Succession bench strength (berapa successor ready untuk setiap role)",
+      "Action items Q-depan"
+    ],
+    "output": "Update succession-plan.json, komunikasi ke PIC yang relevan"
+  }
+}

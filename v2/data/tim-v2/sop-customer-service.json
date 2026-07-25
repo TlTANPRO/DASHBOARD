@@ -1,0 +1,217 @@
+{
+  "_meta": {
+    "name": "sop-customer-service",
+    "version": "1.0",
+    "deskripsi": "SOP customer service untuk handle komplain konsumen. 10 skenario komplain umum: atap bocor, dinding retak, instalasi listrik, dll. V4.0 - Bab 52.",
+    "ref": "content/v4-final/bab-52-sop-customer-service.md + dibuat 24 Jul 2026"
+  },
+  "prinsip_dasar": {
+    "response_time_max": "24 jam (1x24 jam setiap komplain harus ada respon awal)",
+    "garansi_window": "1 bulan setelah BAST untuk defect material + workmanship",
+    "di_luar_garansi": "After-sales service opsional (konsumen bayar material + jasa)",
+    "channel_komunikasi": ["WA Group khusus (Novita, Rizal, tukang standby)", "Telepon (untuk emergency)", "Visit onsite (untuk keluhan serius)"],
+    "pic_primary": "Novita (admin + customer service)",
+    "pic_teknis": "Rizal (untuk komplain teknis), tukang standby untuk repair kecil"
+  },
+  "skenario_komplain": [
+    {
+      "id": "KS-001",
+      "judul": "Atap bocor saat hujan",
+      "kategori": "Konstruksi (dinding/atap)",
+      "severity": "HIGH",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Tanya kapan mulai bocor (setelah hujan ke berapa?)",
+        "Tanya lokasi bocor (titik, area, atau seluruh atap?)",
+        "Foto dari bawah (lihat rembesan) + foto dari atas jika aman (Rizal site visit)",
+        "Cek apakah ada material rusak / pekerjaan tidak rapi"
+      ],
+      "action_plan": {
+        "if_inside_garansi": "Tukang standby visit 1x24 jam, repair waterproofing, tukang ganti talang jika rusak. Tidak ada charge ke konsumen",
+        "if_outside_garansi": "Tawarkan jasa repair (material + jasa), estimasi biaya dari Rizal. Konsumen approve baru kerja",
+        "if_serious": "Rizal site visit, dokumentasi, RAB repair, Mada approve, eksekusi max 7 hari"
+      },
+      "follow_up": "Tanya konsumen 7 hari setelah repair: masih bocor atau sudah OK? Kalau masih bocor, repeat visit",
+      "sla": "Response awal 24 jam, repair selesai 7 hari"
+    },
+    {
+      "id": "KS-002",
+      "judul": "Dinding retak (rambut/hairline crack)",
+      "kategori": "Konstruksi (dinding)",
+      "severity": "MEDIUM",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Foto close-up retakan (untuk identifikasi jenis: rambut, struktural, atau settlement)",
+        "Tanya kapan pertama terlihat (setelah hujan, setelah tembok kering, atau sejak awal?)",
+        "Ukur panjang + lebar retakan (jika > 2mm = struktural, perlu Rizal cek)",
+        "Cek apakah ada pola berulang di beberapa dinding"
+      ],
+      "action_plan": {
+        "if_hairline": "Tukang standby visit, amplas + cat ulang (touch up). Konsumen catat foto before-after",
+        "if_structural": "Rizal site visit urgent, identifikasi root cause (settlement fondasi, gempa, atau material). RAB repair"
+      },
+      "follow_up": "Foto 30 hari setelah repair, pastikan retakan tidak muncul lagi",
+      "sla": "Response 24 jam, repair 3-7 hari tergantung severity"
+    },
+    {
+      "id": "KS-003",
+      "judul": "Instalasi listrik trouble (MCB trip, lampu mati, stop kontak tidak nyala)",
+      "kategori": "Instalasi (listrik)",
+      "severity": "MEDIUM",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Tanya kronologi: sejak kapan, apa yang sedang dipakai saat trouble",
+        "Cek MCB panel: apakah trip? Jika ya, coba reset. Jika trip lagi = short circuit",
+        "Lampu mati: cek lampu + fitting. Stop kontak: cek apakah ada alat elektronik yang dipasang"
+      ],
+      "action_plan": {
+        "if_mcb_trip_repeat": "Subkon listrik standby visit 1x24 jam, identifikasi short circuit, repair. Garansi cover",
+        "if_lampu_broken": "Tukang ganti lampu (garansi 1 minggu untuk lampu, setelah itu biaya konsumen)",
+        "if_stop_kontak_rusak": "Subkon listrik cek, ganti stop kontak jika perlu (garansi cover material)"
+      },
+      "follow_up": "Tes 3 hari setelah repair, pastikan tidak trouble lagi",
+      "sla": "Response 4 jam (karena urgent), repair 24-48 jam"
+    },
+    {
+      "id": "KS-004",
+      "judul": "Pipa air bocor / mampet",
+      "kategori": "Instalasi (air)",
+      "severity": "HIGH",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Lokasi pipa bocor: dinding, lantai, atau sambungan",
+        "Mampet: cek apakah konsumen buang benda asing (tissue, pembalut, dll)",
+        "Tekanan air: normal atau drop"
+      ],
+      "action_plan": {
+        "if_bocor_dalam_garansi": "Tukang ledeng visit 1x24 jam, ganti pipa atau seal. Tidak ada charge",
+        "if_mampet_karena_penggunaan": "Edukasi konsumen (tidak boleh buang tissue, pembalut, minyak). Jika mampet, konsumen bayar jasa + biaya"
+      },
+      "follow_up": "Cek 7 hari, pastikan tidak bocor/mampet lagi",
+      "sla": "Response 4 jam (urgent), repair 24-48 jam"
+    },
+    {
+      "id": "KS-005",
+      "judul": "Kusen pintu/jendela tidak presisi / sulit ditutup",
+      "kategori": "Kusen",
+      "severity": "LOW",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Foto kondisi kusen + pintu/jendela",
+        "Cek apakah masalah di engsel, frame, atau kayu kusen memuai"
+      ],
+      "action_plan": {
+        "if_engsel_geser": "Tukang sesuaikan engsel (kencangkan, setel posisi)",
+        "if_kayu_memuai": "Tukang amplas + finishing ulang. Jika parah, ganti kusen (case-by-case)"
+      },
+      "follow_up": "Konfirmasi 14 hari, pastikan tidak kembali",
+      "sla": "Response 48 jam, repair 7 hari"
+    },
+    {
+      "id": "KS-006",
+      "judul": "Lantai keramik popping / pecah",
+      "kategori": "Lantai",
+      "severity": "MEDIUM",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Lokasi + jumlah keramik popping/pecah",
+        "Foto dari atas + samping",
+        "Cek apakah ada rembesan air di bawah (mungkin instalasi pipa bocor)"
+      ],
+      "action_plan": {
+        "if_isolated_1_2_lokasi": "Tukang ganti keramik, gunakan spare keramik. Tidak charge",
+        "if_meluas_lebih_dari_3": "Rizal site visit, identifikasi root cause (settlement, material, atau workmanship). RAB repair"
+      },
+      "follow_up": "Foto 30 hari, pastikan tidak ada popping baru",
+      "sla": "Response 24 jam, repair 7-14 hari"
+    },
+    {
+      "id": "KS-007",
+      "judul": "Cat dinding mengelupas / berubah warna",
+      "kategori": "Finishing",
+      "severity": "LOW",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Lokasi + luas area mengelupas",
+        "Cek kelembapan dinding (mungkin rembesan dari luar)"
+      ],
+      "action_plan": {
+        "if_isolated": "Tukang amplas + cat ulang (touch up)",
+        "if_meluas_atau_rembesan": "Rizal cek, identifikasi sumber rembesan, fix dulu, baru cat ulang"
+      },
+      "follow_up": "Cek 30 hari, pastikan tidak kembali",
+      "sla": "Response 48 jam, repair 7 hari"
+    },
+    {
+      "id": "KS-008",
+      "judul": "Septic tank penuh / bau tidak sedap",
+      "kategori": "Sanitasi",
+      "severity": "MEDIUM",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Kapan terakhir kali sedot WC / septic",
+        "Berapa orang yang tinggal di rumah",
+        "Apakah ada bau masuk ke dalam rumah atau hanya dari septic"
+      ],
+      "action_plan": {
+        "if_penuh_normal_use": "Edukasi konsumen jadwal sedot WC (1-2 tahun sekali, biaya konsumen). Bukan garansi",
+        "if_bau_dari_pipa": "Tukang cek instalasi pipa, cek siphon, cek ventilasi. Garansi cover"
+      },
+      "follow_up": "Konfirmasi 7 hari, pastikan masalah selesai",
+      "sla": "Response 24 jam, action 7 hari"
+    },
+    {
+      "id": "KS-009",
+      "judul": "Pintu garasi / pagar trouble (tidak bisa dibuka, otomatis error)",
+      "kategori": "Pintu/Pagar",
+      "severity": "MEDIUM",
+      "garansi_covered": true,
+      "diagnosis_awal": [
+        "Jenis pintu: manual atau otomatis",
+        "Sudah berapa lama trouble",
+        "Apakah ada bunyi aneh atau hanya stuck"
+      ],
+      "action_plan": {
+        "if_mekanis": "Tukang cek engsel, rel, atau handle. Garansi cover material",
+        "if_otomatis_motor": "Subkon pintu otomatis standby visit. Garansi cover 1 tahun untuk motor"
+      },
+      "follow_up": "Tes 3 hari setelah repair",
+      "sla": "Response 24 jam, repair 3-7 hari"
+    },
+    {
+      "id": "KS-010",
+      "judul": "Konsumen komplain di luar garansi (usia rumah > 1 bulan)",
+      "kategori": "After-sales (di luar garansi)",
+      "severity": "INFO",
+      "garansi_covered": false,
+      "diagnosis_awal": [
+        "Konfirmasi usia rumah dan BAST date",
+        "Konfirmasi jenis kerusakan",
+        "Foto kondisi terkini"
+      ],
+      "action_plan": {
+        "all": "Tawarkan after-sales service opsional: kirim tukang/subkon dengan biaya konsumen. Estimasi biaya dari Rizal, konsumen approve, eksekusi",
+        "emergency_response": "Untuk emergency (kebocoran besar, listrik bahaya), tetap respon 24 jam tapi charge biaya"
+      },
+      "follow_up": "Konfirmasi 7 hari setelah eksekusi, dokumentasi closing",
+      "sla": "Response 24 jam, eksekusi sesuai agreement"
+    }
+  ],
+  "form_dan_template": {
+    "form_komplain": "Form KS-001: Identitas konsumen, unit, jenis komplain, foto, kronologi. Isi oleh konsumen atau Novita",
+    "form_repair": "Form KS-002: Hasil diagnosis, RAB repair, approval, eksekusi, closing. Isi oleh Rizal/novita",
+    "template_wa_response": "'Selamat [pagi/siang/sore] Bapak/Ibu [Nama], terima kasih sudah melapor. Tim kami akan follow up dalam 1x24 jam. Mohon foto detail untuk diagnosis. Terima kasih. - Novita [Admin Syahfalah Property]'",
+    "template_visit": "'Bapak/Ibu [Nama], kami jadwalkan visit tukang standby [tanggal] jam [waktu]. Mohon konfirmasi. Terima kasih. - Novita'"
+  },
+  "tracking_dashboard": {
+    "tools": "Dashboard V2 tab 'Customer Service'",
+    "metrics": [
+      "Total komplain per bulan (target: < 10% dari unit closing)",
+      "Rata-rata response time (target: < 24 jam)",
+      "Rata-rata resolution time (target: < 7 hari)",
+      "Tingkat repeat komplain (target: < 5%)",
+      "Tingkat kepuasan konsumen (target: > 80% puas)"
+    ],
+    "report": "Bulanan ke Mada + Pak Ardian, escalate ke owner jika ada komplain serius atau viral"
+  }
+}

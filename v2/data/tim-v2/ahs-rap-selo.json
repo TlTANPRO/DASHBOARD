@@ -1,0 +1,269 @@
+{
+  "_meta": {
+    "name": "ahs-rap-selo",
+    "version": "1.0",
+    "deskripsi": "Analisa Harga Satuan (AHS) + RAP type 36 Blok A-2 Mustika Lembayung Sumbersuko, pemborong Selo, SPK 024/PT.MLS/SPK.SUMBERSUKO/V/2026, 16 Mei 2026. Sumber: SPK MLS.xlsx sheet 'SPK MLS NEW'. V4.1 - Lampiran N.",
+    "ref": "C:\\Users\\Syahfalah\\Downloads\\SPK MLS.xlsx, sheet 'SPK MLS NEW' rows 39-148",
+    "tanggal_spk": "2026-05-16",
+    "lokasi": "Mustika Lembayung Sumbersuko, Lumajang",
+    "tipe_rumah": "36 (Blok A-2)",
+    "pemborong": {
+      "nama": "Selo",
+      "alamat": "Kayugedang, Bodang, Kec. Padang, Kabupaten Lumajang Jawa Timur 67352",
+      "no_hp": "0823-0220-2269"
+    },
+    "owner_pertama": {
+      "nama": "Achmad Ardiansyah",
+      "jabatan": "Direktur PT. Lembayung Wanantara Padha",
+      "nik": "3508101110920004",
+      "alamat": "Jalan Bondoyudo No. 55 Rogotrunan, Kec. Lumajang, Kab. Lumajang"
+    }
+  },
+  "ringkasan_kontrak": {
+    "nilai_kontrak_dibulatkan_idr": 68250000,
+    "nilai_kontrak_awal_idr": 68268708,
+    "durasi_kerja_hari": 48,
+    "durasi_kerja_minggu": 8,
+    "jumlah_termin_pembayaran": 7,
+    "retensi_pct": 5,
+    "retensi_idr": 4250000
+  },
+  "kategori_utama": {
+    "label": "I. RUMAH TYPE 36 (Blok A-2)",
+    "total_idr": 60317462,
+    "subtotal_label": "Jumlah Total I"
+  },
+  "rincian_A_L_12_kategori": [
+    {
+      "kode": "A",
+      "nama": "Pekerjaan Persiapan dan Bongkaran",
+      "jumlah_idr": 930000,
+      "items": [
+        {"no": 1, "uraian": "Pek. Pembersihan Lahan", "volume": 60, "satuan": "m2", "harga_satuan_idr": 9500, "jumlah_idr": 570000, "waktu_oh": 0.41},
+        {"no": 2, "uraian": "Pek. Pengukuran dan Bowplank", "volume": 36, "satuan": "m'", "harga_satuan_idr": 10000, "jumlah_idr": 360000, "waktu_oh": 0.26}
+      ]
+    },
+    {
+      "kode": "B",
+      "nama": "Pekerjaan Tanah dan Pondasi",
+      "jumlah_idr": 4379334,
+      "items": [
+        {"no": 1, "uraian": "Galian Tanah Biasa Sedalam <1 Meter", "volume": 4.8, "satuan": "m3", "harga_satuan_idr": 65000, "jumlah_idr": 312000, "waktu_oh": 0.23},
+        {"no": 2, "uraian": "Urug tanah Kembali", "volume": 12.42, "satuan": "m3", "harga_satuan_idr": 92700, "jumlah_idr": 1151334, "waktu_oh": 0.83},
+        {"no": 3, "uraian": "Pasang pondasi batu kali 1 PC : 6 PS", "volume": 8, "satuan": "m3", "harga_satuan_idr": 364500, "jumlah_idr": 2916000, "waktu_oh": 2.10}
+      ]
+    },
+    {
+      "kode": "C",
+      "nama": "Pekerjaan Pasangan",
+      "jumlah_idr": 19536966,
+      "items": [
+        {"no": 1, "uraian": "Pasangan dinding batako tebal 10 cm, spesi 1 PC : 3 PS", "volume": 173.02, "satuan": "m2", "harga_satuan_idr": 55724, "jumlah_idr": 9641366, "waktu_oh": 6.93},
+        {"no": 2, "uraian": "Plesteran 1 PC : 8 PS tebal 15 mm", "volume": 196, "satuan": "m2", "harga_satuan_idr": 24500, "jumlah_idr": 4802000, "waktu_oh": 3.45},
+        {"no": 3, "uraian": "Acian dan Plamir", "volume": 196, "satuan": "m2", "harga_satuan_idr": 21000, "jumlah_idr": 4116000, "waktu_oh": 2.96},
+        {"no": 4, "uraian": "Pasangan Keramik Dinding Kamar Mandi", "volume": 10.4, "satuan": "m2", "harga_satuan_idr": 94000, "jumlah_idr": 977600, "waktu_oh": 0.71},
+        {"no": 5, "uraian": "Pasang dinding roster/krawang 12x11x24 cm", "volume": 0.8, "satuan": "m2", "harga_satuan_idr": 0, "jumlah_idr": 0, "waktu_oh": 0, "catatan": "Termasuk dalam item lain"}
+      ]
+    },
+    {
+      "kode": "D",
+      "nama": "Pintu dan Jendela",
+      "jumlah_idr": 4717581,
+      "items": [
+        {"no": 1, "uraian": "Kusen & Daun Pintu Uk. 90, Kusen Kayu + Daun Kayu", "volume": 1, "satuan": "set", "harga_satuan_idr": 748800, "jumlah_idr": 748800, "waktu_oh": 0.54},
+        {"no": 2, "uraian": "Daun Pintu Uk. 80, Kusen Kayu + Triplek HPL", "volume": 3, "satuan": "set", "harga_satuan_idr": 547500, "jumlah_idr": 1642500, "waktu_oh": 1.18},
+        {"no": 3, "uraian": "Daun Jendela Uk. 50x150, Kusen Kayu + Daun Kayu", "volume": 1, "satuan": "set", "harga_satuan_idr": 583300, "jumlah_idr": 583300, "waktu_oh": 0.42},
+        {"no": 4, "uraian": "Roster Uk. 40x70", "volume": 1, "satuan": "set", "harga_satuan_idr": 166000, "jumlah_idr": 166000, "waktu_oh": 0.12},
+        {"no": 5, "uraian": "Kusen & Daun Jendela Aluminium Geser 40x150", "volume": 1, "satuan": "set", "harga_satuan_idr": 1171981, "jumlah_idr": 1171981, "waktu_oh": 0.85},
+        {"no": 6, "uraian": "Pintu KM/WC warna putih", "volume": 1, "satuan": "set", "harga_satuan_idr": 405000, "jumlah_idr": 405000, "waktu_oh": 0.30}
+      ]
+    },
+    {
+      "kode": "E",
+      "nama": "Pekerjaan Struktur",
+      "jumlah_idr": 7908493,
+      "items": [
+        {"no": 1, "uraian": "Sloof 10/20, Tulangan Besi 8, Ring Besi 6", "volume": 1.5, "satuan": "m3", "harga_satuan_idr": 1758200, "jumlah_idr": 2637300, "waktu_oh": 1.90},
+        {"no": 2, "uraian": "Kolom Praktis 10/10, Tulangan Besi 6, Ring Besi 6", "volume": 0.14, "satuan": "m3", "harga_satuan_idr": 7112600, "jumlah_idr": 995764, "waktu_oh": 0.72},
+        {"no": 3, "uraian": "Kolom Utama 10/10, Tulangan Besi 8, Ring Besi 6", "volume": 0.315, "satuan": "m3", "harga_satuan_idr": 6216600, "jumlah_idr": 1958229, "waktu_oh": 1.41},
+        {"no": 4, "uraian": "Ringbalk 10/10, Tulangan Besi 8, Ring Besi 6", "volume": 0.4, "satuan": "m3", "harga_satuan_idr": 5793000, "jumlah_idr": 2317200, "waktu_oh": 1.67}
+      ]
+    },
+    {
+      "kode": "F",
+      "nama": "Pekerjaan Penutup Atap",
+      "jumlah_idr": 5866060,
+      "items": [
+        {"no": 1, "uraian": "Konstruksi Baja Ringan tebal 0,8 mm", "volume": 36, "satuan": "m2", "harga_satuan_idr": 105982, "jumlah_idr": 3815356, "waktu_oh": 2.74},
+        {"no": 2, "uraian": "Pasang Atap Galvalum", "volume": 36, "satuan": "m2", "harga_satuan_idr": 44464, "jumlah_idr": 1600704, "waktu_oh": 1.15},
+        {"no": 3, "uraian": "Pasang talang 1/2 lingkaran diameter 15 cm BJLS 30", "volume": 2, "satuan": "m'", "harga_satuan_idr": 225000, "jumlah_idr": 450000, "waktu_oh": 0.33}
+      ]
+    },
+    {
+      "kode": "G",
+      "nama": "Pekerjaan Langit-langit",
+      "jumlah_idr": 2033000,
+      "items": [
+        {"no": 1, "uraian": "Plafond Kalsiboard + Rangka Hollow 20/40", "volume": 35.5, "satuan": "m2", "harga_satuan_idr": 57268, "jumlah_idr": 2033000, "waktu_oh": 1.46}
+      ]
+    },
+    {
+      "kode": "H",
+      "nama": "Pekerjaan Sanitasi",
+      "jumlah_idr": 4550400,
+      "items": [
+        {"no": 1, "uraian": "Pasang Kloset Jongkok warna putih Merk Duty", "volume": 1, "satuan": "set", "harga_satuan_idr": 236500, "jumlah_idr": 236500, "waktu_oh": 0.17},
+        {"no": 2, "uraian": "Pasang Pipa PVC 3\"", "volume": 21, "satuan": "m'", "harga_satuan_idr": 41700, "jumlah_idr": 875700, "waktu_oh": 0.63},
+        {"no": 3, "uraian": "Pasang Pipa PVC 3/4\"", "volume": 13, "satuan": "m'", "harga_satuan_idr": 24000, "jumlah_idr": 312000, "waktu_oh": 0.23},
+        {"no": 4, "uraian": "Pasang Pipa PVC 1/2\"", "volume": 3, "satuan": "m'", "harga_satuan_idr": 37400, "jumlah_idr": 112200, "waktu_oh": 0.09},
+        {"no": 5, "uraian": "Pasang Kran 1/2\"", "volume": 2, "satuan": "set", "harga_satuan_idr": 81500, "jumlah_idr": 163000, "waktu_oh": 0.12},
+        {"no": 6, "uraian": "Pasang Floor Drain (Standart)", "volume": 1, "satuan": "set", "harga_satuan_idr": 110000, "jumlah_idr": 110000, "waktu_oh": 0.08},
+        {"no": 7, "uraian": "Wastafel/Kitchen Zinc", "volume": 1, "satuan": "set", "harga_satuan_idr": 180000, "jumlah_idr": 180000, "waktu_oh": 0.10},
+        {"no": 8, "uraian": "Kompor Tanam", "volume": 1, "satuan": "set", "harga_satuan_idr": 600000, "jumlah_idr": 600000, "waktu_oh": 0.10},
+        {"no": 9, "uraian": "Pasang Septitank", "volume": 1, "satuan": "set", "harga_satuan_idr": 650000, "jumlah_idr": 650000, "waktu_oh": 0.47},
+        {"no": 10, "uraian": "Sumur Bor dan Pengadaan Pompa Air", "volume": 1, "satuan": "set", "harga_satuan_idr": 1311000, "jumlah_idr": 1311000, "waktu_oh": 0.95}
+      ]
+    },
+    {
+      "kode": "I",
+      "nama": "Pekerjaan Lantai dan Dinding",
+      "jumlah_idr": 4043121,
+      "items": [
+        {"no": 1, "uraian": "Lantai keramik granit 60x60 cm polish", "volume": 16.8, "satuan": "m2", "harga_satuan_idr": 113571, "jumlah_idr": 1908000, "waktu_oh": 1.37},
+        {"no": 2, "uraian": "Lantai keramik 40x40 cm polos", "volume": 15, "satuan": "m2", "harga_satuan_idr": 77000, "jumlah_idr": 1155000, "waktu_oh": 0.83},
+        {"no": 3, "uraian": "Beton mutu K.100 slump 12+2 cm, w/c=0,87 (rabat)", "volume": 9.52, "satuan": "m2", "harga_satuan_idr": 56000, "jumlah_idr": 533120, "waktu_oh": 0.39},
+        {"no": 4, "uraian": "Lantai KM/Mozaik 20x20 cm", "volume": 2.25, "satuan": "m2", "harga_satuan_idr": 198667, "jumlah_idr": 447001, "waktu_oh": 0.33}
+      ]
+    },
+    {
+      "kode": "J",
+      "nama": "Pekerjaan Kunci dan Kaca",
+      "jumlah_idr": 344407,
+      "items": [
+        {"no": 1, "uraian": "Kunci pintu istimewa Ruang Tamu", "volume": 1, "satuan": "bh", "harga_satuan_idr": 42330, "jumlah_idr": 42330, "waktu_oh": 0.04},
+        {"no": 2, "uraian": "Kunci pintu istimewa Kamar Tidur", "volume": 2, "satuan": "bh", "harga_satuan_idr": 30970, "jumlah_idr": 61940, "waktu_oh": 0.05},
+        {"no": 3, "uraian": "Engsel pintu", "volume": 6, "satuan": "bh", "harga_satuan_idr": 10583, "jumlah_idr": 63495, "waktu_oh": 0.05},
+        {"no": 4, "uraian": "Grendel jendela kecil", "volume": 4, "satuan": "bh", "harga_satuan_idr": 10565, "jumlah_idr": 42260, "waktu_oh": 0.04},
+        {"no": 5, "uraian": "Engsel jendela", "volume": 4, "satuan": "bh", "harga_satuan_idr": 7055, "jumlah_idr": 28220, "waktu_oh": 0.03},
+        {"no": 6, "uraian": "Hak angin / kait angin", "volume": 4, "satuan": "bh", "harga_satuan_idr": 11090, "jumlah_idr": 44360, "waktu_oh": 0.04},
+        {"no": 7, "uraian": "Kaca tebal 5 mm bening", "volume": 5.84, "satuan": "m2", "harga_satuan_idr": 10583, "jumlah_idr": 61802, "waktu_oh": 0.05}
+      ]
+    },
+    {
+      "kode": "K",
+      "nama": "Pekerjaan Pengecatan",
+      "jumlah_idr": 2301700,
+      "items": [
+        {"no": 1, "uraian": "Cat bidang kayu baru (1 plamir + 1 cat dasar + 2 cat penutup)", "volume": 1.8, "satuan": "m2", "harga_satuan_idr": 26500, "jumlah_idr": 47700, "waktu_oh": 0.04},
+        {"no": 2, "uraian": "Cat Tembok Baru Interior (1 plamir + 1 cat dasar + 2 cat penutup)", "volume": 196, "satuan": "m2", "harga_satuan_idr": 11500, "jumlah_idr": 2254000, "waktu_oh": 1.62}
+      ]
+    },
+    {
+      "kode": "L",
+      "nama": "Pekerjaan Listrik",
+      "jumlah_idr": 3706400,
+      "items": [
+        {"no": 1, "uraian": "Pasang Panel Box (MCB)", "volume": 1, "satuan": "bh", "harga_satuan_idr": 235400, "jumlah_idr": 235400, "waktu_oh": 0.17},
+        {"no": 2, "uraian": "Pasang stop kontak", "volume": 4, "satuan": "titik", "harga_satuan_idr": 111400, "jumlah_idr": 445600, "waktu_oh": 0.32},
+        {"no": 3, "uraian": "Pasang saklar tunggal", "volume": 4, "satuan": "titik", "harga_satuan_idr": 111400, "jumlah_idr": 445600, "waktu_oh": 0.32},
+        {"no": 4, "uraian": "Pasang saklar ganda", "volume": 2, "satuan": "titik", "harga_satuan_idr": 111400, "jumlah_idr": 222800, "waktu_oh": 0.16},
+        {"no": 5, "uraian": "Pasang lampu PL 11 Watt", "volume": 4, "satuan": "bh", "harga_satuan_idr": 111400, "jumlah_idr": 445600, "waktu_oh": 0.32},
+        {"no": 6, "uraian": "Meteran Listrik", "volume": 1, "satuan": "set", "harga_satuan_idr": 1800000, "jumlah_idr": 1800000, "waktu_oh": 0.08},
+        {"no": 7, "uraian": "Lampu Gantung", "volume": 1, "satuan": "bh", "harga_satuan_idr": 111400, "jumlah_idr": 111400, "waktu_oh": 0.08}
+      ]
+    }
+  ],
+  "kategori_II": {
+    "label": "II. PEKERJAAN PAGAR DEPAN DAN KANOPI",
+    "total_idr": 7951247,
+    "subtotal_label": "Jumlah Total II",
+    "subkategori": [
+      {
+        "kode": "II.A",
+        "nama": "Pekerjaan Pasangan",
+        "jumlah_idr": 2606949,
+        "items": [
+          {"no": 1, "uraian": "Pasangan dinding batako tebal 10 cm, spesi 1 PC : 3 PS", "volume": 21.2, "satuan": "m2", "harga_satuan_idr": 55724, "jumlah_idr": 1181349, "waktu_oh": 0.85},
+          {"no": 2, "uraian": "Plesteran 1 PC : 8 PS tebal 15 mm", "volume": 27.2, "satuan": "m2", "harga_satuan_idr": 24500, "jumlah_idr": 666400, "waktu_oh": 0.48},
+          {"no": 3, "uraian": "Acian dan Plamir", "volume": 27.2, "satuan": "m2", "harga_satuan_idr": 21000, "jumlah_idr": 571200, "waktu_oh": 0.42},
+          {"no": 4, "uraian": "Pasang dinding roster/krawang 12x11x24 cm", "volume": 2, "satuan": "m2", "harga_satuan_idr": 94000, "jumlah_idr": 188000, "waktu_oh": 0.14}
+        ]
+      },
+      {
+        "kode": "II.B",
+        "nama": "Pekerjaan Struktur",
+        "jumlah_idr": 1524820,
+        "items": [
+          {"no": 1, "uraian": "Sloof 10/20, Tulangan Besi 8, Ring Besi 6", "volume": 0.22, "satuan": "m3", "harga_satuan_idr": 1758200, "jumlah_idr": 386804, "waktu_oh": 0.28},
+          {"no": 2, "uraian": "Kolom Praktis 10/10, Tulangan Besi 6, Ring Besi 6", "volume": 0.16, "satuan": "m3", "harga_satuan_idr": 7112600, "jumlah_idr": 1138016, "waktu_oh": 0.82}
+        ]
+      },
+      {
+        "kode": "II.C",
+        "nama": "Pekerjaan Lantai dan Dinding",
+        "jumlah_idr": 818856,
+        "items": [
+          {"no": 1, "uraian": "Beton mutu K.100 slump 12+2 cm, w/c=0,87 (rabat)", "volume": 1.08, "satuan": "m3", "harga_satuan_idr": 758200, "jumlah_idr": 818856, "waktu_oh": 0.59}
+        ]
+      },
+      {
+        "kode": "II.D",
+        "nama": "Pekerjaan Penutup Atap",
+        "jumlah_idr": 2031022,
+        "items": [
+          {"no": 1, "uraian": "Konstruksi Baja Ringan tebal 0,8 mm", "volume": 13.5, "satuan": "m2", "harga_satuan_idr": 105982, "jumlah_idr": 1430758, "waktu_oh": 1.03},
+          {"no": 2, "uraian": "Pasang Atap Galvalum", "volume": 13.5, "satuan": "m2", "harga_satuan_idr": 44464, "jumlah_idr": 600264, "waktu_oh": 0.44}
+        ]
+      },
+      {
+        "kode": "II.E",
+        "nama": "Pekerjaan Pengecatan",
+        "jumlah_idr": 374000,
+        "items": [
+          {"no": 1, "uraian": "Cat Tembok Baru Interior (1 plamir + 1 cat dasar + 2 cat penutup)", "volume": 34, "satuan": "m2", "harga_satuan_idr": 11000, "jumlah_idr": 374000, "waktu_oh": 0.27}
+        ]
+      },
+      {
+        "kode": "II.F",
+        "nama": "Pekerjaan Listrik",
+        "jumlah_idr": 595600,
+        "items": [
+          {"no": 1, "uraian": "Pasang saklar tunggal", "volume": 1, "satuan": "titik", "harga_satuan_idr": 111400, "jumlah_idr": 111400, "waktu_oh": 0.08},
+          {"no": 2, "uraian": "Pasang saklar ganda", "volume": 1, "satuan": "titik", "harga_satuan_idr": 111400, "jumlah_idr": 111400, "waktu_oh": 0.08},
+          {"no": 3, "uraian": "Pasang Nomor Blok", "volume": 1, "satuan": "titik", "harga_satuan_idr": 150000, "jumlah_idr": 150000, "waktu_oh": 0.04},
+          {"no": 4, "uraian": "Pasang Lampu Downlight 18 Watt", "volume": 2, "satuan": "bh", "harga_satuan_idr": 111400, "jumlah_idr": 222800, "waktu_oh": 0.16}
+        ]
+      }
+    ]
+  },
+  "grand_total": {
+    "I_rumah_idr": 60317462,
+    "II_pagar_kanopi_idr": 7951247,
+    "I_II_idr": 68268708,
+    "dibulatkan_idr": 68250000,
+    "durasi_oh": 48,
+    "label": "PEMBORONG BORONG KERJA + MATERIAL FULL"
+  },
+  "addendum_pattern": {
+    "catatan": "Addendum untuk blok B2, B12, B15, B16 (pengurangan volume karena pasangan roster tidak full). Pattern: plesteran -3.847 m2 x 12.950 + acian -3.847 m3 x 12.600 + cat -3.847 m2 x 5.530 = -119.564 per addendum",
+    "rumus": "(volume × harga_satuan) + akumulasi-kategori",
+    "contoh_B2": {
+      "plesteran_idr": -49819,
+      "acian_idr": -48472,
+      "cat_idr": -21274,
+      "total_idr": -119565
+    }
+  },
+  "klaim_material_pattern": {
+    "total_klaim_idr": 838500,
+    "contoh_items": [
+      {"item": "Kuas Eterna 3\"", "qty": 3, "satuan": "bh", "harga_satuan_idr": 13500, "jumlah_idr": 40500, "blok": "B2, B15, B16", "tanggal": "2025-12-17"},
+      {"item": "Kapi GG Karet 3\"", "qty": 3, "satuan": "bh", "harga_satuan_idr": 9000, "jumlah_idr": 27000, "blok": "B2, B15, B16", "tanggal": "2025-12-17"},
+      {"item": "Semen Putih Tiga Roda 40kg", "qty": 2, "satuan": "zak", "harga_satuan_idr": 100000, "jumlah_idr": 200000, "blok": "B2", "tanggal": "2025-12-17"},
+      {"item": "Lem Rajawali", "qty": 1, "satuan": "dus", "harga_satuan_idr": 225000, "jumlah_idr": 225000, "blok": "Bagi 4 (B2, B12, B15, B16)", "tanggal": "2025-12-17"},
+      {"item": "Bendrat Spaq", "qty": 2, "satuan": "kg", "harga_satuan_idr": 20000, "jumlah_idr": 40000, "blok": "B13", "tanggal": "2025-12-18"},
+      {"item": "Semen Putih Tiga Roda 40kg", "qty": 2, "satuan": "zak", "harga_satuan_idr": 102000, "jumlah_idr": 204000, "blok": "B12, B15", "tanggal": "2025-12-19"},
+      {"item": "Semen Putih Tiga Roda 40kg", "qty": 1, "satuan": "zak", "harga_satuan_idr": 102000, "jumlah_idr": 102000, "blok": "B16", "tanggal": "2025-12-20"}
+    ]
+  }
+}

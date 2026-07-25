@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "name": "technology-roadmap",
+    "version": "1.0",
+    "deskripsi": "Technology roadmap 3 tahun: Web 3D cluster tour, AR, AI chatbot, customer portal, dashboard v3. V4.0 - Bab 61.",
+    "ref": "content/v4-final/bab-61-technology-roadmap.md + dibuat 24 Jul 2026"
+  },
+  "tech_landscape_2026": {
+    "current_tech_stack": [
+      "Dashboard V2 (internal, monitoring lead + unit progress)",
+      "Notion (SOP, dokumentasi, knowledge base)",
+      "Google Workspace (email, drive, calendar)",
+      "Meta Business Suite (FB + IG ads)",
+      "Google Ads (search + display)",
+      "WhatsApp Business (komunikasi konsumen)",
+      "Meta Ads Manager (paid ads)"
+    ],
+    "gap_analisa": [
+      "Tidak ada customer-facing portal (konsumen tidak bisa cek progress sendiri)",
+      "Tidak ada 3D tour (hanya foto 2D)",
+      "Tidak ada AR/VR (konsumen tidak bisa visualize unit)",
+      "Tidak ada AI chatbot (respon time sering > 1 jam untuk inquiry)",
+      "Tidak ada e-signature (semua kontrak manual tanda tangan)",
+      "Tidak ada payment gateway (DP manual transfer)"
+    ]
+  },
+  "tech_roadmap_3_tahun": [
+    {
+      "tahun": "2026 (Q4)",
+      "inisiatif": "Customer Portal MVP + 3D Cluster Tour",
+      "fitur_utama": [
+        "Web customer portal: konsumen bisa cek progress unit, dokumen, jadwal BAST, pembayaran fee (read-only)",
+        "3D cluster tour: drone video 360° + interactive map, konsumen bisa 'walk' di cluster secara virtual",
+        "Login: via email + OTP, simple authentication"
+      ],
+      "tech_stack": "React + Next.js (web), Three.js (3D), Cloudflare Pages (hosting), Airtable (database sederhana)",
+      "budget": "Rp 30-50 juta (konsultan + develop + hosting 1 tahun)",
+      "outcome": "Customer satisfaction naik 20%, lead-to-visit naik 30% (dari yang 3D tour dulu)"
+    },
+    {
+      "tahun": "2027 (Q1-Q2)",
+      "inisiatif": "AI Chatbot + E-Signature",
+      "fitur_utama": [
+        "AI Chatbot: WhatsApp Business API + AI (Cloudflare Worker LLM proxy yang sudah ada). Auto-reply untuk FAQ (harga, lokasi, prosedur KPR), handover ke manusia untuk complex",
+        "E-Signature: integrated dengan customer portal, konsumen tanda tangan digital untuk booking + SP3K (sah secara hukum)",
+        "Payment gateway: Midtrans/Xendit untuk DP + cicilan via virtual account"
+      ],
+      "tech_stack": "Cloudflare Worker (LLM proxy extend), WhatsApp Business API, DocuSign API (e-sig), Midtrans (payment)",
+      "budget": "Rp 50-80 juta (develop + API subscription 1 tahun)",
+      "outcome": "Response time inquiry turun dari 1 jam ke < 5 menit, closing time turun 30%"
+    },
+    {
+      "tahun": "2027 (Q3-Q4)",
+      "inisiatif": "AR (Augmented Reality) + Mobile App",
+      "fitur_utama": [
+        "AR Viewer: konsumen bisa lihat unit 3D di kavling mereka sendiri (via HP camera), place furniture, ganti warna cat",
+        "Mobile App (opsional): konsumen bisa download app untuk progress + komunikasi + dokumen",
+        "Lead scoring AI: rank lead by quality based on interaction data"
+      ],
+      "tech_stack": "ARCore (Android) + ARKit (iOS), React Native (mobile), PostgreSQL (backend)",
+      "budget": "Rp 80-120 juta (develop + maintenance)",
+      "outcome": "Differentiation kuat vs kompetitor, viral potential, brand positioning premium"
+    },
+    {
+      "tahun": "2028",
+      "inisiatif": "Smart Home + IoT Cluster",
+      "fitur_utama": [
+        "Smart home package: smart lock, CCTV, smart light, gas detector, connected ke mobile app",
+        "IoT sensor di cluster: monitoring air, listrik, security (opsional untuk cluster premium)",
+        "Green energy: solar panel untuk fasilitas umum cluster, rainwater harvesting"
+      ],
+      "tech_stack": "Tuya Smart Home, custom IoT integration, dashboard monitoring",
+      "budget": "Rp 100-150 juta (device + integrasi + maintenance)",
+      "outcome": "Cluster premium dengan smart home = nilai jual 10-15% lebih tinggi, margin naik"
+    }
+  ],
+  "stack_konsolidasi": {
+    "principle": "Hindari vendor lock-in, pilih open-source / standard",
+    "preferred_stack": {
+      "frontend": "React + Next.js (community besar, developer banyak)",
+      "backend": "Node.js / Python FastAPI (performa + ecosystem)",
+      "database": "PostgreSQL (reliable, open-source)",
+      "hosting": "Cloudflare (free tier generous, edge network cepat)",
+      "LLM": "Cloudflare Worker + multiple provider fallback (sudah ada)",
+      "auth": "Auth0 / Clerk (managed, secure)",
+      "payment": "Midtrans (Indonesian, support banyak metode)"
+    }
+  },
+  "team_tech": {
+    "current": "Tidak ada dedicated tech team, semua di-develop external atau konsultan",
+    "target_2026": "1 fullstack developer (in-house) untuk maintain Dashboard V2 + customer portal",
+    "target_2027": "2 developer + 1 DevOps + 1 product manager",
+    "budget_gaji_tech_2026": "Rp 8-12 juta/bulan (1 senior dev)",
+    "budget_gaji_tech_2027": "Rp 30-40 juta/bulan (4 orang)"
+  },
+  "cybersecurity": {
+    "principle": "Data konsumen adalah data pribadi, wajib dilindungi UU PDP",
+    "minimum_standard": [
+      "HTTPS untuk semua web/app",
+      "Encryption at rest untuk database konsumen",
+      "Backup harian ke 2 lokasi berbeda",
+      "Access control: role-based, least privilege",
+      "Audit log untuk akses data sensitif",
+      "Incident response plan untuk data breach"
+    ],
+    "compliance": "UU PDP (Pelindungan Data Pribadi) Indonesia 2024 + ISO 27001 (long-term)"
+  }
+}
