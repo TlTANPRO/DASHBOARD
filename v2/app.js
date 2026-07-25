@@ -534,8 +534,9 @@ function kpiRowHTML(r) {
   const grade = skor >= 90 ? "A" : skor >= 75 ? "B" : skor >= 60 ? "C" : "D";
   const gradePill = {A: "success", B: "info", C: "warning", D: "danger"}[grade];
   const statusPill = { "On Track": "success", "Achieved": "success", "At Risk": "warning", "Off Track": "danger" }[r.Status] || "muted";
-  // Use readable ID (KPI ID field), fallback to short UUID (8 char prefix)
-  const displayId = r["KPI ID"] || r.kpiId || (r.id ? r.id.slice(0, 8) : "-");
+  // Display readable ID. If absent, derive a friendly label from PIC + index.
+  const rawId = r["KPI ID"] || r.kpiId || "";
+  const displayId = rawId || (r.PIC ? `KPI ${r.PIC}` : (r.id ? r.id.slice(0, 8) : "-"));
   return `<tr>
     <td class="mono">${displayId}</td>
     <td>${r.PIC || "-"}</td>
@@ -720,7 +721,7 @@ function progRowHTML(r) {
   const pctClass = pct >= 75 ? "high" : pct >= 40 ? "mid" : "low";
   const statusPill = { "On Track": "success", "Done": "success", "At Risk": "warning", "Delayed": "danger", "Planning": "info", "Cancelled": "muted" }[r.Status] || "muted";
   return `<tr>
-    <td class="mono">${r["Program ID"] || r.programId || (r.id ? r.id.slice(0, 8) : "-")}</td>
+    <td class="mono">${r["Program ID"] || r.programId || (r["Nama Program"] || r.nama ? "Program " + (r["Nama Program"] || r.nama).slice(0, 24) : (r.id ? r.id.slice(0, 8) : "-"))}</td>
     <td><strong>${r["Nama Program"] || r.nama || ""}</strong></td>
     <td>${r["PIC Penanggung Jawab"] || r.pic || "-"}</td>
     <td>${r.Quarter || "-"}</td>
@@ -912,7 +913,7 @@ function jobRowHTML(r) {
   const showApproveBtn = isOwner && r.Approval !== "Approved";
   const showRejectBtn = isOwner && r.Approval !== "Rejected";
   return `<tr>
-    <td class="mono">${r["Jobdesk ID"] || r.jobdeskId || (r.id ? r.id.slice(0, 8) : "-")}</td>
+    <td class="mono">${r["Jobdesk ID"] || r.jobdeskId || (r.PIC ? `Jobdesk ${r.PIC} ${(r.Tanggal || "").slice(5)}` : (r.id ? r.id.slice(0, 8) : "-"))}</td>
     <td>${r.PIC || "-"}</td>
     <td>${r.Tanggal || "-"}</td>
     <td>${(r.Jobdesk || r.jobdesk || "").slice(0, 60)}</td>
@@ -1122,7 +1123,7 @@ async function loadSOW() {
       <tbody>${rows.map(r => {
         const statusPill = { "Active": "success", "Paused": "warning", "Completed": "info" }[r.Status] || "muted";
         return `<tr>
-          <td class="mono">${r["SOW ID"] || r.sowId || (r.id ? r.id.slice(0, 8) : "-")}</td>
+          <td class="mono">${r["SOW ID"] || r.sowId || (r.PIC ? `SOW ${r.PIC}` : (r.id ? r.id.slice(0, 8) : "-"))}</td>
           <td>${r.PIC || "-"}</td>
           <td>${(r.Kategori || "").slice(0, 50)}</td>
           <td>${(r.Deskripsi || "").slice(0, 60)}</td>
