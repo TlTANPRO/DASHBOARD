@@ -2,3 +2,6 @@
 *.tmp
 __pycache__/
 .DS_Store
+
+# V2 secrets (real config)
+v2/config.js
