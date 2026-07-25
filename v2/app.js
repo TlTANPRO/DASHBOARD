@@ -1334,19 +1334,20 @@ function refreshAll() {
 }
 
 async function updateHeroStats() {
-  // Fetch counts from each DB in parallel (no auth needed for query)
-  const ids = {
-    kpi: "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
-    sow: "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
-    program: "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
-    jobdesk: "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
-  };
+  const cfg = window.DASHBOARD_CONFIG;
+  // Skip when DEMO mode (no Worker)
+  if (cfg.mode !== "live") return;
+  // Fetch counts from each DB in parallel
+  const ids = cfg.databases;
   const counts = {};
   await Promise.all(Object.entries(ids).map(async ([key, id]) => {
     try {
-      const res = await fetch(API.endpoint + "/notion/v1/databases/" + id + "/query", {
+      const res = await fetch(cfg.workerBase + "/notion/v1/databases/" + id + "/query", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Notion-Version": cfg.notionVersion,
+        },
         body: JSON.stringify({ page_size: 100 }),
       });
       const data = await res.json();
@@ -1364,14 +1365,17 @@ async function updateHeroStats() {
   if (elJobCount) elJobCount.textContent = counts.jobdesk + " jobdesk";
   if (elSowCount) elSowCount.textContent = counts.sow + " SOW";
   if (elDbCount) elDbCount.textContent = "4";
-  // Coverage: count PIC yang punya jobdesk hari ini / 12
+  // Coverage: count unique PIC yang punya jobdesk hari ini / 12
   let coveredPics = 0;
   try {
     const today = todayISO();
-    const r = await fetch(API.endpoint + "/notion/v1/databases/" + ids.jobdesk + "/query", {
+    const r = await fetch(cfg.workerBase + "/notion/v1/databases/" + ids.jobdesk + "/query", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ page_size: 100 }),
+      headers: {
+        "Content-Type": "application/json",
+        "Notion-Version": cfg.notionVersion,
+      },
+      body: JSON.stringify({ page_size: 100, filter: { property: "Tanggal", date: { equals: today } } }),
     });
     const d = await r.json();
     const pics = new Set((d.results || [])
@@ -1382,7 +1386,7 @@ async function updateHeroStats() {
   const cov = $("#coverage-value");
   const covFoot = $("#coverage-foot");
   if (cov) cov.textContent = coveredPics + "/12";
-  if (covFoot) covFoot.textContent = "PIC dengan jobdesk · hari ini";
+  if (covFoot) covFoot.textContent = "PIC input jobdesk hari ini";
 }
 
 function toggleOwnerUI() {
