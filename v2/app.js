@@ -474,73 +474,11 @@ function renderPIC() {
   }).join('');
 }
 
-function renderFee() {
-  $("#fee-pilar").innerHTML = FALLBACK.fee_pilar.map((p, i) => `
-    <div class="bento-card span-2">
-      <div class="bento-eyebrow">Pilar ${i+1}</div>
-      <div style="display:flex;align-items:baseline;gap:var(--space-3);flex-wrap:wrap">
-        <div class="bento-title" style="margin-bottom:0">${p.nama}</div>
-        <div style="font-family:var(--font-mono);color:var(--accent);font-weight:600">${p.bobot}</div>
-      </div>
-      <div class="bento-foot" style="margin-top:var(--space-2)">${p.desc}</div>
-    </div>`).join('');
-}
-
-function renderPricing() {
-  $("#tier-grid").innerHTML = FALLBACK.pricing.map(t => `
-    <div class="bento-card">
-      <div class="bento-eyebrow" style="color:${t.tier === 'GOLD' ? 'var(--gold)' : t.tier === 'SILVER' ? 'var(--silver)' : 'var(--bronze)'}">${t.tier}</div>
-      <div class="bento-title">${t.sub}</div>
-      <div class="bento-foot" style="margin-bottom:var(--space-2)">${t.unit} unit/bulan cap</div>
-      <div class="bento-foot"><strong>Fee closing:</strong> ${fmtIDR(t.fee)}</div>
-      <div class="bento-foot"><strong>Margin:</strong> ${t.margin}</div>
-      <div class="bento-foot" style="margin-top:var(--space-2);font-size:0.75rem">${t.resp}</div>
-    </div>`).join('');
-}
-
-function renderSTB() {
-  $("#stb-wajib").innerHTML = FALLBACK.stb_wajib.map((s, i) => `
-    <div class="bento-card">
-      <div class="bento-eyebrow">Wajib ${i+1}</div>
-      <div class="bento-title">${s.nama}</div>
-      <div class="bento-foot">${s.desc}</div>
-    </div>`).join('');
-  $("#stb-punish-wrap").innerHTML = `
-    <table class="crud-table">
-      <thead><tr><th>Jenjang</th><th>Konsekuensi</th><th>Trigger</th><th>Recovery</th></tr></thead>
-      <tbody>${FALLBACK.stb_punish.map(p => `
-        <tr>
-          <td><span class="pill ${p.jenjang >= 4 ? 'danger' : p.jenjang >= 2 ? 'warning' : 'info'}">J${p.jenjang}</span></td>
-          <td><strong>${p.konsekuensi}</strong></td>
-          <td>${p.trigger}</td>
-          <td>${p.recovery}</td>
-        </tr>`).join('')}
-      </tbody>
-    </table>`;
-}
-
-function renderManager() {
-  $("#manager-sifat").innerHTML = FALLBACK.manager_sifat.map((s, i) => `
-    <div class="bento-card">
-      <div class="bento-eyebrow">Sifat ${i+1}</div>
-      <div class="bento-title">${s.nama}</div>
-      <div class="bento-foot">${s.desc}</div>
-    </div>`).join('');
-  $("#manager-list").innerHTML = FALLBACK.manager_list.map(m => `
-    <div class="bento-card">
-      <div class="bento-eyebrow">${m.tier}</div>
-      <div class="bento-title">${m.nama}</div>
-      <div class="bento-foot">${m.peran}</div>
-    </div>`).join('');
-}
-
-function renderGlosarium() {
-  $("#glosarium-list").innerHTML = FALLBACK.glosarium.map(([a, d]) => `
-    <div class="bento-card" style="padding:var(--space-3) var(--space-4)">
-      <div style="font-family:var(--font-mono);font-weight:700;color:var(--accent);font-size:0.8125rem;margin-bottom:2px">${a}</div>
-      <div style="font-size:0.75rem;color:var(--text-secondary)">${d}</div>
-    </div>`).join('');
-}
+function renderFee() { /* deprecated V2.1 — use Referensi section */ }
+function renderPricing() { /* deprecated V2.1 */ }
+function renderSTB() { /* deprecated V2.1 */ }
+function renderManager() { /* deprecated V2.1 */ }
+function renderGlosarium() { /* deprecated V2.1 */ }
 
 // ============================================================
 // V2 CRUD: KPI TRACKER
@@ -594,8 +532,10 @@ function kpiRowHTML(r) {
   const grade = skor >= 90 ? "A" : skor >= 75 ? "B" : skor >= 60 ? "C" : "D";
   const gradePill = {A: "success", B: "info", C: "warning", D: "danger"}[grade];
   const statusPill = { "On Track": "success", "Achieved": "success", "At Risk": "warning", "Off Track": "danger" }[r.Status] || "muted";
+  // Use readable ID (KPI ID field), fallback to short UUID (8 char prefix)
+  const displayId = r["KPI ID"] || r.kpiId || (r.id ? r.id.slice(0, 8) : "-");
   return `<tr>
-    <td class="mono">${r["KPI ID"] || r.kpiId || r.id}</td>
+    <td class="mono">${displayId}</td>
     <td>${r.PIC || "-"}</td>
     <td>${r.Periode || "-"}</td>
     <td class="num">${r.Target || 0} ${r.Satuan || ""}</td>
@@ -768,7 +708,7 @@ function progRowHTML(r) {
   const pctClass = pct >= 75 ? "high" : pct >= 40 ? "mid" : "low";
   const statusPill = { "On Track": "success", "Done": "success", "At Risk": "warning", "Delayed": "danger", "Planning": "info", "Cancelled": "muted" }[r.Status] || "muted";
   return `<tr>
-    <td class="mono">${r["Program ID"] || r.programId || r.id}</td>
+    <td class="mono">${r["Program ID"] || r.programId || (r.id ? r.id.slice(0, 8) : "-")}</td>
     <td><strong>${r["Nama Program"] || r.nama || ""}</strong></td>
     <td>${r["PIC Penanggung Jawab"] || r.pic || "-"}</td>
     <td>${r.Quarter || "-"}</td>
@@ -949,7 +889,7 @@ function jobRowHTML(r) {
   const showApproveBtn = isOwner && r.Approval !== "Approved";
   const showRejectBtn = isOwner && r.Approval !== "Rejected";
   return `<tr>
-    <td class="mono">${r["Jobdesk ID"] || r.jobdeskId || r.id}</td>
+    <td class="mono">${r["Jobdesk ID"] || r.jobdeskId || (r.id ? r.id.slice(0, 8) : "-")}</td>
     <td>${r.PIC || "-"}</td>
     <td>${r.Tanggal || "-"}</td>
     <td>${(r.Jobdesk || r.jobdesk || "").slice(0, 60)}</td>
@@ -1148,7 +1088,7 @@ async function loadSOW() {
       <tbody>${rows.map(r => {
         const statusPill = { "Active": "success", "Paused": "warning", "Completed": "info" }[r.Status] || "muted";
         return `<tr>
-          <td class="mono">${r["SOW ID"] || r.sowId || r.id}</td>
+          <td class="mono">${r["SOW ID"] || r.sowId || (r.id ? r.id.slice(0, 8) : "-")}</td>
           <td>${r.PIC || "-"}</td>
           <td>${(r.Kategori || "").slice(0, 50)}</td>
           <td>${(r.Deskripsi || "").slice(0, 60)}</td>
@@ -1396,7 +1336,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   fillPICDropdowns();
 
   // V1 sections (always render)
-  renderPIC(); renderFee(); renderPricing(); renderSTB(); renderManager(); renderGlosarium(); renderKPI5D();
+  renderPIC(); renderKPI5D();
 
   // V2 sections (after seed + login)
   seedDemo();

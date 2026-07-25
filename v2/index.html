@@ -1140,82 +1140,48 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
-<!-- 02 LEADERBOARD (computed dari KPI V2) -->
+<!-- 02 LEADERBOARD (singkat) -->
 <section class="section" id="leaderboard">
   <div class="section-label">
     <span class="section-num">02</span>
-    <h2 class="section-title">Leaderboard V5 · 4 Divisi</h2>
-    <span class="section-sub">Auto-compute dari V2-A KPI Tracker</span>
+    <h2 class="section-title">Top 3 per Divisi</h2>
   </div>
   <div id="leaderboard-grid">
-    <p class="muted">Memuat leaderboard…</p>
+    <p class="muted">Memuat…</p>
   </div>
 </section>
 
-<!-- 03 KPI SCORE CARD -->
-<section class="section" id="kpi">
+<!-- 03 REFERENSI RINGKAS -->
+<section class="section" id="referensi">
   <div class="section-label">
     <span class="section-num">03</span>
-    <h2 class="section-title">KPI Score Card · 5 Dimensi</h2>
-    <span class="section-sub">Computed dari data V2-A</span>
+    <h2 class="section-title">Referensi</h2>
   </div>
-  <div class="bento" id="kpi-dimensi"></div>
-</section>
-
-<!-- 04 FEE MEDIA -->
-<section class="section" id="fee">
-  <div class="section-label">
-    <span class="section-num">04</span>
-    <h2 class="section-title">Fee Media Closing-Based V5</h2>
-    <span class="section-sub">3 pilar · base pool Rp 500rb/closing</span>
-  </div>
-  <div class="bento" id="fee-pilar"></div>
-  <p class="footnote">UTM tracking · min 6 konten/minggu · pool cair tiap akhir bulan</p>
-</section>
-
-<!-- 05 PRICING TIER -->
-<section class="section" id="pricing">
-  <div class="section-label">
-    <span class="section-num">05</span>
-    <h2 class="section-title">Pricing Logic · 3 Tier</h2>
-    <span class="section-sub">Management Density = Output Density</span>
-  </div>
-  <div class="bento" id="tier-grid"></div>
-</section>
-
-<!-- 06 STB AUDIT -->
-<section class="section" id="stb">
-  <div class="section-label">
-    <span class="section-num">06</span>
-    <h2 class="section-title">STB 3 Wajib + Punishment</h2>
-    <span class="section-sub">Serah Terima Bangunan · 5 jenjang</span>
-  </div>
-  <h3 class="section-title" style="font-size:1.125rem;margin-bottom:var(--space-3)">3 Wajib STB</h3>
-  <div class="bento" id="stb-wajib"></div>
-  <h3 class="section-title" style="font-size:1.125rem;margin: var(--space-6) 0 var(--space-3)">5 Jenjang Punishment</h3>
-  <div id="stb-punish-wrap"></div>
-</section>
-
-<!-- 07 MANAGER 3 SIFAT -->
-<section class="section" id="manager">
-  <div class="section-label">
-    <span class="section-num">07</span>
-    <h2 class="section-title">Manager 3 Sifat Wajib</h2>
-    <span class="section-sub">Tertib · Pahami · Generalis</span>
-  </div>
-  <div class="bento" id="manager-sifat"></div>
-  <h3 class="section-title" style="font-size:1.125rem;margin: var(--space-6) 0 var(--space-3)">Manager di Perusahaan</h3>
-  <div class="bento" id="manager-list"></div>
-</section>
-
-<!-- 08 GLOSARIUM -->
-<section class="section" id="glosarium">
-  <div class="section-label">
-    <span class="section-num">08</span>
-    <h2 class="section-title">Glosarium Quick-Ref</h2>
-    <span class="section-sub">50+ akronim V5.0</span>
-  </div>
-  <div class="bento" id="glosarium-list" style="grid-template-columns:1fr 1fr"></div>
+  <details>
+    <summary>KPI 5 Dimensi</summary>
+    <ul class="muted" style="margin-top:var(--space-2)">
+      <li>Hasil 40% · Peran 20% · Kompetisi 15% · Disiplin 15% · Growth 10%</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Fee Media · 3 Pilar</summary>
+    <ul class="muted" style="margin-top:var(--space-2)">
+      <li>Base pool Rp 500rb/closing · min 6 konten/minggu · cair akhir bulan</li>
+    </ul>
+  </details>
+  <details>
+    <summary>STB · 3 Wajib + Punishment</summary>
+    <ul class="muted" style="margin-top:var(--space-2)">
+      <li>Dokumen lengkap · Foto sebelum/sesudah · Serah terima + tanda tangan</li>
+      <li>Punishment 5 jenjang: teguran, SP1, SP2, SP3, terminasi</li>
+    </ul>
+  </details>
+  <details>
+    <summary>Manager 3 Sifat Wajib</summary>
+    <ul class="muted" style="margin-top:var(--space-2)">
+      <li>Tertib · Pahami · Generalis</li>
+    </ul>
+  </details>
 </section>
 
 </main>
