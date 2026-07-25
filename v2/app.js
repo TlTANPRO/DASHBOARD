@@ -518,10 +518,10 @@ async function loadKPI() {
         <th>KPI ID</th><th>PIC</th><th>Periode</th><th>Target</th><th>Realisasi</th>
         <th>Skor</th><th>Grade</th><th>Status</th><th>Catatan</th><th></th>
       </tr></thead>
-      <tbody>${rows.map(kpiRowHTML).join('')}</tbody>
+      <tbody>${rows.map((r, i) => kpiRowHTML(r, i)).join('')}</tbody>
     </table>`;
     list.removeAttribute("aria-busy");
-    list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editKPI(b.dataset.id));
+    list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editKPI(b.dataset.id, rows[+b.dataset.idx]));
     list.querySelectorAll("[data-action=del]").forEach(b => b.onclick = () => deleteKPI(b.dataset.id));
   } catch (e) {
     list.removeAttribute("aria-busy");
@@ -529,26 +529,27 @@ async function loadKPI() {
   }
 }
 
-function kpiRowHTML(r) {
+function kpiRowHTML(r, i = 0) {
   const skor = r.Target > 0 ? Math.round((r.Realisasi / r.Target) * 100) : 0;
   const grade = skor >= 90 ? "A" : skor >= 75 ? "B" : skor >= 60 ? "C" : "D";
   const gradePill = {A: "success", B: "info", C: "warning", D: "danger"}[grade];
   const statusPill = { "On Track": "success", "Achieved": "success", "At Risk": "warning", "Off Track": "danger" }[r.Status] || "muted";
   // Display readable ID. If absent, derive a friendly label from PIC + index.
   const rawId = r["KPI ID"] || r.kpiId || "";
-  const displayId = rawId || (r.PIC ? `KPI ${r.PIC}` : (r.id ? r.id.slice(0, 8) : "-"));
+  const displayId = rawId || (r.PIC ? `KPI ${escapeHTML(r.PIC)}` : (r.id ? r.id.slice(0, 8) : "-"));
+  const catatan = (r.Catatan || "");
   return `<tr>
-    <td class="mono">${displayId}</td>
-    <td>${r.PIC || "-"}</td>
-    <td>${r.Periode || "-"}</td>
-    <td class="num">${r.Target || 0} ${r.Satuan || ""}</td>
+    <td class="mono">${escapeHTML(displayId)}</td>
+    <td>${escapeHTML(r.PIC || "-")}</td>
+    <td>${escapeHTML(r.Periode || "-")}</td>
+    <td class="num">${r.Target || 0} ${escapeHTML(r.Satuan || "")}</td>
     <td class="num">${r.Realisasi || 0}</td>
     <td class="num"><strong>${skor}</strong></td>
     <td><span class="pill ${gradePill}">${grade}</span></td>
-    <td><span class="pill ${statusPill}">${r.Status || "-"}</span></td>
-    <td>${(r.Catatan || "").slice(0, 50)}</td>
+    <td><span class="pill ${statusPill}">${escapeHTML(r.Status || "-")}</span></td>
+    <td>${escapeHTML(catatan.slice(0, 50))}${catatan.length > 50 ? "…" : ""}</td>
     <td>
-      <button class="btn btn-sm" data-action="edit" data-id="${r.id}">Edit</button>
+      <button class="btn btn-sm" data-action="edit" data-id="${r.id}" data-idx="${i}">Edit</button>
       <button class="btn btn-sm btn-danger" data-action="del" data-id="${r.id}">Hapus</button>
     </td>
   </tr>`;
@@ -644,10 +645,9 @@ $("#kpi-add").onclick = () => {
   };
 };
 
-async function editKPI(id) {
-  const rows = Store.get("kpi");
-  const r = rows.find(x => x.id === id);
-  if (!r) return;
+async function editKPI(id, row) {
+  const r = row || Store.get("kpi").find(x => x.id === id);
+  if (!r) { toast("error", "Row tidak ditemukan, refresh dulu"); return; }
   openModal("Edit KPI", kpiFormHTML(r));
   $("#form-cancel").onclick = closeModal;
   $("#kpi-form").onsubmit = async (e) => {
@@ -707,7 +707,7 @@ async function loadProgram() {
       </tr></thead>
       <tbody>${rows.map(progRowHTML).join('')}</tbody>
     </table>`;
-    list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editProgram(b.dataset.id));
+    list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editProgram(b.dataset.id, rows[+b.dataset.idx]));
     list.querySelectorAll("[data-action=del]").forEach(b => b.onclick = () => deleteProgram(b.dataset.id));
     list.removeAttribute("aria-busy");
   } catch (e) {
@@ -716,24 +716,27 @@ async function loadProgram() {
   }
 }
 
-function progRowHTML(r) {
+function progRowHTML(r, i = 0) {
   const pct = r.Progress || 0;
   const pctClass = pct >= 75 ? "high" : pct >= 40 ? "mid" : "low";
   const statusPill = { "On Track": "success", "Done": "success", "At Risk": "warning", "Delayed": "danger", "Planning": "info", "Cancelled": "muted" }[r.Status] || "muted";
+  const nama = r["Nama Program"] || r.nama || "";
+  const progId = r["Program ID"] || r.programId || (nama ? `Program ${nama.slice(0, 24)}` : (r.id ? r.id.slice(0, 8) : "-"));
+  const nm = (nama || "").slice(0, 60);
   return `<tr>
-    <td class="mono">${r["Program ID"] || r.programId || (r["Nama Program"] || r.nama ? "Program " + (r["Nama Program"] || r.nama).slice(0, 24) : (r.id ? r.id.slice(0, 8) : "-"))}</td>
-    <td><strong>${r["Nama Program"] || r.nama || ""}</strong></td>
-    <td>${r["PIC Penanggung Jawab"] || r.pic || "-"}</td>
-    <td>${r.Quarter || "-"}</td>
+    <td class="mono">${escapeHTML(progId)}</td>
+    <td><strong>${escapeHTML(nm)}${nama.length > 60 ? "…" : ""}</strong></td>
+    <td>${escapeHTML(r["PIC Penanggung Jawab"] || r.pic || "-")}</td>
+    <td>${escapeHTML(r.Quarter || "-")}</td>
     <td class="num">
       <span class="progress"><span class="progress-bar ${pctClass}" style="width:${pct}%"></span></span>
       <span class="mono" style="margin-left:6px">${pct}%</span>
     </td>
-    <td><span class="pill ${statusPill}">${r.Status || "-"}</span></td>
-    <td>${r.Deadline || "-"}</td>
+    <td><span class="pill ${statusPill}">${escapeHTML(r.Status || "-")}</span></td>
+    <td>${escapeHTML(r.Deadline || "-")}</td>
     <td class="num">${r["Budget (Rp)"] ? fmtIDR(r["Budget (Rp)"]) : "-"}</td>
     <td>
-      <button class="btn btn-sm" data-action="edit" data-id="${r.id}">Edit</button>
+      <button class="btn btn-sm" data-action="edit" data-id="${r.id}" data-idx="${i}">Edit</button>
       <button class="btn btn-sm btn-danger" data-action="del" data-id="${r.id}">Hapus</button>
     </td>
   </tr>`;
@@ -832,9 +835,9 @@ $("#prog-add").onclick = () => {
   };
 };
 
-async function editProgram(id) {
-  const r = Store.get("program").find(x => x.id === id);
-  if (!r) return;
+async function editProgram(id, row) {
+  const r = row || Store.get("program").find(x => x.id === id);
+  if (!r) { toast("error", "Row tidak ditemukan, refresh dulu"); return; }
   openModal("Edit Program", progFormHTML(r));
   $("#form-cancel").onclick = closeModal;
   $("#prog-form").onsubmit = async (e) => {
@@ -894,7 +897,7 @@ async function loadJobdesk() {
       </tr></thead>
       <tbody>${rows.map(jobRowHTML).join('')}</tbody>
     </table>`;
-    list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editJob(b.dataset.id));
+    list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editJob(b.dataset.id, rows[+b.dataset.idx]));
     list.querySelectorAll("[data-action=del]").forEach(b => b.onclick = () => deleteJob(b.dataset.id));
     list.querySelectorAll("[data-action=approve]").forEach(b => b.onclick = () => approveJob(b.dataset.id, "Approved"));
     list.querySelectorAll("[data-action=reject]").forEach(b => b.onclick = () => approveJob(b.dataset.id, "Rejected"));
@@ -905,30 +908,34 @@ async function loadJobdesk() {
   }
 }
 
-function jobRowHTML(r) {
+function jobRowHTML(r, i = 0) {
   const statusPill = { "To Do": "muted", "In Progress": "info", "Done": "success", "Blocked": "danger" }[r.Status] || "muted";
   const prioPill = { "P1": "danger", "P2": "warning", "P3": "info" }[r.Prioritas] || "muted";
   const approvalPill = { "Pending": "warning", "Approved": "success", "Rejected": "danger" }[r.Approval] || "muted";
   const isOwner = Session.isOwner();
   const showApproveBtn = isOwner && r.Approval !== "Approved";
   const showRejectBtn = isOwner && r.Approval !== "Rejected";
+  const jobId = r["Jobdesk ID"] || r.jobdeskId || (r.PIC ? `Jobdesk ${r.PIC} ${(r.Tanggal || "").slice(5)}` : (r.id ? r.id.slice(0, 8) : "-"));
+  const job = (r.Jobdesk || r.jobdesk || "");
+  const target = (r["Target Output"] || r.target || "");
+  const actual = (r["Actual Output"] || r.actual || "");
   return `<tr>
-    <td class="mono">${r["Jobdesk ID"] || r.jobdeskId || (r.PIC ? `Jobdesk ${r.PIC} ${(r.Tanggal || "").slice(5)}` : (r.id ? r.id.slice(0, 8) : "-"))}</td>
-    <td>${r.PIC || "-"}</td>
-    <td>${r.Tanggal || "-"}</td>
-    <td>${(r.Jobdesk || r.jobdesk || "").slice(0, 60)}</td>
-    <td>${(r["Target Output"] || r.target || "").slice(0, 40)}</td>
-    <td>${(r["Actual Output"] || r.actual || "").slice(0, 40)}</td>
-    <td><span class="pill ${prioPill}">${r.Prioritas || "-"}</span></td>
-    <td><span class="pill ${statusPill}">${r.Status || "-"}</span></td>
+    <td class="mono">${escapeHTML(jobId)}</td>
+    <td>${escapeHTML(r.PIC || "-")}</td>
+    <td>${escapeHTML(r.Tanggal || "-")}</td>
+    <td>${escapeHTML(job.slice(0, 60))}${job.length > 60 ? "…" : ""}</td>
+    <td>${escapeHTML(target.slice(0, 40))}${target.length > 40 ? "…" : ""}</td>
+    <td>${escapeHTML(actual.slice(0, 40))}${actual.length > 40 ? "…" : ""}</td>
+    <td><span class="pill ${prioPill}">${escapeHTML(r.Prioritas || "-")}</span></td>
+    <td><span class="pill ${statusPill}">${escapeHTML(r.Status || "-")}</span></td>
     <td>
-      <span class="pill ${approvalPill}">${r.Approval || "—"}</span>
+      <span class="pill ${approvalPill}">${escapeHTML(r.Approval || "—")}</span>
       ${showApproveBtn ? `<button class="btn btn-sm btn-success" data-action="approve" data-id="${r.id}" title="Approve">✓</button>` : ""}
       ${showRejectBtn ? `<button class="btn btn-sm btn-danger" data-action="reject" data-id="${r.id}" title="Reject">✗</button>` : ""}
       ${r.Approval_By ? `<small class="muted">by ${escapeHTML(r.Approval_By).slice(0, 12)}</small>` : ""}
     </td>
     <td>
-      <button class="btn btn-sm" data-action="edit" data-id="${r.id}">Edit</button>
+      <button class="btn btn-sm" data-action="edit" data-id="${r.id}" data-idx="${i}">Edit</button>
       <button class="btn btn-sm btn-danger" data-action="del" data-id="${r.id}">Hapus</button>
     </td>
   </tr>`;
@@ -1060,9 +1067,9 @@ $("#job-add").onclick = () => {
   };
 };
 
-async function editJob(id) {
-  const r = Store.get("jobdesk").find(x => x.id === id);
-  if (!r) return;
+async function editJob(id, row) {
+  const r = row || Store.get("jobdesk").find(x => x.id === id);
+  if (!r) { toast("error", "Row tidak ditemukan, refresh dulu"); return; }
   openModal("Edit Jobdesk", jobFormHTML(r));
   $("#form-cancel").onclick = closeModal;
   $("#job-form").onsubmit = async (e) => {
@@ -1122,15 +1129,18 @@ async function loadSOW() {
       </tr></thead>
       <tbody>${rows.map(r => {
         const statusPill = { "Active": "success", "Paused": "warning", "Completed": "info" }[r.Status] || "muted";
+        const sowId = r["SOW ID"] || r.sowId || (r.PIC ? `SOW ${r.PIC}` : (r.id ? r.id.slice(0, 8) : "-"));
+        const kat = (r.Kategori || "");
+        const desc = (r.Deskripsi || "");
         return `<tr>
-          <td class="mono">${r["SOW ID"] || r.sowId || (r.PIC ? `SOW ${r.PIC}` : (r.id ? r.id.slice(0, 8) : "-"))}</td>
-          <td>${r.PIC || "-"}</td>
-          <td>${(r.Kategori || "").slice(0, 50)}</td>
-          <td>${(r.Deskripsi || "").slice(0, 60)}</td>
-          <td>${r.Frekuensi || "-"}</td>
+          <td class="mono">${escapeHTML(sowId)}</td>
+          <td>${escapeHTML(r.PIC || "-")}</td>
+          <td>${escapeHTML(kat.slice(0, 50))}${kat.length > 50 ? "…" : ""}</td>
+          <td>${escapeHTML(desc.slice(0, 60))}${desc.length > 60 ? "…" : ""}</td>
+          <td>${escapeHTML(r.Frekuensi || "-")}</td>
           <td class="num">${r["Bobot (%)"] || r.bobot || 0}%</td>
-          <td><span class="pill ${statusPill}">${r.Status || "-"}</span></td>
-          <td>${r["Effective From"] || r.effective || "-"}</td>
+          <td><span class="pill ${statusPill}">${escapeHTML(r.Status || "-")}</span></td>
+          <td>${escapeHTML(r["Effective From"] || r.effective || "-")}</td>
         </tr>`;
       }).join('')}</tbody>
     </table>`;
@@ -1353,11 +1363,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   updateSessionPill();
   fillPICDropdowns();
 
+  // Dynamic date stamp (hero + brand)
+  const bulanID = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  const now = new Date();
+  const dateStr = `${now.getDate()} ${bulanID[now.getMonth()]} ${now.getFullYear()}`;
+  const brand = $("#brand-sub");
+  if (brand) brand.textContent = `PT Syahfalah Global + Lembayung · ${dateStr}`;
+  const eyebrow = $("#hero-eyebrow");
+  if (eyebrow) eyebrow.textContent = `Live · ${dateStr}`;
+
   // V1 sections (always render)
   renderPIC();
 
   // V2 sections (after seed + login)
-  seedDemo();
+  const cfg = window.DASHBOARD_CONFIG;
+  if (cfg.mode === "demo") seedDemo();
   $("#job-filter-date").value = todayISO();
   refreshAll();
   updateModeBadge();
