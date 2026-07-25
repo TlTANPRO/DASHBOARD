@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "name": "business-model",
+    "version": "2.0",
+    "deskripsi": "Business Model Canvas + 3 channel (FLPP, Komersial KPR, Premium Cash). V2: HPP 70-80jt, harga jual 166jt FLPP, USP #RumahSubsidiSiapHuni + #SubsidiTanpaRenovasi, garansi 1 bulan.",
+    "ref": "content/v2-developer/bab-08-business-model.md + revisi 24 Jul 2026"
+  },
+  "value_proposition": {
+    "core": "Rumah subsidi FLPP siap huni tanpa perlu renovasi, harga 166 juta, garansi 1 bulan, proses mudah dan difasilitasi",
+    "differentiator": [
+      "RumahSubsidiSiapHuni - unit sudah selesai, tidak perlu renovasi (USP utama)",
+      "SubsidiTanpaRenovasi - tidak ada hidden cost, semua sudah include di harga 166jt",
+      "DP ringan mulai 1% untuk FLPP (vs kompetitor 5-10%)",
+      "SHM diurus developer (konsumen tidak bolak-balik BPN)",
+      "Akad kredit difasilitasi notaris internal koordinator",
+      "After-sales response < 24 jam (Novita dedicated)",
+      "Garansi 1 bulan setelah BAST untuk defect material + workmanship",
+      "HPP 70-80jt per unit - efisien tapi tidak compromise kualitas"
+    ],
+    "hashtag_utama": ["#RumahSubsidiSiapHuni", "#SyahfalahProperty", "#LembayungProperty", "#SubsidiTanpaRenovasi"]
+  },
+  "customer_segments": [
+    {
+      "segmen": "First Home Buyer (FLPP)",
+      "profile": "Usia 25-35, MBR, belum punya rumah, pertama kali beli properti, FLPP eligible",
+      "size": "10.000+ MBR di Jember+Lumajang per tahun (estimasi backlog FLPP)",
+      "pain_point": "Uang muka, prosedur ribet, takut tertipu developer, takut rumah subsidi = kualitas buruk"
+    },
+    {
+      "segmen": "Upgrade Home (Komersial KPR)",
+      "profile": "Usia 30-45, karyawan/professional, sudah punya rumah pertama atau ngontrak",
+      "size": "500+ di Jember kota per tahun",
+      "pain_point": "Ingin upgrade tapi harga cluster premium kemahalan, lokasi kurang strategis"
+    },
+    {
+      "segmen": "Investor Properti",
+      "profile": "Usia 35-55, high-net-worth, investasi passive income",
+      "size": "100+ di Jember + luar kota per tahun",
+      "pain_point": "Risiko vacancy, lokasi strategis, ROI jelas"
+    }
+  ],
+  "revenue_streams": [
+    {"sumber": "Penjualan Unit FLPP tipe 36", "share_pct": 80, "per_unit": "Rp 166 juta", "margin_pct": 8, "keterangan": "Volume tinggi, margin tipis, channel utama"},
+    {"sumber": "Penjualan Unit Komersial KPR", "share_pct": 15, "per_unit": "Rp 300-800 juta", "margin_pct": 15, "keterangan": "Medium volume, margin medium"},
+    {"sumber": "Penjualan Unit Premium Cash", "share_pct": 3, "per_unit": "Rp 1-3 miliar", "margin_pct": 25, "keterangan": "Low volume, margin tinggi"},
+    {"sumber": "Fee Closing Marketing (5 komponen)", "share_pct": 1, "per_unit": "Rp 3.25 juta", "margin_pct": 100, "keterangan": "Internal incentive"},
+    {"sumber": "After-Sales Service", "share_pct": 1, "per_unit": "Variable", "margin_pct": 80, "keterangan": "Garansi 1 bulan + maintenance opsional"}
+  ],
+  "cost_structure": [
+    {"item": "HPP konstruksi per unit FLPP", "share_pct": 45, "nilai": "Rp 70-80 juta/unit (avg 75jt)"},
+    {"item": "Gaji 12 PIC + tunjangan", "share_pct": 22, "nilai": "Rp 55 juta/bulan (total grading P0-P2 + BPJS perusahaan)"},
+    {"item": "Fee + bonus marketing", "share_pct": 5, "nilai": "Rp 3.25jt fee + 1.5jt Mada = 4.75jt/unit × 6 unit = 28.5jt/bulan"},
+    {"item": "Operasional kantor + IT", "share_pct": 4, "nilai": "Rp 7 juta/bulan"},
+    {"item": "Marketing + ads", "share_pct": 3, "nilai": "Rp 5 juta/bulan"},
+    {"item": "Legal + notaris + pajak", "share_pct": 3, "nilai": "Rp 5 juta/bulan"},
+    {"item": "Buffer risiko + cash reserve", "share_pct": 8, "nilai": "Rp 10-15 juta/bulan (untuk risk R-001 sampai R-009)"},
+    {"item": "Owner dividend", "share_pct": 10, "nilai": "Variabel, profit sharing"}
+  ],
+  "key_activities": [
+    "Land banking + perizinan",
+    "Konstruksi rumah (cycle 6-9 bulan, HPP 70-80jt)",
+    "Marketing + lead generation (25 konten/bulan)",
+    "Penjualan + closing (target 6 unit/bulan)",
+    "Pemberkasan + akad (10 stage pipeline)",
+    "Serah terima + garansi 1 bulan"
+  ],
+  "key_resources": [
+    "Bank tanah (150+ unit kavling untuk 5 tahun ke depan)",
+    "Modal kerja Rp 500 juta cash reserve + line of credit bank",
+    "Tim profesional 12 PIC tetap (gradasi P0/P1/P2)",
+    "SOP terdokumentasi (Buku Saku V4.0)",
+    "Brand reputation + media organik + 30 Detik Publikasi",
+    "Network notaris, bank, supplier (3+ bank untuk diversifikasi)"
+  ],
+  "key_partners": [
+    {"nama": "Bank BTN", "peran": "KPR FLPP primary", "kerentanan": "Tinggi (kuota FLPP tahunan, regulasi)"},
+    {"nama": "Bank BCA/BNI/Mandiri/CIMB", "peran": "KPR Komersial", "kerentanan": "Sedang (suku bunga kompetitif)"},
+    {"nama": "Notaris koordinator", "peran": "Akad + BPN tracking", "kerentanan": "Rendah (bisa ganti notaris)"},
+    {"nama": "Supplier material", "peran": "Semen, besi, batu bata, keramik", "kerentanan": "Sedang (harga fluktuatif, lock 6 bulan)"},
+    {"nama": "Subkontraktor", "peran": "Pekerjaan khusus (pipa, listrik, finishing)", "kerentanan": "Tinggi (kualitas tidak konsisten)"},
+    {"nama": "Meta (FB/IG)", "peran": "Ads platform primary", "kerentanan": "Sedang (CPM naik, reach turun)"},
+    {"nama": "TikTok", "peran": "Organic + paid platform secondary", "kerentanan": "Rendah (platform emerging)"},
+    {"nama": "Google", "peran": "Search Ads + SEO", "kerentanan": "Rendah"}
+  ]
+}

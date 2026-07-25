@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "name": "jd-ringkas-12-pic",
+    "version": "1.0",
+    "deskripsi": "JD ringkas per 12 PIC. Standar JD 7 section."
+  },
+  "jd_list": [
+    {
+      "pic": "Pak Ardian",
+      "title": "Owner / Director",
+      "reports_to": "-",
+      "tugas_harian": [
+        "Review dashboard owner (via WA Mada)",
+        "Approval pengeluaran > Rp 10 juta",
+        "Briefing dengan Mada (mingguan)"
+      ],
+      "tools": [
+        "Dashboard V2",
+        "WA",
+        "Email"
+      ],
+      "kpi_utama": [
+        "Meeting 100%",
+        "Profit YoY 15%",
+        "1 ekspansi/tahun"
+      ],
+      "skill_requirement": [
+        "Strategic thinking",
+        "Leadership",
+        "Finance literacy"
+      ],
+      "career_path": "N/A (top level)"
+    },
+    {
+      "pic": "Bu Nisya",
+      "title": "Legal / Co-Director",
+      "reports_to": "Pak Ardian",
+      "tugas_harian": [
+        "Review kontrak baru",
+        "Approval izin konstruksi (IMB/PBG)",
+        "Arsip dokumen ke Drive"
+      ],
+      "tools": [
+        "Drive",
+        "Notaris online",
+        "BPN portal"
+      ],
+      "kpi_utama": [
+        "SHM <30 hari 100%",
+        "Kontrak zero error",
+        "Compliance 4x/tahun"
+      ],
+      "skill_requirement": [
+        "Hukum properti",
+        "Compliance",
+        "Dokumentasi"
+      ],
+      "career_path": "Senior Legal Manager"
+    },
+    {
+      "pic": "Mada",
+      "title": "Kepala Kantor + Marketing Lead",
+      "reports_to": "Pak Ardian",
+      "tugas_harian": [
+        "Briefing pagi (08.00-08.30)",
+        "Assign lead ke tim marketing",
+        "Coaching PIC underperform",
+        "Laporan sore ke Owner"
+      ],
+      "tools": [
+        "Dashboard V2",
+        "WA",
+        "Google Sheets"
+      ],
+      "kpi_utama": [
+        "Closing tim 6 unit/bulan",
+        "Coaching 100%",
+        "Dashboard real-time"
+      ],
+      "skill_requirement": [
+        "Leadership",
+        "Sales",
+        "Coaching"
+      ],
+      "career_path": "COO (Chief Operating Officer)"
+    }
+  ]
+}

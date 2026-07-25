@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "name": "workflow-sop",
+    "version": "1.0",
+    "deskripsi": "SOP workflow lintas divisi: lead → survey → SP3K → akad → STB"
+  },
+  "workflows": [
+    {
+      "id": "wf-lead-to-closing",
+      "nama": "Lead to Closing (FLPP)",
+      "langkah": [
+        {"step": 1, "nama": "Lead Masuk", "pic": "Mada (auto-assign)", "channel": "IG/FB/TikTok/Web/Walk-in", "output": "Lead di master-db.json dengan timestamp", "sla": "Real-time"},
+        {"step": 2, "nama": "First Response", "pic": "Riza (default), Yudi (walk-in), Amir (referral)", "aksi": "WA/HP < 30 menit, sapa + qualify", "output": "Status: contacted di master-db", "sla": "<30 menit"},
+        {"step": 3, "nama": "Qualification (BANT)", "pic": "Riza/Yudi/Amir", "aksi": "Budget, Authority, Need, Timeline", "output": "Qualified atau Disqualified", "sla": "1-3 hari"},
+        {"step": 4, "nama": "Survey Lokasi", "pic": "Riza (cover), Mada/Amir/Yudi (back cover)", "aksi": "Bawa customer ke lokasi + matching unit", "output": "Form survey + foto", "sla": "1-2 hari setelah qualified"},
+        {"step": 5, "nama": "Booking + DP", "pic": "Riza + Novita (administrasi)", "aksi": "Tanda booking + terima DP (jika ada)", "output": "Form booking", "sla": "1 hari setelah survey"},
+        {"step": 6, "nama": "Pemberkasan FLPP", "pic": "Novita (pimpin), dibantu Riza", "aksi": "Kumpulkan KTP/KK/NPWP/slip gaji/rekening koran", "output": "Berkas lengkap 7 hari kerja", "sla": "7 hari kerja"},
+        {"step": 7, "nama": "Submit SP3K ke Bank", "pic": "Novita", "aksi": "Submit ke BTN/BRI/BNI analis KPR", "output": "SP3K nomor registrasi", "sla": "14 hari kerja dari berkas lengkap"},
+        {"step": 8, "nama": "Appraisal Bank", "pic": "Bank analis", "aksi": "Survey unit + cek dokumen", "output": "Appraisal report", "sla": "7-14 hari setelah submit"},
+        {"step": 9, "nama": "SP3K Keluar", "pic": "Bank → Novita", "aksi": "Surat persetujuan KPR", "output": "SP3K di tangan customer + tembusan Mada", "sla": "Akumulasi step 6-8 max 30 hari"},
+        {"step": 10, "nama": "Penjadwalan Akad", "pic": "Novita + bank + notaris + customer", "aksi": "Tentukan tanggal + lokasi + dokumen", "output": "Undangan akad", "sla": "7-14 hari setelah SP3K"},
+        {"step": 11, "nama": "Akad Kredit", "pic": "Bank + notaris + customer + Mada (witness)", "aksi": "Penandatanganan KPR + AJB", "output": "Akta AJB + bukti akad", "sla": "On schedule"},
+        {"step": 12, "nama": "Update Status Closing", "pic": "Novita → Mada", "aksi": "Update master-db: status=Closed, tanggal=...", "output": "Trigger fee calculation", "sla": "Same day"},
+        {"step": 13, "nama": "Pencairan KPR", "pic": "Bank ke PT", "aksi": "Dana masuk rekening PT", "output": "Bukti transfer + payment fee marketing", "sla": "7-14 hari setelah akad"},
+        {"step": 14, "nama": "Serah Terima (STB)", "pic": "Rizal (proyek lead) + Riza/Mada (marketing witness) + customer", "aksi": "Cek unit + kunci serah terima", "output": "BAST + kunci + dokumen unit", "sla": "14-30 hari setelah akad"}
+      ],
+      "total_sla_hari": "60-90 hari dari lead masuk ke STB"
+    },
+    {
+      "id": "wf-content-to-lead",
+      "nama": "Content to Lead (Funnel Media)",
+      "langkah": [
+        {"step": 1, "nama": "Trend Research", "pic": "Rifki (lead) + Reta (riset topik)", "output": "List 20 ide konten / bulan", "sla": "Minggu 1 bulan"},
+        {"step": 2, "nama": "Content Briefing", "pic": "Reni (approve) + Rifki (visual) + Reta (copy)", "output": "Content brief approved", "sla": "2-3 hari kerja"},
+        {"step": 3, "nama": "Produksi Konten", "pic": "Rifki (shooting/editing) + Reta (writing)", "output": "Draft konten (video, desain, artikel)", "sla": "3-5 hari kerja"},
+        {"step": 4, "nama": "Review & Approval", "pic": "Reni (final approve) + Mada (strategic review)", "output": "Konten siap posting", "sla": "1 hari kerja"},
+        {"step": 5, "nama": "Posting & Distribusi", "pic": "Rifki (IG/TikTok/Web) + Reta (blog/artikel)", "output": "Konten published + tracked", "sla": "On schedule (calendar)"},
+        {"step": 6, "nama": "Engagement & Reply", "pic": "Rifki (IG/TikTok comment) + Reta (blog comment)", "output": "Engagement rate tracked", "sla": "<2 jam dari komen masuk"},
+        {"step": 7, "nama": "Lead Attribution", "pic": "Reni + Riza", "output": "Source lead di master-db.json: media_IG/TT/Web", "sla": "Real-time"},
+        {"step": 8, "nama": "Performance Report", "pic": "Reni", "output": "Monthly report: reach, ER, lead, viral", "sla": "Akhir bulan"}
+      ],
+      "target_bulanan": "20 konten published, 50 lead, 4 viral (>10K views), 3% ER"
+    },
+    {
+      "id": "wf-proyek-construction",
+      "nama": "Proyek Konstruksi 1 Unit",
+      "langkah": [
+        {"step": 1, "nama": "Planning & RAB", "pic": "Rizal", "output": "Gantt + RAB + material list", "sla": "1 minggu"},
+        {"step": 2, "nama": "Material Procurement", "pic": "Sinta", "output": "PO + delivery schedule", "sla": "2 minggu sebelum eksekusi"},
+        {"step": 3, "nama": "Pondasi", "pic": "Rizal + subkon + Amir (QC)", "output": "Pondasi selesai", "sla": "30 hari"},
+        {"step": 4, "nama": "Struktur (Dinding + Atap)", "pic": "Rizal + subkon + Yudi (support)", "output": "Struktur berdiri", "sla": "60 hari"},
+        {"step": 5, "nama": "ME (Mechanical Electrical)", "pic": "Subkon MEP + Rizal (QC)", "output": "Instalasi listrik + air", "sla": "30 hari overlapping struktur"},
+        {"step": 6, "nama": "Finishing", "pic": "Rizal + subkon finishing", "output": "Cat, keramik, kusen, pintu", "sla": "30 hari"},
+        {"step": 7, "nama": "QC Pre-Serah Terima", "pic": "Rizal + Amir + Yudi (checklist)", "output": "BAST QC + defect list (jika ada)", "sla": "3 hari"},
+        {"step": 8, "nama": "Perbaikan Defect", "pic": "Subkon + Rizal (monitoring)", "output": "Defect 0%", "sla": "7-14 hari"},
+        {"step": 9, "nama": "Serah Terima ke Customer", "pic": "Rizal + Mada + customer", "output": "BAST + kunci + garansi", "sla": "On schedule"}
+      ],
+      "total_sla_bulan": "5-6 bulan per unit"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "name": "hybrid-channel",
+    "version": "1.0",
+    "deskripsi": "Hybrid channel attribution matrix. Single source untuk marketing budget allocation per channel.",
+    "ref": "content/v2-developer/bab-14-hybrid-channel-matrix.md"
+  },
+  "channel_list": [
+    {
+      "channel": "FB Ads Lead Gen (paid)",
+      "fungsi": "Primary paid lead gen untuk FLPP",
+      "audience": "First Home Buyer MBR, usia 25-35, radius 50km dari cluster",
+      "kpi_utama": "CPL < Rp 15.000, CTR > 1.5%",
+      "budget_share_pct": 35,
+      "cost_per_lead_idr": 12000,
+      "lead_quality_avg": 4.0,
+      "stages_active": "1 (awareness) → 2 (interest)",
+      "ownership": "Riza + Yudi (execution), Reni (creative)"
+    },
+    {
+      "channel": "IG Organic",
+      "fungsi": "Brand awareness + soft sell untuk komersial",
+      "audience": "Mid-market homebuyer, usia 30-45, kota/sub-urban",
+      "kpi_utama": "Follower growth > 5%/bulan, Reach > 50K/bulan",
+      "budget_share_pct": 20,
+      "cost_per_lead_idr": 8000,
+      "lead_quality_avg": 3.5,
+      "stages_active": "1 (awareness) → 2 (interest) → 3 (consideration)",
+      "ownership": "Rifki (content), Reni (review)"
+    },
+    {
+      "channel": "TikTok Organic",
+      "fungsi": "Viral + young homebuyer MBR",
+      "audience": "Usia 20-30, suka konten video pendek, FOMO",
+      "kpi_utama": "View > 100K/bulan, engagement rate > 5%",
+      "budget_share_pct": 15,
+      "cost_per_lead_idr": 6000,
+      "lead_quality_avg": 2.5,
+      "stages_active": "1 (awareness)",
+      "ownership": "Rifki + Reta"
+    },
+    {
+      "channel": "YouTube Shorts",
+      "fungsi": "Edukasi + trust building",
+      "audience": "Usia 25-40, suka konten edukatif",
+      "kpi_utama": "View > 30K/bulan, subscriber growth > 200/bulan",
+      "budget_share_pct": 5,
+      "cost_per_lead_idr": 5000,
+      "lead_quality_avg": 3.0,
+      "stages_active": "1 (awareness) → 2 (interest)",
+      "ownership": "Rifki"
+    },
+    {
+      "channel": "Web + SEO",
+      "fungsi": "Inbound lead dari search organik",
+      "audience": "Sudah tahu cluster + cari harga spesifik",
+      "kpi_utama": "Organic traffic > 5K/bulan, ranking 5 besar keyword 'rumah KPR Jember'",
+      "budget_share_pct": 10,
+      "cost_per_lead_idr": 3000,
+      "lead_quality_avg": 4.5,
+      "stages_active": "2 (interest) → 3 (consideration) → 4 (survey)",
+      "ownership": "Rifki (technical) + Novita (content)"
+    },
+    {
+      "channel": "Google Search Ads (test)",
+      "fungsi": "Capture high-intent search",
+      "audience": "Sudah cari 'beli rumah subsidi' atau 'developer Jember'",
+      "kpi_utama": "CPL < Rp 20.000 (test budget Rp 2jt)",
+      "budget_share_pct": 2,
+      "cost_per_lead_idr": 18000,
+      "lead_quality_avg": 4.5,
+      "stages_active": "2 (interest) → 3 (consideration)",
+      "ownership": "Riza + Rifki"
+    },
+    {
+      "channel": "Walk-in Showroom",
+      "fungsi": "Direct closing high-intent visitor",
+      "audience": "Sudah survey lokasi sendiri, datang ke kantor",
+      "kpi_utama": "Conversion rate walk-in > 60%",
+      "budget_share_pct": 5,
+      "cost_per_lead_idr": 0,
+      "lead_quality_avg": 5.0,
+      "stages_active": "5 (survey cluster) → 6 (verifikasi) → 7 (booking)",
+      "ownership": "Yudi/Sdek (front desk)"
+    },
+    {
+      "channel": "Referral (konsumen existing)",
+      "fungsi": "Word-of-mouth low cost high conversion",
+      "audience": "Teman/keluarga konsumen STB yang puas",
+      "kpi_utama": "10 referral/quarter (target 2026)",
+      "budget_share_pct": 2,
+      "cost_per_lead_idr": 5000,
+      "lead_quality_avg": 5.0,
+      "stages_active": "3 (consideration) → 4-7 (full pipeline)",
+      "ownership": "Mada (reward) + Novita (tracking)"
+    },
+    {
+      "channel": "Exhibition / Event",
+      "fungsi": "Brand activation + collect lead",
+      "audience": "Mass market di event property/keuangan",
+      "kpi_utama": "100+ lead per event, CPL < Rp 5.000",
+      "budget_share_pct": 3,
+      "cost_per_lead_idr": 4000,
+      "lead_quality_avg": 3.0,
+      "stages_active": "2 (interest)",
+      "ownership": "Riza + Reni (booth setup)"
+    },
+    {
+      "channel": "KOL / Influencer lokal",
+      "fungsi": "Trust transfer + reach baru",
+      "audience": "Followers KOL lokal (lifestyle/mom/property)",
+      "kpi_utama": "Reach > 50K, 20 lead per kolaborasi",
+      "budget_share_pct": 3,
+      "cost_per_lead_idr": 15000,
+      "lead_quality_avg": 3.5,
+      "stages_active": "1 (awareness) → 2 (interest)",
+      "ownership": "Reni (deal) + Rifki (creative)"
+    }
+  ],
+  "attribution_model": {
+    "model": "First-touch + last-touch hybrid",
+    "rationale": "First-touch untuk budget allocation, last-touch untuk konversi measurement",
+    "formula": "Weight = (First-touch × 0.4) + (Last-touch × 0.6)",
+    "tracking_method": "UTM parameter di setiap link, CRM record first + last channel per lead"
+  },
+  "channel_mix_target_q3_2026": {
+    "fb_ads": 35,
+    "ig_organic": 20,
+    "tiktok_organic": 15,
+    "web_seo": 10,
+    "walk_in_referral": 7,
+    "exhibition_event": 5,
+    "kol_test": 5,
+    "google_ads_test": 3
+  }
+}

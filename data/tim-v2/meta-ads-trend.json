@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "name": "meta-ads-trend-2023-2026",
+    "version": "1.0",
+    "deskripsi": "Analisa trend META ADS 2023-2026 (FB+IG) untuk developer properti di Indonesia. Sumber: 8 tabel + 56 paragraf 'Analisa META ADS 2023-2026.docx'. Digunakan untuk strategi + forecast.",
+    "ref": "Downloads/PROKER SYAHFALAH/Analisa META ADS 2023 - 2026.docx"
+  },
+  "trend_summary": {
+    "reach_trend": {
+      "metric": "Organic + paid reach per 100K impression",
+      "data": [
+        {"tahun": 2023, "q1": 85, "q2": 82, "q3": 78, "q4": 75},
+        {"tahun": 2024, "q1": 70, "q2": 65, "q3": 60, "q4": 55},
+        {"tahun": 2025, "q1": 50, "q2": 47, "q3": 45, "q4": 43},
+        {"tahun": 2026, "q1": 42, "q2": 41, "q3_est": 40}
+      ],
+      "insight": "Reach turun ~50% dalam 3 tahun. CPM naik, impressions mahal. Diversifikasi channel WAJIB."
+    },
+    "cpl_trend": {
+      "metric": "Cost per lead (FB Ads)",
+      "data": [
+        {"tahun": 2023, "avg_idr": 8000},
+        {"tahun": 2024, "avg_idr": 11000},
+        {"tahun": 2025, "avg_idr": 13500},
+        {"tahun": 2026, "avg_idr": 15000}
+      ],
+      "insight": "CPL naik 88% dari Rp 8.000 ke Rp 15.000. Batas toleransi di Rp 18.000-20.000 (margin tipis FLPP)."
+    },
+    "engagement_trend": {
+      "metric": "Like + comment + share rate",
+      "data": [
+        {"tahun": 2023, "engagement_pct": 6.5},
+        {"tahun": 2024, "engagement_pct": 5.0},
+        {"tahun": 2025, "engagement_pct": 4.0},
+        {"tahun": 2026, "engagement_pct": 3.2}
+      ],
+      "insight": "Engagement turun 50%. Konten harus lebih personal + visual + storytelling."
+    },
+    "video_vs_static": {
+      "metric": "Conversion video vs static (index 100)",
+      "data": [
+        {"format": "Carousel", "index": 100},
+        {"format": "Single image", "index": 75},
+        {"format": "Video 15-30 detik", "index": 140},
+        {"format": "Reels 15-30 detik", "index": 180},
+        {"format": "Live streaming", "index": 220}
+      ],
+      "insight": "Reels + Live convert 2.2x static. Pivot ke video content Q3-Q4 2026."
+    }
+  },
+  "creative_principle_2026": [
+    "Hook 3 detik pertama = pertanyaan provocative atau before-after visual",
+    "Format: Reels > Video > Carousel > Single image",
+    "Durasi ideal: 15-30 detik (lebih lama = drop 50% retention di detik 20)",
+    "Audio: pakai trending audio TikTok/Reels",
+    "CTA: 1 CTA per konten, tidak lebih",
+    "Subtitle: WAJIB (80% IG views tanpa suara)",
+    "Personal: tampilkan owner/team, bukan hanya produk"
+  ],
+  "platform_recommendation_2026": {
+    "fb_ads": {
+      "status": "Maintain, tidak expand",
+      "alasan": "Reach turun, CPM naik, tapi masih convert FLPP terbaik",
+      "budget_share": 35
+    },
+    "ig_reels": {
+      "status": "Aggressive growth",
+      "alasan": "Engagement terbaik, organic reach masih kuat di 2026",
+      "budget_share": 25
+    },
+    "tiktok_organic": {
+      "status": "Test + learn",
+      "alasan": "Reach masih tinggi, demografi MBR dominan",
+      "budget_share": 15
+    },
+    "youtube_shorts": {
+      "status": "Test, konsisten",
+      "alasan": "View duration > 40% = algorithm boost",
+      "budget_share": 5
+    },
+    "google_search": {
+      "status": "Test Q4 2026",
+      "alasan": "High intent, low volume",
+      "budget_share": 3
+    },
+    "kol_lokal": {
+      "status": "Test Q4 2026",
+      "alasan": "Trust transfer + reach baru",
+      "budget_share": 3
+    }
+  },
+  "competitor_benchmark": {
+    "developer_lokal_lain": {
+      "cpl_avg_idr": 18000,
+      "cpm_avg_idr": 55000,
+      "engagement_pct": 2.5
+    },
+    "perumnas": {
+      "cpl_avg_idr": 12000,
+      "cpm_avg_idr": 35000,
+      "engagement_pct": 3.5,
+      "keterangan": "Subsidi only, brand besar, organic tinggi"
+    },
+    "syahfalah_lembayung": {
+      "cpl_avg_idr": 13000,
+      "cpm_avg_idr": 42000,
+      "engagement_pct": 3.2,
+      "keterangan": "CPL lebih baik dari rata-rata, engagement setara Perumnas"
+    }
+  }
+}

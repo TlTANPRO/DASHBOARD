@@ -1,0 +1,192 @@
+{
+  "_meta": {
+    "name": "spec-teknis-type36",
+    "version": "1.0",
+    "deskripsi": "Spesifikasi teknis rumah type 30/60 Mustika Lembayung Sumbersuko. Sumber: SPK MLS.xlsx sheet 'spesifikasi'. 23 item spec + penjelasan detail. V4.1 - Lampiran O.",
+    "ref": "C:\\Users\\Syahfalah\\Downloads\\SPK MLS.xlsx, sheet 'spesifikasi' rows 5-37"
+  },
+  "spesifikasi_items": [
+    {
+      "no": 1,
+      "kategori": "Bangunan",
+      "item": "Bangunan type 30/60",
+      "penjelasan": "Luas bangunan 30 m2 di atas kavling 60 m2"
+    },
+    {
+      "no": 2,
+      "kategori": "Pondasi",
+      "item": "Pondasi Batu Kali",
+      "penjelasan": "Campuran 1 semen : 3 fa : 6 pasir"
+    },
+    {
+      "no": 3,
+      "kategori": "Struktur",
+      "item": "Mutu Beton K-225",
+      "penjelasan": "Campuran 1 semen : 2 pasir : 3 koral 1-2 cm. Jarak sengkang tulangan 20 cm."
+    },
+    {
+      "no": 4,
+      "kategori": "Dinding",
+      "item": "Pasangan Dinding",
+      "penjelasan": "Tinggi 0-2 meter: pasangan batako. Tinggi 2 meter ke atas: bata ringan."
+    },
+    {
+      "no": 5,
+      "kategori": "Finishing Dinding",
+      "item": "Plesteran dan Acian",
+      "penjelasan": "Plesteran: campuran 1 semen : 3 fa : 6 pasir. Acian: 1 semen : 3 fa."
+    },
+    {
+      "no": 6,
+      "kategori": "Finishing Dinding",
+      "item": "Dinding Full Finishing Putih",
+      "penjelasan": "Finishing full warna putih. Cat eksterior menggunakan wall sealer."
+    },
+    {
+      "no": 7,
+      "kategori": "Atap",
+      "item": "Atap Galvalum Rangka Baja Ringan",
+      "penjelasan": "Jarak rangka 75 cm."
+    },
+    {
+      "no": 8,
+      "kategori": "Atap",
+      "item": "Kanopi Carport",
+      "penjelasan": "Rangka galvalum dengan spasi 75 cm."
+    },
+    {
+      "no": 9,
+      "kategori": "Dapur",
+      "item": "Meja Bar + Wastafel + Kompor Tanam 2 Tungku",
+      "penjelasan": "Menggunakan plat beton. Alas menggunakan granit 60x60."
+    },
+    {
+      "no": 10,
+      "kategori": "Pagar",
+      "item": "Pagar Couple dan Pagar Depan Roster",
+      "penjelasan": "Roster ukuran 20x20. Tinggi pagar depan 2,5 meter."
+    },
+    {
+      "no": 11,
+      "kategori": "Lantai",
+      "item": "Rabatan untuk Lantai",
+      "penjelasan": "Tebal 3 cm dengan mutu beton K-175."
+    },
+    {
+      "no": 12,
+      "kategori": "Lantai",
+      "item": "Pemasangan Granit Full di Lantai Ruang Tamu",
+      "penjelasan": "Granit 60x60 cream polos."
+    },
+    {
+      "no": 13,
+      "kategori": "Lantai",
+      "item": "Kamar Keramik 40x40",
+      "penjelasan": "Keramik 40x40 putih."
+    },
+    {
+      "no": 14,
+      "kategori": "Kamar Mandi",
+      "item": "Keramik Dinding Kamar Mandi Tinggi 1,6 Meter",
+      "penjelasan": "Menggunakan keramik dinding ukuran 20x40."
+    },
+    {
+      "no": 15,
+      "kategori": "Kamar Mandi",
+      "item": "Kamar Mandi Toilet Jongkok + Kran Biasa",
+      "penjelasan": "Standart industri rumah subsidi."
+    },
+    {
+      "no": 16,
+      "kategori": "Sanitasi",
+      "item": "Sanitasi Air Kotor",
+      "penjelasan": "Kemiringan pipa air kotor harus lebih dari 20 cm dari ujung tertinggi ke titik terendah."
+    },
+    {
+      "no": 17,
+      "kategori": "Sanitasi",
+      "item": "Sanitasi Air Bersih",
+      "penjelasan": "Pemasangan pipa dan kran harus rapi."
+    },
+    {
+      "no": 18,
+      "kategori": "Kusen",
+      "item": "Kusen Pintu dan Jendela",
+      "penjelasan": "Pemasangan kusen pintu dan kusen jendela harus presisi."
+    },
+    {
+      "no": 19,
+      "kategori": "Plafon",
+      "item": "Atap Full Plafon",
+      "penjelasan": "Dengan sistem dropceiling."
+    },
+    {
+      "no": 20,
+      "kategori": "Carport",
+      "item": "Rabat Carport",
+      "penjelasan": "Dengan mutu beton K-175."
+    },
+    {
+      "no": 21,
+      "kategori": "Pencahayaan",
+      "item": "Lampu Gantung Ruang Tamu",
+      "penjelasan": "Lampu gantung sebagai centerpiece pencahayaan utama."
+    },
+    {
+      "no": 22,
+      "kategori": "Pencahayaan",
+      "item": "Lampu Downlight Pojok Ruang Tamu",
+      "penjelasan": "Lampu downlight di pojok ruang tamu sebagai aksen."
+    },
+    {
+      "no": 23,
+      "kategori": "Pencahayaan",
+      "item": "Saklar, Stop Kontak, dan Nomor Blok",
+      "penjelasan": "Saklar tunggal: kamar depan, kamar belakang. Saklar seri: depan kamar mandi (1), ruang tamu (1). Stopkontak: kamar depan (1), kamar belakang (1), atas meja bar (1), sanyo (1), nomor blok. Stopkontak dengan tutup: di tembok belakang nomor blok. Nomor blok: dibuatkan saluran dan instalasi ke depan untuk pemasangan nomor blok."
+    }
+  ],
+  "vendor_material_standar": {
+    "semen": "Tiga Roda (PC 50 kg)",
+    "cat_dinding": "Vinilex / Nippon Paint (1 pail 25 kg untuk ~50 m2)",
+    "granit_60x60": "Ceranosa cream polos",
+    "keramik_40x40": "Mulia / setara (putih polos)",
+    "keramik_dinding_km_20x40": "Mulia / setara (putih polos)",
+    "kabel_listrik": "Eterna (Nymhy 2x1,5 mm dan 2x2,5 mm)",
+    "panel_mcb": "Schneider / Broco (8 group)",
+    "saklar_stop_kontak": "Broco",
+    "pipa_pvc": "Wavin (3\", 3/4\", 1/2\")",
+    "kloset_jongkok": "Duty / setara (warna putih)",
+    "rangka_atap": "Baja ringan (galvalum, tebal 0,8 mm, spasi 75 cm)",
+    "penutup_atap": "Spandek / Galvalum",
+    "kanal_c": "Baja ringan (galvalum)",
+    "reng": "Baja ringan",
+    "spandek": "Galvalum 0,30 mm",
+    "pintu_kusen": "Kayu kamper / engineering door",
+    "jendela": "Aluminium (daun jendela geser 40x150) + kaca 5 mm bening",
+    "kunci": "Istimewa (ruang tamu) + biasa (kamar tidur)",
+    "roster": "Bata roster 20x20 (untuk pagar couple)"
+  },
+  "qc_checklist": {
+    "pondasi": "Cek campuran spesi 1:3:6, kedalaman galian ≥ 60 cm",
+    "beton_struktur": "Uji slump 12+2 cm, w/c = 0,58 (K-225), jarak sengkang 20 cm",
+    "dinding_batako_0_2m": "Tinggi 0-2 m pakai batako, di atas 2 m pakai bata ringan",
+    "plesteran": "Campuran 1:3:6, tebal 15 mm",
+    "acian": "Campuran 1:3, finishing halus",
+    "dinding_finishing": "Full putih, cat eksterior pakai wall sealer",
+    "atap": "Spasi rangka galvalum 75 cm, tidak ada genangan air",
+    "kanopi": "Spasi 75 cm, kemiringan cukup untuk drainase",
+    "granit_60x60": "Cream polos, nat rata, tidak ada crack",
+    "keramik_40x40": "Putih polos, kamar tidur",
+    "keramik_dinding_km": "20x40, tinggi 1,6 m",
+    "km_toilet": "Jongkok putih + kran 1/2\", floor drain standard",
+    "sanitasi_kemiringan": "Pipa air kotor miring ≥ 20 cm",
+    "kusen_pintu_jendela": "Presisi, waterpass, tidak ada celah",
+    "plafon": "Dropceiling full, kalsiboard rapi",
+    "rabat_carport": "K-175, tebal 3 cm",
+    "lampu_ruang_tamu": "Gantung (centerpiece) + downlight pojok",
+    "saklar_seri": "1 di depan KM, 1 di ruang tamu",
+    "stopkontak": "5 titik (kamar depan 1, kamar belakang 1, atas meja bar 1, sanyo 1, nomor blok)",
+    "stopkontak_tutup": "Tembok belakang nomor blok (anti air hujan)",
+    "nomor_blok": "Saluran + instalasi pre-wired"
+  }
+}

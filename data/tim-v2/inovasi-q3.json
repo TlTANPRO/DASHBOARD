@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "name": "inovasi-q3",
+    "version": "1.0",
+    "deskripsi": "Innovation tracker Q3 2026. PIC submit ide via dashboard."
+  },
+  "entries": [
+    {
+      "id": "inov-001",
+      "judul": "Meta Ads script optimization",
+      "divisi": "marketing",
+      "pic_pengusul": "Rifki",
+      "status": "planned",
+      "impact": "high",
+      "target_implementasi": "2026-08-15"
+    },
+    {
+      "id": "inov-002",
+      "judul": "Foto dokumentasi progress harian",
+      "divisi": "proyek",
+      "pic_pengusul": "Rizal",
+      "status": "in-progress",
+      "impact": "medium",
+      "target_implementasi": "2026-08-01"
+    }
+  ]
+}

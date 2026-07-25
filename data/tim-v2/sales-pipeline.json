@@ -1,0 +1,129 @@
+{
+  "_meta": {
+    "name": "sales-pipeline",
+    "version": "1.0",
+    "deskripsi": "Sales pipeline 10 stage detail + bottleneck analysis + intervention plan. Single source untuk forecasting.",
+    "ref": "content/v2-developer/bab-10-sales-pipeline.md"
+  },
+  "stage_detail": [
+    {
+      "stage": 1,
+      "nama": "Awareness (top funnel)",
+      "pic_utama": "Media (Reni + Rifki)",
+      "kpi": "Reach + impression + follower growth",
+      "target": "Reach 50K IG + 30K FB per bulan, 20-25 konten/bulan",
+      "sla_hari": "Ongoing",
+      "drop_off_pct": 80,
+      "intervention": "Refresh creative setiap 2 minggu, A/B test headline + visual"
+    },
+    {
+      "stage": 2,
+      "nama": "Interest (lead masuk)",
+      "pic_utama": "Marketing (Riza + Yudi/Sdek)",
+      "kpi": "Total lead masuk per bulan",
+      "target": "120-150 lead/bulan dari paid + organic",
+      "sla_hari": 1,
+      "drop_off_pct": 30,
+      "intervention": "Speed to lead < 1 jam, auto-reply WA, qualify awal"
+    },
+    {
+      "stage": 3,
+      "nama": "Consideration (diskusi + edukasi)",
+      "pic_utama": "Marketing (Riza + Yudi/Sdek)",
+      "kpi": "Lead qualified (skor 3+)",
+      "target": "60-80 lead qualified per bulan (50% conversion dari total)",
+      "sla_hari": 7,
+      "drop_off_pct": 50,
+      "intervention": "Kirim testimoni customer, simulasi KPR, FAQ interaktif"
+    },
+    {
+      "stage": 4,
+      "nama": "Survey lokasi existing konsumen",
+      "pic_utama": "Marketing (Riza + Yudi/Sdek)",
+      "kpi": "Jumlah survey existing",
+      "target": "20-25 survey/bulan (dari 60-80 qualified)",
+      "sla_hari": 7,
+      "drop_off_pct": 40,
+      "intervention": "Fleksibel jadwal surveyor, transport di-cover developer"
+    },
+    {
+      "stage": 5,
+      "nama": "Survey cluster developer",
+      "pic_utama": "Marketing (Riza + Yudi/Sdek)",
+      "kpi": "Jumlah tertarik setelah lihat unit",
+      "target": "15-18 survey cluster (75% dari survey existing)",
+      "sla_hari": 3,
+      "drop_off_pct": 30,
+      "intervention": "Tunjukkan unit jadi + progress pembangunan, owner hadir jika perlu"
+    },
+    {
+      "stage": 6,
+      "nama": "Verifikasi berkas",
+      "pic_utama": "Admin (Novita)",
+      "kpi": "Berkas 100% lengkap",
+      "target": "12-15 berkas lengkap (80% dari survey cluster)",
+      "sla_hari": 14,
+      "drop_off_pct": 25,
+      "intervention": "Checklist dokumen H-1, reminder H-3 dan H-1 sebelum deadline"
+    },
+    {
+      "stage": 7,
+      "nama": "Booking fee + PPJB",
+      "pic_utama": "Legal (Bu Nisya) + Marketing",
+      "kpi": "Booking fee lunas",
+      "target": "10-12 booking (83% dari berkas lengkap)",
+      "sla_hari": 7,
+      "drop_off_pct": 15,
+      "intervention": "Konfirmasi booking fee max 1 hari, PPJB template ready, notaris standby"
+    },
+    {
+      "stage": 8,
+      "nama": "Pengajuan SP3K ke bank",
+      "pic_utama": "Admin (Novita) + Legal (Bu Nisya)",
+      "kpi": "SP3K submitted ke bank",
+      "target": "8-10 SP3K submitted (80% dari booking)",
+      "sla_hari": 14,
+      "drop_off_pct": 15,
+      "intervention": "Pilih bank dengan track record approve tinggi, double-check berkas"
+    },
+    {
+      "stage": 9,
+      "nama": "Bank survey + appraisal + approval",
+      "pic_utama": "Bank (external) + Admin (Novita follow)",
+      "kpi": "SP3K approved",
+      "target": "6-8 SP3K approved (75% dari submitted)",
+      "sla_hari": 30,
+      "drop_off_pct": 25,
+      "intervention": "Maintain relationship dengan bank, track progress 2x seminggu"
+    },
+    {
+      "stage": 10,
+      "nama": "Akad kredit + closing",
+      "pic_utama": "Legal (Bu Nisya) + Notaris + Admin",
+      "kpi": "Closing = unit sold",
+      "target": "6 unit/bulan (target Tier Realistis)",
+      "sla_hari": 14,
+      "drop_off_pct": 5,
+      "intervention": "Konfirmasi notaris H-7, dokumen siap, konsumen di-WA H-3"
+    }
+  ],
+  "conversion_bottleneck": [
+    {"stage_pair": "2 → 3", "current": "50%", "target": "65%", "gap_action": "Speed to lead < 1 jam + auto-reply + lead magnet (e-book)"},
+    {"stage_pair": "3 → 4", "current": "33%", "target": "45%", "gap_action": "Tawarkan transport survey + makan siang saat survey existing"},
+    {"stage_pair": "6 → 7", "current": "80%", "target": "90%", "gap_action": "Verifikasi berkas paralel (bukan sequential)"},
+    {"stage_pair": "8 → 9", "current": "75%", "target": "85%", "gap_action": "Pilih bank dengan historical approval > 80% untuk profil serupa"}
+  ],
+  "pipeline_velocity": {
+    "definition": "Rata-rata hari dari lead masuk sampai closing",
+    "current_hari": 70,
+    "target_hari": 50,
+    "breakdown": {
+      "stage_1_3": 7,
+      "stage_3_5": 10,
+      "stage_5_7": 14,
+      "stage_7_9": 30,
+      "stage_9_10": 9
+    },
+    "acceleration_plan": "Compress stage 7-9 (bank process) dari 30 ke 20 hari via pre-approval sebelum SP3K full submit"
+  }
+}

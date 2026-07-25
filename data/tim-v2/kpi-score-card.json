@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "name": "kpi-score-card",
+    "version": "1.0",
+    "deskripsi": "KPI Score Card Karyawan - 5 dimensi (Hasil 40% + Peran 20% + Kompetisi 15% + Disiplin 15% + Growth 10%). Output 0-100 per karyawan. V5.0 meeting 24 Jul 2026 point 14. Auto-report owner via dashboard.",
+    "ref": "meeting 24 Jul 2026 point 14 + kalkulasi-kpi.json (formula) + leaderboard + definisi-target.json (peran)"
+  },
+  "filosofi_score_card": {
+    "mengapa_5_dimensi": "Output V4 = angka tunggal (closing/posting/lead). V5.0 = output + peran + kompetisi + disiplin + growth. Karena closing tinggi tapi disiplin buruk = bom waktu (komplain konsumen naik). Posting tinggi tapi tidak growth = statis.",
+    "prinsip_desain": [
+      "Hasil tetap yang terpenting (40%) - tanpa hasil = tidak ada bisnis",
+      "Peran (20%) - apakah PIC menjalankan perannya? (definisi-target.json)",
+      "Kompetisi (15%) - apakah PIC di top-3 leaderboard? (kalkulasi-kpi.leaderboard)",
+      "Disiplin (15%) - absensi, SOP compliance, audit finding (hr-policy.json)",
+      "Growth (10%) - skill baru, polyvalent track, coaching lulus (coaching-3-pilar)"
+    ],
+    "kenapa_bukan_satu_angka": "Satu angka (closing/posting) = oversimplified. 5 dimensi = lebih akurat, mengurangi manipulasi, dan PIC jelas area improvement"
+  },
+  "lima_dimensi_detail": {
+    "dimensi_1_hasil": {
+      "bobot_persen": 40,
+      "definisi": "Output terukur sesuai job description PIC",
+      "metrik_per_role": {
+        "rza_marketing": ["qualified lead / minggu", "cost per lead", "lead-to-closing"],
+        "yudi_closing": ["closing / bulan", "closing rate", "follow up < 24 jam"],
+        "rizal_proyek": ["HPP tercapai (68jt)", "schedule on-time", "defect < 5/unit"],
+        "amir_proyek": ["cover proyek on-track", "content 4-6/bulan"],
+        "novita_admin": ["berkas 100% lengkap", "after-sales < 24 jam", "mel fee recorded"],
+        "sinta_purchasing": ["material spek match 100%", "best price 3 vendor", "waste < 5%"],
+        "reni_media": ["content 15-20/bulan", "engagement 5%", "brand consistency"],
+        "rifki_kreatif": ["desain 8-12/bulan", "video 4/bulan", "WA click rate"],
+        "reta_operasional_media": ["posting on-time", "reply < 4 jam", "follower growth +5%"],
+        "mada_operasional": ["KPI tim 80% achieved", "approval turnaround < 24 jam", "standup 100%"],
+        "bu_nisya_legal": ["kontrak clean 100%", "audit finding < 3/bulan", "sengketa 0"],
+        "pak_ardian_owner": ["profit YoY 15%", "1 ekspansi/tahun", "KPI tim 80%+"]
+      },
+      "skor_formula": "(actual / target) * 100, capped di 150 (max)",
+      "contoh": "Riza target 30 lead qualified/minggu, actual 24 → skor dimensi 1 = (24/30)*100 = 80"
+    },
+    "dimensi_2_peran": {
+      "bobot_persen": 20,
+      "definisi": "Apakah PIC menjalankan perannya sesuai definisi-target.json?",
+      "metrik": [
+        "Deliverable rutin mingguan tepat waktu (4 dari 4 minggu)",
+        "Cross-support tim lain (1-2 kali/bulan saat dibutuhkan)",
+        "Inisiatif improve sistem (minimal 1 ide / quarter yang dieksekusi)",
+        "Bring problem + solution, bukan hanya masalah"
+      ],
+      "skor_formula": "Average 4 metrik di atas, masing-masing scale 0-25, total 0-100",
+      "contoh": "Riza deliverable tepat waktu 4/4 (25) + cross-support 2x (20) + inisiatif 1 (15) + problem+solution 3x (20) = 80",
+      "pentingnya": "Dimensi ini = barrier terhadap output manipulation. PIC yang hanya kejar closing tanpa peran = skor peran rendah."
+    },
+    "dimensi_3_kompetisi": {
+      "bobot_persen": 15,
+      "definisi": "Posisi di leaderboard internal divisi (kalkulasi-kpi.leaderboard)",
+      "skor_formula": {
+        "divisi_3_pic": {"juara_1": 100, "juara_2": 75, "juara_3": 50, "lainnya": 25},
+        "divisi_2_pic": {"juara_1": 100, "juara_2": 50},
+        "divisi_1_pic": {"auto": 50, "bonus_jika_top_3_overall": "+25"},
+        "tidak_eligible": "Admin yang compliance tinggi = auto 75 (tidak masuk leaderboard tapi tetap di-recognize)"
+      },
+      "tie_breaker": "PIC dengan cross-support lebih banyak = ranking lebih tinggi",
+      "contoh": "Rizal juara 1 leaderboard proyek = 100, tapi jika Amir juara 2 (just 50)"
+    },
+    "dimensi_4_disiplin": {
+      "bobot_persen": 15,
+      "definisi": "Compliance terhadap SOP, absensi, audit, publikasi",
+      "metrik": [
+        "Absensi compliance (alpha < 2x/bulan, telat < 2x/bulan)",
+        "SOP compliance (audit finding minor < 5/bulan, major 0)",
+        "Publikasi 30 detik (compliance > 80%)",
+        "Cross-handover on-time (handover 24 jam sebelum cuti/izin)"
+      ],
+      "skor_formula": "Average 4 metrik, masing-masing scale 0-25, total 0-100",
+      "contoh": "Riza absensi 100 (25) + SOP audit 0 finding (25) + publikasi 85% (20) + handover on-time (25) = 95"
+    },
+    "dimensi_5_growth": {
+      "bobot_persen": 10,
+      "definisi": "Skill baru, polyvalent track, coaching lulus",
+      "metrik": [
+        "Coaching session attended > 80% (1-2/bulan)",
+        "Skill baru diaplikasikan ke kerja (1 skill baru / quarter)",
+        "Polyvalent track progress (jika applicable)",
+        "Self-paced learning (Notion > 2 jam / minggu)"
+      ],
+      "skor_formula": "Average 4 metrik, masing-masing scale 0-25, total 0-100",
+      "contoh": "Novita coaching 90% (22) + skill KPP lulus (25) + polyvalent 50% (15) + self-paced 2 jam (20) = 82"
+    }
+  },
+  "skor_total_formula": {
+    "rumus": "(d1_hasil x 0.40) + (d2_peran x 0.20) + (d3_kompetisi x 0.15) + (d4_disiplin x 0.15) + (d5_growth x 0.10)",
+    "range": "0 - 100 (realistis: 50-90, exceptional: 90+)",
+    "grading": [
+      {"range": "90-100", "grade": "A (Exceptional)", "akibat": "Bonus +1 bulan gaji + publikasi + kandidat promosi"},
+      {"range": "75-89", "grade": "B (Meets Expectations)", "akibat": "Standar, eligible bonus reguler"},
+      {"range": "60-74", "grade": "C (Below Expectations)", "akibat": "Coaching plan + tidak eligible bonus + visibility Owner"},
+      {"range": "<60", "grade": "D (Unsatisfactory)", "akibat": "PIP 30 hari + visibility Owner + re-evaluasi kontrak"}
+    ]
+  },
+  "auto_report_owner": {
+    "tools": "Dashboard V2 (tab KPI Score Card) - auto-aggregate dari 5 dimensi",
+    "frekuensi": "Mingguan (setiap Senin pagi) - snapshot mingguan | Bulanan (akhir bulan) - full report",
+    "format_email_ke_owner": {
+      "subject": "KPI Score Card Report - [Bulan] [Tahun]",
+      "isi": [
+        "Ringkasan: total PIC, distribusi grade (A/B/C/D), trend vs bulan lalu",
+        "Top-3 PIC (grade A): nama + divisi + skor",
+        "Bottom-1 PIC (grade D): nama + divisi + skor + coaching plan",
+        "Rekomendasi systemic (jika ada pola)",
+        "Owner action items (jika ada)"
+      ]
+    },
+    "dashboard_visualisasi": "Heatmap 12 PIC x 5 dimensi, color-coded (hijau = excellent, kuning = standard, merah = below). Drill-down per PIC."
+  },
+  "decision_use_owner": {
+    "promosi": "PIC grade A 3 bulan berturut + peran kuat = kandidat kepala divisi / senior",
+    "rotasi": "PIC grade C 2 bulan berturut di dimensi yang sama = rotasi ke fungsi lain",
+    "kontrak_review": "PIC grade D 1 bulan = PIP 30 hari. Grade D 2 bulan = kontrak review.",
+    "fee_bonus": "Grade A = bonus +1 bulan. Grade B = bonus standar. Grade C = 50% bonus. Grade D = no bonus.",
+    "identifikasi_gap_sistem": "Jika banyak PIC grade C di dimensi Peran → perlu coaching systemic. Jika banyak grade C di dimensi Hasil → perlu training skill."
+  },
+  "comparison_v4_ke_v5": {
+    "v4": "Performance appraisal = triwulan (4x setahun). Komponen: KPI 60% + Quality 20% + Behavior 10% + Innovation 10%. Manual rekap.",
+    "v5": "Score Card = mingguan + bulanan (auto). 5 dimensi lebih granular. Auto-report owner. Decision-use lebih eksplisit."
+  }
+}

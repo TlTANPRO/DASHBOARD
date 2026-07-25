@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>DASHBOARD PERUSAHAAN — PT Syahfalah + Lembayung Wanantara Padha</title>
+<meta name="description" content="Dashboard operasional V5.0 untuk PT Syahfalah Global + Lembayung Wanantara Padha. 12 PIC, KPI Score Card, Leaderboard, Pricing Tier, Fee Media, STB Audit, Manager 3 Sifat." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%231F4E79'/%3E%3Ctext x='12' y='16' text-anchor='middle' font-family='monospace' font-size='12' fill='white' font-weight='bold'%3EDP%3C/text%3E%3C/svg%3E" />
+<style>
+/* === TOKENS V5.0 — DASHBOARD PERUSAHAAN === */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-tertiary: #1f1f1f;
+  --bg-elevated: #262626;
+  --bg-surface: #1a1a1a;
+
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --text-dim: #52525b;
+
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-glow: rgba(59, 130, 246, 0.15);
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #06b6d4;
+
+  --gold: #f59e0b;
+  --silver: #94a3b8;
+  --bronze: #b45309;
+
+  --border-subtle: #27272a;
+  --border-default: #3f3f46;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+  --font-display: 'Inter', system-ui, sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 32px var(--accent-glow);
+
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* === WATERMARK === */
+body::before {
+  content: "DOKUMEN INTERNAL — TIDAK UNTUK DISEBARLUASKAN";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(250, 250, 250, 0.025);
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  body::before { font-size: 1.5rem; }
+}
+
+/* === LAYOUT === */
+.shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-5);
+}
+
+@media (min-width: 1024px) {
+  .shell { padding: var(--space-6) var(--space-8); }
+}
+
+/* === TOP BAR === */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent) 0%, #1e40af 100%);
+  border-radius: var(--radius-md);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: white;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-glow);
+}
+
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em; }
+.brand-sub { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+
+.topbar-meta {
+  display: flex;
+  gap: var(--space-4);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.topbar-meta span strong { color: var(--text-secondary); margin-left: var(--space-1); }
+
+/* === HERO === */
+.hero {
+  padding: var(--space-8) 0 var(--space-6);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-8);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 10px;
+  background: var(--accent-glow);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--accent-hover);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.hero-eyebrow::before {
+  content: "";
+  width: 6px; height: 6px;
+  background: var(--success);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--text-secondary);
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .hero-stats { grid-template-columns: repeat(4, 1fr); }
+}
+
+.hero-stat {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-stat::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+.hero-stat-label {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.hero-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.hero-stat-value.success { color: var(--success); }
+.hero-stat-value.warning { color: var(--warning); }
+
+.hero-stat-foot {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+}
+
+/* === SECTION === */
+.section {
+  margin: var(--space-10) 0;
+  scroll-margin-top: var(--space-5);
+}
+
+.section-label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.section-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-left: auto;
+  font-style: italic;
+}
+
+/* === BENTO GRID === */
+.bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px)  { .bento { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .bento { grid-template-columns: repeat(4, 1fr); } }
+
+.bento-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--duration-normal) var(--ease-out);
+}
+
+.bento-card:hover { border-color: var(--border-default); }
+
+.bento-card.span-2 { grid-column: span 2; }
+.bento-card.span-3 { grid-column: span 3; }
+.bento-card.span-4 { grid-column: span 4; }
+.bento-card.row-2 { grid-row: span 2; }
+
+@media (max-width: 639px) {
+  .bento-card.span-2, .bento-card.span-3, .bento-card.span-4 { grid-column: span 1; }
+}
+
+.bento-eyebrow {
+  display: inline-block;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+.bento-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
+}
+
+.bento-value {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  margin-bottom: var(--space-1);
+}
+
+.bento-value.success { color: var(--success); }
+.bento-value.warning { color: var(--warning); }
+.bento-value.danger { color: var(--danger); }
+.bento-value.muted { color: var(--text-muted); }
+
+.bento-foot {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+  line-height: 1.5;
+}
+
+/* === PIC CARD === */
+.pic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px)  { .pic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .pic-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1280px) { .pic-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.pic-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  position: relative;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.pic-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.pic-card.highlight {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(59,130,246,0.05) 100%);
+}
+
+.pic-card.highlight::before {
+  content: "★ B10 PIC";
+  position: absolute;
+  top: -8px; right: 12px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.pic-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.pic-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-elevated));
+  border: 1px solid var(--border-default);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.pic-info { flex: 1; min-width: 0; }
+.pic-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.pic-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.pic-tasks {
+  list-style: none;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.pic-tasks li {
+  position: relative;
+  padding-left: var(--space-3);
+  margin-bottom: 2px;
+}
+
+.pic-tasks li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pic-tag {
+  display: inline-block;
+  margin-top: var(--space-2);
+  padding: 2px 8px;
+  background: var(--bg-tertiary);
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+}
+
+/* === LEADERBOARD === */
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.lb-row {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.lb-row:hover { border-color: var(--border-default); }
+
+.lb-rank {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.lb-rank.top1 { color: var(--gold); font-size: 1.125rem; }
+.lb-rank.top2 { color: var(--silver); font-size: 1rem; }
+.lb-rank.top3 { color: var(--bronze); font-size: 1rem; }
+
+.lb-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.lb-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.lb-score {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.lb-score small { font-size: 0.75rem; color: var(--text-muted); margin-left: 4px; font-weight: 500; }
+
+/* === TIER === */
+.tier-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) { .tier-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.tier-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: relative;
+  overflow: hidden;
+}
+
+.tier-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--bronze);
+}
+
+.tier-card.silver::before { background: var(--silver); }
+.tier-card.gold::before   { background: var(--gold); }
+
+.tier-name {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin-bottom: var(--space-2);
+}
+
+.tier-card.silver .tier-name { color: var(--silver); }
+.tier-card.gold   .tier-name { color: var(--gold); }
+
+.tier-headline {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+  letter-spacing: -0.02em;
+}
+
+.tier-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.tier-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.8125rem;
+}
+
+.tier-stat:last-child { border-bottom: none; }
+
+.tier-stat-label { color: var(--text-muted); }
+.tier-stat-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.tier-foot {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border-subtle);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* === STEPS (STB 3 Wajib, Manager 3 Sifat) === */
+.step-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) { .step-list { grid-template-columns: repeat(3, 1fr); } }
+
+.step {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: relative;
+  counter-increment: step;
+}
+
+.step-num {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--bg-tertiary);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.step-name {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.step-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
+}
+
+.step-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* === TABLE === */
+.table-wrap {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+thead {
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg-tertiary); }
+
+td.mono { font-family: var(--font-mono); }
+td.num { font-variant-numeric: tabular-nums; text-align: right; }
+td strong { color: var(--text-primary); }
+
+/* === PILL / BADGE === */
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+}
+
+.pill.success { background: rgba(16,185,129,0.1); color: var(--success); border-color: rgba(16,185,129,0.3); }
+.pill.warning { background: rgba(245,158,11,0.1); color: var(--warning); border-color: rgba(245,158,11,0.3); }
+.pill.danger  { background: rgba(239,68,68,0.1);  color: var(--danger);  border-color: rgba(239,68,68,0.3); }
+.pill.info    { background: var(--accent-glow); color: var(--accent-hover); border-color: var(--accent); }
+
+/* === GRADING (KPI) === */
+.grade-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) { .grade-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.grade {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.grade-letter {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  width: 36px;
+  text-align: center;
+}
+
+.grade.a { color: var(--success); }
+.grade.b { color: var(--info); }
+.grade.c { color: var(--warning); }
+.grade.d { color: var(--danger); }
+
+.grade-info { flex: 1; }
+.grade-score { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); }
+.grade-akibat { font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px; }
+
+/* === GLOSARIUM === */
+.glosarium {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+@media (min-width: 640px)  { .glosarium { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .glosarium { grid-template-columns: repeat(3, 1fr); } }
+
+.glos-item {
+  background: var(--bg-secondary);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+  align-items: baseline;
+}
+
+.glos-akr {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--accent);
+  min-width: 60px;
+}
+
+.glos-def {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* === FOOTER === */
+footer {
+  margin-top: var(--space-10);
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+footer .meta { margin-top: var(--space-2); display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap; }
+footer a { color: var(--text-secondary); text-decoration: none; }
+footer a:hover { color: var(--accent-hover); }
+
+/* === UTILS === */
+.muted { color: var(--text-muted); }
+.mono  { font-family: var(--font-mono); }
+.tnum  { font-variant-numeric: tabular-nums; }
+.hide-on-mobile { }
+@media (max-width: 768px) { .hide-on-mobile { display: none; } }
+
+.footnote {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: var(--space-3);
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+}
+
+.skip-link:focus { top: 0; }
+
+/* === NAV (sticky) === */
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 50;
+  padding: var(--space-2) 0;
+}
+
+.nav-inner {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-default) transparent;
+}
+
+.nav-inner::-webkit-scrollbar { height: 4px; }
+.nav-inner::-webkit-scrollbar-thumb { background: var(--border-default); border-radius: 999px; }
+
+.nav-link {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast) var(--ease-out);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.nav-link:hover { color: var(--text-primary); background: var(--bg-secondary); }
+.nav-link.active { color: var(--accent); background: var(--accent-glow); }
+
+@media (max-width: 768px) {
+  .nav-link { font-size: 0.75rem; padding: var(--space-1) var(--space-2); }
+}
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- TOP BAR -->
+<header class="shell" role="banner">
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-mark">DP</div>
+      <div class="brand-text">
+        <div class="brand-name">DASHBOARD PERUSAHAAN</div>
+        <div class="brand-sub">PT Syahfalah + Lembayung · V5.0 · 25 Jul 2026</div>
+      </div>
+    </div>
+    <div class="topbar-meta hide-on-mobile">
+      <span>V5.0<strong id="meta-version">FINAL</strong></span>
+      <span>19/19<strong id="meta-coverage">point</strong></span>
+      <span>12 PIC<strong>aktif</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- STICKY NAV -->
+<nav class="nav" aria-label="Section navigation">
+  <div class="shell">
+    <div class="nav-inner">
+      <a class="nav-link" href="#hero">↑ Hero</a>
+      <a class="nav-link" href="#struktur">01 · Struktur</a>
+      <a class="nav-link" href="#leaderboard">02 · Leaderboard</a>
+      <a class="nav-link" href="#kpi">03 · KPI Score</a>
+      <a class="nav-link" href="#fee">04 · Fee Media</a>
+      <a class="nav-link" href="#pricing">05 · Pricing Tier</a>
+      <a class="nav-link" href="#stb">06 · STB Audit</a>
+      <a class="nav-link" href="#manager">07 · Manager 3S</a>
+      <a class="nav-link" href="#glosarium">08 · Glosarium</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="shell">
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-eyebrow">V5.0 LIVE · 25 Juli 2026</div>
+  <h1 class="hero-title" id="hero-title">Buku Management V5 <em>→ operasional</em>.</h1>
+  <p class="hero-sub">Dashboard internal PT Syahfalah Global + Lembayung Wanantara Padha. 12 PIC, 4 divisi, 19/19 point meeting 24 Juli 2026 ter-cover. Output-based, kompetisi sehat, tanpa owner centris.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-label">12 PIC</div>
+      <div class="hero-stat-value tnum">12<span style="font-size:1rem;color:var(--text-muted);font-weight:500;margin-left:4px">aktif</span></div>
+      <div class="hero-stat-foot">2 owner + 1 chief + 9 staff</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-label">4 divisi</div>
+      <div class="hero-stat-value tnum">4</div>
+      <div class="hero-stat-foot">marketing · proyek · media · admin</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-label">Coverage</div>
+      <div class="hero-stat-value success tnum">19/19</div>
+      <div class="hero-stat-foot">100% point meeting 24 Jul</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-label">SSOT JSON</div>
+      <div class="hero-stat-value tnum" id="ssot-count">54</div>
+      <div class="hero-stat-foot" id="ssot-loaded">memuat…</div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 STRUKTUR -->
+<section class="section" id="struktur" aria-labelledby="sec-struktur">
+  <div class="section-label">
+    <span class="section-num">01</span>
+    <h2 class="section-title" id="sec-struktur">Struktur Organisasi · 12 PIC</h2>
+    <span class="section-sub">Mada = B10 PIC, back-end only, no customer-facing</span>
+  </div>
+  <div class="pic-grid" id="pic-grid" role="list">
+    <p class="muted">Memuat 12 PIC…</p>
+  </div>
+</section>
+
+<!-- 02 LEADERBOARD -->
+<section class="section" id="leaderboard" aria-labelledby="sec-leaderboard">
+  <div class="section-label">
+    <span class="section-num">02</span>
+    <h2 class="section-title" id="sec-leaderboard">Leaderboard V5 · 4 Divisi</h2>
+    <span class="section-sub">Reward top-3 · coaching bottom · no publish nama</span>
+  </div>
+  <div class="bento" style="grid-template-columns:1fr">
+    <div class="bento-card span-4">
+      <div class="bento-eyebrow">Reward Pool</div>
+      <div class="bento-value success">Rp 950rb</div>
+      <div class="bento-foot">Top-1 500rb · Top-2 300rb · Top-3 150rb. Bottom = coaching only (no publish). Ranking: 0.6 metrik_utama + 0.4 metrik_sekunder.</div>
+    </div>
+  </div>
+  <div class="bento" style="margin-top:var(--space-4)" id="leaderboard-grid">
+    <p class="muted">Memuat leaderboard…</p>
+  </div>
+</section>
+
+<!-- 03 KPI SCORE CARD -->
+<section class="section" id="kpi" aria-labelledby="sec-kpi">
+  <div class="section-label">
+    <span class="section-num">03</span>
+    <h2 class="section-title" id="sec-kpi">KPI Score Card · 5 Dimensi</h2>
+    <span class="section-sub">Auto-report ke owner · grading A/B/C/D</span>
+  </div>
+  <div class="bento" id="kpi-dimensi">
+    <p class="muted">Memuat 5 dimensi…</p>
+  </div>
+  <div style="margin-top:var(--space-5)">
+    <div class="section-label" style="border-bottom-color:transparent;margin-bottom:var(--space-3)">
+      <span class="section-num">↳</span>
+      <h3 class="section-title" style="font-size:1.125rem">Grading A/B/C/D</h3>
+    </div>
+    <div class="grade-grid" id="kpi-grading"></div>
+  </div>
+</section>
+
+<!-- 04 FEE MEDIA CLOSING -->
+<section class="section" id="fee" aria-labelledby="sec-fee">
+  <div class="section-label">
+    <span class="section-num">04</span>
+    <h2 class="section-title" id="sec-fee">Fee Media Closing-Based V5</h2>
+    <span class="section-sub">3 pilar konten · base pool Rp 500rb/closing</span>
+  </div>
+  <div class="bento" id="fee-pilar"></div>
+  <div class="footnote">UTM tracking · min 6 konten/minggu · pool cair tiap akhir bulan ke Reni/Rifki/Reta</div>
+</section>
+
+<!-- 05 PRICING TIER -->
+<section class="section" id="pricing" aria-labelledby="sec-pricing">
+  <div class="section-label">
+    <span class="section-num">05</span>
+    <h2 class="section-title" id="sec-pricing">Pricing Logic · 3 Tier</h2>
+    <span class="section-sub">Management Density = Output Density</span>
+  </div>
+  <div class="tier-grid" id="tier-grid"></div>
+  <p class="footnote">Output perusahaan jelas per tier: 5/6/7 unit/bulan. Cross-check dengan config-tier.json + target-perusahaan.json.</p>
+</section>
+
+<!-- 06 STB AUDIT -->
+<section class="section" id="stb" aria-labelledby="sec-stb">
+  <div class="section-label">
+    <span class="section-num">06</span>
+    <h2 class="section-title" id="sec-stb">STB 3 Wajib + Punishment</h2>
+    <span class="section-sub">Serah Terima Bangunan · jenjang 5 punishment</span>
+  </div>
+  <h3 class="section-title" style="font-size:1.125rem;margin-bottom:var(--space-3)">3 Wajib STB</h3>
+  <div class="step-list" id="stb-wajib"></div>
+  <h3 class="section-title" style="font-size:1.125rem;margin: var(--space-6) 0 var(--space-3)">5 Jenjang Punishment</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Jenjang</th><th>Konsekuensi</th><th>Trigger</th><th>Recovery</th></tr>
+      </thead>
+      <tbody id="stb-punish"></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 07 MANAGER 3 SIFAT -->
+<section class="section" id="manager" aria-labelledby="sec-manager">
+  <div class="section-label">
+    <span class="section-num">07</span>
+    <h2 class="section-title" id="sec-manager">Manager 3 Sifat Wajib</h2>
+    <span class="section-sub">Tertib · Pahami · Generalis · evalusi quarterly</span>
+  </div>
+  <div class="step-list" id="manager-sifat"></div>
+  <h3 class="section-title" style="font-size:1.125rem;margin: var(--space-6) 0 var(--space-3)">Manager di Perusahaan</h3>
+  <div class="bento" id="manager-list"></div>
+</section>
+
+<!-- 08 GLOSARIUM -->
+<section class="section" id="glosarium" aria-labelledby="sec-glosarium">
+  <div class="section-label">
+    <span class="section-num">08</span>
+    <h2 class="section-title" id="sec-glosarium">Glosarium Quick-Ref</h2>
+    <span class="section-sub">50+ akronim V5.0</span>
+  </div>
+  <div class="glosarium" id="glosarium-list"></div>
+</section>
+
+</main>
+
+<footer>
+  <div>DASHBOARD PERUSAHAAN V5.0 · PT Syahfalah Global · Lembayung Wanantara Padha</div>
+  <div class="meta">
+    <span>Build 25 Jul 2026</span>
+    <span>·</span>
+    <span>Python 3.14 + python-docx (Buku SSOT)</span>
+    <span>·</span>
+    <a href="./_buku-saku-karyawan-v4.docx">↓ DOCX V5.0 FINAL</a>
+  </div>
+</footer>
+
+<script>
+/* === DATA LOADER === */
+const SSOT = "./data/tim-v2/";
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+
+const cache = {};
+async function loadJSON(name) {
+  if (cache[name]) return cache[name];
+  try {
+    const r = await fetch(SSOT + name + ".json");
+    if (!r.ok) throw new Error(name + " " + r.status);
+    cache[name] = await r.json();
+    return cache[name];
+  } catch (e) {
+    console.error("SSOT load fail:", e);
+    return null;
+  }
+}
+
+const fmtIDR = n => "Rp " + (n || 0).toLocaleString("id-ID");
+const fmtNum = n => (n || 0).toLocaleString("id-ID");
+
+/* === STATIC SSOT (fallback kalau fetch gagal) === */
+const FALLBACK = {
+  jd: {
+    pic_peran: [
+      {nama: "Pak Ardian", title: "Owner / Direktur", divisi: "Owner", tasks: ["Strategic decision", "Final approve budget", "Review KPI bulanan", "Ekspansi klien"], tag: "Owner"},
+      {nama: "Bu Nisya", title: "Co-Director / Legal", divisi: "Owner", tasks: ["Legal drafting", "Audit mingguan front office", "Approve kontrak", "Cross-check SP3K"], tag: "Owner"},
+      {nama: "Mada", title: "Chief of Staff (B10 PIC)", divisi: "Operasional", tasks: ["Operasional lintas fungsi", "Approval + monitoring", "Coaching + audit", "KPI konsolidasi"], tag: "B10 PIC · Back-end only"},
+      {nama: "Riza", title: "Digital Marketing", divisi: "Marketing", tasks: ["Lead generation", "Meta ads + organic", "CRM update", "Closing support"], tag: "Marketing"},
+      {nama: "Yudi (Sdek)", title: "Sales Counter + Maintenance", divisi: "Marketing", tasks: ["Closing pojok V4", "Walk-in konsumen", "Maintenance", "STB support"], tag: "Marketing"},
+      {nama: "Rizal", title: "Kepala Pelaksana", divisi: "Proyek", tasks: ["Daily task proyek", "Brief mandor", "Monitoring progres", "Cross-check purchasing"], tag: "Proyek · Daily tetap"},
+      {nama: "Amir", title: "Site Manager", divisi: "Proyek", tasks: ["Daily report lapangan", "Koordinasi subkon", "Material handling", "Quality check"], tag: "Proyek · Daily tetap"},
+      {nama: "Novita", title: "Admin Pemberkasan", divisi: "Admin", tasks: ["Pemberkasan klien", "SP3K tracking", "Legal support", "Closing file"], tag: "Admin · Fixed + Mel"},
+      {nama: "Sinta", title: "Purchasing + Stopper Kualitas", divisi: "Proyek", tasks: ["Stopper kualitas material", "Best price 3 vendor", "Retensi vendor", "Block PO bila spek turun"], tag: "Purchasing · Stopper"},
+      {nama: "Reni", title: "Ketua Media", divisi: "Media", tasks: ["Fee media closing-based", "3 pilar konten", "UTM tracking", "Supervisi Rifki + Reta"], tag: "Media · Manager"},
+      {nama: "Rifki", title: "Media Staff", divisi: "Media", tasks: ["Produksi konten", "Story + Reels", "Posting schedule", "Engagement"], tag: "Media"},
+      {nama: "Reta", title: "Media Staff", divisi: "Media", tasks: ["Produksi konten", "Carousel + feed", "Insight report", "Hashtag research"], tag: "Media"},
+    ]
+  },
+  leaderboard: {
+    marketing: [
+      {rank: 1, nama: "Riza", metrik_utama: "Lead 38", metrik_sekunder: "Closing 4", score: 0.94},
+      {rank: 2, nama: "Yudi (Sdek)", metrik_utama: "Closing pojok 3", metrik_sekunder: "Walk-in 22", score: 0.88},
+      {rank: 3, nama: "Reni (media support)", metrik_utama: "Konten 26", metrik_sekunder: "Engagement 8.2%", score: 0.81},
+    ],
+    proyek: [
+      {rank: 1, nama: "Rizal", metrik_utama: "On-time BAST 100%", metrik_sekunder: "Waste 0%", score: 0.95},
+      {rank: 2, nama: "Amir", metrik_utama: "Daily report 30/30", metrik_sekunder: "Subkon score 4.7", score: 0.89},
+      {rank: 3, nama: "Sinta (purchasing)", metrik_utama: "Best price 12x", metrik_sekunder: "Retensi 0 komplain", score: 0.86},
+    ],
+    media: [
+      {rank: 1, nama: "Reni", metrik_utama: "Engagement 8.2%", metrik_sekunder: "Closing assist 4", score: 0.92},
+      {rank: 2, nama: "Rifki", metrik_utama: "Reels 12", metrik_sekunder: "Reach 24k", score: 0.84},
+      {rank: 3, nama: "Reta", metrik_utama: "Carousel 14", metrik_sekunder: "Save rate 4.1%", score: 0.79},
+    ],
+    admin: [
+      {rank: 1, nama: "Novita", metrik_utama: "Closing file 8", metrik_sekunder: "On-time SP3K 100%", score: 0.93},
+      {rank: 2, nama: "Sinta (cross-admin)", metrik_utama: "Berkas legal 6", metrik_sekunder: "Retensi vendor 0", score: 0.87},
+    ]
+  },
+  kpi: {
+    dimensi: [
+      {nama: "Hasil", bobot: "40%", desc: "Output terukur (closing, lead, progres, konten)"},
+      {nama: "Peran", bobot: "20%", desc: "Cross-support + cover role + generalis"},
+      {nama: "Kompetisi", bobot: "15%", desc: "Ranking leaderboard internal divisi"},
+      {nama: "Disiplin", bobot: "15%", desc: "Tertib + SOP + dashboard updated"},
+      {nama: "Growth", bobot: "10%", desc: "Improvement skill + coaching + cert baru"},
+    ],
+    grading: [
+      {skor: "90-100", grade: "A", color: "a", akibat: "Bonus +1 bulan + kandidat co-director"},
+      {skor: "75-89", grade: "B", color: "b", akibat: "Standar, eligible bonus reguler"},
+      {skor: "60-74", grade: "C", color: "c", akibat: "Coaching 1-on-1 + pembinaan 1 Q"},
+      {skor: "<60", grade: "D", color: "d", akibat: "Kontrak review + rotasi PIC senior"},
+    ]
+  },
+  fee_media: {
+    pilar: [
+      {nama: "Product Knowledge", bobot: "30%", desc: "Konten edukasi spek rumah, material, harga. Tunjukkan expertise internal."},
+      {nama: "Brand Awareness", bobot: "20%", desc: "Story behind-the-scene, tim, progres, testimoni. Bangun trust + recall."},
+      {nama: "Closing Trigger", bobot: "50%", desc: "CTA kuat, promo terbatas, urgency soft. Konten yang convert lead → closing."},
+    ]
+  },
+  pricing: [
+    {tier: "BRONZE", sub: "Tanpa Management", unit: 5, fee: 2750000, margin: "15-20%", resp: "Klien: lead + closing + berkas. Perusahaan: spek + sertifikat + BAST."},
+    {tier: "SILVER", sub: "Partial Management", unit: 6, fee: 3250000, margin: "20-25%", resp: "Klien: lead + closing. Perusahaan: proyek + admin + legal + after-sales."},
+    {tier: "GOLD", sub: "Full Management", unit: 7, fee: 3750000, margin: "25-35%", resp: "Perusahaan: SEMUA. Klien: review bulanan + strategic decision."},
+  ],
+  stb_wajib: [
+    {nama: "Report Harian", desc: "Auto dashboard internal. Mada konsolidasi, Rizal update progres harian, Amir kirim foto + catatan lapangan."},
+    {nama: "Notion Reminder", desc: "H-7, H-3, H-1, H-0 reminder ke Novita + Bu Nisya. Tidak ada yang miss deadline karena lupa."},
+    {nama: "Dokumen STB", desc: "Masa kadaluarsa maks 6 bulan. Hardcopy di Sinta, softcopy di Notion + Drive. BAST ditandatangani kedua pihak."},
+  ],
+  stb_punish: [
+    {jenjang: 1, konsekuensi: "Lembur hangus", trigger: "Telat report 1x", recovery: "Submit sebelum tutup hari"},
+    {jenjang: 2, konsekuensi: "Hari Minggu kerja", trigger: "Telat report 2x berturut", recovery: "Bukti progress 100%"},
+    {jenjang: 3, konsekuensi: "Visit konsumen + konten", trigger: "Telat report 3x", recovery: "Laporan konsumen verbatim"},
+    {jenjang: 4, konsekuensi: "Potong gaji 10%", trigger: "Telat report 4x", recovery: "Recovery plan 30 hari"},
+    {jenjang: 5, konsekuensi: "Kontrak review", trigger: "Telat report 5x / komplain klien", recovery: "Kontrak baru 3 bulan probasi"},
+  ],
+  manager: {
+    sifat: [
+      {nama: "Tertib & Disiplin", desc: "Manager V5 = contoh untuk tim. Datang tepat waktu, pakai sistem (dashboard, SOP), konsisten. Indikator: absensi 100%, dashboard real-time, audit finding manager = 0."},
+      {nama: "Memahami Karyawan & Atasan", desc: "Paham karakter + kekuatan + kelemahan bawahan. Tahu apa atasan mau. 1-on-1 tiap bulan. Assign task sesuai kekuatan, bukan random."},
+      {nama: "Generalis (Cross-Function)", desc: "Paham lintas divisi (marketing, proyek, media, admin, legal) di level overview. Bisa diskusi sama PIC tanpa gap. Paham financial/pricing/margin."},
+    ],
+    manager_list: [
+      {nama: "Mada", peran: "Chief of Staff · supervise 11 PIC + lintas fungsi", tier: "operasional"},
+      {nama: "Bu Nisya", peran: "Co-Director Legal · supervise Novita + audit", tier: "legal"},
+      {nama: "Rizal", peran: "Kepala Pelaksana · supervise Amir + mandor + subkon", tier: "proyek"},
+      {nama: "Reni", peran: "Ketua Media · supervise Rifki + Reta", tier: "media"},
+      {nama: "Riza", peran: "Senior Digital Marketing (jika promosi)", tier: "marketing"},
+    ]
+  },
+  glosarium: [
+    ["AHS", "Analisa Harga Satuan"], ["BAST", "Berita Acara Serah Terima"], ["BPN", "Badan Pertanahan Nasional"], ["BPJS", "Badan Penyelenggara Jaminan Sosial"],
+    ["CPL", "Cost Per Lead"], ["CS", "Customer Service"], ["CTA", "Call To Action"], ["FLPP", "Fasilitas Likuiditas Pembiayaan Perumahan"],
+    ["HPP", "Harga Pokok Penjualan / Produksi"], ["HR", "Human Resources"], ["IG", "Instagram"], ["JHT", "Jaminan Hari Tua"],
+    ["JP", "Jaminan Pensiun"], ["KPI", "Key Performance Indicator"], ["KPP", "Komunikasi Pemberkasan Pembayaran (admin)"], ["K3", "Keselamatan dan Kesehatan Kerja"],
+    ["MADA", "Mada (B10 PIC internal code)"], ["NIP", "Nomor Induk Pegawai"], ["OOH", "Out Of Home (advertising)"], ["PIC", "Person In Charge (penanggung jawab)"],
+    ["PIP", "Performance Improvement Plan"], ["PO", "Purchase Order"], ["PPh", "Pajak Penghasilan"], ["QC", "Quality Control"],
+    ["RAB", "Rencana Anggaran Biaya"], ["ROI", "Return On Investment"], ["SDM", "Sumber Daya Manusia"], ["SHM", "Sertifikat Hak Milik"],
+    ["SLA", "Service Level Agreement"], ["SOP", "Standard Operating Procedure"], ["SPK", "Surat Perintah Kerja"], ["SP3K", "Surat Penawaran Pemesanan Kredit (FLPP)"],
+    ["SSOT", "Single Source Of Truth"], ["STB", "Serah Terima Bangunan"], ["THR", "Tunjangan Hari Raya"], ["TT", "TikTok"],
+    ["UMR", "Upah Minimum Regional"], ["UTM", "Urchin Tracking Module (web analytics)"], ["WA", "WhatsApp"], ["KPR", "Kredit Pemilikan Rumah"],
+    ["LPB", "Laporan Penerimaan Barang"], ["RKS", "Rencana Kerja dan Syarat-Syarat"], ["BAP", "Berita Acara Pemeriksaan"], ["Retensi", "Potongan 5% ditahan 30 hari pasca BAST"],
+    ["Subkon", "Subkontraktor"], ["Mandor", "Ketua tukang di lapangan"], ["Cross-train", "Pelatihan skill lintas fungsi"], ["Polyvalent", "Mampu multi-skill (admin polyvalent)"],
+    ["Leaderboard", "Ranking internal per divisi"], ["Mel", "Istilah internal: insertif per file closing"], ["BAST 1", "BAST Tahap 1 (50% pekerjaan)"], ["BAST 2", "BAST Tahap 2 (100% pekerjaan)"],
+  ]
+};
+
+/* === RENDERERS === */
+function renderPIC() {
+  const grid = $("#pic-grid");
+  const data = FALLBACK.jd.pic_peran;
+  grid.innerHTML = data.map(p => {
+    const isB10 = p.tag.includes("B10");
+    return `
+      <div class="pic-card ${isB10 ? 'highlight' : ''}" role="listitem">
+        <div class="pic-header">
+          <div class="pic-avatar">${p.nama.split(' ').map(x => x[0]).slice(0,2).join('')}</div>
+          <div class="pic-info">
+            <div class="pic-name">${p.nama}</div>
+            <div class="pic-role">${p.title}</div>
+          </div>
+        </div>
+        <ul class="pic-tasks">
+          ${p.tasks.map(t => `<li>${t}</li>`).join('')}
+        </ul>
+        <span class="pic-tag">${p.tag}</span>
+      </div>`;
+  }).join('');
+}
+
+function renderLeaderboard() {
+  const grid = $("#leaderboard-grid");
+  const lb = FALLBACK.leaderboard;
+  const divisiMap = {
+    marketing: {nama: "MARKETING", color: "var(--accent)"},
+    proyek: {nama: "PROYEK", color: "var(--success)"},
+    media: {nama: "MEDIA", color: "var(--info)"},
+    admin: {nama: "ADMIN", color: "var(--warning)"},
+  };
+  let html = "";
+  for (const [key, list] of Object.entries(lb)) {
+    const meta = divisiMap[key];
+    html += `<div class="bento-card span-4">
+      <div class="bento-eyebrow" style="color:${meta.color}">${meta.nama}</div>
+      <div class="leaderboard">`;
+    list.forEach(p => {
+      const topClass = p.rank === 1 ? "top1" : p.rank === 2 ? "top2" : p.rank === 3 ? "top3" : "";
+      html += `<div class="lb-row">
+        <div class="lb-rank ${topClass}">#${p.rank}</div>
+        <div>
+          <div class="lb-name">${p.nama}</div>
+          <div class="lb-meta">${p.metrik_utama} · ${p.metrik_sekunder}</div>
+        </div>
+        <div class="lb-score tnum">${(p.score*100).toFixed(0)}<small>/100</small></div>
+      </div>`;
+    });
+    html += `</div></div>`;
+  }
+  grid.innerHTML = html;
+}
+
+function renderKPI() {
+  const grid = $("#kpi-dimensi");
+  const data = FALLBACK.kpi;
+  grid.style.gridTemplateColumns = "1fr";
+  grid.innerHTML = data.dimensi.map(d => `
+    <div class="bento-card span-4">
+      <div class="bento-eyebrow">Dimensi ${data.dimensi.indexOf(d)+1}</div>
+      <div style="display:flex;align-items:baseline;gap:var(--space-3);flex-wrap:wrap">
+        <div class="bento-title" style="margin-bottom:0">${d.nama}</div>
+        <div style="font-family:var(--font-mono);color:var(--accent);font-weight:600">${d.bobot}</div>
+      </div>
+      <div class="bento-foot" style="margin-top:var(--space-2)">${d.desc}</div>
+    </div>
+  `).join('');
+
+  const g = $("#kpi-grading");
+  g.innerHTML = data.grading.map(x => `
+    <div class="grade">
+      <div class="grade-letter ${x.color}">${x.grade}</div>
+      <div class="grade-info">
+        <div class="grade-score">${x.skor}</div>
+        <div class="grade-akibat">${x.akibat}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderFee() {
+  const grid = $("#fee-pilar");
+  const data = FALLBACK.fee_media;
+  grid.style.gridTemplateColumns = "1fr";
+  grid.innerHTML = data.pilar.map((p, i) => `
+    <div class="bento-card span-4">
+      <div class="bento-eyebrow">Pilar ${i+1}</div>
+      <div style="display:flex;align-items:baseline;gap:var(--space-3);flex-wrap:wrap">
+        <div class="bento-title" style="margin-bottom:0">${p.nama}</div>
+        <div style="font-family:var(--font-mono);color:var(--accent);font-weight:600">${p.bobot}</div>
+      </div>
+      <div class="bento-foot" style="margin-top:var(--space-2)">${p.desc}</div>
+    </div>
+  `).join('');
+}
+
+function renderPricing() {
+  const grid = $("#tier-grid");
+  const data = FALLBACK.pricing;
+  grid.innerHTML = data.map(t => {
+    const cls = t.tier === "SILVER" ? "silver" : t.tier === "GOLD" ? "gold" : "";
+    return `
+      <div class="tier-card ${cls}">
+        <div class="tier-name">${t.tier}</div>
+        <div class="tier-headline">${t.sub}</div>
+        <div class="tier-sub">${t.unit} unit/bulan cap</div>
+        <div class="tier-stat">
+          <span class="tier-stat-label">Fee closing/unit</span>
+          <span class="tier-stat-value">${fmtIDR(t.fee)}</span>
+        </div>
+        <div class="tier-stat">
+          <span class="tier-stat-label">Margin</span>
+          <span class="tier-stat-value">${t.margin}</span>
+        </div>
+        <div class="tier-foot">${t.resp}</div>
+      </div>`;
+  }).join('');
+}
+
+function renderSTB() {
+  $("#stb-wajib").innerHTML = FALLBACK.stb_wajib.map((s, i) => `
+    <div class="step">
+      <div class="step-num">${i+1}</div>
+      <div class="step-name">WAJIB ${i+1}</div>
+      <div class="step-title">${s.nama}</div>
+      <div class="step-desc">${s.desc}</div>
+    </div>
+  `).join('');
+
+  $("#stb-punish").innerHTML = FALLBACK.stb_punish.map(p => `
+    <tr>
+      <td class="num"><span class="pill ${p.jenjang >= 4 ? 'danger' : p.jenjang >= 2 ? 'warning' : 'info'}">J${p.jenjang}</span></td>
+      <td><strong>${p.konsekuensi}</strong></td>
+      <td>${p.trigger}</td>
+      <td>${p.recovery}</td>
+    </tr>
+  `).join('');
+}
+
+function renderManager() {
+  $("#manager-sifat").innerHTML = FALLBACK.manager.sifat.map((s, i) => `
+    <div class="step">
+      <div class="step-num">${i+1}</div>
+      <div class="step-name">SIFAT ${i+1}</div>
+      <div class="step-title">${s.nama}</div>
+      <div class="step-desc">${s.desc}</div>
+    </div>
+  `).join('');
+
+  $("#manager-list").innerHTML = FALLBACK.manager.manager_list.map(m => `
+    <div class="bento-card">
+      <div class="bento-eyebrow">${m.tier}</div>
+      <div class="bento-title">${m.nama}</div>
+      <div class="bento-foot">${m.peran}</div>
+    </div>
+  `).join('');
+}
+
+function renderGlosarium() {
+  $("#glosarium-list").innerHTML = FALLBACK.glosarium.map(([a, d]) => `
+    <div class="glos-item">
+      <div class="glos-akr">${a}</div>
+      <div class="glos-def">${d}</div>
+    </div>
+  `).join('');
+}
+
+/* === TRY FETCH SSOT, FALLBACK TO STATIC === */
+async function bootstrap() {
+  renderPIC(); renderLeaderboard(); renderKPI(); renderFee();
+  renderPricing(); renderSTB(); renderManager(); renderGlosarium();
+
+  let loaded = 0;
+  const targets = ["manager-standar", "harga-tier", "kpi-score-card", "bonus-scheme", "jd-lengkap-12-pic", "sop-stb", "hr-policy"];
+  for (const t of targets) {
+    const d = await loadJSON(t);
+    if (d) loaded++;
+  }
+  $("#ssot-loaded").textContent = loaded + "/" + targets.length + " JSON loaded · fallback OK";
+  if (loaded === targets.length) {
+    $("#ssot-count").textContent = "54";
+    $("#ssot-loaded").classList.add("pill", "success");
+  }
+}
+
+/* === NAV ACTIVE STATE === */
+function setupNav() {
+  const links = $$(".nav-link");
+  const sections = links
+    .map(l => $(l.getAttribute("href")))
+    .filter(Boolean);
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove("active"));
+        const active = links.find(l => l.getAttribute("href") === "#" + e.target.id);
+        if (active) active.classList.add("active");
+      }
+    });
+  }, {rootMargin: "-40% 0px -55% 0px"});
+  sections.forEach(s => obs.observe(s));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  bootstrap();
+  setupNav();
+});
+</script>
+</body>
+</html>

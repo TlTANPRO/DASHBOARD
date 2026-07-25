@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "name": "config-tier",
+    "version": "2.0",
+    "deskripsi": "5 tier target closing bulanan + tier aktif Q3 2026 | V2.0: tambah rules_of_management per meeting 24 Jul 2026."
+  },
+  "tier_list": [
+    {
+      "id": "conservatif",
+      "nama": "Conservatif",
+      "unit_per_bulan": 4,
+      "use_case": "Recovery / new PIC training"
+    },
+    {
+      "id": "realistis",
+      "nama": "Realistis",
+      "unit_per_bulan": 6,
+      "use_case": "Standar 22 Juli existing"
+    },
+    {
+      "id": "push",
+      "nama": "Push",
+      "unit_per_bulan": 8,
+      "use_case": "Tim solid, ads optimal"
+    },
+    {
+      "id": "stretch",
+      "nama": "Stretch",
+      "unit_per_bulan": 10,
+      "use_case": "Tim peak performance"
+    },
+    {
+      "id": "visioner",
+      "nama": "Visioner",
+      "unit_per_bulan": 12,
+      "use_case": "Ekspansi besar"
+    }
+  ],
+  "tier_aktif": "realistis",
+  "tier_aktif_metadata": {
+    "quarter": "Q3 2026",
+    "target_total_unit": 18,
+    "fee_per_closing": 3250000,
+    "revenue_q3_estimate": 10800000000
+  },
+  "rules_of_management": {
+    "deskripsi": "Output perusahaan ditentukan oleh density management. Tanpa management = capacity cap rendah. Dengan management penuh = capacity cap lebih tinggi.",
+    "no_management": {
+      "unit_per_bulan_cap": 5,
+      "fee_closing_idr": 2750000,
+      "kondisi": "Owner handle semua approval + cross-check. PIC tanpa delegation authority. SOP belum enforced. Audit belum jalan.",
+      "tier_setara": "Bronze"
+    },
+    "partial_management": {
+      "unit_per_bulan_cap": 6,
+      "fee_closing_idr": 3250000,
+      "kondisi": "Mada handle approval < 1jt, Bu Nisya handle legal. SOP setengah enforced. Audit mingguan parsial.",
+      "tier_setara": "Realistis (saat ini)"
+    },
+    "full_management": {
+      "unit_per_bulan_cap": 7,
+      "fee_closing_idr": 3750000,
+      "kondisi": "Mada approve <= 5jt. Bu Nisya approve kontrak <= 50jt. SOP enforced 100%. Audit mingguan + bulanan. Front office audit jalan. Coaching 3 pilar aktif.",
+      "tier_setara": "Silver/Gold"
+    },
+    "pricing_logic": "Fee closing naik seiring management density. Management = alat untuk cap lebih tinggi + fee lebih tinggi, bukan biaya tambahan.",
+    "checklist_ke_full_management": [
+      "Mada punya delegation authority approve <= 5jt (tercatat di struktur-organisasi.delegation_matrix)",
+      "Bu Nisya punya delegation authority kontrak <= 50jt",
+      "SOP 12-komponen enforced untuk minimal 8 SOP aktif",
+      "Audit cycle mingguan (Bu Nisya) + bulanan (Mada) berjalan 4 minggu berturut-turut",
+      "Coaching 3 pilar aktif minimal 1 PIC per kuartal",
+      "KPI Score Card ter-report otomatis ke owner setiap akhir minggu"
+    ],
+    "target_q3_2026": "Beralih dari partial (6 unit/bulan) ke full management (7 unit/bulan) sebelum akhir September 2026."
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "_meta": {
+    "name": "hpp-breakdown-68jt",
+    "version": "3.0",
+    "deskripsi": "HPP breakdown detail per unit tipe 36 FLPP. V4.2 (24 Jul 2026): HPP disederhanakan dari 73jt ke 68jt = 17jt borong-only (Sukardi) + 51jt material owner. Selaras dengan RAP Selo 68,25jt sebagai upper bound borong+material. Overhead 5jt dipisah ke GL 1-1090 Biaya Umum (bukan HPP unit).",
+    "ref": "content/v4-final/bab-51-hpp-breakdown-68jt.md + SPK MLS.xlsx sheet 'SPK MLS NEW' (Selo 68.25jt) + sheet '1' (Sukardi 17jt) + revisi 24 Jul 2026",
+    "referensi_rap": {
+      "sukardi_type_30_60_borong_only_idr": 17000000,
+      "sumber_sukardi": "SPK MLS.xlsx sheet '1' Mei 2026, dibulatkan dari 17.040.582",
+      "selo_type_36_borong_plus_material_idr": 68250000,
+      "sumber_selo": "SPK MLS.xlsx sheet 'SPK MLS NEW' Mei 2026, dibulatkan dari 68.268.708",
+      "gap_explanation": "V4.2 HPP 68jt = 17jt borong-only (Sukardi pattern) + 51jt material owner. Match dengan RAP Selo 68,25jt (borong+material paket) sebagai referensi harga. Selisih 250rb = margin negosiasi owner. V4.1 (73jt) deprecated — overhead 5jt pindah ke GL 1-1090 Biaya Umum, bukan HPP unit. Pagar+kanopi (7,9jt) tetap di GL 1-5020 Pagar dan Paving (Land Improvement)."
+    }
+  },
+  "ringkasan": {
+    "total_hpp_idr": 68000000,
+    "tipe_rumah": "Tipe 36/72 (36 m2 bangunan, 72 m2 luas tanah)",
+    "lokasi_referensi": "Mustika Lembayung Sumbersuko, Lumajang (cluster aktif 2026)",
+    "estimasi_durasi_konstruksi_bulan": 2,
+    "estimasi_durasi_konstruksi_hari_kerja": 48,
+    "sumber_material": "Supplier lokal (semen dari Tiga Roda, besi dari Krakatau Steel, keramik dari Mulia, granit dari Ceranosa, cat dari Vinilex/Nippon)",
+    "breakdown_3_komponen": {
+      "borong_kerja_idr": 17000000,
+      "material_owner_idr": 51000000,
+      "overhead_idr": 0,
+      "share_borong_pct": 25.0,
+      "share_material_pct": 75.0,
+      "share_overhead_pct": 0.0,
+      "catatan_overhead": "Overhead 5jt (V4.1) dipisah ke GL 1-1090 Biaya Umum (transport, izin, utilitas) — bukan HPP unit. RAP Selo 68,25jt = borong+material paket = HPP match."
+    }
+  },
+  "breakdown_10_pos": [
+    {
+      "pos": "1. Material Pokok (semen, besi, batu bata, pasir, kerikil)",
+      "total_idr": 24000000,
+      "share_pct": 35.3,
+      "ref_rap_selo": "B. Pekerjaan Tanah+Pondasi (4,379,334) + sebagian E. Struktur (5jt) + sebagian C. Pasangan (campuran semen spesi 15jt)",
+      "catatan_v4_2": "V4.1: 29jt. V4.2: turun 5jt jadi 24jt — pattern RAP Selo borong+material lebih hemat karena volume semen+besi dioptimasi. Selo pakai 150 sak semen (bukan 180) + 550 kg besi (bukan 700) untuk type 36 FLPP. Hemat 5jt = selisih yang sebelumnya jadi overhead V4.1.",
+      "item_detail": [
+        {"item": "Semen (PC 50 kg)", "qty": 150, "satuan": "sak", "harga_satuan_idr": 60000, "total_idr": 9000000, "supplier": "Tiga Roda via Toko Bangunan Maju (bulk price)"},
+        {"item": "Besi beton (8mm, 10mm, 12mm)", "qty": 550, "satuan": "kg", "harga_satuan_idr": 16000, "total_idr": 8800000, "supplier": "Krakatau Steel via Toko Besi Jaya"},
+        {"item": "Batu bata merah", "qty": 4000, "satuan": "buah", "harga_satuan_idr": 800, "total_idr": 3200000, "supplier": "Pabrik Batu Bata Sumberjo"},
+        {"item": "Pasir cor", "qty": 5, "satuan": "kubik", "harga_satuan_idr": 250000, "total_idr": 1250000, "supplier": "Penenun Pasir"},
+        {"item": "Kerikil/split", "qty": 5, "satuan": "kubik", "harga_satuan_idr": 200000, "total_idr": 1000000, "supplier": "Penenun Pasir"},
+        {"item": "Bata ringan (material pasangan dinding, sesuai Selo type 36 spesi 1 PC : 3 PS)", "qty": 1, "satuan": "m3", "harga_satuan_idr": 750000, "total_idr": 750000, "supplier": "Hebel / setara"}
+      ]
+    },
+    {
+      "pos": "2. Material Atap + Plafon",
+      "total_idr": 9000000,
+      "share_pct": 12.3,
+      "ref_rap_selo": "F. Penutup Atap (5,866,060) + G. Langit-langit (2,033,000) + sebagian D. Pintu+Jendela",
+      "item_detail": [
+        {"item": "Genteng (Plentong S)", "qty": 1200, "satuan": "buah", "harga_satuan_idr": 4500, "total_idr": 5400000, "supplier": "Genteng Karangpilang"},
+        {"item": "Rangka atap (hollow galvanis)", "qty": 1, "satuan": "set", "harga_satuan_idr": 2500000, "total_idr": 2500000, "supplier": "Toko Besi Jaya"},
+        {"item": "Plafon gypsum (incl. rangka hollow)", "qty": 36, "satuan": "m2", "harga_satuan_idr": 30000, "total_idr": 1080000, "supplier": "Mulia Gypsum"}
+      ]
+    },
+    {
+      "pos": "3. Material Lantai + Dinding Finishing",
+      "total_idr": 6500000,
+      "share_pct": 8.9,
+      "ref_rap_selo": "I. Lantai+Dinding (4,043,121) + K. Pengecatan (2,301,700) + sebagian C. Pasangan (keramik dinding 977,600)",
+      "item_detail": [
+        {"item": "Keramik lantai 40x40 (mulia)", "qty": 36, "satuan": "m2", "harga_satuan_idr": 75000, "total_idr": 2700000, "supplier": "Mulia Ceramics"},
+        {"item": "Keramik dinding KM 25x40", "qty": 16, "satuan": "m2", "harga_satuan_idr": 85000, "total_idr": 1360000, "supplier": "Mulia Ceramics"},
+        {"item": "Cat tembok interior + eksterior (Nippon Paint)", "qty": 4, "satuan": "pail", "harga_satuan_idr": 350000, "total_idr": 1400000, "supplier": "Nippon Paint"},
+        {"item": "Plamir + ampelas + alat", "qty": 1, "satuan": "lot", "harga_satuan_idr": 400000, "total_idr": 400000, "supplier": "Toko Bangunan"},
+        {"item": "Keramik teras + carport (40x40)", "qty": 12, "satuan": "m2", "harga_satuan_idr": 75000, "total_idr": 900000, "supplier": "Mulia Ceramics"}
+      ]
+    },
+    {
+      "pos": "4. Material Kusen, Pintu, Jendela",
+      "total_idr": 5800000,
+      "share_pct": 7.9,
+      "ref_rap_selo": "D. Pintu+Jendela (4,717,581) + sebagian J. Kunci+Kaca (344,407)",
+      "item_detail": [
+        {"item": "Kusen pintu utama (kayu jati)", "qty": 1, "satuan": "set", "harga_satuan_idr": 1500000, "total_idr": 1500000, "supplier": "UD Sumber Rezeki"},
+        {"item": "Kusen pintu kamar (kayu kamper)", "qty": 3, "satuan": "set", "harga_satuan_idr": 600000, "total_idr": 1800000, "supplier": "UD Sumber Rezeki"},
+        {"item": "Kusen jendela (kayu kamper)", "qty": 4, "satuan": "set", "harga_satuan_idr": 400000, "total_idr": 1600000, "supplier": "UD Sumber Rezeki"},
+        {"item": "Daun pintu (engineering door)", "qty": 4, "satuan": "set", "harga_satuan_idr": 200000, "total_idr": 800000, "supplier": "Toko Bangunan"}
+      ]
+    },
+    {
+      "pos": "5. Instalasi Listrik",
+      "total_idr": 2500000,
+      "share_pct": 3.4,
+      "ref_rap_selo": "L. Listrik (3,706,400) - meteran listrik 1,8jt, lampu 1,4jt, saklar/stop kontak 1,1jt, MCB 0,2jt",
+      "item_detail": [
+        {"item": "Kabel listrik (Nymhy 2x1.5, 2x2.5)", "qty": 1, "satuan": "lot", "harga_satuan_idr": 800000, "total_idr": 800000, "supplier": "Eterna"},
+        {"item": "Panel MCB (8 group + box)", "qty": 1, "satuan": "set", "harga_satuan_idr": 350000, "total_idr": 350000, "supplier": "Schneider"},
+        {"item": "Stop kontak, saklar, fitting lampu", "qty": 1, "satuan": "lot", "harga_satuan_idr": 800000, "total_idr": 800000, "supplier": "Broco"},
+        {"item": "Lampu LED 9-12W", "qty": 8, "satuan": "buah", "harga_satuan_idr": 50000, "total_idr": 400000, "supplier": "Philips"},
+        {"item": "Grounding + kawat petir", "qty": 1, "satuan": "set", "harga_satuan_idr": 150000, "total_idr": 150000, "supplier": "Internal"}
+      ]
+    },
+    {
+      "pos": "6. Instalasi Air Bersih + Air Kotor + Septic",
+      "total_idr": 3200000,
+      "share_pct": 4.4,
+      "ref_rap_selo": "H. Sanitasi (4,550,400) - kloset 0,24jt, pipa PVC 1,3jt, kran 0,16jt, floor drain 0,11jt, kitchen zinc 0,18jt, kompor tanam 0,6jt, septitank 0,65jt, sumur bor+pompa 1,31jt",
+      "item_detail": [
+        {"item": "Pipa PVC 1/2\" + 3/4\" + 1\"", "qty": 1, "satuan": "lot", "harga_satuan_idr": 700000, "total_idr": 700000, "supplier": "Wavin"},
+        {"item": "Pipa PVC 4\" (air kotor)", "qty": 1, "satuan": "lot", "harga_satuan_idr": 400000, "total_idr": 400000, "supplier": "Wavin"},
+        {"item": "Septic tank (fiberglass 1.5m3)", "qty": 1, "satuan": "unit", "harga_satuan_idr": 1200000, "total_idr": 1200000, "supplier": "Septic Lokal"},
+        {"item": "Kran, shower, closet, wastafel (kamar mandi)", "qty": 1, "satuan": "set", "harga_satuan_idr": 700000, "total_idr": 700000, "supplier": "Toto Set"},
+        {"item": "Toren air 550 liter", "qty": 1, "satuan": "unit", "harga_satuan_idr": 200000, "total_idr": 200000, "supplier": "Lokal"}
+      ]
+    },
+    {
+      "pos": "7. Upah Tukang + Mandor (Subkon Borongan)",
+      "total_idr": 17000000,
+      "share_pct": 23.3,
+      "ref_rap_sukardi": "Borong murni type 30/60 Rp 17.000.000 (Sukardi Mei 2026, 50 OH, SPK 025/PT.MLS/SPK.SUMBERSUKO/V/2026)",
+      "ref_rap_selo": "Borong+material full type 36 Rp 68.250.000 (Selo, 48 OH, SPK 024/PT.MLS/SPK.SUMBERSUKO/V/2026). 17jt = borong-only, 68.25jt = borong+material paket.",
+      "catatan_v4_1": "V4.0: upah 'net' 9.5jt (5 bulan). V4.1: revisi jadi 17jt sesuai RAP Sukardi type 30/60 (1 unit, 50 OH). 17jt = borong-only pattern. Type 36 (Selo) = 68.25jt = borong+material paket. Pilih pattern borong-only, owner sediakan material terpisah (lihat pos 1-6).",
+      "item_detail": [
+        {"item": "Subkon borongan 1 unit rumah type 30/60 atau 36 (full paket pekerjaan fisik 48-50 hari kerja)", "qty": 1, "satuan": "unit", "harga_satuan_idr": 17000000, "total_idr": 17000000, "supplier": "Pemborong eksternal (Sukardi/Iqbal/Selo pattern), diseleksi via RFQ + vendor scorecard (Lampiran 20)"},
+        {"item": "Mandor internal pengawas Rizal", "qty": 0, "satuan": "include", "harga_satuan_idr": 0, "total_idr": 0, "supplier": "Internal (sudah ditugaskan Pak Ardian, tidak dipotong dari subkon)", "catatan": "Fee mandor internal masuk ke gaji bulanan Rizal, tidak double-count di HPP unit"},
+        {"item": "Tools + sewa alat kerja", "qty": 1, "satuan": "lot", "harga_satuan_idr": 0, "total_idr": 0, "supplier": "Tanggungan pemborong (per SPK Pasal 1 ayat 4d)", "catatan": "Termasuk dalam 17jt subkon"}
+      ],
+      "justifikasi": "17jt diambil dari RAP Sukardi type 30/60 (Mei 2026) sebagai baseline borong-only. Selo type 36 = 68.25jt sebagai upper bound QC. Iqbal type 30/60 = 18jt sebagai cross-check. Selisih antar vendor 17-18jt wajar karena perbedaan skill dan track record.",
+      "vendor_comparison": {
+        "sukardi_mei_2026": {"harga_idr": 17000000, "lokasi": "Argosari Senduro", "tipe": "30/60", "waktu_oh": 50, "spek_full": true},
+        "iqbal_agustus_2025": {"harga_idr": 18000000, "lokasi": "Sumbersuko", "tipe": "30/60", "waktu_oh": 53, "catatan": "ada 4 addendum (B2/B12/B15/B16) = spek awal kurang detail"},
+        "selo_mei_2026": {"harga_idr": 68250000, "lokasi": "Kayugedang Bodang", "tipe": "36", "waktu_oh": 48, "catatan": "BORONG + MATERIAL FULL PAKET, bukan borong-only"},
+        "huda_2023": {"harga_idr": 54237441, "lokasi": "Kencong", "tipe": "30", "waktu_hari_kerja": 35, "catatan": "Griya Syahfalah Kencong, proyek lama 2023"}
+      }
+    },
+    {
+      "pos": "8. Pagar + Kanopi (Type 36, MUSTIKA LEMBAYUNG - owner separate budget)",
+      "total_idr": 0,
+      "share_pct": 0.0,
+      "ref_rap_selo": "II. Pagar+Kanopi (7,951,247) - ada di RAP Selo tapi di HPP Buku Saku dipisahkan karena GL post sebagai Capitalized Land Improvement, bukan Unit Cost",
+      "catatan_v4_1": "V4.0 pos 8 = 2,2jt (subkon pagar+kanopi). V4.1: pindah ke pos terpisah owner budget karena: (a) pagar+kanopi adalah site improvement yang bisa di-batch lintas unit; (b) akunting GL post ke akun 'Pagar dan Paving' bukan 'Bangunan'; (c) owner punya budget sendiri untuk pagar 1 cluster sekaligus, bukan per-unit. Di Buku Saku dirinci di Lampiran N (AHS Selo II.)",
+      "item_detail": [
+        {"item": "TIDAK termasuk HPP per-unit (Type 36)", "qty": 0, "satuan": "n/a", "harga_satuan_idr": 0, "total_idr": 0, "supplier": "n/a", "catatan": "Lihat Lampiran N untuk detail AHS Pagar+Kanopi type 36 = 7,9jt (II. Pagar+Kanopi)"},
+        {"item": "Akun GL: 1-5020 Pagar dan Paving (Capitalized)", "qty": 0, "satuan": "GL", "harga_satuan_idr": 0, "total_idr": 0, "supplier": "n/a", "catatan": "Dibebankan ke owner sebagai Land Improvement, di-depresiasi 10 tahun"}
+      ]
+    },
+    {
+      "pos": "9. Overhead (sudah include di pos 7 subkon borong)",
+      "total_idr": 0,
+      "share_pct": 0.0,
+      "catatan_v4_1": "V4.0: 0,8jt (transport, izin, utilitas). V4.1: 0 karena per SPK Selo Pasal 1 ayat 4b: 'Transportasi dan akomodasi sampai pekerjaan selesai' menjadi tanggungan pemborong. IMB = owner-provided (di pos terpisah owner budget).",
+      "item_detail": [
+        {"item": "Transport material", "qty": 0, "satuan": "include", "harga_satuan_idr": 0, "total_idr": 0, "supplier": "Tanggungan pemborong (SPK Pasal 1 ayat 4b)"},
+        {"item": "Listrik + air sementara", "qty": 0, "satuan": "include", "harga_satuan_idr": 0, "total_idr": 0, "supplier": "Tanggungan pemborong"},
+        {"item": "IMB + izin-izin", "qty": 0, "satuan": "owner", "harga_satuan_idr": 0, "total_idr": 0, "supplier": "Owner-provided (bukan HPP unit)"}
+      ]
+    },
+    {
+      "pos": "10. Buffer Risiko (5% = 3,65jt) - TIDAK masuk HPP baseline",
+      "total_idr": 0,
+      "share_pct": 0.0,
+      "keterangan": "V4.0: 0,5jt include. V4.1: buffer naik 7x jadi 3,65jt (5% × 73jt) tapi dipisahkan dari HPP karena: (a) HPP 73jt = nilai kontrak fix ke user, (b) buffer = cadangan kontingensi owner yang tidak ditagihkan ke customer. Akunting GL: 1-9010 Cadangan Risiko Konstruksi.",
+      "trigger_pakai": "Sinta + Rizal + Pak Ardian approve pakai, dengan nota evidence (foto, kwitansi, log). Klaim bisa dari 3 sumber: addendum (contoh B2/B12/B15/B16 = -119.564 per addendum), klaim material (contoh 838.500 untuk B2-B16), atau defect rework.",
+      "buffer_total_tersedia_idr": 3650000,
+      "contoh_penggunaan_historical": [
+        {"event": "Addendum B2/B12/B15/B16 (Selo, 2025)", "nilai_idr": -478259, "deskripsi": "Pengurangan volume plesteran+acian+cat, 4 addendum x 119.564"},
+        {"event": "Klaim material B2-B16 (Selo, Des 2025)", "nilai_idr": 838500, "deskripsi": "Kuas, semen putih, lem rajawali, bendrat"}
+      ]
+    }
+  ],
+  "validasi_total": {
+    "sum_total_idr": 68000000,
+    "actual_idr": 68000000,
+    "catatan": "Total aktual 68jt match breakdown: 17jt borong (pos 7) + 51jt material owner (pos 1-6) = 68jt. Pos 8 (pagar) + pos 9 (overhead) + pos 10 (buffer) dipisahkan dari HPP unit karena masing-masing punya GL post owner terpisah. Overhead 5jt V4.1 dipindah ke GL 1-1090 Biaya Umum."
+  },
+  "margin_analisa": {
+    "harga_jual_idr": 166000000,
+    "hpp_idr": 68000000,
+    "gross_margin_idr": 98000000,
+    "gross_margin_pct": 59.0,
+    "fee_marketing_per_unit_idr": 3250000,
+    "fee_closing_mada_bonus_idr": 1500000,
+    "net_after_marketing_idr": 93250000,
+    "net_margin_pct": 56.2,
+    "operasional_pic_pct": 16.6,
+    "operasional_pic_per_unit_idr": 27500000,
+    "net_operational_profit_idr": 65750000,
+    "net_operational_margin_pct": 39.6,
+    "catatan": "V4.2 margin naik ke 39.6% (sebelum pajak, dividen, reinvest) karena HPP turun dari 73jt ke 68jt. Lebih sehat untuk industri property. Overhead 5jt jadi biaya umum (GL 1-1090), bukan HPP unit."
+  }
+}

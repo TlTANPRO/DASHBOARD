@@ -1,0 +1,182 @@
+{
+  "_meta": {
+    "name": "termin-pembayaran-selo",
+    "version": "1.0",
+    "deskripsi": "Skema pembayaran 7 termin + retensi untuk SPK type 36 Blok A-2 Mustika Lembayung Sumbersuko, pemborong Selo. Sumber: SPK MLS.xlsx sheet 'Sheet1'. V4.1 - Lampiran P.",
+    "ref": "C:\\Users\\Syahfalah\\Downloads\\SPK MLS.xlsx, sheet 'Sheet1'",
+    "kontrak": "024/PT.MLS/SPK.SUMBERSUKO/V/2026"
+  },
+  "skema_termin": [
+    {
+      "termin_ke": 1,
+      "label": "PROGRESS 15%",
+      "nilai_idr": 9600000,
+      "share_pct": 14.07,
+      "tipe": "Progress Pembangunan",
+      "catatan_kumulatif": "Setelah progress 15% verified"
+    },
+    {
+      "termin_ke": 2,
+      "label": "PROGRESS 30%",
+      "nilai_idr": 9600000,
+      "share_pct": 14.07,
+      "tipe": "Progress Pembangunan",
+      "catatan_kumulatif": "Setelah progress 30% verified"
+    },
+    {
+      "termin_ke": 3,
+      "label": "PROGRESS 45%",
+      "nilai_idr": 9600000,
+      "share_pct": 14.07,
+      "tipe": "Progress Pembangunan",
+      "catatan_kumulatif": "Setelah progress 45% verified"
+    },
+    {
+      "termin_ke": 4,
+      "label": "PROGRESS 60%",
+      "nilai_idr": 9600000,
+      "share_pct": 14.07,
+      "tipe": "Progress Pembangunan",
+      "catatan_kumulatif": "Setelah progress 60% verified"
+    },
+    {
+      "termin_ke": 5,
+      "label": "PROGRESS 75%",
+      "nilai_idr": 9600000,
+      "share_pct": 14.07,
+      "tipe": "Progress Pembangunan",
+      "catatan_kumulatif": "Setelah progress 75% verified"
+    },
+    {
+      "termin_ke": 6,
+      "label": "PROGRESS 90%",
+      "nilai_idr": 9600000,
+      "share_pct": 14.07,
+      "tipe": "Progress Pembangunan",
+      "catatan_kumulatif": "Setelah progress 90% verified"
+    },
+    {
+      "termin_ke": 7,
+      "label": "PROGRESS 100% (STB)",
+      "nilai_idr": 6400000,
+      "share_pct": 9.38,
+      "tipe": "Serah Terima Bangunan",
+      "catatan_kumulatif": "Setelah STB (Serah Terima Bangunan) Pihak Kedua ke Pihak Pertama"
+    },
+    {
+      "termin_ke": 8,
+      "label": "RETENSI 5%",
+      "nilai_idr": 4250000,
+      "share_pct": 6.23,
+      "tipe": "Retensi Garansi",
+      "catatan_kumulatif": "Dibayarkan 1 bulan setelah BAST ke pemilik rumah (masa garansi)"
+    }
+  ],
+  "ringkasan": {
+    "jumlah_termin": 7,
+    "retensi_pct": 5,
+    "total_termin_15_sampai_90_pct": 57600000,
+    "total_stb": 6400000,
+    "total_retensi": 4250000,
+    "grand_total_idr": 68250000
+  },
+  "checklist_per_termin": {
+    "1_PROGRESS_15": {
+      "bobot_pct": 14.07,
+      "item_pekerjaan": [
+        "Pek. Pembersihan Lahan (0.84%)",
+        "Pek. Pengukuran dan Bowplank (0.53%)",
+        "Pek. Pasang pondasi batu kali 1 PC : 6 PS (4.27%)",
+        "Urug tanah Kembali (1.69%)",
+        "Pek. Galian Tanah Biasa (0.46%)",
+        "Pek. Sloof 10/20 (0.97%)",
+        "Pek. Pasang Pipa PVC 3\" (1.28%)",
+        "Pek. Sumur Bor dan Pengadaan Pompa Air (1.92%)",
+        "Pek. Pasang Septitank (0.95%)",
+        "Pasangan dinding bata ringan tebal 10 cm - tinggi 75 cm (2.65%)"
+      ]
+    },
+    "2_PROGRESS_30": {
+      "bobot_pct": 15.63,
+      "item_pekerjaan": [
+        "Pasangan dinding bata ringan tebal 10 cm - lanjutan (11.48%)",
+        "Pek. Kolom Praktis 10/10 - ter-cor separuh (0.73%)",
+        "Pek. Kolom Utama 20/20 - ter-cor separuh (1.43%)",
+        "Pek. Kusen & Daun Pintu Uk. 90 - kusen terpasang (0.44%)",
+        "Pek. Daun Pintu Uk. 80 - kusen terpasang (0.96%)",
+        "Pek. Daun Jendela Uk. 50x150 - kusen terpasang (0.34%)",
+        "Roster Uk. 40x70 - finish (0.24%)"
+      ]
+    },
+    "3_PROGRESS_45": {
+      "bobot_pct": 15.61,
+      "item_pekerjaan": [
+        "Pek. Ringbalk 25/10 - finish (3.40%)",
+        "Plesteran 1 PC : 8 PS tebal 15 mm - finish (7.04%)",
+        "Acian dan Plamir - finish acian (3.02%)",
+        "Pek. Kolom Utama 20/20 - finish (1.43%)",
+        "Pek. Kolom Praktis 10/10 - finish (0.73%)"
+      ]
+    },
+    "4_PROGRESS_60": {
+      "bobot_pct": 11.57,
+      "item_pekerjaan": [
+        "Pekerjaan Penutup Atap (Rangka Galvalum, Spandek, Talang) - finish (8.59%)",
+        "Memasang Plafond Kalsiboard + Rangka Hollow 20/40 - finish (2.98%)",
+        "Pek. Pasangan Batako Pagar Samping - 50%",
+        "Pek. Pasangan Batako Pagar Depan & Roster - 50%",
+        "Pek. Ringbalk 25/10 - finish",
+        "Pek. Plate Topi-topi 300x60x8 - finish",
+        "Pek. Dag Cor Atap - finish",
+        "Pek. Acian Dan Plamir Langit-langit - finish",
+        "Pek. Lantai Granit 60x60 Putih Merk Ceranosa - finish"
+      ]
+    },
+    "5_PROGRESS_75": {
+      "bobot_pct": 11.5,
+      "item_pekerjaan": [
+        "Pek. Pasangan Batako Pagar Samping - finish",
+        "Pek. Pasangan Batako Pagar Depan & Roster - finish",
+        "Pek. Daun Pintu Uk. 90 (Handle Standart) - finish",
+        "Pek. Daun Pintu Uk. 80 (Handle Standart) - finish",
+        "Pek. Daun Jendela Uk. 50x150 (Grendel, Hak Angin) - finish",
+        "Pek. Kusen dan Daun Jendela Aluminium - finish",
+        "Roster Uk. 40x70 - finish",
+        "Pintu KM/WC warna putih - finish",
+        "Pek. Pasang Kloset Jongkok warna putih Merk Duty - finish",
+        "Pek. Pasang Kran 1/2\" - finish",
+        "Pek. Pasang Floor Drain Standard - finish",
+        "Pek. Pemasangan Kitchen Zink - finish",
+        "Pek. Pemasangan Kran Angsa 1/2\" - finish",
+        "Pek. Finishing Cat - finish",
+        "Pek. Keramik Dinding 25x40 Putih KM/WC - finish",
+        "Pek. Lantai Keramik KM 25x25 - finish",
+        "Pek. Rabat Kasar 5x3 tebal 10 cm - finish",
+        "Pek. Lantai Granit 60x60 Abu-abu Merk Teras - finish",
+        "Pasang MCB 6A & Panel Box - finish",
+        "1 Titik Pasang stop kontak - finish",
+        "1 Titik Pasang saklar tunggal - finish",
+        "1 Titik Pasang saklar ganda - finish",
+        "Pasang lampu PL 11 Watt - finish",
+        "Pasang Lampu Gantung 11 Watt - finish"
+      ]
+    }
+  },
+  "akumulasi_material_owner": {
+    "catatan": "Material yang disediakan owner untuk progres pembangunan, total Rp 26.163.000 (granit, keramik, cat, mortar, besi, semen, pasir, bata ringan, jendela aluminium, pintu, kanal C, reng, spandek, lem rajawali, keramik KM, kloset, pintu KM, acc listrik, meteran listrik, kompor, pompa).",
+    "rincian_grup": [
+      {"grup": "UPAH (Progress Pembangunan)", "nilai_idr": 18163000, "share_pct": 69.4},
+      {"grup": "MATERIAL OWNER", "nilai_idr": 8000000, "share_pct": 30.6, "item_contoh": ["Besi 8 (6 btg × 58.000)", "Besi 6 (5 btg × 35.000)", "Semen (25 zak × 46.000)", "Pasir (1 m3 × 950.000)", "Bt. Ringan (2 m3 × 670.000)"]},
+      {"grup": "AKUMULASI PROGRESS 15%-100% (Upah+Material)", "nilai_idr": 26163000, "share_pct": 100}
+    ]
+  },
+  "prosedur_pencairan_termin": {
+    "langkah_1": "Pemborong kerjakan progress + laporkan via WA grup dengan foto Before-After + checklist item",
+    "langkah_2": "Pengawas (Rizal) verifikasi progress di lokasi, hitung presentase aktual, cocokkan dengan bobot termin",
+    "langkah_3": "Tim Teknik (Rizal + Amir) tanda tangan Form Verifikasi Progress (lamp-23)",
+    "langkah_4": "Owner (Pak Ardian) approve via WA/telepon",
+    "langkah_5": "Finance (Bu Nisya) transfer sesuai termin, potong PPh Final 0.5% untuk pekerjaan konstruksi",
+    "langkah_6": "Bukti transfer + Form Verifikasi diarsipkan ke Google Drive folder 'Konstruksi/[Blok]/Termin-[ke]'",
+    "SLA": "Maksimal 3 hari kerja dari pengajuan sampai transfer"
+  }
+}

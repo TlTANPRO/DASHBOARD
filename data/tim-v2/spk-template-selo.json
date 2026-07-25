@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "name": "spk-template-selo",
+    "version": "1.0",
+    "deskripsi": "Template SPK pembangunan rumah type 36 Blok A-2 Mustika Lembayung Sumbersuko, 7 pasal + klausul tambahan. Sumber: SPK MLS.xlsx sheet 'SPK MLS NEW'. V4.1 - Lampiran Q.",
+    "ref": "C:\\Users\\Syahfalah\\Downloads\\SPK MLS.xlsx, sheet 'SPK MLS NEW' rows 1-200",
+    "tanggal_spk": "2026-05-16",
+    "nomor_spk": "024/PT.MLS/SPK.SUMBERSUKO/V/2026"
+  },
+  "pihak": {
+    "pihak_pertama": {
+      "label": "PIHAK PERTAMA (Owner / Pemberi Kerja)",
+      "nama": "Achmad Ardiansyah",
+      "jabatan": "Direktur PT. Lembayung Wanantara Padha",
+      "alamat_ktp": "Jalan Bondoyudo No. 55 Rogotrunan, Kec. Lumajang, Kab. Lumajang",
+      "nik": "3508101110920004",
+      "perusahaan": "PT. Lembayung Wanantara Padha"
+    },
+    "pihak_kedua": {
+      "label": "PIHAK KEDUA (Pemborong / Pelaksana)",
+      "nama": "Selo",
+      "alamat_ktp": "Kayugedang, Bodang, Kec. Padang, Kabupaten Lumajang Jawa Timur 67352",
+      "no_hp": "0823-0220-2269",
+      "tugas": "Pemborong Kerja Bangunan"
+    }
+  },
+  "pekerjaan": {
+    "label": "Objek Pekerjaan",
+    "uraian": "Pelaksanaan Pekerjaan Pembangunan Rumah Type 36 Blok A-2 Mustika Lembayung",
+    "lokasi": "Mustika Lembayung Sumbersuko, Kabupaten Lumajang",
+    "tipe": "36/60 (Blok A-2)"
+  },
+  "pasal_pasal": [
+    {
+      "no": 1,
+      "judul": "SYARAT PEKERJAAN DAN PELAKSANAAN",
+      "poin": [
+        "Hasil pekerjaan harus baik, rapi, kuat, aman dan sampai dapat diterima Pihak Pertama.",
+        "Pekerjaan harus sesuai dengan spesifikasi kesepakatan awal yang diminta oleh Pihak Pertama, yang sebagaimana tertera pada Kolom Spesifikasi pada tabel Pekerjaan di bawah dan gambar terlampir.",
+        "Sesuai dengan batasan lingkup pekerjaan dan petunjuk pelaksanaan dari Pihak Pertama, yang telah diterima dan dimengerti oleh Pihak Kedua.",
+        "Termasuk ke dalam lingkup pekerjaan dan kewajiban Pihak Kedua adalah: (a) Pengadaan Tenaga Kerja yang terampil di bidangnya dan peralatan bantu kerja dalam jumlah yang cukup serta layak digunakan; (b) Transportasi dan akomodasi sampai pekerjaan selesai dengan baik; (c) Menjaga keselamatan kerja para pekerjanya dan menanggung beban biaya jika terjadi kecelakaan kerja di lokasi pekerjaan; (d) Mampu menyediakan alat penunjang pekerjaan sesuai dengan kebutuhan di lapangan.",
+        "Pelaksanaan pembangunan oleh Pihak Kedua akan dilakukan per jenis pekerjaan dengan mengacu pada Surat Order Membangun (SOM) yang diterbitkan oleh Pihak Pertama."
+      ]
+    },
+    {
+      "no": 2,
+      "judul": "JANGKA WAKTU PELAKSANAAN",
+      "poin": [
+        "Pihak Kedua sanggup menyelesaikan pekerjaan dengan jangka waktu 8 Minggu atau 48 Hari Kerja untuk 1 unit bangunan rumah.",
+        "Pihak Kedua mengerjakan pekerjaan sesuai dengan Surat Order Membangun (SOM) dari Pihak Pertama dengan batasan waktu sesuai yang tertera pada tabel Pekerjaan di bawah."
+      ]
+    },
+    {
+      "no": 3,
+      "judul": "LINGKUP PEKERJAAN",
+      "poin": [
+        "Lingkup pekerjaan Pembangunan Rumah Type 36 Blok A-2 Mustika Lembayung Sumbersuko terdiri dari 12 kategori pekerjaan (A sampai L) untuk Rumah Inti, ditambah II. Pekerjaan Pagar Depan dan Kanopi.",
+        "A. Pekerjaan Persiapan dan Bongkaran; B. Pekerjaan Tanah dan Pondasi; C. Pekerjaan Pasangan; D. Pintu dan Jendela; E. Pekerjaan Struktur; F. Pekerjaan Penutup Atap; G. Pekerjaan Langit-langit; H. Pekerjaan Sanitasi; I. Pekerjaan Lantai dan Dinding; J. Pekerjaan Kunci dan Kaca; K. Pekerjaan Pengecatan; L. Pekerjaan Listrik.",
+        "II. Pekerjaan Pagar Depan dan Kanopi meliputi: II.A Pasangan; II.B Struktur; II.C Lantai dan Dinding; II.D Penutup Atap; II.E Pengecatan; II.F Listrik."
+      ]
+    },
+    {
+      "no": 4,
+      "judul": "PEMBAYARAN",
+      "poin": [
+        "Pembayaran oleh Pihak Pertama kepada Pihak Kedua dilakukan per Termin sebesar 15%; sebagaimana progres sebagai berikut: 15% - 30% - 45% - 60% - 75% - 90%, 10% sisanya akan dibayarkan setelah STB (Serah Terima Bangunan) dari Pihak Kedua ke Pihak Pertama. Skema Pembayaran Terlampir.",
+        "Penagihan dilakukan dari Pihak Kedua kepada Pihak Pertama, selanjutnya Pihak Pertama dan Pihak Kedua bersama-sama mengukur dan menghitung progress yang sudah terpasang melihat checklist di Skema Pembayaran. Penagihan bisa dilakukan kapanpun selama sudah memenuhi progress.",
+        "Pembayaran Pihak Pertama kepada Pihak Kedua disimulasikan sebagai berikut: (a) Pembayaran dilakukan mengikuti ketentuan pada Pasal 4 ayat 1; (b) Pembayaran pada Nilai Retensi akan dilakukan satu bulan setelah bangunan selesai diserahterimakan kepada Pemilik Rumah atau kepada Pihak Pertama, dengan besar nilai retensi Rp 4.250.000,- (Empat Juta Dua Ratus Lima Puluh Ribu Rupiah)."
+      ]
+    },
+    {
+      "no": 5,
+      "judul": "KETERLAMBATAN DAN PUNISHMENT",
+      "poin": [
+        "Pihak Kedua wajib memberikan Time Schedule pengerjaan bangunan diselesaikan dengan jangka waktu 48 hari dari pertanda tangan SPK ini.",
+        "Jika dalam progres rencana pembangunan terjadi keterlambatan selisih 10% dari progres rencana, maka akan ada peringatan keras dari pihak pertama.",
+        "Jika Pihak Pertama mengalami keterlambatan dalam pembayaran kepada Pihak Kedua, maka Pihak Pertama harus membayarkan denda keterlambatan sebesar Rp 100.000,- (Seratus Ribu Rupiah) per hari.",
+        "Jika Pihak Kedua mengalami keterlambatan dalam menyelesaikan pekerjaan, maka Pihak Kedua dikenakan denda keterlambatan pekerjaan sebesar Rp 100.000,- (Seratus Ribu Rupiah) per hari.",
+        "Jika ternyata dalam pelaksanaan pekerjaan terjadi pengurangan volume/pengurangan pekerjaan, maka perhitungan pembayaran akhir akan disesuaikan dengan jenis pekerjaan real yang terpasang.",
+        "Jika dalam pengawasan didapati adanya perbedaan spesifikasi/spesifikasi tidak sesuai dengan kesepakatan awal, maka Pihak Pertama berhak memberikan denda kepada Pihak Kedua dan berhak untuk tidak membayarkan jenis pekerjaan yang tidak sesuai spesifikasi tersebut.",
+        "Jika didapati komplain dari Owner/User dan dalam kurun waktu satu minggu tidak dikerjakan, maka dana yang ditahan akan hangus, dan pekerjaan tersebut akan dikerjakan oleh pihak pertama dengan memakai dana yang ditahan tersebut."
+      ]
+    },
+    {
+      "no": 6,
+      "judul": "PERUBAHAN ATAS ISI SURAT PERJANJIAN",
+      "poin": [
+        "Apabila dipandang perlu diadakan perubahan atas isi Surat Perjanjian ini, baik perubahan perihal penambahan atau pengurangan isi Surat Perjanjian, harus mendapatkan persetujuan secara tertulis terlebih dulu dari Pihak Pertama dan Pihak Kedua."
+      ]
+    },
+    {
+      "no": 7,
+      "judul": "PENUTUP",
+      "poin": [
+        "Surat Perintah Kerja ini dibuat dengan itikad baik, untuk dipatuhi dan dilaksanakan oleh PARA PIHAK dengan penuh tanggung jawab.",
+        "SPK terdiri dari 4 lembar dan dibuat dalam 3 (tiga) rangkap asli, yang ditandatangani oleh PARA PIHAK di atas materai yang cukup pada tanggal, bulan dan tahun seperti tersebut pada permulaan Perjanjian ini.",
+        "Tembusan: - Asli bermaterai (kantor) - Salinan 1 (kontraktor) - Salinan 2 (divisi teknik) - Salinan 3 (divisi pemasaran)."
+      ]
+    }
+  ],
+  "nilai_kontrak": {
+    "nilai_awal_idr": 68268708,
+    "dibulatkan_idr": 68250000,
+    "cara_baca": "Dibulatkan ke bawah menjadi Rp 68.250.000,- untuk 1 unit rumah Type 36 Blok A-2"
+  },
+  "klausul_tambahan": {
+    "retensi": {
+      "nilai_idr": 4250000,
+      "pct": 5,
+      "tipe": "Retensi Garansi",
+      "waktu_cair": "1 bulan setelah BAST ke pemilik rumah"
+    },
+    "denda_keterlambatan_pemborong_per_hari_idr": 100000,
+    "denda_keterlambatan_owner_per_hari_idr": 100000,
+    "masa_garansi_bulan": 1,
+    "tanggal_mulai_kontrak": "2026-05-16",
+    "tanggal_selesai_target": "2026-07-04",
+    "konversi_8_minggu": "48 hari kerja"
+  },
+  "tanda_tangan": {
+    "pihak_pertama": {
+      "nama": "Achmad Ardiansyah",
+      "jabatan": "Direktur",
+      "ttd_label": "(                          )"
+    },
+    "pihak_kedua": {
+      "nama": "Selo",
+      "jabatan": "Pelaksana / Pemborong",
+      "ttd_label": "(                          )"
+    },
+    "saksi": {
+      "label": "MENGETAHUI",
+      "ttd_label": "(                          )",
+      "jabatan": "Saksi"
+    }
+  },
+  "lampiran_spk": [
+    {"label": "Lampiran 1", "judul": "Tabel AHS 12 Kategori Pekerjaan Rumah Inti (A-L) + II. Pagar dan Kanopi", "sumber": "ahs-rap-selo.json"},
+    {"label": "Lampiran 2", "judul": "Spesifikasi Teknis 23 Item", "sumber": "spec-teknis-type36.json"},
+    {"label": "Lampiran 3", "judul": "Skema Pembayaran 7 Termin + Retensi 5%", "sumber": "termin-pembayaran-selo.json"},
+    {"label": "Lampiran 4", "judul": "Gambar Kerja / Siteplan"}
+  ]
+}

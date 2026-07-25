@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "name": "coaching-3-pilar",
+    "version": "1.0",
+    "deskripsi": "Coaching 3 Pilar (Kurikulum + Legitemasi Moral + Waktu Fleksibel). V5.0 meeting 24 Jul 2026 point 18. Replace coaching-sop V1 dengan pendekatan 3 pilar.",
+    "ref": "meeting 24 Jul 2026 point 18 + expansion manual 25 Jul 2026"
+  },
+  "filsafat_3_pilar": {
+    "mengapa_3_pilar_bukan_1_metode": "Coaching V4 = SBI + GROW (1 metode). Coaching V5 = 3 pilar并行 (paralel). Karena SDM manusia bukan robot — butuh kurikulum (apa yang dipelajari) + legitemasi (siapa yang ngajar) + waktu (kapan belajar). Kalau 1 pilar lemah, 2 pilar lain tidak efektif.",
+    "ilustrasi_gagal_1_pilar": [
+      "Kurikulum kuat tapi coach tidak dicontohkan (no moral) = ilmu tidak dipraktekan",
+      "Kurikulum + moral tapi waktu tidak fleksibel (malam/weekend = capek) = ilmu tidak masuk",
+      "Moral + waktu tapi kurikulum berantakan = belajar tidak sistematis"
+    ]
+  },
+  "pilar_1_kurikulum": {
+    "definisi": "Pilar 1 = APA yang diajarkan. Materi coaching terstruktur, ada silabus, ada milestone, ada ujian/uji kompotensi.",
+    "elemen_wajib": {
+      "silabus_tertulis": "Setiap PIC punya learning path tertulis per quarter. Bukan lisan, bukan asumsi.",
+      "modul_per_skill": "1 skill = 1 modul (PDF/Notion/video). Total ada 24 modul untuk 12 PIC x 2 skill/bulan.",
+      "milestone_bulanan": "Akhir bulan PIC harus achieve 1 milestone (misal: handle 10 closing, atau submit RAB tanpa error).",
+      "uji_kompetensi_quarterly": "Akhir quarter = ujian. Lulus = naik level, tidak lulus = extend + coaching."
+    },
+    "tools_kurikulum": ["Notion learning hub", "Dashboard V2 (tab My Learning)", "Video recording sesi", "Quiz bulanan via Google Form"],
+    "pic_lead_pilar_1": "Mada (untuk semua PIC operasional) + Bu Nisya (untuk legal/admin)",
+    "budget": "Rp 500rb/bulan untuk konten kursus external (Udemy/Coursera/dll) + Rp 1jt untuk trainer external 1x/quarter",
+    "metrik_efektivitas": [
+      "PIC lulus uji kompetensi tepat waktu > 85%",
+      "Skill baru diaplikasikan ke kerja dalam 1 minggu setelah lulus = 90%+",
+      "Knowledge retention score (ujian ulang 3 bulan) > 75%"
+    ]
+  },
+  "pilar_2_legitemasi_moral": {
+    "definisi": "Pilar 2 = SIAPA yang ngajar. Coach yang punya legitimasi moral (dicontohkan, bukan hanya diajarkan). Tanpa pilar ini = ilmu tidak jalan.",
+    "elemen_wajib": {
+      "coach_harus_melakukan_sendiri": "Mada tidak boleh ajar time management kalau Mada sendiri tidak disiplin. Mada harus visible: pakai system yang diajar.",
+      "transparansi_kegagalan": "Coach harus cerita FAILURE-nya sendiri. Bukan perfect image. 'Saya pernah juga miss KPI, ini yang saya lakukan...'",
+      "coach_jadi_role_model": "Kalau Mada expect PIC check dashboard tiap pagi, Mada juga harus. Kalau Rizal expect PIC disiplin, Rizal duluan.",
+      "coach_tidak_hanya_jago_teori": "Coach yang pure teoritis = ditolak PIC. Coach yang pernah turun tangan = didengar."
+    },
+    "contoh_legitemasi_per_role": [
+      {"coach": "Mada", "legitimasi": "Pernah handle closing, pernah turun ke proyek, pernah handle customer komplain. Bukan admin teoritis."},
+      {"coach": "Bu Nisya", "legitimasi": "Pernah draft kontrak sendiri, pernah handle sengketa, pernah lead legal audit. Bukan hanya sign-off."},
+      {"coach": "Rizal", "legitimasi": "Pernah bangun rumah dari nol, pernah handle retensi, pernah hadapi konsumen komplain defect. Bukan hanya supervise mandor."},
+      {"coach": "Riza", "legitimasi": "Pernah setup ads dari 0, pernah achieve CPL < target. Bukan hanya monitor dashboard."}
+    ],
+    "pelanggaran_pilar_2": [
+      "Coach yang tidak praktikkan apa yang diajar = PIC boleh challenge 'Pak, Anda sendiri sudah melakukan?'",
+      "Coach yang perfeksionis image = ditolak. 'Jujur aja Pak, Anda juga pernah miss'",
+      "Coach yang hanya ceramah tanpa role model = dianggap teori kosong"
+    ],
+    "tools_pilar_2": ["1-on-1 refleksi", "Storytelling失败案例 (ceritakan kegagalan)", "Live demo (coach demonstrate di depan PIC)"],
+    "pic_lead_pilar_2": "Mada + Bu Nisya + Rizal (sesuai area)",
+    "metrik_efektivitas": [
+      "PIC survey 'apakah coach saya bisa jadi role model' > 4/5",
+      "PIC mencontohkan habit coach dalam 2 minggu = 80%+",
+      "PIC tidak ragu tanya 'Pak, Anda sendiri sudah?' = transparan"
+    ]
+  },
+  "pilar_3_waktu_fleksibel": {
+    "definisi": "Pilar 3 = KAPAN belajar. Waktu coaching fleksibel, mengikuti ritme PIC, bukan memaksakan slot kaku. Kompeten dilepas, tidak dikejar.",
+    "elemen_wajib": {
+      "slot_fleksibel_per_pic": "Tiap PIC punya 1-2 slot coaching/minggu yang mereka pilih sendiri (pagi/siang/sore). Mada follow. Bukan Mada tentukan slot kaku.",
+      "tidak_kejar_kehadiran": "Kalau PIC miss 1x sesi, no penalty. Re-schedule. Yang penting milestone tercapai, bukan hadir.",
+      "kompeten_dilepas": "Kalau PIC sudah lulus uji kompetensi, dilepas. Tidak dicek-in harian. Mada trust, baru verify via output.",
+      "self_paced_learning": "Modul bisa diakses kapan saja via Notion. PIC belajar sendiri waktu luang, baru apply.",
+      "coaching_on_demand": "PIC boleh request sesi coaching on-demand saat stuck. Mada/BU Nisya available dalam 24 jam."
+    },
+    "alasan_waktu_fleksibel": [
+      "PIC punya ritme berbeda: ada yang pagi fokus, ada yang malam baru fresh",
+      "Kehidupan pribadi PIC butuh dihormati (anak sakit, keluarga, dll)",
+      "Motivasi intrinsik > paksaan: PIC yang milih waktu sendiri = lebih engaged",
+      "Kompeten dilepas = Mada tidak micromanage. Trust dulu, verify output."
+    ],
+    "tools_pilar_3": ["Notion (self-paced)", "WA grup (on-demand)", "Google Calendar (flexible slot)", "1-on-1 by appointment"],
+    "batas_fleksibilitas": {
+      "max_respon_time_on_demand": "Mada harus respon max 4 jam kerja. Tidak boleh 'sibuk, nanti aja' > 4 jam.",
+      "max_idle_jika_underperform": "Kalau PIC underperform, fleksibilitas dicabut sementara. Mada bisa panggil 1-on-1 wajib.",
+      "milestone_hard_deadline": "Uji kompetensi = hard deadline (tidak bisa diundur). Fleksibel = cara belajar, bukan hasil."
+    },
+    "metrik_efektivitas": [
+      "PIC yang lulus tepat waktu > 80% (vs target fleksibel)",
+      "PIC self-paced engagement: rata-rata 2 jam/minggu belajar mandiri",
+      "On-demand response time Mada < 4 jam = 95%+",
+      "PIC yang request coaching on-demand = 50%+ per quarter (indicates trust)"
+    ]
+  },
+  "implementasi_3_pilar_terpadu": {
+    "weekly_flow": {
+      "senin": "PIC akses Notion learning hub, mulai modul baru (Pilar 1 — Kurikulum)",
+      "selasa_rabu": "Self-paced belajar + apply ke kerja (Pilar 1 + Pilar 3)",
+      "kamis": "On-demand 1-on-1 jika ada yang bingung (semua pilar)",
+      "jumat": "Sesi coaching Mada/BU Nisya (30 menit, fleksibel slot, gabungan Pilar 1 + Pilar 2)",
+      "sabtu_minggu": "Refleksi + catat progress (PIC sendiri)"
+    },
+    "monthly_flow": {
+      "akhir_bulan": "Mada review milestone + coaching note (semua pilar)",
+      "if_miss": "Coaching khusus 1-on-1 60 menit (Mada + PIC + Bu Nisya jika legal)"
+    },
+    "quarterly_flow": {
+      "akhir_quarter": "Uji kompetensi (Pilar 1) + survey legitimasi coach (Pilar 2) + review waktu (Pilar 3)",
+      "lulus": "Naik level + sertifikat",
+      "tidak_lulus": "Extend 1 quarter + coaching khusus"
+    }
+  },
+  "perbandingan_v4_ke_v5": {
+    "v4": "Coaching = SBI + GROW (1 metode, fixed slot mingguan, Mada tentukan waktu, teoritis).",
+    "v5": "Coaching = 3 pilar并行 (Kurikulum + Legitemasi Moral + Waktu Fleksibel). Fleksibel, practical, dengan ujian + legitimasi coach."
+  }
+}

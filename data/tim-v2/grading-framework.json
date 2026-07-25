@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "name": "grading-framework-p0-p3",
+    "version": "1.0",
+    "deskripsi": "Grading framework detail P0/P1/P2/P3 dengan skill matrix, career path, promotion criteria, kompensasi, benefit. V4.0 - Bab 50.",
+    "ref": "content/v4-final/bab-50-grading-framework.md + revisi 24 Jul 2026"
+  },
+  "grading_levels_overview": {
+    "P0_junior_operasional": {
+      "definisi": "PIC level entry, fresh graduate atau pengalaman 0-2 tahun, supervised work",
+      "rentang_gaji_total": "Rp 2.7-3.2 juta/bulan (UMR + tunjangan)",
+      "skill_required": "Basic skill sesuai divisi, willingness to learn, fast follower",
+      "tools": "Standar divisi (dasar)",
+      "responsibility_scope": "Eksekusi task dengan supervisi 80%",
+      "jumlah_pic": 5,
+      "contoh_pic": ["Amir", "Novita", "Sinta", "Reni (bisa overlap P1)"]
+    },
+    "P1_senior_operasional": {
+      "definisi": "PIC senior, pengalaman 2-5 tahun, semi-independent, bisa lead tim kecil 1-2 orang",
+      "rentang_gaji_total": "Rp 3.3-4.95 juta/bulan",
+      "skill_required": "Intermediate skill sesuai divisi, leadership basic, problem solving",
+      "tools": "Lengkap sesuai divisi + tools kolaborasi",
+      "responsibility_scope": "Eksekusi task mandiri 100% + supervisi P0 + project lead kecil",
+      "jumlah_pic": 5,
+      "contoh_pic": ["Riza", "Yudi/Sdek", "Rifki", "Reta", "Reni (overlap)"]
+    },
+    "P2_kepala_divisi": {
+      "definisi": "Kepala divisi / triple role, pengalaman 5+ tahun, full independent, lead tim 3-5 orang",
+      "rentang_gaji_total": "Rp 5.45-8.4 juta/bulan",
+      "skill_required": "Advanced skill + leadership + strategic thinking + budgeting",
+      "tools": "Semua tools divisi + tools manajerial (Notion, Dashboard, dll)",
+      "responsibility_scope": "Full accountability untuk 1 divisi + strategic planning + reporting ke Mada",
+      "jumlah_pic": 2,
+      "contoh_pic": ["Mada (juga COO proxy)", "Rizal (triple role proyek)"]
+    },
+    "P3_owner_director": {
+      "definisi": "Owner / Co-Director, profit sharing, strategic decision final",
+      "rentang_gaji_total": "Profit sharing + dividen (variable)",
+      "skill_required": "Vision, leadership, networking, financial acumen, public speaking",
+      "tools": "Custom",
+      "responsibility_scope": "Full company direction + profit + risk",
+      "jumlah_pic": 2,
+      "contoh_pic": ["Pak Ardian (Owner)", "Bu Nisya (Co-Director + Legal)"]
+    }
+  },
+  "career_path_promotion": {
+    "P0_to_P1": {
+      "duration_min": "1-2 tahun (fast track) atau 2-3 tahun (normal)",
+      "criteria": [
+        "Konsisten achieve KPI 6 bulan berturut-turut",
+        "Inisiatif propose improvement 1x/quarter",
+        "Mampu supervise 1-2 junior atau tim kecil",
+        "Feedback positif dari Mada + kepala divisi + konsumen"
+      ],
+      "komponen_kenaikan": "Gaji pokok + 20-30%, tunjangan + 30%, jabatan tunjangan 200-500rb",
+      "approval": "Mada propose + Pak Ardian approve"
+    },
+    "P1_to_P2": {
+      "duration_min": "2-3 tahun (fast track) atau 3-5 tahun (normal)",
+      "criteria": [
+        "Konsisten achieve KPI 12 bulan berturut-turut",
+        "Lead tim 3-5 orang + project besar sukses",
+        "Strategic contribution (proposal growth lever, efisiensi)",
+        "Skill teknis deep + managerial strong"
+      ],
+      "komponen_kenaikan": "Gaji pokok + 40-50%, tunjangan + 50%, jabatan tunjangan 500rb-1.2jt",
+      "approval": "Mada propose + Pak Ardian final approve"
+    },
+    "P2_to_P3": {
+      "duration_min": "5+ tahun atau partnership track",
+      "criteria": [
+        "Bukti profit growth signifikan selama memimpin",
+        "Reputasi industri + network kuat",
+        "Strategic vision terbukti (ekspansi, pivot sukses)",
+        "Co-founder track atau partnership agreement"
+      ],
+      "komponen_kenaikan": "Profit sharing + dividen, partnership stake",
+      "approval": "Pak Ardian + notaris partnership agreement"
+    }
+  },
+  "benefit_per_level": {
+    "P0_junior": [
+      "Gaji UMR + tunjangan",
+      "BPJS Kesehatan + Ketenagakerjaan (perusahaan bayar penuh)",
+      "Cuti 12 hari/tahun",
+      "Hari Raya (Idul Fitri + Natal + Nyepi)",
+      "30 Detik Publikasi insentif (5% appraisal)",
+      "Onboarding 30 hari + training"
+    ],
+    "P1_senior": [
+      "Semua benefit P0",
+      "Tunjangan jabatan + 200-500rb",
+      "Cuti 14 hari/tahun",
+      "Akses ke leadership training external",
+      "Cross-training ke divisi lain (rotasi)",
+      "Bonus tahunan 1 bulan gaji (jika company profitable)"
+    ],
+    "P2_kepala": [
+      "Semua benefit P1",
+      "Tunjangan jabatan + 500rb-1.2jt",
+      "Cuti 16 hari/tahun",
+      "Akses ke conference + seminar industri",
+      "Laptop + HP kantor dedicated",
+      "Transport representasi",
+      "Bonus khusus per project sukses"
+    ],
+    "P3_owner": [
+      "Profit sharing + dividen",
+      "Aset perusahaan (mobil kantor, dll)",
+      "Cuti by exception (unlimited by SOP)",
+      "Akses ke semua benefits + privilege owner",
+      "Partnership / saham (untuk yang qualify)"
+    ]
+  },
+  "skill_matrix_per_level": {
+    "P0_skill_checklist": [
+      "Basic task execution sesuai SOP divisi",
+      "Reporting harian ke kepala divisi",
+      "Response time < 4 jam untuk task urgent",
+      "Mau belajar + receptive to feedback"
+    ],
+    "P1_skill_checklist": [
+      "Semua P0 +",
+      "Bisa lead tim kecil (1-2 orang) + supervise task",
+      "Problem solving tanpa supervisi",
+      "Cross-function collaboration"
+    ],
+    "P2_skill_checklist": [
+      "Semua P1 +",
+      "Strategic planning + budgeting",
+      "Lead tim 3-5 orang + coaching",
+      "Networking + representasi divisi ke eksternal",
+      "Decision making dengan informasi terbatas"
+    ],
+    "P3_skill_checklist": [
+      "Semua P2 +",
+      "Vision setting untuk 3-5 tahun",
+      "Crisis management",
+      "Industry thought leadership",
+      "Profit-loss accountability"
+    ]
+  }
+}

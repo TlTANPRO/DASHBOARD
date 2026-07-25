@@ -1,0 +1,313 @@
+{
+  "_meta": {
+    "name": "target-personal",
+    "version": "2.0",
+    "deskripsi": "SOW + Proker + PIC Pendamping + KPI detail 12 PIC. V2: Grading P0-P3, Riza = Digital Marketing, gaji UMR 2.25-2.5jt, payroll tgl 6, fee 5 komponen updated.",
+    "ref": "content/v1-management/bab-03-scope-of-work.md + revisi 24 Jul 2026"
+  },
+  "grading_system": {
+    "deskripsi": "4 level grading untuk standardisasi gaji + tunjangan + jenjang karier",
+    "level_p0_junior": {
+      "rentang_gaji_pokok": "Rp 2.250.000 - 2.500.000 (UMR Lumajang)",
+      "tunjangan": "Transport 300rb + makan 300rb + komunikasi 100rb = 700rb",
+      "total_kompensasi": "Rp 2.95 - 3.2 juta",
+      "kriteria": "Fresh hire, pengalaman 0-2 tahun, atau PIC operasional entry-level",
+      "fee_bonus": "Eligible fee closing (komponen relevan) + insentif publifikasi 200rb/bulan"
+    },
+    "level_p1_senior": {
+      "rentang_gaji_pokok": "Rp 2.500.000 - 3.500.000",
+      "tunjangan": "Transport 400rb + makan 400rb + komunikasi 150rb = 950rb",
+      "tunjangan_jabatan": "500rb (jika koordinator tim kecil)",
+      "total_kompensasi": "Rp 3.45 - 4.95 juta",
+      "kriteria": "Pengalaman 2-5 tahun, independent, bisa handle 1 fungsi penuh",
+      "fee_bonus": "Eligible fee closing + bonus performance 500rb-1jt/quarter"
+    },
+    "level_p2_kepala": {
+      "rentang_gaji_pokok": "Rp 4.000.000 - 6.000.000",
+      "tunjangan": "Transport 500rb + makan 500rb + komunikasi 200rb = 1.2jt",
+      "tunjangan_jabatan": "1.000.000 - 1.500.000",
+      "total_kompensasi": "Rp 6.2 - 8.7 juta",
+      "kriteria": "Pengalaman 5+ tahun, lead divisi, accountable ke Owner",
+      "fee_bonus": "Eligible fee closing + bonus kepala divisi + insentif strategis"
+    },
+    "level_p3_direksi_owner": {
+      "rentang_gaji_pokok": "Dividen (bukan gaji tetap)",
+      "kriteria": "Pemegang saham, strategic decision maker",
+      "fee_bonus": "Profit sharing dari net margin"
+    }
+  },
+  "payroll_payday_tanggal": 6,
+  "payroll_logic": "Gaji bulan ini dibayar tanggal 6 bulan berikutnya. Contoh: gaji kerja Juli 2026 dibayar 6 Agustus 2026.",
+  "komponen_gaji_detail": {
+    "gaji_pokok": "Sesuai grading P0/P1/P2",
+    "tunjangan_transport": "300-500rb/bulan sesuai grading",
+    "tunjangan_makan": "300-500rb/bulan sesuai grading",
+    "tunjangan_komunikasi": "100-200rb/bulan",
+    "tunjangan_jabatan": "500rb-1.5jt untuk P2 kepala divisi",
+    "fee_closing": "Variable, per unit closing, 5 komponen: Pembeli 1.25jt + Followup 1.25jt + Media 250rb + Proyek 250rb + Pemberkasan 250rb = 3.25jt/unit",
+    "bonus_mada": "Khusus Mada, Rp 1.5jt/unit jika target tier tercapai",
+    "bonus_bu_nisya": "Khusus Bu Nisya, Rp 5jt/bulan fixed",
+    "insentif_publikasi": "200rb/bulan untuk semua PIC yang compliance engagement >= 80%",
+    "bpjs_kesehatan": "Perusahaan 4% + PIC 1% dari gaji pokok, kelas 1, max 4 tanggungan",
+    "bpjs_ketenagakerjaan": "Perusahaan 3.7% (JHT 2% + JP 1% + JKK 0.24-1.74% + JKM 0.3%) + PIC 2% JHT",
+    "pph_21": "Ditanggung PIC, dipotong saat transfer, sesuai PTKP (TK/0, K/1, dst)",
+    "thr": "1 bulan gaji pokok, H+7 Lebaran, prorata untuk kerja < 12 bulan",
+    "lembur": "1.5x gaji/jam hari kerja, 2x hari libur, max 40 jam/bulan (kompensasi cash atau time-off)",
+    "potongan": "PPh 21 + BPJS PIC 3% (1% kesehatan + 2% JHT)"
+  },
+  "struktur_fee_closing_5_komponen": {
+    "komponen": [
+      {"nama": "Pembeli", "nominal_idr": 1250000, "penerima": "PIC yang pertama kali catat lead (timestamp)", "syarat": "Lead valid, sampai closing"},
+      {"nama": "Follow-up", "nominal_idr": 1250000, "penerima": "PIC yang handle follow up sampai survey lokasi", "syarat": "Lead sampai survey"},
+      {"nama": "Media", "nominal_idr": 250000, "penerima": "PIC media (Reni/Rifki/Reta) untuk konten yang generate lead", "syarat": "Lead tracked dari source konten"},
+      {"nama": "Proyek", "nominal_idr": 250000, "penerima": "PIC proyek (Rizal) untuk handover unit ready", "syarat": "Progres unit 100% saat closing"},
+      {"nama": "Pemberkasan", "nominal_idr": 250000, "penerima": "PIC admin/legal (Novita/Bu Nisya) untuk kelengkapan berkas", "syarat": "SHM keluar sebelum pembayaran fee"}
+    ],
+    "total_per_unit_idr": 3250000,
+    "all_or_nothing": "1 trigger syarat miss = fee/bonus unit hangus"
+  },
+  "personal": [
+    {
+      "nama": "Pak Ardian",
+      "role": "Owner / Director",
+      "divisi": "owner",
+      "grading": "P3",
+      "gaji_pokok_idr": null,
+      "kompensasi": "Dividen + profit sharing",
+      "sow_harian": [
+        "Strategic decision (ekspansi, investasi, partnership)",
+        "Final approval untuk budget > Rp 10 juta",
+        "Board meeting bulanan + strategic review kuartalan",
+        "Maintain relationship dengan bank, notaris, partners",
+        "Coaching Mada untuk leadership development"
+      ],
+      "kpi": ["Net margin >= 8%", "Closing 18 unit/quarter", "Cash reserve >= Rp 500jt", "Risk register update"]
+    },
+    {
+      "nama": "Bu Nisya",
+      "role": "Co-Director / Legal Manager",
+      "divisi": "legal",
+      "grading": "P2",
+      "gaji_pokok_idr": 5000000,
+      "tunjangan_jabatan_idr": 1500000,
+      "bonus_tambahan_idr": 5000000,
+      "bonus_periode": "Per bulan (selama 3 bulan, Q3 2026)",
+      "kompensasi_total": "Rp 11.5 juta/bulan (gaji + tunjangan + bonus)",
+      "sow_harian": [
+        "Review + sign kontrak PPJB, Akad, supplier",
+        "Konsultasi legal untuk semua PIC (kapan saja)",
+        "Maintain relationship dengan notaris koordinator + BPN",
+        "Submit compliance checklist per proyek",
+        "Handle komplain hukum / sengketa"
+      ],
+      "kpi": ["100% kontrak reviewed dalam 1 hari", "Zero legal issue", "Notaris response < 7 hari", "SHM keluar < 30 hari setelah BAST"]
+    },
+    {
+      "nama": "Mada",
+      "role": "Kepala Kantor / COO Proxy",
+      "divisi": "operasional",
+      "grading": "P2",
+      "gaji_pokok_idr": 5000000,
+      "tunjangan_jabatan_idr": 1500000,
+      "bonus_per_unit_idr": 1500000,
+      "bonus_syarat": "Target tier tercapai (6 unit/bulan)",
+      "kompensasi_total": "Rp 6.5jt + bonus Rp 1.5jt/unit = Rp 15.5jt/bulan (kalau 6 unit closing)",
+      "sow_harian": [
+        "Lead daily standup + assign leads",
+        "Coaching 1-on-1 mingguan dengan 12 PIC",
+        "Review KPI dashboard harian",
+        "Approve budget < Rp 10 juta",
+        "Cross-divisi coordination (marketing-proyek-legal)",
+        "Handle eskalasi level 2 (jika blocked > 24 jam)",
+        "Backup Rizal (strategic) saat cuti > 3 hari",
+        "Backup Yudi/Sdek (closing) saat high-load"
+      ],
+      "kpi": ["Closing 6 unit/bulan", "Lead conversion 20%", "KPI PIC rata-rata >= 80%", "Coaching 100% PIC", "Zero eskalasi miss"]
+    },
+    {
+      "nama": "Riza",
+      "role": "PIC Digital Marketing",
+      "divisi": "marketing",
+      "grading": "P1",
+      "gaji_pokok_idr": 3000000,
+      "tunjangan_idr": 950000,
+      "tunjangan_jabatan_idr": 500000,
+      "fee_closing": "Eligible (komponen Pembeli + Follow-up)",
+      "kompensasi_total": "Rp 4.45jt + fee + bonus publikasi",
+      "sow_harian": [
+        "Handle paid ads (FB/IG/TikTok Ads) - budget Rp 5jt/bulan",
+        "Lead gen + qualify (skor 1-5)",
+        "A/B testing iklan (creative, copy, audience)",
+        "Retargeting campaign untuk lead yang sudah engage",
+        "Performance report mingguan (CTR, CPL, ROAS)",
+        "Kolaborasi dengan tim konten (Rifki) untuk creative",
+        "Riset kompetitor + trend digital marketing"
+      ],
+      "kpi": ["CPL < Rp 15.000", "CTR > 1.5%", "ROAS > 3x", "Lead masuk 80-100/bulan", "Lead qualified (skor 3+) 50% dari total"]
+    },
+    {
+      "nama": "Yudi/Sdek",
+      "role": "PIC Closing + Front Desk",
+      "divisi": "marketing",
+      "grading": "P1",
+      "gaji_pokok_idr": 2800000,
+      "tunjangan_idr": 950000,
+      "tunjangan_jabatan_idr": 400000,
+      "fee_closing": "Eligible (komponen Pembeli + Follow-up + Back-cover)",
+      "kompensasi_total": "Rp 4.15jt + fee + bonus publikasi",
+      "sow_harian": [
+        "Front desk showroom (08.00-16.00 setiap hari)",
+        "Handle walk-in customer (presentasi unit, simulasi KPR)",
+        "Closing unit (handle negosiasi, booking fee, PPJB)",
+        "Follow up customer dari Riza (qualified lead)",
+        "Survey lokasi existing konsumen",
+        "Backup Riza (digital marketing) saat Riza cuti",
+        "Backup Mada (closing high-value) saat high-load"
+      ],
+      "kpi": ["Closing 3-4 unit/bulan", "Walk-in conversion 60%", "Survey lokasi 8-10/bulan", "Customer satisfaction NPS > 50"]
+    },
+    {
+      "nama": "Rizal",
+      "role": "Kepala Pelaksana + Kepala Perencanaan + PIC Utama Proyek",
+      "divisi": "proyek",
+      "grading": "P2",
+      "gaji_pokok_idr": 5000000,
+      "tunjangan_idr": 1200000,
+      "tunjangan_jabatan_idr": 1500000,
+      "fee_closing": "Eligible (komponen Proyek 250rb/unit)",
+      "kompensasi_total": "Rp 7.7jt + fee Proyek + bonus QC",
+      "sow_harian": [
+        "Lead site operation 07.00-16.00 (Cluster A/B aktif)",
+        "Manage mandor + tukang + subkontraktor",
+        "QC 50 item sebelum BAST",
+        "Daily log submit (Form Lamp-23)",
+        "Buat RAB + schedule untuk proyek baru",
+        "Material planning + kontrol stok",
+        "Risk identification + mitigasi proyek",
+        "Progress report mingguan ke Mada + Owner",
+        "Handover unit ke Novita untuk serah terima"
+      ],
+      "kpi": ["HPP per unit 70-80jt", "Zero defect saat BAST", "Progress on-time >= 90%", "Subkon compliance >= 95%", "BAST on schedule"]
+    },
+    {
+      "nama": "Amir",
+      "role": "PIC Proyek + Marketing Cover",
+      "divisi": "proyek",
+      "grading": "P0",
+      "gaji_pokok_idr": 2500000,
+      "tunjangan_idr": 700000,
+      "fee_closing": "Eligible (Back-cover fee jika handle lead)",
+      "kompensasi_total": "Rp 3.2jt + fee + bonus publikasi",
+      "sow_harian": [
+        "Cover site harian jika Rizal off-site",
+        "Bantu Rizal di material receiving + QC",
+        "Backup lead handling untuk Riza (saat Riza cuti/izin)",
+        "Dokumentasi foto/video progress proyek (untuk konten media)",
+        "Survey lokasi existing konsumen (backup Yudi)",
+        "Cross-functional: kerja sama marketing + proyek"
+      ],
+      "kpi": ["Site cover 100% saat Rizal off", "Dokumentasi foto 50+/minggu", "Lead handling backup 100%"]
+    },
+    {
+      "nama": "Novita",
+      "role": "PIC Admin + After-Sales",
+      "divisi": "operasional",
+      "grading": "P1",
+      "gaji_pokok_idr": 2800000,
+      "tunjangan_idr": 950000,
+      "tunjangan_jabatan_idr": 400000,
+      "fee_closing": "Eligible (komponen Pemberkasan 250rb/unit)",
+      "kompensasi_total": "Rp 4.15jt + fee + bonus publikasi",
+      "sow_harian": [
+        "Absensi + payroll (tanggal 6 setiap bulan)",
+        "Verifikasi berkas konsumen (Lamp-03)",
+        "Pengajuan SP3K ke bank (Lamp-04)",
+        "After-sales + komplain handling (Lamp-09)",
+        "Cash opname + bank reconciliation",
+        "Arsip dokumen legal + konsumen",
+        "Reminder follow-up ke customer via WA"
+      ],
+      "kpi": ["Berkas lengkap 100% dalam 14 hari", "SP3K submitted 100% on-time", "After-sales response < 24 jam", "Payroll 100% on-time (tgl 6)"]
+    },
+    {
+      "nama": "Sinta",
+      "role": "PIC Purchasing",
+      "divisi": "operasional",
+      "grading": "P1",
+      "gaji_pokok_idr": 2800000,
+      "tunjangan_idr": 950000,
+      "tunjangan_jabatan_idr": 400000,
+      "fee_closing": "Tidak eligible langsung (covered operasional)",
+      "kompensasi_total": "Rp 4.15jt + bonus publikasi",
+      "sow_harian": [
+        "Pemesanan material (semen, besi, keramik, dll) ke supplier",
+        "RFQ ke minimum 3 supplier per material",
+        "Material receiving checklist (8 item)",
+        "Stock opname mingguan",
+        "Supplier scoring update (Lamp-20)",
+        "Negosiasi harga + termin pembayaran",
+        "Bantu Rizal di RAB material planning"
+      ],
+      "kpi": ["HPP per unit 70-80jt", "Material delivered on-time 95%", "Supplier A (skor >= 4.0) >= 70% pembelian", "Stock opname akurasi 100%"]
+    },
+    {
+      "nama": "Reni",
+      "role": "Ketua Media + Brand Manager",
+      "divisi": "media",
+      "grading": "P2",
+      "gaji_pokok_idr": 4500000,
+      "tunjangan_idr": 1200000,
+      "tunjangan_jabatan_idr": 1200000,
+      "fee_closing": "Eligible (komponen Media 250rb/unit jika lead dari konten)",
+      "kompensasi_total": "Rp 6.9jt + fee Media + bonus publikasi",
+      "sow_harian": [
+        "Brand strategy + guideline (tone, voice, visual)",
+        "Content calendar execution (25 konten/bulan)",
+        "Review konten dari Rifki + Reta sebelum posting",
+        "Deal KOL/influencer",
+        "Trend research mingguan",
+        "Coordinate dengan Riza untuk paid ads",
+        "Monitor engagement + sentiment media"
+      ],
+      "kpi": ["25 konten/bulan tayang", "Engagement rate >= 3.2%", "Follower growth >= 5%/bulan", "Lead dari organik >= 20/bulan", "Zero brand issue"]
+    },
+    {
+      "nama": "Rifki",
+      "role": "Ketua Kreatif (Desain + Video)",
+      "divisi": "media",
+      "grading": "P1",
+      "gaji_pokok_idr": 3000000,
+      "tunjangan_idr": 950000,
+      "tunjangan_jabatan_idr": 500000,
+      "fee_closing": "Eligible (komponen Media jika lead dari konten)",
+      "kompensasi_total": "Rp 4.45jt + fee + bonus publikasi",
+      "sow_harian": [
+        "Desain grafis (post IG/FB, banner, brosur)",
+        "Video editing (Reels, TikTok, YouTube Shorts)",
+        "Shooting on-location (cluster, akad, STB)",
+        "Web design + maintenance (SEO)",
+        "Test AI tools untuk efisiensi konten",
+        "Briefing Reta untuk scheduling posting"
+      ],
+      "kpi": ["25 konten/bulan tayang", "Video views 100K/bulan", "Web traffic 5K/bulan", "Brand consistency 100%"]
+    },
+    {
+      "nama": "Reta",
+      "role": "PIC Operasional Media",
+      "divisi": "media",
+      "grading": "P0",
+      "gaji_pokok_idr": 2300000,
+      "tunjangan_idr": 700000,
+      "fee_closing": "Tidak eligible langsung",
+      "kompensasi_total": "Rp 3.0jt + bonus publikasi",
+      "sow_harian": [
+        "Posting konten sesuai jadwal (FB, IG, TikTok, YouTube)",
+        "Reply komen + DM di semua platform",
+        "Update status WA sesuai template (rotating)",
+        "Submit laporan engagement harian ke Reni",
+        "Backup Rifki untuk desain simple"
+      ],
+      "kpi": ["25 post tayang on-time", "Response komen < 2 jam (jam kerja)", "Engagement internal compliance >= 80%"]
+    }
+  ]
+}

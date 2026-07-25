@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "name": "legal-contracts",
+    "version": "1.0",
+    "deskripsi": "Template library 5 kontrak + compliance checklist. Single source untuk legal ops.",
+    "ref": "content/v3-execution/bab-25-legal-system.md + content/v2-developer/bab-20-regulatory-checklist.md"
+  },
+  "contract_templates": [
+    {
+      "nama": "PPJB (Perjanjian Pengikatan Jual Beli)",
+      "kode": "LEGAL-PPJB-001",
+      "kapan_dipakai": "Setelah konsumen booking fee, sebelum SP3K",
+      "pihak": "Developer + Konsumen",
+      "poin_wajib": [
+        "Identitas lengkap kedua pihak",
+        "Objek jual beli: tipe unit, nomor kavling, luas tanah, luas bangunan",
+        "Harga jual + cara pembayaran (booking fee + DP + KPR)",
+        "Jadwal pembayaran (tanggal, termin)",
+        "Hak dan kewajiban masing-masing pihak",
+        "Sanksi keterlambatan pembayaran",
+        "Force majeure clause",
+        "Penyelesaian sengketa (mediasi + arbitrase)",
+        "Lampiran: site plan, brosur, spesifikasi teknis"
+      ],
+      "approval": "Bu Nisya (legal) + Mada (bisnis) + notaris (review)",
+      "dokumen_pendukung": "KTP, KK, NPWP konsumen, bukti booking fee"
+    },
+    {
+      "nama": "SP3K (Surat Penawaran Pemberian Kredit)",
+      "kode": "LEGAL-SP3K-001",
+      "kapan_dipakai": "Setelah berkas lengkap, pengajuan ke bank",
+      "pihak": "Bank + Konsumen + Developer (surat keterangan developer)",
+      "poin_wajib": [
+        "Data konsumen + pekerjaan + penghasilan",
+        "Harga unit + DP + plafon KPR",
+        "Tenor (max 20 tahun untuk FLPP)",
+        "Suku bunga (fixed + floating)",
+        "Angsuran per bulan",
+        "Jaminan: sertifikat tanah + bangunan",
+        "Asuransi (jiwa + kebakaran)"
+      ],
+      "approval": "Bank (external) + Developer tanda tangan sebagai penjual",
+      "dokumen_pendukung": "PPJB, slip gaji 3 bulan, NPWP, rekening koran 6 bulan"
+    },
+    {
+      "nama": "Akad Kredit (Akad Pembiayaan)",
+      "kode": "LEGAL-AKAD-001",
+      "kapan_dipakai": "Setelah SP3K bank approve",
+      "pihak": "Bank + Konsumen + Developer + Notaris",
+      "poin_wajib": [
+        "Akad Murabahah (untuk bank syariah) atau akad konvensional",
+        "Harga jual bank + margin",
+        "Jadwal pencairan ke developer",
+        "Jadwal angsuran + besaran",
+        "Denda keterlambatan",
+        "Hak bank jika konsumen wanprestasi"
+      ],
+      "approval": "Notaris (akta di bawah tangan)",
+      "dokumen_pendukung": "SP3K approved, PPJB, dokumen jaminan"
+    },
+    {
+      "nama": "Kontrak Subkontraktor",
+      "kode": "LEGAL-SUBKON-001",
+      "kapan_dipakai": "Untuk pekerjaan khusus (pipa, listrik, finishing)",
+      "pihak": "Developer + Subkontraktor",
+      "poin_wajib": [
+        "Scope pekerjaan detail (volume, material, metode)",
+        "Timeline (start + finish + milestone)",
+        "Harga + termin pembayaran (DP 30%, progress 40%, finish 30%)",
+        "Standar kualitas (QC checklist)",
+        "Penalty keterlambatan (1-3% per minggu)",
+        "Garansi pekerjaan (6-12 bulan)",
+        "Asuransi pekerjaan (opsional)",
+        "Force majeure",
+        "Penyelesaian sengketa"
+      ],
+      "approval": "Rizal (kepala proyek) + Mada (approval budget)",
+      "dokumen_pendukung": "RAB, gambar kerja, spesifikasi teknis"
+    },
+    {
+      "nama": "Kontrak Supplier Material",
+      "kode": "LEGAL-SUPPLIER-001",
+      "kapan_dipakai": "Untuk pembelian material rutin (semen, besi, keramik)",
+      "pihak": "Developer + Supplier",
+      "poin_wajib": [
+        "Item + jumlah + harga + satuan",
+        "Spesifikasi material (SNI, ASTM, atau brand tertentu)",
+        "Jadwal delivery (H+ berapa dari PO)",
+        "Cara pembayaran (cash tempo 30 hari, atau transfer DP 50%)",
+        "Garansi material (jika ada defect)",
+        "Hak retur (max 7 hari setelah delivery)",
+        "Force majeure"
+      ],
+      "approval": "Sinta (purchasing) + Rizal (untuk material proyek)",
+      "dokumen_pendukung": "PO, spesifikasi material, sertifikat SNI"
+    }
+  ],
+  "compliance_checklist_per_proyek": [
+    {"item": "Izin Mendirikan Bangunan (IMB/PBG)", "pic": "Bu Nisya", "wajib": "Sebelum mulai konstruksi", "dokumen": "PBG dari DPMPTSP"},
+    {"item": "AMDAL / UKL-UPL", "pic": "Bu Nisya", "wajib": "Untuk cluster > 5 ha", "dokumen": "Persetujuan lingkungan"},
+    {"item": "Site plan + gambar kerja", "pic": "Rizal", "wajib": "Sebelum konstruksi", "dokumen": "Disahkan konsultan + Bu Nisya"},
+    {"item": "Kontrak subkontraktor", "pic": "Rizal + Bu Nisya", "wajib": "Sebelum subkon mulai", "dokumen": "Kontrak bermaterai"},
+    {"item": "Asuransi konstruksi (opsional)", "pic": "Mada + Novita", "wajib": "Untuk proyek > Rp 5 miliar", "dokumen": "Polis dari asuransi"},
+    {"item": "Perjanjian dengan bank KPR", "pic": "Bu Nisya + Mada", "wajib": "Sebelum terima SP3K pertama", "dokumen": "Kerja sama developer-bank"},
+    {"item": "Perjanjian dengan notaris koordinator", "pic": "Bu Nisya", "wajib": "Sebelum ada akad", "dokumen": "Kontrak notaris"},
+    {"item": "Sertifikat tanah clear (tidak sengketa)", "pic": "Bu Nisya", "wajib": "Sebelum jual", "dokumen": "Sertifikat + roya check"},
+    {"item": "Pajak BPHTB + PPh final", "pic": "Novita + Bu Nisya", "wajib": "Sebelum akad", "dokumen": "Bukti bayar"},
+    {"item": "Laporan ke bank setiap 25% progress", "pic": "Rizal + Novita", "wajib": "Sesuai jadwal bank", "dokumen": "Form laporan progress"},
+    {"item": "Inspeksi final + BAST", "pic": "Rizal + konsumen + bank", "wajib": "Sebelum serah terima", "dokumen": "Berita acara"},
+    {"item": "Pengajuan SHM konsumen ke BPN", "pic": "Bu Nisya + notaris", "wajib": "Max 30 hari setelah BAST", "dokumen": "Berkas SHM"}
+  ],
+  "force_majeure_clause": {
+    "definisi": "Kejadian di luar kendali pihak (bencana alam, perang, pandemi, kebijakan pemerintah)",
+    "efek_hukum": "Tidak ada pihak yang dianggap wanprestasi jika force majeure terjadi",
+    "tindakan": "Lapor ke pihak lain dalam 14 hari, negosiasi perpanjangan waktu",
+    "jika_lebih_90_hari": "Bisa terminasi kontrak dengan pemberitahuan 30 hari"
+  },
+  "complaint_handling_protocol": {
+    "sla_response_jam": 24,
+    "sla_resolution_hari": 7,
+    "saluran": ["WA Novita (08.00-16.30)", "Telepon kantor (08.00-16.30)", "Email legal@syahfalah.co.id"],
+    "eskalasi": "Komplain ke Mada jika > 7 hari, ke Pak Ardian jika > 14 hari",
+    "dokumentasi": "Form After-Sales Komplain (Lamp 9)",
+    "follow_up_30_hari": "Cek kepuasan konsumen setelah komplain selesai"
+  }
+}

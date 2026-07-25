@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "name": "master-db",
+    "version": "1.0",
+    "deskripsi": "Real-time state management control center.",
+    "last_modified": "2026-07-23T00:00:00Z"
+  },
+  "tier_aktif": "realistis",
+  "current_quarter": "Q3 2026",
+  "absensi_hari_ini": {},
+  "realisasi_pagi": {},
+  "realisasi_sore": {},
+  "kendala_hari_ini": {},
+  "inovasi_hari_ini": {},
+  "leads": [],
+  "closings": [],
+  "pic_login_session": null
+}

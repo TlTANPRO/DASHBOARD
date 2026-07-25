@@ -1,0 +1,174 @@
+{
+  "_meta": {
+    "name": "target-divisi",
+    "version": "1.0",
+    "deskripsi": "Target KPI per divisi (5 divisi + owner). Tier aktif = Realistis."
+  },
+  "divisi": [
+    {
+      "id": "owner",
+      "nama": "Owner / Director",
+      "kpi_utama": [
+        {
+          "indikator": "Kehadiran meeting bulanan",
+          "target": "100%"
+        },
+        {
+          "indikator": "Keputusan yang tertunda",
+          "target": "0"
+        },
+        {
+          "indikator": "Profit growth YoY",
+          "target": "min 15%"
+        },
+        {
+          "indikator": "Ekspansi tercapai",
+          "target": "1 proyek baru / tahun"
+        }
+      ]
+    },
+    {
+      "id": "legal",
+      "nama": "Legal & Compliance",
+      "pic_utama": "Bu Nisya",
+      "kpi_utama": [
+        {
+          "indikator": "Pengajuan SHM selesai < 30 hari",
+          "target": "100%"
+        },
+        {
+          "indikator": "Kontrak konsumen tanpa error",
+          "target": "100%"
+        },
+        {
+          "indikator": "Compliance check triwulan",
+          "target": "4x / tahun"
+        },
+        {
+          "indikator": "Response time legal opinion",
+          "target": "max 3 hari kerja"
+        }
+      ]
+    },
+    {
+      "id": "marketing",
+      "nama": "Marketing & Sales",
+      "pic_utama": "Mada, Riza, Yudi/Sdek, Amir",
+      "kpi_utama": [
+        {
+          "indikator": "Closing FLPP tim",
+          "target": "6 unit / bulan"
+        },
+        {
+          "indikator": "Lead masuk",
+          "target": "200 / bulan"
+        },
+        {
+          "indikator": "Survey lokasi",
+          "target": "8 / bulan"
+        },
+        {
+          "indikator": "SP3K submit",
+          "target": "2 / bulan"
+        },
+        {
+          "indikator": "Conversion rate",
+          "target": "min 3%"
+        },
+        {
+          "indikator": "Response time lead baru",
+          "target": "< 30 menit"
+        }
+      ]
+    },
+    {
+      "id": "proyek",
+      "nama": "Proyek & Konstruksi",
+      "pic_utama": "Rizal, Amir, Yudi/Sdek, Sinta",
+      "kpi_utama": [
+        {
+          "indikator": "Proyek selesai on-time",
+          "target": "100%"
+        },
+        {
+          "indikator": "Quality control PASS",
+          "target": "100% (tidak ada rework > 5%)"
+        },
+        {
+          "indikator": "Budget variance",
+          "target": "max 5% dari rencana"
+        },
+        {
+          "indikator": "HPP per unit",
+          "target": "max Rp 60 juta"
+        },
+        {
+          "indikator": "Serah terima on-time",
+          "target": "100%"
+        },
+        {
+          "indikator": "STB 0 komplain",
+          "target": "100%"
+        },
+        {
+          "indikator": "Vendor performance score",
+          "target": "> 80%"
+        }
+      ]
+    },
+    {
+      "id": "operasional",
+      "nama": "Operasional & Admin",
+      "pic_utama": "Novita, Sinta",
+      "kpi_utama": [
+        {
+          "indikator": "Pemberkasan selesai",
+          "target": "7 hari kerja"
+        },
+        {
+          "indikator": "SP3K keluar",
+          "target": "14 hari kerja"
+        },
+        {
+          "indikator": "Akad kredit on-time",
+          "target": "100%"
+        },
+        {
+          "indikator": "Berkas error",
+          "target": "0 (zero mistake)"
+        },
+        {
+          "indikator": "Material on-time",
+          "target": "100%"
+        },
+        {
+          "indikator": "Stok minimum terjaga",
+          "target": "100%"
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "nama": "Media & Konten Kreatif",
+      "pic_utama": "Reni, Rifki, Reta",
+      "kpi_utama": [
+        {
+          "indikator": "Konten published",
+          "target": "20 / bulan"
+        },
+        {
+          "indikator": "Lead dari konten",
+          "target": "50 / bulan"
+        },
+        {
+          "indikator": "Konten viral (>10K views)",
+          "target": "4 / bulan"
+        },
+        {
+          "indikator": "Engagement rate IG",
+          "target": "min 3%"
+        }
+      ]
+    }
+  ]
+}

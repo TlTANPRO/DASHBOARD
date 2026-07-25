@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "name": "market-research",
+    "version": "1.0",
+    "deskripsi": "Market research backlog FLPP Jawa Timur + demand analysis + segment size + opportunity. V4.0 - Bab 60.",
+    "ref": "content/v4-final/bab-60-market-research.md + dibuat 24 Jul 2026"
+  },
+  "market_overview": {
+    "judul": "Backlog FLPP + Demand Properti Jawa Timur 2026",
+    "sumber_data": [
+      "BPBTN (Bank Pembiayaan Tabungan Negara) - laporan FLPP 2025",
+      "BPS Jawa Timur - data kependudukan + perumahan",
+      "Kementerian PUPR - backlog FLPP nasional",
+      "Survei internal lead Q1 2026 (3,500 lead)"
+    ],
+    "tanggal_data": "Juni 2026"
+  },
+  "backlog_flpp_jawa_timur": {
+    "backlog_total_nasional_2025": 12000000,
+    "backlog_jawa_timur_2025": 1500000,
+    "backlog_jember_2025_est": 60000,
+    "kebutuhan_per_tahun_jember_est": 5000,
+    "supply_flpp_jember_2025": 2000,
+    "gap_supply_demand": 3000,
+    "interpretasi": "Supply FLPP di Jember hanya 40% dari demand. Gap 3,000 unit per tahun. Kita + kompetitor punya peluang besar",
+    "kontribusi_syahfalah_target_pct": 2,
+    "target_unit_per_tahun": 60
+  },
+  "segmentasi_demand": {
+    "first_home_buyer_pct": 65,
+    "first_home_buyer_profile": "Usia 25-35, MBR, baru menikah atau keluarga muda 1-2 anak, baru kerja 3-7 tahun",
+    "upgrade_home_pct": 25,
+    "upgrade_home_profile": "Usia 30-45, sudah punya rumah pertama tapi ingin upgrade, atau pindah dari rumah orang tua",
+    "investor_pct": 10,
+    "investor_profile": "Usia 35-55, punya 1+ properti, investasi passive income"
+  },
+  "lead_source_breakdown_2026": {
+    "fb_ads": 35,
+    "ig_organic": 20,
+    "tiktok_organic": 10,
+    "google_search": 10,
+    "referral_word_of_mouth": 15,
+    "walk_in_office": 5,
+    "konsultan_rekanan": 5
+  },
+  "lead_quality_metrics": {
+    "total_lead_q1_2026": 3500,
+    "qualified_lead_q1": 1100,
+    "qualified_rate_pct": 31,
+    "lead_to_visit_rate_pct": 45,
+    "visit_to_closing_rate_pct": 22,
+    "average_cpl_idr": 12000,
+    "cac_idr": 550000,
+    "ltv_idr": 166000000,
+    "ltv_cac_ratio": 302,
+    "interpretasi": "LTV/CAC ratio 302x = sangat sehat. Setiap Rp 1 yang kita invest di marketing menghasilkan Rp 302 revenue. Industry benchmark: minimal 3x. Kita 100x lebih sehat dari minimum"
+  },
+  "price_sensitivity_analysis": {
+    "harga_150_jt": {"demand_share_pct": 35, "konsumen_profile": "MBR paling budget-tight, ready stock wajib"},
+    "harga_166_jt": {"demand_share_pct": 45, "konsumen_profile": "Sweet spot MBR, FLPP eligible, demand tertinggi"},
+    "harga_180_jt": {"demand_share_pct": 15, "konsumen_profile": "MBR dengan budget lebih, mau kualitas lebih"},
+    "harga_200_jt_plus": {"demand_share_pct": 5, "konsumen_profile": "Di atas FLPP, KPR komersial, segment kecil"}
+  },
+  "location_preference_2026": {
+    "jember_kota": 50,
+    "jember_pinggiran": 30,
+    "lumajang": 15,
+    "luar_jember_lumajang": 5
+  },
+  "tipe_rumah_preference": {
+    "tipe_36_72": 60,
+    "tipe_45_90": 30,
+    "tipe_54_120": 10
+  },
+  "tahun_demand_forecast": {
+    "2026_total_unit_demand_jember": 5000,
+    "2026_total_unit_supply_jember": 2000,
+    "2027_growth_pct": 5,
+    "2027_total_unit_demand": 5250,
+    "2028_growth_pct": 5,
+    "2028_total_unit_demand": 5512
+  },
+  "key_insight": "Supply gap 60% di Jember. Setiap developer yang bisa deliver 50-100 unit/tahun di FLPP punya peluang growth tinggi. Kompetisi ada, tapi demand jauh lebih besar dari supply. Strategi kita: fokus supply (produksi rumah), demand generation akan mengikuti",
+  "rekomendasi_strategis": [
+    "Bangun 1 cluster baru per tahun (50-100 unit), 2 cluster di 2027",
+    "Lock bank tanah 5 tahun ke depan, 150+ kavling inventory",
+    "Maintain speed-to-market: 6-9 bulan dari groundbreaking ke BAST",
+    "Harga kompetitif di 166jt (sweet spot 45% demand)",
+    "Listing di semua platform + IG organik sebagai lead gen utama"
+  ]
+}

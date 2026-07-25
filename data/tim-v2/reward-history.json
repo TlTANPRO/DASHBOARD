@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "name": "reward-history",
+    "version": "1.0",
+    "deskripsi": "History bonus yang sudah dibayar. Auto-append per bulan."
+  },
+  "entries": []
+}

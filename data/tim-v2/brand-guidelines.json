@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "name": "brand-guidelines",
+    "version": "1.0",
+    "deskripsi": "Brand guidelines: logo, color palette, typography, tone of voice, do/dont, hashtag, USP messaging. V4.0 - Bab 62.",
+    "ref": "content/v4-final/bab-62-brand-guidelines.md + dibuat 24 Jul 2026"
+  },
+  "brand_identity": {
+    "company_name_primary": "PT Syahfalah Griya Aquila (Syahfalah Property)",
+    "company_name_secondary": "Lembayung Wanantara Padha (Lembayung Property)",
+    "tagline_primary": "Rumah Subsidi Siap Huni, Tanpa Renovasi",
+    "tagline_alternatives": [
+      "Miliki Rumah Impian, Mulai dari 1 Persen",
+      "Bangun Masa Depan Keluarga Anda Bersama Kami"
+    ],
+    "vision": "Menjadi developer properti terpercaya di Jawa Timur yang memberikan rumah layak huni untuk masyarakat menengah",
+    "mission": "Membangun rumah berkualitas dengan harga terjangkau, proses mudah, dan layanan purna jual yang bertanggung jawab",
+    "value_prop_canon": "Rumah subsidi FLPP siap huni tanpa perlu renovasi, harga 166 juta, garansi 1 bulan, proses mudah difasilitasi"
+  },
+  "hashtag_canon": {
+    "primary": ["#RumahSubsidiSiapHuni", "#SyahfalahProperty", "#LembayungProperty", "#SubsidiTanpaRenovasi"],
+    "secondary": ["#FLPP2026", "#FirstHomeBuyer", "#RumahJember", "#PropertiJember", "#RumahImpianNyataDiTangan"],
+    "campaign_specific": ["#BukuSakuKaryawan", "#DiaryProyek", "#SuaraKonsumen", "#SehariBersamaSyahfalah"]
+  },
+  "logo_pedoman": {
+    "logo_primary": "Logo S (Syahfalah) + L (Lembayung) stylized dengan bentuk rumah",
+    "logo_variations": ["Primary full color", "Monochrome hitam", "Monochrome putih (untuk background gelap)"],
+    "minimum_size": "Digital: 120px width. Print: 2.5cm width",
+    "clear_space": "Minimum 1x tinggi logo dari elemen lain",
+    "background_acceptable": "Putih, abu-abu terang, foto landscape dengan overlay",
+    "background_not_acceptable": "Gradient random, foto terlalu ramai, warna logo clash",
+    "jika_membuat_materi": "Gunakan logo yang sudah ada di Notion, jangan edit / recreate. Jika butuh variasi, minta Pak Ardian atau Rifki"
+  },
+  "color_palette": {
+    "primary_color": {
+      "name": "Syahfalah Blue",
+      "hex": "#1E40AF",
+      "oklch": "oklch(45% 0.20 260)",
+      "use": "Logo, header, CTA button, brand utama"
+    },
+    "secondary_color": {
+      "name": "Lembayung Sunset",
+      "hex": "#EA580C",
+      "oklch": "oklch(60% 0.20 50)",
+      "use": "Accent, promo, highlight, secondary CTA"
+    },
+    "neutral_palette": [
+      {"name": "Slate-900", "hex": "#0F172A", "use": "Body text"},
+      {"name": "Slate-700", "hex": "#334155", "use": "Subhead"},
+      {"name": "Slate-500", "hex": "#64748B", "use": "Caption"},
+      {"name": "Slate-300", "hex": "#CBD5E1", "use": "Divider"},
+      {"name": "Slate-100", "hex": "#F1F5F9", "use": "Background subtle"},
+      {"name": "Slate-50", "hex": "#F8FAFC", "use": "Background utama"}
+    ],
+    "semantic_color": [
+      {"name": "Success Green", "hex": "#16A34A", "use": "Sukses, approved, OK"},
+      {"name": "Warning Amber", "hex": "#D97706", "use": "Peringatan, pending"},
+      {"name": "Error Red", "hex": "#DC2626", "use": "Error, urgent, danger"}
+    ]
+  },
+  "typography": {
+    "primary_font": "Inter (sans-serif, modern, easy read)",
+    "secondary_font": "Playfair Display (serif, untuk heading dan tagline)",
+    "monospace_font": "JetBrains Mono (untuk kode, data, technical)",
+    "size_scale": {
+      "display_xl": "clamp(2.5rem, 1rem + 4vw, 4rem)",
+      "display_lg": "clamp(2rem, 1rem + 3vw, 3rem)",
+      "h1": "clamp(1.5rem, 0.5rem + 2vw, 2rem)",
+      "h2": "1.5rem",
+      "h3": "1.25rem",
+      "body": "1rem (16px base)",
+      "small": "0.875rem"
+    },
+    "weight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "line_height": "1.5 untuk body, 1.2 untuk heading"
+  },
+  "tone_of_voice": {
+    "persona": "Profesional tapi hangat, seperti kakak yang sudah sukses membantu adiknya beli rumah",
+    "voice_pillar": [
+      "Trustworthy - bukan jualan keras, tapi edukasi",
+      "Helpful - fokus membantu konsumen mencapai milestone (punya rumah)",
+      "Warm - tidak kaku, tidak terlalu formal, sopan",
+      "Clear - bahasa sederhana, tidak jargon, tidak menggurui"
+    ],
+    "kalimat_contoh": {
+      "jangan": [
+        "Dapatkan rumah mewah dengan harga terjangkau!! HUBUNGI SEKARANG!",
+        "Kesempatan emas tidak akan datang 2x! Buruan klaim!"
+      ],
+      "baik": [
+        "Halo Bapak/Ibu, saya Novita. Senang sekali bisa bantu jelaskan proses beli rumah subsidi FLPP. Boleh cerita dulu, Bapak/Ibu cari rumah untuk keluarga berapa orang?",
+        "Selamat! Rumah sudah jadi. Sebelum serah terima, kami QC 50 item untuk pastikan kualitas terbaik untuk Bapak/Ibu."
+      ]
+    }
+  },
+  "foto_dan_visual": {
+    "foto_produk": {
+      "style": "Cerah, modern, wide angle, golden hour kalau bisa, taken by smartphone min 12MP",
+      "min_resolution": "1080x1080 untuk IG, 1920x1080 untuk FB",
+      "subject_fokus": "Unit rumah tampak depan + interior dapur + kamar + kamar mandi + view cluster",
+      "orang": "Konsumen asli (dengan izin) lebih powerful dari model"
+    },
+    "foto_konsumen": {
+      "izin_wajib": "Form izin penggunaan foto + testimoni (Novita prepare)",
+      "caption_template": "Pak [Nama] + keluarga, di cluster [Nama] unit [No]. Cerita mereka bisa cek highlight IG"
+    },
+    "video": {
+      "resolusi": "1080x1920 (vertikal) untuk Reels/TikTok, 1920x1080 (horizontal) untuk YouTube",
+      "durasi_optimal": "30-60 detik Reels, 60-90 detik TikTok, 1-2 menit YouTube",
+      "captions_wajib": "Subtitle di video (banyak yang mute play)"
+    },
+    "watermark_logo": "Logo kecil di pojok kanan atas untuk konten organik, tidak di-cover untuk paid ads (per policy Meta)"
+  },
+  "aplikasi_brand_dalam_komunikasi": {
+    "email_signature": "[Nama] - [Jabatan] | PT Syahfalah Griya Aquila | +62 xxx | www.syahfalah.co.id",
+    "whatsapp_business_description": "Halo! Saya [Nama] dari PT Syahfalah. Senang melayani Bapak/Ibu. Senin-Jumat 08.00-16.30, Sabtu 08.00-12.00. Di luar jam, akan kami balas pagi berikut. 🙏",
+    "voice_note_etiquette": "WA voice note max 30 detik, kalau lebih panjang ketik aja. Sopan, tidak tergesa-gesa",
+    "broadcast_template": "Bapak/Ibu [Nama], terima kasih sudah menjadi bagian dari keluarga Syahfalah. Kami informasikan [isi]. Info lebih lanjut hubungi saya atau tim. Salam hangat, [Nama] - Tim Syahfalah"
+  },
+  "do_and_dont": {
+    "do": [
+      "Gunakan logo di posisi konsisten (kiri atas atau tengah atas)",
+      "Tag @syahfalah.property dan @lembayung.property di IG",
+      "Konsisten gunakan #RumahSubsidiSiapHuni + #SubsidiTanpaRenovasi",
+      "Edukasi, bukan hard-sell",
+      "Respon inquiry < 1 jam saat jam kerja"
+    ],
+    "dont": [
+      "Jangan post konten yang tidak sesuai brand (misal: foto tim lagi makan, tanpa konteks)",
+      "Jangan typo di caption / headline. Proofread sebelum post",
+      "Jangan klaim tidak benar (misal: 'cicilan Rp 500rb' kalau aslinya Rp 1.2jt)",
+      "Jangan compare kasar dengan kompetitor (sebut nama mereka)",
+      "Jangan post foto/video tanpa izin orang yang ada di frame"
+    ]
+  }
+}

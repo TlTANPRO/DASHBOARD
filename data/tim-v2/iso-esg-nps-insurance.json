@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "name": "iso-esg-nps-insurance",
+    "version": "1.0",
+    "deskripsi": "ISO 9001 QMS template + ESG framework + NPS survey + Insurance planning. V4.0 - Bab 55-58.",
+    "ref": "content/v4-final/bab-55-58-iso-esg-nps-insurance.md + dibuat 24 Jul 2026"
+  },
+  "iso_9001_qms_template": {
+    "judul": "ISO 9001:2015 Quality Management System - Template",
+    "scope": "Implementasi QMS untuk PT Syahfalah + Lembayung Wanantara Padha. Target sertifikasi Q4 2027 (12-18 bulan preparation)",
+    "benefit": [
+      "Standarisasi SOP lintas divisi",
+      "Meningkatkan kepercayaan konsumen + bank + investor",
+      "Operational efficiency + reduce defect",
+      "Memenuhi prasyarat untuk listing/scaling"
+    ],
+    "7_prinsip_iso_9001": [
+      "Customer focus - konsumen sebagai pusat",
+      "Leadership - Pak Ardian + Bu Nisya pimpin QMS",
+      "Engagement of people - seluruh PIC terlibat",
+      "Process approach - SOP terdokumentasi",
+      "Improvement - continuous improvement kaizen",
+      "Evidence-based decision making - data-driven",
+      "Relationship management - bank, supplier, subkon"
+    ],
+    "klausa_utama_yang_harus_didokumentasikan": [
+      {"klausa": "4. Context of organization", "dokumen": "SWOT analysis, scope QMS, proses bisnis (sudah ada di business-model.json)"},
+      {"klausa": "5. Leadership", "dokumen": "Quality policy (Pak Ardian), roles & responsibilities (struktur-organisasi.json)"},
+      {"klausa": "6. Planning", "dokumen": "Quality objectives (KPI per PIC), risk & opportunity (risk-register.json)"},
+      {"klausa": "7. Support", "dokumen": "Resources, competence (skill matrix), communication, documented information"},
+      {"klausa": "8. Operation", "dokumen": "Operational planning, requirements for products/services, design, production, release"},
+      {"klausa": "9. Performance evaluation", "dokumen": "Monitoring, measurement, analysis, internal audit, management review"},
+      {"klausa": "10. Improvement", "dokumen": "Nonconformity, corrective action, continual improvement"}
+    ],
+    "timeline_implementasi": [
+      {"q": "Q3 2026", "agenda": "Kick-off QMS project, training awareness seluruh PIC, mapping proses bisnis existing"},
+      {"q": "Q4 2026", "agenda": "Dokumentasi SOP existing (Buku Saku V4.0 jadi acuan), quality objectives per divisi"},
+      {"q": "Q1 2027", "agenda": "Internal audit pertama, gap analysis, corrective action"},
+      {"q": "Q2 2027", "agenda": "Tutup gap, mock audit external consultant, training refresher"},
+      {"q": "Q3 2027", "agenda": "Sertifikasi audit stage 1 + stage 2 oleh badan sertifikasi (TUV/SGS)"},
+      {"q": "Q4 2027", "agenda": "Sertifikat ISO 9001 keluar, maintenance audit pertama"}
+    ],
+    "budget_qms": "Rp 25-50 juta (konsultan + audit eksternal + training)"
+  },
+  "esg_framework": {
+    "judul": "ESG Framework - Developer Berkelanjutan",
+    "environment": [
+      "Efisiensi energi: lampu LED, panel surya untuk komplek (target 2027)",
+      "Pengelolaan air: rainwater harvesting, grey water recycling untuk taman",
+      "Material ramah lingkungan: bata ringan (hebel)代替 bata merah (reduce 30% carbon)",
+      "Tata kelola limbah konstruksi: sortir waste, daur ulang kayu dan besi",
+      "Green space: minimum 10% luas kavling untuk taman + RTH (Ruang Terbuka Hijau)"
+    ],
+    "social": [
+      "Pemberdayaan MBR (Masyarakat Berpenghasilan Rendah) lewat FLPP - core business impact",
+      "Pekerja lokal: 80% tukang/subkon dari kabupaten lokal (dukung ekonomi lokal)",
+      "Safety: K3 compliance di site (helm, sepatu, APAR), insiden = 0",
+      "Komunitas: acara lingkungan (penanaman pohon, bersih sungai) 2x/tahun",
+      "Aksesibilitas: rumah ramah disabilitas (ramp, pintu lebar) untuk cluster tertentu"
+    ],
+    "governance": [
+      "Transparansi: laporan keuangan bulanan + quarterly ke owner",
+      "Anti-fraud: dual sign untuk transaksi > Rp 5 juta, audit internal bulanan",
+      "Kepatuhan: izin lengkap, pajak tepat waktu, BPJS seluruh karyawan",
+      "Etika bisnis: no bribery, no fictitious transaction, fair pricing",
+      "Stakeholder engagement: meeting berkala dengan bank, supplier, konsumen, karyawan"
+    ],
+    "esg_scorecard_2026": {
+      "environment": "60/100 (basic compliance, banyak improvement area)",
+      "social": "75/100 (kontribusi FLPP + MBR kuat)",
+      "governance": "70/100 (transparansi + kepatuhan baik)"
+    },
+    "target_2027": {
+      "environment": "75/100 (green material + solar panel sebagian cluster)",
+      "social": "85/100 (program CSR lebih aktif)",
+      "governance": "80/100 (audit internal rutin)"
+    }
+  },
+  "nps_customer_survey": {
+    "judul": "Net Promoter Score - Customer Satisfaction Survey",
+    "definisi": "NPS = % Promoter - % Detractor. Skala 0-10. Industri property target NPS > 50 (good), > 70 (excellent)",
+    "frekuensi_survey": "1 bulan setelah BAST (awal), 6 bulan setelah (mid), 12 bulan setelah (annual)",
+    "pertanyaan_nps": "Seberapa likely Bapak/Ibu akan merekomendasikan PT Syahfalah ke teman/keluarga? (skala 0-10)",
+    "klasifikasi": {
+      "promoter": "9-10 (loyal, akan recommend)",
+      "passive": "7-8 (puas tapi tidak akan actively recommend)",
+      "detractor": "0-6 (tidak puas, akan bad-mouth)"
+    },
+    "pertanyaan_tambahan": [
+      "Bagaimana kepuasan Bapak/Ibu dengan: 1) kualitas rumah, 2) proses pembelian, 3) komunikasi tim, 4) after-sales service, 5) value for money (skala 1-5)",
+      "Apa yang paling Bapak/Ibu sukai dari PT Syahfalah? (open text)",
+      "Apa yang perlu kami improve? (open text)"
+    ],
+    "tools": "Google Form atau SurveyMonkey. Link dikirim via WA setelah BAST",
+    "target_nps_2026": 50,
+    "target_nps_2027": 65,
+    "action_plan_nps_rendah": {
+      "if_detractor": "Mada + Novita kontak langsung dalam 24 jam, tanyakan akar masalah, tawarkan kompensasi jika memang ada defect",
+      "if_passive": "Follow up 3 bulan, cek apakah ada issue yang belum selesai",
+      "if_promoter": "Minta izin testimoni + referral, masuk program Brand Ambassador"
+    }
+  },
+  "employee_satisfaction_survey": {
+    "judul": "Employee Satisfaction & Retention Survey",
+    "frekuensi": "Quarterly (akhir quarter)",
+    "pertanyaan": [
+      "Seberapa puas Bapak/Ibu dengan pekerjaan saat ini? (skala 1-10)",
+      "Seberapa jelas career path Bapak/Ibu di PT Syahfalah? (skala 1-5)",
+      "Bagaimana komunikasi dengan atasan/team? (skala 1-5)",
+      "Bagaimana work-life balance? (skala 1-5)",
+      "Apa yang Bapak/Ibu ingin improve? (open text)"
+    ],
+    "target_satisfaction_score": "8.0/10 (annual average)",
+    "target_retention_rate": "85% PIC tetap per tahun",
+    "action_plan": {
+      "low_satisfaction": "Mada 1-on-1 dalam 1 minggu, identifikasi akar masalah, action plan",
+      "low_retention": "Exit interview mendalam, identifikasi kenapa resign, improve onboarding + retention"
+    }
+  },
+  "insurance_planning": {
+    "judul": "Insurance Planning - Konstruksi, Kebakaran, Jiwa KPR",
+    "asuransi_konstruksi": {
+      "jenis": "Construction All Risk (CAR) Insurance",
+      "cover": "Risiko kerusakan bangunan saat konstruksi (kebakaran, bencana alam, vandalism, kesalahan konstruksi)",
+      "premi": "0.15-0.30% dari nilai kontrak konstruksi (Rp 75jt × 0.25% = Rp 187.500 per unit)",
+      "provider": "Asuransi Astra, Adira, atau Askrindo",
+      "wajib": "Ya, untuk proyek > Rp 1 M (per cluster), best practice untuk semua proyek"
+    },
+    "asuransi_kebakaran": {
+      "jenis": "Fire Insurance untuk unit jadi (post BAST, opsional untuk konsumen)",
+      "cover": "Risiko kebakaran + petir + ledakan",
+      "premi": "0.10-0.20% dari nilai bangunan per tahun (Rp 100jt × 0.15% = Rp 150.000 per tahun)",
+      "provider": "Allianz, Prudential, atau bank KPR (biasanya bundled)",
+      "saran": "Rekomendasikan ke konsumen saat BAST, tapi tidak wajib"
+    },
+    "asuransi_jiwa_kpr": {
+      "jenis": "Credit Life Insurance (wajib untuk KPR)",
+      "cover": "Jika konsumen meninggal dunia, sisa KPR dilunasi oleh asuransi",
+      "premi": "0.20-0.50% dari plafond KPR per tahun",
+      "provider": "Bank KPR biasanya bundling (BTN, BCA, BNI punya program sendiri)",
+      "wajib": "Ya, untuk konsumen KPR (bank yang wajibkan)"
+    },
+    "asuransi_karyawan": {
+      "jenis": "BPJS Ketenagakerjaan (wajib) + JKK (Jaminan Kecelakaan Kerja) + JKM (Jaminan Kematian)",
+      "cover": "Risiko kerja, kematian, pensiun",
+      "premi": "Sudah include di BPJS Ketenagakerjaan (lihat bonus-scheme.json)",
+      "wajib": "Ya, untuk seluruh PIC"
+    },
+    "budget_insurance_tahunan": "Rp 10-15 juta (konstruksi + lainnya, di luar BPJS karyawan)"
+  }
+}

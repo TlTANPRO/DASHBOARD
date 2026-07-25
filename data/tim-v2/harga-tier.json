@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "name": "harga-tier",
+    "version": "1.0",
+    "deskripsi": "Pricing Logic — Management Density = Output Density. V5.0 meeting 24 Jul 2026 point 2 (lanjutan). Pricing tier 3 level berdasarkan kepadatan management.",
+    "ref": "config-tier.json (rules_of_management) + target-perusahaan.json + meeting 24 Jul 2026 point 2"
+  },
+  "filosofi_pricing_v5": {
+    "core_equation": "OUTPUT = f(MANAGEMENT_DENSITY). Tanpa management = output rendah (5 unit). Dengan management = output lebih tinggi (7 unit).",
+    "kenapa_density_management": "Management yang baik (struktur jelas, SOP enforced, audit jalan) = tim fokus, error rendah, closing naik. Tanpa management = tim jalan sendiri, error tinggi, closing rendah.",
+    "bukan_harga_naik_turun": "Ini bukan markup harga rumah. Ini jumlah unit per bulan yang BISA DICAPAI oleh tim. Makin padat management, makin banyak unit closing per bulan.",
+    "tujuan": "Justifikasi biaya management ke klien + clarity ke tim tentang ekspektasi."
+  },
+  "tiga_tier_pricing": [
+    {
+      "tier": "bronze_no_management",
+      "nama_marketing": "BRONZE — Tanpa Management",
+      "unit_per_bulan_cap": 5,
+      "fee_closing_per_unit_idr": 2750000,
+      "kondisi": "Klien handle closing sendiri. Perusahaan hanya bantu unit ready + spek + sertifikat. Closing file preparation = klien.",
+      "siapa_pakai": "Klien yang sudah punya tim sendiri / investasi kecil / coba-coba",
+      "konsumer_tren": "Lead turun 30% dalam 6 bulan (no maintenance), repeat order 0",
+      "margin_perusahaan": "Margin tipis 15-20% (hanya produksi rumah)",
+      "tanggung_jawab_perusahaan": ["Kualitas bangunan", "Sertifikat SHM", "BAST on-time"],
+      "tanggung_jawab_klien": ["Lead generation", "Closing", "Pemberkasan", "After-sales"]
+    },
+    {
+      "tier": "silver_partial_management",
+      "nama_marketing": "SILVER — Partial Management",
+      "unit_per_bulan_cap": 6,
+      "fee_closing_per_unit_idr": 3250000,
+      "kondisi": "Klien handle lead + closing. Perusahaan handle operasional (proyek, admin, after-sales, sebagian legal).",
+      "siapa_pakai": "Klien yang punya marketing tapi tidak punya tim proyek / admin / legal",
+      "konsumer_tren": "Lead stabil, repeat order 10-15% (ada after-sales)",
+      "margin_perusahaan": "Margin medium 20-25% (ada fee closing + operasional)",
+      "tanggung_jawab_perusahaan": ["Proyek", "Admin", "After-sales", "Legal dasar", "Closing support (jika klien mau)"],
+      "tanggung_jawab_klien": ["Lead generation", "Closing (full)", "Brand marketing"]
+    },
+    {
+      "tier": "gold_full_management",
+      "nama_marketing": "GOLD — Full Management",
+      "unit_per_bulan_cap": 7,
+      "fee_closing_per_unit_idr": 3750000,
+      "kondisi": "Perusahaan handle SEMUA: lead gen + closing + proyek + admin + legal + after-sales + brand. Klien terima jadi + laporan.",
+      "siapa_pakai": "Klien yang tidak mau pusing operasional (investor murni, ekspansi dari luar kota)",
+      "konsumer_tren": "Lead naik 30% (ada tim marketing), repeat order 25-30% (after-sales optimal)",
+      "margin_perusahaan": "Margin tinggi 25-35% (fee closing + fee manajerial 5%)",
+      "tanggung_jawab_perusahaan": ["Lead gen", "Closing", "Proyek", "Admin", "Legal", "After-sales", "Brand marketing", "Reporting ke klien"],
+      "tanggung_jawab_klien": ["Review bulanan + strategic decision"]
+    }
+  ],
+  "cross_check_dengan_ssot_lain": {
+    "config_tier_rules_of_management": "SSOT config-tier.json punya 3 skenario: no_management (5 unit), partial (6 unit), full (7 unit). Harga-tier.json VALIDASI bahwa setiap skenario = tier yang benar.",
+    "target_perusahaan": "SSOT target-perusahaan.json: target closing Q3 2026 = 18 unit. DENGAN full management = 7 unit/bulan x 3 bulan = 21 unit. Tanpa management = 5 x 3 = 15 unit. Realistic 18 = di antara (partial 6 unit).",
+    "fakta_closing": [
+      "Closing aktual Juli 2026 = 4 unit (Bronze, no management) = valid",
+      "Target Q3 2026 realistis (partial management) = 6 unit/bulan x 3 = 18 unit = match target-perusahaan",
+      "Stretch Q4 2026 (full management) = 7 unit/bulan x 3 = 21 unit = butuh ekspansi tim"
+    ]
+  },
+  "logika_harga_diterima_klien": {
+    "contoh_biaya_total_5_unit": "Bronze: 5 x 2.75jt = 13.75jt fee closing/bulan. Biaya 0 untuk management (klien handle sendiri). Plus harga rumah standar 185jt/unit (misal).",
+    "contoh_biaya_total_6_unit": "Silver: 6 x 3.25jt = 19.5jt fee closing/bulan. Biaya management = 0 (klien handle marketing). Plus fee management = 5% profit tim.",
+    "contoh_biaya_total_7_unit": "Gold: 7 x 3.75jt = 26.25jt fee closing/bulan. Biaya management = fee manajerial 5% profit tim. ROI = 7 unit vs 5 unit = +40% output dengan management yang sama harganya.",
+    "kenapa_fee_closing_naik_seiring_management": "Fee closing bukan dari harga rumah, tapi dari VALUE yang ditambah. Makin banyak value (closing support + admin + legal + after-sales) = makin tinggi fee."
+  },
+  "checklist_ke_full_management": {
+    "syarat_dari_partial_ke_full": [
+      "Track record 6 bulan partial management dengan konsistensi 90%+",
+      "Klien siap investasi biaya manajerial 5% profit",
+      "Tim sudah ada: Mada (operasional) + Rizal (proyek) + Bu Nisya (legal) + Novita (admin) + Sinta (purchasing) + Riza (marketing) + Yudi (closing) + 3 media (Reni/Rifki/Reta)",
+      "Klien setujui bahwa fee naik (dari 3.25jt ke 3.75jt per unit) untuk coverage lebih luas",
+      "Owner approve (final gate)"
+    ],
+    "timeline_ekspansi": "Q3 2026 = partial (current). Q4 2026 = ekspansi ke 1-2 klien full management. Q1 2027 = full management sebagai default untuk klien baru.",
+    "risk": "Full management = fee 5% profit = tim harus deliver lebih banyak. Kalau gagal, fee hangus + klien churn. Mitigasi: pilot 3 bulan dulu sebelum full commitment."
+  },
+  "pricing_decision_owner": {
+    "initial": "Saat klien pertama deal, default = partial (sesuai Q3 2026 current state). Owner approve upsell ke full setelah 6 bulan track record.",
+    "ekspansi": "Klien kedua dst = default partial. Full management di-pitch hanya ke klien yang value-ekspansi (investor murni, ekspansi dari luar kota).",
+    "margin_target": "Owner target margin 25% blended across tier. Per tier: Bronze 15-20%, Silver 20-25%, Gold 25-35%.",
+    "review": "Pricing review setiap 6 bulan. Tier bisa naik/turun tergantung market + track record."
+  },
+  "comparison_v4_ke_v5": {
+    "v4": "Pricing V4 = 1 tier (fee 3.25jt flat per unit). Tidak ada tier management. Klien tidak ada pilihan.",
+    "v5": "Pricing V5 = 3 tier (Bronze/Silver/Gold). Klien pilih sesuai kebutuhan. Output perusahaan jelas per tier (5/6/7 unit/bulan)."
+  }
+}

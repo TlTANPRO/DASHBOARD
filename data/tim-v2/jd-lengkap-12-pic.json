@@ -1,0 +1,513 @@
+{
+  "_meta": {
+    "name": "jd-lengkap-12-pic",
+    "version": "3.0",
+    "deskripsi": "JD LENGKAP 12 PIC. V3: Mada = B10 PIC Back-End Only (final confirm V5.0 Phase 4 meeting 24 Jul point 19). Sinta stopper kualitas V2 retained.",
+    "ref": "struktur-organisasi.json + jd-ringkas-12-pic.json + expansion manual 25 Jul 2026 + meeting 24 Jul 2026 point 13 + point 19",
+    "tanggal": "2026-07-25"
+  },
+  "mada_b10_pic_catatan_v5": {
+    "filosofi": "V5.0 final: Mada = B10 PIC, Back-End Operasional & Lintas Fungsi. NO customer-facing. NO closing hook pojok. NO lead generation. TUGAS MURNI: operasional internal, approval, monitoring, coaching, audit, konsolidasi KPI.",
+    "alasan_final": [
+      "V4 pattern: Mada = mixed role (operasional + closing hook pojok + handle front office). Result: bottleneck di approval, kerjaan operasional terbengkalai, closing rate tim turun karena Mada fokus handle 1 closing.",
+      "V5.0 fix: Mada full back-end, no customer-facing. Customer-facing di-pisah: Riza (lead gen), Yudi (closing), Novita (admin/CS).",
+      "B10 = Back-End Operational PIC. Angka 10 = kode internal untuk PIC back-end murni (vs P0-P3 = PIC operasional lain).",
+      "Decision: Mada punya delegation approve <= 5jt. Mada supervise 11 PIC via daily standup + KPI Score Card. Mada lead lintas fungsi via cross-divisi review mingguan."
+    ],
+    "definisi_final_mada": {
+      "title": "B10 PIC — Back-End Operasional & Lintas Fungsi (No Hook/Closing Pojok)",
+      "scope": "12 PIC perusahaan, lintas divisi, lintas fungsi",
+      "tidak_termasuk": [
+        "Customer-facing (WA/telpon konsumen langsung)",
+        "Closing hook pojok showroom",
+        "Lead generation (ads/content/konten)",
+        "On-site proyek (handled Rizal/Amir)"
+      ],
+      "termasuk": [
+        "Daily standup + lintas fungsi coordination",
+        "Approval <= 5jt (operasional + fee closing)",
+        "KPI Score Card consolidation + auto-report owner",
+        "Coaching on-the-job (Pilar 1 + 2 + 3 dari coaching-3-pilar.json)",
+        "Audit lintas divisi (mingguan, scope operasional)",
+        "Escalation ke Owner untuk > 5jt atau blocker strategic"
+      ]
+    },
+    "wakil_jika_off_site": {
+      "off_1_hari": "Standup ditunda max 1 jam, Bu Nisya handle approval legal, Rizal handle approval proyek (jika urgent)",
+      "off_2_3_hari": "Bu Nisya acting chief of staff + Rizal site lead + Reni media lead. Triple lead sementara.",
+      "off_lebih_3_hari": "Pak Ardian turun tangan langsung + backup activated. Standup + KPI Score Card delegated ke Bu Nisya."
+    },
+    "kompetensi_yang_dibutuhkan": [
+      "Lintas fungsi: paham marketing + closing + proyek + admin + legal + media di level overview",
+      "Coaching: bisa coaching pakai 3 pilar (kurikulum + legitimasi moral + waktu fleksibel)",
+      "Decision making: bisa decide <= 5jt tanpa minta owner (sesuai delegation_matrix)",
+      "Konsolidasi: bisa rekap 12 PIC KPI jadi 1 dashboard",
+      "Komunikasi: sopan tapi tegas, tidak micromanage, tidak laissez-faire"
+    ]
+  },
+  "sinta_stopper_kualitas_v5": {
+    "filosofi": "Purchasing V4 = quantity worker (banyak order, asal dapat material). Purchasing V5 = stopper kualitas - TIDAK ordering kalau material tidak sesuai spek, meskipun mandor pressure. Sinta = quality gate, BUKAN admin order.",
+    "qualifier_wajib": [
+      {"qualifier": "Kualitas bangunan (spek material)", "definisi": "Cross-check spek: semen harus sesuai spek proyek (type, brand, mutu), besi harus sesuai diameter, kayu harus sesuai jenis. Tidak boleh 'mirip' atau 'hampir sama'."},
+      {"qualifier": "Kuantitas (volume + waste)", "definisi": "Hitung volume real (tanpa waste), lalu tambahkan waste allowance maks 5%. Kalau waste aktual > 5% → Sinta tolak material, retensi vendor."},
+      {"qualifier": "Progress per-blok (money-to-value)", "definisi": "Track: berapa modal keluar (uang) vs berapa fisik jadi (unit/blok). Kalau money > value 20% → alert Rizal + Owner."},
+      {"qualifier": "Auditor netto/bruto", "definisi": "Cross-check volume netto (volume pakai) vs bruto (volume beli). Selisih normal 3-5%. Lebih dari itu = waste / bocor."},
+      {"qualifier": "Retensi per-blok", "definisi": "Setiap blok punya retensi 5% yang ditahan sampai 30 hari pasca BAST. Sinta track retensi release sesuai timeline."},
+      {"qualifier": "Best price method (3 vendor minimal)", "definisi": "Setiap PO > 500rb wajib 3 vendor quotation. Sinta tidak boleh langsung PO tanpa perbandingan, kecuali urgent (escalate Mada)."}
+    ],
+    "indikator_kualitas_keputusan": [
+      {"indikator": "Material spek match", "target": "100%", "konsekuensi_jika_miss": "Material reject + retensi vendor + Sinta coaching"},
+      {"indikator": "Best price 3 vendor", "target": "100% PO > 500rb", "konsekuensi_jika_miss": "PO di-block + coaching"},
+      {"indikator": "Waste < 5%", "target": "Per proyek", "konsekuensi_jika_miss": "Sinta review metode + coaching"},
+      {"indikator": "Money-to-value", "target": "Variance < 20%", "konsekuensi_jika_miss": "Sinta alert + Rizal review progress"},
+      {"indikator": "Retensi release on-time", "target": "100%", "konsekuensi_jika_miss": "Reminder vendor + dokumentasi"}
+    ],
+    "wewenang_tambah": {
+      "tolak_material_tidak_spes": "Sinta BOLEH menolak material meskipun mandor/mandor proyek pressure. Wajib dokumentasi foto + spek + alasan.",
+      "block_po_tanpa_3_vendor": "Sinta BOLEH block PO > 500rb yang tidak ada 3 vendor quotation. Mada tidak boleh override tanpa escalation ke Owner.",
+      "retensi_vendor_otomatis": "Sinta otomatis retensi 5% ke vendor yang material reject / molor. Tidak perlu approval Mada."
+    }
+  },
+  "sow_12_pic": [
+    {
+      "no": 1,
+      "inisial": "PA",
+      "nama": "Pak Ardian",
+      "title": "Owner / Director",
+      "reports_to": "-",
+      "definisi_peran": "Pemegang saham, strategic decision maker, final approval. Tanpa owner centris = Pak Ardian hanya turun tangan untuk keputusan > 50jt atau pivot bisnis. Operasional harian sudah didelegasikan ke Mada, legal ke Bu Nisya.",
+      "tugas_harian": [
+        "Review dashboard owner (via WA Mada)",
+        "Approve pengeluaran > 5jt (jika di luar delegation Mada)",
+        "Briefing dengan Mada (jika ada eskalasi)"
+      ],
+      "tugas_mingguan": [
+        "Review KPI Score Card seluruh PIC (auto-report setiap Jumat)",
+        "Approve retainer & kontrak strategis"
+      ],
+      "tugas_bulanan": [
+        "Meeting bulanan evaluasi performance + keuangan",
+        "Review forecast Q4 + target Q+1",
+        "Approve budget marketing + operasional > 50jt"
+      ],
+      "deliverables": [
+        "KPI Score Card report (mingguan)",
+        "Approval pengeluaran > 5jt (just-in-time)",
+        "Strategic decision (cluster baru, ekspansi, mitra)"
+      ],
+      "KPI_link": ["meeting 100%", "profit YoY 15%", "1 ekspansi/tahun", "KPI Score Card tim"],
+      "decision_authority": {
+        "limit_idr": null,
+        "kategori": "All high-value decisions",
+        "wakil": "Bu Nisya + Mada (operasional saat owner off-site > 3 hari)"
+      },
+      "escalation_path": "Direct dari semua PIC via Mada atau Bu Nisya"
+    },
+    {
+      "no": 2,
+      "inisial": "BN",
+      "nama": "Bu Nisya",
+      "title": "Legal / Co-Director",
+      "reports_to": "Pak Ardian",
+      "definisi_peran": "Legal oversight + kontrak + sengketa. Di V5.0, Bu Nisya punya delegation authority kontrak <= 50jt, lead audit front office mingguan, lead training legal utk admin polyvalent.",
+      "tugas_harian": [
+        "Review kontrak masuk (closing FLPP, vendor baru)",
+        "Cross-check legalitas dokumen STB",
+        "Handle komplain legal konsumen"
+      ],
+      "tugas_mingguan": [
+        "Audit front office (form, notulensi, arsip)",
+        "Briefing admin polyvalent (legal draft skill)",
+        "Review addendum kontrak"
+      ],
+      "tugas_bulanan": [
+        "Laporan legal ke Owner",
+        "Update SOP kontrak + retensi",
+        "Training CS untuk eskalasi sengketa"
+      ],
+      "deliverables": [
+        "Kontrak FLPP tervalidasi",
+        "Audit report front office (mingguan)",
+        "Legal opinion untuk keputusan > 10jt"
+      ],
+      "KPI_link": ["kontrak clean 100%", "audit finding < 3/bulan", "sengketa 0"],
+      "decision_authority": {
+        "limit_idr_kontrak": 50000000,
+        "scope": "Kontrak FLPP, kontrak vendor <= 50jt, addendum, sengketa, legal opinion",
+        "wakil": "Mada (legal-friendly decisions saat unavailable)"
+      },
+      "escalation_path": "Pak Ardian untuk keputusan > 50jt atau pivot legal"
+    },
+    {
+      "no": 3,
+      "inisial": "M",
+      "nama": "Mada",
+      "title": "B10 PIC - Back-End Operasional & Lintas Fungsi (No Hook/Closing Pojok)",
+      "reports_to": "Pak Ardian (operasional), Bu Nisya (legal)",
+      "definisi_peran": "V5.0 redefinisi: Mada = B10 PIC, BACK-END operasional murni, NO customer-facing. Mada handle lintas fungsi: monitoring 12 PIC, approval <= 5jt, daily standup, KPI tracking, audit cross-divisi. Sebelumnya Mada juga marketing lead - V5.0 itu dilepas ke Riza (digital) + Yudi (closing).",
+      "tugas_harian": [
+        "Daily standup 08.00-08.30 (seluruh PIC)",
+        "Approval pengeluaran <= 5jt",
+        "Cross-check progress lintas divisi",
+        "Escalate blocker > 24 jam ke Owner"
+      ],
+      "tugas_mingguan": [
+        "Audit operasional lintas divisi (Senin pagi)",
+        "Review KPI Score Card seluruh PIC (auto)",
+        "Coaching on-the-job ke PIC yang perlu support"
+      ],
+      "tugas_bulanan": [
+        "Laporan operasional ke Owner",
+        "Review SOP enforcement (yang dipakai, yang tidak)",
+        "Adjust delegation matrix jika ada gap",
+        "Retrospective + planning bulan depan"
+      ],
+      "deliverables": [
+        "Daily standup report",
+        "Approval <= 5jt (real-time)",
+        "KPI Score Card consolidation",
+        "Audit lintas divisi (mingguan)"
+      ],
+      "KPI_link": ["KPI tim 80% achieved", "approval turnaround < 24 jam", "standup 100% hadir", "KPI Score Card 100% PIC reported"],
+      "decision_authority": {
+        "limit_idr": 5000000,
+        "scope": "Pengeluaran operasional, vendor routine, fee closing, reimbursement, material proyek < 5jt",
+        "wakil": "Rizal (kalau off-site > 1 hari)"
+      },
+      "escalation_path": "Pak Ardian untuk > 5jt atau blocker strategic"
+    },
+    {
+      "no": 4,
+      "inisial": "R",
+      "nama": "Riza",
+      "title": "PIC Digital Marketing & Lead Generation",
+      "reports_to": "Mada (operasional)",
+      "definisi_peran": "Lead digital murni: Meta Ads, content production, landing page, lead capture, hand-off ke Yudi. Fee media = closing-based, bukan posting-based. V5.0 target: lead quality > quantity.",
+      "tugas_harian": [
+        "Cek Meta Ads dashboard (pagi + sore)",
+        "Review lead masuk semalam",
+        "Brief content ke Reni/Rifki",
+        "Update master-db leads"
+      ],
+      "tugas_mingguan": [
+        "Weekly content planning (Senin)",
+        "Meta Ads optimization (Selasa)",
+        "Lead quality review (Rabu)",
+        "Report closing-attribution (Jumat)"
+      ],
+      "tugas_bulanan": [
+        "Meta Ads strategy review",
+        "Hybrid channel mix evaluation",
+        "Forecast lead bulan depan",
+        "Budget pacing review"
+      ],
+      "deliverables": [
+        "Qualified lead per minggu (target 30)",
+        "Cost per lead < 50rb",
+        "Content production 5-7 post/minggu",
+        "Closing attribution report"
+      ],
+      "KPI_link": ["qualified lead 30/minggu", "CPL < 50rb", "lead-to-closing 8%", "content engagement 5%"],
+      "decision_authority": {
+        "limit_idr": 1500000,
+        "scope": "Ads budget harian, content production, design tools",
+        "wakil": "Yudi (jika Riza off-site)"
+      },
+      "escalation_path": "Mada untuk budget > 1.5jt atau strategy pivot"
+    },
+    {
+      "no": 5,
+      "inisial": "Y",
+      "nama": "Yudi/Sdek",
+      "title": "PIC Closing + Front Desk",
+      "reports_to": "Mada (operasional)",
+      "definisi_peran": "Closing murni + front desk. Terima qualified lead dari Riza, follow up merayu (7 step script), handle walk-in, deal closing. V5.0: closing rate > presentation rate.",
+      "tugas_harian": [
+        "Cek lead masuk dari Riza (pagi)",
+        "Follow up 5-10 lead via WA/telpon",
+        "Handle walk-in customer",
+        "Update pipeline closing di master-db"
+      ],
+      "tugas_mingguan": [
+        "Review closing rate (mingguan)",
+        "Coaching dengan Mada (lead stuck)",
+        "Re-engage cold lead"
+      ],
+      "tugas_bulanan": [
+        "Closing target review",
+        "Closing script A/B testing",
+        "Customer testimonial collection"
+      ],
+      "deliverables": [
+        "Closing 1-2 unit/bulan (target)",
+        "Closing rate > 8%",
+        "Follow up 100% lead (max 24 jam)",
+        "Testimonial 2/bulan"
+      ],
+      "KPI_link": ["closing 1-2 unit/bulan", "follow up 100% dalam 24 jam", "closing rate > 8%", "testimonial 2/bulan"],
+      "decision_authority": {
+        "limit_idr": 0,
+        "scope": "Tidak ada budget authority. Semua diskon/promo escalate ke Mada.",
+        "wakil": "Sinta (closing admin support)"
+      },
+      "escalation_path": "Mada untuk diskon > 0, lead macet > 7 hari"
+    },
+    {
+      "no": 6,
+      "inisial": "RZ",
+      "nama": "Rizal",
+      "title": "Kepala Pelaksana + Kepala Perencanaan + PIC Utama Proyek",
+      "reports_to": "Mada (operasional), Pak Ardian (delivery)",
+      "definisi_peran": "Triple role proyek: site manager + strategic planner + PIC utama. Lead harian site mandor + subkon, RAB + schedule, accountable ke Owner untuk delivery. V5.0 tambah: report harian STB (3 wajib) + reminder notion.",
+      "tugas_harian": [
+        "Briefing mandor + subkon (pagi)",
+        "QC onsite + daily log",
+        "Handover material dari Purchasing",
+        "Update Notion page per project"
+      ],
+      "tugas_mingguan": [
+        "RAB review + progress report",
+        "Schedule adjustment",
+        "Material planning next 2 minggu",
+        "Subkon performance review"
+      ],
+      "tugas_bulanan": [
+        "Laporan proyek ke Owner",
+        "Risk proyek review",
+        "Retensi klaim material review",
+        "Subkon scorecard update"
+      ],
+      "deliverables": [
+        "HPP tercapai per unit (68jt)",
+        "Schedule 48 hari kerja (on-time)",
+        "QC 0 defect major",
+        "STB 3 wajib (report harian, Notion reminder, masa kadaluarsa)"
+      ],
+      "KPI_link": ["HPP 68jt/unit", "schedule on-time 90%", "defect < 5/unit", "subkon score > 7/10"],
+      "decision_authority": {
+        "limit_idr": 3000000,
+        "scope": "Material proyek urgent, transport proyek, fee tukang, klaim material < 3jt",
+        "wakil": "Amir (cover harian jika off-site)"
+      },
+      "escalation_path": "Mada untuk material > 3jt atau blocker > 48 jam"
+    },
+    {
+      "no": 7,
+      "inisial": "A",
+      "nama": "Amir",
+      "title": "PIC Proyek + Marketing Cover",
+      "reports_to": "Mada (operasional), Rizal (proyek)",
+      "definisi_peran": "Cover harian Rizal + content creator. V5.0: tambah kemampuan polyvalent - bisa cover CS, KPP filing, legal draft ringan. Wakil proyek rutin + konten rutin.",
+      "tugas_harian": [
+        "Cover harian Rizal (jika off-site)",
+        "Content creation 1-2 post",
+        "Update progress proyek ke Rizal"
+      ],
+      "tugas_mingguan": [
+        "Content production support",
+        "Cross-training CS/KPP/Legal"
+      ],
+      "tugas_bulanan": [
+        "Polyvalent skill update",
+        "Content calendar execution"
+      ],
+      "deliverables": [
+        "Proyek on-track saat Rizal off",
+        "Content 4-6 post/bulan",
+        "Polyvalent certification track"
+      ],
+      "KPI_link": ["cover proyek 100%", "content 4-6 post/bulan", "polyvalent skill 3/3 progress"],
+      "decision_authority": {
+        "limit_idr": 0,
+        "scope": "Tidak ada budget authority. Cover wakil.",
+        "wakil": "Reta (cover media)"
+      },
+      "escalation_path": "Rizal/Mada untuk semua hal teknis"
+    },
+    {
+      "no": 8,
+      "inisial": "N",
+      "nama": "Novita",
+      "title": "PIC Admin + After-Sales",
+      "reports_to": "Mada (operasional)",
+      "definisi_peran": "Admin polyvalent: pemberkasan + after-sales + CS ringan + KPP filing. V5.0: gaji fixed (no potong), fee 'mel' 100-300rb per file closing. Bisa cover ke CS/KPP/Legal saat admin lain off.",
+      "tugas_harian": [
+        "Filing dokumen FLPP + konsumen",
+        "After-sales WA (jam operasional)",
+        "Update master-db konsumen",
+        "Cross-check kelengkapan berkas"
+      ],
+      "tugas_mingguan": [
+        "KPP filing (jika ada invoice)",
+        "After-sales review (komplain konsumen)",
+        "Coaching polyvalent skill"
+      ],
+      "tugas_bulanan": [
+        "Laporan admin ke Owner",
+        "SOP filing review",
+        "Polyvalent skill development"
+      ],
+      "deliverables": [
+        "Berkas FLPP 100% lengkap",
+        "After-sales response < 24 jam",
+        "Mel fee ter-record (closing 1-2 unit)",
+        "Polyvalent certified (3 bulan)"
+      ],
+      "KPI_link": ["filing 100% lengkap", "after-sales < 24 jam", "mel fee recorded", "polyvalent progress"],
+      "decision_authority": {
+        "limit_idr": 0,
+        "scope": "Tidak ada budget authority. Filing + customer service murni.",
+        "wakil": "Sinta (admin lain)"
+      },
+      "escalation_path": "Mada untuk komplain > 24 jam atau legal issue"
+    },
+    {
+      "no": 9,
+      "inisial": "S",
+      "nama": "Sinta",
+      "title": "PIC Purchasing + Auditor Internal",
+      "reports_to": "Mada (operasional), Rizal (proyek)",
+      "definisi_peran": "V5.0 redefinisi: Purchasing = stopper kualitas, BUKAN quantity worker. Tanggung jawab: kualitas bangunan (spek material), kuantitas (volume + waste), progress per-blok (money-to-value), auditor netto/bruto, retensi per-blok, best price method (3 vendor minimal). Indikator: kualitas keputusan, bukan kuantitas pekerjaan.",
+      "tugas_harian": [
+        "Cek material masuk (cross-check spek + qty)",
+        "Best price check vendor (3 vendor minimal)",
+        "Update progress per-blok di master-db"
+      ],
+      "tugas_mingguan": [
+        "Auditor netto/bruto (real-time)",
+        "Retensi progres review",
+        "Vendor scorecard update"
+      ],
+      "tugas_bulanan": [
+        "Laporan purchasing ke Owner",
+        "Material price trend review",
+        "Best price benchmark update"
+      ],
+      "deliverables": [
+        "Material 100% sesuai spek + qty",
+        "Best price 3 vendor (audit trail)",
+        "Progress per-blok dashboard",
+        "Retensi klaim < 5% nilai material"
+      ],
+      "KPI_link": ["material spek match 100%", "best price 3 vendor 100%", "progress akurat 95%", "retensi klaim < 5%"],
+      "decision_authority": {
+        "limit_idr": 1500000,
+        "scope": "Material proyek < 1.5jt, operasional admin < 1jt",
+        "wakil": "Rizal (proyek) atau Reta (admin)"
+      },
+      "escalation_path": "Mada untuk material > 1.5jt atau vendor issue"
+    },
+    {
+      "no": 10,
+      "inisial": "RN",
+      "nama": "Reni",
+      "title": "Ketua Media + Brand Manager",
+      "reports_to": "Mada (operasional)",
+      "definisi_peran": "Lead tim media (Reni+Rifki+Reta). Brand consistency, content pillar (product knowledge, brand awareness, closing trigger), training tim media. V5.0: content = alat closing, fee = closing-based.",
+      "tugas_harian": [
+        "Review content production harian",
+        "Brand guideline enforcement",
+        "Brief content ke Riza (alignment)"
+      ],
+      "tugas_mingguan": [
+        "Content calendar review",
+        "Content pillar distribution check",
+        "Brand consistency audit"
+      ],
+      "tugas_bulanan": [
+        "Laporan media ke Owner",
+        "Content pillar performance review",
+        "Brand guideline update (jika ada)"
+      ],
+      "deliverables": [
+        "Content 15-20 post/bulan (3 PIC media)",
+        "Brand consistency 100%",
+        "Content pillar distribution 3:3:4",
+        "Closing attribution 30% dari content"
+      ],
+      "KPI_link": ["content output 15-20/bulan", "engagement rate 5%", "brand consistency 100%", "closing attribution 30%"],
+      "decision_authority": {
+        "limit_idr": 1500000,
+        "scope": "Content production cost, design tools, talent fee < 1.5jt",
+        "wakil": "Rifki (jika Reni off-site)"
+      },
+      "escalation_path": "Mada untuk budget > 1.5jt atau brand pivot"
+    },
+    {
+      "no": 11,
+      "inisial": "RF",
+      "nama": "Rifki",
+      "title": "Ketua Kreatif (Desain + Video)",
+      "reports_to": "Reni (media)",
+      "definisi_peran": "Lead produksi kreatif: desain (Canva/Adobe), video (CapCut/Premiere), copy. V5.0: hook 3 detik + CTA kuat + nomer WA clone 4455 untuk closing trigger.",
+      "tugas_harian": [
+        "Produksi desain 2-3 post",
+        "Video editing 1 video/minggu",
+        "Copy review + caption CTA"
+      ],
+      "tugas_mingguan": [
+        "Asset library update",
+        "Trend desain monitoring",
+        "Content performance review"
+      ],
+      "tugas_bulanan": [
+        "Tool license renewal",
+        "Design trend research"
+      ],
+      "deliverables": [
+        "Desain 8-12/bulan",
+        "Video 4/bulan",
+        "Hook + CTA verified (3 detik)",
+        "WA clone 4455 aktif di semua CTA"
+      ],
+      "KPI_link": ["desain output", "video output", "engagement 5%", "WA click rate"],
+      "decision_authority": {
+        "limit_idr": 500000,
+        "scope": "Stock asset, design tools < 500rb",
+        "wakil": "Reta (cover produksi)"
+      },
+      "escalation_path": "Reni untuk trend pivot atau budget > 500rb"
+    },
+    {
+      "no": 12,
+      "inisial": "RT",
+      "nama": "Reta",
+      "title": "PIC Operasional Media",
+      "reports_to": "Reni (media)",
+      "definisi_peran": "PIC operasional media: posting, scheduling, community management, basic desain. V5.0: community manager aktif + engagement harian.",
+      "tugas_harian": [
+        "Posting content sesuai jadwal",
+        "Reply komentar + DM",
+        "Engagement boost (like, comment, share)"
+      ],
+      "tugas_mingguan": [
+        "Engagement report",
+        "Community management review"
+      ],
+      "tugas_bulanan": [
+        "Follower growth report",
+        "Community sentiment analysis"
+      ],
+      "deliverables": [
+        "Posting 100% on-time",
+        "Reply < 4 jam (jam operasional)",
+        "Follower growth +5%/bulan"
+      ],
+      "KPI_link": ["posting on-time", "reply < 4 jam", "engagement growth"],
+      "decision_authority": {
+        "limit_idr": 0,
+        "scope": "Tidak ada budget authority. Eksekusi posting + community.",
+        "wakil": "Amir (cover media saat off)"
+      },
+      "escalation_path": "Reni untuk komplain/komunitas issue"
+    }
+  ],
+  "summary": {
+    "total_pic": 12,
+    "PIC_dengan_budget_authority": ["Pak Ardian (owner only)", "Mada (≤5jt)", "Bu Nisya (kontrak ≤50jt)", "Rizal (≤3jt)", "Sinta (≤1.5jt)", "Riza (≤1.5jt)", "Reni (≤1.5jt)", "Rifki (≤500rb)"],
+    "PIC_tanpa_budget_authority": ["Yudi (closing only)", "Amir (cover)", "Novita (admin)", "Reta (posting only)"],
+    "PIC_polyvalent_track": ["Amir (CS/KPP/Legal)", "Novita (CS/KPP/Legal)"],
+    "PIC_back_end_only": ["Mada (V5.0: NO customer-facing, NO closing hook)", "Novita (admin)", "Sinta (purchasing)"],
+    "PIC_customer_facing": ["Riza (lead gen)", "Yudi (closing)", "Reni/Rifki/Reta (media engagement)"]
+  }
+}

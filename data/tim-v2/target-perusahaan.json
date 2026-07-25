@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "name": "target-perusahaan",
+    "version": "2.0",
+    "deskripsi": "Target Q3 2026 level perusahaan. Tier aktif = Realistis (6 unit/bulan). HPP 70-80jt, harga jual 166jt FLPP, gaji UMR Lumajang 2.25-2.5jt.",
+    "ref": "revised 24 Jul 2026 per user requirements"
+  },
+  "periode": "Q3 2026 (Jul-Sep 2026)",
+  "tier_aktif": "realistis",
+  "targets": {
+    "closing_unit_per_bulan": 6,
+    "closing_unit_per_quarter": 18,
+    "hpp_per_unit_idr": 75000000,
+    "hpp_range_idr": "70-80 juta",
+    "harga_jual_per_unit_idr": 166000000,
+    "revenue_per_unit": 166000000,
+    "revenue_quarter": 2988000000,
+    "gross_margin_per_unit_pct": 55,
+    "net_margin_target_pct": 8,
+    "net_margin_range_pct": "8-12%",
+    "margin_h1_2026_pct": 3.2,
+    "gaji_umr_lumajang": {
+      "minimum": 2250000,
+      "maximum": 2500000,
+      "dasar_hukum": "Pergub Jatim / SK Bupati Lumajang 2025"
+    },
+    "payroll_tanggal": 6,
+    "garansi_bangunan_bulan": 1,
+    "garansi_berlaku_setelah": "Akad / Realisasi / Serah Terima (BAST)"
+  },
+  "fee_closing_total_per_unit": 3250000,
+  "fee_closing_quarter_estimate": 58500000,
+  "payroll_bulanan_estimate_idr": 55000000,
+  "payroll_quarter_estimate_idr": 165000000,
+  "operasional_quarter_estimate_idr": 36000000,
+  "marketing_quarter_estimate_idr": 15000000,
+  "net_profit_quarter_estimate_idr": 800000000
+}

@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "name": "sop-subkontraktor",
+    "version": "1.0",
+    "deskripsi": "SOP manajemen subkontraktor: recruitment, blacklist, performance scoring, pembayaran. V4.0 - Bab 53.",
+    "ref": "content/v4-final/bab-53-sop-subkontraktor.md + dibuat 24 Jul 2026"
+  },
+  "kategori_subkon": [
+    {"kategori": "Tukang harian (borongan)", "scope": "Pekerjaan dasar: pasang batu bata, plester, aci, keramik, cat", "rate": "Rp 120-180rb/hari (tukang), Rp 100-130rb/hari (kenek)", "jumlah_pic_internal": "Rizal + Amir"},
+    {"kategori": "Tukang ledeng (instalasi air)", "scope": "Pipa air bersih, pipa air kotor, septic tank, instalasi kamar mandi", "rate": "Rp 200-350rb/hari atau Rp 2-5jt per unit borongan", "jumlah_pic_internal": "Rizal"},
+    {"kategori": "Tukang listrik", "scope": "Instalasi listrik, panel MCB, lampu, stop kontak, grounding", "rate": "Rp 200-350rb/hari atau Rp 2-4jt per unit borongan", "jumlah_pic_internal": "Rizal"},
+    {"kategori": "Tukang kayu (kusen, pintu, jendela)", "scope": "Kusen, pintu, jendela, lemari dapur, finishing kayu", "rate": "Rp 180-300rb/hari atau Rp 3-6jt per unit borongan", "jumlah_pic_internal": "Rizal"},
+    {"kategori": "Tukang las (pagar, kanopi)", "scope": "Pagar besi, kanopi, railing tangga, teralis", "rate": "Rp 200-350rb/hari atau Rp 4-8jt per unit borongan", "jumlah_pic_internal": "Rizal"},
+    {"kategori": "Subkon atap (genteng, spandek)", "scope": "Pasang rangka atap + genteng + talang", "rate": "Rp 8-15jt per unit (borongan)", "jumlah_pic_internal": "Rizal + Amir"},
+    {"kategori": "Subkon finishing (keramik, granit, wallpaper)", "scope": "Pasang keramik lantai + dinding, granit, wallpaper", "rate": "Rp 4-8jt per unit (borongan)", "jumlah_pic_internal": "Rizal + Amir"}
+  ],
+  "recruitment_subkon": {
+    "trigger": "Kebutuhan proyek baru atau subkon existing tidak available/underperform",
+    "sumber_recruitment": [
+      "Rekomendasi PIC proyek / mandor senior",
+      "Browse online (OLX, Facebook groups property)",
+      "Datang langsung ke base camp subkon (Jl. Veteran, dsb)"
+    ],
+    "kriteria_minimum": [
+      "Pengalaman minimal 3 tahun di kategori yang sama",
+      "Punya portofolio proyek sebelumnya (foto + alamat bisa dicek)",
+      "Punya tim minimal 3 orang (untuk borongan)",
+      "Bersedia tanda tangan kontrak kerja dengan penalty clause",
+      "Tidak ada catatan hitam dari proyek sebelumnya (cek Rizal + network)"
+    ],
+    "step_recruitment": [
+      "Screening CV + portofolio (Sinta + Rizal)",
+      "Interview dengan Rizal + Sinta (uji teknis + komunikasi)",
+      "Trial project 1 unit (kecil, low risk, max 2 minggu)",
+      "Evaluasi trial: kualitas, kecepatan, komunikasi, attitude",
+      "Jika lolos: masuk database approved subkon, dapat prioritas project"
+    ],
+    "dokumen_kontrak": [
+      "Kontrak kerja (Sinta + Bu Nisya draft)",
+      "KTP + NPWP (untuk invoicing)",
+      "Rekening bank (untuk transfer payment)",
+      "Asuransi pekerja (jika tim > 5 orang, opsional tapi recommended)"
+    ]
+  },
+  "performance_scoring": {
+    "frekuensi": "Per project (setiap 1 unit selesai), rekap bulanan",
+    "kriteria_penilaian": [
+      {"kriteria": "Kualitas kerja", "bobot_pct": 35, "skor_1_5": "1 = banyak defect, 5 = hampir tanpa defect"},
+      {"kriteria": "Kecepatan kerja", "bobot_pct": 25, "skor_1_5": "1 = molor 30%+, 5 = on time atau lebih cepat"},
+      {"kriteria": "Komunikasi & responsivitas", "bobot_pct": 15, "skor_1_5": "1 = sulit dihubungi, 5 = fast response"},
+      {"kriteria": "Kerja sama tim", "bobot_pct": 10, "skor_1_5": "1 = sering konflik, 5 = kolaboratif"},
+      {"kriteria": "Kedisiplinan (kehadiran, tepat waktu)", "bobot_pct": 10, "skor_1_5": "1 = sering absen/molor, 5 = selalu tepat waktu"},
+      {"kriteria": "Penggunaan material (efisien, tidak boros)", "bobot_pct": 5, "skor_1_5": "1 = boros 20%+, 5 = sangat efisien"}
+    ],
+    "klasifikasi": {
+      "skor_4.5_5": "Subkon Bintang (priority, rate premium +5%)",
+      "skor_3.5_4.4": "Subkon Andalan (priority, rate normal)",
+      "skor_2.5_3.4": "Subkon Standar (masih bisa dipakai, perlu pembinaan)",
+      "skor_1.5_2.4": "Subkon Peringatan (kurangi project, berikan warning)",
+      "skor_below_1.5": "Blacklist (terminate, tidak dipakai lagi)"
+    },
+    "pencatatan": "Notion database 'Subkon Performance' (Sinta + Rizal update)"
+  },
+  "blacklist_trigger": [
+    "Skor di bawah 1.5 selama 2 project berturut-turut",
+    "Tertangkap mencuri material atau uang (red flag langsung)",
+    "Kekerasan atau pelecehan di site",
+    "Mangkir kerja tanpa kabar 3 hari berturut-turut",
+    "Substitusi material tanpa approval (misal: keramik KW jadi premium)"
+  ],
+  "blacklist_process": [
+    "Sinta + Rizal kompilasi bukti (foto, log, testimoni)",
+    "Mada review, Bu Nisya cek legal (apakah ada kontrak yang harus dipenuhi)",
+    "Pak Ardian final approve blacklist",
+    "Surat peringatan / terminasi (Bu Nisya draft)",
+    "Update database blacklist (jika ada, jangan dipakai lagi)"
+  ],
+  "pembayaran_subkon": {
+    "metode": "Transfer bank H+7 setelah invoice diterima + pekerjaan diverifikasi Rizal",
+    "pembayaran_bertahap": {
+      "DP_awal": "30% di muka, untuk material (jika subkon beli material sendiri)",
+      "progress_50": "40% saat progress 50% (verified Rizal)",
+      "final_100": "30% saat selesai 100% + QC passed (verified Rizal + Mada)"
+    },
+    "penalty_keterlambatan": "1% per hari keterlambatan dari nilai kontrak (max 10%), auto deduct di invoice final",
+    "penalty_defect": "Biaya repair dari defect subkon menjadi tanggungan subkon (auto deduct di invoice final atau invoice terpisah)"
+  },
+  "evaluasi_bulanan_subkon": {
+    "meeting": "Akhir bulan, Senin pertama (Sinta + Rizal + Mada)",
+    "agenda": [
+      "Rekap performance scoring semua subkon bulan ini",
+      "Subkon yang perlu pembinaan (skor 1.5-2.4)",
+      "Subkon yang akan di-blacklist (kompilasi bukti)",
+      "Subkon baru yang lolos trial, naik jadi approved",
+      "Budget subkon bulan depan"
+    ],
+    "output": "Update database + notifikasi ke subkon yang perlu pembinaan / di-blacklist"
+  }
+}
