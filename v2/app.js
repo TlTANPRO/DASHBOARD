@@ -188,6 +188,8 @@ const API = {
     const cfg = window.DASHBOARD_CONFIG;
     if (cfg.mode === "live") {
       const dbId = cfg.databases[dbKey];
+      const body = { page_size: 100 };
+      if (filter) body.filter = filter;
       const res = await fetch(cfg.workerBase + "/notion/v1/databases/" + dbId + "/query", {
         method: "POST",
         headers: {
@@ -195,7 +197,7 @@ const API = {
           "Notion-Version": cfg.notionVersion,
           "X-PIC": Session.pic || "anon",
         },
-        body: JSON.stringify({ filter, page_size: 100 })
+        body: JSON.stringify(body)
       });
       if (!res.ok) throw new Error("Query gagal: " + res.status);
       return await res.json();
