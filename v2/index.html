@@ -7,44 +7,103 @@
 <meta name="description" content="Dashboard operasional V2 — Notion-backed. 12 PIC, KPI Tracker, SOW, Program Kerja, Jobdesk Harian." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%231F4E79'/%3E%3Ctext x='12' y='16' text-anchor='middle' font-family='monospace' font-size='10' fill='white' font-weight='bold'%3EDP2%3C/text%3E%3C/svg%3E" />
 <style>
-/* === V1 DNA TOKENS === */
+/* === V2.1 DESIGN TOKENS (25 Jul 2026) === */
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #141414;
-  --bg-tertiary: #1f1f1f;
-  --bg-elevated: #262626;
-  --bg-surface: #1a1a1a;
+  /* Cool-tinted dark base — bukan pure black, ada hue biar ga generic */
+  --bg-primary: #0a0e14;
+  --bg-secondary: #131820;
+  --bg-tertiary: #1c222c;
+  --bg-elevated: #252b36;
+  --bg-surface: #161b23;
   --text-primary: #fafafa;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
-  --text-dim: #52525b;
-  --accent: #3b82f6;
-  --accent-hover: #60a5fa;
-  --accent-glow: rgba(59, 130, 246, 0.15);
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --info: #06b6d4;
-  --gold: #f59e0b;
-  --silver: #94a3b8;
-  --bronze: #b45309;
-  --border-subtle: #27272a;
-  --border-default: #3f3f46;
+  --text-secondary: #b4bcc8;
+  --text-muted: #8a8f99;
+  --text-dim: #5a6070;
+  --accent: oklch(72% 0.16 250);
+  --accent-hover: oklch(78% 0.18 250);
+  --accent-glow: oklch(72% 0.16 250 / 0.15);
+  --accent-deep: oklch(55% 0.18 250);
+  --success: oklch(74% 0.16 155);
+  --warning: oklch(80% 0.15 70);
+  --danger: oklch(70% 0.20 25);
+  --info: oklch(74% 0.13 220);
+  --gold: oklch(78% 0.13 80);
+  --silver: oklch(72% 0.02 250);
+  --bronze: oklch(60% 0.10 50);
+  --border-subtle: #1f242e;
+  --border-default: #2e3540;
+  --border-strong: #3e4654;
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 18px;
+  --radius-pill: 999px;
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
   --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
   --space-4: 1rem; --space-5: 1.5rem; --space-6: 2rem;
   --space-8: 3rem; --space-10: 4rem;
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.7);
   --shadow-glow: 0 0 32px var(--accent-glow);
   --duration-fast: 150ms;
   --duration-normal: 300ms;
+  --duration-slow: 500ms;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  /* Display sizes — varied by role */
+  --text-display: clamp(2.5rem, 1rem + 6vw, 5.5rem);
+  --text-h1: clamp(1.75rem, 0.5rem + 3.5vw, 2.5rem);
+  --text-h2: clamp(1.25rem, 0.5rem + 2vw, 1.625rem);
+  --text-h3: 1.125rem;
+  --text-body: 0.9375rem;
+  --text-small: 0.8125rem;
+  --text-xs: 0.6875rem;
+}
+
+/* Cool radial gradient untuk depth (audit fix: empty flat sections) */
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--accent-glow), transparent),
+    var(--bg-primary);
+}
+
+/* === A11Y: skip-to-content + focus ring + reduced motion (audit Critical) === */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-md) 0;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.input:focus-visible, .select:focus-visible, .textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  body::before { display: none; }
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -172,6 +231,29 @@ body::before {
 }
 @media (max-width: 768px) {
   .nav-link { font-size: 0.75rem; padding: var(--space-1) var(--space-2); }
+  .topbar { flex-wrap: wrap; gap: var(--space-2); }
+  .topbar nav { flex-wrap: wrap; }
+  .hero h1 { font-size: clamp(1.75rem, 1rem + 4vw, 3rem); }
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .filter-bar .select, .filter-bar .input { width: 100%; }
+  .crud-table { font-size: 0.8125rem; }
+  .crud-table th, .crud-table td { padding: var(--space-2) var(--space-1); }
+  .modal { max-width: 95vw; margin: var(--space-2); max-height: 90vh; }
+  .form-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 var(--space-2); }
+  .topbar .brand { font-size: 1rem; }
+  .nav-link.v2-new { font-size: 0.6875rem; }
+  .hero-stats { gap: var(--space-2); }
+  .hero-stat-num { font-size: 1.5rem; }
+  .pic-mini-card { padding: var(--space-2); }
+  .pic-mini-name { font-size: 0.8125rem; }
+  .pic-mini-stats { font-size: 0.6875rem; }
+  .btn { padding: var(--space-1) var(--space-2); font-size: 0.8125rem; }
+  .session-pill { font-size: 0.6875rem; padding: 4px 8px; }
+  .toast { left: var(--space-2); right: var(--space-2); max-width: none; }
 }
 
 /* === HERO === */
@@ -646,6 +728,120 @@ body::before {
 .toast.error   { border-color: var(--danger); }
 .toast.warning { border-color: var(--warning); }
 
+/* === CONFIRM MODAL === */
+.confirm-body { padding: var(--space-4) var(--space-5); color: var(--text-secondary); line-height: 1.55; }
+.confirm-actions {
+  display: flex; justify-content: flex-end; gap: var(--space-2);
+  padding: var(--space-3) var(--space-5) var(--space-5);
+  border-top: 1px solid var(--border-subtle);
+}
+.btn-danger { color: white; background: var(--danger); border-color: var(--danger); }
+.btn-danger:hover { background: oklch(58% 0.20 25); border-color: oklch(58% 0.20 25); }
+
+/* === STATUS PILL (V2.1 — traffic light reusable) === */
+.status-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+.status-pill::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+}
+.status-pill.success { color: var(--success); background: oklch(70% 0.16 155 / 0.10); border-color: oklch(70% 0.16 155 / 0.30); }
+.status-pill.warning { color: var(--warning); background: oklch(75% 0.15 65 / 0.10); border-color: oklch(75% 0.15 65 / 0.30); }
+.status-pill.danger  { color: var(--danger);  background: oklch(65% 0.20 25 / 0.10);  border-color: oklch(65% 0.20 25 / 0.30); }
+.status-pill.muted   { color: var(--text-muted); background: var(--bg-tertiary); border-color: var(--border-default); }
+
+/* === SKELETON LOADER === */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-tertiary) 0%, var(--bg-elevated) 50%, var(--bg-tertiary) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .skeleton { animation: none; } }
+
+/* === MASTER VIEW (V2.1) — owner only === */
+.master-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+@media (min-width: 640px)  { .master-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .master-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1280px) { .master-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.pic-mini-card {
+  appearance: none;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  display: flex; flex-direction: column; gap: var(--space-3);
+  transition: border-color var(--duration-normal) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+}
+.pic-mini-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.pic-mini-card:active { transform: translateY(0); }
+
+.pmc-head { display: flex; align-items: center; gap: var(--space-3); }
+.pmc-avatar {
+  width: 40px; height: 40px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-weight: 700;
+  color: white; font-size: 0.875rem;
+  flex-shrink: 0;
+}
+.pmc-name { font-weight: 600; font-size: var(--text-body); letter-spacing: -0.01em; }
+.pmc-role { font-size: var(--text-xs); color: var(--text-muted); }
+.pmc-divisi {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.pmc-mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); padding: var(--space-2) 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
+.pmc-stat-val { font-size: 1.125rem; font-weight: 700; font-variant-numeric: tabular-nums; font-family: var(--font-mono); }
+.pmc-stat-lbl { font-size: 0.625rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+.pmc-status { display: flex; align-items: center; }
+
+/* Drill-down */
+.drill-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-5); padding-bottom: var(--space-3); border-bottom: 1px solid var(--border-subtle); }
+.drill-h4 { font-size: var(--text-h3); font-weight: 600; margin: var(--space-5) 0 var(--space-3); letter-spacing: -0.01em; }
+.drill-table { font-size: 0.75rem; }
+.drill-job-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+.drill-job-list li { display: grid; grid-template-columns: 32px 1fr auto; gap: var(--space-3); align-items: center; padding: var(--space-2) var(--space-3); background: var(--bg-tertiary); border-radius: var(--radius-md); }
+.djl-prio { font-family: var(--font-mono); font-weight: 700; color: var(--accent); text-align: center; }
+.djl-name { font-size: var(--text-small); }
+.djl-target { font-size: var(--text-xs); margin-top: 2px; }
+.drill-sow-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+.drill-sow-list li { display: flex; gap: var(--space-3); padding: var(--space-2) 0; border-bottom: 1px solid var(--border-subtle); }
+.dsl-bullet { color: var(--accent); }
+.dsl-name { font-size: var(--text-small); }
+
+/* Master view guard */
+.master-guard { padding: var(--space-4); background: var(--bg-secondary); border: 1px dashed var(--border-default); border-radius: var(--radius-md); text-align: center; color: var(--text-muted); }
+
 /* === FOOTER === */
 footer {
   margin-top: var(--space-10);
@@ -699,6 +895,11 @@ footer a:hover { color: var(--accent-hover); }
       </div>
     </div>
     <div style="display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap">
+      <a href="#alerts" id="alert-badge-link" hidden style="text-decoration:none">
+        <span class="session-pill" style="background:oklch(65% 0.20 25 / 0.15);border-color:var(--danger);color:var(--danger)">
+          ⚠ Alert <span id="alert-badge" style="font-weight:700;margin-left:4px">0</span>
+        </span>
+      </a>
       <span class="session-pill logged-out" id="session-pill">
         <span id="session-text">Belum login</span>
         <button id="login-btn" type="button">Login</button>
@@ -718,6 +919,8 @@ footer a:hover { color: var(--accent-hover); }
       <a class="nav-link v2-new" href="#v2-program">★ Program Kerja</a>
       <a class="nav-link v2-new" href="#v2-jobdesk">★ Jobdesk Harian</a>
       <a class="nav-link v2-new" href="#v2-sow">★ My SOW</a>
+      <a class="nav-link v2-new" href="#alerts">! Alerts</a>
+      <a class="nav-link v2-new owner-only" id="nav-master" href="#v2-master" hidden>★ Master Control</a>
       <a class="nav-link" href="#leaderboard">02 · Leaderboard</a>
       <a class="nav-link" href="#kpi">03 · KPI Score</a>
       <a class="nav-link" href="#fee">04 · Fee Media</a>
@@ -887,6 +1090,56 @@ footer a:hover { color: var(--accent-hover); }
   </div>
 </section>
 
+<!-- V2-F ALERTS (V2.1) -->
+<section class="section" id="alerts">
+  <div class="section-label">
+    <span class="section-num">!</span>
+    <h2 class="section-title">Alerts Aktif</h2>
+    <span class="section-sub">Real-time rules · KPI/Jobdesk/SOW</span>
+  </div>
+  <div id="alerts-list">
+    <p class="muted">Memuat alert…</p>
+  </div>
+</section>
+
+<!-- V2-E MASTER CONTROL (V2.1 — owner only) -->
+<section class="section owner-only" id="v2-master" hidden>
+  <div class="section-label">
+    <span class="section-num">★</span>
+    <h2 class="section-title">Master Control · 12 PIC</h2>
+    <span class="section-sub">Owner only · drill-down per PIC</span>
+  </div>
+
+  <div class="filter-bar">
+    <label>Divisi</label>
+    <select class="select" id="master-filter-divisi">
+      <option value="">Semua</option>
+      <option>Owner</option>
+      <option>Operasional</option>
+      <option>Marketing</option>
+      <option>Proyek</option>
+      <option>Media</option>
+      <option>Admin</option>
+    </select>
+    <label>Status</label>
+    <select class="select" id="master-filter-status">
+      <option value="">Semua</option>
+      <option value="active">Aktif (ada data)</option>
+      <option value="success">On Track / Achieved</option>
+      <option value="warning">Butuh perhatian</option>
+      <option value="danger">At Risk / Off Track</option>
+      <option value="muted">Belum input</option>
+    </select>
+    <button class="btn btn-sm btn-ghost" id="master-filter-reset" type="button">Reset</button>
+    <div class="grow"></div>
+    <span class="muted" id="master-count" style="font-family: var(--font-mono); font-size: var(--text-xs);">— PIC</span>
+  </div>
+
+  <div class="master-grid" id="master-grid">
+    <p class="muted">Memuat master view…</p>
+  </div>
+</section>
+
 <!-- 02 LEADERBOARD (computed dari KPI V2) -->
 <section class="section" id="leaderboard">
   <div class="section-label">
@@ -994,10 +1247,39 @@ footer a:hover { color: var(--accent-hover); }
 <!-- Toast stack -->
 <div class="toast-stack" id="toast-stack"></div>
 
+<!-- Confirm modal (custom dialog replacing native window.confirm) -->
+<div class="modal-backdrop confirm-backdrop" id="confirm-backdrop" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+  <div class="modal confirm-modal">
+    <div class="modal-header">
+      <div class="modal-title" id="confirm-title">Konfirmasi</div>
+    </div>
+    <div class="confirm-body" id="confirm-body">Apakah Bapak/Ibu yakin?</div>
+    <div class="confirm-actions">
+      <button class="btn btn-ghost" id="confirm-cancel" type="button">Batal</button>
+      <button class="btn btn-primary" id="confirm-ok" type="button">Konfirmasi</button>
+    </div>
+  </div>
+</div>
+
+<!-- Skip-to-content (a11y Critical fix) -->
+<a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+<script>
+  // Move skip-link to top of body (so it appears first in tab order)
+  document.addEventListener("DOMContentLoaded", () => {
+    const skip = document.querySelector(".skip-link");
+    if (skip) document.body.insertBefore(skip, document.body.firstChild);
+  });
+</script>
+
 <!-- V1 SSOT loader -->
 <script src="./data-loader.js"></script>
 <!-- Config (gitignored in real deploy) -->
 <script src="./config.js"></script>
+<!-- V2.1 components -->
+<script src="./lib/components/master-view.js"></script>
+<script src="./lib/alerts.js"></script>
+<script src="./lib/audit.js"></script>
+<script src="./lib/weekly-summary.js"></script>
 <!-- Main app -->
 <script src="./app.js"></script>
 

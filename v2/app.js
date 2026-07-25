@@ -4,6 +4,7 @@ const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
 const fmtIDR = n => "Rp " + (n || 0).toLocaleString("id-ID");
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const todayISO = () => new Date().toISOString().split("T")[0];
+const OWNER_PICS = ["Pak Ardian", "Bu Nisya"];
 
 // ============================================================
 // SESSION / AUTH
@@ -12,6 +13,7 @@ const Session = {
   pic: null,
   token: null,
   loginAt: null,
+  isOwner() { return OWNER_PICS.includes(this.pic); },
   save() {
     sessionStorage.setItem("dvb2", JSON.stringify({
       pic: this.pic, token: this.token, loginAt: this.loginAt
@@ -98,7 +100,9 @@ function showLoginModal() {
         toast("success", "Login sebagai " + Session.pic);
         closeModal();
         updateSessionPill();
+        toggleOwnerUI();
         refreshAll();
+        document.dispatchEvent(new Event("session:updated"));
       } catch (err) {
         toast("error", "Login gagal: " + err.message);
       }
@@ -111,37 +115,146 @@ function showLoginModal() {
       toast("success", "Demo login sebagai " + pic);
       closeModal();
       updateSessionPill();
+      toggleOwnerUI();
       refreshAll();
+      document.dispatchEvent(new Event("session:updated"));
     }
   };
 }
 
 // ============================================================
-// TOAST
+// TOAST (V2.1 — pause on hover, aria-live, a11y)
 // ============================================================
-function toast(type, msg) {
+function toast(type, msg, opts = {}) {
   const el = document.createElement("div");
   el.className = "toast " + type;
+  el.setAttribute("role", type === "error" ? "alert" : "status");
+  el.setAttribute("aria-live", type === "error" ? "assertive" : "polite");
   el.textContent = msg;
+  const timer = setTimeout(() => el.remove(), opts.duration || 3500);
+  el.addEventListener("mouseenter", () => clearTimeout(timer));
+  el.addEventListener("mouseleave", () => setTimeout(() => el.remove(), 1200));
   $("#toast-stack").appendChild(el);
-  setTimeout(() => el.remove(), 3500);
+  return el;
 }
 
 // ============================================================
-// MODAL
+// MODAL (V2.1 — a11y: focus trap, Escape, body scroll lock, restore focus)
 // ============================================================
+let _modalReturnFocus = null;
+let _modalKeyHandler = null;
+
 function openModal(title, bodyHTML) {
+  const back = $("#modal-backdrop");
+  if (back.classList.contains("open")) closeModal();
+  _modalReturnFocus = document.activeElement;
   $("#modal-title").textContent = title;
   $("#modal-body").innerHTML = bodyHTML;
-  $("#modal-backdrop").classList.add("open");
+  back.classList.add("open");
+  document.body.style.overflow = "hidden";
+
+  // Focus first input/button after paint
+  setTimeout(() => {
+    const focusable = $("#modal-body").querySelector("input, select, textarea, button");
+    (focusable || $("#modal-close")).focus();
+  }, 30);
+
+  // Escape + focus trap
+  _modalKeyHandler = (e) => {
+    if (e.key === "Escape") { e.preventDefault(); closeModal(); return; }
+    if (e.key === "Tab") {
+      const focusable = Array.from($("#modal-body").querySelectorAll("input, select, textarea, button, [tabindex]:not([tabindex='-1'])"))
+        .filter(el => !el.disabled && el.offsetParent !== null);
+      if (focusable.length === 0) return;
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  };
+  document.addEventListener("keydown", _modalKeyHandler);
 }
+
 function closeModal() {
   $("#modal-backdrop").classList.remove("open");
+  document.body.style.overflow = "";
+  if (_modalKeyHandler) { document.removeEventListener("keydown", _modalKeyHandler); _modalKeyHandler = null; }
+  if (_modalReturnFocus && typeof _modalReturnFocus.focus === "function") {
+    setTimeout(() => _modalReturnFocus.focus(), 50);
+  }
 }
+
 $("#modal-close").onclick = closeModal;
 $("#modal-backdrop").onclick = (e) => {
   if (e.target.id === "modal-backdrop") closeModal();
 };
+
+// Custom confirm dialog (replace native window.confirm)
+function confirmDialog({ title, body, danger = false, confirmText = "Konfirmasi", cancelText = "Batal" }) {
+  return new Promise((resolve) => {
+    const back = $("#confirm-backdrop");
+    $("#confirm-title").textContent = title;
+    $("#confirm-body").textContent = body;
+    const ok = $("#confirm-ok"), cancel = $("#confirm-cancel");
+    ok.textContent = confirmText;
+    cancel.textContent = cancelText;
+    ok.classList.toggle("btn-danger", danger);
+    back.classList.add("open");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => ok.focus(), 30);
+
+    const cleanup = (result) => {
+      back.classList.remove("open");
+      document.body.style.overflow = "";
+      ok.removeEventListener("click", okH);
+      cancel.removeEventListener("click", cancelH);
+      document.removeEventListener("keydown", keyH);
+      resolve(result);
+    };
+    const okH = () => cleanup(true);
+    const cancelH = () => cleanup(false);
+    const keyH = (e) => { if (e.key === "Escape") cleanup(false); if (e.key === "Enter") cleanup(true); };
+    ok.addEventListener("click", okH);
+    cancel.addEventListener("click", cancelH);
+    document.addEventListener("keydown", keyH);
+  });
+}
+
+// Set save button loading state
+function setSaveLoading(btn, loading) {
+  if (!btn) return;
+  btn.disabled = loading;
+  btn.dataset.label = btn.dataset.label || btn.textContent;
+  btn.textContent = loading ? "Menyimpan…" : btn.dataset.label;
+  btn.style.opacity = loading ? "0.7" : "";
+}
+
+// ============================================================
+// XSS-safe escape helper (audit Critical)
+// ============================================================
+function escapeHTML(s) {
+  if (s == null) return "";
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+// Skeleton table placeholder (T4.1 a11y: aria-busy + reduced-motion safe)
+function skeletonTable(rows = 5, cols = 5) {
+  const widths = [80, 100, 120, 60, 140];
+  let html = '<table class="crud-table"><tbody>';
+  for (let r = 0; r < rows; r++) {
+    html += '<tr>';
+    for (let c = 0; c < cols; c++) {
+      const w = widths[c % widths.length];
+      html += `<td><span class="skeleton" style="width:${w}px;height:14px"></span></td>`;
+    }
+    html += '</tr>';
+  }
+  return html + '</tbody></table>';
+}
 
 // ============================================================
 // NOTION API (live mode) + DEMO STORAGE (demo mode)
@@ -234,14 +347,19 @@ const API = {
     const cfg = window.DASHBOARD_CONFIG;
     if (cfg.mode === "live") {
       const dbId = cfg.databases[dbKey];
+      const isOwner = Session.isOwner();
+      // Owner skip optimistic lock — force override
+      const headers = {
+        "Content-Type": "application/json",
+        "Notion-Version": cfg.notionVersion,
+        "X-PIC": Session.pic || "anon",
+        "Authorization": "Bearer " + (Session.token || ""),
+        ...(editTime && !isOwner ? { "X-Edit-Time": editTime } : {}),
+        ...(isOwner ? { "X-Owner-Override": "true" } : {}),
+      };
       const res = await fetch(cfg.workerBase + "/notion/v1/pages/" + id, {
         method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          "Notion-Version": cfg.notionVersion,
-          "X-PIC": Session.pic || "anon",
-          ...(editTime ? { "X-Edit-Time": editTime } : {}),
-        },
+        headers,
         body: JSON.stringify({ properties })
       });
       if (res.status === 409) throw new Error("Data sudah diubah orang lain — refresh dulu");
@@ -256,7 +374,10 @@ const API = {
     if (cfg.mode === "live") {
       const res = await fetch(cfg.workerBase + "/notion/v1/pages/" + id, {
         method: "DELETE",
-        headers: { "X-PIC": Session.pic || "anon" }
+        headers: {
+          "X-PIC": Session.pic || "anon",
+          "Authorization": "Bearer " + (Session.token || ""),
+        }
       });
       if (!res.ok) throw new Error("Delete gagal: " + res.status);
       return true;
@@ -433,6 +554,8 @@ async function loadKPI() {
     </div>`;
     return;
   }
+  list.setAttribute("aria-busy", "true");
+  list.innerHTML = skeletonTable(6, 5);
   try {
     const res = await API.query("kpi");
     let rows = res.results || [];
@@ -457,10 +580,12 @@ async function loadKPI() {
       </tr></thead>
       <tbody>${rows.map(kpiRowHTML).join('')}</tbody>
     </table>`;
+    list.removeAttribute("aria-busy");
     list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editKPI(b.dataset.id));
     list.querySelectorAll("[data-action=del]").forEach(b => b.onclick = () => deleteKPI(b.dataset.id));
   } catch (e) {
-    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${e.message}</p></div>`;
+    list.removeAttribute("aria-busy");
+    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${escapeHTML(e.message)}</p></div>`;
   }
 }
 
@@ -586,7 +711,8 @@ async function editKPI(id) {
 }
 
 async function deleteKPI(id) {
-  if (!confirm("Hapus KPI ini?")) return;
+  const ok = await confirmDialog({ title: "Hapus KPI?", body: "Tindakan ini tidak dapat dibatalkan.", danger: true, confirmText: "Hapus" });
+  if (!ok) return;
   try {
     await API.remove("kpi", id);
     toast("success", "KPI dihapus");
@@ -605,6 +731,8 @@ async function loadProgram() {
     </div>`;
     return;
   }
+  list.setAttribute("aria-busy", "true");
+  list.innerHTML = skeletonTable(4, 9);
   try {
     const res = await API.query("program");
     let rows = res.results || [];
@@ -628,8 +756,10 @@ async function loadProgram() {
     </table>`;
     list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editProgram(b.dataset.id));
     list.querySelectorAll("[data-action=del]").forEach(b => b.onclick = () => deleteProgram(b.dataset.id));
+    list.removeAttribute("aria-busy");
   } catch (e) {
-    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${e.message}</p></div>`;
+    list.removeAttribute("aria-busy");
+    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${escapeHTML(e.message)}</p></div>`;
   }
 }
 
@@ -757,7 +887,8 @@ async function editProgram(id) {
 }
 
 async function deleteProgram(id) {
-  if (!confirm("Hapus program ini?")) return;
+  const ok = await confirmDialog({ title: "Hapus program kerja?", body: "Tindakan ini tidak dapat dibatalkan.", danger: true, confirmText: "Hapus" });
+  if (!ok) return;
   try {
     await API.remove("program", id);
     toast("success", "Program dihapus");
@@ -776,6 +907,8 @@ async function loadJobdesk() {
     </div>`;
     return;
   }
+  list.setAttribute("aria-busy", "true");
+  list.innerHTML = skeletonTable(6, 9);
   try {
     const res = await API.query("jobdesk");
     let rows = res.results || [];
@@ -793,20 +926,28 @@ async function loadJobdesk() {
     list.innerHTML = `<table class="crud-table">
       <thead><tr>
         <th>Jobdesk ID</th><th>PIC</th><th>Tanggal</th><th>Jobdesk</th>
-        <th>Target</th><th>Actual</th><th>Prioritas</th><th>Status</th><th></th>
+        <th>Target</th><th>Actual</th><th>Prioritas</th><th>Status</th><th>Approval</th><th></th>
       </tr></thead>
       <tbody>${rows.map(jobRowHTML).join('')}</tbody>
     </table>`;
     list.querySelectorAll("[data-action=edit]").forEach(b => b.onclick = () => editJob(b.dataset.id));
     list.querySelectorAll("[data-action=del]").forEach(b => b.onclick = () => deleteJob(b.dataset.id));
+    list.querySelectorAll("[data-action=approve]").forEach(b => b.onclick = () => approveJob(b.dataset.id, "Approved"));
+    list.querySelectorAll("[data-action=reject]").forEach(b => b.onclick = () => approveJob(b.dataset.id, "Rejected"));
+    list.removeAttribute("aria-busy");
   } catch (e) {
-    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${e.message}</p></div>`;
+    list.removeAttribute("aria-busy");
+    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${escapeHTML(e.message)}</p></div>`;
   }
 }
 
 function jobRowHTML(r) {
   const statusPill = { "To Do": "muted", "In Progress": "info", "Done": "success", "Blocked": "danger" }[r.Status] || "muted";
   const prioPill = { "P1": "danger", "P2": "warning", "P3": "info" }[r.Prioritas] || "muted";
+  const approvalPill = { "Pending": "warning", "Approved": "success", "Rejected": "danger" }[r.Approval] || "muted";
+  const isOwner = Session.isOwner();
+  const showApproveBtn = isOwner && r.Approval !== "Approved";
+  const showRejectBtn = isOwner && r.Approval !== "Rejected";
   return `<tr>
     <td class="mono">${r["Jobdesk ID"] || r.jobdeskId || r.id}</td>
     <td>${r.PIC || "-"}</td>
@@ -817,10 +958,46 @@ function jobRowHTML(r) {
     <td><span class="pill ${prioPill}">${r.Prioritas || "-"}</span></td>
     <td><span class="pill ${statusPill}">${r.Status || "-"}</span></td>
     <td>
+      <span class="pill ${approvalPill}">${r.Approval || "—"}</span>
+      ${showApproveBtn ? `<button class="btn btn-sm btn-success" data-action="approve" data-id="${r.id}" title="Approve">✓</button>` : ""}
+      ${showRejectBtn ? `<button class="btn btn-sm btn-danger" data-action="reject" data-id="${r.id}" title="Reject">✗</button>` : ""}
+      ${r.Approval_By ? `<small class="muted">by ${escapeHTML(r.Approval_By).slice(0, 12)}</small>` : ""}
+    </td>
+    <td>
       <button class="btn btn-sm" data-action="edit" data-id="${r.id}">Edit</button>
       <button class="btn btn-sm btn-danger" data-action="del" data-id="${r.id}">Hapus</button>
     </td>
   </tr>`;
+}
+
+async function approveJob(id, decision) {
+  if (!Session.isOwner()) {
+    toast("error", "Hanya owner yang bisa approve/reject");
+    return;
+  }
+  const row = Store.get("jobdesk").find(r => r.id === id);
+  if (!row) return;
+  const ok = await confirmDialog({
+    title: decision + " Jobdesk",
+    body: `<p>PIC: <strong>${escapeHTML(row.PIC)}</strong></p>
+           <p>Job: ${escapeHTML(row.Jobdesk || row.jobdesk || "").slice(0, 80)}</p>
+           <p>Tandai jobdesk ini sebagai <strong>${decision}</strong>?</p>`,
+    okText: decision,
+    danger: decision === "Rejected",
+  });
+  if (!ok) return;
+  try {
+    await API.update("jobdesk", id, {
+      Approval: decision,
+      "Approval_By": Session.pic,
+      "Approval_Time": todayISO(),
+    }, row._editTime);
+    Audit.log({ pic: Session.pic, action: decision.toLowerCase(), db: "jobdesk", rowId: id });
+    toast("success", "Jobdesk " + decision);
+    loadJobdesk();
+  } catch (e) {
+    toast("error", "Approve gagal: " + e.message);
+  }
 }
 
 function jobFormHTML(r = {}) {
@@ -857,6 +1034,12 @@ function jobFormHTML(r = {}) {
         <label>Status</label>
         <select class="select" name="Status">
           ${["To Do", "In Progress", "Done", "Blocked"].map(s => `<option ${r.Status === s ? "selected" : ""}>${s}</option>`).join("")}
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Approval</label>
+        <select class="select" name="Approval">
+          ${["Pending", "Approved", "Rejected"].map(s => `<option ${(r.Approval || "Pending") === s ? "selected" : ""}>${s}</option>`).join("")}
         </select>
       </div>
     </div>
@@ -921,7 +1104,8 @@ async function editJob(id) {
 }
 
 async function deleteJob(id) {
-  if (!confirm("Hapus jobdesk ini?")) return;
+  const ok = await confirmDialog({ title: "Hapus jobdesk?", body: "Tindakan ini tidak dapat dibatalkan.", danger: true, confirmText: "Hapus" });
+  if (!ok) return;
   try {
     await API.remove("jobdesk", id);
     toast("success", "Jobdesk dihapus");
@@ -940,6 +1124,8 @@ async function loadSOW() {
     </div>`;
     return;
   }
+  list.setAttribute("aria-busy", "true");
+  list.innerHTML = skeletonTable(8, 8);
   try {
     const res = await API.query("sow");
     let rows = res.results || [];
@@ -973,8 +1159,10 @@ async function loadSOW() {
         </tr>`;
       }).join('')}</tbody>
     </table>`;
+    list.removeAttribute("aria-busy");
   } catch (e) {
-    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${e.message}</p></div>`;
+    list.removeAttribute("aria-busy");
+    list.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${escapeHTML(e.message)}</p></div>`;
   }
 }
 
@@ -1182,6 +1370,16 @@ function refreshAll() {
   loadJobdesk();
   loadSOW();
   renderLeaderboard();
+  if (Session.isOwner()) renderMasterView();
+  renderAlertBadge();
+  renderAlertPanel($("#alerts-list"));
+}
+
+function toggleOwnerUI() {
+  const show = Session.isOwner();
+  $$(".owner-only").forEach(el => { el.hidden = !show; });
+  if (show) renderMasterView();
+  renderAlertBadge();
 }
 
 function updateModeBadge() {
@@ -1206,6 +1404,32 @@ document.addEventListener("DOMContentLoaded", async () => {
   refreshAll();
   updateModeBadge();
   setupNav();
+  toggleOwnerUI();
+
+  // Audit hook: wrap API methods to log changes
+  if (typeof applyAuditHooks === "function") applyAuditHooks();
+  // Show alert badge link when logged in
+  const updateBadgeLink = () => {
+    const link = $("#alert-badge-link");
+    if (link) link.hidden = !Session.pic;
+  };
+  updateBadgeLink();
+  document.addEventListener("session:updated", updateBadgeLink);
+
+  // Master view filter listeners
+  ["master-filter-divisi", "master-filter-status"].forEach(id => {
+    document.getElementById(id)?.addEventListener("change", () => renderMasterView());
+  });
+  document.getElementById("master-filter-reset")?.addEventListener("click", () => {
+    if ($("#master-filter-divisi")) $("#master-filter-divisi").value = "";
+    if ($("#master-filter-status")) $("#master-filter-status").value = "";
+    renderMasterView();
+  });
+
+  // When user logs in/out, update owner UI
+  const origUpdate = updateSessionPill;
+  // Hook: after login modal confirms, refresh
+  document.addEventListener("session:updated", () => { toggleOwnerUI(); refreshAll(); });
 });
 
 // Auto-refresh tiap 60 detik (kalau tab aktif)

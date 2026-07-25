@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>E2E Test · Dashboard V2</title>
+<style>
+  body { font-family: -apple-system, sans-serif; padding: 2rem; max-width: 960px; margin: 0 auto; background: #0a0e14; color: #e0e0e0; }
+  h1 { color: #74b9ff; }
+  .test { padding: 0.75rem 1rem; margin: 0.5rem 0; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; }
+  .pass { background: rgba(0, 200, 100, 0.15); border-left: 4px solid #00c864; }
+  .fail { background: rgba(255, 80, 80, 0.15); border-left: 4px solid #ff5050; }
+  .info { background: rgba(100, 150, 255, 0.15); border-left: 4px solid #6496ff; }
+  .summary { margin: 1.5rem 0; padding: 1rem; background: rgba(116, 185, 255, 0.1); border-radius: 8px; font-weight: 600; }
+  .summary.bad { background: rgba(255, 80, 80, 0.15); }
+  .summary.good { background: rgba(0, 200, 100, 0.15); }
+  button { padding: 0.75rem 1.5rem; background: #74b9ff; color: #0a0e14; border: 0; border-radius: 6px; font-weight: 600; cursor: pointer; }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+</style>
+</head>
+<body>
+<h1>🧪 E2E Test · Dashboard V2</h1>
+<p>Menjalankan 8 skenario otomatis. Butuh <code>live</code> mode (Worker + Notion 4 DB).</p>
+<button id="run">Jalankan Test</button>
+<button id="clear">Clear Log</button>
+<div id="log"></div>
+<div id="summary"></div>
+<script>
+const $ = s => document.querySelector(s);
+const log = (msg, type = "info") => {
+  const div = document.createElement("div");
+  div.className = "test " + type;
+  div.textContent = msg;
+  $("#log").appendChild(div);
+};
+const results = { pass: 0, fail: 0 };
+const pass = name => { results.pass++; log("✓ " + name, "pass"); };
+const fail = (name, err) => { results.fail++; log("✗ " + name + " — " + (err || "fail"), "fail"); };
+
+const cfg = window.DASHBOARD_CONFIG || {};
+const workerBase = cfg.workerBase || "https://titan-notion-proxy.nickasad10007.workers.dev";
+
+async function test(name, fn) {
+  try { await fn(); pass(name); } catch (e) { fail(name, e.message); }
+}
+
+async function api(path, opts = {}) {
+  const res = await fetch(workerBase + path, {
+    ...opts,
+    headers: { "Content-Type": "application/json", ...(opts.headers || {}) }
+  });
+  return { status: res.status, body: await res.json().catch(() => ({})) };
+}
+
+$("#run").onclick = async () => {
+  $("#log").innerHTML = "";
+  results.pass = 0; results.fail = 0;
+  $("#run").disabled = true;
+  log("Starting E2E @ " + workerBase, "info");
+
+  await test("Worker root reachable", async () => {
+    const r = await fetch(workerBase);
+    if (r.status !== 200) throw new Error("status " + r.status);
+  });
+
+  await test("Login owner (Pak Ardian)", async () => {
+    const r = await api("/auth/login", { method: "POST", body: JSON.stringify({ pic: "Pak Ardian", pin: "0000" }) });
+    if (r.status === 401) throw new Error("PIN salah atau integration down — set PINS secret dulu");
+    if (r.status !== 200) throw new Error("status " + r.status);
+  });
+
+  await test("Login non-owner (Mada)", async () => {
+    const r = await api("/auth/login", { method: "POST", body: JSON.stringify({ pic: "Mada", pin: "0000" }) });
+    if (r.status === 401) throw new Error("PIN salah");
+  });
+
+  await test("Query KPI DB", async () => {
+    const r = await api("/notion/v1/databases/" + cfg.databases.kpi + "/query", { method: "POST", body: "{}" });
+    if (r.status !== 200) throw new Error("status " + r.status + " — check Notion token + DB share");
+  });
+
+  await test("Query SOW DB", async () => {
+    const r = await api("/notion/v1/databases/" + cfg.databases.sow + "/query", { method: "POST", body: "{}" });
+    if (r.status !== 200) throw new Error("status " + r.status);
+  });
+
+  await test("Query Program DB", async () => {
+    const r = await api("/notion/v1/databases/" + cfg.databases.program + "/query", { method: "POST", body: "{}" });
+    if (r.status !== 200) throw new Error("status " + r.status);
+  });
+
+  await test("Query Jobdesk DB", async () => {
+    const r = await api("/notion/v1/databases/" + cfg.databases.jobdesk + "/query", { method: "POST", body: "{}" });
+    if (r.status !== 200) throw new Error("status " + r.status);
+  });
+
+  await test("Owner can read approval fields (schema check)", async () => {
+    const r = await api("/notion/v1/databases/" + cfg.databases.jobdesk);
+    if (r.status !== 200) throw new Error("status " + r.status);
+    const props = Object.keys(r.body.properties || {});
+    const has = props.includes("Approval") && props.includes("Approval_By") && props.includes("Approval_Time");
+    if (!has) throw new Error("missing approval fields — run migrate-add-approval.js");
+  });
+
+  const sum = $("#summary");
+  sum.className = "summary " + (results.fail > 0 ? "bad" : "good");
+  sum.textContent = `${results.pass} pass, ${results.fail} fail dari ${results.pass + results.fail} test`;
+  $("#run").disabled = false;
+};
+
+$("#clear").onclick = () => { $("#log").innerHTML = ""; $("#summary").innerHTML = ""; };
+</script>
+</body>
+</html>
