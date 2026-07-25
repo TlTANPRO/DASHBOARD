@@ -1350,14 +1350,6 @@ function toggleOwnerUI() {
   renderAlertBadge();
 }
 
-function updateModeBadge() {
-  const cfg = window.DASHBOARD_CONFIG;
-  $("#mode-label").textContent = cfg.mode.toUpperCase();
-  $("#mode-foot").textContent = cfg.mode === "live"
-    ? "Connected ke Notion via Worker"
-    : "Fallback static · data di localStorage";
-}
-
 document.addEventListener("DOMContentLoaded", async () => {
   Session.load();
   updateSessionPill();
@@ -1380,7 +1372,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (cfg.mode === "demo") seedDemo();
   $("#job-filter-date").value = todayISO();
   refreshAll();
-  updateModeBadge();
   setupNav();
   toggleOwnerUI();
 
