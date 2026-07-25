@@ -881,16 +881,31 @@ async function loadJobdesk() {
     let rows = res.results || [];
     const fDate = $("#job-filter-date").value;
     const fStatus = $("#job-filter-status").value;
-    if (fDate) rows = rows.filter(r => r.Tanggal === fDate);
+    if (fDate) rows = rows.filter(r => (r.Tanggal?.start || r.Tanggal) === fDate);
     if (fStatus) rows = rows.filter(r => r.Status === fStatus);
+    // 7-day history fallback: jika today kosong, tampilkan 7 hari terakhir
+    let historyMode = false;
+    if (rows.length === 0 && fDate) {
+      const today = new Date(fDate);
+      const cutoff = new Date(today.getTime() - 7 * 86400000).toISOString().split("T")[0];
+      const allRes = await API.query("jobdesk");
+      const allRows = (allRes.results || []).filter(r => {
+        const t = r.Tanggal?.start || r.Tanggal;
+        return t && t >= cutoff && t <= fDate;
+      });
+      if (allRows.length > 0) {
+        rows = allRows;
+        historyMode = true;
+      }
+    }
     if (rows.length === 0) {
       list.innerHTML = `<div class="empty-state">
         <h3>Belum ada jobdesk</h3>
-        <p>Klik "+ Tambah Jobdesk" untuk catat kerjaan hari ini.</p>
+        <p>Catat kerjaan Mada, Riza, Yudi via form atau input langsung di Notion DB Jobdesk.</p>
       </div>`;
       return;
     }
-    list.innerHTML = `<table class="crud-table">
+    list.innerHTML = (historyMode ? `<div class="banner banner-warn" style="margin-bottom:var(--space-3)">ℹ️ Jobdesk hari ini kosong. Menampilkan 7 hari terakhir (${rows.length} baris).</div>` : "") + `<table class="crud-table">
       <thead><tr>
         <th>Jobdesk ID</th><th>PIC</th><th>Tanggal</th><th>Jobdesk</th>
         <th>Target</th><th>Actual</th><th>Prioritas</th><th>Status</th><th>Approval</th><th></th>
