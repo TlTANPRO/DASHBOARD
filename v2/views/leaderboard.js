@@ -1,5 +1,5 @@
 // views/leaderboard.js — Ranking PIC by KPI achievement
-import { API, loadSSOT } from "../lib/api.js";
+import { API } from "../lib/api.js";
 import { loadingSkeleton } from "../components/empty.js";
 import { rankPill } from "../components/pill.js";
 import { fmtNum, fmtPct, escapeHTML, initials } from "../lib/format.js";
@@ -8,21 +8,20 @@ export async function renderLeaderboard() {
   const root = document.getElementById("view-root");
   root.innerHTML = loadingSkeleton(2);
 
-  const [kpi, bonus] = await Promise.all([API.listKPI().catch(() => []), loadSSOT("bonus-scheme")]);
+  const kpi = await API.listKPI().catch(() => []);
 
-  // Hitung score per PIC
   const byPIC = {};
   kpi.forEach((r) => {
-    const pic = r.PIC || r.pic;
+    const pic = r.PIC;
     if (!pic) return;
     if (!byPIC[pic]) byPIC[pic] = { total: 0, achieved: 0, score: 0 };
     byPIC[pic].total++;
-    const s = (r.Status || r.status || "").toLowerCase();
-    const isAchieved = s.includes("achieve") || s.includes("done") || s.includes("selesai");
+    const s = (r.Status || "").toLowerCase();
+    const isAchieved = s.includes("achieve") || s.includes("done");
     if (isAchieved) {
       byPIC[pic].achieved++;
       byPIC[pic].score += 100;
-    } else if (s.includes("progress")) {
+    } else if (s.includes("track") || s.includes("progress")) {
       const t = Number(r.Target) || 0;
       const a = Number(r.Actual) || 0;
       if (t > 0) byPIC[pic].score += (a / t) * 70;
@@ -50,12 +49,16 @@ export async function renderLeaderboard() {
     </div>
 
     ${
+      ranked.length === 0
+        ? '<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 22V11a2 2 0 0 1 2-2 2 2 0 0 1 2 2v11M14 22v-5a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5M6 22V8a2 2 0 0 1 2-2 2 2 0 0 1 2 2v14"/></svg><div class="empty-title">Belum ada data</div><div class="t-sm">Tambah KPI dulu di menu KPI</div></div>'
+        : ""
+    }
+
+    ${
       top3.length >= 3
         ? `
       <div class="bento mb-5">
-        ${top3
-          .map(
-            (p, i) => `
+        ${top3.map((p, i) => `
           <div class="card text-center" style="padding:var(--space-6)">
             ${rankPill(i + 1)}
             <div class="auth-pic-avatar mt-3" style="width:64px;height:64px;font-size:var(--text-xl);margin:0 auto">${initials(p.pic)}</div>
@@ -63,9 +66,7 @@ export async function renderLeaderboard() {
             <div class="t-2xl tnum mt-2" style="font-weight:700;color:var(--accent)">${Math.round(p.score)}</div>
             <div class="t-xs t-muted">${fmtPct(p.rate, 0)} achieved (${p.achieved}/${p.total})</div>
           </div>
-        `
-          )
-          .join("")}
+        `).join("")}
       </div>
     `
         : ""
@@ -86,9 +87,7 @@ export async function renderLeaderboard() {
             </tr>
           </thead>
           <tbody>
-            ${rest
-              .map(
-                (p, i) => `
+            ${rest.map((p, i) => `
               <tr>
                 <td><span class="t-mono t-muted">#${i + 4}</span></td>
                 <td>
@@ -101,19 +100,11 @@ export async function renderLeaderboard() {
                 <td class="num" style="text-align:right">${p.achieved}/${p.total}</td>
                 <td class="num" style="text-align:right">${fmtPct(p.rate, 0)}</td>
               </tr>
-            `
-              )
-              .join("")}
+            `).join("")}
           </tbody>
         </table>
       </div>
     `
-        : ""
-    }
-
-    ${
-      ranked.length === 0
-        ? '<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 22V11a2 2 0 0 1 2-2 2 2 0 0 1 2 2v11M14 22v-5a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5M6 22V8a2 2 0 0 1 2-2 2 2 0 0 1 2 2v14"/></svg><div class="empty-title">Belum ada data</div><div class="t-sm">Tambah KPI dulu di menu KPI</div></div>'
         : ""
     }
   `;

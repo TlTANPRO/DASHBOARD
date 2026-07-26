@@ -1,10 +1,10 @@
-// views/program.js — Program Kerja CRUD
+// views/program.js — Program Kerja CRUD (using normalized Notion data)
 import { API } from "../lib/api.js";
-import { dataTable } from "../components/table.js";
+import { dataTable, wirePagination } from "../components/table.js";
 import { filterBar } from "../components/filter.js";
 import { loadingSkeleton } from "../components/empty.js";
 import { statusPill } from "../components/pill.js";
-import { fmtDate, escapeHTML } from "../lib/format.js";
+import { fmtDate, fmtIDR, fmtPct, escapeHTML } from "../lib/format.js";
 import { openModal, confirmDialog } from "../lib/modal.js";
 import { success, danger } from "../lib/notify.js";
 import { Session } from "../lib/auth.js";
@@ -21,21 +21,19 @@ export async function renderProgram() {
     state.data = [];
     danger(`Gagal load: ${e.message}`);
   }
-
   draw();
   bindFilterEvents();
 }
 
 function draw() {
   const root = document.getElementById("view-root");
-  const pics = [...new Set(state.data.map((r) => r.PIC || r.pic).filter(Boolean))].sort();
-  const statuses = [...new Set(state.data.map((r) => r.Status || r.status).filter(Boolean))].sort();
+  const statuses = [...new Set(state.data.map((r) => r.Status).filter(Boolean))].sort();
   const canEdit = Session.isLoggedIn();
   const picList = window.DASHBOARD_CONFIG?.picList || [];
 
   const filtered = state.data.filter((r) => {
-    if (state.filterPIC && (r.PIC || r.pic) !== state.filterPIC) return false;
-    if (state.filterStatus && (r.Status || r.status) !== state.filterStatus) return false;
+    if (state.filterPIC && r.PIC !== state.filterPIC) return false;
+    if (state.filterStatus && r.Status !== state.filterStatus) return false;
     return true;
   });
 
@@ -57,12 +55,14 @@ function draw() {
 
     ${dataTable({
       columns: [
-        { key: "Id", label: "ID", render: (r) => `<span class="t-mono t-muted t-sm">${escapeHTML(r.Id || r.id || "—")}</span>` },
+        { key: "Program ID", label: "ID", render: (r) => `<span class="t-mono t-muted t-sm">${escapeHTML(r["Program ID"] || "—")}</span>` },
         { key: "PIC", label: "PIC" },
-        { key: "Judul", label: "Judul", truncate: true },
-        { key: "Target", label: "Target", truncate: true },
+        { key: "Judul", label: "Nama Program", truncate: true },
+        { key: "Quarter", label: "Quarter", render: (r) => r.Quarter ? `<span class="pill pill-muted">${escapeHTML(r.Quarter)}</span>` : "—" },
+        { key: "Progress", label: "Progress", align: "right", render: (r) => r.Progress != null ? fmtPct(r.Progress, 0) : "—" },
+        { key: "Budget", label: "Budget", align: "right", render: (r) => fmtIDR(r.Budget) },
         { key: "Deadline", label: "Deadline", render: (r) => fmtDate(r.Deadline) },
-        { key: "Status", label: "Status", render: (r) => statusPill(r.Status || r.status) },
+        { key: "Status", label: "Status", render: (r) => statusPill(r.Status) },
         ...(canEdit
           ? [
               {
@@ -84,8 +84,7 @@ function draw() {
   document.getElementById("btn-add")?.addEventListener("click", () => openEditor(null));
   document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
-      const id = btn.dataset.id;
-      const rec = state.data.find((r) => r.id === id);
+      const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) openEditor(rec);
     });
   });
@@ -103,15 +102,18 @@ function draw() {
       }
     });
   });
+
+  wirePagination(root);
 }
 
 function bindFilterEvents() {
   document.querySelectorAll("[data-filter]").forEach((el) => {
-    el.addEventListener("change", () => {
+    const handler = () => {
       const f = el.dataset.filter;
       state[f === "pic" ? "filterPIC" : "filterStatus"] = el.value;
       draw();
-    });
+    };
+    el.addEventListener("change", handler);
   });
 }
 
@@ -125,26 +127,49 @@ function openEditor(record) {
   form.innerHTML = `
     <div class="col gap-3">
       <div class="field-row">
+        <div class="field"><label class="field-label" for="prog-id">Program ID</label>
+          <input class="input" id="prog-id" value="${escapeHTML(r["Program ID"] || "")}" placeholder="prog-001" />
+        </div>
         <div class="field"><label class="field-label" for="prog-pic">PIC *</label>
           <select class="select" id="prog-pic" required>${picList.map((p) => `<option value="${escapeHTML(p)}"${r.PIC === p ? " selected" : ""}>${escapeHTML(p)}</option>`).join("")}</select>
+        </div>
+      </div>
+      <div class="field"><label class="field-label" for="prog-judul">Nama Program *</label>
+        <input class="input" id="prog-judul" required value="${escapeHTML(r.Judul || "")}" />
+      </div>
+      <div class="field-row">
+        <div class="field"><label class="field-label" for="prog-quarter">Quarter</label>
+          <select class="select" id="prog-quarter">
+            ${["", "Q1", "Q2", "Q3", "Q4"].map((q) => `<option value="${q}"${r.Quarter === q ? " selected" : ""}>${q || "—"}</option>`).join("")}
+          </select>
+        </div>
+        <div class="field"><label class="field-label" for="prog-tahun">Tahun</label>
+          <input class="input" id="prog-tahun" type="number" value="${escapeHTML(r.Tahun || new Date().getFullYear())}" />
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label class="field-label" for="prog-mulai">Tanggal Mulai</label>
+          <input class="input" id="prog-mulai" type="date" value="${escapeHTML(r["Tanggal Mulai"] || today)}" />
         </div>
         <div class="field"><label class="field-label" for="prog-deadline">Deadline</label>
           <input class="input" id="prog-deadline" type="date" value="${escapeHTML(r.Deadline || today)}" />
         </div>
       </div>
-      <div class="field"><label class="field-label" for="prog-judul">Judul *</label>
-        <input class="input" id="prog-judul" required value="${escapeHTML(r.Judul || "")}" />
+      <div class="field-row">
+        <div class="field"><label class="field-label" for="prog-progress">Progress (%)</label>
+          <input class="input" id="prog-progress" type="number" min="0" max="100" value="${escapeHTML(r.Progress ?? 0)}" />
+        </div>
+        <div class="field"><label class="field-label" for="prog-budget">Budget (Rp)</label>
+          <input class="input" id="prog-budget" type="number" value="${escapeHTML(r.Budget ?? 0)}" />
+        </div>
+        <div class="field"><label class="field-label" for="prog-status">Status</label>
+          <select class="select" id="prog-status">
+            ${["", "Planning", "On Track", "At Risk", "Delayed", "Done", "Cancelled"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s || "—"}</option>`).join("")}
+          </select>
+        </div>
       </div>
-      <div class="field"><label class="field-label" for="prog-target">Target Output</label>
-        <input class="input" id="prog-target" value="${escapeHTML(r.Target || "")}" placeholder="Contoh: 10 unit closing" />
-      </div>
-      <div class="field"><label class="field-label" for="prog-status">Status</label>
-        <select class="select" id="prog-status">
-          ${["", "Backlog", "Progress", "Done", "Block", "Pending"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s || "—"}</option>`).join("")}
-        </select>
-      </div>
-      <div class="field"><label class="field-label" for="prog-catatan">Catatan</label>
-        <textarea class="textarea" id="prog-catatan">${escapeHTML(r.Catatan || "")}</textarea>
+      <div class="field"><label class="field-label" for="prog-risiko">Risiko</label>
+        <textarea class="textarea" id="prog-risiko">${escapeHTML(r.Risiko || "")}</textarea>
       </div>
     </div>
   `;
@@ -159,12 +184,17 @@ function openEditor(record) {
         variant: "btn-primary",
         onClick: async () => {
           const data = {
+            "Program ID": form.querySelector("#prog-id").value,
             PIC: form.querySelector("#prog-pic").value,
             Judul: form.querySelector("#prog-judul").value,
-            Target: form.querySelector("#prog-target").value,
+            Quarter: form.querySelector("#prog-quarter").value,
+            Tahun: form.querySelector("#prog-tahun").value,
+            "Tanggal Mulai": form.querySelector("#prog-mulai").value,
             Deadline: form.querySelector("#prog-deadline").value,
+            Progress: form.querySelector("#prog-progress").value,
+            Budget: form.querySelector("#prog-budget").value,
             Status: form.querySelector("#prog-status").value,
-            Catatan: form.querySelector("#prog-catatan").value,
+            Risiko: form.querySelector("#prog-risiko").value,
           };
           try {
             if (isEdit) await API.updateProgram(record.id, data);

@@ -1,6 +1,6 @@
-// views/kpi.js — KPI CRUD
+// views/kpi.js — KPI CRUD (using normalized Notion data)
 import { API } from "../lib/api.js";
-import { dataTable } from "../components/table.js";
+import { dataTable, wirePagination } from "../components/table.js";
 import { filterBar } from "../components/filter.js";
 import { emptyState, loadingSkeleton } from "../components/empty.js";
 import { statusPill } from "../components/pill.js";
@@ -21,24 +21,21 @@ export async function renderKPI() {
     state.data = [];
     danger(`Gagal load KPI: ${e.message}`);
   }
-
   draw();
   bindFilterEvents();
 }
 
 function draw() {
   const root = document.getElementById("view-root");
-  const pics = [...new Set(state.data.map((r) => r.PIC || r.pic).filter(Boolean))].sort();
-  const statuses = [...new Set(state.data.map((r) => r.Status || r.status).filter(Boolean))].sort();
-
-  const filtered = state.data.filter((r) => {
-    if (state.filterPIC && (r.PIC || r.pic) !== state.filterPIC) return false;
-    if (state.filterStatus && (r.Status || r.status) !== state.filterStatus) return false;
-    return true;
-  });
-
+  const statuses = [...new Set(state.data.map((r) => r.Status).filter(Boolean))].sort();
   const canEdit = Session.isLoggedIn();
   const picList = window.DASHBOARD_CONFIG?.picList || [];
+
+  const filtered = state.data.filter((r) => {
+    if (state.filterPIC && r.PIC !== state.filterPIC) return false;
+    if (state.filterStatus && r.Status !== state.filterStatus) return false;
+    return true;
+  });
 
   root.innerHTML = `
     <div class="row-between mb-4">
@@ -47,7 +44,6 @@ function draw() {
         <p class="t-muted t-sm">${filtered.length} dari ${state.data.length} entri</p>
       </div>
       <div class="row gap-2">
-        <button class="btn btn-outline" id="btn-seed">Seed Demo</button>
         ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah KPI</button>' : ""}
       </div>
     </div>
@@ -61,9 +57,10 @@ function draw() {
 
     ${dataTable({
       columns: [
-        { key: "KPI ID", label: "ID", render: (r) => `<span class="t-mono t-muted t-sm">${escapeHTML(r["KPI ID"] || r.id || "—")}</span>` },
+        { key: "KPI ID", label: "ID", render: (r) => `<span class="t-mono t-muted t-sm">${escapeHTML(r["KPI ID"] || "—")}</span>` },
         { key: "PIC", label: "PIC" },
         { key: "Indikator", label: "Indikator", truncate: true },
+        { key: "Tipe", label: "Tipe", render: (r) => r.Tipe ? `<span class="pill pill-muted">${escapeHTML(r.Tipe)}</span>` : "—" },
         { key: "Target", label: "Target", align: "right", render: (r) => fmtNum(r.Target) },
         { key: "Actual", label: "Actual", align: "right", render: (r) => fmtNum(r.Actual) },
         {
@@ -73,11 +70,11 @@ function draw() {
           render: (r) => {
             const t = Number(r.Target);
             const a = Number(r.Actual);
-            if (!t || isNaN(t)) return "—";
+            if (!t || isNaN(t) || !a) return "—";
             return fmtPct((a / t) * 100, 0);
           },
         },
-        { key: "Status", label: "Status", render: (r) => statusPill(r.Status || r.status) },
+        { key: "Status", label: "Status", render: (r) => statusPill(r.Status) },
         ...(canEdit
           ? [
               {
@@ -97,8 +94,6 @@ function draw() {
   `;
 
   document.getElementById("btn-add")?.addEventListener("click", () => openEditor(null));
-  document.getElementById("btn-seed")?.addEventListener("click", seedDemo);
-
   document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.dataset.id;
@@ -126,20 +121,19 @@ function draw() {
       }
     });
   });
+
+  wirePagination(root);
 }
 
 function bindFilterEvents() {
   document.querySelectorAll("[data-filter]").forEach((el) => {
-    el.addEventListener("change", () => {
+    const handler = () => {
       const f = el.dataset.filter;
       state[f === "pic" ? "filterPIC" : "filterStatus"] = el.value;
       draw();
-    });
-    el.addEventListener("input", () => {
-      const f = el.dataset.filter;
-      state[f === "pic" ? "filterPIC" : "filterStatus"] = el.value;
-      draw();
-    });
+    };
+    el.addEventListener("change", handler);
+    el.addEventListener("input", handler);
   });
 }
 
@@ -147,18 +141,23 @@ function openEditor(record) {
   const isEdit = !!record;
   const r = record || {};
   const picList = window.DASHBOARD_CONFIG?.picList || [];
-  const divisiList = window.DASHBOARD_CONFIG?.divisiList || [];
 
   const form = document.createElement("form");
   form.id = "kpi-form";
   form.innerHTML = `
     <div class="col gap-3">
-      <div class="field">
-        <label class="field-label" for="kpi-pic">PIC *</label>
-        <select class="select" id="kpi-pic" required>
-          <option value="">— Pilih PIC —</option>
-          ${picList.map((p) => `<option value="${escapeHTML(p)}"${r.PIC === p ? " selected" : ""}>${escapeHTML(p)}</option>`).join("")}
-        </select>
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label" for="kpi-id">KPI ID</label>
+          <input class="input" id="kpi-id" value="${escapeHTML(r["KPI ID"] || "")}" placeholder="kpi-001" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="kpi-pic">PIC *</label>
+          <select class="select" id="kpi-pic" required>
+            <option value="">— Pilih —</option>
+            ${picList.map((p) => `<option value="${escapeHTML(p)}"${r.PIC === p ? " selected" : ""}>${escapeHTML(p)}</option>`).join("")}
+          </select>
+        </div>
       </div>
       <div class="field">
         <label class="field-label" for="kpi-indikator">Indikator *</label>
@@ -166,32 +165,43 @@ function openEditor(record) {
       </div>
       <div class="field-row">
         <div class="field">
-          <label class="field-label" for="kpi-target">Target</label>
-          <input class="input" id="kpi-target" type="number" value="${escapeHTML(r.Target || "")}" />
+          <label class="field-label" for="kpi-tipe">Tipe</label>
+          <select class="select" id="kpi-tipe">
+            ${["", "Kuantitatif", "Kualitatif"].map((t) => `<option value="${t}"${r.Tipe === t ? " selected" : ""}>${t || "—"}</option>`).join("")}
+          </select>
         </div>
         <div class="field">
-          <label class="field-label" for="kpi-actual">Actual</label>
-          <input class="input" id="kpi-actual" type="number" value="${escapeHTML(r.Actual || "")}" />
+          <label class="field-label" for="kpi-periode">Periode</label>
+          <select class="select" id="kpi-periode">
+            ${["", "Mingguan", "Bulanan", "Kuartalan", "Tahunan"].map((p) => `<option value="${p}"${r.Periode === p ? " selected" : ""}>${p || "—"}</option>`).join("")}
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="kpi-satuan">Satuan</label>
+          <select class="select" id="kpi-satuan">
+            ${["", "Unit", "Unit %", "Rp", "Orang", "Hari"].map((s) => `<option value="${s}"${r.Satuan === s ? " selected" : ""}>${s || "—"}</option>`).join("")}
+          </select>
         </div>
       </div>
       <div class="field-row">
         <div class="field">
-          <label class="field-label" for="kpi-divisi">Divisi</label>
-          <select class="select" id="kpi-divisi">
-            <option value="">—</option>
-            ${divisiList.map((d) => `<option value="${escapeHTML(d)}"${r.Divisi === d ? " selected" : ""}>${escapeHTML(d)}</option>`).join("")}
-          </select>
+          <label class="field-label" for="kpi-target">Target</label>
+          <input class="input" id="kpi-target" type="number" value="${escapeHTML(r.Target ?? "")}" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="kpi-actual">Actual</label>
+          <input class="input" id="kpi-actual" type="number" value="${escapeHTML(r.Actual ?? "")}" />
         </div>
         <div class="field">
           <label class="field-label" for="kpi-status">Status</label>
           <select class="select" id="kpi-status">
-            ${["", "Progress", "Achieved", "Miss", "Pending"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s || "—"}</option>`).join("")}
+            ${["", "On Track", "At Risk", "Off Track", "Achieved"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s || "—"}</option>`).join("")}
           </select>
         </div>
       </div>
       <div class="field">
         <label class="field-label" for="kpi-catatan">Catatan</label>
-        <textarea class="textarea" id="kpi-catatan" placeholder="Catatan tambahan…">${escapeHTML(r.Catatan || "")}</textarea>
+        <textarea class="textarea" id="kpi-catatan">${escapeHTML(r.Catatan || "")}</textarea>
       </div>
     </div>
   `;
@@ -211,17 +221,20 @@ function openEditor(record) {
             return false;
           }
           const data = {
+            "KPI ID": f.querySelector("#kpi-id").value,
             PIC: f.querySelector("#kpi-pic").value,
             Indikator: f.querySelector("#kpi-indikator").value,
+            Tipe: f.querySelector("#kpi-tipe").value,
+            Periode: f.querySelector("#kpi-periode").value,
+            Satuan: f.querySelector("#kpi-satuan").value,
             Target: f.querySelector("#kpi-target").value,
             Actual: f.querySelector("#kpi-actual").value,
-            Divisi: f.querySelector("#kpi-divisi").value,
             Status: f.querySelector("#kpi-status").value,
             Catatan: f.querySelector("#kpi-catatan").value,
           };
           try {
             if (isEdit) {
-              await API.updateKPI(record.id, data);
+              await API.updateKPI(record.id, data, record._editTime);
               success("KPI diperbarui");
             } else {
               await API.createKPI(data);
@@ -237,31 +250,4 @@ function openEditor(record) {
       },
     ],
   });
-}
-
-async function seedDemo() {
-  const ok = await confirmDialog({
-    title: "Seed demo data?",
-    body: "Akan menambahkan 6 KPI sample untuk testing. Mode demo only.",
-    confirmLabel: "Tambah",
-  });
-  if (!ok) return;
-  const samples = [
-    { PIC: "Riza", Indikator: "Closing 5 unit FLPP Q3", Target: 5, Actual: 3, Status: "Progress", Divisi: "Marketing" },
-    { PIC: "Reni", Indikator: "Lead baru 50/bulan", Target: 50, Actual: 62, Status: "Achieved", Divisi: "Marketing" },
-    { PIC: "Mada", Indikator: "Coaching 100% PIC", Target: 12, Actual: 12, Status: "Achieved", Divisi: "Owner" },
-    { PIC: "Yudi (Sdek)", Indikator: "Konstruksi Type 36 on-time", Target: 8, Actual: 6, Status: "Progress", Divisi: "Proyek" },
-    { PIC: "Novita", Indikator: "Pemberkasan 0 error", Target: 30, Actual: 28, Status: "Progress", Divisi: "Admin" },
-    { PIC: "Sinta", Indikator: "SHM selesai 100%", Target: 25, Actual: 15, Status: "Miss", Divisi: "Legal" },
-  ];
-  try {
-    for (const s of samples) {
-      await API.createKPI(s);
-    }
-    state.data = await API.listKPI();
-    success("6 KPI demo ditambahkan");
-    draw();
-  } catch (e) {
-    danger(`Gagal: ${e.message}`);
-  }
 }

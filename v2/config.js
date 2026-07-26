@@ -3,7 +3,7 @@
 
 window.DASHBOARD_CONFIG = {
   // Mode: "live" (Notion via Worker) or "demo" (LocalStorage)
-  mode: "demo",
+  mode: "live",
 
   // Cloudflare Worker URL (proxies Notion API)
   workerBase: "https://titan-notion-proxy.nickasad10000.workers.dev",

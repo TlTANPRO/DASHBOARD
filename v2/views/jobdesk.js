@@ -1,6 +1,6 @@
-// views/jobdesk.js — Jobdesk Harian CRUD
+// views/jobdesk.js — Jobdesk Harian CRUD (using normalized Notion data)
 import { API } from "../lib/api.js";
-import { dataTable } from "../components/table.js";
+import { dataTable, wirePagination } from "../components/table.js";
 import { filterBar } from "../components/filter.js";
 import { loadingSkeleton } from "../components/empty.js";
 import { statusPill } from "../components/pill.js";
@@ -31,10 +31,13 @@ function draw() {
   const picList = window.DASHBOARD_CONFIG?.picList || [];
 
   const filtered = state.data.filter((r) => {
-    if (state.filterPIC && (r.PIC || r.pic) !== state.filterPIC) return false;
-    if (state.filterDate && (r.Tanggal || r.tanggal) !== state.filterDate) return false;
+    if (state.filterPIC && r.PIC !== state.filterPIC) return false;
+    if (state.filterDate && r.Tanggal !== state.filterDate) return false;
     return true;
   });
+
+  // Sort by date desc
+  filtered.sort((a, b) => (b.Tanggal || "").localeCompare(a.Tanggal || ""));
 
   root.innerHTML = `
     <div class="row-between mb-4">
@@ -54,11 +57,13 @@ function draw() {
 
     ${dataTable({
       columns: [
-        { key: "Tanggal", label: "Tanggal", render: (r) => fmtDate(r.Tanggal || r.tanggal) },
+        { key: "Tanggal", label: "Tanggal", render: (r) => fmtDate(r.Tanggal) },
         { key: "PIC", label: "PIC" },
-        { key: "Aktivitas", label: "Aktivitas", truncate: true },
-        { key: "Output", label: "Output", truncate: true },
-        { key: "Status", label: "Status", render: (r) => statusPill(r.Status || r.status || "Done") },
+        { key: "Aktivitas", label: "Jobdesk", truncate: true },
+        { key: "Target", label: "Target Output", truncate: true },
+        { key: "Output", label: "Actual Output", truncate: true },
+        { key: "Prioritas", label: "Prioritas", render: (r) => r.Prioritas ? `<span class="pill pill-muted">${escapeHTML(r.Prioritas)}</span>` : "—" },
+        { key: "Status", label: "Status", render: (r) => statusPill(r.Status) },
         ...(canEdit
           ? [
               {
@@ -98,20 +103,19 @@ function draw() {
       }
     })
   );
+
+  wirePagination(root);
 }
 
 function bindFilterEvents() {
   document.querySelectorAll("[data-filter]").forEach((el) => {
-    el.addEventListener("change", () => {
+    const handler = () => {
       const f = el.dataset.filter;
       state[f === "pic" ? "filterPIC" : "filterDate"] = el.value;
       draw();
-    });
-    el.addEventListener("input", () => {
-      const f = el.dataset.filter;
-      state[f === "pic" ? "filterPIC" : "filterDate"] = el.value;
-      draw();
-    });
+    };
+    el.addEventListener("change", handler);
+    el.addEventListener("input", handler);
   });
 }
 
@@ -125,22 +129,35 @@ function openEditor(record) {
   form.innerHTML = `
     <div class="col gap-3">
       <div class="field-row">
+        <div class="field"><label class="field-label" for="job-id">Jobdesk ID</label>
+          <input class="input" id="job-id" value="${escapeHTML(r["Jobdesk ID"] || "")}" placeholder="JOB-20260726-Mada-01" />
+        </div>
         <div class="field"><label class="field-label" for="job-pic">PIC *</label>
           <select class="select" id="job-pic" required>${picList.map((p) => `<option value="${escapeHTML(p)}"${r.PIC === p ? " selected" : ""}>${escapeHTML(p)}</option>`).join("")}</select>
         </div>
+      </div>
+      <div class="field-row">
         <div class="field"><label class="field-label" for="job-tanggal">Tanggal</label>
           <input class="input" id="job-tanggal" type="date" value="${escapeHTML(r.Tanggal || today)}" />
         </div>
+        <div class="field"><label class="field-label" for="job-prioritas">Prioritas</label>
+          <select class="select" id="job-prioritas">
+            ${["", "Low", "Medium", "High", "Urgent"].map((p) => `<option value="${p}"${r.Prioritas === p ? " selected" : ""}>${p || "—"}</option>`).join("")}
+          </select>
+        </div>
       </div>
-      <div class="field"><label class="field-label" for="job-aktivitas">Aktivitas *</label>
+      <div class="field"><label class="field-label" for="job-aktivitas">Jobdesk *</label>
         <input class="input" id="job-aktivitas" required value="${escapeHTML(r.Aktivitas || "")}" />
       </div>
-      <div class="field"><label class="field-label" for="job-output">Output</label>
+      <div class="field"><label class="field-label" for="job-target">Target Output</label>
+        <input class="input" id="job-target" value="${escapeHTML(r.Target || "")}" />
+      </div>
+      <div class="field"><label class="field-label" for="job-output">Actual Output</label>
         <input class="input" id="job-output" value="${escapeHTML(r.Output || "")}" />
       </div>
       <div class="field"><label class="field-label" for="job-status">Status</label>
         <select class="select" id="job-status">
-          ${["Done", "Progress", "Pending", "Block"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s}</option>`).join("")}
+          ${["To Do", "In Progress", "Done", "Blocked"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s}</option>`).join("")}
         </select>
       </div>
     </div>
@@ -156,10 +173,13 @@ function openEditor(record) {
         variant: "btn-primary",
         onClick: async () => {
           const data = {
+            "Jobdesk ID": form.querySelector("#job-id").value,
             PIC: form.querySelector("#job-pic").value,
             Tanggal: form.querySelector("#job-tanggal").value,
             Aktivitas: form.querySelector("#job-aktivitas").value,
+            Target: form.querySelector("#job-target").value,
             Output: form.querySelector("#job-output").value,
+            Prioritas: form.querySelector("#job-prioritas").value,
             Status: form.querySelector("#job-status").value,
           };
           try {

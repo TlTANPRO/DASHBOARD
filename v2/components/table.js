@@ -1,7 +1,7 @@
-// components/table.js — sortable, filterable data table
-import { escapeHTML, truncate } from "../lib/format.js";
+// components/table.js — sortable, filterable, paginated data table
+import { escapeHTML } from "../lib/format.js";
 
-export function dataTable({ columns, rows, empty = "Tidak ada data", rowKey = "id", onRowClick = null }) {
+export function dataTable({ columns, rows, empty = "Tidak ada data", rowKey = "id", onRowClick = null, pageSize = 20 }) {
   if (!rows || rows.length === 0) {
     return `
       <div class="table-wrap">
@@ -12,6 +12,9 @@ export function dataTable({ columns, rows, empty = "Tidak ada data", rowKey = "i
       </div>
     `;
   }
+
+  const totalPages = Math.ceil(rows.length / pageSize);
+  const dataAttr = "tbl-" + Math.random().toString(36).slice(2, 9);
 
   const head = columns
     .map((c) => {
@@ -25,7 +28,7 @@ export function dataTable({ columns, rows, empty = "Tidak ada data", rowKey = "i
       const cells = columns
         .map((c) => {
           let val = typeof c.render === "function" ? c.render(row) : row[c.key];
-          if (val == null) val = "—";
+          if (val == null || val === "") val = "—";
           if (typeof val === "string" && !val.startsWith("<") && c.truncate) {
             val = `<span title="${escapeHTML(val)}" class="truncate">${escapeHTML(val)}</span>`;
           } else if (typeof val === "string" && !val.startsWith("<")) {
@@ -36,9 +39,61 @@ export function dataTable({ columns, rows, empty = "Tidak ada data", rowKey = "i
         })
         .join("");
       const clickAttr = onRowClick ? ` data-row-id="${escapeHTML(row[rowKey])}" style="cursor:pointer"` : "";
-      return `<tr${clickAttr}>${cells}</tr>`;
+      return `<tr${clickAttr} data-row="${escapeHTML(row[rowKey] || "")}">${cells}</tr>`;
     })
     .join("");
 
-  return `<div class="table-wrap"><table class="table"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+  const pagination = totalPages > 1 ? `
+    <div class="row-between" style="padding:var(--space-3) var(--space-4);border-top:1px solid var(--border-subtle);font-size:var(--text-sm)">
+      <span class="t-muted">Halaman <span class="t-mono" data-page-current="${dataAttr}">1</span> dari ${totalPages} · ${rows.length} total</span>
+      <div class="row gap-2">
+        <button class="btn btn-sm btn-outline" data-page-prev="${dataAttr}" disabled>← Prev</button>
+        <button class="btn btn-sm btn-outline" data-page-next="${dataAttr}">Next →</button>
+      </div>
+    </div>
+  ` : "";
+
+  return `<div class="table-wrap"><table class="table" data-table="${dataAttr}"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>${pagination}</div>`;
+}
+
+// Wire pagination after render
+export function wirePagination(rootEl) {
+  rootEl.querySelectorAll("[data-table]").forEach((tbl) => {
+    const dataAttr = tbl.dataset.table;
+    const prevBtn = rootEl.querySelector(`[data-page-prev="${dataAttr}"]`);
+    const nextBtn = rootEl.querySelector(`[data-page-next="${dataAttr}"]`);
+    const counter = rootEl.querySelector(`[data-page-current="${dataAttr}"]`);
+    if (!prevBtn || !nextBtn) return;
+
+    const tbody = tbl.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const pageSize = 20;
+    const totalPages = Math.ceil(rows.length / pageSize);
+    let current = 1;
+
+    function render() {
+      rows.forEach((row, i) => {
+        const page = Math.floor(i / pageSize) + 1;
+        row.style.display = page === current ? "" : "none";
+      });
+      if (counter) counter.textContent = current;
+      prevBtn.disabled = current === 1;
+      nextBtn.disabled = current === totalPages;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (current > 1) {
+        current--;
+        render();
+      }
+    });
+    nextBtn.addEventListener("click", () => {
+      if (current < totalPages) {
+        current++;
+        render();
+      }
+    });
+
+    render();
+  });
 }

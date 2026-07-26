@@ -41,15 +41,19 @@ function updateSessionPill() {
   const picName = document.getElementById("session-pic");
   if (Session.isLoggedIn()) {
     pill.hidden = false;
-    picName.textContent = Session.pic;
-    loginBtn.textContent = "Logout";
-    loginBtn.classList.remove("btn-primary");
-    loginBtn.classList.add("btn-outline");
+    if (picName) picName.textContent = Session.pic;
+    if (loginBtn) {
+      loginBtn.textContent = "Logout";
+      loginBtn.classList.remove("btn-primary");
+      loginBtn.classList.add("btn-outline");
+    }
   } else {
-    pill.hidden = true;
-    loginBtn.textContent = "Login";
-    loginBtn.classList.add("btn-primary");
-    loginBtn.classList.remove("btn-outline");
+    if (pill) pill.hidden = true;
+    if (loginBtn) {
+      loginBtn.textContent = "Login";
+      loginBtn.classList.add("btn-primary");
+      loginBtn.classList.remove("btn-outline");
+    }
   }
 }
 
