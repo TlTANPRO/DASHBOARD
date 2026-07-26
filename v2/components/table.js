@@ -106,7 +106,11 @@ export function wireRowClicks(rootEl, onRowClick) {
     tr.addEventListener("click", (e) => {
       // Ignore clicks on checkboxes, buttons, inputs
       if (e.target.closest("input, button, [data-action], .td-edit, a")) return;
-      onRowClick(tr.dataset.rowId, tr);
+      try {
+        onRowClick(tr.dataset.rowId, tr);
+      } catch (err) {
+        console.error("wireRowClicks error:", err);
+      }
     });
   });
 }
