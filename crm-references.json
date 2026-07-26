@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Salesforce Lightning",
+    "url": "https://www.salesforce.com/",
+    "use_case": "Industry leader CRM, complex data tables, pipeline kanban",
+    "key_features": [
+      "Kanban board (Opportunities)",
+      "Multi-step filter",
+      "Tag-based chips",
+      "Activity timeline"
+    ],
+    "extract_target": "https://www.salesforce.com/form/company-information/contact/"
+  },
+  {
+    "name": "HubSpot CRM",
+    "url": "https://www.hubspot.com/",
+    "use_case": "Marketing-friendly CRM, clean modern UI",
+    "key_features": [
+      "Card-based dashboard",
+      "Drag-drop pipelines",
+      "Email integration UI",
+      "Contact timeline"
+    ],
+    "extract_target": "https://app.hubspot.com/"
+  },
+  {
+    "name": "Pipedrive",
+    "url": "https://www.pipedrive.com/",
+    "use_case": "Sales-focused, pipeline-first CRM",
+    "key_features": [
+      "Visual pipeline",
+      "Activity feed",
+      "Goal tracker",
+      "Revenue forecast"
+    ],
+    "extract_target": "https://www.pipedrive.com/en/why-pipedrive"
+  },
+  {
+    "name": "Attio CRM",
+    "url": "https://attio.com/",
+    "use_case": "Modern CRM dengan Notion-like UX",
+    "key_features": [
+      "Table + Kanban views",
+      "Real-time collab",
+      "Custom collections",
+      "Linked records"
+    ],
+    "extract_target": "https://attio.com/product"
+  },
+  {
+    "name": "Twenty (Open Source CRM)",
+    "url": "https://twenty.com/",
+    "use_case": "Modern open-source CRM dari Notion alumni",
+    "key_features": [
+      "Notion-like data model",
+      "Graph view relationships",
+      "Workflow automation",
+      "Modern dark mode"
+    ],
+    "extract_target": "https://demo.twenty.com/"
+  }
+]

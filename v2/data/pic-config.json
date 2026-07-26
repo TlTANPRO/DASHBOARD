@@ -5,10 +5,11 @@
       "slug": "pak-ardian",
       "divisi": "Owner",
       "role": "Owner / Kepala Kantor",
-      "responsibility": "Strategic decision, overall management",
+      "responsibility": "Strategic decision + overall management",
       "tier_target": 85,
       "color": "red",
-      "pin": 6079
+      "pin": 6079,
+      "sub_role": ""
     },
     {
       "name": "Bu Nisya",
@@ -18,47 +19,52 @@
       "responsibility": "Kontrak, compliance, legal review",
       "tier_target": 80,
       "color": "purple",
-      "pin": 3644
+      "pin": 3644,
+      "sub_role": ""
     },
     {
       "name": "Mada",
       "slug": "mada",
       "divisi": "Marketing",
-      "role": "Kepala Marketing & Kepala Kantor (Asad Mada)",
+      "role": "Kepala Marketing & Kepala Kantor",
       "responsibility": "Marketing + overall management PT Syahfalah & Lembayung",
       "tier_target": 75,
       "color": "green",
-      "pin": 1634
+      "pin": 1634,
+      "sub_role": "Back Cover Proyek"
     },
     {
       "name": "Riza",
       "slug": "riza",
-      "divisi": "Sales",
+      "divisi": "Marketing",
       "role": "Sales & Digital Marketing",
       "responsibility": "Penjualan + digital marketing",
       "tier_target": 70,
       "color": "blue",
-      "pin": 5960
+      "pin": 5960,
+      "sub_role": ""
     },
     {
       "name": "Yudi (Sdek)",
       "slug": "yudi-sdek",
-      "divisi": "Sales",
-      "role": "Sales Counter + Marketing + Back Cover Pelaksanaan & Pengawasan",
-      "responsibility": "Counter sales, marketing, supervise pelaksanaan & pengawasan",
+      "divisi": "Marketing",
+      "role": "Sales Counter + Marketing",
+      "responsibility": "Counter sales + marketing + supervise pelaksanaan",
       "tier_target": 70,
       "color": "yellow",
-      "pin": 9243
+      "pin": 9243,
+      "sub_role": "Back Cover Proyek (Pelaksanaan & Pengawasan)"
     },
     {
       "name": "Rizal",
       "slug": "rizal",
-      "divisi": "Operasional",
+      "divisi": "Proyek",
       "role": "Kepala Proyek - Pelaksanaan & Perencanaan",
       "responsibility": "Project head, eksekusi + planning",
       "tier_target": 75,
       "color": "green",
-      "pin": 9908
+      "pin": 9908,
+      "sub_role": ""
     },
     {
       "name": "Amir",
@@ -68,17 +74,19 @@
       "responsibility": "Marketing untuk konstruksi + operasional",
       "tier_target": 70,
       "color": "pink",
-      "pin": 5049
+      "pin": 5049,
+      "sub_role": "Back Cover Proyek"
     },
     {
       "name": "Novita",
       "slug": "novita",
       "divisi": "Admin",
-      "role": "Admin Pemberkasan & Perbankan",
-      "responsibility": "Filing dokumen + transaksi perbankan",
+      "role": "Admin Pemberkasan + Perbankan + Keuangan",
+      "responsibility": "Filing + perbankan + keuangan",
       "tier_target": 65,
       "color": "brown",
-      "pin": 4635
+      "pin": 4635,
+      "sub_role": ""
     },
     {
       "name": "Sinta",
@@ -88,37 +96,41 @@
       "responsibility": "Procurement, purchasing, vendor",
       "tier_target": 65,
       "color": "gray",
-      "pin": 1116
+      "pin": 1116,
+      "sub_role": ""
     },
     {
       "name": "Reni",
       "slug": "reni",
-      "divisi": "Marketing",
-      "role": "Manager Media + Content Creator PT Syahfalah & Lembayung",
+      "divisi": "Media",
+      "role": "Manager Media + Content Creator",
       "responsibility": "Lead media + produksi konten",
       "tier_target": 70,
       "color": "orange",
-      "pin": 9808
+      "pin": 9808,
+      "sub_role": ""
     },
     {
       "name": "Rifki",
       "slug": "rifki",
-      "divisi": "Marketing",
-      "role": "Manager / Kepala Media Majang Mejeng Media",
-      "responsibility": "Lead Majang Mejeng Media (sub-brand)",
+      "divisi": "Media",
+      "role": "Manager / Kepala Media Majang Mejeng",
+      "responsibility": "Lead Majang Mejeng Media",
       "tier_target": 65,
       "color": "blue",
-      "pin": 9064
+      "pin": 9064,
+      "sub_role": ""
     },
     {
       "name": "Reta",
       "slug": "reta",
-      "divisi": "Marketing",
+      "divisi": "Media",
       "role": "Penulis Majang Mejeng Media",
       "responsibility": "Copywriting, penulis konten",
       "tier_target": 65,
       "color": "purple",
-      "pin": 3318
+      "pin": 3318,
+      "sub_role": ""
     }
   ],
   "divisions": [
@@ -129,36 +141,158 @@
       "description": "Strategic decision + overall management"
     },
     {
+      "name": "Marketing",
+      "color": "orange",
+      "head": "Mada",
+      "description": "Sales counter, digital marketing, sales — parent company"
+    },
+    {
       "name": "Legal",
       "color": "purple",
       "head": "Bu Nisya",
       "description": "Kontrak, compliance, legal review"
     },
     {
-      "name": "Marketing",
-      "color": "orange",
-      "head": "Mada",
-      "description": "Marketing, konten, branding — parent company + sub-brand Majang Mejeng"
-    },
-    {
-      "name": "Sales",
-      "color": "blue",
-      "head": "Riza",
-      "description": "Penjualan, digital marketing, counter"
-    },
-    {
-      "name": "Operasional",
-      "color": "green",
-      "head": "Rizal",
-      "description": "Pelaksanaan proyek + perencanaan"
-    },
-    {
       "name": "Admin",
       "color": "brown",
       "head": "Novita",
-      "description": "Pemberkasan, perbankan, purchasing"
+      "description": "Pemberkasan, perbankan, keuangan, purchasing, front office"
+    },
+    {
+      "name": "Proyek",
+      "color": "green",
+      "head": "Rizal",
+      "description": "Pelaksana, pengawas, perencanaan, operasional logistik"
+    },
+    {
+      "name": "Media",
+      "color": "pink",
+      "head": "Rifki",
+      "description": "Majang Mejeng Media — sub-brand konten & publikasi"
     }
   ],
+  "sub_divisions": {
+    "Marketing": {
+      "Sales Counter": {
+        "head": "Yudi (Sdek)",
+        "members": [
+          "Yudi (Sdek)"
+        ]
+      },
+      "Digital Marketing": {
+        "head": "Riza",
+        "members": [
+          "Riza"
+        ]
+      },
+      "Sales": {
+        "head": "Riza",
+        "members": [
+          "Riza",
+          "Yudi (Sdek)"
+        ]
+      },
+      "Back Cover Proyek": {
+        "members": [
+          "Mada",
+          "Yudi (Sdek)",
+          "Amir"
+        ]
+      },
+      "Konstruksi": {
+        "head": "Amir",
+        "members": [
+          "Amir"
+        ]
+      }
+    },
+    "Proyek": {
+      "Pelaksana Proyek": {
+        "members": [
+          "Rizal"
+        ]
+      },
+      "Pengawas Proyek": {
+        "members": [
+          "Rizal",
+          "Yudi (Sdek)"
+        ]
+      },
+      "Perencanaan Proyek": {
+        "members": [
+          "Rizal"
+        ]
+      },
+      "Operasional Logistik": {
+        "members": [
+          "Rizal"
+        ]
+      },
+      "Back Cover": {
+        "members": [
+          "Mada",
+          "Yudi (Sdek)",
+          "Amir"
+        ]
+      }
+    },
+    "Admin": {
+      "Admin Pemberkasan": {
+        "head": "Novita",
+        "members": [
+          "Novita"
+        ]
+      },
+      "Admin Perbankan": {
+        "head": "Novita",
+        "members": [
+          "Novita"
+        ]
+      },
+      "Admin Keuangan": {
+        "head": "Novita",
+        "members": [
+          "Novita"
+        ]
+      },
+      "Front Office": {
+        "members": []
+      },
+      "Admin Purchasing": {
+        "head": "Sinta",
+        "members": [
+          "Sinta"
+        ]
+      }
+    },
+    "Media": {
+      "Manager Media": {
+        "head": "Reni",
+        "members": [
+          "Reni"
+        ]
+      },
+      "Content Creator": {
+        "head": "Reni",
+        "members": [
+          "Reni",
+          "Reta"
+        ]
+      },
+      "Penulis": {
+        "head": "Reta",
+        "members": [
+          "Reta"
+        ]
+      },
+      "Majang Mejeng Media": {
+        "head": "Rifki",
+        "members": [
+          "Rifki"
+        ]
+      }
+    }
+  },
   "tier_thresholds": {
     "top": 90,
     "on_track": 75,
@@ -175,5 +309,5 @@
     "Customer Obsession"
   ],
   "updated": "2026-07-26",
-  "notes": "Roster updated: Mada pindah Operasional→Marketing (Kepala), Amir Finance→Marketing, Yudi Sales Field→Sales, Rizal jadi Kepala Proyek, Reta jadi Penulis"
+  "notes": "Restructured: 6 divisi (Marketing/Legal/Admin/Proyek/Media + Owner). Sub-divisi mapping. Mada/Yudi/Amir = Back Cover Proyek. Novita = Admin 3-in-1."
 }
