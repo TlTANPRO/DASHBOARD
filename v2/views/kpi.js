@@ -11,6 +11,29 @@ import { Session } from "../lib/auth.js";
 import { boardView } from "../components/board.js";
 import { openDetail, buildSchema } from "../components/detail.js";
 
+function kpiBuildSchema(r) {
+  const t = Number(r.Target) || 0;
+  const a = Number(r.Actual) || 0;
+  const ach = t > 0 ? (a / t) * 100 : 0;
+  const gap = t - a;
+  const fields = [
+    { label: "KPI ID", value: r["KPI ID"] },
+    { label: "Indikator", value: r.Indikator },
+    { label: "PIC", value: r.PIC },
+    { label: "Divisi", value: r.Divisi },
+    { label: "Tipe", value: r.Tipe },
+    { label: "Periode", value: r.Periode },
+    { label: "Status", value: r.Status, html: `<span class="pill">${escapeHTML(r.Status || "—")}</span>` },
+    { label: "Target", value: t, html: `<span class="t-mono">${fmtNum(t)}</span>` },
+    { label: "Actual", value: a, html: `<span class="t-mono">${fmtNum(a)}</span>` },
+    { label: "Achievement", value: ach, html: `<strong class="${ach >= 100 ? "ok" : ach >= 75 ? "" : "warn"}">${fmtPct(ach, 1)}</strong>` },
+    { label: "Gap", value: gap, html: `<span class="t-mono">${gap > 0 ? "−" : "+"}${fmtNum(Math.abs(gap))}</span>` },
+    { label: "Catatan", value: r.Catatan },
+    { label: "Last Update", value: r.Edit_Time, html: r.Edit_Time ? fmtDate(r.Edit_Time) : "—" },
+  ];
+  return fields.filter(f => f.value != null && f.value !== "");
+}
+
 let state = {
   data: [],
   filtered: [],
@@ -162,6 +185,7 @@ function renderList(canEdit) {
         : []),
     ],
     rows: state.filtered,
+    onRowClick: (rec) => { const r = state.data.find(x => x.id === rec); if (r) openDetail({ record: r, schema: kpiBuildSchema(r), title: r.Indikator || r["KPI ID"], actions: [] }); },
     empty: "Belum ada data KPI",
   });
 }
@@ -391,7 +415,7 @@ function bindEvents(canEdit, picList) {
     card.addEventListener("click", () => {
       const id = card.dataset.id;
       const rec = state.data.find((r) => r.id === id);
-      if (rec) openDetail({ record: rec, schema: buildSchema(rec), title: rec.Indikator || rec["KPI ID"] });
+      if (rec) openDetail({ record: rec, schema: kpiBuildSchema(rec), title: rec.Indikator || rec["KPI ID"] });
     });
   });
 }

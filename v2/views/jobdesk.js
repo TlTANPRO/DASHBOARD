@@ -12,6 +12,25 @@ import { boardView } from "../components/board.js";
 import { calendarView } from "../components/calendar.js";
 import { openDetail, closeDetail, buildSchema } from "../components/detail.js";
 
+function jobdeskBuildSchema(r) {
+  const overdue = r.Tanggal && r.Status !== "Done" && new Date(r.Tanggal) < new Date();
+  const fields = [
+    { label: "Jobdesk ID", value: r["Jobdesk ID"] },
+    { label: "Aktivitas", value: r.Aktivitas },
+    { label: "PIC", value: r.PIC },
+    { label: "Divisi", value: r.Divisi },
+    { label: "Kategori", value: r.Kategori },
+    { label: "Prioritas", value: r.Prioritas, html: r.Prioritas ? `<span class="pill pill-${r.Prioritas.toLowerCase()}">${escapeHTML(r.Prioritas)}</span>` : "—" },
+    { label: "Tanggal", value: r.Tanggal, html: r.Tanggal ? fmtDate(r.Tanggal) + (overdue ? ' <span class="carry-badge">⚠ OVERDUE</span>' : "") : "—" },
+    { label: "Target Output", value: r["Target Output"] },
+    { label: "Status", value: r.Status, html: `<span class="pill">${escapeHTML(r.Status || "—")}</span>` },
+    { label: "Approval", value: r.Approval_By, html: r.Approval_By ? `<strong>${escapeHTML(r.Approval_By)}</strong>${r.Approval_Time ? ` @ ${fmtDate(r.Approval_Time)}` : ""}` : "—" },
+    { label: "Bukti / Evidence", value: r.Bukti, html: r.Bukti ? `<a href="${escapeHTML(r.Bukti)}" target="_blank" rel="noopener">${escapeHTML(r.Bukti.length > 50 ? r.Bukti.slice(0, 50) + "..." : r.Bukti)}</a>` : "—" },
+    { label: "Last Update", value: r.Edit_Time, html: r.Edit_Time ? fmtDate(r.Edit_Time) : "—" },
+  ];
+  return fields.filter(f => f.value != null && f.value !== "");
+}
+
 let state = {
   data: [],
   filtered: [],
@@ -134,6 +153,7 @@ function renderList(canEdit) {
         : []),
     ],
     rows: state.filtered,
+    onRowClick: (rec) => { const r = state.data.find(x => x.id === rec); if (r) openDetail({ record: r, schema: jobdeskBuildSchema(r), title: r.Aktivitas || r["Jobdesk ID"], actions: [] }); },
     empty: "Belum ada jobdesk",
   });
 }
@@ -219,7 +239,7 @@ function bindEvents(canEdit, picList) {
       filterPIC: state.filterPIC, filterOverdue: state.filterOverdue, filterStatus: state.filterStatus, search: state.search,
     });
     success(`View "${name}" tersimpan`);
-  });uerySelectorAll('[data-action="edit"]').forEach((btn) => {
+  });querySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) {
@@ -238,7 +258,7 @@ function bindEvents(canEdit, picList) {
             try { await API.submitJobdeskForApproval(r.id); success("Disubmit untuk approval"); closeDetail(); await renderJobdesk(); } catch (e) { danger(e.message); }
           }});
         }
-        openDetail({ record: rec, schema: buildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"], actions });
+        openDetail({ record: rec, schema: jobdeskBuildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"], actions });
         }
       }
     });
@@ -321,7 +341,7 @@ function bindEvents(canEdit, picList) {
     card.addEventListener("click", () => {
       const id = card.dataset.id;
       const rec = state.data.find((r) => r.id === id);
-      if (rec) openDetail({ record: rec, schema: buildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"] });
+      if (rec) openDetail({ record: rec, schema: jobdeskBuildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"] });
     });
   });
 
@@ -330,7 +350,7 @@ function bindEvents(canEdit, picList) {
     el.addEventListener("click", () => {
       const id = el.dataset.id;
       const rec = state.data.find((r) => r.id === id);
-      if (rec) openDetail({ record: rec, schema: buildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"] });
+      if (rec) openDetail({ record: rec, schema: jobdeskBuildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"] });
     });
   });
 }

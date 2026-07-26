@@ -12,6 +12,31 @@ import { boardView } from "../components/board.js";
 import { ganttView } from "../components/gantt.js";
 import { openDetail, buildSchema } from "../components/detail.js";
 
+function programBuildSchema(r) {
+  const prog = Number(r.Progress) || 0;
+  const bud = Number(r.Budget) || 0;
+  const act = Number(r["Actual Spend (Rp)"]) || Number(r.ActualSpend) || 0;
+  const burn = bud > 0 ? (act / bud) * 100 : 0;
+  const overdue = r.Deadline && prog < 100 && new Date(r.Deadline) < new Date();
+  const fields = [
+    { label: "Program ID", value: r["Program ID"] },
+    { label: "Nama Program", value: r.Judul || r["Nama Program"] },
+    { label: "PIC", value: r.PIC },
+    { label: "Divisi", value: r.Divisi },
+    { label: "Quarter", value: r.Quarter },
+    { label: "Tahun", value: r.Tahun },
+    { label: "Periode", value: `${r["Tanggal Mulai"] || "—"} → ${r.Deadline || "—"}` },
+    { label: "Progress", value: prog, html: `<strong>${fmtPct(prog, 1)}</strong> ${overdue ? '<span class="carry-badge">⚠ OVERDUE</span>' : ""}` },
+    { label: "Budget", value: bud, html: `<span class="t-mono">${fmtIDR(bud)}</span>` },
+    { label: "Actual Spend", value: act, html: `<span class="t-mono">${fmtIDR(act)}</span>` },
+    { label: "Burn Rate", value: burn, html: `<span class="${burn > 100 ? "warn" : ""}">${fmtPct(burn, 1)}</span>` },
+    { label: "Status", value: r.Status, html: `<span class="pill">${escapeHTML(r.Status || "—")}</span>` },
+    { label: "Risiko", value: r.Risiko },
+    { label: "Last Update", value: r.Edit_Time, html: r.Edit_Time ? fmtDate(r.Edit_Time) : "—" },
+  ];
+  return fields.filter(f => f.value != null && f.value !== "");
+}
+
 let state = {
   data: [],
   filtered: [],
@@ -142,6 +167,7 @@ function renderList(canEdit) {
       }] : []),
     ],
     rows: state.filtered,
+    onRowClick: (rec) => { const r = state.data.find(x => x.id === rec); if (r) openDetail({ record: r, schema: programBuildSchema(r), title: r.Judul || r["Program ID"], actions: [] }); },
     empty: "Belum ada program kerja",
   });
 }
@@ -222,12 +248,12 @@ function bindEvents(canEdit, picList) {
       filterPIC: state.filterPIC, filterQuarter: state.filterQuarter, filterStatus: state.filterStatus, search: state.search,
     });
     success(`View "${name}" tersimpan`);
-  });uerySelectorAll('[data-action="edit"]').forEach((btn) => {
+  });querySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) {
         if (canEdit && Session.isOwner()) openEditor(rec);
-        else openDetail({ record: rec, schema: buildSchema(rec), title: rec.Judul || rec["Program ID"] });
+        else openDetail({ record: rec, schema: programBuildSchema(rec), title: rec.Judul || rec["Program ID"] });
       }
     });
   });

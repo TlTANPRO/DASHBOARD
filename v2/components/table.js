@@ -1,6 +1,7 @@
 // components/table.js — sortable, filterable, paginated data table
 import { escapeHTML } from "../lib/format.js";
 
+export { emptyState, loadingSkeleton } from "./empty.js";
 export function dataTable({ columns, rows, empty = "Tidak ada data", rowKey = "id", onRowClick = null, pageSize = 20 }) {
   if (!rows || rows.length === 0) {
     return `
