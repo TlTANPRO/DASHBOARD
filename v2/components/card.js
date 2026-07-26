@@ -1,6 +1,8 @@
 // components/card.js — stat card + bento card
 import { escapeHTML } from "../lib/format.js";
 
+export { loadingSkeleton } from "./empty.js";
+
 export function statCard({ label, value, delta = null, hint = null }) {
   const deltaHtml = delta
     ? `<div class="card-delta ${delta.direction || ""}">${delta.direction === "up" ? "↑" : delta.direction === "down" ? "↓" : "•"} ${escapeHTML(delta.text)}</div>`

@@ -240,7 +240,8 @@ function bindEvents(canEdit, picList) {
       filterPIC: state.filterPIC, filterOverdue: state.filterOverdue, filterStatus: state.filterStatus, search: state.search,
     });
     success(`View "${name}" tersimpan`);
-  });querySelectorAll('[data-action="edit"]').forEach((btn) => {
+  });
+  document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) {
