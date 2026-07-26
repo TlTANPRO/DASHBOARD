@@ -375,11 +375,26 @@ function computeScore(pic, d) {
   const sumTarget = d.kpi.reduce((s, k) => s + (Number(k.Target) || 0), 0);
   const sumActual = d.kpi.reduce((s, k) => s + (Number(k.Realisasi) || 0), 0);
   const kpiScore = sumTarget > 0 ? Math.min(100, (sumActual / sumTarget) * 100) : 0;
-  const jdDone = d.jobdesk.filter(j => j.Status === "Done").length;
-  const jdScore = d.jobdesk.length ? (jdDone / d.jobdesk.length) * 100 : 0;
-  const sowScore = d.sow.length ? 80 : 0;
+  // Jobdesk partial credit: Done=1.0, In Progress=0.5, To Do=0
+  const jdScore = d.jobdesk.length ?
+    (d.jobdesk.reduce((s, j) => {
+      if (j.Status === "Done") return s + 1;
+      if (j.Status === "In Progress" || j.Status === "Pending Approval") return s + 0.5;
+      return s;
+    }, 0) / d.jobdesk.length) * 100 : 0;
+  // SOW real: hitung dari SOW Aktif + bobot sebagai proxy
+  const sowScore = d.sow.length ?
+    d.sow.reduce((s, sw) => {
+      const bobot = Number(sw["Bobot (%)"]) || 0;
+      return s + (sw.Status === "Active" ? bobot : 0);
+    }, 0) : 0;
+  // Program avg progress with overdue penalty
   const progScore = d.program.length ?
-    d.program.reduce((s, p) => s + (Number(p["Progress (%)"]) || 0), 0) / d.program.length : 0;
+    d.program.reduce((s, p) => {
+      const progress = Number(p["Progress (%)"]) || 0;
+      const overdue = p.Deadline && new Date(p.Deadline) < new Date() ? -10 : 0;
+      return s + Math.max(0, progress + overdue);
+    }, 0) / d.program.length : 0;
   const impScore = 0;
   return (kpiScore * 0.4) + (jdScore * 0.25) + (sowScore * 0.15) + (progScore * 0.10) + (impScore * 0.10);
 }

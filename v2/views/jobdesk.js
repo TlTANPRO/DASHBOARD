@@ -18,6 +18,7 @@ let state = {
   view: "list", // list | board | calendar
   filterPIC: "",
   filterDate: "",
+  filterOverdue: false,
   search: "",
   calMonth: new Date().getMonth(),
   calYear: new Date().getFullYear(),
@@ -42,6 +43,10 @@ function applyFilter() {
   state.filtered = state.data.filter((r) => {
     if (state.filterPIC && r.PIC !== state.filterPIC) return false;
     if (state.filterDate && r.Tanggal !== state.filterDate) return false;
+    if (state.filterOverdue) {
+      const isOverdue = r.Tanggal && r.Status !== "Done" && new Date(r.Tanggal) < new Date(new Date().toDateString());
+      if (!isOverdue) return false;
+    }
     if (state.search) {
       const q = state.search.toLowerCase();
       const hay = `${r["Jobdesk ID"]} ${r.Aktivitas} ${r.Output} ${r.Target} ${r.PIC}`.toLowerCase();
@@ -77,6 +82,7 @@ function draw() {
         { id: "pic", label: "PIC", type: "select", value: state.filterPIC, options: picList.map((p) => ({ value: p, label: p })) },
         { id: "date", label: "Tanggal", type: "search", value: state.filterDate, placeholder: "YYYY-MM-DD" },
         { id: "search", label: "Cari", type: "search", value: state.search, placeholder: "Aktivitas / output..." },
+        { id: "overdue", label: "⚠ Hanya Overdue", type: "checkbox", value: state.filterOverdue },
       ],
     })}
 
@@ -103,7 +109,13 @@ function renderList(canEdit) {
   return dataTable({
     columns: [
       ...(canEdit ? [{ key: "_check", label: "", render: (r) => `<input type="checkbox" class="row-check" data-id="${escapeHTML(r.id)}" ${state.selected.has(r.id) ? "checked" : ""}/>` }] : []),
-      { key: "Tanggal", label: "Tanggal", sortable: true, render: (r) => fmtDate(r.Tanggal) },
+      { key: "Tanggal", label: "Tanggal", sortable: true, render: (r) => {
+        const d = fmtDate(r.Tanggal);
+        const overdue = r.Tanggal && r.Status !== "Done" && new Date(r.Tanggal) < new Date(new Date().toDateString());
+        const overdueDays = overdue ? Math.floor((new Date() - new Date(r.Tanggal)) / 86400000) : 0;
+        return `<div>${d}${overdue ? ` <span class="carry-badge" title="${overdueDays} hari overdue">⚠ ${overdueDays}d</span>` : ""}</div>`;
+      }
+    },
       { key: "PIC", label: "PIC", sortable: true },
       { key: "Aktivitas", label: "Jobdesk", sortable: true, truncate: true, render: (r) => `<span class="td-edit" data-field="Aktivitas" data-id="${escapeHTML(r.id)}">${escapeHTML(r.Aktivitas || "—")}</span>` },
       { key: "Target", label: "Target Output", truncate: true },
@@ -157,6 +169,7 @@ function bindEvents(canEdit, picList) {
       const f = el.dataset.filter;
       if (f === "pic") state.filterPIC = el.value;
       else if (f === "date") state.filterDate = el.value;
+      else if (f === "overdue") state.filterOverdue = el.checked;
       else if (f === "search") state.search = el.value;
       applyFilter();
       draw();

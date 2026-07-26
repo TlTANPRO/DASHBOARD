@@ -97,12 +97,21 @@ function calcScore(picName, kpi, sow, jd, prog) {
 
   // Jobdesk Completion weighted by Bobot (25%)
   const picJd = jd.filter(j => j.PIC === picName);
-  const jdDone = picJd.filter(j => j.Status === "Done").length;
-  const jdScore = picJd.length > 0 ? (jdDone / picJd.length) * 100 : 0;
+  // Jobdesk partial credit: Done=1, InProgress=0.5, ToDo=0
+  const jdScore = picJd.length > 0 ?
+    (picJd.reduce((s, j) => {
+      if (j.Status === "Done") return s + 1;
+      if (j.Status === "In Progress" || j.Status === "Pending Approval") return s + 0.5;
+      return s;
+    }, 0) / picJd.length) * 100 : 0;
 
-  // SOW Compliance (15%) — placeholder: assume 80% if active SOW exists
+  // SOW Compliance: real, weighted by Bobot, hanya SOW Active
   const picSow = sow.filter(s => s.PIC === picName);
-  const sowScore = picSow.length > 0 ? 80 : 0;
+  const sowScore = picSow.length > 0 ?
+    Math.min(100, picSow.reduce((s, sw) => {
+      const bobot = Number(sw["Bobot (%)"]) || 0;
+      return s + (sw.Status === "Active" ? bobot : 0);
+    }, 0)) : 0;
 
   // Program Contribution (10%)
   const picProg = prog.filter(p => p["PIC Penanggung Jawab"] === picName);
