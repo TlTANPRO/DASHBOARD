@@ -19,6 +19,7 @@ window.DASHBOARD_CONFIG = {
     jobdesk:      "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
     improvisasi:  "3a94cf7e-9f24-818d-9bbc-d8e8059b1c4e",
     divisi:       "3a94cf7e-9f24-8159-a4fc-c2eae997185b",
+    pic_roster:   "3a94cf7e-9f24-816a-ae84-f7c1c427a147",
   },
 
   // PIC list (dropdown + filter)

@@ -86,6 +86,19 @@ const FIELD_MAP = {
     Kategori: "Kategori",
     "Jobdesk ID": "Jobdesk ID",
   },
+  // PIC Roster: keep as-is
+  pic_roster: {
+    Name: "Name",
+    Divisi: "Divisi",
+    Role: "Role",
+    Sub_Role: "Sub_Role",
+    PIN: "PIN",
+    Tier_Target: "Tier_Target",
+    Status: "Status",
+    Join_Date: "Join_Date",
+    Color: "Color",
+    About: "About",
+  },
   // Improvisasi: keep as-is
   improvisasi: {
     Title: "Title",
@@ -406,6 +419,15 @@ export const API = {
     return cacheTTL("sow", 60, async () => {
       if (MODE === "live") return await workerCall("sow");
       return lsRead("sow") || [];
+    });
+  },
+
+  // ---------- PIC Roster ----------
+  async listPICRoster(force = false) {
+    if (force) invalidate("pic_roster");
+    return cacheTTL("pic_roster", 60, async () => {
+      if (MODE === "live") return await workerCall("pic_roster");
+      return lsRead("pic_roster") || [];
     });
   },
 
