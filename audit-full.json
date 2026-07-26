@@ -1,0 +1,3714 @@
+{
+  "KPI Tracker__schema": {
+    "object": "database",
+    "id": "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
+    "cover": null,
+    "icon": null,
+    "created_time": "2026-07-25T10:57:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "3a84cf7e-9f24-81aa-97d2-0027ff14196f"
+    },
+    "last_edited_time": "2026-07-25T18:50:00.000Z",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "1. KPI Tracker",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "1. KPI Tracker",
+        "href": null
+      }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+      "Periode": {
+        "id": "%40%5Dgz",
+        "name": "Periode",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "e543c568-a601-4d51-9275-a523702455d4",
+              "name": "Mingguan",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6ff7b6bc-3db4-4ab2-ab63-98d87c925218",
+              "name": "Bulanan",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "081bdf4f-968a-44dc-8990-f99c06e55159",
+              "name": "Kuartalan",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Divisi": {
+        "id": "Ay~%3D",
+        "name": "Divisi",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "ca09c50e-5a1a-44cc-9082-d3b552670994",
+              "name": "Owner",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "83f6a6b8-1d30-45d8-b93a-bd5afec460e0",
+              "name": "Operasional",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "33cf207a-52a6-4f91-9e01-5e8dba770ba4",
+              "name": "Marketing",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "3e853192-3fa0-4a49-8f3c-186fb84caa05",
+              "name": "Proyek",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "7381a861-a9cf-4537-be0b-b1f5fef3efd7",
+              "name": "Media",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "67fa465a-b07e-412f-b425-363d7e574706",
+              "name": "Admin",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Satuan": {
+        "id": "CsZp",
+        "name": "Satuan",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "80eb9f4a-bfd2-437b-9c03-a8ba53b5732f",
+              "name": "%",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "cc27a72c-7725-41a1-ad49-37c2ae052ea1",
+              "name": "Unit",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "8b587939-f48e-4232-acd4-4b9bb14acbc3",
+              "name": "Rp",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "048e8c71-77b7-434c-9b5c-7f49a82f4424",
+              "name": "Closing",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "cc9c71c6-3a4e-410b-8eba-0ebb92c98ee5",
+              "name": "Lead",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "d8277ad9-78c6-4b5f-81b3-2577c024bf3a",
+              "name": "Jam",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "4b227f80-54a7-47f5-b2a1-7b7d0fce2402",
+              "name": "BAST",
+              "color": "gray",
+              "description": null
+            },
+            {
+              "id": "a4c808f6-99c7-4ecf-8ee9-e21ccf2ebd05",
+              "name": "Accident",
+              "color": "yellow",
+              "description": null
+            },
+            {
+              "id": "5b8a481e-7d4b-4890-a4f7-69107a59c382",
+              "name": "Report",
+              "color": "brown",
+              "description": null
+            },
+            {
+              "id": "a938a95f-38b0-4c5c-86ce-04561ddb48d5",
+              "name": "Complaint",
+              "color": "red",
+              "description": null
+            },
+            {
+              "id": "f7be414b-b3e1-4af8-abac-6ac6824ef4bd",
+              "name": "Vendor",
+              "color": "green",
+              "description": null
+            },
+            {
+              "id": "f5ccb978-0a4b-4655-bb7d-119abffbc23c",
+              "name": "Konten",
+              "color": "blue",
+              "description": null
+            },
+            {
+              "id": "a5b1c0dd-21ba-4866-82b5-50ecdbb4e877",
+              "name": "Decision",
+              "color": "orange",
+              "description": null
+            }
+          ]
+        }
+      },
+      "PIC": {
+        "id": "DhZd",
+        "name": "PIC",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "eb8909e4-027c-485b-a5d5-2c6cd23a49b6",
+              "name": "Pak Ardian",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "c2e8498a-afc7-4909-b232-d17df6f3fba1",
+              "name": "Bu Nisya",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6b5d02bc-ccc0-4e19-9623-9c7011685fbf",
+              "name": "Mada",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "29610ce3-2e67-49dc-9d90-1503f260d55c",
+              "name": "Riza",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "3c89ac9b-ddb0-4e41-9b84-8aa2c8258a05",
+              "name": "Yudi (Sdek)",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "2f3c4437-0070-46fa-b490-042fd3057f2e",
+              "name": "Rizal",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "f892c8c7-6398-498a-b1e0-79132e79885d",
+              "name": "Amir",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "14c58742-fa63-4df1-8e94-2592babee211",
+              "name": "Novita",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6893b098-1af2-41bf-b6bf-6615dd9bfde0",
+              "name": "Sinta",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "87bf08f4-db34-4a34-b6d8-56f67e560eca",
+              "name": "Reni",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "ee9e72d1-3007-4da3-9b1c-0e60a6b31821",
+              "name": "Rifki",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "5575bb46-332d-4077-91d3-daf772d509a4",
+              "name": "Reta",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Catatan": {
+        "id": "ETg_",
+        "name": "Catatan",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Status": {
+        "id": "EuCX",
+        "name": "Status",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "0a84c4af-455e-4073-a64a-ba73f2a40ca0",
+              "name": "On Track",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "1209ef50-6273-4c78-9ead-e8f7762b6acc",
+              "name": "At Risk",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "5276da0a-16d5-488b-83b3-6cf9a8dfd06f",
+              "name": "Off Track",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "49b3fe52-4839-4b62-975e-8ffc71ca9681",
+              "name": "Achieved",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "KPI": {
+        "id": "LgL%5D",
+        "name": "KPI",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Edit_Time": {
+        "id": "N%5Cj%5B",
+        "name": "Edit_Time",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Realisasi": {
+        "id": "NwAl",
+        "name": "Realisasi",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "Bukti": {
+        "id": "%5DxDc",
+        "name": "Bukti",
+        "description": null,
+        "type": "url",
+        "url": {}
+      },
+      "Tipe": {
+        "id": "egmb",
+        "name": "Tipe",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "d0a1b8f2-3769-49fa-a4c3-dad476fa57ac",
+              "name": "Personal",
+              "color": "blue",
+              "description": null
+            },
+            {
+              "id": "7e340118-cc29-4f72-9b4c-13cf7c9cf35f",
+              "name": "Divisi",
+              "color": "green",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Target": {
+        "id": "op~j",
+        "name": "Target",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "KPI ID": {
+        "id": "title",
+        "name": "KPI ID",
+        "description": null,
+        "type": "title",
+        "title": {}
+      }
+    },
+    "parent": {
+      "type": "page_id",
+      "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+    },
+    "url": "https://app.notion.com/p/3a84cf7e9f24819d95d8f951e6a1a6a2",
+    "public_url": null,
+    "in_trash": false,
+    "archived": false,
+    "request_id": "da4c5577-7782-4d36-85e5-12bfa910a446"
+  },
+  "KPI Tracker__entries": {
+    "object": "list",
+    "results": [
+      {
+        "id": "3a84cf7e-9f24-813c-965f-d9f8bf17f2e3",
+        "createdAt": "2026-07-25T18:59:00.000Z",
+        "_editTime": "2026-07-26T08:45:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Owner",
+        "Satuan": "%",
+        "PIC": "Bu Nisya",
+        "Catatan": "[Divisi] Bu Nisya compliance",
+        "Status": "On Track",
+        "KPI": "23",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 22,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 223,
+        "KPI ID": "APA"
+      },
+      {
+        "id": "3a84cf7e-9f24-8111-be09-f80dea57479c",
+        "createdAt": "2026-07-25T18:59:00.000Z",
+        "_editTime": "2026-07-25T18:59:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Owner",
+        "Satuan": "Decision",
+        "PIC": "Pak Ardian",
+        "Catatan": "[Divisi] Pak Ardian strategic",
+        "Status": "On Track",
+        "KPI": "Strategic Decision Owner",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 12,
+        "KPI ID": "strategic-decision-owner"
+      },
+      {
+        "id": "3a84cf7e-9f24-81ae-94f7-d9dbd3103be2",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Operasional",
+        "Satuan": "Lead",
+        "PIC": "Mada",
+        "Catatan": "[Divisi] Mada konsolidasi",
+        "Status": "On Track",
+        "KPI": "Konsolidasi KPI Operasional",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 30,
+        "KPI ID": "konsolidasi-kpi-operasional"
+      },
+      {
+        "id": "3a84cf7e-9f24-8150-aae4-ff061896d63c",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-26T07:10:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Operasional",
+        "Satuan": "%",
+        "PIC": "Mada",
+        "Catatan": "[Divisi] Mada approval rate",
+        "Status": "On Track",
+        "KPI": "Approval Operasional Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 100,
+        "KPI ID": "approval-operasional-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-8118-b421-de16e295c2da",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Admin",
+        "Satuan": "Vendor",
+        "PIC": "Sinta",
+        "Catatan": "[Divisi] Sum target Sinta",
+        "Status": "On Track",
+        "KPI": "Vendor Best Price Admin Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 20,
+        "KPI ID": "vendor-best-price-admin-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-8151-9365-c49f00aaafed",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Admin",
+        "Satuan": "Unit",
+        "PIC": "Novita",
+        "Catatan": "[Divisi] Sum target Novita",
+        "Status": "On Track",
+        "KPI": "Pemberkasan Admin Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 15,
+        "KPI ID": "pemberkasan-admin-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-8176-9167-f891965fd0e3",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Media",
+        "Satuan": "Rp",
+        "PIC": "Reni",
+        "Catatan": "[Divisi] Sum target fee Reni",
+        "Status": "On Track",
+        "KPI": "Closing Fee Media Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 15000000,
+        "KPI ID": "closing-fee-media-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-8117-9c16-fba375b87a8b",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Media",
+        "Satuan": "Konten",
+        "PIC": "Reni",
+        "Catatan": "[Divisi] Sum target Reni + Rifki + Reta",
+        "Status": "On Track",
+        "KPI": "Konten Media Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 50,
+        "KPI ID": "konten-media-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-8192-a699-d8fa16876c2f",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "BAST",
+        "PIC": "Rizal",
+        "Catatan": "[Divisi] Sum target Rizal",
+        "Status": "On Track",
+        "KPI": "BAST Proyek Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 4,
+        "KPI ID": "bast-proyek-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-8177-8129-f29c7decdfb8",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "%",
+        "PIC": "Rizal",
+        "Catatan": "[Divisi] Rata-rata Rizal + Amir + Sinta",
+        "Status": "On Track",
+        "KPI": "Progres Proyek Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 100,
+        "KPI ID": "progres-proyek-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-8100-9c38-ef8f2eb8d243",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Marketing",
+        "Satuan": "Lead",
+        "PIC": "Riza",
+        "Catatan": "[Divisi] Sum target Riza + Yudi",
+        "Status": "On Track",
+        "KPI": "Lead Marketing Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 70,
+        "KPI ID": "lead-marketing-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d2-8eaa-ee42c4a76840",
+        "createdAt": "2026-07-25T18:58:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Marketing",
+        "Satuan": "Closing",
+        "PIC": "Riza",
+        "Catatan": "[Divisi] Sum target Riza + Yudi",
+        "Status": "On Track",
+        "KPI": "Closing Marketing Q3",
+        "Edit_Time": "2026-07-25T18:50:32.000Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Divisi",
+        "Target": 12,
+        "KPI ID": "closing-marketing-q3"
+      },
+      {
+        "id": "3a84cf7e-9f24-81be-a3ea-c05821091897",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T18:50:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Media",
+        "Satuan": "Unit",
+        "PIC": "Reta",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Carousel Mingguan",
+        "Edit_Time": "2026-07-25T14:25:02.673Z",
+        "Realisasi": 19,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 20,
+        "KPI ID": "carousel-mingguan"
+      },
+      {
+        "id": "3a84cf7e-9f24-818b-b7a3-d4334e731d20",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T19:00:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Media",
+        "Satuan": "Unit",
+        "PIC": "Reta",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Konten Bulanan",
+        "Edit_Time": "2026-07-25T14:25:01.283Z",
+        "Realisasi": 5,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 5,
+        "KPI ID": "konten-bulanan-reta"
+      },
+      {
+        "id": "3a84cf7e-9f24-8141-bc8c-c5b6a801b088",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-26T07:11:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Media",
+        "Satuan": "%",
+        "PIC": "Rifki",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Story Mingguan",
+        "Edit_Time": "2026-07-25T14:25:00.126Z",
+        "Realisasi": 95,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 100,
+        "KPI ID": "story-mingguan"
+      },
+      {
+        "id": "3a84cf7e-9f24-810e-a9e4-c12f5870b56e",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-26T07:11:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Media",
+        "Satuan": "Unit",
+        "PIC": "Rifki",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Konten Bulanan",
+        "Edit_Time": "2026-07-25T14:24:59.329Z",
+        "Realisasi": 18,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 20,
+        "KPI ID": "konten-bulanan-rifki"
+      },
+      {
+        "id": "3a84cf7e-9f24-81cd-98a9-eada54d0856e",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:50:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Media",
+        "Satuan": "Unit",
+        "PIC": "Rifki",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Engagement Rate",
+        "Edit_Time": "2026-07-25T14:24:58.532Z",
+        "Realisasi": 6,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 5,
+        "KPI ID": "engagement-rate"
+      },
+      {
+        "id": "3a84cf7e-9f24-812b-80c4-c6e0c5b3bc8c",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:50:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Media",
+        "Satuan": "Rp",
+        "PIC": "Reni",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Konten Fee Mingguan",
+        "Edit_Time": "2026-07-25T14:24:57.735Z",
+        "Realisasi": 4200000,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 5000000,
+        "KPI ID": "konten-fee-mingguan"
+      },
+      {
+        "id": "3a84cf7e-9f24-811a-beab-d63b72ac428f",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:50:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Media",
+        "Satuan": "Unit",
+        "PIC": "Reni",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Closing Fee Bulanan",
+        "Edit_Time": "2026-07-25T14:24:56.844Z",
+        "Realisasi": 14,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 15,
+        "KPI ID": "closing-fee-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-81ab-ba7c-c7487c2426ac",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:50:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Media",
+        "Satuan": "Unit",
+        "PIC": "Reni",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Revenue Fee Media Bulanan",
+        "Edit_Time": "2026-07-25T14:24:55.918Z",
+        "Realisasi": 7,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 6,
+        "KPI ID": "revenue-fee-media-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d9-9d4e-ce918b915613",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:50:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Proyek",
+        "Satuan": "Vendor",
+        "PIC": "Sinta",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Stopper Kualitas Material",
+        "Edit_Time": "2026-07-25T14:24:55.153Z",
+        "Realisasi": 3,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 4,
+        "KPI ID": "stopper-kualitas-material"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d3-ae40-dcb9e97d3c49",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:50:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "%",
+        "PIC": "Sinta",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Best Price Vendor",
+        "Edit_Time": "2026-07-25T14:24:54.338Z",
+        "Realisasi": 100,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 100,
+        "KPI ID": "best-price-vendor"
+      },
+      {
+        "id": "3a84cf7e-9f24-81a6-8383-fae7c40a0118",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:51:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "Unit",
+        "PIC": "Sinta",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "PO Compliance",
+        "Edit_Time": "2026-07-25T14:24:53.556Z",
+        "Realisasi": 12,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 15,
+        "KPI ID": "po-compliance"
+      },
+      {
+        "id": "3a84cf7e-9f24-819b-829d-ea9b88be3ffc",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:51:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Admin",
+        "Satuan": "%",
+        "PIC": "Novita",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Pemberkasan Klien Bulanan",
+        "Edit_Time": "2026-07-25T14:24:51.336Z",
+        "Realisasi": 95,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 100,
+        "KPI ID": "pemberkasan-klien-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-815b-9a86-d879fd6444fa",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T19:00:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Admin",
+        "Satuan": "Unit",
+        "PIC": "Novita",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Closing Mingguan",
+        "Edit_Time": "2026-07-25T14:24:50.351Z",
+        "Realisasi": 2,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 3,
+        "KPI ID": "closing-mingguan-novita"
+      },
+      {
+        "id": "3a84cf7e-9f24-81b5-a09c-ca50d966990b",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:51:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Admin",
+        "Satuan": "Unit",
+        "PIC": "Novita",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Akurasi SP3K Bulanan",
+        "Edit_Time": "2026-07-25T14:24:49.445Z",
+        "Realisasi": 8,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 10,
+        "KPI ID": "akurasi-sp3k-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-810e-8378-e9abfcc6c572",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:51:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "Complaint",
+        "PIC": "Amir",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Daily Report Mingguan",
+        "Edit_Time": "2026-07-25T14:24:48.569Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 2,
+        "KPI ID": "daily-report-mingguan"
+      },
+      {
+        "id": "3a84cf7e-9f24-81ff-a305-ebcf378271f8",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:52:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "%",
+        "PIC": "Amir",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Quality Check Bulanan",
+        "Edit_Time": "2026-07-25T14:24:47.725Z",
+        "Realisasi": 98,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 100,
+        "KPI ID": "quality-check-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-8132-b501-fca6880d780a",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:52:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Proyek",
+        "Satuan": "Report",
+        "PIC": "Amir",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Zero Complaint",
+        "Edit_Time": "2026-07-25T14:24:46.741Z",
+        "Realisasi": 7,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 7,
+        "KPI ID": "zero-complaint"
+      },
+      {
+        "id": "3a84cf7e-9f24-8116-ab47-f7e6a7b78ce4",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:52:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "Accident",
+        "PIC": "Rizal",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Progres Proyek Mingguan",
+        "Edit_Time": "2026-07-25T14:24:45.912Z",
+        "Realisasi": 0,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 0,
+        "KPI ID": "progres-proyek-mingguan"
+      },
+      {
+        "id": "3a84cf7e-9f24-8118-adab-e03fe23cba7e",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:52:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Proyek",
+        "Satuan": "BAST",
+        "PIC": "Rizal",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "BAST Bulanan",
+        "Edit_Time": "2026-07-25T14:24:45.100Z",
+        "Realisasi": 3,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 4,
+        "KPI ID": "bast-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-8173-b535-fea39c095d71",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:52:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Proyek",
+        "Satuan": "%",
+        "PIC": "Rizal",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Zero Accident",
+        "Edit_Time": "2026-07-25T14:24:44.224Z",
+        "Realisasi": 95,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 100,
+        "KPI ID": "zero-accident"
+      },
+      {
+        "id": "3a84cf7e-9f24-8189-9577-c9c431af98cf",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:53:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Marketing",
+        "Satuan": "Closing",
+        "PIC": "Yudi (Sdek)",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Closing Walk-in",
+        "Edit_Time": "2026-07-25T14:24:43.379Z",
+        "Realisasi": 2,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 3,
+        "KPI ID": "closing-walk-in"
+      },
+      {
+        "id": "3a84cf7e-9f24-81bd-a0c6-de56ae49305b",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:53:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Marketing",
+        "Satuan": "Lead",
+        "PIC": "Yudi (Sdek)",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Lead Walk-in",
+        "Edit_Time": "2026-07-25T14:24:42.534Z",
+        "Realisasi": 22,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 30,
+        "KPI ID": "lead-walk-in"
+      },
+      {
+        "id": "3a84cf7e-9f24-8132-bc03-f114500fcaf8",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T19:00:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Marketing",
+        "Satuan": "Closing",
+        "PIC": "Yudi (Sdek)",
+        "Catatan": "",
+        "Status": "At Risk",
+        "KPI": "Closing Mingguan",
+        "Edit_Time": "2026-07-25T14:24:41.691Z",
+        "Realisasi": 3,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 5,
+        "KPI ID": "closing-mingguan-yudi-sdek"
+      },
+      {
+        "id": "3a84cf7e-9f24-8196-a000-f64c9f042fb1",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:53:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Marketing",
+        "Satuan": "Rp",
+        "PIC": "Riza",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Lead Gen Bulanan",
+        "Edit_Time": "2026-07-25T14:24:40.815Z",
+        "Realisasi": 850000,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 1000000,
+        "KPI ID": "lead-gen-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-81ae-94c5-fad92f0c8d6f",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T19:00:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Marketing",
+        "Satuan": "Lead",
+        "PIC": "Riza",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Closing Bulanan",
+        "Edit_Time": "2026-07-25T14:24:39.846Z",
+        "Realisasi": 9,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 10,
+        "KPI ID": "closing-bulanan-riza"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d8-8c08-f12aaff66f29",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:53:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Marketing",
+        "Satuan": "Closing",
+        "PIC": "Riza",
+        "Catatan": "",
+        "Status": "At Risk",
+        "KPI": "Lead Mingguan",
+        "Edit_Time": "2026-07-25T14:24:39.017Z",
+        "Realisasi": 4,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 6,
+        "KPI ID": "lead-mingguan"
+      },
+      {
+        "id": "3a84cf7e-9f24-81ee-ad36-c666a0830685",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:53:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Marketing",
+        "Satuan": "Lead",
+        "PIC": "Riza",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "ROAS Bulanan",
+        "Edit_Time": "2026-07-25T14:24:37.907Z",
+        "Realisasi": 38,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 40,
+        "KPI ID": "roas-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-811c-b147-cab12c57f3fe",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T19:00:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Operasional",
+        "Satuan": "Unit",
+        "PIC": "Mada",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "Konsolidasi Lead Lintas Divisi",
+        "Edit_Time": "2026-07-25T14:24:36.906Z",
+        "Realisasi": 4,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 4,
+        "KPI ID": "konsolidasi-lead-lintas-divisi-mada"
+      },
+      {
+        "id": "3a84cf7e-9f24-81c9-879a-ff808eff6bd5",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:53:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Operasional",
+        "Satuan": "Unit",
+        "PIC": "Mada",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Coaching Sesi",
+        "Edit_Time": "2026-07-25T14:24:35.875Z",
+        "Realisasi": 3,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 4,
+        "KPI ID": "coaching-sesi"
+      },
+      {
+        "id": "3a84cf7e-9f24-817f-87a2-ee203776710b",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:53:00.000Z",
+        "Periode": "Mingguan",
+        "Divisi": "Operasional",
+        "Satuan": "Unit",
+        "PIC": "Mada",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Approval Lintas Fungsi",
+        "Edit_Time": "2026-07-25T14:24:35.061Z",
+        "Realisasi": 6,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 8,
+        "KPI ID": "approval-lintas-fungsi"
+      },
+      {
+        "id": "3a84cf7e-9f24-81cc-8564-d56c6012298b",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Operasional",
+        "Satuan": "Lead",
+        "PIC": "Mada",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Report Mingguan Owner",
+        "Edit_Time": "2026-07-25T14:24:34.249Z",
+        "Realisasi": 22,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 30,
+        "KPI ID": "report-mingguan-owner"
+      },
+      {
+        "id": "3a84cf7e-9f24-8120-a93a-eda9956ac504",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Owner",
+        "Satuan": "Unit",
+        "PIC": "Bu Nisya",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Compliance Bulanan",
+        "Edit_Time": "2026-07-25T14:24:33.419Z",
+        "Realisasi": 9,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 10,
+        "KPI ID": "compliance-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-8172-9deb-c3e6a0cdab4b",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Owner",
+        "Satuan": "%",
+        "PIC": "Bu Nisya",
+        "Catatan": "",
+        "Status": "Achieved",
+        "KPI": "SP3K Bulanan",
+        "Edit_Time": "2026-07-25T14:24:32.231Z",
+        "Realisasi": 100,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 100,
+        "KPI ID": "sp3k-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-81b5-8e85-d3d1c7c4316a",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T19:00:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Owner",
+        "Satuan": "%",
+        "PIC": "Pak Ardian",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Closing Bulanan",
+        "Edit_Time": "2026-07-25T14:24:31.433Z",
+        "Realisasi": 92,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 100,
+        "KPI ID": "closing-bulanan-pak-ardian"
+      },
+      {
+        "id": "3a84cf7e-9f24-815f-a9ed-e2c6595e60bc",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Owner",
+        "Satuan": "Closing",
+        "PIC": "Pak Ardian",
+        "Catatan": "",
+        "Status": "On Track",
+        "KPI": "Achievement Bulanan",
+        "Edit_Time": "2026-07-25T14:24:30.585Z",
+        "Realisasi": 3,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 4,
+        "KPI ID": "achievement-bulanan"
+      },
+      {
+        "id": "3a84cf7e-9f24-818d-afde-c288ce41d28e",
+        "createdAt": "2026-07-25T11:39:00.000Z",
+        "_editTime": "2026-07-25T19:00:00.000Z",
+        "Periode": "Bulanan",
+        "Divisi": "Operasional",
+        "Satuan": "Unit",
+        "PIC": "Mada",
+        "Catatan": "Test from Worker proxy",
+        "Status": "On Track",
+        "KPI": "Konsolidasi Lead Lintas Divisi",
+        "Edit_Time": "2026-07-25T18:30:00Z",
+        "Realisasi": 7,
+        "Bukti": null,
+        "Tipe": "Personal",
+        "Target": 10,
+        "KPI ID": "konsolidasi-lead-lintas-divisi-mada-2"
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {},
+    "request_id": "0ff52027-e446-4604-af2d-daa6781a0280"
+  },
+  "Scope of Work__schema": {
+    "object": "database",
+    "id": "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
+    "cover": null,
+    "icon": null,
+    "created_time": "2026-07-25T10:57:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+    },
+    "last_edited_time": "2026-07-25T10:57:00.000Z",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "2. Scope of Work",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "2. Scope of Work",
+        "href": null
+      }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+      "Bobot (%)": {
+        "id": "%3EGux",
+        "name": "Bobot (%)",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "Deskripsi": {
+        "id": "%3EWc%5C",
+        "name": "Deskripsi",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Edit_Time": {
+        "id": "SJ%5Dn",
+        "name": "Edit_Time",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Frekuensi": {
+        "id": "WWx%5E",
+        "name": "Frekuensi",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "c1a76a46-5599-4abd-aebb-10f616eaeaa8",
+              "name": "Harian",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "d8c34626-ff64-4763-9078-9be550dc1346",
+              "name": "Mingguan",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "b8c79817-428c-43a8-815c-d37f6ad7ef97",
+              "name": "Bulanan",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "03853a4a-afbd-469f-ac99-81e3f5b37831",
+              "name": "Kuartalan",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Effective From": {
+        "id": "%5Bbj_",
+        "name": "Effective From",
+        "description": null,
+        "type": "date",
+        "date": {}
+      },
+      "Tahun": {
+        "id": "b%5C_i",
+        "name": "Tahun",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "PIC": {
+        "id": "jcyk",
+        "name": "PIC",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "ee329cab-11ab-4e84-8a31-6726749a670d",
+              "name": "Pak Ardian",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "40f8ffaa-39ff-4683-bc0f-2ca565f63190",
+              "name": "Bu Nisya",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "53dde485-e09a-4430-be36-06b1ceeb4463",
+              "name": "Mada",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "2c07726f-bed9-4bc7-9db7-61cab260eb82",
+              "name": "Riza",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "b9da516d-0595-4192-8b75-e2a1a7b7b87c",
+              "name": "Yudi (Sdek)",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "908b9ab8-3594-43cc-88e0-df329e68b010",
+              "name": "Rizal",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "ead1b13f-0dae-4899-9d3b-113dd81783ce",
+              "name": "Amir",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "19529885-4ca1-4f02-9660-a1368cbbaef1",
+              "name": "Novita",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "f2e5befd-f287-44e5-ade0-4dd9546ed41b",
+              "name": "Sinta",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "67998140-eb3b-4dc9-b688-f61b7292c317",
+              "name": "Reni",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6a646da6-b8b7-4d2d-a169-3ecd65671d5f",
+              "name": "Rifki",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "fe266d51-e5cc-48a0-843c-2bbf330e4a0c",
+              "name": "Reta",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Status": {
+        "id": "qmL%5D",
+        "name": "Status",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "6f4177c7-ff25-47f8-9af0-9a3a7ceeab58",
+              "name": "Active",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "9a76ffe2-49cd-4032-a5d6-a1af6b70c026",
+              "name": "Paused",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "bffb6ecb-0789-4016-a1c3-b4cdc670874f",
+              "name": "Completed",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Kategori": {
+        "id": "w_kW",
+        "name": "Kategori",
+        "description": null,
+        "type": "multi_select",
+        "multi_select": {
+          "options": [
+            {
+              "id": "f99670f3-b877-4ad9-815f-64ba31d0aa63",
+              "name": "Operasional",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "475dc407-74b7-44c9-8e23-ad8f67260333",
+              "name": "Strategis",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "486c0506-789c-415e-b86c-3cb08b3de761",
+              "name": "Compliance",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "29a7b08a-88c9-41b3-bb35-81f535c6cb19",
+              "name": "Pengembangan",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "88016ab5-023f-442f-8372-3cde3e57ded5",
+              "name": "Reporting",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "SOW ID": {
+        "id": "title",
+        "name": "SOW ID",
+        "description": null,
+        "type": "title",
+        "title": {}
+      }
+    },
+    "parent": {
+      "type": "page_id",
+      "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+    },
+    "url": "https://app.notion.com/p/3a84cf7e9f24816cbe14ef1f171b4d52",
+    "public_url": null,
+    "in_trash": false,
+    "archived": false,
+    "request_id": "2e6937e2-65fd-493a-a2d8-9525ff344598"
+  },
+  "Scope of Work__entries": {
+    "object": "list",
+    "results": [
+      {
+        "id": "3a84cf7e-9f24-8157-a7e4-e79123d2948b",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Hashtag research + trend watch",
+        "Edit_Time": "2026-07-25T14:24:29.307Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Reta",
+        "Status": "Active",
+        "Kategori": [
+          "Pengembangan"
+        ],
+        "SOW ID": "hashtag-research-trend-watch"
+      },
+      {
+        "id": "3a84cf7e-9f24-8161-a3e8-d3672fb29eec",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Insight report mingguan",
+        "Edit_Time": "2026-07-25T14:24:28.495Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Reta",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "insight-report-mingguan-reta"
+      },
+      {
+        "id": "3a84cf7e-9f24-819f-b91b-c6e7f34fd745",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 40,
+        "Deskripsi": "Produksi konten Carousel + feed",
+        "Edit_Time": "2026-07-25T14:24:27.650Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Reta",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "produksi-konten-carousel-feed"
+      },
+      {
+        "id": "3a84cf7e-9f24-8167-88d5-e76cae351235",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Engagement + reply komentar",
+        "Edit_Time": "2026-07-25T14:24:26.805Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Rifki",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "engagement-reply-komentar"
+      },
+      {
+        "id": "3a84cf7e-9f24-81f9-9388-da0d529eb2e7",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Posting schedule harian",
+        "Edit_Time": "2026-07-25T14:24:25.977Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Rifki",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "posting-schedule-harian"
+      },
+      {
+        "id": "3a84cf7e-9f24-813a-8a3b-c7807a3ccc03",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 40,
+        "Deskripsi": "Produksi konten Story + Reels",
+        "Edit_Time": "2026-07-25T14:24:25.086Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Rifki",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "produksi-konten-story-reels"
+      },
+      {
+        "id": "3a84cf7e-9f24-81b6-8540-c64319af797c",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 20,
+        "Deskripsi": "Insight report mingguan",
+        "Edit_Time": "2026-07-25T14:24:24.258Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Reni",
+        "Status": "Active",
+        "Kategori": [
+          "Reporting"
+        ],
+        "SOW ID": "insight-report-mingguan-reni"
+      },
+      {
+        "id": "3a84cf7e-9f24-81e2-851a-c669d320763c",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Supervisi Rifki + Reta (coaching)",
+        "Edit_Time": "2026-07-25T14:24:23.476Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Reni",
+        "Status": "Active",
+        "Kategori": [
+          "Pengembangan"
+        ],
+        "SOW ID": "supervisi-rifki-reta-coaching"
+      },
+      {
+        "id": "3a84cf7e-9f24-81eb-94e2-c0d5f463920f",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "UTM tracking + analytics",
+        "Edit_Time": "2026-07-25T14:24:22.459Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Reni",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "utm-tracking-analytics"
+      },
+      {
+        "id": "3a84cf7e-9f24-81ca-8ffc-f9ccc2734a11",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:54:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Fee media closing-based (3 pilar)",
+        "Edit_Time": "2026-07-25T14:24:21.678Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Reni",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional",
+          "Strategis"
+        ],
+        "SOW ID": "fee-media-closing-based-3-pilar"
+      },
+      {
+        "id": "3a84cf7e-9f24-81da-8d9a-cca5185d9d44",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 35,
+        "Deskripsi": "Block PO bila spek turun",
+        "Edit_Time": "2026-07-25T14:24:20.771Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Sinta",
+        "Status": "Active",
+        "Kategori": [
+          "Compliance"
+        ],
+        "SOW ID": "block-po-bila-spek-turun"
+      },
+      {
+        "id": "3a84cf7e-9f24-81eb-8ea9-cd756ececa49",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Best price 3 vendor + retensi",
+        "Edit_Time": "2026-07-25T14:24:19.880Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Sinta",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "best-price-3-vendor-retensi"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d5-a644-c0739990bb1d",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 35,
+        "Deskripsi": "Stopper kualitas material",
+        "Edit_Time": "2026-07-25T14:24:19.004Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Sinta",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional",
+          "Compliance"
+        ],
+        "SOW ID": "stopper-kualitas-material"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d3-a591-c9dca724bf25",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Onboarding polyvalent (cross-train Sinta)",
+        "Edit_Time": "2026-07-25T14:24:18.066Z",
+        "Frekuensi": "Bulanan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Novita",
+        "Status": "Active",
+        "Kategori": [
+          "Pengembangan"
+        ],
+        "SOW ID": "onboarding-polyvalent-cross-train-sinta"
+      },
+      {
+        "id": "3a84cf7e-9f24-8185-9de0-ffe13c77c6ed",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Closing file + arsip dokumen",
+        "Edit_Time": "2026-07-25T14:24:17.252Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Novita",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "closing-file-arsip-dokumen"
+      },
+      {
+        "id": "3a84cf7e-9f24-813c-817b-d828eff24335",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 40,
+        "Deskripsi": "Pemberkasan klien + SP3K tracking",
+        "Edit_Time": "2026-07-25T14:24:16.440Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Novita",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional",
+          "Compliance"
+        ],
+        "SOW ID": "pemberkasan-klien-sp3k-tracking"
+      },
+      {
+        "id": "3a84cf7e-9f24-8186-8540-c4db1fc5014f",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 35,
+        "Deskripsi": "Quality check + material handling",
+        "Edit_Time": "2026-07-25T14:24:15.612Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Amir",
+        "Status": "Active",
+        "Kategori": [
+          "Compliance"
+        ],
+        "SOW ID": "quality-check-material-handling"
+      },
+      {
+        "id": "3a84cf7e-9f24-8190-84ed-f2459d493aca",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Koordinasi subkontraktor",
+        "Edit_Time": "2026-07-25T14:24:14.798Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Amir",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "koordinasi-subkontraktor"
+      },
+      {
+        "id": "3a84cf7e-9f24-817a-967e-e39c5aeedbe1",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:55:00.000Z",
+        "Bobot (%)": 35,
+        "Deskripsi": "Daily report lapangan + foto",
+        "Edit_Time": "2026-07-25T14:24:13.986Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Amir",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "daily-report-lapangan-foto"
+      },
+      {
+        "id": "3a84cf7e-9f24-8168-94dd-fe7d1c6e69ab",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:56:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Daily report progres lapangan",
+        "Edit_Time": "2026-07-25T14:24:13.125Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Rizal",
+        "Status": "Active",
+        "Kategori": [
+          "Reporting"
+        ],
+        "SOW ID": "daily-report-progres-lapangan"
+      },
+      {
+        "id": "3a84cf7e-9f24-81c6-aeec-f96472e8dd1a",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 20,
+        "Deskripsi": "Cross-check purchasing Sinta",
+        "Edit_Time": "2026-07-25T14:24:12.297Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Rizal",
+        "Status": "Active",
+        "Kategori": [
+          "Compliance"
+        ],
+        "SOW ID": "cross-check-purchasing-sinta"
+      },
+      {
+        "id": "3a84cf7e-9f24-81df-8c67-c3bff64128be",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Monitoring progres semua site",
+        "Edit_Time": "2026-07-25T14:24:11.500Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Rizal",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "monitoring-progres-semua-site"
+      },
+      {
+        "id": "3a84cf7e-9f24-81eb-988b-f5502a9c2e63",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Daily task proyek + brief mandor",
+        "Edit_Time": "2026-07-25T14:24:10.701Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Rizal",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "daily-task-proyek-brief-mandor"
+      },
+      {
+        "id": "3a84cf7e-9f24-8178-9f7d-cd9bf1df57aa",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 35,
+        "Deskripsi": "Walk-in接待 + presentasi spek",
+        "Edit_Time": "2026-07-25T14:24:09.513Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Yudi (Sdek)",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "walk-in-presentasi-spek"
+      },
+      {
+        "id": "3a84cf7e-9f24-814a-9a11-e8d799c54581",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Maintenance STB + after sales",
+        "Edit_Time": "2026-07-25T14:24:08.715Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Yudi (Sdek)",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "maintenance-stb-after-sales"
+      },
+      {
+        "id": "3a84cf7e-9f24-8130-8b60-cea22e42c46c",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 35,
+        "Deskripsi": "Closing pojok V4 walk-in konsumen",
+        "Edit_Time": "2026-07-25T14:24:07.668Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Yudi (Sdek)",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "closing-pojok-v4-walk-in-konsumen"
+      },
+      {
+        "id": "3a84cf7e-9f24-8197-97a7-ff13291d9015",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 20,
+        "Deskripsi": "Report CPL + ROAS mingguan",
+        "Edit_Time": "2026-07-25T14:24:06.809Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Riza",
+        "Status": "Active",
+        "Kategori": [
+          "Reporting"
+        ],
+        "SOW ID": "report-cpl-roas-mingguan"
+      },
+      {
+        "id": "3a84cf7e-9f24-8193-86a8-d93c2aa5144f",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Closing support + handover ke Novita",
+        "Edit_Time": "2026-07-25T14:24:05.965Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Riza",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "closing-support-handover-ke-novita"
+      },
+      {
+        "id": "3a84cf7e-9f24-819b-abf6-e6c52de898f8",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "CRM update + segmentasi lead",
+        "Edit_Time": "2026-07-25T14:24:05.058Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Riza",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "crm-update-segmentasi-lead"
+      },
+      {
+        "id": "3a84cf7e-9f24-81fd-b0a6-f6d1ca65b724",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:57:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Lead generation via Meta Ads + organik",
+        "Edit_Time": "2026-07-25T14:24:04.261Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Riza",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "lead-generation-via-meta-ads-organik"
+      },
+      {
+        "id": "3a84cf7e-9f24-815c-8e9f-e0c1a70b7b8f",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 20,
+        "Deskripsi": "Report mingguan ke owner",
+        "Edit_Time": "2026-07-25T14:24:03.448Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Mada",
+        "Status": "Active",
+        "Kategori": [
+          "Reporting"
+        ],
+        "SOW ID": "report-mingguan-ke-owner"
+      },
+      {
+        "id": "3a84cf7e-9f24-81bd-adf6-ecf1555a59b5",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Approval lintas fungsi (BAST, budget)",
+        "Edit_Time": "2026-07-25T14:24:02.478Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Mada",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "approval-lintas-fungsi-bast-budget"
+      },
+      {
+        "id": "3a84cf7e-9f24-81f6-8418-e9aea6dc5586",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Coaching 1-on-1 PIC",
+        "Edit_Time": "2026-07-25T14:24:01.650Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Mada",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "coaching-1-on-1-pic"
+      },
+      {
+        "id": "3a84cf7e-9f24-8105-ae5f-c66f4d037742",
+        "createdAt": "2026-07-25T14:24:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Konsolidasi KPI lintas divisi",
+        "Edit_Time": "2026-07-25T14:24:00.868Z",
+        "Frekuensi": "Harian",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Mada",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional",
+          "Strategis"
+        ],
+        "SOW ID": "konsolidasi-kpi-lintas-divisi"
+      },
+      {
+        "id": "3a84cf7e-9f24-81a8-9866-d8a27154bf7e",
+        "createdAt": "2026-07-25T14:23:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Audit mingguan front office + SP3K",
+        "Edit_Time": "2026-07-25T14:23:59.571Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Bu Nisya",
+        "Status": "Active",
+        "Kategori": [
+          "Operasional"
+        ],
+        "SOW ID": "audit-mingguan-front-office-sp3k"
+      },
+      {
+        "id": "3a84cf7e-9f24-8148-a004-faa91eda9ec3",
+        "createdAt": "2026-07-25T14:23:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Legal drafting + review kontrak",
+        "Edit_Time": "2026-07-25T14:23:58.787Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Bu Nisya",
+        "Status": "Active",
+        "Kategori": [
+          "Compliance",
+          "Operasional"
+        ],
+        "SOW ID": "legal-drafting-review-kontrak"
+      },
+      {
+        "id": "3a84cf7e-9f24-815b-a89b-c28ec8044a9f",
+        "createdAt": "2026-07-25T14:23:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 25,
+        "Deskripsi": "Final approve budget bulanan + kuartalan",
+        "Edit_Time": "2026-07-25T14:23:57.991Z",
+        "Frekuensi": "Bulanan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Pak Ardian",
+        "Status": "Active",
+        "Kategori": [
+          "Reporting"
+        ],
+        "SOW ID": "final-approve-budget-bulanan-kuartalan"
+      },
+      {
+        "id": "3a84cf7e-9f24-8196-8b5b-f990af0c05a2",
+        "createdAt": "2026-07-25T14:23:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "Bobot (%)": 30,
+        "Deskripsi": "Strategic decision lintas divisi",
+        "Edit_Time": "2026-07-25T14:23:56.715Z",
+        "Frekuensi": "Mingguan",
+        "Effective From": "2026-01-01",
+        "Tahun": 2026,
+        "PIC": "Pak Ardian",
+        "Status": "Active",
+        "Kategori": [
+          "Strategis",
+          "Reporting"
+        ],
+        "SOW ID": "strategic-decision-lintas-divisi"
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {},
+    "request_id": "c5f23762-5ce1-42da-ac30-5165cfb5c430"
+  },
+  "Program Kerja__schema": {
+    "object": "database",
+    "id": "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
+    "cover": null,
+    "icon": null,
+    "created_time": "2026-07-25T10:57:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+    },
+    "last_edited_time": "2026-07-25T10:57:00.000Z",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "3. Program Kerja",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "3. Program Kerja",
+        "href": null
+      }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+      "PIC Penanggung Jawab": {
+        "id": "%3Eo%5EK",
+        "name": "PIC Penanggung Jawab",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "7c63d341-33be-4a3d-99a3-920e37668b01",
+              "name": "Pak Ardian",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "5ce938ad-6205-4f0d-8237-b3b40dd464f5",
+              "name": "Bu Nisya",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "8dab56de-4f71-4399-81c3-d7fc9da48433",
+              "name": "Mada",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "2aaca506-0e47-47d8-8aad-25c11e49fe11",
+              "name": "Riza",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6d17aa69-c09c-4b1d-9805-4388d878fe28",
+              "name": "Yudi (Sdek)",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "e0d37011-c0ec-49dc-b141-ab5892711edd",
+              "name": "Rizal",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "71717761-b850-4dc7-8214-c2cedac26f80",
+              "name": "Amir",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "28ec2020-4dfb-42e2-8f55-58426a06427a",
+              "name": "Novita",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "938f365b-8332-4569-9d43-e92f0af7eb99",
+              "name": "Sinta",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "9a8e7933-bbbd-4171-8ceb-066328f060cb",
+              "name": "Reni",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "9174d781-fead-4077-9c17-43fe107e149d",
+              "name": "Rifki",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6d981c10-27f9-495b-9881-ed2c17c76982",
+              "name": "Reta",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Quarter": {
+        "id": "DG%3Er",
+        "name": "Quarter",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "6da0034f-27da-436e-9f65-cfa1bbedfdba",
+              "name": "Q1",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "ba6de58e-2eaf-406a-9056-9113d4e1f509",
+              "name": "Q2",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "3d820183-bb7a-4e15-83d9-f37c9fba6e81",
+              "name": "Q3",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "494be8a8-f78c-4e4c-b915-05f391d2e785",
+              "name": "Q4",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Edit_Time": {
+        "id": "DVyN",
+        "name": "Edit_Time",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Tahun": {
+        "id": "FA%3FB",
+        "name": "Tahun",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "Deadline": {
+        "id": "OYGL",
+        "name": "Deadline",
+        "description": null,
+        "type": "date",
+        "date": {}
+      },
+      "Progress (%)": {
+        "id": "Xq%7Bp",
+        "name": "Progress (%)",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "Budget (Rp)": {
+        "id": "Yl%5Eb",
+        "name": "Budget (Rp)",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "Risiko": {
+        "id": "kk~j",
+        "name": "Risiko",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Status": {
+        "id": "qvEp",
+        "name": "Status",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "14b6ce75-36c0-4c84-b009-85b39b2ef221",
+              "name": "Planning",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "09643ad9-e15d-48f0-9893-618c5713b66b",
+              "name": "On Track",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6cfe44cb-d5a4-4440-a4bb-eeb51c82f2e1",
+              "name": "At Risk",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "61ca877c-6154-4c02-b968-f2b8226fd9a7",
+              "name": "Delayed",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "8cf7a2cf-08a5-4792-a9e8-c3a4900c4103",
+              "name": "Done",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "dcda1717-cf9e-42e1-9bee-dbbd89d3bd23",
+              "name": "Cancelled",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Tanggal Mulai": {
+        "id": "w%7C%7Bq",
+        "name": "Tanggal Mulai",
+        "description": null,
+        "type": "date",
+        "date": {}
+      },
+      "Actual Spend (Rp)": {
+        "id": "yxoY",
+        "name": "Actual Spend (Rp)",
+        "description": null,
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "Nama Program": {
+        "id": "zsuy",
+        "name": "Nama Program",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Program ID": {
+        "id": "title",
+        "name": "Program ID",
+        "description": null,
+        "type": "title",
+        "title": {}
+      }
+    },
+    "parent": {
+      "type": "page_id",
+      "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+    },
+    "url": "https://app.notion.com/p/3a84cf7e9f248172bd10ee9e8056940a",
+    "public_url": null,
+    "in_trash": false,
+    "archived": false,
+    "request_id": "73a6275b-e7c2-4490-afb7-b0cb8e2884c9"
+  },
+  "Program Kerja__entries": {
+    "object": "list",
+    "results": [
+      {
+        "id": "3a84cf7e-9f24-8153-861f-f01297d0de48",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "PIC Penanggung Jawab": "Reni",
+        "Quarter": "Q3",
+        "Edit_Time": "2026-07-25T14:25:11.068Z",
+        "Tahun": 2026,
+        "Deadline": "2026-09-30",
+        "Progress (%)": 60,
+        "Budget (Rp)": 12000000,
+        "Risiko": "Closing rate konten masih fluktuatif",
+        "Status": "On Track",
+        "Tanggal Mulai": "2026-07-01",
+        "Actual Spend (Rp)": 0,
+        "Nama Program": "Ekspansi media 3 pilar",
+        "Program ID": "ekspansi-media-3-pilar"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d1-abf3-daf778d7041a",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "PIC Penanggung Jawab": "Riza",
+        "Quarter": "Q3",
+        "Edit_Time": "2026-07-25T14:25:10.271Z",
+        "Tahun": 2026,
+        "Deadline": "2026-09-30",
+        "Progress (%)": 40,
+        "Budget (Rp)": 8000000,
+        "Risiko": "Lead quality Q3 perlu screening",
+        "Status": "On Track",
+        "Tanggal Mulai": "2026-07-01",
+        "Actual Spend (Rp)": 0,
+        "Nama Program": "Pipeline closing Q3 (12 unit)",
+        "Program ID": "pipeline-closing-q3-12-unit"
+      },
+      {
+        "id": "3a84cf7e-9f24-813f-9c22-eebd8a1f0cb1",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "PIC Penanggung Jawab": "Mada",
+        "Quarter": "Q3",
+        "Edit_Time": "2026-07-25T14:25:09.240Z",
+        "Tahun": 2026,
+        "Deadline": "2026-08-30",
+        "Progress (%)": 10,
+        "Budget (Rp)": 0,
+        "Risiko": "Resource compile SOP lama",
+        "Status": "Planning",
+        "Tanggal Mulai": "2026-07-25",
+        "Actual Spend (Rp)": 0,
+        "Nama Program": "SOP 12 komponen penutup H1 → H2",
+        "Program ID": "sop-12-komponen-penutup-h1-h2"
+      },
+      {
+        "id": "3a84cf7e-9f24-816f-ad86-e25106b4db49",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "PIC Penanggung Jawab": "Mada",
+        "Quarter": "Q3",
+        "Edit_Time": "2026-07-25T14:25:08.411Z",
+        "Tahun": 2026,
+        "Deadline": "2026-09-20",
+        "Progress (%)": 50,
+        "Budget (Rp)": 0,
+        "Risiko": "-",
+        "Status": "On Track",
+        "Tanggal Mulai": "2026-07-20",
+        "Actual Spend (Rp)": 0,
+        "Nama Program": "Coaching 3 pilar Mada (KPI/SOP/Margin)",
+        "Program ID": "coaching-3-pilar-mada-kpisopmargin"
+      },
+      {
+        "id": "3a84cf7e-9f24-81d2-a177-e31370e0f95d",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "PIC Penanggung Jawab": "Novita",
+        "Quarter": "Q3",
+        "Edit_Time": "2026-07-25T14:25:07.567Z",
+        "Tahun": 2026,
+        "Deadline": "2026-10-15",
+        "Progress (%)": 20,
+        "Budget (Rp)": 5000000,
+        "Risiko": "Butuh cross-train Sinta",
+        "Status": "On Track",
+        "Tanggal Mulai": "2026-07-15",
+        "Actual Spend (Rp)": 0,
+        "Nama Program": "Onboarding admin polyvalent",
+        "Program ID": "onboarding-admin-polyvalent"
+      },
+      {
+        "id": "3a84cf7e-9f24-8133-bb22-f796c7d944c5",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T18:58:00.000Z",
+        "PIC Penanggung Jawab": "Mada",
+        "Quarter": "Q3",
+        "Edit_Time": "2026-07-25T14:25:06.608Z",
+        "Tahun": 2026,
+        "Deadline": "2026-09-30",
+        "Progress (%)": 35,
+        "Budget (Rp)": 50000000,
+        "Risiko": "Klien kedua belum confirm",
+        "Status": "On Track",
+        "Tanggal Mulai": "2026-07-01",
+        "Actual Spend (Rp)": 0,
+        "Nama Program": "Ekspansi klien Q3 2026",
+        "Program ID": "ekspansi-klien-q3-2026"
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {},
+    "request_id": "cdc45bfd-0629-4630-8a08-1eb2f8675bf3"
+  },
+  "Jobdesk Harian__schema": {
+    "object": "database",
+    "id": "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
+    "cover": null,
+    "icon": null,
+    "created_time": "2026-07-25T10:57:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "3a84cf7e-9f24-81aa-97d2-0027ff14196f"
+    },
+    "last_edited_time": "2026-07-25T14:23:00.000Z",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "4. Jobdesk Harian + Target",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "4. Jobdesk Harian + Target",
+        "href": null
+      }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+      "Jobdesk": {
+        "id": "Apd%3C",
+        "name": "Jobdesk",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Actual Output": {
+        "id": "Ekvf",
+        "name": "Actual Output",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Status": {
+        "id": "IUEu",
+        "name": "Status",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "bdc9bb02-5c5e-4c9a-a235-3cefdae021be",
+              "name": "To Do",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "0855d8a7-4a04-426b-9168-cbbaf7aceb5b",
+              "name": "In Progress",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "de82be29-5293-4426-8ee5-c8477c8e99c8",
+              "name": "Done",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "550030c9-9cd8-4a32-8f33-2f5dd9e48350",
+              "name": "Blocked",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Target Output": {
+        "id": "JM%3Fq",
+        "name": "Target Output",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Edit_Time": {
+        "id": "JrIb",
+        "name": "Edit_Time",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Tanggal": {
+        "id": "PHVA",
+        "name": "Tanggal",
+        "description": null,
+        "type": "date",
+        "date": {}
+      },
+      "Prioritas": {
+        "id": "RiRN",
+        "name": "Prioritas",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "bf33e470-5850-4a68-bc0a-9a6f73fb6918",
+              "name": "P1",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "48df1ce8-f0ce-44d5-853f-6095eb1e5056",
+              "name": "P2",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6db4880e-518d-494a-b50e-06cc70b88e98",
+              "name": "P3",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Approval_By": {
+        "id": "V%5Bpr",
+        "name": "Approval_By",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "PIC": {
+        "id": "YNgK",
+        "name": "PIC",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "ee7d6966-baf3-4ef4-b739-317bfa8f1f94",
+              "name": "Pak Ardian",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "579cc549-dad2-4559-b834-d83ca1fe7e4b",
+              "name": "Bu Nisya",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "35206f50-160c-4e1c-9a08-f50194d1a919",
+              "name": "Mada",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "4ea97bb0-2a57-43e6-ab2d-0051aafff03d",
+              "name": "Riza",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "c03362e7-b090-4875-b163-4a71b959d3bf",
+              "name": "Yudi (Sdek)",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "6ab60051-215c-4147-8948-cccae107cd29",
+              "name": "Rizal",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "1e971354-fb43-4fd8-95b7-a750be39f9f5",
+              "name": "Amir",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "9370dba0-8ca0-406a-8c21-6c1225b64e04",
+              "name": "Novita",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "1fc69bd0-d588-447e-909a-12bb7304f973",
+              "name": "Sinta",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "f8bec916-3111-485d-acc0-5dc70a7dead3",
+              "name": "Reni",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "8fa86633-7e84-4365-9e66-2c1eb316d6f9",
+              "name": "Rifki",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "11879c74-9821-4b4d-b9dc-0c19ddabb589",
+              "name": "Reta",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Approval_Time": {
+        "id": "cBIi",
+        "name": "Approval_Time",
+        "description": null,
+        "type": "date",
+        "date": {}
+      },
+      "Bukti": {
+        "id": "d%3Dq%5D",
+        "name": "Bukti",
+        "description": null,
+        "type": "url",
+        "url": {}
+      },
+      "Approval": {
+        "id": "%7Dht%5D",
+        "name": "Approval",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "e50806da-c54d-4d2e-84c6-43fa363039c7",
+              "name": "Pending",
+              "color": "yellow",
+              "description": null
+            },
+            {
+              "id": "4599a2a3-44a2-4f03-b901-e9ea1828fae9",
+              "name": "Approved",
+              "color": "green",
+              "description": null
+            },
+            {
+              "id": "3e0ec183-0579-412d-a35c-be7029b45043",
+              "name": "Rejected",
+              "color": "red",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Kategori": {
+        "id": "%7DxJv",
+        "name": "Kategori",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "1e008ead-75b9-44bf-a4b3-37b349ce23bf",
+              "name": "Harian",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "0fedab5d-d1f5-4287-a526-a04fdd79df0b",
+              "name": "Mingguan",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "cf0d653f-dbbf-4511-8915-78b52ee29767",
+              "name": "Bulanan",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Jobdesk ID": {
+        "id": "title",
+        "name": "Jobdesk ID",
+        "description": null,
+        "type": "title",
+        "title": {}
+      }
+    },
+    "parent": {
+      "type": "page_id",
+      "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+    },
+    "url": "https://app.notion.com/p/3a84cf7e9f24814fbd01cd52e64db04e",
+    "public_url": null,
+    "in_trash": false,
+    "archived": false,
+    "request_id": "9e710d9c-479f-4bd7-8be4-985206227d67"
+  },
+  "Jobdesk Harian__entries": {
+    "object": "list",
+    "results": [
+      {
+        "id": "3a84cf7e-9f24-816f-96d7-fa0367e260b4",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Insight report mingguan",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "1 report",
+        "Edit_Time": "2026-07-25T14:25:43.085Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P3",
+        "Approval_By": "",
+        "PIC": "Reta",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Reta-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-8115-a1ea-cea87a3ecccb",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Hashtag research mingguan",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "20 hashtag baru",
+        "Edit_Time": "2026-07-25T14:25:42.257Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Reta",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Reta-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-8190-a5d4-faed8822a4f3",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Produksi Carousel + feed post",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "2 konten",
+        "Edit_Time": "2026-07-25T14:25:41.428Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Reta",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Reta-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-81e5-9559-e833b441eda2",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Engagement reply + DM",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "20 interaksi",
+        "Edit_Time": "2026-07-25T14:25:40.569Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Rifki",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Rifki-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-8149-96a7-eed5d5d356f0",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Posting schedule IG",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "2 post",
+        "Edit_Time": "2026-07-25T14:25:38.334Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Rifki",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Rifki-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-8154-ae67-ffb99f460b0e",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Produksi Story + Reels",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "2 konten",
+        "Edit_Time": "2026-07-25T14:25:37.396Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Rifki",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Rifki-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-8109-b6ae-d6a7b60ebaa8",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Coaching Rifki + Reta (planning konten)",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "1 sesi 60 menit",
+        "Edit_Time": "2026-07-25T14:25:36.489Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Reni",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Reni-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-812e-9eb4-ca1676ece722",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "UTM tracking + analytics check",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "Dashboard updated",
+        "Edit_Time": "2026-07-25T14:25:35.348Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Reni",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Reni-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-81cb-9860-ed912d37c3e5",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Review 3 pilar konten mingguan",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "9 post reviewed",
+        "Edit_Time": "2026-07-25T14:25:34.520Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Reni",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Reni-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-81cf-859c-e802e14db7d6",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Cross-train Novita untuk polyvalent",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "1 sesi training",
+        "Edit_Time": "2026-07-25T14:25:33.691Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Sinta",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Sinta-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-81f4-b20f-c7d8090ee539",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Best price 3 vendor untuk PO besok",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "3 quote",
+        "Edit_Time": "2026-07-25T14:25:32.706Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Sinta",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Sinta-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-814c-b36b-f52b5e9f224f",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Stopper kualitas material incoming",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "5 material dicek",
+        "Edit_Time": "2026-07-25T14:25:31.862Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Sinta",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Sinta-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-8172-ae0b-d53a156c1a26",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Update SP3K tracker mingguan",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "Tracker updated",
+        "Edit_Time": "2026-07-25T14:25:31.017Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Novita",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Novita-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-81b1-99b5-e70c87b61fc9",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Closing file + archive",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "2 file closed",
+        "Edit_Time": "2026-07-25T14:25:30.174Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Novita",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Novita-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-8190-ba09-f30016bd99f1",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Pemberkasan klien SP3K",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "3 file baru",
+        "Edit_Time": "2026-07-25T14:25:29.298Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Novita",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Novita-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-811e-aacf-c6107bdaf360",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Quality check material incoming",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "5 material dicek",
+        "Edit_Time": "2026-07-25T14:25:28.376Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Amir",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Amir-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-81da-8787-de4aaa2f321d",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Koordinasi subkon 2 site",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "2 subkon aligned",
+        "Edit_Time": "2026-07-25T14:25:27.468Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Amir",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Amir-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-81cf-b6e3-dea916fc5bd0",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Daily report lapangan + foto",
+        "Actual Output": "",
+        "Status": "Done",
+        "Target Output": "1 report + 5 foto",
+        "Edit_Time": "2026-07-25T14:25:25.249Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Amir",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Amir-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-815b-ad5c-df26f9e9f2b7",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Cross-check PO Sinta",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "5 PO dicek",
+        "Edit_Time": "2026-07-25T14:25:24.452Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Rizal",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Rizal-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-8160-8c0a-ed7bd315f6ff",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Monitor progres harian",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "100% site visited",
+        "Edit_Time": "2026-07-25T14:25:23.686Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Rizal",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Rizal-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-8127-9f29-e4aa773f7965",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Brief mandor 2 site",
+        "Actual Output": "",
+        "Status": "Done",
+        "Target Output": "2 site terbrief",
+        "Edit_Time": "2026-07-25T14:25:22.842Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Rizal",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Rizal-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-8179-b469-f80dba898f5d",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Maintenance STB terjadwal",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "2 unit",
+        "Edit_Time": "2026-07-25T14:25:21.951Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Yudi (Sdek)",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Yudi-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-814b-88c7-d4132d1ab314",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Closing presentasi spek",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "2 closing",
+        "Edit_Time": "2026-07-25T14:25:20.746Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Yudi (Sdek)",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Yudi-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-81dc-89da-ea6ba25a1009",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Walk-in接待 V4 pojok",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "5 walk-in",
+        "Edit_Time": "2026-07-25T14:25:19.902Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Yudi (Sdek)",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Yudi-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-8172-bcfa-eee4e1ed1d56",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Follow up lead Q3 pipeline",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "5 lead contacted",
+        "Edit_Time": "2026-07-25T14:25:19.073Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Riza",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Riza-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-8174-ba07-e933f6cfa288",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "CRM update + scoring",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "10 lead update",
+        "Edit_Time": "2026-07-25T14:25:18.229Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Riza",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Riza-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-81f2-9bf8-fdc605fbe526",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Lead gen Meta Ads harian",
+        "Actual Output": "",
+        "Status": "Done",
+        "Target Output": "3 lead/hari",
+        "Edit_Time": "2026-07-25T14:25:17.370Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Riza",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Riza-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-8108-8390-c0834cef003f",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Coaching Rizal 1-on-1",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "1 sesi 30 menit",
+        "Edit_Time": "2026-07-25T14:25:16.510Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P2",
+        "Approval_By": "",
+        "PIC": "Mada",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Mada-03"
+      },
+      {
+        "id": "3a84cf7e-9f24-815a-82da-f09ae68db604",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Approve BAST 3 unit",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "3 BAST",
+        "Edit_Time": "2026-07-25T14:25:15.681Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Mada",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Mada-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-8107-8111-d8b1bedbced4",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Konsolidasi KPI Q3 lintas divisi",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "11 PIC review",
+        "Edit_Time": "2026-07-25T14:25:14.867Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Mada",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Mada-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-81ec-bbc8-c02f029b2672",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Audit front office + SP3K tracking",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "8 file dicek",
+        "Edit_Time": "2026-07-25T14:25:14.055Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Bu Nisya",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Nisya-01"
+      },
+      {
+        "id": "3a84cf7e-9f24-813f-90a9-d1c2b87fb7fa",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Approve budget Q3 awal",
+        "Actual Output": "",
+        "Status": "To Do",
+        "Target Output": "1 budget approved",
+        "Edit_Time": "2026-07-25T14:25:13.241Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Pak Ardian",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Ardian-02"
+      },
+      {
+        "id": "3a84cf7e-9f24-8187-8f34-cdae366e218c",
+        "createdAt": "2026-07-25T14:25:00.000Z",
+        "_editTime": "2026-07-25T14:25:00.000Z",
+        "Jobdesk": "Review KPI bulanan lintas divisi",
+        "Actual Output": "",
+        "Status": "In Progress",
+        "Target Output": "5 divisi",
+        "Edit_Time": "2026-07-25T14:25:12.455Z",
+        "Tanggal": "2026-07-25",
+        "Prioritas": "P1",
+        "Approval_By": "",
+        "PIC": "Pak Ardian",
+        "Approval_Time": null,
+        "Bukti": null,
+        "Approval": null,
+        "Kategori": "Harian",
+        "Jobdesk ID": "JOB-20260725-Ardian-01"
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {},
+    "request_id": "f87f79f4-8b38-4c04-ac6e-287ee1192cfd"
+  },
+  "People__schema": {
+    "object": "database",
+    "id": "d3d4cf7e-9f24-82df-b0d8-014512d331ec",
+    "cover": null,
+    "icon": {
+      "type": "icon",
+      "icon": {
+        "name": "user-circle",
+        "color": "gray"
+      }
+    },
+    "created_time": "2026-06-26T18:50:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "00000000-0000-0000-0000-000000000000"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "00000000-0000-0000-0000-000000000000"
+    },
+    "last_edited_time": "2026-06-26T18:50:00.000Z",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "People",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "People",
+        "href": null
+      }
+    ],
+    "description": [],
+    "is_inline": false,
+    "properties": {
+      "Name": {
+        "id": "title",
+        "name": "Name",
+        "description": null,
+        "type": "title",
+        "title": {}
+      },
+      "About": {
+        "id": "people%3Aabout",
+        "name": "About",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Person": {
+        "id": "people%3Aperson",
+        "name": "Person",
+        "description": null,
+        "type": "people",
+        "people": {}
+      },
+      "Membership Type": {
+        "id": "people%3Amembership_type",
+        "name": "Membership Type",
+        "description": null,
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "id": "owner",
+              "name": "Workspace owner",
+              "color": "red",
+              "description": null
+            },
+            {
+              "id": "membership_admin",
+              "name": "Membership admin",
+              "color": "green",
+              "description": null
+            },
+            {
+              "id": "member",
+              "name": "Member",
+              "color": "blue",
+              "description": null
+            },
+            {
+              "id": "restricted_member",
+              "name": "Restricted member",
+              "color": "yellow",
+              "description": null
+            },
+            {
+              "id": "page_guest",
+              "name": "Guest",
+              "color": "yellow",
+              "description": null
+            },
+            {
+              "id": "none",
+              "name": "Deactivated",
+              "color": "gray",
+              "description": null
+            }
+          ]
+        }
+      }
+    },
+    "parent": {
+      "type": "workspace",
+      "workspace": true
+    },
+    "url": "https://app.notion.com/p/d3d4cf7e9f2482dfb0d8014512d331ec",
+    "public_url": null,
+    "in_trash": false,
+    "archived": false,
+    "request_id": "0b6446fb-da86-4ad5-9eb0-feb7db0d601c"
+  },
+  "People__entries": {
+    "object": "list",
+    "results": [
+      {
+        "id": "c494cf7e-9f24-8275-bc35-81ad3904db11",
+        "createdAt": "2026-06-26T18:50:00.000Z",
+        "_editTime": "2026-06-26T18:50:00.000Z",
+        "Name": "Asad mada",
+        "About": "",
+        "Email": null,
+        "Person": [
+          "Asad mada"
+        ],
+        "Membership Type": "Workspace owner"
+      }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {},
+    "request_id": "9c11c9be-7215-4731-87c8-df396a591315"
+  }
+}

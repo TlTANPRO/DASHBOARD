@@ -1,0 +1,157 @@
+{
+  "pics": [
+    {
+      "name": "Pak Ardian",
+      "slug": "pak-ardian",
+      "divisi": "Owner",
+      "role": "Owner / Strategic Decision Maker",
+      "tier_target": 85,
+      "color": "red"
+    },
+    {
+      "name": "Bu Nisya",
+      "slug": "bu-nisya",
+      "divisi": "Legal",
+      "role": "Legal & Compliance Head",
+      "tier_target": 80,
+      "color": "purple"
+    },
+    {
+      "name": "Mada",
+      "slug": "mada",
+      "divisi": "Operasional",
+      "role": "Operations Manager",
+      "tier_target": 70,
+      "color": "green"
+    },
+    {
+      "name": "Riza",
+      "slug": "riza",
+      "divisi": "Sales",
+      "role": "Sales Closer",
+      "tier_target": 70,
+      "color": "blue"
+    },
+    {
+      "name": "Yudi (Sdek)",
+      "slug": "yudi-sdek",
+      "divisi": "Sales Field",
+      "role": "Field Marketing",
+      "tier_target": 65,
+      "color": "yellow"
+    },
+    {
+      "name": "Rizal",
+      "slug": "rizal",
+      "divisi": "Operasional",
+      "role": "Operations Support",
+      "tier_target": 70,
+      "color": "green"
+    },
+    {
+      "name": "Amir",
+      "slug": "amir",
+      "divisi": "Finance",
+      "role": "Finance Officer",
+      "tier_target": 70,
+      "color": "pink"
+    },
+    {
+      "name": "Novita",
+      "slug": "novita",
+      "divisi": "Admin",
+      "role": "Admin Officer",
+      "tier_target": 65,
+      "color": "brown"
+    },
+    {
+      "name": "Sinta",
+      "slug": "sinta",
+      "divisi": "Admin",
+      "role": "Admin Officer",
+      "tier_target": 65,
+      "color": "gray"
+    },
+    {
+      "name": "Reni",
+      "slug": "reni",
+      "divisi": "Marketing",
+      "role": "Marketing Lead",
+      "tier_target": 70,
+      "color": "orange"
+    },
+    {
+      "name": "Rifki",
+      "slug": "rifki",
+      "divisi": "Marketing",
+      "role": "Marketing Support",
+      "tier_target": 65,
+      "color": "blue"
+    },
+    {
+      "name": "Reta",
+      "slug": "reta",
+      "divisi": "Marketing",
+      "role": "Marketing Creative",
+      "tier_target": 70,
+      "color": "purple"
+    }
+  ],
+  "divisions": [
+    {
+      "name": "Owner",
+      "color": "red",
+      "head": "Pak Ardian"
+    },
+    {
+      "name": "Legal",
+      "color": "purple",
+      "head": "Bu Nisya"
+    },
+    {
+      "name": "Marketing",
+      "color": "orange",
+      "head": "Reni"
+    },
+    {
+      "name": "Sales",
+      "color": "blue",
+      "head": "Riza"
+    },
+    {
+      "name": "Sales Field",
+      "color": "yellow",
+      "head": "Yudi (Sdek)"
+    },
+    {
+      "name": "Operasional",
+      "color": "green",
+      "head": "Mada"
+    },
+    {
+      "name": "Admin",
+      "color": "brown",
+      "head": "Novita"
+    },
+    {
+      "name": "Finance",
+      "color": "pink",
+      "head": "Amir"
+    }
+  ],
+  "tier_thresholds": {
+    "top": 90,
+    "on_track": 75,
+    "coach": 60,
+    "at_risk": 0
+  },
+  "improvisasi_types": [
+    "Efisiensi",
+    "Inovasi",
+    "Mentoring",
+    "Problem Solving",
+    "Self Development",
+    "Cross-functional",
+    "Customer Obsession"
+  ]
+}

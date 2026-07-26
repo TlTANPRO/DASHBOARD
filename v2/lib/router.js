@@ -1,4 +1,4 @@
-// lib/router.js — hash-based router
+// lib/router.js — hash-based router with params
 
 const routes = new Map();
 let currentRoute = null;
@@ -10,30 +10,25 @@ export function defineRoute(name, handler) {
 
 export function startRouter(defaultRoute = "home") {
   const navigate = () => {
-    const hash = location.hash.replace(/^#\//, "") || defaultRoute;
-    const [name, ...params] = hash.split("/");
+    const hash = location.hash.replace(/^#\/?/, "") || defaultRoute;
+    const parts = hash.split("/").filter(Boolean);
+    const name = parts[0];
+    const params = parts.slice(1);
     const handler = routes.get(name) || routes.get(defaultRoute);
 
-    // cleanup previous
     if (cleanupFn) {
-      try {
-        cleanupFn();
-      } catch {}
+      try { cleanupFn(); } catch {}
       cleanupFn = null;
     }
 
-    // update active nav
     document.querySelectorAll(".nav-item[data-route]").forEach((el) => {
-      if (el.dataset.route === name) {
-        el.setAttribute("aria-current", "page");
-      } else {
-        el.removeAttribute("aria-current");
-      }
+      if (el.dataset.route === name) el.setAttribute("aria-current", "page");
+      else el.removeAttribute("aria-current");
     });
 
     if (handler) {
       try {
-        const result = handler(params);
+        const result = handler(params, name);
         if (typeof result === "function") cleanupFn = result;
         currentRoute = name;
       } catch (e) {
@@ -44,7 +39,6 @@ export function startRouter(defaultRoute = "home") {
       renderNotFound(name);
     }
 
-    // scroll to top
     document.getElementById("main")?.focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -53,12 +47,12 @@ export function startRouter(defaultRoute = "home") {
   navigate();
 }
 
-export function getCurrentRoute() {
-  return currentRoute;
-}
+export function getCurrentRoute() { return currentRoute; }
 
-export function go(name, ...params) {
-  location.hash = "#/" + [name, ...params].join("/");
+export function go(path, ...params) {
+  // path bisa "/employee" atau "/employee/mada"
+  const full = [path.replace(/^\//, ""), ...params].filter(Boolean).join("/");
+  location.hash = "#/" + full;
 }
 
 function renderError(e) {
@@ -69,8 +63,7 @@ function renderError(e) {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <div class="empty-title">Terjadi Kesalahan</div>
         <div class="t-sm t-mono">${escapeHTML(e.message)}</div>
-      </div>
-    `;
+      </div>`;
   }
 }
 
@@ -83,8 +76,7 @@ function renderNotFound(name) {
         <div class="empty-title">Halaman Tidak Ditemukan</div>
         <div class="t-sm t-mono">${escapeHTML(name)}</div>
         <a href="#/home" class="btn btn-primary mt-3">Kembali ke Home</a>
-      </div>
-    `;
+      </div>`;
   }
 }
 

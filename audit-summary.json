@@ -1,0 +1,61 @@
+{
+  "audit_date": "2026-07-26",
+  "databases": {
+    "KPI Tracker": {
+      "count": 48,
+      "schema_fields": 13
+    },
+    "Scope of Work": {
+      "count": 38,
+      "schema_fields": 10
+    },
+    "Program Kerja": {
+      "count": 6,
+      "schema_fields": 13
+    },
+    "Jobdesk Harian": {
+      "count": 33,
+      "schema_fields": 14
+    },
+    "People": {
+      "count": 1,
+      "schema_fields": 4
+    }
+  },
+  "grand_total": 126,
+  "db_ids": {
+    "KPI Tracker": "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
+    "Scope of Work": "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
+    "Program Kerja": "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
+    "Jobdesk Harian": "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
+    "People": "d3d4cf7e-9f24-82df-b0d8-014512d331ec"
+  },
+  "pic_list": [
+    "Pak Ardian",
+    "Bu Nisya",
+    "Mada",
+    "Riza",
+    "Yudi (Sdek)",
+    "Rizal",
+    "Amir",
+    "Novita",
+    "Sinta",
+    "Reni",
+    "Rifki",
+    "Reta"
+  ],
+  "pin_mapping": {
+    "Pak Ardian": "6079",
+    "Bu Nisya": "3644",
+    "Mada": "1634",
+    "Riza": "5960",
+    "Yudi (Sdek)": "9243",
+    "Rizal": "9908",
+    "Amir": "5049",
+    "Novita": "4635",
+    "Sinta": "1116",
+    "Reni": "9808",
+    "Rifki": "9064",
+    "Reta": "3318"
+  }
+}

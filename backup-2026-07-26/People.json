@@ -1,0 +1,22 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "id": "c494cf7e-9f24-8275-bc35-81ad3904db11",
+      "createdAt": "2026-06-26T18:50:00.000Z",
+      "_editTime": "2026-06-26T18:50:00.000Z",
+      "Name": "Asad mada",
+      "About": "",
+      "Email": null,
+      "Person": [
+        "Asad mada"
+      ],
+      "Membership Type": "Workspace owner"
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_database",
+  "page_or_database": {},
+  "request_id": "bd5ee344-a000-4ba9-87ac-4e67f4337555"
+}

@@ -1,0 +1,153 @@
+{
+  "audit_date": "2026-07-26",
+  "audit_version": "2.0 - corrected field names",
+  "db_ids": {
+    "KPI Tracker": "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
+    "Scope of Work": "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
+    "Program Kerja": "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
+    "Jobdesk Harian": "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
+    "People": "d3d4cf7e-9f24-82df-b0d8-014512d331ec"
+  },
+  "totals": {
+    "kpi": 48,
+    "sow": 38,
+    "program": 6,
+    "jobdesk": 33,
+    "people": 1,
+    "total": 126
+  },
+  "sow_bobot_per_pic": {
+    "Reta": 100,
+    "Rifki": 100,
+    "Reni": 100,
+    "Sinta": 100,
+    "Novita": 100,
+    "Amir": 100,
+    "Rizal": 100,
+    "Yudi (Sdek)": 100,
+    "Riza": 100,
+    "Mada": 100,
+    "Bu Nisya": 55,
+    "Pak Ardian": 55
+  },
+  "pic_list_12": [
+    "Pak Ardian",
+    "Bu Nisya",
+    "Mada",
+    "Riza",
+    "Yudi (Sdek)",
+    "Rizal",
+    "Amir",
+    "Novita",
+    "Sinta",
+    "Reni",
+    "Rifki",
+    "Reta"
+  ],
+  "pic_role_mapping": {
+    "Pak Ardian": "Owner",
+    "Bu Nisya": "Legal",
+    "Mada": "Operasional",
+    "Riza": "Sales",
+    "Yudi (Sdek)": "Sales Field",
+    "Rizal": "Operasional",
+    "Amir": "Finance",
+    "Novita": "Admin",
+    "Sinta": "Admin",
+    "Reni": "Marketing",
+    "Rifki": "Marketing",
+    "Reta": "Marketing"
+  },
+  "program_summary": [
+    {
+      "name": "Ekspansi media 3 pilar",
+      "pic": "Reni",
+      "progress": 60,
+      "budget": 12000000,
+      "actual": 0,
+      "deadline": "2026-09-30",
+      "status": "On Track"
+    },
+    {
+      "name": "Pipeline closing Q3 (12 unit)",
+      "pic": "Riza",
+      "progress": 40,
+      "budget": 8000000,
+      "actual": 0,
+      "deadline": "2026-09-30",
+      "status": "On Track"
+    },
+    {
+      "name": "SOP 12 komponen penutup H1 → H2",
+      "pic": "Mada",
+      "progress": 10,
+      "budget": 0,
+      "actual": 0,
+      "deadline": "2026-08-30",
+      "status": "On Track"
+    },
+    {
+      "name": "Coaching 3 pilar Mada (KPI/SOP/Margin)",
+      "pic": "Mada",
+      "progress": 50,
+      "budget": 0,
+      "actual": 0,
+      "deadline": "2026-09-20",
+      "status": "On Track"
+    },
+    {
+      "name": "Onboarding admin polyvalent",
+      "pic": "Novita",
+      "progress": 20,
+      "budget": 5000000,
+      "actual": 0,
+      "deadline": "2026-10-15",
+      "status": "Planning"
+    },
+    {
+      "name": "Ekspansi klien Q3 2026",
+      "pic": "Mada",
+      "progress": 35,
+      "budget": 50000000,
+      "actual": 0,
+      "deadline": "2026-09-30",
+      "status": "On Track"
+    }
+  ],
+  "kpi_summary": {
+    "total": 48,
+    "on_track": 37,
+    "achieved": 9,
+    "at_risk": 2,
+    "sum_target": 21001616,
+    "sum_actual": 5050933,
+    "achievement_pct": 24.1,
+    "empty_actual": 13,
+    "no_bukti": 48
+  },
+  "jobdesk_summary": {
+    "total": 33,
+    "done": 3,
+    "in_progress": 16,
+    "todo": 14,
+    "with_bukti": 0,
+    "with_approval": 0,
+    "overdue_yesterday": 30,
+    "date_range": "2026-07-25 only"
+  },
+  "improvements_status": {
+    "sow_bobot_filled": true,
+    "program_progress_filled": true,
+    "program_budget_filled": "5/6",
+    "program_actual_spend": "0/6 — expense tracking belum aktif",
+    "jobdesk_actual_output": "0/33 — PIC belum update hasil",
+    "jobdesk_approval_flow": "0/33 — workflow approval belum jalan",
+    "jobdesk_bukti": "0/33 — evidence belum diupload",
+    "kpi_bukti": "0/48 — KPI evidence kosong semua",
+    "kpi_catatan": "13/48 (27%) — Owner jarang kasih catatan"
+  },
+  "missing_db": {
+    "improvisasi": "NOT EXIST — perlu create",
+    "divisi": "NOT EXIST — perlu create atau pakai field di People"
+  }
+}
