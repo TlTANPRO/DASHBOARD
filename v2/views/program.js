@@ -120,7 +120,17 @@ function renderList(canEdit) {
       { key: "Quarter", label: "Quarter", render: (r) => r.Quarter ? `<span class="pill pill-muted">${escapeHTML(r.Quarter)}</span>` : "—" },
       { key: "Progress", label: "Progress", align: "right", render: (r) => `<span class="td-edit num" data-field="Progress" data-id="${escapeHTML(r.id)}">${r.Progress != null ? fmtPct(r.Progress, 0) : "—"}</span>` },
       { key: "Budget", label: "Budget", align: "right", render: (r) => fmtIDR(r.Budget) },
-      { key: "Deadline", label: "Deadline", render: (r) => fmtDate(r.Deadline) },
+      { key: "ActualSpend", label: "Actual Spend", align: "right", render: (r) => {
+        const v = r["Actual Spend (Rp)"] || r["ActualSpend"] || 0;
+        return `<span class="t-mono t-sm">${fmtIDR(v)}</span>`;
+      }},
+      { key: "Risiko", label: "Risiko", sortable: true, truncate: true, render: (r) => `<span class="t-sm" title="${escapeHTML(r.Risiko || "")}">${escapeHTML((r.Risiko || "—").slice(0, 30))}${(r.Risiko || "").length > 30 ? "…" : ""}</span>` },
+      { key: "TanggalMulai", label: "Mulai", render: (r) => fmtDate(r["Tanggal Mulai"]) },
+      { key: "Deadline", label: "Deadline", render: (r) => {
+        const d = fmtDate(r.Deadline);
+        const overdue = r.Deadline && r.Progress < 100 && new Date(r.Deadline) < new Date();
+        return `<div>${d}${overdue ? ` <span class="carry-badge" title="overdue">⚠</span>` : ""}</div>`;
+      }},
       { key: "Status", label: "Status", render: (r) => `<span class="td-edit" data-field="Status" data-id="${escapeHTML(r.id)}">${statusPill(r.Status)}</span>` },
       ...(canEdit ? [{
         key: "_actions",

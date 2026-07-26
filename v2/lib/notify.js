@@ -59,3 +59,38 @@ export const success = (msg, opts) => toast("success", msg, opts);
 export const warning = (msg, opts) => toast("warning", msg, opts);
 export const danger = (msg, opts) => toast("danger", msg, opts);
 export const info = (msg, opts) => toast("info", msg, opts);
+
+/**
+ * Show a confirmation modal with custom title, body, and danger variant.
+ * Returns a Promise<boolean> — true if confirmed, false otherwise.
+ */
+export function confirmDialog({ title = "Konfirmasi", body = "", danger = false } = {}) {
+  return new Promise((resolve) => {
+    const modal = document.createElement("div");
+    modal.className = "modal-backdrop";
+    modal.innerHTML = `
+      <div class="modal" style="max-width:420px">
+        <h2 class="modal-title">${escapeHtml(title)}</h2>
+        <div class="modal-body" style="color:var(--text-secondary);font-size:14px;line-height:1.5">${escapeHtml(body)}</div>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" data-cancel>Batal</button>
+          <button class="btn ${danger ? "btn-primary" : "btn-primary"}" data-ok style="${danger ? "background:var(--danger);border-color:var(--danger)" : ""}">${danger ? "Hapus" : "OK"}</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    const close = (val) => { modal.remove(); resolve(val); };
+    modal.querySelector("[data-cancel]").addEventListener("click", () => close(false));
+    modal.querySelector("[data-ok]").addEventListener("click", () => close(true));
+    modal.addEventListener("click", (e) => { if (e.target === modal) close(false); });
+  });
+}
+
+function escapeHtml(s) {
+  return String(s || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}

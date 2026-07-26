@@ -209,6 +209,7 @@ function bindEvents(canEdit, picList) {
           }});
         }
         openDetail({ record: rec, schema: buildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"], actions });
+        }
       }
     });
   });

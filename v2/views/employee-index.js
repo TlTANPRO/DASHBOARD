@@ -109,7 +109,7 @@ function calcScore(picName, kpi, sow, jd, prog) {
   const _now = new Date();
   const _7d = new Date(_now - 7 * 86400000);
   const _30d = new Date(_now - 30 * 86400000);
-  const picJd = jd.filter(j => j.PIC === picName && j.Status === "Done");
+  const picJdDone = jd.filter(j => j.PIC === picName && j.Status === "Done");
   const picSow = sow.filter(s => s.PIC === picName);
   const sowScore = picSow.length > 0 ?
     Math.min(100, picSow.reduce((s, sw) => {
@@ -117,7 +117,7 @@ function calcScore(picName, kpi, sow, jd, prog) {
       const bobot = Number(sw["Bobot (%)"]) || 0;
       const freq = (sw.Frekuensi || "").toLowerCase();
       const swKw = (sw.Deskripsi || "").toLowerCase().split(/\s+/).filter(w => w.length > 4);
-      const rel = picJd.filter(j => swKw.length === 0 || swKw.some(k => (j.Aktivitas || "").toLowerCase().includes(k)));
+      const rel = picJdDone.filter(j => swKw.length === 0 || swKw.some(k => (j.Aktivitas || "").toLowerCase().includes(k)));
       let req = 0, dn = 0;
       if (freq.includes("harian")) { req = 7; dn = rel.filter(j => new Date(j.Tanggal) >= _7d).length; }
       else if (freq.includes("mingguan")) { req = 1; dn = rel.filter(j => new Date(j.Tanggal) >= _7d).length; }
