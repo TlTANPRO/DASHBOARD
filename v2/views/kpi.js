@@ -145,8 +145,10 @@ function draw() {
   `;
 
   bindEvents(canEdit, picList);
-  if (state.view === "list") wirePagination(root)
-    wireRowClicks(root, (rec) => { try { const r = state.data.find(x => x.id === rec); if (r) { openDetail({ record: r, schema: kpiBuildSchema(r), title: r.Indikator || r["KPI ID"], actions: [] }); } else { console.warn("Row not found:", rec); } } catch(err) { console.error("row click error:", err); } });;
+  if (state.view === "list") {
+    wirePagination(root);
+    wireRowClicks(root, (rec) => { try { const r = state.data.find(x => x.id === rec); if (r) { openDetail({ record: r, schema: kpiBuildSchema(r), title: r.Indikator || r["KPI ID"], actions: [] }); } else { console.warn("Row not found:", rec); } } catch(err) { console.error("row click error:", err); } });
+  }
 }
 
 function renderList(canEdit) {
