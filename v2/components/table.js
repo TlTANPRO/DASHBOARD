@@ -104,10 +104,12 @@ export function wireRowClicks(rootEl, onRowClick) {
   if (!onRowClick) return;
   const rows = rootEl.querySelectorAll("tr[data-row][data-row-id]");
   if (rows.length === 0) return;
+  console.log("wireRowClicks: attaching to", rows.length, "rows");
   rows.forEach((tr) => {
     tr.addEventListener("click", (e) => {
       // Ignore clicks on checkboxes, buttons, inputs
       if (e.target.closest("input, button, [data-action], .td-edit, a")) return;
+      console.log("wireRowClicks click fired for", tr.dataset.rowId);
       try {
         onRowClick(tr.dataset.rowId, tr);
       } catch (err) {
