@@ -32,6 +32,18 @@ const views = {
   pricing: () => import("./views/pricing.js").then((m) => m.renderPricing()),
   glosarium: () => import("./views/glosarium.js").then((m) => m.renderGlosarium()),
   settings: () => import("./views/settings.js").then((m) => m.renderSettings()),
+  employee: (params) => {
+    if (params && params[0]) {
+      return import("./views/employee-detail.js").then((m) => m.renderEmployeeDetail(params));
+    }
+    return import("./views/employee-index.js").then((m) => m.renderEmployeeIndex());
+  },
+  division: (params) => {
+    if (params && params[0]) {
+      return import("./views/division-index.js").then((m) => m.renderDivisionDetail(params));
+    }
+    return import("./views/division-index.js").then((m) => m.renderDivisionIndex());
+  },
 };
 
 for (const [name, handler] of Object.entries(views)) {
