@@ -1,9 +1,5 @@
-// sw.js — Service worker untuk PWA offline support (network-first)
-const CACHE = "dvb2-v2.0.0";
-const ASSETS = [
-  "/DASHBOARD/v2/",
-  "/DASHBOARD/v2/manifest.json",
-];
+// sw.js — Service worker dengan network-first + auto cleanup
+const CACHE = "dvb2-v3.0.0";
 
 self.addEventListener("install", (e) => {
   self.skipWaiting();
@@ -12,7 +8,7 @@ self.addEventListener("install", (e) => {
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
+      Promise.all(keys.map((k) => caches.delete(k)))
     ).then(() => self.clients.claim())
   );
 });
@@ -20,11 +16,9 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
   const url = new URL(e.request.url);
-  // Skip Notion API & Worker (always network)
   if (!url.hostname.includes("tltanpro.github.io") && !url.hostname.includes("localhost")) return;
 
-  // Network-first for HTML/JS/CSS (always get latest)
-  // Cache fallback for offline
+  // Network-first: always fetch fresh, fallback to cache
   e.respondWith(
     fetch(e.request)
       .then((res) => {
