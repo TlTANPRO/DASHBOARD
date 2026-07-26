@@ -98,3 +98,15 @@ export function wirePagination(rootEl) {
     render();
   });
 }
+
+// Wire row click handlers for tables rendered with onRowClick
+export function wireRowClicks(rootEl, onRowClick) {
+  if (!onRowClick) return;
+  rootEl.querySelectorAll("tr[data-row][data-row-id]").forEach((tr) => {
+    tr.addEventListener("click", (e) => {
+      // Ignore clicks on checkboxes, buttons, inputs
+      if (e.target.closest("input, button, [data-action], .td-edit, a")) return;
+      onRowClick(tr.dataset.rowId, tr);
+    });
+  });
+}

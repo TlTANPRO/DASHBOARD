@@ -1,6 +1,6 @@
 // views/kpi.js — KPI CRUD with view switcher (List/Board), inline edit, bulk ops, aggregation
 import { API } from "../lib/api.js";
-import { dataTable, wirePagination } from "../components/table.js";
+import { dataTable, wirePagination , wireRowClicks} from "../components/table.js";
 import { filterBar } from "../components/filter.js";
 import { emptyState, loadingSkeleton } from "../components/empty.js";
 import { statusPill } from "../components/pill.js";
@@ -145,7 +145,8 @@ function draw() {
   `;
 
   bindEvents(canEdit, picList);
-  if (state.view === "list") wirePagination(root);
+  if (state.view === "list") wirePagination(root)
+    wireRowClicks(root, (rec) => { const r = state.data.find(x => x.id === rec); if (r) openDetail({ record: r, schema: kpiBuildSchema(r), title: r.Indikator || r["KPI ID"], actions: [] }); });;
 }
 
 function renderList(canEdit) {

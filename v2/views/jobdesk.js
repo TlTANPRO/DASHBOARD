@@ -1,6 +1,6 @@
 // views/jobdesk.js — Jobdesk with List/Board/Calendar views, inline edit, bulk ops
 import { API } from "../lib/api.js";
-import { dataTable, wirePagination } from "../components/table.js";
+import { dataTable, wirePagination , wireRowClicks} from "../components/table.js";
 import { filterBar } from "../components/filter.js";
 import { loadingSkeleton } from "../components/empty.js";
 import { statusPill } from "../components/pill.js";
@@ -123,7 +123,8 @@ function draw() {
   `;
 
   bindEvents(canEdit, picList);
-  if (state.view === "list") wirePagination(root);
+  if (state.view === "list") wirePagination(root)
+    wireRowClicks(root, (rec) => { const r = state.data.find(x => x.id === rec); if (r) openDetail({ record: r, schema: jobdeskBuildSchema(r), title: r.Aktivitas || r["Jobdesk ID"], actions: [] }); });;
 }
 
 function renderList(canEdit) {
