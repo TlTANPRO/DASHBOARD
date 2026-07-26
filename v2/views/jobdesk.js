@@ -69,6 +69,8 @@ function draw() {
         <p class="t-muted t-sm">${state.filtered.length} dari ${state.data.length} entri${state.selected.size > 0 ? ` · <span class="bulk-count">${state.selected.size} dipilih</span>` : ""}</p>
       </div>
       ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah Jobdesk</button>' : ""}
+        <button class="btn btn-outline" id="btn-export" title="Export CSV">⬇ Export</button>
+        <button class="btn btn-outline" id="btn-save-view" title="Simpan view">⭐ Save</button>
     </div>
 
     <div class="view-tabs">
@@ -189,7 +191,35 @@ function bindEvents(canEdit, picList) {
 
   document.getElementById("btn-add")?.addEventListener("click", () => openEditor(null));
 
-  document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
+  document.q
+
+  // Export CSV
+  document.getElementById("btn-export")?.addEventListener("click", async () => {
+    const { exportCSV } = await import("../lib/exporter.js");
+    const cols = [
+      { key: "Jobdesk ID", label: "Jobdesk ID" },
+      { key: "Aktivitas", label: "Aktivitas" },
+      { key: "PIC", label: "PIC" },
+      { key: "Kategori", label: "Kategori" },
+      { key: "Prioritas", label: "Prioritas" },
+      { key: "Tanggal", label: "Tanggal" },
+      { key: "Target Output", label: "Target" },
+      { key: "Status", label: "Status" },
+      { key: "Approval_By", label: "Approved By" },
+    ];
+    exportCSV(state.filtered, cols, `Jobdesk-${new Date().toISOString().split("T")[0]}.csv`);
+    success(`Exported ${state.filtered.length} jobdesk`);
+  });
+
+  document.getElementById("btn-save-view")?.addEventListener("click", async () => {
+    const name = prompt("Nama view ini:", `Jobdesk ${new Date().toLocaleDateString("id-ID")}`);
+    if (!name) return;
+    const { saveView } = await import("../lib/saved-views.js");
+    saveView("jobdesk", name, {
+      filterPIC: state.filterPIC, filterOverdue: state.filterOverdue, filterStatus: state.filterStatus, search: state.search,
+    });
+    success(`View "${name}" tersimpan`);
+  });uerySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) {

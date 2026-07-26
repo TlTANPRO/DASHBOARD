@@ -64,6 +64,8 @@ function draw() {
         <p class="t-muted t-sm">${state.filtered.length} dari ${state.data.length} program${state.selected.size > 0 ? ` · <span class="bulk-count">${state.selected.size} dipilih</span>` : ""}</p>
       </div>
       ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah Program</button>' : ""}
+        <button class="btn btn-outline" id="btn-export" title="Export CSV">⬇ Export</button>
+        <button class="btn btn-outline" id="btn-save-view" title="Simpan view">⭐ Save</button>
     </div>
 
     <div class="view-tabs">
@@ -189,7 +191,38 @@ function bindEvents(canEdit, picList) {
 
   document.getElementById("btn-add")?.addEventListener("click", () => openEditor(null));
 
-  document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
+  document.q
+
+  // Export CSV
+  document.getElementById("btn-export")?.addEventListener("click", async () => {
+    const { exportCSV } = await import("../lib/exporter.js");
+    const cols = [
+      { key: "Program ID", label: "Program ID" },
+      { key: "Judul", label: "Nama Program" },
+      { key: "PIC", label: "PIC" },
+      { key: "Quarter", label: "Quarter" },
+      { key: "Tahun", label: "Tahun" },
+      { key: "Progress", label: "Progress" },
+      { key: "Budget", label: "Budget" },
+      { key: "ActualSpend", label: "Actual Spend" },
+      { key: "Risiko", label: "Risiko" },
+      { key: "TanggalMulai", label: "Mulai" },
+      { key: "Deadline", label: "Deadline" },
+      { key: "Status", label: "Status" },
+    ];
+    exportCSV(state.filtered, cols, `Program-${new Date().toISOString().split("T")[0]}.csv`);
+    success(`Exported ${state.filtered.length} programs`);
+  });
+
+  document.getElementById("btn-save-view")?.addEventListener("click", async () => {
+    const name = prompt("Nama view ini:", `Program ${new Date().toLocaleDateString("id-ID")}`);
+    if (!name) return;
+    const { saveView } = await import("../lib/saved-views.js");
+    saveView("program", name, {
+      filterPIC: state.filterPIC, filterQuarter: state.filterQuarter, filterStatus: state.filterStatus, search: state.search,
+    });
+    success(`View "${name}" tersimpan`);
+  });uerySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) {

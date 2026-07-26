@@ -77,6 +77,8 @@ function draw() {
       </div>
       <div class="row gap-2">
         ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah KPI</button>' : ""}
+        <button class="btn btn-outline" id="btn-export" title="Export CSV (Cmd+E)">⬇ Export</button>
+        <button class="btn btn-outline" id="btn-save-view" title="Simpan filter ini sebagai view">⭐ Save</button>
       </div>
     </div>
 
@@ -234,13 +236,69 @@ function bindEvents(canEdit, picList) {
   // Add
   document.getElementById("btn-add")?.addEventListener("click", () => openEditor(null));
 
+  // Export CSV
+  document.getElementById("btn-export")?.addEventListener("click", async () => {
+    const { exportCSV } = await import("../lib/exporter.js");
+    const cols = [
+      { key: "KPI ID", label: "KPI ID" },
+      { key: "Indikator", label: "Indikator" },
+      { key: "PIC", label: "PIC" },
+      { key: "Tipe", label: "Tipe" },
+      { key: "Periode", label: "Periode" },
+      { key: "Divisi", label: "Divisi" },
+      { key: "Target", label: "Target" },
+      { key: "Realisasi", label: "Realisasi" },
+      { key: "Status", label: "Status" },
+      { key: "Edit_Time", label: "Last Update" },
+    ];
+    window.__dvb2CurrentData = state.filtered;
+    window.__dvb2CurrentCols = cols;
+    exportCSV(state.filtered, cols, `KPI-${new Date().toISOString().split("T")[0]}.csv`);
+    success(`Exported ${state.filtered.length} entries`);
+  });
+
+  // Save View
+  document.getElementById("btn-save-view")?.addEventListener("click", async () => {
+    const name = prompt("Nama view ini:", `KPI ${new Date().toLocaleDateString("id-ID")}`);
+    if (!name) return;
+    const { saveView } = await import("../lib/saved-views.js");
+    saveView("kpi", name, {
+      filterPIC: state.filterPIC,
+      filterTipe: state.filterTipe,
+      filterStatus: state.filterStatus,
+      search: state.search,
+    });
+    success(`View "${name}" tersimpan`);
+  });
+
   // Edit (button)
   document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) {
         if (canEdit && Session.isOwner()) openEditor(rec);
-        else openDetail({ record: rec, schema: buildSchema(rec), title: rec.Indikator || rec["KPI ID"] });
+        else openDetail({ record: rec, schema: buildSchema(rec), title: rec.Indikator || rec["KPI ID"], actions: [
+        { key: "rollup", label: "🔗 Related Items", variant: "btn-outline", onClick: async (r) => {
+          const { kpiRollup } = await import("../lib/rollup.js");
+          const data = await kpiRollup(r.Indikator || r["KPI ID"]);
+          const { openModal } = await import("../lib/modal.js");
+          openModal({
+            title: "Cross-DB Rollup: " + (r.Indikator || r["KPI ID"]),
+            body: (() => {
+              const div = document.createElement("div");
+              div.innerHTML = `<p>${data.summary}</p>
+                <h4>Jobdesk (${data.jobdesk.length})</h4>
+                <ul>${data.jobdesk.map(j => `<li>${j.Aktivitas} — <em>${j.Status}</em></li>`).join("") || "<li>—</li>"}</ul>
+                <h4>Program (${data.program.length})</h4>
+                <ul>${data.program.map(p => `<li>${p.Judul} — <em>${p.Progress}%</em></li>`).join("") || "<li>—</li>"}</ul>
+                <h4>SOW (${data.sow.length})</h4>
+                <ul>${data.sow.map(s => `<li>${s.Deskripsi} — <em>${s.Status}</em></li>`).join("") || "<li>—</li>"}</ul>`;
+              return div;
+            })(),
+            actions: [{ label: "Tutup", variant: "btn-ghost" }],
+          });
+        }},
+      ] });
       }
     });
   });

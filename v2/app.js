@@ -127,6 +127,32 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-menu")?.addEventListener("click", () => {
     document.querySelector(".sidenav")?.classList.toggle("open");
   });
+
+  // Quick Add button
+  import("./components/quick-add.js").then((m) => {
+    document.getElementById("btn-quick-add")?.addEventListener("click", () => m.openQuickAdd());
+  });
+});
+
+// Keyboard shortcut: Q to open quick add
+document.addEventListener("keydown", (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+    e.preventDefault();
+    import("./components/search.js").then((m) => m.openSearch());
+  }
+  if (e.key === "q" && !e.metaKey && !e.ctrlKey && !e.altKey &&
+      !["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) {
+    e.preventDefault();
+    import("./components/quick-add.js").then((m) => m.openQuickAdd());
+  }
+  if ((e.metaKey || e.ctrlKey) && e.key === "e") {
+    e.preventDefault();
+    import("./lib/exporter.js").then((m) => {
+      const data = window.__dvb2CurrentData || [];
+      const cols = window.__dvb2CurrentCols || [];
+      if (data.length) m.exportCSV(data, cols, "export.csv");
+    });
+  }
 });
 
 async function showLoginModal() {

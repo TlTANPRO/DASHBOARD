@@ -1,6 +1,7 @@
-// lib/theme.js — theme switcher (dark/light/auto)
+// lib/theme.js — theme switcher (dark/light/sepia/auto)
 
 const STORAGE_KEY = "dvb2-theme";
+const THEMES = ["dark", "light", "sepia", "dark"]; // cycle: dark → light → sepia → dark
 
 export function initTheme() {
   const saved = localStorage.getItem(STORAGE_KEY) || "dark";
@@ -12,10 +13,14 @@ export function initTheme() {
     btn.dataset.themeBound = "1";
     btn.addEventListener("click", () => {
       const current = getTheme();
-      const next = current === "dark" ? "light" : "dark";
+      const idx = THEMES.indexOf(current);
+      const next = THEMES[(idx + 1) % THEMES.length];
       applyTheme(next);
-      localStorage.setItem(STORAGE_KEY, next);
-      btn.setAttribute("aria-pressed", next === "light" ? "true" : "false");
+      try { localStorage.setItem(STORAGE_KEY, next); } catch {}
+      btn.setAttribute("aria-pressed", next === "light" || next === "sepia" ? "true" : "false");
+      btn.setAttribute("title", `Theme: ${next}`);
+      // Notify listeners
+      window.dispatchEvent(new CustomEvent("dvb2-theme-change", { detail: { theme: next } }));
     });
   }
 }
@@ -25,7 +30,8 @@ export function applyTheme(name) {
   // Update theme color meta
   const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) {
-    meta.setAttribute("content", name === "light" ? "#ffffff" : "#0d1117");
+    const colors = { dark: "#0a0a0a", light: "#ffffff", sepia: "#f4ecd8" };
+    meta.setAttribute("content", colors[name] || "#0a0a0a");
   }
 }
 
@@ -33,9 +39,6 @@ export function getTheme() {
   return document.documentElement.getAttribute("data-theme") || "dark";
 }
 
-export function toggleTheme() {
-  const current = getTheme();
-  const next = current === "dark" ? "light" : "dark";
-  applyTheme(next);
-  localStorage.setItem(STORAGE_KEY, next);
+export function getThemes() {
+  return ["dark", "light", "sepia"];
 }

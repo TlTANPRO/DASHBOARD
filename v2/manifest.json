@@ -1,0 +1,31 @@
+{
+  "name": "Dashboard Syahfalah Internal",
+  "short_name": "DASHBOARD",
+  "description": "Management dashboard untuk PT Syahfalah + Lembayung Wanantara Padha",
+  "start_url": "/DASHBOARD/v2/",
+  "scope": "/DASHBOARD/v2/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ff5f57",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "business"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%23ff5f57'/%3E%3Ctext x='96' y='130' text-anchor='middle' font-family='Inter,system-ui' font-size='96' font-weight='700' fill='%230a0a0a'%3ESL%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='84' fill='%23ff5f57'/%3E%3Ctext x='256' y='341' text-anchor='middle' font-family='Inter,system-ui' font-size='256' font-weight='700' fill='%230a0a0a'%3ESL%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Employee", "short_name": "Employee", "url": "/DASHBOARD/v2/#/employee" },
+    { "name": "Jobdesk", "short_name": "Jobdesk", "url": "/DASHBOARD/v2/#/jobdesk" },
+    { "name": "Improvisasi", "short_name": "Improvisasi", "url": "/DASHBOARD/v2/#/improvisasi" }
+  ]
+}
