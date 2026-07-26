@@ -1,0 +1,662 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "id": "3a84cf7e-9f24-8157-a7e4-e79123d2948b",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Hashtag research + trend watch",
+      "Edit_Time": "2026-07-25T14:24:29.307Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Reta",
+      "Status": "Active",
+      "Kategori": [
+        "Pengembangan"
+      ],
+      "SOW ID": "hashtag-research-trend-watch"
+    },
+    {
+      "id": "3a84cf7e-9f24-8161-a3e8-d3672fb29eec",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Insight report mingguan",
+      "Edit_Time": "2026-07-25T14:24:28.495Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Reta",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "insight-report-mingguan-reta"
+    },
+    {
+      "id": "3a84cf7e-9f24-819f-b91b-c6e7f34fd745",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 40,
+      "Deskripsi": "Produksi konten Carousel + feed",
+      "Edit_Time": "2026-07-25T14:24:27.650Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Reta",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "produksi-konten-carousel-feed"
+    },
+    {
+      "id": "3a84cf7e-9f24-8167-88d5-e76cae351235",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Engagement + reply komentar",
+      "Edit_Time": "2026-07-25T14:24:26.805Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Rifki",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "engagement-reply-komentar"
+    },
+    {
+      "id": "3a84cf7e-9f24-81f9-9388-da0d529eb2e7",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Posting schedule harian",
+      "Edit_Time": "2026-07-25T14:24:25.977Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Rifki",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "posting-schedule-harian"
+    },
+    {
+      "id": "3a84cf7e-9f24-813a-8a3b-c7807a3ccc03",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 40,
+      "Deskripsi": "Produksi konten Story + Reels",
+      "Edit_Time": "2026-07-25T14:24:25.086Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Rifki",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "produksi-konten-story-reels"
+    },
+    {
+      "id": "3a84cf7e-9f24-81b6-8540-c64319af797c",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 20,
+      "Deskripsi": "Insight report mingguan",
+      "Edit_Time": "2026-07-25T14:24:24.258Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Reni",
+      "Status": "Active",
+      "Kategori": [
+        "Reporting"
+      ],
+      "SOW ID": "insight-report-mingguan-reni"
+    },
+    {
+      "id": "3a84cf7e-9f24-81e2-851a-c669d320763c",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Supervisi Rifki + Reta (coaching)",
+      "Edit_Time": "2026-07-25T14:24:23.476Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Reni",
+      "Status": "Active",
+      "Kategori": [
+        "Pengembangan"
+      ],
+      "SOW ID": "supervisi-rifki-reta-coaching"
+    },
+    {
+      "id": "3a84cf7e-9f24-81eb-94e2-c0d5f463920f",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "UTM tracking + analytics",
+      "Edit_Time": "2026-07-25T14:24:22.459Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Reni",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "utm-tracking-analytics"
+    },
+    {
+      "id": "3a84cf7e-9f24-81ca-8ffc-f9ccc2734a11",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:54:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Fee media closing-based (3 pilar)",
+      "Edit_Time": "2026-07-25T14:24:21.678Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Reni",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional",
+        "Strategis"
+      ],
+      "SOW ID": "fee-media-closing-based-3-pilar"
+    },
+    {
+      "id": "3a84cf7e-9f24-81da-8d9a-cca5185d9d44",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 35,
+      "Deskripsi": "Block PO bila spek turun",
+      "Edit_Time": "2026-07-25T14:24:20.771Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Sinta",
+      "Status": "Active",
+      "Kategori": [
+        "Compliance"
+      ],
+      "SOW ID": "block-po-bila-spek-turun"
+    },
+    {
+      "id": "3a84cf7e-9f24-81eb-8ea9-cd756ececa49",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Best price 3 vendor + retensi",
+      "Edit_Time": "2026-07-25T14:24:19.880Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Sinta",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "best-price-3-vendor-retensi"
+    },
+    {
+      "id": "3a84cf7e-9f24-81d5-a644-c0739990bb1d",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 35,
+      "Deskripsi": "Stopper kualitas material",
+      "Edit_Time": "2026-07-25T14:24:19.004Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Sinta",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional",
+        "Compliance"
+      ],
+      "SOW ID": "stopper-kualitas-material"
+    },
+    {
+      "id": "3a84cf7e-9f24-81d3-a591-c9dca724bf25",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Onboarding polyvalent (cross-train Sinta)",
+      "Edit_Time": "2026-07-25T14:24:18.066Z",
+      "Frekuensi": "Bulanan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Novita",
+      "Status": "Active",
+      "Kategori": [
+        "Pengembangan"
+      ],
+      "SOW ID": "onboarding-polyvalent-cross-train-sinta"
+    },
+    {
+      "id": "3a84cf7e-9f24-8185-9de0-ffe13c77c6ed",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Closing file + arsip dokumen",
+      "Edit_Time": "2026-07-25T14:24:17.252Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Novita",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "closing-file-arsip-dokumen"
+    },
+    {
+      "id": "3a84cf7e-9f24-813c-817b-d828eff24335",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 40,
+      "Deskripsi": "Pemberkasan klien + SP3K tracking",
+      "Edit_Time": "2026-07-25T14:24:16.440Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Novita",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional",
+        "Compliance"
+      ],
+      "SOW ID": "pemberkasan-klien-sp3k-tracking"
+    },
+    {
+      "id": "3a84cf7e-9f24-8186-8540-c4db1fc5014f",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 35,
+      "Deskripsi": "Quality check + material handling",
+      "Edit_Time": "2026-07-25T14:24:15.612Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Amir",
+      "Status": "Active",
+      "Kategori": [
+        "Compliance"
+      ],
+      "SOW ID": "quality-check-material-handling"
+    },
+    {
+      "id": "3a84cf7e-9f24-8190-84ed-f2459d493aca",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Koordinasi subkontraktor",
+      "Edit_Time": "2026-07-25T14:24:14.798Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Amir",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "koordinasi-subkontraktor"
+    },
+    {
+      "id": "3a84cf7e-9f24-817a-967e-e39c5aeedbe1",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:55:00.000Z",
+      "Bobot (%)": 35,
+      "Deskripsi": "Daily report lapangan + foto",
+      "Edit_Time": "2026-07-25T14:24:13.986Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Amir",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "daily-report-lapangan-foto"
+    },
+    {
+      "id": "3a84cf7e-9f24-8168-94dd-fe7d1c6e69ab",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:56:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Daily report progres lapangan",
+      "Edit_Time": "2026-07-25T14:24:13.125Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Rizal",
+      "Status": "Active",
+      "Kategori": [
+        "Reporting"
+      ],
+      "SOW ID": "daily-report-progres-lapangan"
+    },
+    {
+      "id": "3a84cf7e-9f24-81c6-aeec-f96472e8dd1a",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 20,
+      "Deskripsi": "Cross-check purchasing Sinta",
+      "Edit_Time": "2026-07-25T14:24:12.297Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Rizal",
+      "Status": "Active",
+      "Kategori": [
+        "Compliance"
+      ],
+      "SOW ID": "cross-check-purchasing-sinta"
+    },
+    {
+      "id": "3a84cf7e-9f24-81df-8c67-c3bff64128be",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Monitoring progres semua site",
+      "Edit_Time": "2026-07-25T14:24:11.500Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Rizal",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "monitoring-progres-semua-site"
+    },
+    {
+      "id": "3a84cf7e-9f24-81eb-988b-f5502a9c2e63",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Daily task proyek + brief mandor",
+      "Edit_Time": "2026-07-25T14:24:10.701Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Rizal",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "daily-task-proyek-brief-mandor"
+    },
+    {
+      "id": "3a84cf7e-9f24-8178-9f7d-cd9bf1df57aa",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 35,
+      "Deskripsi": "Walk-in接待 + presentasi spek",
+      "Edit_Time": "2026-07-25T14:24:09.513Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Yudi (Sdek)",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "walk-in-presentasi-spek"
+    },
+    {
+      "id": "3a84cf7e-9f24-814a-9a11-e8d799c54581",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Maintenance STB + after sales",
+      "Edit_Time": "2026-07-25T14:24:08.715Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Yudi (Sdek)",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "maintenance-stb-after-sales"
+    },
+    {
+      "id": "3a84cf7e-9f24-8130-8b60-cea22e42c46c",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 35,
+      "Deskripsi": "Closing pojok V4 walk-in konsumen",
+      "Edit_Time": "2026-07-25T14:24:07.668Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Yudi (Sdek)",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "closing-pojok-v4-walk-in-konsumen"
+    },
+    {
+      "id": "3a84cf7e-9f24-8197-97a7-ff13291d9015",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 20,
+      "Deskripsi": "Report CPL + ROAS mingguan",
+      "Edit_Time": "2026-07-25T14:24:06.809Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Riza",
+      "Status": "Active",
+      "Kategori": [
+        "Reporting"
+      ],
+      "SOW ID": "report-cpl-roas-mingguan"
+    },
+    {
+      "id": "3a84cf7e-9f24-8193-86a8-d93c2aa5144f",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Closing support + handover ke Novita",
+      "Edit_Time": "2026-07-25T14:24:05.965Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Riza",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "closing-support-handover-ke-novita"
+    },
+    {
+      "id": "3a84cf7e-9f24-819b-abf6-e6c52de898f8",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "CRM update + segmentasi lead",
+      "Edit_Time": "2026-07-25T14:24:05.058Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Riza",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "crm-update-segmentasi-lead"
+    },
+    {
+      "id": "3a84cf7e-9f24-81fd-b0a6-f6d1ca65b724",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:57:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Lead generation via Meta Ads + organik",
+      "Edit_Time": "2026-07-25T14:24:04.261Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Riza",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "lead-generation-via-meta-ads-organik"
+    },
+    {
+      "id": "3a84cf7e-9f24-815c-8e9f-e0c1a70b7b8f",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 20,
+      "Deskripsi": "Report mingguan ke owner",
+      "Edit_Time": "2026-07-25T14:24:03.448Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Mada",
+      "Status": "Active",
+      "Kategori": [
+        "Reporting"
+      ],
+      "SOW ID": "report-mingguan-ke-owner"
+    },
+    {
+      "id": "3a84cf7e-9f24-81bd-adf6-ecf1555a59b5",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Approval lintas fungsi (BAST, budget)",
+      "Edit_Time": "2026-07-25T14:24:02.478Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Mada",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "approval-lintas-fungsi-bast-budget"
+    },
+    {
+      "id": "3a84cf7e-9f24-81f6-8418-e9aea6dc5586",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Coaching 1-on-1 PIC",
+      "Edit_Time": "2026-07-25T14:24:01.650Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Mada",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "coaching-1-on-1-pic"
+    },
+    {
+      "id": "3a84cf7e-9f24-8105-ae5f-c66f4d037742",
+      "createdAt": "2026-07-25T14:24:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Konsolidasi KPI lintas divisi",
+      "Edit_Time": "2026-07-25T14:24:00.868Z",
+      "Frekuensi": "Harian",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Mada",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional",
+        "Strategis"
+      ],
+      "SOW ID": "konsolidasi-kpi-lintas-divisi"
+    },
+    {
+      "id": "3a84cf7e-9f24-81a8-9866-d8a27154bf7e",
+      "createdAt": "2026-07-25T14:23:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Audit mingguan front office + SP3K",
+      "Edit_Time": "2026-07-25T14:23:59.571Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Bu Nisya",
+      "Status": "Active",
+      "Kategori": [
+        "Operasional"
+      ],
+      "SOW ID": "audit-mingguan-front-office-sp3k"
+    },
+    {
+      "id": "3a84cf7e-9f24-8148-a004-faa91eda9ec3",
+      "createdAt": "2026-07-25T14:23:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Legal drafting + review kontrak",
+      "Edit_Time": "2026-07-25T14:23:58.787Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Bu Nisya",
+      "Status": "Active",
+      "Kategori": [
+        "Compliance",
+        "Operasional"
+      ],
+      "SOW ID": "legal-drafting-review-kontrak"
+    },
+    {
+      "id": "3a84cf7e-9f24-815b-a89b-c28ec8044a9f",
+      "createdAt": "2026-07-25T14:23:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 25,
+      "Deskripsi": "Final approve budget bulanan + kuartalan",
+      "Edit_Time": "2026-07-25T14:23:57.991Z",
+      "Frekuensi": "Bulanan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Pak Ardian",
+      "Status": "Active",
+      "Kategori": [
+        "Reporting"
+      ],
+      "SOW ID": "final-approve-budget-bulanan-kuartalan"
+    },
+    {
+      "id": "3a84cf7e-9f24-8196-8b5b-f990af0c05a2",
+      "createdAt": "2026-07-25T14:23:00.000Z",
+      "_editTime": "2026-07-25T18:58:00.000Z",
+      "Bobot (%)": 30,
+      "Deskripsi": "Strategic decision lintas divisi",
+      "Edit_Time": "2026-07-25T14:23:56.715Z",
+      "Frekuensi": "Mingguan",
+      "Effective From": "2026-01-01",
+      "Tahun": 2026,
+      "PIC": "Pak Ardian",
+      "Status": "Active",
+      "Kategori": [
+        "Strategis",
+        "Reporting"
+      ],
+      "SOW ID": "strategic-decision-lintas-divisi"
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_database",
+  "page_or_database": {},
+  "request_id": "6771b3ad-023e-4c5a-9872-16385b7b3dc3"
+}

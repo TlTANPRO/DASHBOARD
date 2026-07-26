@@ -1,0 +1,1404 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "database",
+      "id": "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
+      "cover": null,
+      "icon": null,
+      "created_time": "2026-07-25T10:57:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "3a84cf7e-9f24-81aa-97d2-0027ff14196f"
+      },
+      "last_edited_time": "2026-07-25T18:50:00.000Z",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "1. KPI Tracker",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "1. KPI Tracker",
+          "href": null
+        }
+      ],
+      "description": [],
+      "is_inline": false,
+      "properties": {
+        "Periode": {
+          "id": "%40%5Dgz",
+          "name": "Periode",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "e543c568-a601-4d51-9275-a523702455d4",
+                "name": "Mingguan",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6ff7b6bc-3db4-4ab2-ab63-98d87c925218",
+                "name": "Bulanan",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "081bdf4f-968a-44dc-8990-f99c06e55159",
+                "name": "Kuartalan",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Divisi": {
+          "id": "Ay~%3D",
+          "name": "Divisi",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "ca09c50e-5a1a-44cc-9082-d3b552670994",
+                "name": "Owner",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "83f6a6b8-1d30-45d8-b93a-bd5afec460e0",
+                "name": "Operasional",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "33cf207a-52a6-4f91-9e01-5e8dba770ba4",
+                "name": "Marketing",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "3e853192-3fa0-4a49-8f3c-186fb84caa05",
+                "name": "Proyek",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "7381a861-a9cf-4537-be0b-b1f5fef3efd7",
+                "name": "Media",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "67fa465a-b07e-412f-b425-363d7e574706",
+                "name": "Admin",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Satuan": {
+          "id": "CsZp",
+          "name": "Satuan",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "80eb9f4a-bfd2-437b-9c03-a8ba53b5732f",
+                "name": "%",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "cc27a72c-7725-41a1-ad49-37c2ae052ea1",
+                "name": "Unit",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "8b587939-f48e-4232-acd4-4b9bb14acbc3",
+                "name": "Rp",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "048e8c71-77b7-434c-9b5c-7f49a82f4424",
+                "name": "Closing",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "cc9c71c6-3a4e-410b-8eba-0ebb92c98ee5",
+                "name": "Lead",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "d8277ad9-78c6-4b5f-81b3-2577c024bf3a",
+                "name": "Jam",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "4b227f80-54a7-47f5-b2a1-7b7d0fce2402",
+                "name": "BAST",
+                "color": "gray",
+                "description": null
+              },
+              {
+                "id": "a4c808f6-99c7-4ecf-8ee9-e21ccf2ebd05",
+                "name": "Accident",
+                "color": "yellow",
+                "description": null
+              },
+              {
+                "id": "5b8a481e-7d4b-4890-a4f7-69107a59c382",
+                "name": "Report",
+                "color": "brown",
+                "description": null
+              },
+              {
+                "id": "a938a95f-38b0-4c5c-86ce-04561ddb48d5",
+                "name": "Complaint",
+                "color": "red",
+                "description": null
+              },
+              {
+                "id": "f7be414b-b3e1-4af8-abac-6ac6824ef4bd",
+                "name": "Vendor",
+                "color": "green",
+                "description": null
+              },
+              {
+                "id": "f5ccb978-0a4b-4655-bb7d-119abffbc23c",
+                "name": "Konten",
+                "color": "blue",
+                "description": null
+              },
+              {
+                "id": "a5b1c0dd-21ba-4866-82b5-50ecdbb4e877",
+                "name": "Decision",
+                "color": "orange",
+                "description": null
+              }
+            ]
+          }
+        },
+        "PIC": {
+          "id": "DhZd",
+          "name": "PIC",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "eb8909e4-027c-485b-a5d5-2c6cd23a49b6",
+                "name": "Pak Ardian",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "c2e8498a-afc7-4909-b232-d17df6f3fba1",
+                "name": "Bu Nisya",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6b5d02bc-ccc0-4e19-9623-9c7011685fbf",
+                "name": "Mada",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "29610ce3-2e67-49dc-9d90-1503f260d55c",
+                "name": "Riza",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "3c89ac9b-ddb0-4e41-9b84-8aa2c8258a05",
+                "name": "Yudi (Sdek)",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "2f3c4437-0070-46fa-b490-042fd3057f2e",
+                "name": "Rizal",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "f892c8c7-6398-498a-b1e0-79132e79885d",
+                "name": "Amir",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "14c58742-fa63-4df1-8e94-2592babee211",
+                "name": "Novita",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6893b098-1af2-41bf-b6bf-6615dd9bfde0",
+                "name": "Sinta",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "87bf08f4-db34-4a34-b6d8-56f67e560eca",
+                "name": "Reni",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "ee9e72d1-3007-4da3-9b1c-0e60a6b31821",
+                "name": "Rifki",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "5575bb46-332d-4077-91d3-daf772d509a4",
+                "name": "Reta",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Catatan": {
+          "id": "ETg_",
+          "name": "Catatan",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Status": {
+          "id": "EuCX",
+          "name": "Status",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "0a84c4af-455e-4073-a64a-ba73f2a40ca0",
+                "name": "On Track",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "1209ef50-6273-4c78-9ead-e8f7762b6acc",
+                "name": "At Risk",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "5276da0a-16d5-488b-83b3-6cf9a8dfd06f",
+                "name": "Off Track",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "49b3fe52-4839-4b62-975e-8ffc71ca9681",
+                "name": "Achieved",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "KPI": {
+          "id": "LgL%5D",
+          "name": "KPI",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Edit_Time": {
+          "id": "N%5Cj%5B",
+          "name": "Edit_Time",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Realisasi": {
+          "id": "NwAl",
+          "name": "Realisasi",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "Bukti": {
+          "id": "%5DxDc",
+          "name": "Bukti",
+          "description": null,
+          "type": "url",
+          "url": {}
+        },
+        "Tipe": {
+          "id": "egmb",
+          "name": "Tipe",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "d0a1b8f2-3769-49fa-a4c3-dad476fa57ac",
+                "name": "Personal",
+                "color": "blue",
+                "description": null
+              },
+              {
+                "id": "7e340118-cc29-4f72-9b4c-13cf7c9cf35f",
+                "name": "Divisi",
+                "color": "green",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Target": {
+          "id": "op~j",
+          "name": "Target",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "KPI ID": {
+          "id": "title",
+          "name": "KPI ID",
+          "description": null,
+          "type": "title",
+          "title": {}
+        }
+      },
+      "parent": {
+        "type": "page_id",
+        "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+      },
+      "url": "https://app.notion.com/p/3a84cf7e9f24819d95d8f951e6a1a6a2",
+      "public_url": null,
+      "in_trash": false,
+      "archived": false
+    },
+    {
+      "object": "database",
+      "id": "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
+      "cover": null,
+      "icon": null,
+      "created_time": "2026-07-25T10:57:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "3a84cf7e-9f24-81aa-97d2-0027ff14196f"
+      },
+      "last_edited_time": "2026-07-25T14:23:00.000Z",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "4. Jobdesk Harian + Target",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "4. Jobdesk Harian + Target",
+          "href": null
+        }
+      ],
+      "description": [],
+      "is_inline": false,
+      "properties": {
+        "Jobdesk": {
+          "id": "Apd%3C",
+          "name": "Jobdesk",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Actual Output": {
+          "id": "Ekvf",
+          "name": "Actual Output",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Status": {
+          "id": "IUEu",
+          "name": "Status",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "bdc9bb02-5c5e-4c9a-a235-3cefdae021be",
+                "name": "To Do",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "0855d8a7-4a04-426b-9168-cbbaf7aceb5b",
+                "name": "In Progress",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "de82be29-5293-4426-8ee5-c8477c8e99c8",
+                "name": "Done",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "550030c9-9cd8-4a32-8f33-2f5dd9e48350",
+                "name": "Blocked",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Target Output": {
+          "id": "JM%3Fq",
+          "name": "Target Output",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Edit_Time": {
+          "id": "JrIb",
+          "name": "Edit_Time",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Tanggal": {
+          "id": "PHVA",
+          "name": "Tanggal",
+          "description": null,
+          "type": "date",
+          "date": {}
+        },
+        "Prioritas": {
+          "id": "RiRN",
+          "name": "Prioritas",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "bf33e470-5850-4a68-bc0a-9a6f73fb6918",
+                "name": "P1",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "48df1ce8-f0ce-44d5-853f-6095eb1e5056",
+                "name": "P2",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6db4880e-518d-494a-b50e-06cc70b88e98",
+                "name": "P3",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Approval_By": {
+          "id": "V%5Bpr",
+          "name": "Approval_By",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "PIC": {
+          "id": "YNgK",
+          "name": "PIC",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "ee7d6966-baf3-4ef4-b739-317bfa8f1f94",
+                "name": "Pak Ardian",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "579cc549-dad2-4559-b834-d83ca1fe7e4b",
+                "name": "Bu Nisya",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "35206f50-160c-4e1c-9a08-f50194d1a919",
+                "name": "Mada",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "4ea97bb0-2a57-43e6-ab2d-0051aafff03d",
+                "name": "Riza",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "c03362e7-b090-4875-b163-4a71b959d3bf",
+                "name": "Yudi (Sdek)",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6ab60051-215c-4147-8948-cccae107cd29",
+                "name": "Rizal",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "1e971354-fb43-4fd8-95b7-a750be39f9f5",
+                "name": "Amir",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "9370dba0-8ca0-406a-8c21-6c1225b64e04",
+                "name": "Novita",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "1fc69bd0-d588-447e-909a-12bb7304f973",
+                "name": "Sinta",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "f8bec916-3111-485d-acc0-5dc70a7dead3",
+                "name": "Reni",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "8fa86633-7e84-4365-9e66-2c1eb316d6f9",
+                "name": "Rifki",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "11879c74-9821-4b4d-b9dc-0c19ddabb589",
+                "name": "Reta",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Approval_Time": {
+          "id": "cBIi",
+          "name": "Approval_Time",
+          "description": null,
+          "type": "date",
+          "date": {}
+        },
+        "Bukti": {
+          "id": "d%3Dq%5D",
+          "name": "Bukti",
+          "description": null,
+          "type": "url",
+          "url": {}
+        },
+        "Approval": {
+          "id": "%7Dht%5D",
+          "name": "Approval",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "e50806da-c54d-4d2e-84c6-43fa363039c7",
+                "name": "Pending",
+                "color": "yellow",
+                "description": null
+              },
+              {
+                "id": "4599a2a3-44a2-4f03-b901-e9ea1828fae9",
+                "name": "Approved",
+                "color": "green",
+                "description": null
+              },
+              {
+                "id": "3e0ec183-0579-412d-a35c-be7029b45043",
+                "name": "Rejected",
+                "color": "red",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Kategori": {
+          "id": "%7DxJv",
+          "name": "Kategori",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "1e008ead-75b9-44bf-a4b3-37b349ce23bf",
+                "name": "Harian",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "0fedab5d-d1f5-4287-a526-a04fdd79df0b",
+                "name": "Mingguan",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "cf0d653f-dbbf-4511-8915-78b52ee29767",
+                "name": "Bulanan",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Jobdesk ID": {
+          "id": "title",
+          "name": "Jobdesk ID",
+          "description": null,
+          "type": "title",
+          "title": {}
+        }
+      },
+      "parent": {
+        "type": "page_id",
+        "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+      },
+      "url": "https://app.notion.com/p/3a84cf7e9f24814fbd01cd52e64db04e",
+      "public_url": null,
+      "in_trash": false,
+      "archived": false
+    },
+    {
+      "object": "database",
+      "id": "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
+      "cover": null,
+      "icon": null,
+      "created_time": "2026-07-25T10:57:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+      },
+      "last_edited_time": "2026-07-25T10:57:00.000Z",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "3. Program Kerja",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "3. Program Kerja",
+          "href": null
+        }
+      ],
+      "description": [],
+      "is_inline": false,
+      "properties": {
+        "PIC Penanggung Jawab": {
+          "id": "%3Eo%5EK",
+          "name": "PIC Penanggung Jawab",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "7c63d341-33be-4a3d-99a3-920e37668b01",
+                "name": "Pak Ardian",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "5ce938ad-6205-4f0d-8237-b3b40dd464f5",
+                "name": "Bu Nisya",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "8dab56de-4f71-4399-81c3-d7fc9da48433",
+                "name": "Mada",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "2aaca506-0e47-47d8-8aad-25c11e49fe11",
+                "name": "Riza",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6d17aa69-c09c-4b1d-9805-4388d878fe28",
+                "name": "Yudi (Sdek)",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "e0d37011-c0ec-49dc-b141-ab5892711edd",
+                "name": "Rizal",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "71717761-b850-4dc7-8214-c2cedac26f80",
+                "name": "Amir",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "28ec2020-4dfb-42e2-8f55-58426a06427a",
+                "name": "Novita",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "938f365b-8332-4569-9d43-e92f0af7eb99",
+                "name": "Sinta",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "9a8e7933-bbbd-4171-8ceb-066328f060cb",
+                "name": "Reni",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "9174d781-fead-4077-9c17-43fe107e149d",
+                "name": "Rifki",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6d981c10-27f9-495b-9881-ed2c17c76982",
+                "name": "Reta",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Quarter": {
+          "id": "DG%3Er",
+          "name": "Quarter",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "6da0034f-27da-436e-9f65-cfa1bbedfdba",
+                "name": "Q1",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "ba6de58e-2eaf-406a-9056-9113d4e1f509",
+                "name": "Q2",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "3d820183-bb7a-4e15-83d9-f37c9fba6e81",
+                "name": "Q3",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "494be8a8-f78c-4e4c-b915-05f391d2e785",
+                "name": "Q4",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Edit_Time": {
+          "id": "DVyN",
+          "name": "Edit_Time",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Tahun": {
+          "id": "FA%3FB",
+          "name": "Tahun",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "Deadline": {
+          "id": "OYGL",
+          "name": "Deadline",
+          "description": null,
+          "type": "date",
+          "date": {}
+        },
+        "Progress (%)": {
+          "id": "Xq%7Bp",
+          "name": "Progress (%)",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "Budget (Rp)": {
+          "id": "Yl%5Eb",
+          "name": "Budget (Rp)",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "Risiko": {
+          "id": "kk~j",
+          "name": "Risiko",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Status": {
+          "id": "qvEp",
+          "name": "Status",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "14b6ce75-36c0-4c84-b009-85b39b2ef221",
+                "name": "Planning",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "09643ad9-e15d-48f0-9893-618c5713b66b",
+                "name": "On Track",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6cfe44cb-d5a4-4440-a4bb-eeb51c82f2e1",
+                "name": "At Risk",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "61ca877c-6154-4c02-b968-f2b8226fd9a7",
+                "name": "Delayed",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "8cf7a2cf-08a5-4792-a9e8-c3a4900c4103",
+                "name": "Done",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "dcda1717-cf9e-42e1-9bee-dbbd89d3bd23",
+                "name": "Cancelled",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Tanggal Mulai": {
+          "id": "w%7C%7Bq",
+          "name": "Tanggal Mulai",
+          "description": null,
+          "type": "date",
+          "date": {}
+        },
+        "Actual Spend (Rp)": {
+          "id": "yxoY",
+          "name": "Actual Spend (Rp)",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "Nama Program": {
+          "id": "zsuy",
+          "name": "Nama Program",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Program ID": {
+          "id": "title",
+          "name": "Program ID",
+          "description": null,
+          "type": "title",
+          "title": {}
+        }
+      },
+      "parent": {
+        "type": "page_id",
+        "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+      },
+      "url": "https://app.notion.com/p/3a84cf7e9f248172bd10ee9e8056940a",
+      "public_url": null,
+      "in_trash": false,
+      "archived": false
+    },
+    {
+      "object": "database",
+      "id": "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
+      "cover": null,
+      "icon": null,
+      "created_time": "2026-07-25T10:57:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "38b4cf7e-9f24-8163-bde7-0027cb010d77"
+      },
+      "last_edited_time": "2026-07-25T10:57:00.000Z",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "2. Scope of Work",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "2. Scope of Work",
+          "href": null
+        }
+      ],
+      "description": [],
+      "is_inline": false,
+      "properties": {
+        "Bobot (%)": {
+          "id": "%3EGux",
+          "name": "Bobot (%)",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "Deskripsi": {
+          "id": "%3EWc%5C",
+          "name": "Deskripsi",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Edit_Time": {
+          "id": "SJ%5Dn",
+          "name": "Edit_Time",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Frekuensi": {
+          "id": "WWx%5E",
+          "name": "Frekuensi",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "c1a76a46-5599-4abd-aebb-10f616eaeaa8",
+                "name": "Harian",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "d8c34626-ff64-4763-9078-9be550dc1346",
+                "name": "Mingguan",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "b8c79817-428c-43a8-815c-d37f6ad7ef97",
+                "name": "Bulanan",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "03853a4a-afbd-469f-ac99-81e3f5b37831",
+                "name": "Kuartalan",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Effective From": {
+          "id": "%5Bbj_",
+          "name": "Effective From",
+          "description": null,
+          "type": "date",
+          "date": {}
+        },
+        "Tahun": {
+          "id": "b%5C_i",
+          "name": "Tahun",
+          "description": null,
+          "type": "number",
+          "number": {
+            "format": "number"
+          }
+        },
+        "PIC": {
+          "id": "jcyk",
+          "name": "PIC",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "ee329cab-11ab-4e84-8a31-6726749a670d",
+                "name": "Pak Ardian",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "40f8ffaa-39ff-4683-bc0f-2ca565f63190",
+                "name": "Bu Nisya",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "53dde485-e09a-4430-be36-06b1ceeb4463",
+                "name": "Mada",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "2c07726f-bed9-4bc7-9db7-61cab260eb82",
+                "name": "Riza",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "b9da516d-0595-4192-8b75-e2a1a7b7b87c",
+                "name": "Yudi (Sdek)",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "908b9ab8-3594-43cc-88e0-df329e68b010",
+                "name": "Rizal",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "ead1b13f-0dae-4899-9d3b-113dd81783ce",
+                "name": "Amir",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "19529885-4ca1-4f02-9660-a1368cbbaef1",
+                "name": "Novita",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "f2e5befd-f287-44e5-ade0-4dd9546ed41b",
+                "name": "Sinta",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "67998140-eb3b-4dc9-b688-f61b7292c317",
+                "name": "Reni",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "6a646da6-b8b7-4d2d-a169-3ecd65671d5f",
+                "name": "Rifki",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "fe266d51-e5cc-48a0-843c-2bbf330e4a0c",
+                "name": "Reta",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Status": {
+          "id": "qmL%5D",
+          "name": "Status",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "6f4177c7-ff25-47f8-9af0-9a3a7ceeab58",
+                "name": "Active",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "9a76ffe2-49cd-4032-a5d6-a1af6b70c026",
+                "name": "Paused",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "bffb6ecb-0789-4016-a1c3-b4cdc670874f",
+                "name": "Completed",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "Kategori": {
+          "id": "w_kW",
+          "name": "Kategori",
+          "description": null,
+          "type": "multi_select",
+          "multi_select": {
+            "options": [
+              {
+                "id": "f99670f3-b877-4ad9-815f-64ba31d0aa63",
+                "name": "Operasional",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "475dc407-74b7-44c9-8e23-ad8f67260333",
+                "name": "Strategis",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "486c0506-789c-415e-b86c-3cb08b3de761",
+                "name": "Compliance",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "29a7b08a-88c9-41b3-bb35-81f535c6cb19",
+                "name": "Pengembangan",
+                "color": "default",
+                "description": null
+              },
+              {
+                "id": "88016ab5-023f-442f-8372-3cde3e57ded5",
+                "name": "Reporting",
+                "color": "default",
+                "description": null
+              }
+            ]
+          }
+        },
+        "SOW ID": {
+          "id": "title",
+          "name": "SOW ID",
+          "description": null,
+          "type": "title",
+          "title": {}
+        }
+      },
+      "parent": {
+        "type": "page_id",
+        "page_id": "38b4cf7e-9f24-8064-9a9b-fa52eefafe31"
+      },
+      "url": "https://app.notion.com/p/3a84cf7e9f24816cbe14ef1f171b4d52",
+      "public_url": null,
+      "in_trash": false,
+      "archived": false
+    },
+    {
+      "object": "database",
+      "id": "d3d4cf7e-9f24-82df-b0d8-014512d331ec",
+      "cover": null,
+      "icon": {
+        "type": "icon",
+        "icon": {
+          "name": "user-circle",
+          "color": "gray"
+        }
+      },
+      "created_time": "2026-06-26T18:50:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "00000000-0000-0000-0000-000000000000"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "00000000-0000-0000-0000-000000000000"
+      },
+      "last_edited_time": "2026-06-26T18:50:00.000Z",
+      "title": [
+        {
+          "type": "text",
+          "text": {
+            "content": "People",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "People",
+          "href": null
+        }
+      ],
+      "description": [],
+      "is_inline": false,
+      "properties": {
+        "Name": {
+          "id": "title",
+          "name": "Name",
+          "description": null,
+          "type": "title",
+          "title": {}
+        },
+        "About": {
+          "id": "people%3Aabout",
+          "name": "About",
+          "description": null,
+          "type": "rich_text",
+          "rich_text": {}
+        },
+        "Person": {
+          "id": "people%3Aperson",
+          "name": "Person",
+          "description": null,
+          "type": "people",
+          "people": {}
+        },
+        "Membership Type": {
+          "id": "people%3Amembership_type",
+          "name": "Membership Type",
+          "description": null,
+          "type": "select",
+          "select": {
+            "options": [
+              {
+                "id": "owner",
+                "name": "Workspace owner",
+                "color": "red",
+                "description": null
+              },
+              {
+                "id": "membership_admin",
+                "name": "Membership admin",
+                "color": "green",
+                "description": null
+              },
+              {
+                "id": "member",
+                "name": "Member",
+                "color": "blue",
+                "description": null
+              },
+              {
+                "id": "restricted_member",
+                "name": "Restricted member",
+                "color": "yellow",
+                "description": null
+              },
+              {
+                "id": "page_guest",
+                "name": "Guest",
+                "color": "yellow",
+                "description": null
+              },
+              {
+                "id": "none",
+                "name": "Deactivated",
+                "color": "gray",
+                "description": null
+              }
+            ]
+          }
+        }
+      },
+      "parent": {
+        "type": "workspace",
+        "workspace": true
+      },
+      "url": "https://app.notion.com/p/d3d4cf7e9f2482dfb0d8014512d331ec",
+      "public_url": null,
+      "in_trash": false,
+      "archived": false
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_database",
+  "page_or_database": {},
+  "request_id": "481ec9a6-f057-45ab-a3a7-3f5a2dcb094d"
+}

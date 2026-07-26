@@ -1,0 +1,244 @@
+{
+  "plan_name": "DASHBOARD V2 — EMPLOYEE 360° REDESIGN",
+  "version": "4.0",
+  "date": "2026-07-26",
+  "owner": "Pak Ardian (single owner)",
+  "special_roles": {
+    "Pak Ardian": "Owner (strategic, can edit/delete)",
+    "Bu Nisya": "Legal (operational, view+own-edit)"
+  },
+  "goals": [
+    "12 PIC employee dashboard dengan 6 tab (Overview/SOW/KPI/Program/Jobdesk/Improvisasi)",
+    "Carry-over otomatis jobdesk sampai 7 hari",
+    "Bobot KPI per jobdesk",
+    "Score formula transparan tanpa role multiplier (target threshold per role)",
+    "Tier lebih ketat (90/75/60)",
+    "Mobile-friendly untuk Owner",
+    "Export PDF untuk 1-on-1 review",
+    "Real data + stress test",
+    "Soft launch Owner dulu, baru PIC"
+  ],
+  "pic_list_12": [
+    {
+      "name": "Pak Ardian",
+      "role": "Owner",
+      "tier_target": 85,
+      "sow_bobot": 55
+    },
+    {
+      "name": "Bu Nisya",
+      "role": "Legal",
+      "tier_target": 80,
+      "sow_bobot": 55
+    },
+    {
+      "name": "Mada",
+      "role": "Operasional",
+      "tier_target": 70,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Riza",
+      "role": "Sales",
+      "tier_target": 70,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Yudi (Sdek)",
+      "role": "Sales Field",
+      "tier_target": 65,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Rizal",
+      "role": "Operasional",
+      "tier_target": 70,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Amir",
+      "role": "Finance",
+      "tier_target": 70,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Novita",
+      "role": "Admin",
+      "tier_target": 65,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Sinta",
+      "role": "Admin",
+      "tier_target": 65,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Reni",
+      "role": "Marketing",
+      "tier_target": 70,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Rifki",
+      "role": "Marketing",
+      "tier_target": 65,
+      "sow_bobot": 100
+    },
+    {
+      "name": "Reta",
+      "role": "Marketing",
+      "tier_target": 70,
+      "sow_bobot": 100
+    }
+  ],
+  "score_formula": {
+    "weights": {
+      "kpi_achievement": 0.4,
+      "jobdesk_completion_weighted": 0.25,
+      "sow_compliance": 0.15,
+      "program_contribution": 0.1,
+      "improvisasi_bonus": 0.1
+    },
+    "tier_thresholds": {
+      "top_performer": 90,
+      "on_track": 75,
+      "need_coaching": 60,
+      "at_risk_below": 60
+    },
+    "no_role_multiplier": true,
+    "tier_target_per_role": "Pakai tabel PIC di atas, bukan multiplier",
+    "carry_over_penalty": "-5 point per hari overdue (max 7 hari)"
+  },
+  "improvisasi_types_7": [
+    {
+      "name": "Efisiensi",
+      "examples": "Template, automation, reuse"
+    },
+    {
+      "name": "Inovasi",
+      "examples": "Ide baru di luar SOW/KPI"
+    },
+    {
+      "name": "Mentoring",
+      "examples": "Bantu PIC lain naik level"
+    },
+    {
+      "name": "Problem Solving",
+      "examples": "Solve insiden tidak terjadwal"
+    },
+    {
+      "name": "Self Development",
+      "examples": "Training, sertifikasi"
+    },
+    {
+      "name": "Cross-functional",
+      "examples": "Kolaborasi lintas divisi"
+    },
+    {
+      "name": "Customer Obsession",
+      "examples": "Inisiatif CX improvement"
+    }
+  ],
+  "workflow_rules": {
+    "carry_over": {
+      "max_days": 7,
+      "skip_weekend": true,
+      "auto_reschedule_monday": true,
+      "escalate_to_owner_after_days": 3
+    },
+    "approval": {
+      "sla_hours": 24,
+      "auto_reject_after_sla": true,
+      "single_owner_approver": "Pak Ardian"
+    },
+    "timezone": "WIB (UTC+7), Notion stores UTC"
+  },
+  "phases": {
+    "A": {
+      "name": "Pre-Flight",
+      "duration": "0.5 day",
+      "tasks": [
+        "Backup Notion",
+        "Staging branch",
+        "Success metrics"
+      ]
+    },
+    "B": {
+      "name": "Schema Enhancement",
+      "duration": "2-3 days",
+      "tasks": [
+        "Create Improvisasi DB",
+        "Create Divisi DB",
+        "Update KPI/Jobdesk/People schema"
+      ]
+    },
+    "C": {
+      "name": "Data Population",
+      "duration": "3-4 days",
+      "tasks": [
+        "Isi 12 PIC",
+        "Fix 55% SOW Owner/Legal",
+        "Backfill Bobot_KPI"
+      ]
+    },
+    "D": {
+      "name": "Workflow Logic",
+      "duration": "3-4 days",
+      "tasks": [
+        "Carry-over formula",
+        "Score rollup",
+        "Approval SLA",
+        "Notifikasi"
+      ]
+    },
+    "E": {
+      "name": "Dashboard Redesign",
+      "duration": "4-5 days",
+      "tasks": [
+        "/employee index",
+        "/employee/:slug 6 tab",
+        "/division/:name",
+        "Mobile responsive",
+        "Export PDF",
+        "A11y",
+        "Offline mode"
+      ]
+    },
+    "F": {
+      "name": "Polish & Ops",
+      "duration": "2-3 days",
+      "tasks": [
+        "Onboarding",
+        "Audit log",
+        "Backup auto",
+        "Disaster recovery",
+        "Docs"
+      ]
+    },
+    "G": {
+      "name": "Stress Test & Launch",
+      "duration": "1-2 days",
+      "tasks": [
+        "Real data test",
+        "Concurrent login",
+        "Worker down",
+        "Soft launch Owner",
+        "Launch PIC"
+      ]
+    }
+  },
+  "deliverables": [
+    "DB Improvisasi (new)",
+    "DB Divisi (new)",
+    "KPI/Jobdesk/People schema updated",
+    "Dashboard route /employee + /employee/:slug + /division/:name",
+    "6 tab per PIC (Overview/SOW/KPI/Program/Jobdesk/Improvisasi)",
+    "Carry-over jobdesk automation",
+    "Score formula + tier classification",
+    "Mobile responsive design",
+    "PDF export",
+    "Soft launch + full launch"
+  ],
+  "total_estimate": "15-22 working days"
+}
