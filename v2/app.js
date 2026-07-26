@@ -67,13 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pill = document.getElementById("session-pill");
   if (pill) pill.hidden = !Session.isLoggedIn();
 
-  // Theme toggle
-  document.getElementById("btn-theme")?.addEventListener("click", () => {
-    import("./lib/theme.js").then(({ toggleTheme }) => {
-      toggleTheme();
-      success("Theme diubah");
-    });
-  });
+  // Theme toggle: handler dipasang oleh lib/theme.js initTheme() — jangan duplikasi
 
   // Refresh
   document.getElementById("btn-refresh")?.addEventListener("click", () => {

@@ -6,12 +6,18 @@ export function initTheme() {
   const saved = localStorage.getItem(STORAGE_KEY) || "dark";
   applyTheme(saved);
 
-  document.getElementById("btn-theme")?.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    const next = current === "dark" ? "light" : "dark";
-    applyTheme(next);
-    localStorage.setItem(STORAGE_KEY, next);
-  });
+  // Guard: pasang handler sekali saja
+  const btn = document.getElementById("btn-theme");
+  if (btn && !btn.dataset.themeBound) {
+    btn.dataset.themeBound = "1";
+    btn.addEventListener("click", () => {
+      const current = getTheme();
+      const next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+      localStorage.setItem(STORAGE_KEY, next);
+      btn.setAttribute("aria-pressed", next === "light" ? "true" : "false");
+    });
+  }
 }
 
 export function applyTheme(name) {

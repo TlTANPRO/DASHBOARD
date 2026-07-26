@@ -20,7 +20,7 @@ export function renderSettings() {
       <div class="card">
         <h2 class="h-3 mb-3">Theme</h2>
         <p class="t-sm t-muted mb-3">Pilih tampilan. Default mengikuti preferensi OS.</p>
-        <div class="row gap-2 wrap">
+        <div class="row gap-2 wrap theme-toggle">
           <button class="btn ${currentTheme === "dark" ? "btn-primary" : "btn-outline"}" data-theme="dark">Dark</button>
           <button class="btn ${currentTheme === "light" ? "btn-primary" : "btn-outline"}" data-theme="light">Light</button>
         </div>
@@ -71,13 +71,12 @@ export function renderSettings() {
     </div>
   `;
 
-  // Theme buttons
-  document.querySelectorAll("[data-theme]").forEach((btn) => {
+  // Theme buttons (specific selector avoids matching <html data-theme>)
+  document.querySelectorAll(".theme-toggle [data-theme]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const t = btn.dataset.theme;
       applyTheme(t);
       localStorage.setItem("dvb2-theme", t);
-      success(`Theme: ${t}`);
       renderSettings();
     });
   });
