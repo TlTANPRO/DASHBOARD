@@ -1,19 +1,32 @@
-// views/kpi.js — KPI CRUD (using normalized Notion data)
+// views/kpi.js — KPI CRUD with view switcher (List/Board), inline edit, bulk ops, aggregation
 import { API } from "../lib/api.js";
 import { dataTable, wirePagination } from "../components/table.js";
 import { filterBar } from "../components/filter.js";
 import { emptyState, loadingSkeleton } from "../components/empty.js";
 import { statusPill } from "../components/pill.js";
-import { fmtNum, fmtPct, escapeHTML } from "../lib/format.js";
+import { fmtNum, fmtPct, escapeHTML, fmtIDR } from "../lib/format.js";
 import { openModal, confirmDialog } from "../lib/modal.js";
 import { success, danger } from "../lib/notify.js";
 import { Session } from "../lib/auth.js";
+import { boardView } from "../components/board.js";
+import { openDetail, buildSchema } from "../components/detail.js";
 
-let state = { data: [], filterPIC: "", filterStatus: "" };
+let state = {
+  data: [],
+  filtered: [],
+  view: "list", // list | board
+  groupBy: "Status", // Status | PIC | Tipe | Divisi
+  filterPIC: "",
+  filterStatus: "",
+  search: "",
+  sortKey: null,
+  sortDir: "asc",
+  selected: new Set(),
+};
 
 export async function renderKPI() {
   const root = document.getElementById("view-root");
-  root.innerHTML = `<div class="h-1 mb-4">KPI</div>${loadingSkeleton(2)}`;
+  root.innerHTML = loadingSkeleton(2);
 
   try {
     state.data = await API.listKPI();
@@ -21,8 +34,31 @@ export async function renderKPI() {
     state.data = [];
     danger(`Gagal load KPI: ${e.message}`);
   }
+  applyFilter();
   draw();
-  bindFilterEvents();
+}
+
+function applyFilter() {
+  state.filtered = state.data.filter((r) => {
+    if (state.filterPIC && r.PIC !== state.filterPIC) return false;
+    if (state.filterStatus && r.Status !== state.filterStatus) return false;
+    if (state.search) {
+      const q = state.search.toLowerCase();
+      const hay = `${r["KPI ID"]} ${r.Indikator} ${r.Catatan} ${r.PIC} ${r.Divisi}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  if (state.sortKey) {
+    state.filtered.sort((a, b) => {
+      const av = a[state.sortKey];
+      const bv = b[state.sortKey];
+      if (av == null) return 1;
+      if (bv == null) return -1;
+      const cmp = String(av).localeCompare(String(bv), "id", { numeric: true });
+      return state.sortDir === "asc" ? cmp : -cmp;
+    });
+  }
 }
 
 function draw() {
@@ -31,90 +67,195 @@ function draw() {
   const canEdit = Session.isLoggedIn();
   const picList = window.DASHBOARD_CONFIG?.picList || [];
 
-  const filtered = state.data.filter((r) => {
-    if (state.filterPIC && r.PIC !== state.filterPIC) return false;
-    if (state.filterStatus && r.Status !== state.filterStatus) return false;
-    return true;
-  });
+  const aggregations = computeAggregations(state.filtered);
 
   root.innerHTML = `
     <div class="row-between mb-4">
       <div>
         <h1 class="h-1">KPI</h1>
-        <p class="t-muted t-sm">${filtered.length} dari ${state.data.length} entri</p>
+        <p class="t-muted t-sm">${state.filtered.length} dari ${state.data.length} entri${state.selected.size > 0 ? ` · <span class="bulk-count">${state.selected.size} dipilih</span>` : ""}</p>
       </div>
       <div class="row gap-2">
         ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah KPI</button>' : ""}
       </div>
     </div>
 
+    <div class="view-tabs">
+      <button class="view-tab${state.view === "list" ? " active" : ""}" data-view="list">📋 List</button>
+      <button class="view-tab${state.view === "board" ? " active" : ""}" data-view="board">📊 Board</button>
+    </div>
+
     ${filterBar({
       filters: [
         { id: "pic", label: "PIC", type: "select", value: state.filterPIC, options: picList.map((p) => ({ value: p, label: p })) },
         { id: "status", label: "Status", type: "select", value: state.filterStatus, options: statuses.map((s) => ({ value: s, label: s })) },
+        { id: "search", label: "Cari", type: "search", value: state.search, placeholder: "ID / indikator / catatan..." },
       ],
     })}
 
-    ${dataTable({
-      columns: [
-        { key: "KPI ID", label: "ID", render: (r) => `<span class="t-mono t-muted t-sm">${escapeHTML(r["KPI ID"] || "—")}</span>` },
-        { key: "PIC", label: "PIC" },
-        { key: "Indikator", label: "Indikator", truncate: true },
-        { key: "Tipe", label: "Tipe", render: (r) => r.Tipe ? `<span class="pill pill-muted">${escapeHTML(r.Tipe)}</span>` : "—" },
-        { key: "Target", label: "Target", align: "right", render: (r) => fmtNum(r.Target) },
-        { key: "Actual", label: "Actual", align: "right", render: (r) => fmtNum(r.Actual) },
-        {
-          key: "Achievement",
-          label: "%",
-          align: "right",
-          render: (r) => {
-            const t = Number(r.Target);
-            const a = Number(r.Actual);
-            if (!t || isNaN(t) || !a) return "—";
-            return fmtPct((a / t) * 100, 0);
-          },
-        },
-        { key: "Status", label: "Status", render: (r) => statusPill(r.Status) },
-        ...(canEdit
-          ? [
-              {
-                key: "_actions",
-                label: "",
-                align: "right",
-                render: (r) =>
-                  `<button class="btn btn-sm btn-ghost" data-action="edit" data-id="${escapeHTML(r.id)}">Edit</button>
-                   <button class="btn btn-sm btn-ghost" data-action="delete" data-id="${escapeHTML(r.id)}" style="color:var(--danger)">Hapus</button>`,
-              },
-            ]
-          : []),
-      ],
-      rows: filtered,
-      empty: "Belum ada data KPI",
-    })}
+    <div id="view-area">
+      ${state.view === "list"
+        ? renderList(canEdit)
+        : boardView({ rows: state.filtered, statusField: "Status", statusOrder: statuses, groupBy: "PIC" })}
+    </div>
+
+    ${state.filtered.length > 0 ? `
+      <div class="row-between mt-4" style="padding:var(--space-3) var(--space-4);background:var(--bg-1);border:1px solid var(--border-subtle);border-radius:var(--radius);font-size:var(--text-sm)">
+        <span class="t-muted">Aggregasi</span>
+        <div class="row gap-4">
+          <span><span class="t-muted">Σ Target:</span> <strong class="t-mono">${fmtNum(aggregations.sumTarget)}</strong></span>
+          <span><span class="t-muted">Σ Actual:</span> <strong class="t-mono">${fmtNum(aggregations.sumActual)}</strong></span>
+          <span><span class="t-muted">Avg Achievement:</span> <strong class="t-mono">${aggregations.avgAch}%</strong></span>
+        </div>
+      </div>
+    ` : ""}
+
+    ${state.selected.size > 0 && canEdit ? `
+      <div class="bulk-bar mt-4">
+        <span class="bulk-count">${state.selected.size} dipilih</span>
+        <button class="btn btn-sm btn-outline" id="bulk-clear">Clear</button>
+        ${Session.isOwner() ? '<button class="btn btn-sm btn-outline" id="bulk-delete" style="color:var(--danger)">Hapus</button>' : ""}
+      </div>
+    ` : ""}
   `;
 
-  document.getElementById("btn-add")?.addEventListener("click", () => openEditor(null));
-  document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const id = btn.dataset.id;
-      const rec = state.data.find((r) => r.id === id);
-      if (rec) openEditor(rec);
+  bindEvents(canEdit, picList);
+  if (state.view === "list") wirePagination(root);
+}
+
+function renderList(canEdit) {
+  const picList = window.DASHBOARD_CONFIG?.picList || [];
+  return dataTable({
+    columns: [
+      ...(canEdit ? [{ key: "_check", label: "", render: (r) => `<input type="checkbox" class="row-check" data-id="${escapeHTML(r.id)}" ${state.selected.has(r.id) ? "checked" : ""}/>` }] : []),
+      { key: "KPI ID", label: "ID", sortable: true, render: (r) => `<span class="t-mono t-muted t-sm">${escapeHTML(r["KPI ID"] || "—")}</span>` },
+      { key: "PIC", label: "PIC", sortable: true },
+      { key: "Indikator", label: "Indikator", sortable: true, truncate: true, render: (r) => `<span class="td-edit" data-field="Indikator" data-id="${escapeHTML(r.id)}">${escapeHTML(r.Indikator || "—")}</span>` },
+      { key: "Tipe", label: "Tipe", render: (r) => r.Tipe ? `<span class="pill pill-muted">${escapeHTML(r.Tipe)}</span>` : "—" },
+      { key: "Target", label: "Target", sortable: true, align: "right", render: (r) => `<span class="td-edit num" data-field="Target" data-id="${escapeHTML(r.id)}">${fmtNum(r.Target)}</span>` },
+      { key: "Actual", label: "Actual", sortable: true, align: "right", render: (r) => `<span class="td-edit num" data-field="Actual" data-id="${escapeHTML(r.id)}">${fmtNum(r.Actual)}</span>` },
+      {
+        key: "_ach",
+        label: "%",
+        align: "right",
+        render: (r) => {
+          const t = Number(r.Target);
+          const a = Number(r.Actual);
+          if (!t || isNaN(t) || !a) return "—";
+          return fmtPct((a / t) * 100, 0);
+        },
+      },
+      { key: "Status", label: "Status", sortable: true, render: (r) => `<span class="td-edit" data-field="Status" data-id="${escapeHTML(r.id)}">${statusPill(r.Status)}</span>` },
+      ...(canEdit
+        ? [
+            {
+              key: "_actions",
+              label: "",
+              align: "right",
+              render: (r) =>
+                `<button class="btn btn-sm btn-ghost" data-action="edit" data-id="${escapeHTML(r.id)}">Edit</button>
+                 ${Session.isOwner() ? `<button class="btn btn-sm btn-ghost" data-action="delete" data-id="${escapeHTML(r.id)}" style="color:var(--danger)">×</button>` : ""}`,
+            },
+          ]
+        : []),
+    ],
+    rows: state.filtered,
+    empty: "Belum ada data KPI",
+  });
+}
+
+function computeAggregations(rows) {
+  let sumTarget = 0, sumActual = 0, achCount = 0, achSum = 0;
+  rows.forEach((r) => {
+    const t = Number(r.Target) || 0;
+    const a = Number(r.Actual) || 0;
+    sumTarget += t;
+    sumActual += a;
+    if (t > 0 && a > 0) {
+      achSum += (a / t) * 100;
+      achCount++;
+    }
+  });
+  return {
+    sumTarget,
+    sumActual,
+    avgAch: achCount > 0 ? (achSum / achCount).toFixed(1) : "—",
+  };
+}
+
+function bindEvents(canEdit, picList) {
+  // View tabs
+  document.querySelectorAll(".view-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      state.view = tab.dataset.view;
+      draw();
     });
   });
+
+  // Filters
+  document.querySelectorAll("[data-filter]").forEach((el) => {
+    const handler = () => {
+      const f = el.dataset.filter;
+      if (f === "pic") state.filterPIC = el.value;
+      else if (f === "status") state.filterStatus = el.value;
+      else if (f === "search") state.search = el.value;
+      applyFilter();
+      draw();
+    };
+    el.addEventListener("change", handler);
+    el.addEventListener("input", handler);
+  });
+
+  // Sort by header click
+  document.querySelectorAll("th[data-sort-key]").forEach((th) => {
+    th.addEventListener("click", () => {
+      const k = th.dataset.sortKey;
+      if (state.sortKey === k) {
+        state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+      } else {
+        state.sortKey = k;
+        state.sortDir = "asc";
+      }
+      applyFilter();
+      draw();
+    });
+  });
+
+  // Bulk select
+  document.querySelectorAll(".row-check").forEach((cb) => {
+    cb.addEventListener("change", (e) => {
+      const id = e.target.dataset.id;
+      if (e.target.checked) state.selected.add(id);
+      else state.selected.delete(id);
+      draw();
+    });
+  });
+
+  // Add
+  document.getElementById("btn-add")?.addEventListener("click", () => openEditor(null));
+
+  // Edit (button)
+  document.querySelectorAll('[data-action="edit"]').forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const rec = state.data.find((r) => r.id === btn.dataset.id);
+      if (rec) {
+        if (canEdit && Session.isOwner()) openEditor(rec);
+        else openDetail({ record: rec, schema: buildSchema(rec), title: rec.Indikator || rec["KPI ID"] });
+      }
+    });
+  });
+
+  // Delete
   document.querySelectorAll('[data-action="delete"]').forEach((btn) => {
     btn.addEventListener("click", async () => {
       const id = btn.dataset.id;
-      const ok = await confirmDialog({
-        title: "Hapus KPI?",
-        body: "Tindakan ini tidak dapat dibatalkan.",
-        danger: true,
-        confirmLabel: "Hapus",
-      });
+      const ok = await confirmDialog({ title: "Hapus KPI?", body: "Tindakan tidak dapat dibatalkan.", danger: true });
       if (!ok) return;
       try {
         await API.deleteKPI(id);
         state.data = state.data.filter((r) => r.id !== id);
         success("KPI dihapus");
+        applyFilter();
         draw();
       } catch (e) {
         danger(`Gagal: ${e.message}`);
@@ -122,18 +263,78 @@ function draw() {
     });
   });
 
-  wirePagination(root);
-}
+  // Inline edit (click cell)
+  document.querySelectorAll(".td-edit").forEach((td) => {
+    td.addEventListener("click", (e) => {
+      if (!canEdit) return;
+      const id = td.dataset.id;
+      const field = td.dataset.field;
+      const rec = state.data.find((r) => r.id === id);
+      if (!rec) return;
+      const current = rec[field] ?? "";
+      const input = document.createElement("input");
+      input.className = "td-edit-input";
+      input.value = current;
+      td.classList.add("td-edit-saving");
+      td.innerHTML = "";
+      td.appendChild(input);
+      input.focus();
+      input.select();
+      const save = async () => {
+        const val = input.value;
+        td.classList.remove("td-edit-saving");
+        try {
+          await API.updateKPI(id, { [field]: val });
+          rec[field] = val;
+          success("Disimpan");
+          applyFilter();
+          draw();
+        } catch (e) {
+          danger(`Gagal: ${e.message}`);
+          draw();
+        }
+      };
+      const cancel = () => draw();
+      input.addEventListener("blur", save);
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") input.blur();
+        else if (e.key === "Escape") {
+          input.removeEventListener("blur", save);
+          cancel();
+        }
+      });
+    });
+  });
 
-function bindFilterEvents() {
-  document.querySelectorAll("[data-filter]").forEach((el) => {
-    const handler = () => {
-      const f = el.dataset.filter;
-      state[f === "pic" ? "filterPIC" : "filterStatus"] = el.value;
-      draw();
-    };
-    el.addEventListener("change", handler);
-    el.addEventListener("input", handler);
+  // Bulk clear/delete
+  document.getElementById("bulk-clear")?.addEventListener("click", () => {
+    state.selected.clear();
+    draw();
+  });
+  document.getElementById("bulk-delete")?.addEventListener("click", async () => {
+    const ok = await confirmDialog({ title: `Hapus ${state.selected.size} KPI?`, body: "Bulk delete permanen.", danger: true });
+    if (!ok) return;
+    for (const id of state.selected) {
+      try {
+        await API.deleteKPI(id);
+        state.data = state.data.filter((r) => r.id !== id);
+      } catch (e) {
+        danger(`Gagal hapus ${id}: ${e.message}`);
+      }
+    }
+    state.selected.clear();
+    applyFilter();
+    draw();
+    success("Bulk delete selesai");
+  });
+
+  // Board cards click → detail
+  document.querySelectorAll(".board-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const id = card.dataset.id;
+      const rec = state.data.find((r) => r.id === id);
+      if (rec) openDetail({ record: rec, schema: buildSchema(rec), title: rec.Indikator || rec["KPI ID"] });
+    });
   });
 }
 
@@ -143,66 +344,34 @@ function openEditor(record) {
   const picList = window.DASHBOARD_CONFIG?.picList || [];
 
   const form = document.createElement("form");
-  form.id = "kpi-form";
   form.innerHTML = `
     <div class="col gap-3">
       <div class="field-row">
-        <div class="field">
-          <label class="field-label" for="kpi-id">KPI ID</label>
-          <input class="input" id="kpi-id" value="${escapeHTML(r["KPI ID"] || "")}" placeholder="kpi-001" />
-        </div>
-        <div class="field">
-          <label class="field-label" for="kpi-pic">PIC *</label>
-          <select class="select" id="kpi-pic" required>
-            <option value="">— Pilih —</option>
-            ${picList.map((p) => `<option value="${escapeHTML(p)}"${r.PIC === p ? " selected" : ""}>${escapeHTML(p)}</option>`).join("")}
-          </select>
+        <div class="field"><label class="field-label">KPI ID</label><input class="input" id="kpi-id" value="${escapeHTML(r["KPI ID"] || "")}" /></div>
+        <div class="field"><label class="field-label">PIC *</label>
+          <select class="select" id="kpi-pic" required>${picList.map((p) => `<option value="${escapeHTML(p)}"${r.PIC === p ? " selected" : ""}>${escapeHTML(p)}</option>`).join("")}</select>
         </div>
       </div>
-      <div class="field">
-        <label class="field-label" for="kpi-indikator">Indikator *</label>
-        <input class="input" id="kpi-indikator" required value="${escapeHTML(r.Indikator || "")}" placeholder="Contoh: Closing 5 unit/bulan" />
-      </div>
+      <div class="field"><label class="field-label">Indikator *</label><input class="input" id="kpi-indikator" required value="${escapeHTML(r.Indikator || "")}" /></div>
       <div class="field-row">
-        <div class="field">
-          <label class="field-label" for="kpi-tipe">Tipe</label>
-          <select class="select" id="kpi-tipe">
-            ${["", "Kuantitatif", "Kualitatif"].map((t) => `<option value="${t}"${r.Tipe === t ? " selected" : ""}>${t || "—"}</option>`).join("")}
-          </select>
+        <div class="field"><label class="field-label">Tipe</label>
+          <select class="select" id="kpi-tipe">${["", "Kuantitatif", "Kualitatif"].map((t) => `<option value="${t}"${r.Tipe === t ? " selected" : ""}>${t || "—"}</option>`).join("")}</select>
         </div>
-        <div class="field">
-          <label class="field-label" for="kpi-periode">Periode</label>
-          <select class="select" id="kpi-periode">
-            ${["", "Mingguan", "Bulanan", "Kuartalan", "Tahunan"].map((p) => `<option value="${p}"${r.Periode === p ? " selected" : ""}>${p || "—"}</option>`).join("")}
-          </select>
+        <div class="field"><label class="field-label">Periode</label>
+          <select class="select" id="kpi-periode">${["", "Mingguan", "Bulanan", "Kuartalan", "Tahunan"].map((p) => `<option value="${p}"${r.Periode === p ? " selected" : ""}>${p || "—"}</option>`).join("")}</select>
         </div>
-        <div class="field">
-          <label class="field-label" for="kpi-satuan">Satuan</label>
-          <select class="select" id="kpi-satuan">
-            ${["", "Unit", "Unit %", "Rp", "Orang", "Hari"].map((s) => `<option value="${s}"${r.Satuan === s ? " selected" : ""}>${s || "—"}</option>`).join("")}
-          </select>
+        <div class="field"><label class="field-label">Satuan</label>
+          <select class="select" id="kpi-satuan">${["", "Unit", "Unit %", "Rp", "Orang", "Hari"].map((s) => `<option value="${s}"${r.Satuan === s ? " selected" : ""}>${s || "—"}</option>`).join("")}</select>
         </div>
       </div>
       <div class="field-row">
-        <div class="field">
-          <label class="field-label" for="kpi-target">Target</label>
-          <input class="input" id="kpi-target" type="number" value="${escapeHTML(r.Target ?? "")}" />
-        </div>
-        <div class="field">
-          <label class="field-label" for="kpi-actual">Actual</label>
-          <input class="input" id="kpi-actual" type="number" value="${escapeHTML(r.Actual ?? "")}" />
-        </div>
-        <div class="field">
-          <label class="field-label" for="kpi-status">Status</label>
-          <select class="select" id="kpi-status">
-            ${["", "On Track", "At Risk", "Off Track", "Achieved"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s || "—"}</option>`).join("")}
-          </select>
+        <div class="field"><label class="field-label">Target</label><input class="input" id="kpi-target" type="number" value="${escapeHTML(r.Target ?? "")}" /></div>
+        <div class="field"><label class="field-label">Actual</label><input class="input" id="kpi-actual" type="number" value="${escapeHTML(r.Actual ?? "")}" /></div>
+        <div class="field"><label class="field-label">Status</label>
+          <select class="select" id="kpi-status">${["", "On Track", "At Risk", "Off Track", "Achieved"].map((s) => `<option value="${s}"${r.Status === s ? " selected" : ""}>${s || "—"}</option>`).join("")}</select>
         </div>
       </div>
-      <div class="field">
-        <label class="field-label" for="kpi-catatan">Catatan</label>
-        <textarea class="textarea" id="kpi-catatan">${escapeHTML(r.Catatan || "")}</textarea>
-      </div>
+      <div class="field"><label class="field-label">Catatan</label><textarea class="textarea" id="kpi-catatan">${escapeHTML(r.Catatan || "")}</textarea></div>
     </div>
   `;
 
@@ -215,32 +384,24 @@ function openEditor(record) {
         label: isEdit ? "Simpan" : "Tambah",
         variant: "btn-primary",
         onClick: async () => {
-          const f = form;
-          if (!f.checkValidity()) {
-            f.reportValidity();
-            return false;
-          }
           const data = {
-            "KPI ID": f.querySelector("#kpi-id").value,
-            PIC: f.querySelector("#kpi-pic").value,
-            Indikator: f.querySelector("#kpi-indikator").value,
-            Tipe: f.querySelector("#kpi-tipe").value,
-            Periode: f.querySelector("#kpi-periode").value,
-            Satuan: f.querySelector("#kpi-satuan").value,
-            Target: f.querySelector("#kpi-target").value,
-            Actual: f.querySelector("#kpi-actual").value,
-            Status: f.querySelector("#kpi-status").value,
-            Catatan: f.querySelector("#kpi-catatan").value,
+            "KPI ID": form.querySelector("#kpi-id").value,
+            PIC: form.querySelector("#kpi-pic").value,
+            Indikator: form.querySelector("#kpi-indikator").value,
+            Tipe: form.querySelector("#kpi-tipe").value,
+            Periode: form.querySelector("#kpi-periode").value,
+            Satuan: form.querySelector("#kpi-satuan").value,
+            Target: form.querySelector("#kpi-target").value,
+            Actual: form.querySelector("#kpi-actual").value,
+            Status: form.querySelector("#kpi-status").value,
+            Catatan: form.querySelector("#kpi-catatan").value,
           };
           try {
-            if (isEdit) {
-              await API.updateKPI(record.id, data, record._editTime);
-              success("KPI diperbarui");
-            } else {
-              await API.createKPI(data);
-              success("KPI ditambahkan");
-            }
-            state.data = await API.listKPI();
+            if (isEdit) await API.updateKPI(record.id, data, record._editTime);
+            else await API.createKPI(data);
+            state.data = await API.listKPI(true);
+            applyFilter();
+            success(isEdit ? "Diperbarui" : "Ditambahkan");
             draw();
           } catch (e) {
             danger(`Gagal: ${e.message}`);

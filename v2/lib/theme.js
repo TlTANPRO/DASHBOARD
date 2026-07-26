@@ -26,3 +26,10 @@ export function applyTheme(name) {
 export function getTheme() {
   return document.documentElement.getAttribute("data-theme") || "dark";
 }
+
+export function toggleTheme() {
+  const current = getTheme();
+  const next = current === "dark" ? "light" : "dark";
+  applyTheme(next);
+  localStorage.setItem(STORAGE_KEY, next);
+}

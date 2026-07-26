@@ -1,6 +1,7 @@
 // lib/api.js — data layer: Notion API via Cloudflare Worker / localStorage demo
 
 import { Session } from "./auth.js";
+import { cacheTTL, invalidate } from "./cache.js";
 
 const MODE = (window.DASHBOARD_CONFIG?.mode || "demo").toLowerCase();
 const WORKER = window.DASHBOARD_CONFIG?.workerBase;
@@ -199,12 +200,12 @@ export const API = {
   mode: MODE,
 
   // ---------- KPI ----------
-  async listKPI() {
-    if (MODE === "live") {
-      const rows = await workerCall("kpi");
-      return rows;
-    }
-    return lsRead("kpi") || [];
+  async listKPI(force = false) {
+    if (force) invalidate("kpi");
+    return cacheTTL("kpi", 60, async () => {
+      if (MODE === "live") return await workerCall("kpi");
+      return lsRead("kpi") || [];
+    });
   },
   async createKPI(record) {
     if (MODE === "live") {
@@ -244,7 +245,7 @@ export const API = {
         const t = await res.text();
         throw new Error(`Update failed: ${res.status} ${t.slice(0, 100)}`);
       }
-      return await this.listKPI();
+      return await this.listKPI(true);
     }
     const list = lsRead("kpi") || [];
     const idx = list.findIndex((r) => r.id === id);
@@ -269,9 +270,12 @@ export const API = {
   },
 
   // ---------- PROGRAM ----------
-  async listProgram() {
-    if (MODE === "live") return await workerCall("program");
-    return lsRead("program") || [];
+  async listProgram(force = false) {
+    if (force) invalidate("program");
+    return cacheTTL("program", 60, async () => {
+      if (MODE === "live") return await workerCall("program");
+      return lsRead("program") || [];
+    });
   },
   async createProgram(record) {
     if (MODE === "live") {
@@ -283,7 +287,7 @@ export const API = {
         body: JSON.stringify({ parent: { database_id: dbId }, properties: props }),
       });
       if (!res.ok) throw new Error(`Create failed: ${res.status}`);
-      return await this.listProgram();
+      return await this.listProgram(true);
     }
     const list = lsRead("program") || [];
     const id = `prog-${Date.now()}`;
@@ -301,7 +305,7 @@ export const API = {
         body: JSON.stringify({ properties: props }),
       });
       if (!res.ok) throw new Error(`Update failed: ${res.status}`);
-      return await this.listProgram();
+      return await this.listProgram(true);
     }
     const list = lsRead("program") || [];
     const idx = list.findIndex((r) => r.id === id);
@@ -326,9 +330,12 @@ export const API = {
   },
 
   // ---------- JOBDESK ----------
-  async listJobdesk() {
-    if (MODE === "live") return await workerCall("jobdesk");
-    return lsRead("jobdesk") || [];
+  async listJobdesk(force = false) {
+    if (force) invalidate("jobdesk");
+    return cacheTTL("jobdesk", 60, async () => {
+      if (MODE === "live") return await workerCall("jobdesk");
+      return lsRead("jobdesk") || [];
+    });
   },
   async createJobdesk(record) {
     if (MODE === "live") {
@@ -340,7 +347,7 @@ export const API = {
         body: JSON.stringify({ parent: { database_id: dbId }, properties: props }),
       });
       if (!res.ok) throw new Error(`Create failed: ${res.status}`);
-      return await this.listJobdesk();
+      return await this.listJobdesk(true);
     }
     const list = lsRead("jobdesk") || [];
     const id = `job-${Date.now()}`;
@@ -358,7 +365,7 @@ export const API = {
         body: JSON.stringify({ properties: props }),
       });
       if (!res.ok) throw new Error(`Update failed: ${res.status}`);
-      return await this.listJobdesk();
+      return await this.listJobdesk(true);
     }
     const list = lsRead("jobdesk") || [];
     const idx = list.findIndex((r) => r.id === id);
@@ -383,9 +390,12 @@ export const API = {
   },
 
   // ---------- SOW ----------
-  async listSOW() {
-    if (MODE === "live") return await workerCall("sow");
-    return lsRead("sow") || [];
+  async listSOW(force = false) {
+    if (force) invalidate("sow");
+    return cacheTTL("sow", 60, async () => {
+      if (MODE === "live") return await workerCall("sow");
+      return lsRead("sow") || [];
+    });
   },
 };
 
