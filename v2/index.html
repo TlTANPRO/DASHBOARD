@@ -1814,9 +1814,10 @@
   <script src="config.js"></script>
   <script type="module" src="app.js"></script>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
-    }
+    // SW disabled temporarily to debug
+    // if ('serviceWorker' in navigator) {
+    //   navigator.serviceWorker.register('sw.js').catch(() => {});
+    // }
   </script>
 </body>
 </html>
