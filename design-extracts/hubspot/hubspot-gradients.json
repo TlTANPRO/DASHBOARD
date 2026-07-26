@@ -1,0 +1,24 @@
+{
+  "$schema": "https://designlang.app/schemas/gradients.json",
+  "source": "https://www.hubspot.com/products/crm",
+  "generated": "2026-07-26T12:48:14.629Z",
+  "count": 1,
+  "gradients": [
+    {
+      "raw": "linear-gradient(rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46))",
+      "type": "linear",
+      "direction": null,
+      "stops": [
+        {
+          "color": "rgba(255, 255, 255, 0.46)",
+          "position": null
+        },
+        {
+          "color": "rgba(255, 255, 255, 0.46)",
+          "position": null
+        }
+      ],
+      "classification": "brand"
+    }
+  ]
+}

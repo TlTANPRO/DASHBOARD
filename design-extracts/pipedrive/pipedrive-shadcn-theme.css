@@ -1,0 +1,19 @@
+/* shadcn/ui Theme — extracted from https://www.pipedrive.com/en/why-pipedrive */
+/* Paste into your globals.css */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --primary: 243 85% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 115 71% 93%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 222 54% 48%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 0 0% 73%;
+    --muted-foreground: 0 0% 0%;
+    --border: 210 10% 96%;
+    --radius: 1px;
+  }
+}

@@ -1,0 +1,13 @@
+/* shadcn/ui Theme — extracted from https://attio.com/product */
+/* Paste into your globals.css */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 1%;
+    --muted: 0 0% 76%;
+    --muted-foreground: 0 0% 1%;
+    --border: 0 0% 76%;
+    --radius: 8px;
+  }
+}

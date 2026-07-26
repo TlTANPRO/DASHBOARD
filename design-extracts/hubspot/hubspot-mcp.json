@@ -1,0 +1,1694 @@
+{
+  "colors": {
+    "all": [
+      {
+        "hex": "#1f1f1f",
+        "rgb": {
+          "r": 31,
+          "g": 31,
+          "b": 31,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 12
+        },
+        "count": 4942,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#f8f5ee",
+        "rgb": {
+          "r": 248,
+          "g": 245,
+          "b": 238,
+          "a": 1
+        },
+        "hsl": {
+          "h": 42,
+          "s": 42,
+          "l": 95
+        },
+        "count": 829,
+        "contexts": [
+          "background",
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#000000",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 0
+        },
+        "count": 164,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#124548",
+        "rgb": {
+          "r": 18,
+          "g": 69,
+          "b": 72,
+          "a": 1
+        },
+        "hsl": {
+          "h": 183,
+          "s": 60,
+          "l": 18
+        },
+        "count": 22,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#15295a",
+        "rgb": {
+          "r": 21,
+          "g": 41,
+          "b": 90,
+          "a": 1
+        },
+        "hsl": {
+          "h": 223,
+          "s": 62,
+          "l": 22
+        },
+        "count": 18,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#ff4800",
+        "rgb": {
+          "r": 255,
+          "g": 72,
+          "b": 0,
+          "a": 1
+        },
+        "hsl": {
+          "h": 17,
+          "s": 100,
+          "l": 50
+        },
+        "count": 13,
+        "contexts": [
+          "background",
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#0000c5",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 197,
+          "a": 1
+        },
+        "hsl": {
+          "h": 240,
+          "s": 100,
+          "l": 39
+        },
+        "count": 2,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#f0f0f0",
+        "rgb": {
+          "r": 240,
+          "g": 240,
+          "b": 240,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 94
+        },
+        "count": 2,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#042729",
+        "rgb": {
+          "r": 4,
+          "g": 39,
+          "b": 41,
+          "a": 1
+        },
+        "hsl": {
+          "h": 183,
+          "s": 82,
+          "l": 9
+        },
+        "count": 2,
+        "contexts": [
+          "background"
+        ]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "role": "nav",
+      "tag": "header",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 128
+      },
+      "heading": null,
+      "buttonCount": 29,
+      "cardCount": 599,
+      "className": "global-nav-header"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 52
+      },
+      "heading": null,
+      "buttonCount": 5,
+      "cardCount": 18,
+      "className": "global-nav-top-bar"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 0,
+        "y": 52,
+        "w": 1280,
+        "h": 76
+      },
+      "heading": null,
+      "buttonCount": 23,
+      "cardCount": 581,
+      "className": "global-nav-main"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 239.9921875,
+        "y": 128,
+        "w": 99.984375,
+        "h": 669.9375
+      },
+      "heading": null,
+      "buttonCount": 2,
+      "cardCount": 80,
+      "className": "global-nav-tab-dropdown-section -is-dropdown "
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 359.984375,
+        "y": 128,
+        "w": 102.375,
+        "h": 671.9375
+      },
+      "heading": null,
+      "buttonCount": 3,
+      "cardCount": 141,
+      "className": "global-nav-tab-dropdown-section -is-dropdown  -sidebar "
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 562.3515625,
+        "y": 128,
+        "w": 109.390625,
+        "h": 669.9375
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 56,
+      "className": "global-nav-tab-dropdown-section -is-dropdown "
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 128,
+        "w": 1280,
+        "h": 70
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 2,
+      "className": "csol-section csol-breadcrumbs -padding-top-xs -padding-bottom-xs"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 198,
+        "w": 1280,
+        "h": 614.625
+      },
+      "heading": "Free CRM Software for Startups & Small Businesses",
+      "buttonCount": 1,
+      "cardCount": 0,
+      "className": "wf-section wf-page-header -white -padding-top-xs -padding-bottom-s"
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 812.625,
+        "w": 1280,
+        "h": 174.859375
+      },
+      "heading": "Trusted by over 299,000 customers in more than 135 countries.",
+      "buttonCount": 2,
+      "cardCount": 5,
+      "className": "csol-section csol-logo-carousel -large -padding-top-xs -padding-bottom-xs"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 987.484375,
+        "w": 1280,
+        "h": 532
+      },
+      "heading": "The Free CRM With Unlimited Growth Potential",
+      "buttonCount": 6,
+      "cardCount": 0,
+      "className": "csol-section wf-company-story -padding-top-md -padding-bottom-md"
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 1519.484375,
+        "w": 1280,
+        "h": 492
+      },
+      "heading": null,
+      "buttonCount": 2,
+      "cardCount": 6,
+      "className": "csol-section csol-testimonials -padding-top-md -padding-bottom-md"
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 2295.484375,
+        "w": 1280,
+        "h": 734
+      },
+      "heading": "Contact management",
+      "buttonCount": 0,
+      "cardCount": 31,
+      "className": "csol-section wf-use-case-overflow -padding-top-s -padding-bottom-md"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 3289.484375,
+        "w": 1280,
+        "h": 734
+      },
+      "heading": "HubSpot Marketplace",
+      "buttonCount": 0,
+      "cardCount": 31,
+      "className": "csol-section wf-use-case-overflow -padding-top-s -padding-bottom-md"
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 4283.484375,
+        "w": 1280,
+        "h": 766
+      },
+      "heading": "Breeze Assistant",
+      "buttonCount": 0,
+      "cardCount": 31,
+      "className": "csol-section wf-use-case-overflow -padding-top-s -padding-bottom-lg"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 5049.484375,
+        "w": 1280,
+        "h": 478
+      },
+      "heading": "Integrate With Your Favorite Tools",
+      "buttonCount": 0,
+      "cardCount": 17,
+      "className": "wf-section wf-integrations  -white -padding-top-lg -padding-bottom-lg"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 5527.484375,
+        "w": 1280,
+        "h": 463
+      },
+      "heading": "Get Set Up in Minutes, Without IT Support",
+      "buttonCount": 3,
+      "cardCount": 0,
+      "className": "csol-section csol-cta-content-block - -padding-top-md -padding-bottom-md"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 5990.484375,
+        "w": 1280,
+        "h": 308
+      },
+      "heading": "Top-Rated CRM Software for Startups and Small Businesses",
+      "buttonCount": 0,
+      "cardCount": 9,
+      "className": "wf-section wf-integrations  -dark -padding-top-md -padding-bottom-md"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 6298.484375,
+        "w": 1280,
+        "h": 943
+      },
+      "heading": "Scale Without Starting From Scratch",
+      "buttonCount": 2,
+      "cardCount": 104,
+      "className": "wf-section wf-all-hubs-pricing is-4-col -white -padding-top-lg -padding-bottom-md"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 7453.484375,
+        "w": 1280,
+        "h": 609.40625
+      },
+      "heading": "What is a CRM?",
+      "buttonCount": 0,
+      "cardCount": 16,
+      "className": "csol-section csol-cta-cards -contain-in-wrapper -padding-top-s -padding-bottom-md"
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 8274.890625,
+        "w": 1280,
+        "h": 418
+      },
+      "heading": "Lead generation",
+      "buttonCount": 2,
+      "cardCount": 53,
+      "className": "csol-section csol-cta-cards -contain-in-wrapper -padding-top-s -padding-bottom-md"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 8840.890625,
+        "w": 1280,
+        "h": 374
+      },
+      "heading": "What is CRM software?",
+      "buttonCount": 6,
+      "cardCount": 30,
+      "className": "csol-section csol-accordion -card -contain-in-wrapper -padding-top-s -padding-bottom-md"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 9214.890625,
+        "w": 1280,
+        "h": 358
+      },
+      "heading": "Get your free CRM today",
+      "buttonCount": 2,
+      "cardCount": 0,
+      "className": "csol-section csol-cta-content-block - -padding-top-md -padding-bottom-md"
+    },
+    {
+      "role": "footer",
+      "tag": "footer",
+      "bounds": {
+        "x": 0,
+        "y": 9572.890625,
+        "w": 1280,
+        "h": 655.40625
+      },
+      "heading": "Popular Features",
+      "buttonCount": 7,
+      "cardCount": 53,
+      "className": "hsg-footer global-footer"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 100,
+        "y": 9620.890625,
+        "w": 1080,
+        "h": 354.515625
+      },
+      "heading": "Popular Features",
+      "buttonCount": 5,
+      "cardCount": 41,
+      "className": "hsg-footer__nav global-footer__nav"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 100,
+        "y": 9620.890625,
+        "w": 431,
+        "h": 354.515625
+      },
+      "heading": "Popular Features",
+      "buttonCount": 1,
+      "cardCount": 18,
+      "className": "hsg-footer__nav-column global-footer__nav-column hsg-footer__nav-column-left global-footer__nav-column-left"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 584,
+        "y": 9620.890625,
+        "w": 198.65625,
+        "h": 354.515625
+      },
+      "heading": "Free Tools",
+      "buttonCount": 1,
+      "cardCount": 8,
+      "className": "hsg-footer__nav-column global-footer__nav-column "
+    },
+    {
+      "role": "hero",
+      "tag": "section",
+      "bounds": {
+        "x": 782.65625,
+        "y": 9620.890625,
+        "w": 198.671875,
+        "h": 354.515625
+      },
+      "heading": "Company",
+      "buttonCount": 1,
+      "cardCount": 8,
+      "className": "hsg-footer__nav-column global-footer__nav-column "
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 981.328125,
+        "y": 9620.890625,
+        "w": 198.671875,
+        "h": 112.0625
+      },
+      "heading": "Customers",
+      "buttonCount": 1,
+      "cardCount": 2,
+      "className": "hsg-footer__nav-column global-footer__nav-column "
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 981.328125,
+        "y": 9748.953125,
+        "w": 198.671875,
+        "h": 210.453125
+      },
+      "heading": "Partners",
+      "buttonCount": 1,
+      "cardCount": 5,
+      "className": "hsg-footer__nav-column global-footer__nav-column "
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 100,
+        "y": 10001.796875,
+        "w": 1080,
+        "h": 56
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 7,
+      "className": "hsg-footer__contact-links global-footer__contact-links social-cl global-nav-content-section"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 100,
+        "y": 10057.796875,
+        "w": 1080,
+        "h": 122.5
+      },
+      "heading": null,
+      "buttonCount": 1,
+      "cardCount": 5,
+      "className": "hsg-footer__bottom global-footer__bottom global-nav-content-section"
+    }
+  ],
+  "componentClusters": [
+    {
+      "kind": "button",
+      "structuralHash": "div>button",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(21, 41, 90)",
+            "padding": "6px 2px 2px 2px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(21, 41, 90)",
+            "fontSize": "32px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button>span",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(255, 255, 255)",
+            "fontSize": "32px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "8px 16px 8px 16px",
+            "borderRadius": "8px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "14px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        },
+        {
+          "css": {
+            "background": "rgb(255, 72, 0)",
+            "color": "rgb(0, 0, 0)",
+            "padding": "1px 6px 1px 6px",
+            "borderRadius": "50%",
+            "border": "0px none rgb(0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button>div",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "42px",
+            "border": "0px none rgb(255, 255, 255)",
+            "fontSize": "14px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "a",
+      "instanceCount": 7,
+      "variants": [
+        {
+          "css": {
+            "background": "rgb(31, 31, 31)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "8px 16px 8px 16px",
+            "borderRadius": "8px",
+            "border": "2px solid rgba(0, 0, 0, 0)",
+            "fontSize": "14px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 5
+        },
+        {
+          "css": {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(255, 72, 0)",
+            "padding": "12px 24px 12px 24px",
+            "borderRadius": "8px",
+            "border": "2px solid rgb(255, 72, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button>span>svg",
+      "instanceCount": 9,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 8
+        },
+        {
+          "css": {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(0, 0, 0)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "50%",
+            "border": "0px none rgb(0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button>span>span",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "16px 0px 16px 0px",
+            "borderRadius": "8px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "input",
+      "structuralHash": "input",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "3.2px 8px 3.2px 8px",
+            "borderRadius": "4px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "a>div",
+      "instanceCount": 2,
+      "variants": [
+        {
+          "css": {
+            "background": "rgb(252, 252, 250)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "12px 24px 12px 24px",
+            "borderRadius": "8px",
+            "border": "2px solid rgba(0, 0, 0, 0.11)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "ul>li>li>li>li>li",
+      "instanceCount": 4,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 4
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>div>div",
+      "instanceCount": 13,
+      "variants": [
+        {
+          "css": {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "12px 12px 12px 12px",
+            "borderRadius": "16px",
+            "border": "0px solid rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 12
+        },
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(248, 245, 238)",
+            "padding": "40px 0px 40px 0px",
+            "borderRadius": "16px",
+            "border": "0px solid rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>svg",
+      "instanceCount": 11,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 11
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "ul>li>li>li",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button>svg",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0.05)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "8px 8px 8px 8px",
+            "borderRadius": "16px",
+            "border": "0px solid rgba(0, 0, 0, 0)",
+            "fontSize": "14px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 1
+        },
+        {
+          "css": {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "8px 8px 8px 8px",
+            "borderRadius": "16px",
+            "border": "0px solid rgba(0, 0, 0, 0)",
+            "fontSize": "14px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>div",
+      "instanceCount": 32,
+      "variants": [
+        {
+          "css": {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "12px 12px 12px 12px",
+            "borderRadius": "16px",
+            "border": "0px solid rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 14
+        },
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "16px 16px 16px 16px",
+            "borderRadius": "0px",
+            "border": "0px 0px 1px none none solid rgb(31, 31, 31) rgb(31, 31, 31) rgba(0, 0, 0, 0.11)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 18
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>h3>p",
+      "instanceCount": 14,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 14
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "h3>a",
+      "instanceCount": 14,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 14
+        }
+      ]
+    },
+    {
+      "kind": "link",
+      "structuralHash": "a",
+      "instanceCount": 14,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 14
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "p",
+      "instanceCount": 39,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "14px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 39
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "div>div>div",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "div>a",
+      "instanceCount": 2,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 2
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>div>div>div>div>div",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 3
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>a>p",
+      "instanceCount": 18,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 18
+        }
+      ]
+    },
+    {
+      "kind": "link",
+      "structuralHash": "a>h3",
+      "instanceCount": 18,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 18
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "h3",
+      "instanceCount": 22,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 22
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "div>a>a",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>div>div>div>div",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>div>p>div",
+      "instanceCount": 4,
+      "variants": [
+        {
+          "css": {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "16px",
+            "border": "1px solid rgba(0, 0, 0, 0.11)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 4
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>div>p>p",
+      "instanceCount": 4,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "32px 24px 0px 24px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 4
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>img>h3",
+      "instanceCount": 4,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 4
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "div>ul",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 24px 32px 24px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 3
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "li>svg>span",
+      "instanceCount": 16,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 8px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 16
+        }
+      ]
+    },
+    {
+      "kind": "other",
+      "structuralHash": "svg>use",
+      "instanceCount": 16,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "16px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 16
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "structuralHash": "span",
+      "instanceCount": 16,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(31, 31, 31)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(31, 31, 31)",
+            "fontSize": "14px",
+            "fontWeight": "300"
+          },
+          "instanceCount": 16
+        }
+      ]
+    }
+  ],
+  "accessibility": {
+    "remediation": []
+  },
+  "cssHealth": {
+    "sheets": [
+      {
+        "url": "inline:primary-site-international-header.css",
+        "totalBytes": 100685,
+        "usedBytes": 55531,
+        "unusedBytes": 45154,
+        "unusedPercent": 45
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/80991207741/1780492963066/template_richTextOverrides.min.css",
+        "totalBytes": 15512,
+        "usedBytes": 2399,
+        "unusedBytes": 13113,
+        "unusedPercent": 85
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/117909732444/1784127974869/module_WTM_-_WF_-_Integrations.min.css",
+        "totalBytes": 5665,
+        "usedBytes": 4333,
+        "unusedBytes": 1332,
+        "unusedPercent": 24
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/80992946022/1782303733728/template_section.min.css",
+        "totalBytes": 2995,
+        "usedBytes": 2431,
+        "unusedBytes": 564,
+        "unusedPercent": 19
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/191016886562/1784127565097/module_WTM_-_WF_-_Use_Case_with_Overflow_Media.min.css",
+        "totalBytes": 4399,
+        "usedBytes": 1728,
+        "unusedBytes": 2671,
+        "unusedPercent": 61
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071318/1768385548642/template_roundButton.min.css",
+        "totalBytes": 1365,
+        "usedBytes": 933,
+        "unusedBytes": 432,
+        "unusedPercent": 32
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071312/1768385543674/template_ctaGroup.min.css",
+        "totalBytes": 1104,
+        "usedBytes": 274,
+        "unusedBytes": 830,
+        "unusedPercent": 75
+      },
+      {
+        "url": "inline:cl-core-head.css",
+        "totalBytes": 48179,
+        "usedBytes": 34459,
+        "unusedBytes": 13720,
+        "unusedPercent": 28
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194396003587/1768385542577/template_textLink.min.css",
+        "totalBytes": 2746,
+        "usedBytes": 948,
+        "unusedBytes": 1798,
+        "unusedPercent": 65
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/117909735318/1784127973338/module_WTM_-_WF_-_Company_Story.min.css",
+        "totalBytes": 4321,
+        "usedBytes": 1835,
+        "unusedBytes": 2486,
+        "unusedPercent": 58
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/80992206946/1784832427501/module_ctaContentBlock.min.css",
+        "totalBytes": 1416,
+        "usedBytes": 1138,
+        "unusedBytes": 278,
+        "unusedPercent": 20
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071313/1768385537796/template_icons.min.css",
+        "totalBytes": 58,
+        "usedBytes": 58,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071283/1784123277484/template_carousel.min.css",
+        "totalBytes": 17502,
+        "usedBytes": 11535,
+        "unusedBytes": 5967,
+        "unusedPercent": 34
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071295/1768385535841/template_badge.min.css",
+        "totalBytes": 3054,
+        "usedBytes": 0,
+        "unusedBytes": 3054,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://www.hubspot.com/products/crm",
+        "totalBytes": 111,
+        "usedBytes": 17,
+        "unusedBytes": 94,
+        "unusedPercent": 85
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/117907621800/1784127986100/template_wfSection.min.css",
+        "totalBytes": 3434,
+        "usedBytes": 2001,
+        "unusedBytes": 1433,
+        "unusedPercent": 42
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/80991154572/1784832440490/module_testimonials.min.css",
+        "totalBytes": 4713,
+        "usedBytes": 3106,
+        "unusedBytes": 1607,
+        "unusedPercent": 34
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/201641145442/1764770669082/template_csol-image.min.css",
+        "totalBytes": 84,
+        "usedBytes": 0,
+        "unusedBytes": 84,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://www.hubspot.com/products/crm",
+        "totalBytes": 16188,
+        "usedBytes": 8436,
+        "unusedBytes": 7752,
+        "unusedPercent": 48
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071311/1775052626179/template_accordion.min.css",
+        "totalBytes": 4447,
+        "usedBytes": 1953,
+        "unusedBytes": 2494,
+        "unusedPercent": 56
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/80992206983/1784832434115/module_logoCarousel.min.css",
+        "totalBytes": 2615,
+        "usedBytes": 958,
+        "unusedBytes": 1657,
+        "unusedPercent": 63
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071329/1768385547429/template_breadcrumbs.min.css",
+        "totalBytes": 1556,
+        "usedBytes": 1201,
+        "unusedBytes": 355,
+        "unusedPercent": 23
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/80990896713/1784832439099/module_sectionHeader.min.css",
+        "totalBytes": 1720,
+        "usedBytes": 1256,
+        "unusedBytes": 464,
+        "unusedPercent": 27
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/80992206926/1784832423288/module_accordion.min.css",
+        "totalBytes": 1622,
+        "usedBytes": 678,
+        "unusedBytes": 944,
+        "unusedPercent": 58
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/207924262801/1783957694188/template_footer-core-critical.min.css",
+        "totalBytes": 7500,
+        "usedBytes": 6813,
+        "unusedBytes": 687,
+        "unusedPercent": 9
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/120115038736/1784056782830/module_wtm-wf-pricing-cards.min.css",
+        "totalBytes": 7167,
+        "usedBytes": 3943,
+        "unusedBytes": 3224,
+        "unusedPercent": 45
+      },
+      {
+        "url": "https://www.hubspot.com/products/crm",
+        "totalBytes": 678,
+        "usedBytes": 0,
+        "unusedBytes": 678,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071286/1784123267892/template_button.min.css",
+        "totalBytes": 5568,
+        "usedBytes": 3126,
+        "unusedBytes": 2442,
+        "unusedPercent": 44
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071322/1777298710002/template_card.min.css",
+        "totalBytes": 8652,
+        "usedBytes": 1407,
+        "unusedBytes": 7245,
+        "unusedPercent": 84
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/137616027437/1784832424686/module_breadcrumbs.min.css",
+        "totalBytes": 417,
+        "usedBytes": 0,
+        "unusedBytes": 417,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/module_assets/1/80992206947/1784832427161/module_ctaCardsPhoto.min.css",
+        "totalBytes": 3099,
+        "usedBytes": 1271,
+        "unusedBytes": 1828,
+        "unusedPercent": 59
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071303/1768385535377/template_avatar.min.css",
+        "totalBytes": 645,
+        "usedBytes": 249,
+        "unusedBytes": 396,
+        "unusedPercent": 61
+      },
+      {
+        "url": "https://www.hubspot.com/products/crm",
+        "totalBytes": 25,
+        "usedBytes": 25,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://accounts.google.com/gsi/style",
+        "totalBytes": 696,
+        "usedBytes": 0,
+        "unusedBytes": 696,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap",
+        "totalBytes": 2467,
+        "usedBytes": 0,
+        "unusedBytes": 2467,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://static.hsappstatic.net/trellis-theming-assets/static-1.389/stylesheets/hubspot-theme.stable.css",
+        "totalBytes": 284510,
+        "usedBytes": 172314,
+        "unusedBytes": 112196,
+        "unusedPercent": 39
+      },
+      {
+        "url": "https://static.hsappstatic.net/conversations-visitor-ui/static-1.30111/sass/visitor.css",
+        "totalBytes": 27283,
+        "usedBytes": 183,
+        "unusedBytes": 27100,
+        "unusedPercent": 99
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/207928094053/1783957703545/template_footer-core-non-critical.min.css",
+        "totalBytes": 8101,
+        "usedBytes": 360,
+        "unusedBytes": 7741,
+        "unusedPercent": 96
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071297/1768385549638/template_playButton.min.css",
+        "totalBytes": 954,
+        "usedBytes": 475,
+        "unusedBytes": 479,
+        "unusedPercent": 50
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/80991207741/1780492963066/template_richTextOverrides.min.css",
+        "totalBytes": 15512,
+        "usedBytes": 2399,
+        "unusedBytes": 13113,
+        "unusedPercent": 85
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/130253705477/1744213503806/template_loading.min.css",
+        "totalBytes": 1379,
+        "usedBytes": 210,
+        "unusedBytes": 1169,
+        "unusedPercent": 85
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071322/1777298710002/template_card.min.css",
+        "totalBytes": 8652,
+        "usedBytes": 1407,
+        "unusedBytes": 7245,
+        "unusedPercent": 84
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071292/1784123274384/template_lightbox.min.css",
+        "totalBytes": 21611,
+        "usedBytes": 12235,
+        "unusedBytes": 9376,
+        "unusedPercent": 43
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194396003587/1768385542577/template_textLink.min.css",
+        "totalBytes": 2746,
+        "usedBytes": 0,
+        "unusedBytes": 2746,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://www.hubspot.com/hubfs/hub_generated/template_assets/1/194395071286/1784123267892/template_button.min.css",
+        "totalBytes": 5568,
+        "usedBytes": 0,
+        "unusedBytes": 5568,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://static.hsappstatic.net/trellis-theming-assets/static-1.389/stylesheets/hubspot-theme.stable.css",
+        "totalBytes": 284510,
+        "usedBytes": 0,
+        "unusedBytes": 284510,
+        "unusedPercent": 100
+      }
+    ],
+    "totalBytes": 943231,
+    "usedBytes": 343625,
+    "unusedBytes": 599606,
+    "unusedPercent": 64,
+    "importantCount": 400,
+    "duplicates": 4534,
+    "vendorPrefixes": {
+      "webkit": 21,
+      "moz": 15,
+      "ms": 0,
+      "o": 0
+    },
+    "keyframes": [],
+    "specificity": {
+      "max": [
+        1,
+        8,
+        4
+      ],
+      "average": [
+        0,
+        2.02,
+        0.28
+      ],
+      "count": 3327
+    },
+    "issues": [
+      "400 !important rules",
+      "4534 duplicate declarations",
+      "64% unused CSS"
+    ]
+  }
+}

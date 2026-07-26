@@ -1,0 +1,104 @@
+{
+  "tone": "friendly",
+  "pronoun": "you-only",
+  "headingStyle": "Sentence case",
+  "headingLengthClass": "tight",
+  "ctaVerbs": [
+    {
+      "value": "features",
+      "count": 1
+    },
+    {
+      "value": "why",
+      "count": 1
+    },
+    {
+      "value": "resources",
+      "count": 1
+    },
+    {
+      "value": "all",
+      "count": 1
+    },
+    {
+      "value": "marketplace",
+      "count": 1
+    },
+    {
+      "value": "blog",
+      "count": 1
+    },
+    {
+      "value": "knowledge",
+      "count": 1
+    },
+    {
+      "value": "academy",
+      "count": 1
+    },
+    {
+      "value": "try",
+      "count": 1
+    },
+    {
+      "value": "cookies",
+      "count": 1
+    }
+  ],
+  "buttonPatterns": [
+    {
+      "value": "features",
+      "count": 1
+    },
+    {
+      "value": "why pipedrive",
+      "count": 1
+    },
+    {
+      "value": "resources",
+      "count": 1
+    },
+    {
+      "value": "all categories",
+      "count": 1
+    },
+    {
+      "value": "marketplace apps",
+      "count": 1
+    },
+    {
+      "value": "blog",
+      "count": 1
+    },
+    {
+      "value": "knowledge base",
+      "count": 1
+    },
+    {
+      "value": "academy",
+      "count": 1
+    },
+    {
+      "value": "try it free",
+      "count": 1
+    },
+    {
+      "value": "cookies settings",
+      "count": 1
+    },
+    {
+      "value": "accept all cookies",
+      "count": 1
+    }
+  ],
+  "sampleHeadings": [
+    "The page you are looking for doesn't exist.",
+    "More resources",
+    " Manage Consent Preferences",
+    "Cookie List"
+  ],
+  "stats": {
+    "buttons": 11,
+    "headings": 4
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "library": "unknown",
+  "confidence": 0,
+  "alternates": [],
+  "stats": {
+    "count": 16,
+    "strokeOnly": 0,
+    "fillOnly": 0,
+    "mixed": 4,
+    "avgStrokeWidth": 1.12,
+    "gridDistribution": {},
+    "roundedCapsFraction": 0.63
+  },
+  "signals": [
+    "roundedCaps"
+  ],
+  "icons": [
+    {
+      "class": "transition-[translate] duration-400 ease-in-out group-hover:translate-x-0.25 gro",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "dark:text-white-500 text-tertiary-foreground",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "h-6 text-primary-foreground",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "transition-[transform,translate] duration-300 ease-in-out-cubic group-data-[popu",
+      "grid": null,
+      "strokeWidth": 1.2,
+      "style": "mixed"
+    },
+    {
+      "class": "transition-[transform,translate] duration-300 ease-in-out-cubic group-data-[popu",
+      "grid": null,
+      "strokeWidth": 1.2,
+      "style": "mixed"
+    },
+    {
+      "class": "w-full text-primary-foreground dark:text-white-200",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "ml-0.5 -rotate-45 text-caption-foreground transition-colors duration-200 ease-in",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "ml-0.5 -rotate-45 text-caption-foreground transition-colors duration-200 ease-in",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "ml-0.5 -rotate-45 text-caption-foreground transition-colors duration-200 ease-in",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "ml-0.5 -rotate-45 text-caption-foreground transition-colors duration-200 ease-in",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "ml-0.5 -rotate-45 text-caption-foreground transition-colors duration-200 ease-in",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "ml-0.5 -rotate-45 text-caption-foreground transition-colors duration-200 ease-in",
+      "grid": null,
+      "strokeWidth": 1.1,
+      "style": "mixed"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    }
+  ]
+}

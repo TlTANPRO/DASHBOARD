@@ -1,0 +1,19 @@
+/* shadcn/ui Theme — extracted from https://www.hubspot.com/products/crm */
+/* Paste into your globals.css */
+
+@layer base {
+  :root {
+    --background: 60 25% 98%;
+    --foreground: 0 0% 12%;
+    --primary: 42 42% 95%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 17 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 183 82% 9%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 12%;
+    --border: 0 0% 94%;
+    --radius: 6px;
+  }
+}

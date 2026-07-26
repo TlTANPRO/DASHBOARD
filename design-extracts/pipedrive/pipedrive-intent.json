@@ -1,0 +1,238 @@
+{
+  "pageIntent": {
+    "type": "legal",
+    "confidence": 0.26,
+    "path": "/en/why-pipedrive",
+    "title": "Pipedrive",
+    "description": "",
+    "signals": [
+      {
+        "kind": "dom",
+        "type": "blog-post",
+        "weight": 0.35,
+        "detail": "byline|min-read"
+      },
+      {
+        "kind": "dom",
+        "type": "legal",
+        "weight": 0.4
+      }
+    ],
+    "alternates": [
+      {
+        "type": "blog-post",
+        "score": 0.35
+      }
+    ],
+    "needsSmart": true
+  },
+  "sectionRoles": {
+    "sections": [
+      {
+        "index": 0,
+        "tag": "header",
+        "role": "feature-grid",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 88
+        },
+        "buttonCount": 11,
+        "cardCount": 20,
+        "slots": {
+          "ctaCount": 11,
+          "lede": "Features\nWhy Pipedrive\nResources\nContact sales\nPricing\nLog in\nTry it free"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 72,
+          "y": 0,
+          "w": 611.34375,
+          "h": 88
+        },
+        "buttonCount": 3,
+        "cardCount": 15,
+        "slots": {
+          "ctaCount": 3,
+          "lede": "Features\nWhy Pipedrive\nResources\nContact sales\nPricing"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 2,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "The page you are looking for doesn't exist.",
+        "bounds": {
+          "x": 0,
+          "y": 88,
+          "w": 1280,
+          "h": 508.4375
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "The page you are looking for doesn't exist."
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 3,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "More resources",
+        "bounds": {
+          "x": 0,
+          "y": 597.4375,
+          "w": 1280,
+          "h": 343
+        },
+        "buttonCount": 0,
+        "cardCount": 12,
+        "slots": {
+          "heading": "More resources",
+          "lede": "More resources\nMobile CRM\nFree Excel sales dashboards\nGuide to activity-based sales\nHow to build a sales pipeline"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 4,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 940.4375,
+          "w": 1280,
+          "h": 508
+        },
+        "buttonCount": 1,
+        "cardCount": 0,
+        "slots": {
+          "ctaCount": 1
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 5,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": " Manage Consent Preferences",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "buttonCount": 4,
+        "cardCount": 4,
+        "slots": {
+          "heading": " Manage Consent Preferences",
+          "ctaCount": 4
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Cookie List",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "buttonCount": 5,
+        "cardCount": 1,
+        "slots": {
+          "heading": "Cookie List",
+          "ctaCount": 5,
+          "lede": "Back ButtonCookie List Search IconFilter IconClear checkbox label labelApply CancelConsent Leg.Interest checkbox label label checkbox label label checkbox label label"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 7,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "buttonCount": 3,
+        "cardCount": 1,
+        "slots": {
+          "ctaCount": 3,
+          "lede": "Clear checkbox label labelApply Cancel"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 8,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "Consent Leg.Interest checkbox label label checkbox label label checkbox label label"
+        },
+        "needsSmart": true
+      }
+    ],
+    "counts": {
+      "feature-grid": 1,
+      "nav": 1,
+      "content": 5,
+      "pricing": 1,
+      "footer": 1
+    },
+    "readingOrder": [
+      "feature-grid",
+      "nav",
+      "content",
+      "content",
+      "content",
+      "content",
+      "content",
+      "pricing",
+      "footer"
+    ]
+  }
+}

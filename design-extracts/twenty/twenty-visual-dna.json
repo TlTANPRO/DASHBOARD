@@ -1,0 +1,64 @@
+{
+  "materialLanguage": {
+    "label": "material-you",
+    "confidence": 0.45,
+    "signals": [
+      {
+        "label": "material-you",
+        "weight": 0.45,
+        "detail": "pill shapes + soft shadows"
+      }
+    ],
+    "metrics": {
+      "saturation": 0.44,
+      "shadowProfile": "soft",
+      "avgShadowBlur": 0,
+      "maxShadowBlur": 0,
+      "insetShadows": 0,
+      "avgRadius": 144.1,
+      "maxRadius": 999,
+      "hasPill": true,
+      "hasBackdropBlur": false,
+      "gradientCount": 1
+    },
+    "alternates": []
+  },
+  "imageryStyle": {
+    "label": "icon-only",
+    "confidence": 0.025,
+    "counts": {
+      "total": 81,
+      "svg": 0,
+      "icon": 83,
+      "hero": 0,
+      "screenshot": 0,
+      "photoLike": 0
+    },
+    "dominantAspect": "square-ish",
+    "radiusProfile": "square",
+    "alternates": [],
+    "signals": []
+  },
+  "backgroundPatterns": {
+    "labels": [
+      "plain"
+    ],
+    "counts": {
+      "noise": 1,
+      "dotGrid": 0,
+      "lineGrid": 0,
+      "meshCount": 0,
+      "svgPattern": 0
+    },
+    "gradientTotals": {
+      "radial": 1,
+      "linear": 0
+    },
+    "samples": [
+      {
+        "tag": "noise",
+        "value": "url(\"https://twenty.com/images/shared/light-noise.webp\")"
+      }
+    ]
+  }
+}

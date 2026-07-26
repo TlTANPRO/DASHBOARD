@@ -1,0 +1,48 @@
+{
+  "openGraph": {
+    "title": "Twenty | #1 Open Source CRM",
+    "description": "The #1 Open Source CRM for modern teams. Modular, scalable, and built to fit your business.",
+    "url": "https://twenty.com",
+    "site_name": "Twenty",
+    "locale": "en",
+    "image": "https://twenty.com/images/og/default.png",
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@twentycrm",
+    "creator": "@twentycrm",
+    "title": "Twenty | #1 Open Source CRM",
+    "description": "The #1 Open Source CRM for modern teams. Modular, scalable, and built to fit your business.",
+    "image": "https://twenty.com/images/og/default.png"
+  },
+  "description": "The #1 Open Source CRM for modern teams. Modular, scalable, and built to fit your business.",
+  "canonical": null,
+  "themeColor": null,
+  "viewport": "width=device-width, initial-scale=1",
+  "favicons": [
+    {
+      "rel": "icon",
+      "href": "https://twenty.com/favicon.ico?favicon.32uhsgd5leeaf.ico?dpl=dpl-0f846933-30079106694-1",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ],
+  "manifest": null,
+  "structuredData": [
+    {
+      "type": "FAQPage",
+      "name": null,
+      "sample": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Is Twenty really open-source?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Twenty is the #1 Open Source CRM on GitHub. You can self-host to fully own your infrastructure, or run it on our managed cloud for a zero-ops setup.\"}},{\"@type\":\"Question\",\"name\":\"How long does it take to get started?\",\"accepted"
+    }
+  ],
+  "score": {
+    "hasOg": true,
+    "hasTwitter": true,
+    "hasDescription": true,
+    "hasCanonical": false,
+    "hasStructuredData": true,
+    "hasFavicon": true,
+    "hasThemeColor": false
+  }
+}

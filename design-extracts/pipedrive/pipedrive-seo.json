@@ -1,0 +1,63 @@
+{
+  "openGraph": {
+    "type": "website",
+    "site_name": "Pipedrive"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@pipedrive"
+  },
+  "description": null,
+  "canonical": null,
+  "themeColor": null,
+  "viewport": "width=device-width, initial-scale=1.0",
+  "favicons": [
+    {
+      "rel": "shortcut icon",
+      "href": "https://cdn.syd-1.pipedriveassets.com/www-main-renderer/_next/static/media/favicon.69a7a310.ico",
+      "sizes": "",
+      "type": ""
+    },
+    {
+      "rel": "icon",
+      "href": "https://cdn.syd-1.pipedriveassets.com/www-main-renderer/_next/static/media/favicon-16x16.28a31c3f.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "rel": "icon",
+      "href": "https://cdn.syd-1.pipedriveassets.com/www-main-renderer/_next/static/media/favicon-32x32.1fbe181a.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "rel": "icon",
+      "href": "https://cdn.syd-1.pipedriveassets.com/www-main-renderer/_next/static/media/favicon-96x96.9c93b075.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "rel": "icon",
+      "href": "https://cdn.syd-1.pipedriveassets.com/www-main-renderer/_next/static/media/favicon-128x128.70360f37.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "rel": "icon",
+      "href": "https://cdn.syd-1.pipedriveassets.com/www-main-renderer/_next/static/media/favicon-196x196.98c71512.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ],
+  "manifest": null,
+  "structuredData": [],
+  "score": {
+    "hasOg": true,
+    "hasTwitter": true,
+    "hasDescription": false,
+    "hasCanonical": false,
+    "hasStructuredData": false,
+    "hasFavicon": true,
+    "hasThemeColor": false
+  }
+}

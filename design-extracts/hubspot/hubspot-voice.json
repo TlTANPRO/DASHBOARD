@@ -1,0 +1,126 @@
+{
+  "tone": "friendly",
+  "pronoun": "you-only",
+  "headingStyle": "Sentence case",
+  "headingLengthClass": "tight",
+  "ctaVerbs": [
+    {
+      "value": "get",
+      "count": 8
+    },
+    {
+      "value": "close",
+      "count": 3
+    },
+    {
+      "value": "manage",
+      "count": 2
+    },
+    {
+      "value": "by",
+      "count": 2
+    },
+    {
+      "value": "automate",
+      "count": 2
+    },
+    {
+      "value": "previous",
+      "count": 2
+    },
+    {
+      "value": "next",
+      "count": 2
+    },
+    {
+      "value": "learn",
+      "count": 2
+    },
+    {
+      "value": "hubspot",
+      "count": 2
+    },
+    {
+      "value": "email",
+      "count": 2
+    }
+  ],
+  "buttonPatterns": [
+    {
+      "value": "get free crm",
+      "count": 5
+    },
+    {
+      "value": "×\nclose",
+      "count": 2
+    },
+    {
+      "value": "previous",
+      "count": 2
+    },
+    {
+      "value": "next",
+      "count": 2
+    },
+    {
+      "value": "learn about premium crm",
+      "count": 2
+    },
+    {
+      "value": "accept all",
+      "count": 1
+    },
+    {
+      "value": "decline all",
+      "count": 1
+    },
+    {
+      "value": "manage cookies",
+      "count": 1
+    },
+    {
+      "value": "skip to content",
+      "count": 1
+    },
+    {
+      "value": "select a language",
+      "count": 1
+    },
+    {
+      "value": "high contrast",
+      "count": 1
+    },
+    {
+      "value": "about",
+      "count": 1
+    },
+    {
+      "value": "products",
+      "count": 1
+    },
+    {
+      "value": "free hubspot crm",
+      "count": 1
+    },
+    {
+      "value": "overview of all products",
+      "count": 1
+    }
+  ],
+  "sampleHeadings": [
+    "Free CRM Software for Startups & Small Businesses",
+    "Trusted by over 299,000 customers in more than 135 countries.",
+    "The Free CRM With Unlimited Growth Potential",
+    "Contact management",
+    "CRM import",
+    "Deals",
+    "Task & activities",
+    "Pipeline management",
+    "HubSpot Marketplace",
+    "Data sync"
+  ],
+  "stats": {
+    "buttons": 63,
+    "headings": 55
+  }
+}

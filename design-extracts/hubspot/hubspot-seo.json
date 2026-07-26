@@ -1,0 +1,51 @@
+{
+  "openGraph": {
+    "image": "https://wtcfns.hubspot.com/wt-api/social-sharing",
+    "image:width": "600",
+    "image:height": "335",
+    "description": "HubSpot’s free CRM powers your customer support, sales, and marketing with easy-to-use features like live chat, meeting scheduling, and email tracking.",
+    "title": "Streamline Your Entire Business With a Free CRM | HubSpot",
+    "url": "https://www.hubspot.com/products/crm"
+  },
+  "twitter": {
+    "image": "https://wtcfns.hubspot.com/wt-api/social-sharing",
+    "card": "summary",
+    "description": "HubSpot’s free CRM powers your customer support, sales, and marketing with easy-to-use features like live chat, meeting scheduling, and email tracking.",
+    "title": "Streamline Your Entire Business With a Free CRM | HubSpot",
+    "account_id": "14458280"
+  },
+  "description": "HubSpot’s free CRM powers your customer support, sales, and marketing with easy-to-use features like live chat, meeting scheduling, and email tracking.",
+  "canonical": null,
+  "themeColor": "#FF7A59",
+  "viewport": "width=device-width, initial-scale=1",
+  "favicons": [
+    {
+      "rel": "shortcut icon",
+      "href": "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png",
+      "sizes": "",
+      "type": ""
+    }
+  ],
+  "manifest": null,
+  "structuredData": [
+    {
+      "type": "VideoObject",
+      "name": "WV_ Free CRM_FINAL_",
+      "sample": "{\"@context\":\"https://schema.org\",\"@type\":\"VideoObject\",\"caption\":{\"@type\":\"MediaObject\",\"contentUrl\":\"https://www.hubspot.com/media-transcripts/194504168980/en.vtt\",\"inLanguage\":\"en\",\"name\":\"en Captions\"},\"contentUrl\":\"https://stream.mux.com/eUCR9p5FnBGqPv9emE8DNnuGBEvSgj9ri4UGj4Qzul4/capped-1080p.mp4\",\"dateModified\":\"2025-09-24T21:52:42.580Z\",\"duration\":\"PT1M52S\",\"height\":1716,\"name\":\"WV_ Free CR"
+    },
+    {
+      "type": "BreadcrumbList",
+      "name": null,
+      "sample": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.hubspot.com/products/crm#breadcrumbs\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"https://www.hubspot.com\",\"name\":\"Home\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"https://www.hubspot.com/products/crm\",\"name\":\"Free HubSpot CRM\",\"position\":2}]}"
+    }
+  ],
+  "score": {
+    "hasOg": true,
+    "hasTwitter": true,
+    "hasDescription": true,
+    "hasCanonical": false,
+    "hasStructuredData": true,
+    "hasFavicon": true,
+    "hasThemeColor": true
+  }
+}

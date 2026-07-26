@@ -1,0 +1,195 @@
+{
+  "pageIntent": {
+    "type": "product",
+    "confidence": 0.59,
+    "path": "/product",
+    "title": "Attio: The CRM for agentic revenue",
+    "description": "The system for revenue teams to build pipeline, accelerate deals, and grow accounts around the clock.\t",
+    "signals": [
+      {
+        "kind": "url",
+        "type": "product",
+        "weight": 0.75
+      },
+      {
+        "kind": "dom",
+        "type": "legal",
+        "weight": 0.4
+      }
+    ],
+    "alternates": [
+      {
+        "type": "legal",
+        "score": 0.4
+      }
+    ],
+    "needsSmart": true
+  },
+  "sectionRoles": {
+    "sections": [
+      {
+        "index": 0,
+        "tag": "header",
+        "role": "logo-wall",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 116
+        },
+        "buttonCount": 30,
+        "cardCount": 86,
+        "slots": {
+          "ctaCount": 30,
+          "lede": "Orchestrate revenue agents with the new Workflows\nPlatform\nResources\nCustomers\nPricing\nSign in\nStart for free"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 24,
+          "y": 48,
+          "w": 1232,
+          "h": 67
+        },
+        "buttonCount": 29,
+        "cardCount": 81,
+        "slots": {
+          "ctaCount": 29,
+          "lede": "Platform\nResources\nCustomers\nPricing\nSign in\nStart for free"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 2,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 163,
+          "y": 64,
+          "w": 420.8125,
+          "h": 36
+        },
+        "buttonCount": 26,
+        "cardCount": 76,
+        "slots": {
+          "ctaCount": 26,
+          "lede": "Platform\nResources\nCustomers\nPricing"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 3,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        },
+        "buttonCount": 22,
+        "cardCount": 67,
+        "slots": {
+          "ctaCount": 22
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 4,
+        "tag": "main",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Page not found.",
+        "bounds": {
+          "x": 0,
+          "y": 116,
+          "w": 1280,
+          "h": 844
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Page not found.",
+          "lede": "/ STATUS: 404"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 5,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": "Platform",
+        "bounds": {
+          "x": 0,
+          "y": 960,
+          "w": 1280,
+          "h": 657
+        },
+        "buttonCount": 0,
+        "cardCount": 78,
+        "slots": {
+          "heading": "Platform",
+          "subheadings": [
+            "Company",
+            "Import from",
+            "Attio for",
+            "Apps"
+          ]
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 1617,
+          "w": 1280,
+          "h": 0
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": true
+      }
+    ],
+    "counts": {
+      "logo-wall": 1,
+      "nav": 3,
+      "content": 2,
+      "footer": 1
+    },
+    "readingOrder": [
+      "logo-wall",
+      "nav",
+      "nav",
+      "nav",
+      "content",
+      "footer",
+      "content"
+    ]
+  }
+}

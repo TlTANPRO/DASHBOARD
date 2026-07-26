@@ -1,0 +1,346 @@
+{
+  "colors": {
+    "all": [
+      {
+        "hex": "#030303",
+        "rgb": {
+          "r": 3,
+          "g": 3,
+          "b": 3,
+          "a": 0.1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 1
+        },
+        "count": 9,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 0.95
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 100
+        },
+        "count": 3,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#c1c1c1",
+        "rgb": {
+          "r": 193,
+          "g": 193,
+          "b": 193,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 76
+        },
+        "count": 1,
+        "contexts": [
+          "border"
+        ]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "role": "nav",
+      "tag": "header",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 116
+      },
+      "heading": null,
+      "buttonCount": 30,
+      "cardCount": 86,
+      "className": "border-subtle-stroke border-b bg-primary-background/95 transition-colors duration-250 dark:bg-primary-background"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 24,
+        "y": 48,
+        "w": 1232,
+        "h": 67
+      },
+      "heading": null,
+      "buttonCount": 29,
+      "cardCount": 81,
+      "className": "pt-2 pb-[7px] lg:pt-4 lg:pb-[15px]"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 163,
+        "y": 64,
+        "w": 420.8125,
+        "h": 36
+      },
+      "heading": null,
+      "buttonCount": 26,
+      "cardCount": 76,
+      "className": "relative z-1"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "heading": null,
+      "buttonCount": 22,
+      "cardCount": 67,
+      "className": "h-(--popup-height) w-(--popup-width) origin-[var(--transform-origin)] overflow-hidden rounded-2xl bg-primary-background/95 backdrop-blur-xl transition-[translate,opacity,width,height] duration-150 ease-in-out-cubic data-[starting-style]:-translate-y-1 data-[starting-style]:opacity-0 data-[ending-style]:-translate-y-1 data-[ending-style]:opacity-0 motion-reduce:bg-primary-background motion-reduce:backdrop-blur-none motion-reduce:transition-[opacity,width,height] motion-reduce:duration-100 motion-reduce:ease-out motion-reduce:data-[ending-style]:translate-y-0 motion-reduce:data-[starting-style]:translate-y-0 data-[instant]:transition-none shadow-[0px_0px_0px_1px_rgba(28,29,31,0.1),0px_1px_2px_0px_rgba(28,29,31,0.05),0px_2px_4px_-1px_rgba(28,29,31,0.02),0px_4px_8px_-2px_rgba(28,29,31,0.03),0px_8px_16px_-4px_rgba(28,29,31,0.04),0px_16px_32px_-8px_rgba(28,29,31,0.05),0px_32px_64px_-8px_rgba(28,29,31,0.06)] dark:bg-secondary-background dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.2),0px_1px_2px_0px_rgba(28,29,31,0.05),0px_2px_4px_-1px_rgba(28,29,31,0.02),0px_4px_8px_-2px_rgba(28,29,31,0.03),0px_8px_16px_-4px_rgba(28,29,31,0.04),0px_16px_32px_-8px_rgba(28,29,31,0.05),0px_32px_64px_-8px_rgba(28,29,31,0.06)]"
+    },
+    {
+      "role": "content",
+      "tag": "main",
+      "bounds": {
+        "x": 0,
+        "y": 116,
+        "w": 1280,
+        "h": 844
+      },
+      "heading": "Page not found.",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "container flex flex-1 flex-col"
+    },
+    {
+      "role": "footer",
+      "tag": "footer",
+      "bounds": {
+        "x": 0,
+        "y": 960,
+        "w": 1280,
+        "h": 657
+      },
+      "heading": "Platform",
+      "buttonCount": 0,
+      "cardCount": 78,
+      "className": "relative flex min-h-[40svh] w-full flex-col justify-between bg-primary-background dark:bg-primary-background dark"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 1617,
+        "w": 1280,
+        "h": 0
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": null
+    }
+  ],
+  "componentClusters": [
+    {
+      "kind": "button",
+      "structuralHash": "button>svg",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "lab(94.3726 -0.157326 -2.23036)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "10px",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button>span>svg",
+      "instanceCount": 2,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "lab(20.5697 -0.638425 -4.44436)",
+            "padding": "0px 8px 0px 12px",
+            "borderRadius": "10px",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "fontSize": "15px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "a",
+      "instanceCount": 4,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "lab(20.5697 -0.638425 -4.44436)",
+            "padding": "0px 12px 0px 12px",
+            "borderRadius": "10px",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "fontSize": "15px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 4
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button",
+      "instanceCount": 2,
+      "variants": [
+        {
+          "css": {
+            "background": "lab(12.7212 0.103362 -2.22102)",
+            "color": "lab(96.1596 -0.0828803 -1.13571)",
+            "padding": "0px 12px 0px 12px",
+            "borderRadius": "10px",
+            "border": "1px solid lab(37.426 -1.09151 -9.33263)",
+            "fontSize": "14px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        }
+      ]
+    }
+  ],
+  "accessibility": {
+    "remediation": []
+  },
+  "cssHealth": {
+    "sheets": [
+      {
+        "url": "https://attio.com/_next/static/chunks/09-gai.q5c35i.css?dpl=dpl_A9QvBGm1EtmAnxuNh8Y2c98ce8kZ",
+        "totalBytes": 2592,
+        "usedBytes": 0,
+        "unusedBytes": 2592,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://attio.com/_next/static/chunks/0-3jdgy1a36yc.css?dpl=dpl_A9QvBGm1EtmAnxuNh8Y2c98ce8kZ",
+        "totalBytes": 588,
+        "usedBytes": 0,
+        "unusedBytes": 588,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://attio.com/_next/static/chunks/116sc1td222yh.css?dpl=dpl_A9QvBGm1EtmAnxuNh8Y2c98ce8kZ",
+        "totalBytes": 1274,
+        "usedBytes": 0,
+        "unusedBytes": 1274,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://attio.com/_next/static/chunks/0arc_nnv-m0zt.css?dpl=dpl_A9QvBGm1EtmAnxuNh8Y2c98ce8kZ",
+        "totalBytes": 5061,
+        "usedBytes": 409,
+        "unusedBytes": 4652,
+        "unusedPercent": 92
+      },
+      {
+        "url": "https://attio.com/_next/static/chunks/0novd3638rqgx.css?dpl=dpl_A9QvBGm1EtmAnxuNh8Y2c98ce8kZ",
+        "totalBytes": 1588,
+        "usedBytes": 0,
+        "unusedBytes": 1588,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://attio.com/_next/static/chunks/188e6f9y1zoeq.css?dpl=dpl_A9QvBGm1EtmAnxuNh8Y2c98ce8kZ",
+        "totalBytes": 445419,
+        "usedBytes": 429037,
+        "unusedBytes": 16382,
+        "unusedPercent": 4
+      },
+      {
+        "url": "https://attio.com/product",
+        "totalBytes": 52,
+        "usedBytes": 52,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://attio.com/_next/static/chunks/0_aivuqf~udyo.css?dpl=dpl_A9QvBGm1EtmAnxuNh8Y2c98ce8kZ",
+        "totalBytes": 11441,
+        "usedBytes": 4445,
+        "unusedBytes": 6996,
+        "unusedPercent": 61
+      },
+      {
+        "url": "https://www.gstatic.com/recaptcha/releases/A7KpaEASfhDcK0nXxgQEyyYv/styles__ltr.css",
+        "totalBytes": 82980,
+        "usedBytes": 2987,
+        "unusedBytes": 79993,
+        "unusedPercent": 96
+      },
+      {
+        "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LclumYsAAAAAEDZPKR5FkJS_zFx9hCaLy2Lbw0C&co=aHR0cHM6Ly9hdHRpby5jb206NDQz&hl=en&v=A7KpaEASfhDcK0nXxgQEyyYv&size=invisible&anchor-ms=20000&execute-ms=30000&cb=6zk4b7ppaltk",
+        "totalBytes": 16001,
+        "usedBytes": 0,
+        "unusedBytes": 16001,
+        "unusedPercent": 100
+      }
+    ],
+    "totalBytes": 566996,
+    "usedBytes": 436930,
+    "unusedBytes": 130066,
+    "unusedPercent": 23,
+    "importantCount": 181,
+    "duplicates": 4931,
+    "vendorPrefixes": {
+      "webkit": 607,
+      "moz": 32,
+      "ms": 7,
+      "o": 0
+    },
+    "keyframes": [],
+    "specificity": {
+      "max": [
+        1,
+        7,
+        5
+      ],
+      "average": [
+        0.04,
+        1.61,
+        0.1
+      ],
+      "count": 6908
+    },
+    "issues": [
+      "181 !important rules",
+      "4931 duplicate declarations"
+    ]
+  }
+}

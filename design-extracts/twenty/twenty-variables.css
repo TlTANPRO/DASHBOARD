@@ -1,0 +1,165 @@
+:root {
+  /* Colors — Primary */
+  --color-primary: #ff5f57;
+  --color-secondary: #febc2e;
+  --color-accent: #28c840;
+
+  /* Colors — Neutrals */
+  --color-neutral-50: #1c1c1c;
+  --color-neutral-100: #000000;
+  --color-neutral-200: #999999;
+  --color-neutral-300: #ffffff;
+  --color-neutral-400: #666666;
+  --color-neutral-500: #333333;
+  --color-neutral-600: #09090b;
+  --color-neutral-700: #4b5563;
+  --color-neutral-800: #b3b3b3;
+  --color-neutral-900: #e5e7eb;
+
+  /* Colors — Backgrounds */
+  --color-bg: #ffffff;
+  --color-bg-1: #f4f4f4;
+  --color-bg-2: #1c1c1c;
+  --color-bg-3: #424242;
+  --color-bg-4: #f5f5f3;
+  --color-bg-5: #1b1b1b;
+  --color-bg-6: #111111;
+
+  /* Colors — Text */
+  --color-text: #000000;
+  --color-text-1: #1c1c1c;
+  --color-text-2: #0000ee;
+  --color-text-3: #4a38f5;
+  --color-text-4: #ffffff;
+
+  /* Typography — Families */
+  --font-sans: 'Host Grotesk', sans-serif;
+  --font-body: 'inter', sans-serif;
+  --font-body: 'Geist Mono', sans-serif;
+  --font-body: 'Azeret Mono', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-body: 'Arial', sans-serif;
+  --font-body: 'Times New Roman', sans-serif;
+  --font-heading: 'Aleo', sans-serif;
+
+  /* Typography — Scale */
+  --font-size-80: 80px;
+  --font-size-60: 60px;
+  --font-size-48: 48px;
+  --font-size-32: 32px;
+  --font-size-22: 22px;
+  --font-size-20: 20px;
+  --font-size-18.72: 18.72px;
+  --font-size-18: 18px;
+  --font-size-16: 16px;
+  --font-size-15: 15px;
+  --font-size-13.3333: 13.3333px;
+  --font-size-13: 13px;
+
+  /* Spacing */
+  --spacing-1: 1px;
+  --spacing-19: 19px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-60: 60px;
+  --spacing-64: 64px;
+  --spacing-68: 68px;
+  --spacing-80: 80px;
+  --spacing-120: 120px;
+  --spacing-160: 160px;
+  --spacing-208: 208px;
+
+  /* Border Radius */
+  --radius-xs: 1px;
+  --radius-sm: 4px;
+  --radius-md: 7px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50px;
+  --radius-full: 56px;
+  --radius-full: 999px;
+
+  /* Box Shadows */
+  --shadow-sm: rgba(0, 0, 0, 0.04) 0px 0px 0px 1px, rgba(0, 0, 0, 0.12) 0px 1px 2px 0px;
+  --shadow-sm: rgba(255, 255, 255, 0.6) 0px 0px 0px 1px;
+  --shadow-sm: rgba(241, 241, 241, 0.9) 0px 0px 0px 1px;
+  --shadow-sm: rgb(221, 243, 228) 0px 0px 0px 1px inset;
+  --shadow-sm: rgba(255, 255, 255, 0.16) 0px 0px 0px 1px, rgba(0, 0, 0, 0.28) 0px 20px 48px 0px;
+  --shadow-xs: rgba(255, 255, 255, 0.65) 0px 1px 0px 0px inset;
+  --shadow-xs: rgba(0, 0, 0, 0.04) 0px 0px 1px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  --shadow-sm: rgba(0, 0, 0, 0.08) 0px 0px 3.677px 0px, rgba(0, 0, 0, 0.04) 0px 1.839px 3.677px 0px;
+  --shadow-sm: color(display-p3 0 0 0 / 0.039) 0px 2px 4px 0px, color(display-p3 0 0 0 / 0.078) 0px 0px 4px 0px;
+  --shadow-xl: rgba(0, 0, 0, 0.2) 0px 10px 64px 0px;
+
+  /* Original Site Variables */
+  /* — colors — */
+  --color-white: #fff;
+  --color-black: #1c1c1c;
+  --color-black-hover: #333;
+  --color-white-hover: #e8e8e8;
+  --color-graphite: #424242;
+  --color-silver: #dbdbdb;
+  --color-neutral: #f4f4f4;
+  --color-blue: #4a38f5;
+  --color-pink: #ed87fc;
+  --color-green: #89fc9a;
+  --color-yellow: #feffb7;
+  --color-error: #ff9a9a;
+  --color-ash: #bababa;
+  --color-fog: #ddd;
+  --color-charcoal: #2a2a2a;
+  --color-stone: #959595;
+  --color-iron: #777;
+  --color-chalk: #f3f3f3;
+  --color-black-5: #1c1c1c0d;
+  --color-black-10: #1c1c1c1a;
+  --color-black-20: #1c1c1c33;
+  --color-black-40: #1c1c1c66;
+  --color-black-60: #1c1c1c99;
+  --color-black-70: #1c1c1cb3;
+  --color-black-80: #1c1c1ccc;
+  --color-blue-5: #4a38f50d;
+  --color-blue-10: #4a38f51a;
+  --color-blue-20: #4a38f533;
+  --color-blue-40: #4a38f566;
+  --color-blue-60: #4a38f599;
+  --color-blue-70: #4a38f5b3;
+  --color-blue-80: #4a38f5cc;
+  --color-white-5: #ffffff0d;
+  --color-white-10: #ffffff1a;
+  --color-white-20: #fff3;
+  --color-white-40: #fff6;
+  --color-white-60: #fff9;
+  --color-white-70: #ffffffb3;
+  --color-white-80: #fffc;
+  --ink-muted: var(--color-black-60);
+  /* — spacing — */
+  --spacing-base: 4px;
+  /* — typography — */
+  --font-base: .25rem;
+  /* — radii — */
+  --radius-base: 2px;
+  /* — other — */
+  --surface: var(--color-white);
+  --ink: var(--color-black);
+  --ink-subtle: var(--color-black-40);
+  --line: var(--color-black-10);
+  --line-strong: var(--color-black-20);
+  --divider: var(--color-black-40);
+  /* — dependencies — */
+  --surface: --color-white;
+  --ink: --color-black;
+  --ink-muted: --color-black-60;
+  --ink-subtle: --color-black-40;
+  --line: --color-black-10;
+  --line-strong: --color-black-20;
+  --divider: --color-black-40;
+  /* — semantic — */
+  success: [object Object];
+  warning: [object Object];
+  error: [object Object];
+  info: [object Object];
+
+}

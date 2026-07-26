@@ -1,0 +1,525 @@
+{
+  "pageIntent": {
+    "type": "pricing",
+    "confidence": 0.42,
+    "path": "/",
+    "title": "Twenty | #1 Open Source CRM",
+    "description": "The #1 Open Source CRM for modern teams. Modular, scalable, and built to fit your business.",
+    "signals": [
+      {
+        "kind": "dom",
+        "type": "pricing",
+        "weight": 0.6,
+        "detail": "currency+card-grid"
+      },
+      {
+        "kind": "dom",
+        "type": "blog-post",
+        "weight": 0.35,
+        "detail": "byline|min-read"
+      },
+      {
+        "kind": "url",
+        "type": "landing",
+        "weight": 0.45,
+        "detail": "root-path"
+      }
+    ],
+    "alternates": [
+      {
+        "type": "landing",
+        "score": 0.45
+      },
+      {
+        "type": "blog-post",
+        "score": 0.35
+      }
+    ],
+    "needsSmart": true
+  },
+  "sectionRoles": {
+    "sections": [
+      {
+        "index": 0,
+        "tag": "header",
+        "role": "cta",
+        "subrole": null,
+        "confidence": 0.75,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 64
+        },
+        "buttonCount": 3,
+        "cardCount": 4,
+        "slots": {
+          "ctaCount": 3,
+          "lede": "PRODUCT\nRESOURCES\nCUSTOMERS\nPRICING\n53.7K\nLOG IN\nGET STARTED"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 221.03125,
+          "y": 21.5,
+          "w": 460.625,
+          "h": 21
+        },
+        "buttonCount": 1,
+        "cardCount": 4,
+        "slots": {
+          "ctaCount": 1,
+          "lede": "PRODUCT\nRESOURCES\nCUSTOMERS\nPRICING"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 2,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 822.6875,
+          "y": 24,
+          "w": 71.65625,
+          "h": 16
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "53.7K"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 3,
+        "tag": "main",
+        "role": "pricing-table",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": "Build your Enterprise CRM at AI Speed",
+        "bounds": {
+          "x": 0,
+          "y": 64,
+          "w": 1280,
+          "h": 11169.75
+        },
+        "buttonCount": 36,
+        "cardCount": 3,
+        "slots": {
+          "heading": "Build your Enterprise CRM at AI Speed",
+          "subheadings": [
+            "A custom CRM gives your org an edge, but building one comes with tradeoffs",
+            "The Giant Monolith",
+            "The In-house Burden",
+            "Assemble, iterate and adapt a robust CRM, that's quick to flex"
+          ],
+          "ctaCount": 36
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 4,
+        "tag": "section",
+        "role": "hero",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Build your Enterprise CRM at AI Speed",
+        "bounds": {
+          "x": 0,
+          "y": 64,
+          "w": 1280,
+          "h": 1108.59375
+        },
+        "buttonCount": 23,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Build your Enterprise CRM at AI Speed",
+          "ctaCount": 23
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 5,
+        "tag": "aside",
+        "role": "cta",
+        "subrole": null,
+        "confidence": 0.75,
+        "heading": null,
+        "bounds": {
+          "x": 121,
+          "y": 481.59375,
+          "w": 220,
+          "h": 642
+        },
+        "buttonCount": 9,
+        "cardCount": 0,
+        "slots": {
+          "ctaCount": 9,
+          "lede": "Apple\nNew chat\nFavorites\nS\nSales Dashboard\n· Dashboard\nWorkspace\nCompanies\nPeople\nOpportunities\nTasks\nNotes\nDashboards\nWorkflows\nBook a demo"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 1172.59375,
+          "w": 1280,
+          "h": 250
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "TRUSTED BY\n+10K OTHERS"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 7,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "A custom CRM gives your org an edge, but building one comes with tradeoffs",
+        "bounds": {
+          "x": 0,
+          "y": 1422.59375,
+          "w": 1280,
+          "h": 780.375
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "A custom CRM gives your org an edge, but building one comes with tradeoffs",
+          "subheadings": [
+            "The Giant Monolith",
+            "The In-house Burden"
+          ],
+          "lede": "The Problem."
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 8,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Assemble, iterate and adapt a robust CRM, that's quick to flex",
+        "bounds": {
+          "x": 0,
+          "y": 2202.96875,
+          "w": 1280,
+          "h": 890.984375
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Assemble, iterate and adapt a robust CRM, that's quick to flex",
+          "subheadings": [
+            "Production grade quality",
+            "AI for rapid iterations",
+            "Control without drag"
+          ],
+          "lede": "Stop settling for trade-offs."
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 9,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": null,
+        "bounds": {
+          "x": 77.439697265625,
+          "y": 3149.40185546875,
+          "w": 314.44873046875,
+          "h": 35.199951171875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "VP of Engineering"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 10,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": null,
+        "bounds": {
+          "x": 482.7677917480469,
+          "y": 3149.40185546875,
+          "w": 314.4487609863281,
+          "h": 35.199951171875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "Principal and Founder"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 11,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": null,
+        "bounds": {
+          "x": 888.0968627929688,
+          "y": 3149.40185546875,
+          "w": 314.46246337890625,
+          "h": 35.199951171875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "CRM Engineer"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 12,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Begin with production-grade building blocks",
+        "bounds": {
+          "x": 0,
+          "y": 3093.953125,
+          "w": 1280,
+          "h": 2528
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Begin with production-grade building blocks",
+          "subheadings": [
+            "Continue iteration without friction",
+            "Stay in control with our open-source software"
+          ],
+          "lede": "01\n02\n03\nBegin with production-grade building blocks"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 13,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Make your GTM team happy with a CRM they'll love",
+        "bounds": {
+          "x": 0,
+          "y": 5621.953125,
+          "w": 1280,
+          "h": 961.796875
+        },
+        "buttonCount": 3,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Make your GTM team happy with a CRM they'll love",
+          "subheadings": [
+            "Familiar, modern interface",
+            "Live data and AI built",
+            "Fast path to action"
+          ],
+          "ctaCount": 3,
+          "lede": "Skip the clunky UX that always comes with custom."
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 14,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Dev teams power company-wide change with Twenty",
+        "bounds": {
+          "x": 0,
+          "y": 6583.75,
+          "w": 1280,
+          "h": 2240
+        },
+        "buttonCount": 0,
+        "cardCount": 3,
+        "slots": {
+          "heading": "Dev teams power company-wide change with Twenty",
+          "subheadings": [
+            "Ship a product on Twenty",
+            "Own your CRM end to end",
+            "Grow with a flexible foundation"
+          ],
+          "lede": "In production."
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 15,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 8823.75,
+          "w": 1280,
+          "h": 936
+        },
+        "buttonCount": 2,
+        "cardCount": 0,
+        "slots": {
+          "ctaCount": 2,
+          "lede": "1/3"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 16,
+        "tag": "section",
+        "role": "cta",
+        "subrole": null,
+        "confidence": 0.75,
+        "heading": "Stop fighting custom. Start building, with Twenty",
+        "bounds": {
+          "x": 0,
+          "y": 9759.75,
+          "w": 1280,
+          "h": 1474
+        },
+        "buttonCount": 8,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Stop fighting custom. Start building, with Twenty",
+          "subheadings": [
+            "Is Twenty really open-source?",
+            "How long does it take to get started?",
+            "Can I migrate from Salesforce or HubSpot?",
+            "Do I need a developer to customize Twenty?"
+          ],
+          "ctaCount": 8,
+          "lede": "Any Questions?"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 17,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 11233.75,
+          "w": 1280,
+          "h": 920
+        },
+        "buttonCount": 2,
+        "cardCount": 14,
+        "slots": {
+          "ctaCount": 2,
+          "lede": "Sitemap\nHome\nProduct\nPricing\nCustomers\nPartners\nWhy Twenty\nHelp\nDevelopers\nUser Guide\nRelease Notes\nHalftone generator\nLegal\nPrivacy Policy\nTerms and Conditions\nTrust Center\nConnect\nLinkedIn\nTALK TO US\nGET STARTED\n© 2026 – TWENTY\nEnglish"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 18,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 120,
+          "y": 11766.59375,
+          "w": 1040,
+          "h": 227.15625
+        },
+        "buttonCount": 1,
+        "cardCount": 14,
+        "slots": {
+          "ctaCount": 1,
+          "lede": "Sitemap\nHome\nProduct\nPricing\nCustomers\nPartners\nWhy Twenty\nHelp\nDevelopers\nUser Guide\nRelease Notes\nHalftone generator\nLegal\nPrivacy Policy\nTerms and Conditions\nTrust Center\nConnect\nLinkedIn\nTALK TO US\nGET STARTED"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 19,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 949,
+          "y": 12033.75,
+          "w": 211,
+          "h": 32
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": false
+      }
+    ],
+    "counts": {
+      "cta": 3,
+      "nav": 4,
+      "pricing-table": 1,
+      "hero": 1,
+      "content": 3,
+      "testimonials": 2,
+      "testimonial": 2,
+      "footer": 4
+    },
+    "readingOrder": [
+      "cta",
+      "nav",
+      "nav",
+      "pricing-table",
+      "hero",
+      "cta",
+      "content",
+      "testimonials",
+      "testimonial",
+      "content",
+      "footer",
+      "footer",
+      "footer",
+      "testimonials",
+      "content",
+      "testimonial",
+      "cta",
+      "footer",
+      "nav",
+      "nav"
+    ]
+  }
+}

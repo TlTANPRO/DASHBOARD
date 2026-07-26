@@ -1,0 +1,28 @@
+{
+  "$schema": "https://designlang.app/schemas/gradients.json",
+  "source": "https://twenty.com/",
+  "generated": "2026-07-26T12:48:31.105Z",
+  "count": 1,
+  "gradients": [
+    {
+      "raw": "radial-gradient(80% 60% at 50% 40%, rgba(245, 243, 240, 0.6) 0%, rgba(0, 0, 0, 0) 70%)",
+      "type": "radial",
+      "direction": null,
+      "stops": [
+        {
+          "color": "80% 60% at 50%",
+          "position": "40%"
+        },
+        {
+          "color": "rgba(245, 243, 240, 0.6)",
+          "position": "0%"
+        },
+        {
+          "color": "rgba(0, 0, 0, 0)",
+          "position": "70%"
+        }
+      ],
+      "classification": "bold"
+    }
+  ]
+}

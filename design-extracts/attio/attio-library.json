@@ -1,0 +1,14 @@
+{
+  "library": "tailwindcss",
+  "confidence": 0.596,
+  "evidence": [
+    "tailwind-like class density 60%"
+  ],
+  "alternates": [],
+  "signals": {
+    "tailwindLike": 0.597,
+    "radixAttrCount": 0,
+    "classSampleSize": 338
+  },
+  "needsSmart": false
+}

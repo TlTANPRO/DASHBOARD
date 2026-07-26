@@ -1,0 +1,188 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "primary",
+          "color": "#f8f5ee",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#ff4800",
+          "name": "Secondary"
+        },
+        {
+          "slug": "accent",
+          "color": "#042729",
+          "name": "Accent"
+        },
+        {
+          "slug": "neutral-1",
+          "color": "#1f1f1f",
+          "name": "Neutral 1"
+        },
+        {
+          "slug": "neutral-2",
+          "color": "#000000",
+          "name": "Neutral 2"
+        },
+        {
+          "slug": "neutral-3",
+          "color": "#f0f0f0",
+          "name": "Neutral 3"
+        },
+        {
+          "slug": "bg-fcfcfa",
+          "color": "#fcfcfa",
+          "name": "Background #fcfcfa"
+        },
+        {
+          "slug": "bg-1f1f1f",
+          "color": "#1f1f1f",
+          "name": "Background #1f1f1f"
+        },
+        {
+          "slug": "bg-ffffff",
+          "color": "#ffffff",
+          "name": "Background #ffffff"
+        }
+      ],
+      "gradients": [
+        {
+          "slug": "gradient-1",
+          "gradient": "linear-gradient(rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46))",
+          "name": "Gradient 1"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "HubSpot Sans",
+          "slug": "hubspot-sans",
+          "name": "HubSpot Sans"
+        },
+        {
+          "fontFamily": "Times New Roman",
+          "slug": "times-new-roman",
+          "name": "Times New Roman"
+        },
+        {
+          "fontFamily": "HubSpot Serif",
+          "slug": "hubspot-serif",
+          "name": "HubSpot Serif"
+        },
+        {
+          "fontFamily": "Zen Kaku Gothic New",
+          "slug": "zen-kaku-gothic-new",
+          "name": "Zen Kaku Gothic New"
+        }
+      ],
+      "fontSizes": [
+        {
+          "size": "48px",
+          "slug": "size-48",
+          "name": "48px"
+        },
+        {
+          "size": "40px",
+          "slug": "size-40",
+          "name": "40px"
+        },
+        {
+          "size": "32px",
+          "slug": "size-32",
+          "name": "32px"
+        },
+        {
+          "size": "24px",
+          "slug": "size-24",
+          "name": "24px"
+        },
+        {
+          "size": "22px",
+          "slug": "size-22",
+          "name": "22px"
+        },
+        {
+          "size": "18px",
+          "slug": "size-18",
+          "name": "18px"
+        },
+        {
+          "size": "16px",
+          "slug": "size-16",
+          "name": "16px"
+        },
+        {
+          "size": "14px",
+          "slug": "size-14",
+          "name": "14px"
+        }
+      ]
+    },
+    "spacing": {
+      "spacingSizes": [
+        {
+          "size": "1px",
+          "slug": "spacing-1",
+          "name": "1px"
+        },
+        {
+          "size": "20px",
+          "slug": "spacing-20",
+          "name": "20px"
+        },
+        {
+          "size": "24px",
+          "slug": "spacing-24",
+          "name": "24px"
+        },
+        {
+          "size": "40px",
+          "slug": "spacing-40",
+          "name": "40px"
+        },
+        {
+          "size": "48px",
+          "slug": "spacing-48",
+          "name": "48px"
+        },
+        {
+          "size": "52px",
+          "slug": "spacing-52",
+          "name": "52px"
+        },
+        {
+          "size": "56px",
+          "slug": "spacing-56",
+          "name": "56px"
+        },
+        {
+          "size": "64px",
+          "slug": "spacing-64",
+          "name": "64px"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "100%",
+      "wideSize": "1400px"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#fcfcfa",
+      "text": "#1f1f1f"
+    },
+    "typography": {
+      "fontSize": "16px",
+      "lineHeight": "18.4px",
+      "fontFamily": "HubSpot Sans"
+    },
+    "spacing": {}
+  }
+}

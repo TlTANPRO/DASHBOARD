@@ -1,0 +1,800 @@
+{
+  "pageIntent": {
+    "type": "product",
+    "confidence": 0.75,
+    "path": "/products/crm",
+    "title": "Streamline Your Entire Business With a Free CRM | HubSpot",
+    "description": "HubSpot’s free CRM powers your customer support, sales, and marketing with easy-to-use features like live chat, meeting scheduling, and email tracking.",
+    "signals": [
+      {
+        "kind": "url",
+        "type": "product",
+        "weight": 0.75
+      }
+    ],
+    "alternates": [],
+    "needsSmart": false
+  },
+  "sectionRoles": {
+    "sections": [
+      {
+        "index": 0,
+        "tag": "header",
+        "role": "cta",
+        "subrole": null,
+        "confidence": 0.75,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 128
+        },
+        "buttonCount": 29,
+        "cardCount": 599,
+        "slots": {
+          "heading": "",
+          "subheadings": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "ctaCount": 29,
+          "lede": "Skip to content\nEnglish\nSelect a language\nHigh Contrast\nCustomer Support\nContact Sales\nLog in\nAbout\nAbout\nProducts\nProducts\nSolutions\nSolutions\nPricing\nResources\nResources\nGet free CRM"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 52
+        },
+        "buttonCount": 5,
+        "cardCount": 18,
+        "slots": {
+          "ctaCount": 5,
+          "lede": "English\nSelect a language\nHigh Contrast\nCustomer Support\nContact Sales\nLog in\nAbout\nAbout"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 2,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 52,
+          "w": 1280,
+          "h": 76
+        },
+        "buttonCount": 23,
+        "cardCount": 581,
+        "slots": {
+          "heading": "",
+          "subheadings": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "ctaCount": 23,
+          "lede": "Products\nProducts\nSolutions\nSolutions\nPricing\nResources\nResources\nGet free CRM"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 3,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 239.9921875,
+          "y": 128,
+          "w": 99.984375,
+          "h": 669.9375
+        },
+        "buttonCount": 2,
+        "cardCount": 80,
+        "slots": {
+          "heading": "",
+          "subheadings": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "ctaCount": 2
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 4,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 359.984375,
+          "y": 128,
+          "w": 102.375,
+          "h": 671.9375
+        },
+        "buttonCount": 3,
+        "cardCount": 141,
+        "slots": {
+          "heading": "",
+          "subheadings": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "ctaCount": 3
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 5,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 562.3515625,
+          "y": 128,
+          "w": 109.390625,
+          "h": 669.9375
+        },
+        "buttonCount": 0,
+        "cardCount": 56,
+        "slots": {
+          "heading": "",
+          "subheadings": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 128,
+          "w": 1280,
+          "h": 70
+        },
+        "buttonCount": 0,
+        "cardCount": 2,
+        "slots": {
+          "lede": "Home\nFree HubSpot CRM"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 7,
+        "tag": "section",
+        "role": "hero",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Free CRM Software for Startups & Small Businesses",
+        "bounds": {
+          "x": 0,
+          "y": 198,
+          "w": 1280,
+          "h": 614.625
+        },
+        "buttonCount": 1,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Free CRM Software for Startups & Small Businesses",
+          "ctaCount": 1,
+          "lede": "Free HubSpot CRM"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 8,
+        "tag": "section",
+        "role": "logo-wall",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Trusted by over 299,000 customers in more than 135 countries.",
+        "bounds": {
+          "x": 0,
+          "y": 812.625,
+          "w": 1280,
+          "h": 174.859375
+        },
+        "buttonCount": 2,
+        "cardCount": 5,
+        "slots": {
+          "heading": "Trusted by over 299,000 customers in more than 135 countries.",
+          "ctaCount": 2
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 9,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "The Free CRM With Unlimited Growth Potential",
+        "bounds": {
+          "x": 0,
+          "y": 987.484375,
+          "w": 1280,
+          "h": 532
+        },
+        "buttonCount": 6,
+        "cardCount": 0,
+        "slots": {
+          "heading": "The Free CRM With Unlimited Growth Potential",
+          "ctaCount": 6
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 10,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 1519.484375,
+          "w": 1280,
+          "h": 492
+        },
+        "buttonCount": 2,
+        "cardCount": 6,
+        "slots": {
+          "ctaCount": 2,
+          "lede": "Previous\nNext"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 11,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Contact management",
+        "bounds": {
+          "x": 0,
+          "y": 2295.484375,
+          "w": 1280,
+          "h": 734
+        },
+        "buttonCount": 0,
+        "cardCount": 31,
+        "slots": {
+          "heading": "Contact management",
+          "subheadings": [
+            "CRM import",
+            "Deals",
+            "Task & activities",
+            "Pipeline management"
+          ]
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 12,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "HubSpot Marketplace",
+        "bounds": {
+          "x": 0,
+          "y": 3289.484375,
+          "w": 1280,
+          "h": 734
+        },
+        "buttonCount": 0,
+        "cardCount": 31,
+        "slots": {
+          "heading": "HubSpot Marketplace",
+          "subheadings": [
+            "Data sync",
+            "User management",
+            "Ticketing",
+            "Payment links"
+          ]
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 13,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Breeze Assistant",
+        "bounds": {
+          "x": 0,
+          "y": 4283.484375,
+          "w": 1280,
+          "h": 766
+        },
+        "buttonCount": 0,
+        "cardCount": 31,
+        "slots": {
+          "heading": "Breeze Assistant",
+          "subheadings": [
+            "AI content writer",
+            "Chatbot builder",
+            "Shared inbox",
+            "Email tracking"
+          ]
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 14,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Integrate With Your Favorite Tools",
+        "bounds": {
+          "x": 0,
+          "y": 5049.484375,
+          "w": 1280,
+          "h": 478
+        },
+        "buttonCount": 0,
+        "cardCount": 17,
+        "slots": {
+          "heading": "Integrate With Your Favorite Tools"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 15,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Get Set Up in Minutes, Without IT Support",
+        "bounds": {
+          "x": 0,
+          "y": 5527.484375,
+          "w": 1280,
+          "h": 463
+        },
+        "buttonCount": 3,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Get Set Up in Minutes, Without IT Support",
+          "ctaCount": 3
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 16,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Top-Rated CRM Software for Startups and Small Businesses",
+        "bounds": {
+          "x": 0,
+          "y": 5990.484375,
+          "w": 1280,
+          "h": 308
+        },
+        "buttonCount": 0,
+        "cardCount": 9,
+        "slots": {
+          "heading": "Top-Rated CRM Software for Startups and Small Businesses"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 17,
+        "tag": "section",
+        "role": "pricing-table",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": "Scale Without Starting From Scratch",
+        "bounds": {
+          "x": 0,
+          "y": 6298.484375,
+          "w": 1280,
+          "h": 943
+        },
+        "buttonCount": 2,
+        "cardCount": 104,
+        "slots": {
+          "heading": "Scale Without Starting From Scratch",
+          "subheadings": [
+            "Free",
+            "Starter",
+            "Professional",
+            "Enterprise"
+          ],
+          "ctaCount": 2
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 18,
+        "tag": "section",
+        "role": "feature-grid",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "What is a CRM?",
+        "bounds": {
+          "x": 0,
+          "y": 7453.484375,
+          "w": 1280,
+          "h": 609.40625
+        },
+        "buttonCount": 0,
+        "cardCount": 16,
+        "slots": {
+          "heading": "What is a CRM?",
+          "subheadings": [
+            "How to Set Up & Manage Your HubSpot CRM Database",
+            "What is CRM Integration? Everything You Need to Know"
+          ]
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 19,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Lead generation",
+        "bounds": {
+          "x": 0,
+          "y": 8274.890625,
+          "w": 1280,
+          "h": 418
+        },
+        "buttonCount": 2,
+        "cardCount": 53,
+        "slots": {
+          "heading": "Lead generation",
+          "subheadings": [
+            "Form builder",
+            "Landing page builder",
+            "Ad management",
+            "Lead management"
+          ],
+          "ctaCount": 2
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 20,
+        "tag": "section",
+        "role": "feature-grid",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "What is CRM software?",
+        "bounds": {
+          "x": 0,
+          "y": 8840.890625,
+          "w": 1280,
+          "h": 374
+        },
+        "buttonCount": 6,
+        "cardCount": 30,
+        "slots": {
+          "heading": "What is CRM software?",
+          "subheadings": [
+            "What are popular free CRM software features?",
+            "How much does CRM software cost?",
+            "What are the main functions of a CRM system?",
+            "Who uses CRM software?"
+          ],
+          "ctaCount": 6,
+          "lede": "What is CRM software?\nWhat are popular free CRM software features?\nHow much does CRM software cost?\nWhat are the main functions of a CRM system?\nWho uses CRM software?\nWhat should I look for when choosing a CRM system?"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 21,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Get your free CRM today",
+        "bounds": {
+          "x": 0,
+          "y": 9214.890625,
+          "w": 1280,
+          "h": 358
+        },
+        "buttonCount": 2,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Get your free CRM today",
+          "ctaCount": 2
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 22,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": "Popular Features",
+        "bounds": {
+          "x": 0,
+          "y": 9572.890625,
+          "w": 1280,
+          "h": 655.40625
+        },
+        "buttonCount": 7,
+        "cardCount": 53,
+        "slots": {
+          "heading": "Popular Features",
+          "subheadings": [
+            "Free Tools",
+            "Company",
+            "Customers",
+            "Partners"
+          ],
+          "ctaCount": 7
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 23,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": "Popular Features",
+        "bounds": {
+          "x": 100,
+          "y": 9620.890625,
+          "w": 1080,
+          "h": 354.515625
+        },
+        "buttonCount": 5,
+        "cardCount": 41,
+        "slots": {
+          "heading": "Popular Features",
+          "subheadings": [
+            "Free Tools",
+            "Company",
+            "Customers",
+            "Partners"
+          ],
+          "ctaCount": 5
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 24,
+        "tag": "section",
+        "role": "feature-grid",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Popular Features",
+        "bounds": {
+          "x": 100,
+          "y": 9620.890625,
+          "w": 431,
+          "h": 354.515625
+        },
+        "buttonCount": 1,
+        "cardCount": 18,
+        "slots": {
+          "heading": "Popular Features",
+          "ctaCount": 1
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 25,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Free Tools",
+        "bounds": {
+          "x": 584,
+          "y": 9620.890625,
+          "w": 198.65625,
+          "h": 354.515625
+        },
+        "buttonCount": 1,
+        "cardCount": 8,
+        "slots": {
+          "heading": "Free Tools",
+          "ctaCount": 1,
+          "lede": "Free Tools\nSee All Free Business Tools\nSee All Free Business Tools\nAEO Grader\nAEO Grader\nAI Search Sensor\nAI Search Sensor\nMake My Persona\nMake My Persona\nEmail Signature Generator\nEmail Signature Generator\nFree Business Templates\nFree Business Templates\nSoftware Comparisons Library\nSoftware Comparisons Library\nWebsite Templates\nWebsite Templates"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 26,
+        "tag": "section",
+        "role": "hero",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Company",
+        "bounds": {
+          "x": 782.65625,
+          "y": 9620.890625,
+          "w": 198.671875,
+          "h": 354.515625
+        },
+        "buttonCount": 1,
+        "cardCount": 8,
+        "slots": {
+          "heading": "Company",
+          "ctaCount": 1,
+          "lede": "Company\nAbout Us\nAbout Us\nCareers\nCareers\nManagement Team\nManagement Team\nBoard of Directors\nBoard of Directors\nInvestor Relations\nInvestor Relations\nBlog\nBlog\nSustainability\nSustainability\nContact Us\nContact Us"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 27,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Customers",
+        "bounds": {
+          "x": 981.328125,
+          "y": 9620.890625,
+          "w": 198.671875,
+          "h": 112.0625
+        },
+        "buttonCount": 1,
+        "cardCount": 2,
+        "slots": {
+          "heading": "Customers",
+          "ctaCount": 1,
+          "lede": "Customers\nCustomer Support\nCustomer Support\nJoin a Local User Group\nJoin a Local User Group"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 28,
+        "tag": "section",
+        "role": "logo-wall",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Partners",
+        "bounds": {
+          "x": 981.328125,
+          "y": 9748.953125,
+          "w": 198.671875,
+          "h": 210.453125
+        },
+        "buttonCount": 1,
+        "cardCount": 5,
+        "slots": {
+          "heading": "Partners",
+          "ctaCount": 1,
+          "lede": "Partners\nAll Partner Programs\nAll Partner Programs\nSolutions Partner Program\nSolutions Partner Program\nTechnology Partner Program\nTechnology Partner Program\nHubSpot for Startups\nHubSpot for Startups\nAffiliate Program\nAffiliate Program"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 29,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 100,
+          "y": 10001.796875,
+          "w": 1080,
+          "h": 56
+        },
+        "buttonCount": 0,
+        "cardCount": 7,
+        "slots": {
+          "lede": "Facebook\nInstagram\nYoutube\nTwitter\nLinkedin\nReddit\nTiktok"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 30,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 100,
+          "y": 10057.796875,
+          "w": 1080,
+          "h": 122.5
+        },
+        "buttonCount": 1,
+        "cardCount": 5,
+        "slots": {
+          "ctaCount": 1,
+          "lede": "Copyright © 2026 HubSpot, Inc."
+        },
+        "needsSmart": true
+      }
+    ],
+    "counts": {
+      "cta": 1,
+      "nav": 3,
+      "content": 6,
+      "pricing": 5,
+      "hero": 2,
+      "logo-wall": 2,
+      "testimonial": 5,
+      "testimonials": 2,
+      "pricing-table": 1,
+      "feature-grid": 3,
+      "footer": 1
+    },
+    "readingOrder": [
+      "cta",
+      "nav",
+      "nav",
+      "content",
+      "content",
+      "content",
+      "pricing",
+      "hero",
+      "logo-wall",
+      "testimonial",
+      "testimonial",
+      "testimonials",
+      "pricing",
+      "testimonial",
+      "pricing",
+      "testimonial",
+      "content",
+      "pricing-table",
+      "feature-grid",
+      "testimonial",
+      "feature-grid",
+      "pricing",
+      "footer",
+      "nav",
+      "feature-grid",
+      "pricing",
+      "hero",
+      "testimonials",
+      "logo-wall",
+      "content",
+      "content"
+    ]
+  }
+}

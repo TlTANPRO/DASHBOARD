@@ -1,0 +1,203 @@
+{
+  "library": "phosphor",
+  "confidence": 0.7,
+  "alternates": [],
+  "stats": {
+    "count": 278,
+    "strokeOnly": 172,
+    "fillOnly": 32,
+    "mixed": 0,
+    "avgStrokeWidth": 1.6,
+    "gridDistribution": {
+      "24": 173
+    },
+    "roundedCapsFraction": 0.75
+  },
+  "signals": [
+    "strokeDominant",
+    "roundedCaps",
+    "grid24"
+  ],
+  "icons": [
+    {
+      "class": "lszgfs1",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "tabler-icon tabler-icon-chevron-down",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "mixed"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": 1,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": 1,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "tabler-icon tabler-icon-chevron-down",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-search",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-layout-sidebar-left-collapse",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-home",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-message-circle",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-message-circle-plus",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-building-skyscraper",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-user",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-target-arrow",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-checkbox",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-notes",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-layout-dashboard",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-settings-automation",
+      "grid": 24,
+      "strokeWidth": 2,
+      "style": "stroke"
+    },
+    {
+      "class": "tabler-icon tabler-icon-chevron-down",
+      "grid": 24,
+      "strokeWidth": 1.6,
+      "style": "stroke"
+    }
+  ]
+}

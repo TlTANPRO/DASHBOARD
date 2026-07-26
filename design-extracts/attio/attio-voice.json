@@ -1,0 +1,86 @@
+{
+  "tone": "neutral",
+  "pronoun": "third-person",
+  "headingStyle": "Sentence case",
+  "headingLengthClass": "tight",
+  "ctaVerbs": [
+    {
+      "value": "platform",
+      "count": 1
+    },
+    {
+      "value": "resources",
+      "count": 1
+    },
+    {
+      "value": "customers",
+      "count": 1
+    },
+    {
+      "value": "pricing",
+      "count": 1
+    },
+    {
+      "value": "sign",
+      "count": 1
+    },
+    {
+      "value": "start",
+      "count": 1
+    },
+    {
+      "value": "continue",
+      "count": 1
+    },
+    {
+      "value": "reject",
+      "count": 1
+    }
+  ],
+  "buttonPatterns": [
+    {
+      "value": "platform",
+      "count": 1
+    },
+    {
+      "value": "resources",
+      "count": 1
+    },
+    {
+      "value": "customers",
+      "count": 1
+    },
+    {
+      "value": "pricing",
+      "count": 1
+    },
+    {
+      "value": "sign in",
+      "count": 1
+    },
+    {
+      "value": "start for free",
+      "count": 1
+    },
+    {
+      "value": "continue",
+      "count": 1
+    },
+    {
+      "value": "reject",
+      "count": 1
+    }
+  ],
+  "sampleHeadings": [
+    "Page not found.",
+    "Platform",
+    "Company",
+    "Import from",
+    "Attio for",
+    "Apps"
+  ],
+  "stats": {
+    "buttons": 8,
+    "headings": 6
+  }
+}
