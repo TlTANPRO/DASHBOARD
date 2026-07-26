@@ -1814,10 +1814,20 @@
   <script src="config.js"></script>
   <script type="module" src="app.js"></script>
   <script>
-    // SW disabled temporarily to debug
-    // if ('serviceWorker' in navigator) {
-    //   navigator.serviceWorker.register('sw.js').catch(() => {});
-    // }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js?v=' + Date.now()).then((reg) => {
+        // Force update check
+        if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+        reg.update();
+        // Reload once when new SW activated
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (refreshing) return;
+          refreshing = true;
+          window.location.reload();
+        });
+      }).catch(() => {});
+    }
   </script>
 </body>
 </html>
