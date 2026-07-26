@@ -13,10 +13,12 @@ window.DASHBOARD_CONFIG = {
 
   // Notion database IDs (per divisi/feature)
   databases: {
-    kpi:     "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
-    sow:     "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
-    program: "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
-    jobdesk: "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
+    kpi:          "3a84cf7e-9f24-819d-95d8-f951e6a1a6a2",
+    sow:          "3a84cf7e-9f24-816c-be14-ef1f171b4d52",
+    program:      "3a84cf7e-9f24-8172-bd10-ee9e8056940a",
+    jobdesk:      "3a84cf7e-9f24-814f-bd01-cd52e64db04e",
+    improvisasi:  "3a94cf7e-9f24-818d-9bbc-d8e8059b1c4e",
+    divisi:       "3a94cf7e-9f24-8159-a4fc-c2eae997185b",
   },
 
   // PIC list (dropdown + filter)

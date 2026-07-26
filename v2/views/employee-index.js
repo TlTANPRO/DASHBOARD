@@ -105,12 +105,26 @@ function calcScore(picName, kpi, sow, jd, prog) {
       return s;
     }, 0) / picJd.length) * 100 : 0;
 
-  // SOW Compliance: real, weighted by Bobot, hanya SOW Active
+  // SOW Compliance: real - track via Jobdesk execution per SOW frequency
+  const _now = new Date();
+  const _7d = new Date(_now - 7 * 86400000);
+  const _30d = new Date(_now - 30 * 86400000);
+  const picJd = jd.filter(j => j.PIC === picName && j.Status === "Done");
   const picSow = sow.filter(s => s.PIC === picName);
   const sowScore = picSow.length > 0 ?
     Math.min(100, picSow.reduce((s, sw) => {
+      if (sw.Status !== "Active") return s;
       const bobot = Number(sw["Bobot (%)"]) || 0;
-      return s + (sw.Status === "Active" ? bobot : 0);
+      const freq = (sw.Frekuensi || "").toLowerCase();
+      const swKw = (sw.Deskripsi || "").toLowerCase().split(/\s+/).filter(w => w.length > 4);
+      const rel = picJd.filter(j => swKw.length === 0 || swKw.some(k => (j.Aktivitas || "").toLowerCase().includes(k)));
+      let req = 0, dn = 0;
+      if (freq.includes("harian")) { req = 7; dn = rel.filter(j => new Date(j.Tanggal) >= _7d).length; }
+      else if (freq.includes("mingguan")) { req = 1; dn = rel.filter(j => new Date(j.Tanggal) >= _7d).length; }
+      else if (freq.includes("bulanan")) { req = 1; dn = rel.filter(j => new Date(j.Tanggal) >= _30d).length; }
+      else { req = 1; dn = rel.length; }
+      const comp = req > 0 ? Math.min(1, dn / req) : 1;
+      return s + (bobot * comp);
     }, 0)) : 0;
 
   // Program Contribution (10%)

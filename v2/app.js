@@ -7,6 +7,7 @@ import { initProgress } from "./components/progress.js";
 import { openSearch } from "./components/search.js";
 import { success } from "./lib/notify.js";
 import { invalidate } from "./lib/cache.js";
+import { startPolling, requestPushPermission, checkAndNotify } from "./lib/push.js";
 
 const VERSION = "3.0.0";
 const PIC_LIST = window.DASHBOARD_CONFIG?.picList || [];
@@ -20,6 +21,23 @@ initProgress();
 // ===== Keyboard init =====
 initKeyboard();
 
+// ===== Push notifications =====
+requestPushPermission().then((granted) => {
+  if (granted) startPolling();
+  else setInterval(checkAndNotify, 5 * 60 * 1000);
+});
+
+// Listen for in-page notification events
+window.addEventListener("dvb2-notification", (e) => {
+  const notifs = e.detail?.notifications || [];
+  for (const n of notifs) {
+    const { success } = window.__dvb2Notify || {};
+    if (typeof window.toast === "function") {
+      window.toast(n.title, n.tag === "overdue" ? "warning" : "info");
+    }
+  }
+});
+
 // ===== Views (lazy import) =====
 const views = {
   home: () => import("./views/home.js").then((m) => m.renderHome()),
@@ -32,6 +50,7 @@ const views = {
   pricing: () => import("./views/pricing.js").then((m) => m.renderPricing()),
   glosarium: () => import("./views/glosarium.js").then((m) => m.renderGlosarium()),
   settings: () => import("./views/settings.js").then((m) => m.renderSettings()),
+  improvisasi: () => import("./views/improvisasi.js").then((m) => m.renderImprovisasi()),
   employee: (params) => {
     if (params && params[0]) {
       return import("./views/employee-detail.js").then((m) => m.renderEmployeeDetail(params));

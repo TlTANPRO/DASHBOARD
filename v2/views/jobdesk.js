@@ -10,7 +10,7 @@ import { success, danger } from "../lib/notify.js";
 import { Session } from "../lib/auth.js";
 import { boardView } from "../components/board.js";
 import { calendarView } from "../components/calendar.js";
-import { openDetail, buildSchema } from "../components/detail.js";
+import { openDetail, closeDetail, buildSchema } from "../components/detail.js";
 
 let state = {
   data: [],
@@ -194,7 +194,21 @@ function bindEvents(canEdit, picList) {
       const rec = state.data.find((r) => r.id === btn.dataset.id);
       if (rec) {
         if (canEdit && Session.isOwner()) openEditor(rec);
-        else openDetail({ record: rec, schema: buildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"] });
+        else {
+        const actions = [];
+        if (rec.Status === "Pending Approval" && Session.isOwner()) {
+          actions.push({ key: "approve", label: "✓ Approve", variant: "btn-primary", onClick: async (r) => {
+            try { await API.approveJobdesk(r.id, "Approved"); success("Disetujui"); closeDetail(); await renderJobdesk(); } catch (e) { danger(e.message); }
+          }});
+          actions.push({ key: "reject", label: "✗ Reject", variant: "btn-outline", onClick: async (r) => {
+            try { await API.approveJobdesk(r.id, "Rejected"); success("Ditolak"); closeDetail(); await renderJobdesk(); } catch (e) { danger(e.message); }
+          }});
+        } else if (canEdit && rec.Status !== "Pending Approval" && rec.Status !== "Done") {
+          actions.push({ key: "submit-approval", label: "📤 Submit for Approval", variant: "btn-outline", onClick: async (r) => {
+            try { await API.submitJobdeskForApproval(r.id); success("Disubmit untuk approval"); closeDetail(); await renderJobdesk(); } catch (e) { danger(e.message); }
+          }});
+        }
+        openDetail({ record: rec, schema: buildSchema(rec), title: rec.Aktivitas || rec["Jobdesk ID"], actions });
       }
     });
   });

@@ -1,0 +1,122 @@
+// stress-test.html — benchmark 1000 entries
+// Open di browser: http://localhost:8765/stress-test.html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stress Test 1000 entries</title>
+  <style>
+    body { font-family: system-ui; padding: 24px; max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 24px; }
+    .stat { padding: 12px; background: #f5f5f5; border-radius: 8px; margin: 8px 0; font-family: monospace; }
+    .ok { background: #d1fae5; }
+    .warn { background: #fef3c7; }
+    .err { background: #fee2e2; }
+    button { padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; margin-right: 8px; }
+    button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <h1>🔥 Stress Test 1000 entries</h1>
+  <p>Test render performance dengan data besar</p>
+  <button id="btn-test">Run Test</button>
+  <button id="btn-cleanup">Clear</button>
+  <div id="results"></div>
+
+  <script type="module">
+    const results = document.getElementById("results");
+
+    function log(label, value, status = "ok") {
+      const div = document.createElement("div");
+      div.className = `stat ${status}`;
+      div.textContent = `${label}: ${value}`;
+      results.appendChild(div);
+    }
+
+    function clear() { results.innerHTML = ""; }
+
+    document.getElementById("btn-cleanup").onclick = clear;
+
+    document.getElementById("btn-test").onclick = async () => {
+      clear();
+      log("Loading stress data...", "...");
+
+      try {
+        // Load mock data
+        const start = performance.now();
+        const resp = await fetch("../stress-test-data.json");
+        const data = await resp.json();
+        const loadTime = performance.now() - start;
+        log("Load data", `${loadTime.toFixed(0)}ms (${data.summary.total} entries)`);
+
+        // Populate localStorage (simulate cache)
+        const start2 = performance.now();
+        localStorage.setItem("dvb2-stress-kpi", JSON.stringify(data.kpi));
+        localStorage.setItem("dvb2-stress-jobdesk", JSON.stringify(data.jobdesk));
+        localStorage.setItem("dvb2-stress-improvisasi", JSON.stringify(data.improvisasi));
+        const lsTime = performance.now() - start2;
+        log("LocalStorage write", `${lsTime.toFixed(0)}ms`);
+
+        // Test render 500 KPI table
+        const start3 = performance.now();
+        const table = document.createElement("table");
+        table.border = "1";
+        table.style.width = "100%";
+        const header = table.createTHead();
+        const hr = header.insertRow();
+        ["KPI", "PIC", "Target", "Actual", "Status"].forEach(h => {
+          const th = document.createElement("th");
+          th.textContent = h;
+          th.style.padding = "4px";
+          hr.appendChild(th);
+        });
+        const tbody = table.createTBody();
+        data.kpi.slice(0, 100).forEach(k => {
+          const row = tbody.insertRow();
+          [k.KPI, k.PIC, k.Target, k.Realisasi, k.Status].forEach(v => {
+            const td = row.insertCell();
+            td.textContent = String(v).slice(0, 30);
+            td.style.padding = "2px 4px";
+          });
+        });
+        document.body.appendChild(table);
+        const renderTime = performance.now() - start3;
+        log("Render 100 KPI rows", `${renderTime.toFixed(0)}ms`, renderTime < 100 ? "ok" : "warn");
+
+        // Test filter 1000 entries
+        const start4 = performance.now();
+        const filtered = data.jobdesk.filter(j => j.Status === "Done");
+        const filterTime = performance.now() - start4;
+        log(`Filter 300 jobdesk (Status=Done)`, `${filterTime.toFixed(2)}ms → ${filtered.length} matches`);
+
+        // Test sort 1000
+        const start5 = performance.now();
+        const sorted = [...data.kpi].sort((a, b) => b.Realisasi - a.Realisasi);
+        const sortTime = performance.now() - start5;
+        log("Sort 500 KPI by Realisasi", `${sortTime.toFixed(0)}ms`);
+
+        // Test calc score 12 PIC
+        const start6 = performance.now();
+        const pics = [...new Set(data.kpi.map(k => k.PIC))];
+        const scores = pics.map(pic => {
+          const kpi = data.kpi.filter(k => k.PIC === pic);
+          const total = kpi.reduce((s, k) => s + (k.Realisasi / k.Target), 0);
+          return { pic, score: (total / kpi.length) * 100 };
+        });
+        const calcTime = performance.now() - start6;
+        log(`Compute score 12 PIC × 500 KPI`, `${calcTime.toFixed(0)}ms`);
+        scores.forEach(s => log(`  ${s.pic}`, `${s.score.toFixed(1)}`, s.score >= 75 ? "ok" : "warn"));
+
+        // Total
+        const totalTime = loadTime + lsTime + renderTime + filterTime + sortTime + calcTime;
+        log("---", "---");
+        log("TOTAL TIME", `${totalTime.toFixed(0)}ms`, totalTime < 2000 ? "ok" : totalTime < 5000 ? "warn" : "err");
+        log("VERDICT", totalTime < 2000 ? "✅ EXCELLENT — production ready" : totalTime < 5000 ? "⚠ OK — may need optimization" : "❌ SLOW — needs debouncing/lazy load", totalTime < 2000 ? "ok" : totalTime < 5000 ? "warn" : "err");
+
+      } catch (e) {
+        log("ERROR", e.message, "err");
+      }
+    };
+  </script>
+</body>
+</html>

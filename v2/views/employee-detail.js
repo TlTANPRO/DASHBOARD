@@ -382,11 +382,41 @@ function computeScore(pic, d) {
       if (j.Status === "In Progress" || j.Status === "Pending Approval") return s + 0.5;
       return s;
     }, 0) / d.jobdesk.length) * 100 : 0;
-  // SOW real: hitung dari SOW Aktif + bobot sebagai proxy
+  // SOW Compliance: real - track via Jobdesk execution per SOW frequency
+  // Harian: 1+ done per active day (7 days), Mingguan: 1+ per week, Bulanan: 1+ per month
+  const now = new Date();
+  const sevenDaysAgo = new Date(now - 7 * 86400000);
+  const oneMonthAgo = new Date(now - 30 * 86400000);
   const sowScore = d.sow.length ?
     d.sow.reduce((s, sw) => {
+      if (sw.Status !== "Active") return s;
       const bobot = Number(sw["Bobot (%)"]) || 0;
-      return s + (sw.Status === "Active" ? bobot : 0);
+      const freq = (sw.Frekuensi || "").toLowerCase();
+      // Filter jobdesk by SOW keyword match + PIC
+      const swKeywords = (sw.Deskripsi || "").toLowerCase().split(/\s+/).filter(w => w.length > 4);
+      const relatedJd = d.jobdesk.filter(j => {
+        if (j.PIC !== sw.PIC) return false;
+        if (j.Status !== "Done") return false;
+        const jdText = (j.Aktivitas || "").toLowerCase();
+        return swKeywords.length === 0 || swKeywords.some(kw => jdText.includes(kw));
+      });
+      let required = 0;
+      let done = 0;
+      if (freq.includes("harian")) {
+        required = 7; // 7 hari terakhir
+        done = relatedJd.filter(j => new Date(j.Tanggal) >= sevenDaysAgo).length;
+      } else if (freq.includes("mingguan")) {
+        required = 1;
+        done = relatedJd.filter(j => new Date(j.Tanggal) >= sevenDaysAgo).length;
+      } else if (freq.includes("bulanan")) {
+        required = 1;
+        done = relatedJd.filter(j => new Date(j.Tanggal) >= oneMonthAgo).length;
+      } else {
+        required = 1;
+        done = relatedJd.length;
+      }
+      const compliance = required > 0 ? Math.min(1, done / required) : 1;
+      return s + (bobot * compliance);
     }, 0) : 0;
   // Program avg progress with overdue penalty
   const progScore = d.program.length ?

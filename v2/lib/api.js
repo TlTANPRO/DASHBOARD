@@ -86,6 +86,17 @@ const FIELD_MAP = {
     Kategori: "Kategori",
     "Jobdesk ID": "Jobdesk ID",
   },
+  // Improvisasi: keep as-is
+  improvisasi: {
+    Title: "Title",
+    PIC: "PIC",
+    Tanggal: "Tanggal",
+    Type: "Type",
+    Impact: "Impact",
+    Deskripsi: "Deskripsi",
+    Evidence: "Evidence",
+    Status: "Status",
+  },
 };
 
 function normalizeRow(dbName, row) {
@@ -396,6 +407,80 @@ export const API = {
       if (MODE === "live") return await workerCall("sow");
       return lsRead("sow") || [];
     });
+  },
+
+  // ---------- Improvisasi ----------
+  async listImprovisasi(force = false) {
+    if (force) invalidate("improvisasi");
+    return cacheTTL("improvisasi", 60, async () => {
+      if (MODE === "live") return await workerCall("improvisasi");
+      return lsRead("improvisasi") || [];
+    });
+  },
+  async createImprovisasi(record) {
+    if (MODE === "live") {
+      const dbId = DBNAMES.improvisasi;
+      const props = buildNotionProps("improvisasi", record);
+      const res = await fetch(`${WORKER}/notion/v1/pages`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Notion-Version": "2022-06-28", "X-PIC": Session.pic || "" },
+        body: JSON.stringify({ parent: { database_id: dbId }, properties: props }),
+      });
+      if (!res.ok) throw new Error(`Create failed: ${res.status}`);
+      return await this.listImprovisasi(true);
+    }
+    const list = lsRead("improvisasi") || [];
+    const id = `imp-${Date.now()}`;
+    const newRec = { id, ...record, Status: record.Status || "Pending", createdAt: new Date().toISOString() };
+    list.push(newRec);
+    lsWrite("improvisasi", list);
+    return newRec;
+  },
+  async updateImprovisasi(id, patch) {
+    if (MODE === "live") {
+      const props = buildNotionProps("improvisasi", patch);
+      const res = await fetch(`${WORKER}/notion/v1/pages/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", "Notion-Version": "2022-06-28", "X-PIC": Session.pic || "" },
+        body: JSON.stringify({ properties: props }),
+      });
+      if (!res.ok) throw new Error(`Update failed: ${res.status}`);
+      return await this.listImprovisasi(true);
+    }
+    const list = lsRead("improvisasi") || [];
+    const idx = list.findIndex((r) => r.id === id);
+    if (idx === -1) throw new Error("Not found");
+    list[idx] = { ...list[idx], ...patch };
+    lsWrite("improvisasi", list);
+    return list[idx];
+  },
+  async deleteImprovisasi(id) {
+    if (MODE === "live") {
+      const res = await fetch(`${WORKER}/notion/v1/pages/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", "Notion-Version": "2022-06-28", "X-PIC": Session.pic || "" },
+        body: JSON.stringify({ archived: true }),
+      });
+      if (!res.ok) throw new Error(`Delete failed: ${res.status}`);
+      return await this.listImprovisasi(true);
+    }
+    const list = lsRead("improvisasi") || [];
+    const filtered = list.filter((r) => r.id !== id);
+    lsWrite("improvisasi", list);
+    return true;
+  },
+
+  // ---------- Approval (Jobdesk) ----------
+  async approveJobdesk(id, approval, picName) {
+    return this.updateJobdesk(id, {
+      Approval: approval,
+      Approval_By: picName || Session.pic || "Owner",
+      Approval_Time: new Date().toISOString(),
+      Status: approval === "Approved" ? "Done" : "In Progress",
+    });
+  },
+  async submitJobdeskForApproval(id) {
+    return this.updateJobdesk(id, { Status: "Pending Approval" });
   },
 };
 
