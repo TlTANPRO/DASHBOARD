@@ -137,6 +137,7 @@ function draw() {
   } else if (state.view === "board") {
     wireBoardClicks(root, (id) => { const r = state.data.find(x => x.id === id); if (r) openDetail({ record: r, schema: jobdeskBuildSchema(r), title: r.Aktivitas || r["Jobdesk ID"], actions: [] }); });
   }
+}
 
 function renderList(canEdit) {
   return dataTable({
