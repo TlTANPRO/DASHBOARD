@@ -40,28 +40,28 @@ window.addEventListener("dvb2-notification", (e) => {
 
 // ===== Views (lazy import) =====
 const views = {
-  home: () => import("./views/home.js").then((m) => m.renderHome()),
-  kpi: () => import("./views/kpi.js").then((m) => m.renderKPI()),
-  program: () => import("./views/program.js").then((m) => m.renderProgram()),
-  jobdesk: () => import("./views/jobdesk.js").then((m) => m.renderJobdesk()),
-  sow: () => import("./views/sow.js").then((m) => m.renderSOW()),
-  leaderboard: () => import("./views/leaderboard.js").then((m) => m.renderLeaderboard()),
-  fee: () => import("./views/fee.js").then((m) => m.renderFee()),
-  pricing: () => import("./views/pricing.js").then((m) => m.renderPricing()),
-  glosarium: () => import("./views/glosarium.js").then((m) => m.renderGlosarium()),
-  settings: () => import("./views/settings.js").then((m) => m.renderSettings()),
-  improvisasi: () => import("./views/improvisasi.js").then((m) => m.renderImprovisasi()),
+  home: () => import("./views/home.js?v=4.0.0").then((m) => m.renderHome()),
+  kpi: () => import("./views/kpi.js?v=4.0.0").then((m) => m.renderKPI()),
+  program: () => import("./views/program.js?v=4.0.0").then((m) => m.renderProgram()),
+  jobdesk: () => import("./views/jobdesk.js?v=4.0.0").then((m) => m.renderJobdesk()),
+  sow: () => import("./views/sow.js?v=4.0.0").then((m) => m.renderSOW()),
+  leaderboard: () => import("./views/leaderboard.js?v=4.0.0").then((m) => m.renderLeaderboard()),
+  fee: () => import("./views/fee.js?v=4.0.0").then((m) => m.renderFee()),
+  pricing: () => import("./views/pricing.js?v=4.0.0").then((m) => m.renderPricing()),
+  glosarium: () => import("./views/glosarium.js?v=4.0.0").then((m) => m.renderGlosarium()),
+  settings: () => import("./views/settings.js?v=4.0.0").then((m) => m.renderSettings()),
+  improvisasi: () => import("./views/improvisasi.js?v=4.0.0").then((m) => m.renderImprovisasi()),
   employee: (params) => {
     if (params && params[0]) {
-      return import("./views/employee-detail.js").then((m) => m.renderEmployeeDetail(params));
+      return import("./views/employee-detail.js?v=4.0.0").then((m) => m.renderEmployeeDetail(params));
     }
-    return import("./views/employee-index.js").then((m) => m.renderEmployeeIndex());
+    return import("./views/employee-index.js?v=4.0.0").then((m) => m.renderEmployeeIndex());
   },
   division: (params) => {
     if (params && params[0]) {
-      return import("./views/division-index.js").then((m) => m.renderDivisionDetail(params));
+      return import("./views/division-index.js?v=4.0.0").then((m) => m.renderDivisionDetail(params));
     }
-    return import("./views/division-index.js").then((m) => m.renderDivisionIndex());
+    return import("./views/division-index.js?v=4.0.0").then((m) => m.renderDivisionIndex());
   },
 };
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Quick Add button
-  import("./components/quick-add.js").then((m) => {
+  import("./components/quick-add.js?v=4.0.0").then((m) => {
     document.getElementById("btn-quick-add")?.addEventListener("click", () => m.openQuickAdd());
   });
 });
@@ -138,16 +138,16 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("keydown", (e) => {
   if ((e.metaKey || e.ctrlKey) && e.key === "k") {
     e.preventDefault();
-    import("./components/search.js").then((m) => m.openSearch());
+    import("./components/search.js?v=4.0.0").then((m) => m.openSearch());
   }
   if (e.key === "q" && !e.metaKey && !e.ctrlKey && !e.altKey &&
       !["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) {
     e.preventDefault();
-    import("./components/quick-add.js").then((m) => m.openQuickAdd());
+    import("./components/quick-add.js?v=4.0.0").then((m) => m.openQuickAdd());
   }
   if ((e.metaKey || e.ctrlKey) && e.key === "e") {
     e.preventDefault();
-    import("./lib/exporter.js").then((m) => {
+    import("./lib/exporter.js?v=4.0.0").then((m) => {
       const data = window.__dvb2CurrentData || [];
       const cols = window.__dvb2CurrentCols || [];
       if (data.length) m.exportCSV(data, cols, "export.csv");
@@ -156,7 +156,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 async function showLoginModal() {
-  const { openModal } = await import("./lib/modal.js");
+  const { openModal } = await import("./lib/modal.js?v=4.0.0");
   const picOptions = PIC_LIST.map((p) => `<option value="${p}">${p}</option>`).join("");
   const body = document.createElement("div");
   body.innerHTML = `
