@@ -4,7 +4,7 @@ import { dataTable, wirePagination , wireRowClicks} from "../components/table.js
 import { filterBar } from "../components/filter.js";
 import { emptyState, loadingSkeleton } from "../components/empty.js";
 import { statusPill } from "../components/pill.js";
-import { fmtNum, fmtPct, escapeHTML, fmtIDR } from "../lib/format.js";
+import { fmtNum, fmtPct, escapeHTML, fmtIDR, fmtDate } from "../lib/format.js";
 import { openModal, confirmDialog } from "../lib/modal.js";
 import { success, danger } from "../lib/notify.js";
 import { Session } from "../lib/auth.js";

@@ -55,7 +55,7 @@ function draw() {
         <h1 class="h-1">💡 Improvisasi</h1>
         <p class="text-muted t-sm">${state.data.length} entries • Inisiatif di luar SOW/KPI yang menunjukkan growth</p>
       </div>
-      ${{canEdit ? '<button class="btn btn-primary" id="btn-add">+ Submit Improvisasi</button>' : '<button class="btn btn-outline" id="btn-add" tite="Login untuk submit">🔒 Login untuk submit</button>'}}
+      ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Submit Improvisasi</button>' : '<button class="btn btn-outline" id="btn-add" title="Login untuk submit">🔒 Login untuk submit</button>'}
     </div>
 
     ${filterBar({
