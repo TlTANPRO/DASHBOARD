@@ -2,7 +2,7 @@
 
 import { escapeHTML } from "../lib/format.js";
 
-export function boardView({ columns, rows, statusField = "Status", statusOrder = null, groupBy = null, onCardClick = null }) {
+export function boardView({ columns, rows, statusField = "Status", statusOrder = null, groupBy = null, onCardClick = null, rowKey = "id" }) {
   // group rows by statusField
   const groups = {};
   const statuses = statusOrder || [...new Set(rows.map((r) => r[statusField]).filter(Boolean))].sort();
@@ -45,4 +45,27 @@ export function boardView({ columns, rows, statusField = "Status", statusOrder =
     .join("");
 
   return `<div class="board">${cols}</div>`;
+}
+
+// Wire click handlers for board cards rendered with onCardClick
+export function wireBoardClicks(rootEl, onCardClick) {
+  if (!onCardClick) return;
+  const cards = rootEl.querySelectorAll(".board-card[data-id]");
+  if (cards.length === 0) return;
+  cards.forEach((card) => {
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("input, button, [data-action], a")) return;
+      try {
+        onCardClick(card.dataset.id, card);
+      } catch (err) {
+        console.error("wireBoardClicks error:", err);
+      }
+    });
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        onCardClick(card.dataset.id, card);
+      }
+    });
+  });
 }

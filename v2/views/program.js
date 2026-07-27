@@ -8,7 +8,7 @@ import { fmtDate, fmtIDR, fmtPct, escapeHTML } from "../lib/format.js";
 import { openModal, confirmDialog } from "../lib/modal.js";
 import { success, danger } from "../lib/notify.js";
 import { Session } from "../lib/auth.js";
-import { boardView } from "../components/board.js";
+import { boardView, wireBoardClicks } from "../components/board.js";
 import { ganttView } from "../components/gantt.js";
 import { openDetail, buildSchema } from "../components/detail.js";
 
@@ -109,7 +109,16 @@ function draw() {
 
     <div id="view-area">
       ${state.view === "list" ? renderList(canEdit) : ""}
-      ${state.view === "board" ? boardView({ rows: state.filtered, statusField: "Status", statusOrder: statuses, groupBy: "PIC" }) : ""}
+      ${state.view === "board" ? boardView({
+            rows: state.filtered,
+            statusField: "Status",
+            statusOrder: statuses,
+            groupBy: "PIC",
+            onCardClick: (id) => {
+              const r = state.data.find((x) => x.id === id);
+              if (r) openDetail({ record: r, schema: programBuildSchema(r), title: r.Judul || r["Program ID"], actions: [] });
+            },
+          }) : ""}
       ${state.view === "gantt" ? ganttView({ rows: state.filtered, startField: "Tanggal Mulai", endField: "Deadline", titleField: "Judul", picField: "PIC", progressField: "Progress" }) : ""}
     </div>
 
@@ -134,9 +143,12 @@ function draw() {
   `;
 
   bindEvents(canEdit, picList);
-  if (state.view === "list") wirePagination(root)
-    wireRowClicks(root, (rec) => { const r = state.data.find(x => x.id === rec); if (r) openDetail({ record: r, schema: programBuildSchema(r), title: r.Judul || r["Program ID"], actions: [] }); });;
-}
+  if (state.view === "list") {
+    wirePagination(root);
+    wireRowClicks(root, (rec) => { const r = state.data.find(x => x.id === rec); if (r) openDetail({ record: r, schema: programBuildSchema(r), title: r.Judul || r["Program ID"], actions: [] }); });
+  } else if (state.view === "board") {
+    wireBoardClicks(root, (id) => { const r = state.data.find(x => x.id === id); if (r) openDetail({ record: r, schema: programBuildSchema(r), title: r.Judul || r["Program ID"], actions: [] }); });
+  }
 
 function renderList(canEdit) {
   return dataTable({

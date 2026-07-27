@@ -8,7 +8,7 @@ import { fmtNum, fmtPct, escapeHTML, fmtIDR, fmtDate } from "../lib/format.js";
 import { openModal, confirmDialog } from "../lib/modal.js";
 import { success, danger } from "../lib/notify.js";
 import { Session } from "../lib/auth.js";
-import { boardView } from "../components/board.js";
+import { boardView, wireBoardClicks } from "../components/board.js";
 import { openDetail, buildSchema } from "../components/detail.js";
 
 function kpiBuildSchema(r) {
@@ -122,7 +122,16 @@ function draw() {
     <div id="view-area">
       ${state.view === "list"
         ? renderList(canEdit)
-        : boardView({ rows: state.filtered, statusField: "Status", statusOrder: statuses, groupBy: "PIC" })}
+        : boardView({
+            rows: state.filtered,
+            statusField: "Status",
+            statusOrder: statuses,
+            groupBy: "PIC",
+            onCardClick: (id) => {
+              const r = state.data.find((x) => x.id === id);
+              if (r) openDetail({ record: r, schema: kpiBuildSchema(r), title: r.Indikator || r["KPI ID"], actions: [] });
+            },
+          })}
     </div>
 
     ${state.filtered.length > 0 ? `
@@ -149,6 +158,8 @@ function draw() {
   if (state.view === "list") {
     wirePagination(root);
     wireRowClicks(root, (rec) => { try { const r = state.data.find(x => x.id === rec); if (r) { openDetail({ record: r, schema: kpiBuildSchema(r), title: r.Indikator || r["KPI ID"], actions: [] }); } else { console.warn("Row not found:", rec); } } catch(err) { console.error("row click error:", err); } });
+  } else if (state.view === "board") {
+    wireBoardClicks(root, (id) => { try { const r = state.data.find(x => x.id === id); if (r) { openDetail({ record: r, schema: kpiBuildSchema(r), title: r.Indikator || r["KPI ID"], actions: [] }); } else { console.warn("Card not found:", id); } } catch(err) { console.error("board card click error:", err); } });
   }
 }
 
