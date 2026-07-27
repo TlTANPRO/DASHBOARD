@@ -88,7 +88,7 @@ function draw() {
         <h1 class="h-1">Program Kerja</h1>
         <p class="t-muted t-sm">${state.filtered.length} dari ${state.data.length} program${state.selected.size > 0 ? ` · <span class="bulk-count">${state.selected.size} dipilih</span>` : ""}</p>
       </div>
-      ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah Program</button>' : ""}
+      ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah Program</button>' : '<button class="btn btn-outline" id="btn-add" title="Login dulu untuk tambah data">🔒 Login untuk tambah</button>'}
         <button class="btn btn-outline" id="btn-export" title="Export CSV">⬇ Export</button>
         <button class="btn btn-outline" id="btn-save-view" title="Simpan view">⭐ Save</button>
     </div>
@@ -221,6 +221,7 @@ function bindEvents(canEdit, picList) {
   document.q
 
   // Export CSV
+  document.getElementById("btn-print")?.addEventListener("click", () => window.print());
   document.getElementById("btn-export")?.addEventListener("click", async () => {
     const { exportCSV } = await import("../lib/exporter.js");
     const cols = [

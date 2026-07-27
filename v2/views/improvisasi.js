@@ -6,7 +6,7 @@ import { escapeHTML, fmtDate } from "../lib/format.js";
 import { success, danger, confirmDialog } from "../lib/notify.js";
 import { dataTable, emptyState } from "../components/table.js";
 import { filterBar } from "../components/filter.js";
-import { loadingSkeleton } from "../components/card.js";
+import { loadingSkeleton } from "../components/empty.js";
 
 let state = {
   data: [],
@@ -55,7 +55,7 @@ function draw() {
         <h1 class="h-1">💡 Improvisasi</h1>
         <p class="text-muted t-sm">${state.data.length} entries • Inisiatif di luar SOW/KPI yang menunjukkan growth</p>
       </div>
-      ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Submit Improvisasi</button>' : ""}
+      ${{canEdit ? '<button class="btn btn-primary" id="btn-add">+ Submit Improvisasi</button>' : '<button class="btn btn-outline" id="btn-add" tite="Login untuk submit">🔒 Login untuk submit</button>'}}
     </div>
 
     ${filterBar({

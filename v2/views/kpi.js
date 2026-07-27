@@ -99,7 +99,8 @@ function draw() {
         <p class="t-muted t-sm">${state.filtered.length} dari ${state.data.length} entri${state.selected.size > 0 ? ` · <span class="bulk-count">${state.selected.size} dipilih</span>` : ""}</p>
       </div>
       <div class="row gap-2">
-        ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah KPI</button>' : ""}
+        ${canEdit ? '<button class="btn btn-primary" id="btn-add">+ Tambah KPI</button>' : '<button class="btn btn-outline" id="btn-add" title="Login dulu untuk tambah data">🔒 Login untuk tambah</button>'}
+        <button class="btn btn-outline" id="btn-print" title="Print halaman ini">🖨 Print</button>
         <button class="btn btn-outline" id="btn-export" title="Export CSV (Cmd+E)">⬇ Export</button>
         <button class="btn btn-outline" id="btn-save-view" title="Simpan filter ini sebagai view">⭐ Save</button>
       </div>

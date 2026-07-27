@@ -200,7 +200,8 @@ function renderRecent(jobdesk, kpi) {
   return `<ul class="col" style="gap:var(--space-2)">${recent
     .map((r) => `
     <li class="row gap-2" style="padding:var(--space-2) 0;border-bottom:1px solid var(--border-subtle)">
-      <span class="pill pill-muted">${escapeHTML(r._kind)}</span>
-      <span class="t-sm flex-1" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHTML(r.Aktivitas || r.Indikator || r["KPI ID"] || "—")}</span>
+      <span class="pill ${r._kind === "kpi" ? "pill-accent" : "pill-info"}">${r._kind === "kpi" ? "📊 KPI" : "✓ Jobdesk"}</span>
+      <span class="t-sm flex-1" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escapeHTML(r.Aktivitas || r.Indikator || r["KPI ID"] || r["Jobdesk ID"] || "(tanpa judul)")}</span>
+      <span class="t-xs t-muted">${escapeHTML(r.PIC || "")}</span>
     </li>`).join("")}</ul>`;
 }

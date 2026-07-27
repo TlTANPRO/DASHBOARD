@@ -1714,7 +1714,7 @@
         </button>
         <div id="session-pill" class="session-pill" hidden>
           <span class="dot" aria-hidden="true"></span>
-          <span id="session-pic">Loading…</span>
+          <span id="session-pic">Guest</span>
         </div>
         <button class="btn btn-primary btn-sm" id="btn-login">Login</button>
       </div>
@@ -1814,20 +1814,11 @@
   <script src="config.js"></script>
   <script type="module" src="app.js"></script>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=' + Date.now()).then((reg) => {
-        // Force update check
-        if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
-        reg.update();
-        // Reload once when new SW activated
-        let refreshing = false;
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (refreshing) return;
-          refreshing = true;
-          window.location.reload();
-        });
-      }).catch(() => {});
-    }
+    // SW disabled — see sw.js. PWA offline cache kept compiled but not registered.
+    // Uncomment to re-enable:
+    // if ('serviceWorker' in navigator) {
+    //   navigator.serviceWorker.register('sw.js').catch(() => {});
+    // }
   </script>
 </body>
 </html>

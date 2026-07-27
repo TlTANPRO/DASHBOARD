@@ -36,6 +36,7 @@ export async function renderDivisionIndex() {
 
     const divSow = data.sow.filter(s => memberNames.includes(s.PIC));
     const totalBobot = divSow.reduce((s, x) => s + (Number(x["Bobot (%)"]) || 0), 0);
+    const avgBobot = divSow.length ? totalBobot / divSow.length : 0; // avg per SOW, normalized 0-100
 
     const divProg = data.program.filter(p => memberNames.includes(p["PIC Penanggung Jawab"]));
     const progAvg = divProg.length ?
@@ -43,7 +44,7 @@ export async function renderDivisionIndex() {
 
     const score = (kpiAchievement * 0.4) + (jdCompletion * 0.25) + (80 * 0.15) + (progAvg * 0.10);
 
-    return { ...div, members, kpiAchievement, jdCompletion, totalBobot, progAvg, score, kpiCount: divKpi.length, jdCount: divJd.length, progCount: divProg.length };
+    return { ...div, members, kpiAchievement, jdCompletion, totalBobot, avgBobot, sowCount: divSow.length, progAvg, score, kpiCount: divKpi.length, jdCount: divJd.length, progCount: divProg.length };
   });
 
   root.innerHTML = `
@@ -91,8 +92,8 @@ function divCard(d) {
           <span>${d.jdCompletion.toFixed(0)}%</span>
         </div>
         <div class="div-stat-row">
-          <span class="t-xs t-muted">SOW Bobot</span>
-          <span>${d.totalBobot}%</span>
+          <span class="t-xs t-muted">SOW Avg Bobot</span>
+          <span>${d.avgBobot.toFixed(0)}%</span>
         </div>
         <div class="div-stat-row">
           <span class="t-xs t-muted">Program Progress</span>
