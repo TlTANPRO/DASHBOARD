@@ -1,9 +1,9 @@
 // sw.js — Service worker. M8 fix: hash-based cache name (no stale bundles).
 // M9 fix: relative paths only (works under any subpath / GitHub Pages repo).
 // M10 fix: NO auto-reload — pwa.js shows user-initiated toast.
-// v4.0.1 — bump on deploy to force refresh; added 6 view modules + _partials primitives
+// v4.0.2 — drop _partials.js (renamed to partials.js), drop missing icon-512.svg, drop non-existent assets
 
-const VERSION = "v4.0.1";                     // bump on deploy to force refresh
+const VERSION = "v4.0.2";                     // bump on deploy to force refresh
 const CACHE_NAME = `titan-dashboard-${VERSION}`;
 const ASSETS = [
   "./",
@@ -25,7 +25,7 @@ const ASSETS = [
   "./assets/js/lib/format.js",
   "./assets/js/lib/export.js",
   "./assets/js/charts/index.js",
-  "./assets/js/views/_partials.js",
+  "./assets/js/views/partials.js",
   "./assets/js/views/owner.js",
   "./assets/js/views/legal.js",
   "./assets/js/views/marketing.js",
@@ -35,7 +35,6 @@ const ASSETS = [
   "./assets/js/shell/sidebar.js",
   "./assets/js/shell/topbar.js",
   "./assets/img/icon-192.svg",
-  "./assets/img/icon-512.svg",
   "./data/people.json",
   "./data/kpi-perusahaan.json",
   "./data/kpi-divisi.json",
@@ -46,10 +45,27 @@ const ASSETS = [
   "./data/schema-map.json",
 ];
 
-// Install: precache all assets
+// Install: precache all assets. M11 fix: filter missing files (avoid addAll throwing on 404).
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS)).then(() => self.skipWaiting())
+    Promise.all(
+      ASSETS.map((url) =>
+        fetch(url, { cache: "no-cache" })
+          .then((res) => (res.ok ? res : null))
+          .catch(() => null)
+      )
+    ).then((responses) => {
+      const valid = responses.filter(Boolean);
+      const skipped = responses.length - valid.length;
+      if (skipped > 0) console.warn("[sw] skipped", skipped, "missing assets");
+      return caches.open(CACHE_NAME).then((cache) =>
+        Promise.all(
+          responses.map((res, i) => (res ? cache.put(ASSETS[i], res) : null))
+        )
+      );
+    }).then(() => self.skipWaiting()).catch((e) => {
+      console.error("[sw] install failed", e);
+    })
   );
 });
 

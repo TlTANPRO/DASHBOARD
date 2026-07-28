@@ -2,7 +2,9 @@
 // No auto-reload. User clicks button → reload.
 
 const INSTALL_DISMISS_KEY = "pwa-install-dismissed-at";
+const UPDATE_DISMISS_KEY = "pwa-update-dismissed-at";
 const DISMISS_DAYS = 7;
+const UPDATE_DISMISS_HOURS = 1;
 
 let installPromptEvent = null;
 let updateWaitingWorker = null;
@@ -58,6 +60,12 @@ async function registerSW() {
         // M11 fix: only show update prompt AFTER 30s of being installed
         // (avoids spurious popup when old V2 SW unregisters during page load)
         if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+          const dismissedAt = localStorage.getItem(UPDATE_DISMISS_KEY);
+          const dismissedRecent = dismissedAt && (Date.now() - Number(dismissedAt)) < UPDATE_DISMISS_HOURS * 3600_000;
+          if (dismissedRecent) {
+            console.log("[pwa] update suppressed (dismissed recently)");
+            return;
+          }
           const elapsed = Date.now() - bootTime;
           if (elapsed > 30_000) {
             updateWaitingWorker = newWorker;
@@ -109,15 +117,14 @@ function bindInstallPromptUI() {
 
 function bindUpdatePromptUI() {
   document.getElementById("pwa-update-dismiss")?.addEventListener("click", () => {
+    localStorage.setItem(UPDATE_DISMISS_KEY, String(Date.now()));
     document.getElementById("pwa-update").hidden = true;
   });
   document.getElementById("pwa-update-confirm")?.addEventListener("click", () => {
-    if (!updateWaitingWorker) {
-      refreshing = true;
-      window.location.reload();
-      return;
+    localStorage.setItem(UPDATE_DISMISS_KEY, String(Date.now()));
+    if (updateWaitingWorker) {
+      updateWaitingWorker.postMessage({ type: "SKIP_WAITING" });
     }
-    updateWaitingWorker.postMessage({ type: "SKIP_WAITING" });
     refreshing = true;
     window.location.reload();
   });
