@@ -128,6 +128,12 @@ test("cmdk-input has name attr (in partials)", () => {
   return grep(p, 'name="cmdk-input"');
 });
 
+console.log("\n[4b] CSS [hidden] override (M12 fix)");
+const css = read("assets/css/components.css");
+test(".search-palette[hidden] display:none", () => /\.search-palette\[hidden\]\s*\{\s*display:\s*none/.test(css));
+test(".pwa-prompt[hidden] display:none", () => /\.pwa-prompt\[hidden\]\s*\{\s*display:\s*none/.test(css));
+test(".topbar__search[hidden] display:none", () => /\.topbar__search\[hidden\]\s*\{\s*display:\s*none/.test(css));
+
 console.log("\n[5] All JS files parse (node --check as ESM)");
 const jsFiles = listJs("assets/js");
 let parseOK = 0, parseFail = 0;
