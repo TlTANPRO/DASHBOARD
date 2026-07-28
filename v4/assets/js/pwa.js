@@ -7,6 +7,7 @@ const DISMISS_DAYS = 7;
 let installPromptEvent = null;
 let updateWaitingWorker = null;
 let refreshing = false;
+let bootTime = Date.now();
 
 export function init() {
   // Local dev: skip SW if ?nosw=1
@@ -28,18 +29,20 @@ export function init() {
     registerSW();
   }
 
-  window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    installPromptEvent = e;
-    // Show install prompt after 2 visits
-    const visits = parseInt(localStorage.getItem("pwa-visits") || "0", 10) + 1;
-    localStorage.setItem("pwa-visits", String(visits));
-    const dismissedAt = localStorage.getItem(INSTALL_DISMISS_KEY);
-    const dismissedExpired = !dismissedAt || (Date.now() - Number(dismissedAt)) > DISMISS_DAYS * 86400_000;
-    if (visits >= 2 && dismissedExpired) {
-      showInstallPrompt();
-    }
-  });
+  // Suppress install prompt for first 10s (avoid annoying first-time visits)
+  setTimeout(() => {
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      installPromptEvent = e;
+      const visits = parseInt(localStorage.getItem("pwa-visits") || "0", 10) + 1;
+      localStorage.setItem("pwa-visits", String(visits));
+      const dismissedAt = localStorage.getItem(INSTALL_DISMISS_KEY);
+      const dismissedExpired = !dismissedAt || (Date.now() - Number(dismissedAt)) > DISMISS_DAYS * 86400_000;
+      if (visits >= 2 && dismissedExpired) {
+        showInstallPrompt();
+      }
+    });
+  }, 10_000);
 
   bindInstallPromptUI();
   bindUpdatePromptUI();
@@ -52,13 +55,22 @@ async function registerSW() {
       const newWorker = reg.installing;
       if (!newWorker) return;
       newWorker.addEventListener("statechange", () => {
+        // M11 fix: only show update prompt AFTER 30s of being installed
+        // (avoids spurious popup when old V2 SW unregisters during page load)
         if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-          updateWaitingWorker = newWorker;
-          showUpdatePrompt();
+          const elapsed = Date.now() - bootTime;
+          if (elapsed > 30_000) {
+            updateWaitingWorker = newWorker;
+            showUpdatePrompt();
+          } else {
+            setTimeout(() => {
+              updateWaitingWorker = newWorker;
+              showUpdatePrompt();
+            }, 30_000 - elapsed);
+          }
         }
       });
     });
-    // M10 fix: NOT auto-reload. User opts in via button.
     navigator.serviceWorker.addEventListener("controllerchange", () => {
       if (refreshing) return;
       // do nothing — wait for user click

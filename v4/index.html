@@ -27,9 +27,9 @@
       <span class="topbar__brand-mark">S</span>
       <span class="topbar__brand-text">Syahfalah <span class="topbar__brand-ver">V4</span></span>
     </div>
-    <div class="topbar__search">
+    <div class="topbar__search" id="topbar-search" hidden>
       <kbd>⌘K</kbd>
-      <input type="search" placeholder="Cari PIC, KPI, jobdesk..." id="global-search" aria-label="Pencarian global">
+      <input type="search" name="global-search" placeholder="Cari PIC, KPI, jobdesk..." id="global-search" aria-label="Pencarian global" autocomplete="off">
     </div>
     <div class="topbar__actions">
       <button class="topbar__icon-btn" id="theme-toggle" aria-label="Toggle tema" title="Toggle light/dark">
@@ -86,7 +86,7 @@
 
       <label class="login__field">
         <span class="login__label">PIC</span>
-        <select id="login-pic" required>
+        <select id="login-pic" name="login-pic" required>
           <option value="">Pilih PIC...</option>
         </select>
       </label>
@@ -95,6 +95,7 @@
         <span class="login__label">PIN 4-digit</span>
         <input
           id="login-pin"
+          name="login-pin"
           type="password"
           inputmode="numeric"
           pattern="[0-9]{4}"
