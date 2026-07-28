@@ -1,19 +1,110 @@
 {
   "_meta": {
-    "source": "BAB 5 DOCX (KPI Perusahaan L1+L2)",
-    "generated_at": "2026-07-28"
+    "source": "output/PROGRAM KERJA.docx BAB 5 (KPI Perusahaan Level 1-4)",
+    "generated_at": "2026-07-28",
+    "note": "Synced from output/PROGRAM KERJA.docx BAB 5/6/7 via sync-from-program-kerja.mjs"
   },
   "level_1": [
-    { "indikator": "Revenue tahunan",   "target": "Rp 15 milyar", "actual": "" },
-    { "indikator": "Closing unit rumah","target": "72 unit/tahun","actual": "" },
-    { "indikator": "Profit growth YoY", "target": "min 15%",      "actual": "" },
-    { "indikator": "NPS konsumen",      "target": "min 8.0",      "actual": "" }
+    {
+      "indikator": "Revenue",
+      "formula": "Total uang masuk dari penjualan + termin proyek",
+      "target": "Sesuai RKT tahunan ± 5%",
+      "actual": ""
+    },
+    {
+      "indikator": "Profit Margin",
+      "formula": "(Laba bersih / Revenue) × 100%",
+      "target": "12–18%",
+      "actual": ""
+    },
+    {
+      "indikator": "ROE",
+      "formula": "(Laba bersih / Ekuitas) × 100%",
+      "target": "> 15%",
+      "actual": ""
+    },
+    {
+      "indikator": "Unit Delivered",
+      "formula": "Jumlah unit delivered on-time per tahun",
+      "target": "80–150 unit / tahun",
+      "actual": ""
+    },
+    {
+      "indikator": "Cashflow Positive",
+      "formula": "Arus kas > 0 setiap bulan",
+      "target": "12 bulan berturut-turut",
+      "actual": ""
+    },
+    {
+      "indikator": "Repeat Order",
+      "formula": "% konsumen beli lagi atau refer",
+      "target": "> 15%",
+      "actual": ""
+    },
+    {
+      "indikator": "NPS Konsumen",
+      "formula": "Skala 0-100 (0 sampai 100)",
+      "target": "> 50",
+      "actual": ""
+    }
   ],
   "level_2": [
-    { "indikator": "Lead total per bulan",         "target": "250",   "actual": "" },
-    { "indikator": "Conversion rate",              "target": "min 2.4%", "actual": "" },
-    { "indikator": "Serah terima on-time",         "target": "100%",  "actual": "" },
-    { "indikator": "Kepuasan konsumen (post-sale)","target": "min 90%", "actual": "" },
-    { "indikator": "Engagement IG",                "target": "min 3%", "actual": "" }
-  ]
+    {
+      "indikator": "Pencapaian Revenue Bulanan",
+      "target": "> 95% dari target",
+      "actual": ""
+    },
+    {
+      "indikator": "Pencapaian Delivery Unit Bulanan",
+      "target": "> 90% dari target",
+      "actual": ""
+    },
+    {
+      "indikator": "Kepatuhan SOP",
+      "target": "> 95%",
+      "actual": ""
+    },
+    {
+      "indikator": "Employee Retention",
+      "target": "> 90%",
+      "actual": ""
+    },
+    {
+      "indikator": "Kepatuhan Budget",
+      "target": "variance < 10%",
+      "actual": ""
+    },
+    {
+      "indikator": "Komplain Resolution Time",
+      "target": "< 7 hari",
+      "actual": ""
+    }
+  ],
+  "level_3_summary": [
+    {
+      "divisi": "Marketing & Sales",
+      "slot_kpi": "Leads, CPL, Closing Rate, ROAS, Brand Awareness"
+    },
+    {
+      "divisi": "Proyek & Konstruksi",
+      "slot_kpi": "On-time Delivery, Budget Variance, Defect Rate, Zero Accident"
+    },
+    {
+      "divisi": "Operasional & Admin",
+      "slot_kpi": "Collection Rate, Tax Compliance, Bank Rec., Payroll Tepat Waktu"
+    },
+    {
+      "divisi": "Legal / Compliance",
+      "slot_kpi": "Kontrak Tepat Waktu, SHM <30 hari, AJB, PBG Compliance"
+    },
+    {
+      "divisi": "Media & Konten Kreatif",
+      "slot_kpi": "Konten Published, Engagement Rate, Lead dari Konten"
+    },
+    {
+      "divisi": "Owner / Director",
+      "slot_kpi": "Meeting 100%, Profit YoY 15%, Ekspansi 1 proyek/tahun"
+    }
+  ],
+  "level_4_note": "KPI staff adalah output harian/mingguan, dievaluasi Kepala Kantor via PIC. Detail per posisi di BAB 7."
 }

@@ -5,3 +5,10 @@ __pycache__/
 
 # Notion setup output (regenerate dengan create-notion-dbs.js)
 scripts/notion-ids.json
+
+# V4 backup snapshots (local safety copies before sync)
+v4/data/_backup*/
+
+# Scripts
+**/__pk_*.txt
+**/_audit_dump.json

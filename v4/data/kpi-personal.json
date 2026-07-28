@@ -1,8 +1,9 @@
 {
   "_meta": {
-    "source": "BAB 7 DOCX via sync-docx.mjs",
+    "source": "output/PROGRAM KERJA.docx BAB 7 via sync-from-program-kerja.mjs",
     "generated_at": "2026-07-28",
-    "count": 60
+    "count": 60,
+    "note": "Synced from output/PROGRAM KERJA.docx BAB 5/6/7 via sync-from-program-kerja.mjs"
   },
   "rows": [
     {
