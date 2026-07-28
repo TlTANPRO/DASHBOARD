@@ -19,7 +19,7 @@ html {
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: var(--viewport-h);
   display: grid;
   grid-template-rows: var(--topbar-h) 1fr;
   grid-template-columns: var(--sidebar-w) 1fr;
@@ -37,6 +37,15 @@ body {
       "main"
       "tabbar";
   }
+}
+
+/* Geist loaded from Vercel CDN as variable font.
+   Falls back to system-ui; Inter/Roboto removed per design-taste-frontend-v1. */
+@font-face {
+  font-family: "Geist";
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/geist@1.4.0/dist/fonts/geist-sans/Geist-Variable.woff2") format("woff2-variations");
 }
 
 h1, h2, h3, h4, h5, h6 {

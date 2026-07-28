@@ -32,20 +32,20 @@
   --color-info:              oklch(70% 0.14 220);
   --color-info-soft:         oklch(95% 0.04 220);
 
-  /* Typography */
-  --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Inter Display", "Inter", system-ui, sans-serif;
-  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  /* Typography — Geist primary (Inter banned per design-taste-frontend-v1) */
+  --font-sans:    "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Geist", system-ui, sans-serif;
+  --font-mono:    "Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* Type scale (4px base) */
-  --text-xs:    12px;
-  --text-sm:    14px;
-  --text-base:  16px;
-  --text-lg:    18px;
-  --text-xl:    22px;
-  --text-2xl:   28px;
-  --text-3xl:   36px;
-  --text-display: 56px;
+  /* Type scale (fluid clamp — per design-taste-frontend-v1 anti-static) */
+  --text-xs:      clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm:      clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --text-base:    clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-lg:      clamp(1.125rem, 1.08rem + 0.22vw, 1.1875rem);
+  --text-xl:      clamp(1.375rem, 1.3rem + 0.4vw, 1.5rem);
+  --text-2xl:     clamp(1.75rem, 1.6rem + 0.8vw, 2rem);
+  --text-3xl:     clamp(2.25rem, 2rem + 1.4vw, 2.75rem);
+  --text-display: clamp(3rem, 2.2rem + 3.5vw, 4rem);
 
   --leading-tight:  1.2;
   --leading-snug:   1.35;
@@ -74,11 +74,11 @@
   --radius-xl:   24px;
   --radius-full: 9999px;
 
-  /* Shadow (OKLCH-based) */
-  --shadow-xs: oklch(0 0 0 / 0.04) 0 1px 2px;
-  --shadow-sm: oklch(0 0 0 / 0.06) 0 2px 4px;
-  --shadow-md: oklch(0 0 0 / 0.08) 0 4px 12px;
-  --shadow-lg: oklch(0 0 0 / 0.12) 0 12px 32px;
+  /* Shadow (tinted to bg hue per design-taste-frontend-v1, not generic black) */
+  --shadow-xs: oklch(20% 0.02 270 / 0.04) 0 1px 2px;
+  --shadow-sm: oklch(20% 0.02 270 / 0.06) 0 2px 4px;
+  --shadow-md: oklch(20% 0.02 270 / 0.10) 0 4px 12px;
+  --shadow-lg: oklch(20% 0.02 270 / 0.14) 0 12px 32px;
 
   /* Z-index */
   --z-topbar:   100;
@@ -93,6 +93,7 @@
   --sidebar-w:   220px;
   --tabbar-h:    56px;
   --max-content: 1440px;
+  --viewport-h:  100dvh;
 
   /* Transitions */
   --duration-fast:   150ms;
@@ -122,10 +123,10 @@
   --color-danger-soft:       oklch(30% 0.05 25);
   --color-info-soft:         oklch(28% 0.04 220);
 
-  --shadow-xs: oklch(0 0 0 / 0.20) 0 1px 2px;
-  --shadow-sm: oklch(0 0 0 / 0.25) 0 2px 4px;
-  --shadow-md: oklch(0 0 0 / 0.30) 0 4px 12px;
-  --shadow-lg: oklch(0 0 0 / 0.40) 0 12px 32px;
+  --shadow-xs: oklch(95% 0.005 270 / 0.04) 0 1px 2px;
+  --shadow-sm: oklch(95% 0.005 270 / 0.06) 0 2px 4px;
+  --shadow-md: oklch(95% 0.005 270 / 0.10) 0 4px 12px;
+  --shadow-lg: oklch(95% 0.005 270 / 0.14) 0 12px 32px;
 }
 
 /* Breakpoints reference (used in media queries):

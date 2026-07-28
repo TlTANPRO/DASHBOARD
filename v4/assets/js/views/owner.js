@@ -3,6 +3,7 @@
 
 import { fetchData } from "../ssot.js";
 import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
+import { leaderboardSection, kpiDimensiSection, feeMediaSection, pricingTiersSection, managerSection, glosariumSection } from "./extras.js";
 import { formatPercent } from "../lib/format.js";
 import { getCurrentUser } from "../auth.js";
 
@@ -12,9 +13,10 @@ export async function render({ container }) {
   const isOwner = !!getCurrentUser()?.is_owner;
 
   // ---------- Load data ----------
-  const [perusahaan, personal] = await Promise.all([
+  const [perusahaan, personal, ref] = await Promise.all([
     fetchData("kpi-perusahaan.json"),
     fetchData("kpi-personal.json"),
+    fetchData("reference.json"),
   ]);
 
   const l1 = perusahaan?.level_1 || [];
@@ -151,7 +153,21 @@ export async function render({ container }) {
         key: "pct",
         label: "%",
         numeric: true,
-        chip: row => row.pct >= 50 ? "success" : "danger",
+        chip: row => row.pct >= 75 ? "success" : row.pct >= 50 ? "info" : row.pct >= 30 ? "warning" : "danger",
+      },
+      {
+        key: "grade",
+        label: "Grade",
+        value: row => {
+          if (row.pct >= 90) return "A";
+          if (row.pct >= 75) return "B";
+          if (row.pct >= 60) return "C";
+          return "D";
+        },
+        chip: row => {
+          const g = row.pct >= 90 ? "success" : row.pct >= 75 ? "info" : row.pct >= 60 ? "warning" : "danger";
+          return g;
+        },
       },
     ],
     rows: rankRows,
@@ -188,6 +204,19 @@ export async function render({ container }) {
         label: "Evidence",
         chip: row => row.evidence ? "success" : "danger",
         editable: true,
+      },
+      {
+        key: "_grade",
+        label: "Grade",
+        value: row => {
+          if (!row.actual) return "—";
+          if (row.evidence) return "A";
+          return "B";
+        },
+        chip: row => {
+          if (!row.actual) return "warning";
+          return row.evidence ? "success" : "info";
+        },
       },
       { key: "divisi", label: "Divisi", filter: true, filterLabel: "Semua divisi" },
     ],
@@ -229,4 +258,28 @@ export async function render({ container }) {
     },
   }));
   container.appendChild(sec4);
+
+  // ============================================================
+  // 05–12 — V5.0 reference blocks (Leaderboard, KPI Dimensi, Fee,
+  //         Pricing, Manager 3 Sifat, Glosarium)
+  // ============================================================
+  if (ref) {
+    const lb = leaderboardSection(ref);
+    if (lb) container.appendChild(lb);
+
+    const dim = kpiDimensiSection(ref);
+    if (dim) container.appendChild(dim);
+
+    const fee = feeMediaSection(ref);
+    if (fee) container.appendChild(fee);
+
+    const tier = pricingTiersSection(ref);
+    if (tier) container.appendChild(tier);
+
+    const mgr = managerSection(ref);
+    if (mgr) container.appendChild(mgr);
+
+    const glos = glosariumSection(ref);
+    if (glos) container.appendChild(glos);
+  }
 }
