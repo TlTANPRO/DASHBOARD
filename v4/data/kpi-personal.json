@@ -1,0 +1,489 @@
+{
+  "_meta": {
+    "source": "BAB 7 DOCX via sync-docx.mjs",
+    "generated_at": "2026-07-28",
+    "count": 60
+  },
+  "rows": [
+    {
+      "pic": "Pak Ardian",
+      "kpi": "Kehadiran di meeting bulanan",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "owner"
+    },
+    {
+      "pic": "Pak Ardian",
+      "kpi": "Keputusan yang tertunda",
+      "target": "0",
+      "actual": "",
+      "evidence": "",
+      "divisi": "owner"
+    },
+    {
+      "pic": "Pak Ardian",
+      "kpi": "Profit growth YoY",
+      "target": "min 15%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "owner"
+    },
+    {
+      "pic": "Pak Ardian",
+      "kpi": "Ekspansi tercapai",
+      "target": "1 proyek baru / tahun",
+      "actual": "",
+      "evidence": "",
+      "divisi": "owner"
+    },
+    {
+      "pic": "Bu Nisya",
+      "kpi": "Pengajuan SHM selesai < 30 hari",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "legal"
+    },
+    {
+      "pic": "Bu Nisya",
+      "kpi": "Kontrak konsumen tanpa error",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "legal"
+    },
+    {
+      "pic": "Bu Nisya",
+      "kpi": "Compliance check triwulan",
+      "target": "4x / tahun",
+      "actual": "",
+      "evidence": "",
+      "divisi": "legal"
+    },
+    {
+      "pic": "Bu Nisya",
+      "kpi": "Response time legal opinion",
+      "target": "max 3 hari kerja",
+      "actual": "",
+      "evidence": "",
+      "divisi": "legal"
+    },
+    {
+      "pic": "Mada",
+      "kpi": "Closing FLPP tim",
+      "target": "6 unit / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Mada",
+      "kpi": "Survey lokasi (back cover)",
+      "target": "10 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Mada",
+      "kpi": "Coaching personal underperform",
+      "target": "100% punya rencana perbaikan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Mada",
+      "kpi": "Dashboard update",
+      "target": "real-time (max 1 hari telat)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Mada",
+      "kpi": "Laporan ke Owner",
+      "target": "100% tepat waktu",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Riza",
+      "kpi": "Lead handled",
+      "target": "200 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Riza",
+      "kpi": "Survey lokasi",
+      "target": "10 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Riza",
+      "kpi": "SP3K submit",
+      "target": "4 / bulan (2 closing + 2 buffer)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Riza",
+      "kpi": "Closing",
+      "target": "2 / bulan (WAJIB)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Riza",
+      "kpi": "Conversion rate",
+      "target": "min 3% (6 dari 200)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Riza",
+      "kpi": "Response time lead baru",
+      "target": "< 30 menit (SLA)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Riza",
+      "kpi": "Update Sheet real-time",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Yudi/Sdek",
+      "kpi": "Lead walk-in handled",
+      "target": "10 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Yudi/Sdek",
+      "kpi": "Maintenance rumah contoh",
+      "target": "100% setiap minggu",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Yudi/Sdek",
+      "kpi": "QC pergudangan",
+      "target": "2x / minggu ( Senin - Kamis )",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Yudi/Sdek",
+      "kpi": "Closing (back cover Riza)",
+      "target": "1 unit / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Yudi/Sdek",
+      "kpi": "Laporan progress harian",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "marketing"
+    },
+    {
+      "pic": "Amir",
+      "kpi": "Proyek internal selesai on-time",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Amir",
+      "kpi": "Proyek eksternal revenue",
+      "target": "Rp 100 juta / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Amir",
+      "kpi": "QC pergudangan",
+      "target": "2x / minggu ( Senin - Kamis )",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Amir",
+      "kpi": "Survey lokasi (back cover)",
+      "target": "10 lokasi / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Amir",
+      "kpi": "Closing support",
+      "target": "2 unit / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Novita",
+      "kpi": "Pemberkasan selesai",
+      "target": "7 hari kerja",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Novita",
+      "kpi": "SP3K keluar",
+      "target": "14 hari kerja",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Novita",
+      "kpi": "Akad kredit on-time",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Novita",
+      "kpi": "Berkas error",
+      "target": "0 (zero mistake)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Novita",
+      "kpi": "Survey lokasi (back cover)",
+      "target": "2 lokasi / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Novita",
+      "kpi": "Update CRM real-time",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Rizal",
+      "kpi": "Proyek selesai on-time",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Rizal",
+      "kpi": "Quality control PASS",
+      "target": "100% (tidak ada rework > 5%)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Rizal",
+      "kpi": "Budget variance",
+      "target": "max 5% dari rencana",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Rizal",
+      "kpi": "Serah terima on-time",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Rizal",
+      "kpi": "Laporan progress",
+      "target": "real-time",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Rizal",
+      "kpi": "Vendor performance",
+      "target": "score > 80%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "proyek"
+    },
+    {
+      "pic": "Sinta",
+      "kpi": "Material on-time",
+      "target": "100% (tidak ada proyek molor karena material)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Sinta",
+      "kpi": "Stok minimum terjaga",
+      "target": "100%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Sinta",
+      "kpi": "PO error",
+      "target": "0",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Sinta",
+      "kpi": "Vendor score",
+      "target": "rata-rata > 80%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Sinta",
+      "kpi": "Hemat budget",
+      "target": "min 3% dari budget rencana",
+      "actual": "",
+      "evidence": "",
+      "divisi": "operasional"
+    },
+    {
+      "pic": "Reni",
+      "kpi": "Konten published",
+      "target": "40 / bulan (10/minggu)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Reni",
+      "kpi": "Engagement rate IG",
+      "target": "min 3%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Reni",
+      "kpi": "Lead dari konten",
+      "target": "50 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Reni",
+      "kpi": "Fee earned",
+      "target": "Rp 1.250.000 / bulan (untuk 5 closing)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Rifki",
+      "kpi": "Konten dipublish",
+      "target": "20 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Rifki",
+      "kpi": "Views/konten",
+      "target": "min 1.000 views",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Rifki",
+      "kpi": "Engagement rate",
+      "target": "min 3% , Target Naik 5%",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Rifki",
+      "kpi": "Konten viral (>10K views)",
+      "target": "20/ bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Rifki",
+      "kpi": "Fee earned",
+      "target": "Rp 1.250.000 / bulan (untuk 5 closing), bagian dari tim media (Rifki + Reni)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Reta",
+      "kpi": "Script selesai",
+      "target": "20 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Reta",
+      "kpi": "Revisi minor",
+      "target": "max 1x per script",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Reta",
+      "kpi": "Konten published",
+      "target": "20 / bulan",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    },
+    {
+      "pic": "Reta",
+      "kpi": "Fee earned",
+      "target": "Rp 1.250.000 / bulan (untuk 5 closing), bagian dari tim media (Rifki + Reni)",
+      "actual": "",
+      "evidence": "",
+      "divisi": "media"
+    }
+  ]
+}

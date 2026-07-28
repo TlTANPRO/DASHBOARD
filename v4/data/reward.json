@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "source": "BAB 8 DOCX (Reward & Punishment)",
+    "generated_at": "2026-07-28"
+  },
+  "reward": [
+    { "criteria": "Closing 6 unit/bulan",        "benefit": "Fee closing Rp 250.000/unit" },
+    { "criteria": "Konten viral (>10K views)",   "benefit": "Fee konten Rp 250.000/konten" },
+    { "criteria": "KPI tercapai 100%",            "benefit": "Bonus bulanan sesuai divisi" },
+    { "criteria": "Proyek on-time + QC PASS",    "benefit": "Fee proyek eksternal 15jt+ ke tim" }
+  ],
+  "punishment": [
+    { "criteria": "Closing < 50% target (3 bulan berturut)",  "aksi": "Coaching + penurunan fee" },
+    { "criteria": "Berkas error > 1x",                        "aksi": "Coaching Bu Nisya" },
+    { "criteria": "Material telat > 1x",                      "aksi": "Sinta evaluasi vendor" },
+    { "criteria": "Konten tidak published > 1 minggu",         "aksi": "Brief ulang Reni" }
+  ]
+}

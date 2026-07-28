@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="Dashboard internal PT Syahfalah Global + PT Lembayung Wanantara Padha">
+  <title>Syahfalah V4 — Management Control Center</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/icon-192.svg">
+  <link rel="stylesheet" href="./assets/css/tokens.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/shell.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <!-- H2 fix: topbar + sidebar + tabs + view container + login modal ALL in initial markup.
+       No late-mount via innerHTML. Shell renders <500ms after data/*.json fetch. -->
+
+  <a class="skip-link" href="#main-view">Langsung ke konten</a>
+
+  <header class="topbar" role="banner">
+    <button class="topbar__hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="sidebar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="topbar__brand">
+      <span class="topbar__brand-mark">S</span>
+      <span class="topbar__brand-text">Syahfalah <span class="topbar__brand-ver">V4</span></span>
+    </div>
+    <div class="topbar__search">
+      <kbd>⌘K</kbd>
+      <input type="search" placeholder="Cari PIC, KPI, jobdesk..." id="global-search" aria-label="Pencarian global">
+    </div>
+    <div class="topbar__actions">
+      <button class="topbar__icon-btn" id="theme-toggle" aria-label="Toggle tema" title="Toggle light/dark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <div class="topbar__user" id="topbar-user">
+        <span class="topbar__user-avatar" id="user-avatar">?</span>
+        <span class="topbar__user-name" id="user-name">Belum login</span>
+        <button class="topbar__user-logout" id="logout-btn" hidden>Keluar</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sidebar" id="sidebar" aria-label="Menu utama">
+    <ul class="sidebar__list" role="tablist" id="divisi-tabs">
+      <li><a href="#/owner"     data-divisi="owner"      role="tab"><span class="sidebar__icon">01</span><span class="sidebar__label">Owner</span></a></li>
+      <li><a href="#/legal"     data-divisi="legal"      role="tab"><span class="sidebar__icon">02</span><span class="sidebar__label">Legal</span></a></li>
+      <li><a href="#/marketing" data-divisi="marketing"  role="tab"><span class="sidebar__icon">03</span><span class="sidebar__label">Marketing</span></a></li>
+      <li><a href="#/admin"     data-divisi="admin"      role="tab"><span class="sidebar__icon">04</span><span class="sidebar__label">Admin</span></a></li>
+      <li><a href="#/proyek"    data-divisi="proyek"     role="tab"><span class="sidebar__icon">05</span><span class="sidebar__label">Proyek</span></a></li>
+      <li><a href="#/media"     data-divisi="media"      role="tab"><span class="sidebar__icon">06</span><span class="sidebar__label">Media</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="main" id="main-view" tabindex="-1">
+    <div class="main__hero" id="divisi-hero">
+      <div class="main__hero-skeleton">
+        <div class="skeleton skeleton--title"></div>
+        <div class="skeleton skeleton--text"></div>
+      </div>
+    </div>
+    <div class="main__content" id="divisi-content">
+      <div class="skeleton skeleton--card"></div>
+      <div class="skeleton skeleton--card"></div>
+      <div class="skeleton skeleton--card"></div>
+    </div>
+    <div class="main__tabbar" id="tabbar" hidden>
+      <button class="tabbar__btn" data-divisi="owner"     aria-label="Owner">01 Owner</button>
+      <button class="tabbar__btn" data-divisi="legal"     aria-label="Legal">02 Legal</button>
+      <button class="tabbar__btn" data-divisi="marketing" aria-label="Marketing">03 Marketing</button>
+      <button class="tabbar__btn" data-divisi="admin"     aria-label="Admin">04 Admin</button>
+      <button class="tabbar__btn" data-divisi="proyek"    aria-label="Proyek">05 Proyek</button>
+      <button class="tabbar__btn" data-divisi="media"     aria-label="Media">06 Media</button>
+    </div>
+  </main>
+
+  <!-- H2 fix: login modal in initial markup. No late-mount. -->
+  <dialog id="login-modal" class="modal" aria-labelledby="login-title" aria-describedby="login-desc">
+    <form class="login" id="login-form" method="dialog">
+      <header class="login__header">
+        <h1 class="login__title" id="login-title">Syahfalah V4</h1>
+        <p class="login__desc" id="login-desc">Masuk untuk mengakses dashboard</p>
+      </header>
+
+      <label class="login__field">
+        <span class="login__label">PIC</span>
+        <select id="login-pic" required>
+          <option value="">Pilih PIC...</option>
+        </select>
+      </label>
+
+      <label class="login__field">
+        <span class="login__label">PIN 4-digit</span>
+        <input
+          id="login-pin"
+          type="password"
+          inputmode="numeric"
+          pattern="[0-9]{4}"
+          maxlength="4"
+          autocomplete="off"
+          required
+          aria-describedby="login-pin-hint"
+        >
+        <span class="login__hint" id="login-pin-hint">Default: 0000 (Owner bisa override di Settings)</span>
+      </label>
+
+      <div class="login__error" id="login-error" role="alert" aria-live="polite" hidden></div>
+
+      <button type="submit" class="login__submit">Masuk</button>
+
+      <p class="login__footer">PT Syahfalah Global · Lembayung Wanantara Padha</p>
+    </form>
+  </dialog>
+
+  <!-- Toast container for non-blocking messages -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- PWA install + update prompts -->
+  <div class="pwa-prompt" id="pwa-install" hidden role="dialog" aria-labelledby="pwa-install-title">
+    <p id="pwa-install-title">Pasang Syahfalah V4 sebagai aplikasi?</p>
+    <div class="pwa-prompt__actions">
+      <button class="pwa-prompt__btn pwa-prompt__btn--secondary" id="pwa-install-dismiss">Nanti</button>
+      <button class="pwa-prompt__btn pwa-prompt__btn--primary"   id="pwa-install-confirm">Pasang</button>
+    </div>
+  </div>
+
+  <div class="pwa-prompt" id="pwa-update" hidden role="dialog" aria-labelledby="pwa-update-title">
+    <p id="pwa-update-title">Versi baru tersedia</p>
+    <div class="pwa-prompt__actions">
+      <button class="pwa-prompt__btn pwa-prompt__btn--secondary" id="pwa-update-dismiss">Nanti</button>
+      <button class="pwa-prompt__btn pwa-prompt__btn--primary"   id="pwa-update-confirm">Refresh</button>
+    </div>
+  </div>
+
+  <!-- Cached data banner (shown when fallback active) -->
+  <div class="banner banner--cached" id="cached-banner" hidden role="status">
+    <span>Menampilkan data cached dari <time id="cached-ts">—</time></span>
+  </div>
+
+  <!-- Module entry. Order matters: theme (sync init for no FOUC) → main boot. -->
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

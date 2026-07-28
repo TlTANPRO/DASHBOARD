@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "source": "scripts/sync-docx.mjs (BAB 7 DOCX) + data/tim.json",
+    "generated_at": "2026-07-28",
+    "note": "12 PIC per DOCX authoritative. Canonical name 'Yudi/Sdek' per L4 fix. All PINs default 0000."
+  },
+  "people": [
+    { "nama": "Pak Ardian", "nama_pendek": "Pak Ardian", "divisi": "owner",       "role": "Owner / Director",                    "pin_default": "0000", "is_owner": true,  "email": "pakardian.syahfalah@gmail.com" },
+    { "nama": "Bu Nisya",   "nama_pendek": "Bu Nisya",   "divisi": "legal",       "role": "Legal / Co-Director",                 "pin_default": "0000", "is_owner": false, "email": "bunisya.syahfalah@gmail.com" },
+    { "nama": "Mada",       "nama_pendek": "Mada",       "divisi": "marketing",   "role": "Kepala Kantor + Marketing Lead",     "pin_default": "0000", "is_owner": false, "email": "mada.syahfalah@gmail.com" },
+    { "nama": "Riza",       "nama_pendek": "Riza",       "divisi": "marketing",   "role": "Marketing Sales",                     "pin_default": "0000", "is_owner": false, "email": "riza.syahfalah@gmail.com" },
+    { "nama": "Yudi/Sdek",  "nama_pendek": "Yudi",       "divisi": "marketing",   "role": "Marketing + Maintenance + Proyek",    "pin_default": "0000", "is_owner": false, "email": "yudi.syahfalah@gmail.com" },
+    { "nama": "Amir",       "nama_pendek": "Amir",       "divisi": "proyek",      "role": "Marketing + Konstruksi",              "pin_default": "0000", "is_owner": false, "email": "amir.syahfalah@gmail.com" },
+    { "nama": "Novita",     "nama_pendek": "Novita",     "divisi": "operasional", "role": "Admin Keuangan + Bank",               "pin_default": "0000", "is_owner": false, "email": "novita.syahfalah@gmail.com" },
+    { "nama": "Rizal",      "nama_pendek": "Rizal",      "divisi": "proyek",      "role": "Kepala Proyek",                       "pin_default": "0000", "is_owner": false, "email": "rizal.syahfalah@gmail.com" },
+    { "nama": "Sinta",      "nama_pendek": "Sinta",      "divisi": "operasional", "role": "Purchasing",                          "pin_default": "0000", "is_owner": false, "email": "sinta.syahfalah@gmail.com" },
+    { "nama": "Reni",       "nama_pendek": "Reni",       "divisi": "media",       "role": "Ketua Media (Majang Mejeng)",         "pin_default": "0000", "is_owner": false, "email": "reni.syahfalah@gmail.com" },
+    { "nama": "Rifki",      "nama_pendek": "Rifki",      "divisi": "media",       "role": "Ketua Kreatif",                       "pin_default": "0000", "is_owner": false, "email": "rifki.syahfalah@gmail.com" },
+    { "nama": "Reta",       "nama_pendek": "Reta",       "divisi": "media",       "role": "Penulis",                             "pin_default": "0000", "is_owner": false, "email": "reta.syahfalah@gmail.com" }
+  ]
+}

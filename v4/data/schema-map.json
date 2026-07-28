@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "stack": "V4-isolated",
+    "generated_at": "2026-07-28T12:30:00+07:00",
+    "parent_page": "3ab4cf7e-9f24-81e6-85ec-f26143f06941",
+    "parent_url": "https://app.notion.com/p/Syahfalah-V4-Stack-3ab4cf7e9f2481e685ecf26143f06941",
+    "note": "V4 ISOLATED STACK. UUIDs from setup-notion-v4. Do NOT use with V2 (titan-notion-proxy)."
+  },
+  "databases": {
+    "People": {
+      "id": "3ab4cf7e-9f24-81d5-b590-c792cdbd8c95",
+      "file": "people.json"
+    },
+    "KPI Perusahaan": {
+      "id": "3ab4cf7e-9f24-8108-a5a6-d4e87c79ede5",
+      "file": "kpi-perusahaan.json"
+    },
+    "KPI Divisi": {
+      "id": "3ab4cf7e-9f24-8168-91dd-e022e4d1a226",
+      "file": "kpi-divisi.json"
+    },
+    "KPI Personal": {
+      "id": "3ab4cf7e-9f24-81b1-9b9e-efe5297fe22f",
+      "file": "kpi-personal.json"
+    },
+    "SOW": {
+      "id": "3ab4cf7e-9f24-818d-bb44-ceab92d6fc48",
+      "file": "sow.json"
+    },
+    "Jobdesk Harian": {
+      "id": "3ab4cf7e-9f24-81af-b225-c0fb9b0014e5",
+      "file": "jobdesk.json"
+    },
+    "Reward & Punishment": {
+      "id": "3ab4cf7e-9f24-8156-9d52-c807b8ac9a02",
+      "file": "reward.json"
+    },
+    "Improvisasi": {
+      "id": "3ab4cf7e-9f24-81be-8b34-f5650060c289",
+      "file": "improvisasi.json"
+    },
+    "Divisi": {
+      "id": "3ab4cf7e-9f24-811e-a26c-c5796094e7a3",
+      "file": "divisi.json"
+    }
+  }
+}

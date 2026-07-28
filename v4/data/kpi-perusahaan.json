@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "source": "BAB 5 DOCX (KPI Perusahaan L1+L2)",
+    "generated_at": "2026-07-28"
+  },
+  "level_1": [
+    { "indikator": "Revenue tahunan",   "target": "Rp 15 milyar", "actual": "" },
+    { "indikator": "Closing unit rumah","target": "72 unit/tahun","actual": "" },
+    { "indikator": "Profit growth YoY", "target": "min 15%",      "actual": "" },
+    { "indikator": "NPS konsumen",      "target": "min 8.0",      "actual": "" }
+  ],
+  "level_2": [
+    { "indikator": "Lead total per bulan",         "target": "250",   "actual": "" },
+    { "indikator": "Conversion rate",              "target": "min 2.4%", "actual": "" },
+    { "indikator": "Serah terima on-time",         "target": "100%",  "actual": "" },
+    { "indikator": "Kepuasan konsumen (post-sale)","target": "min 90%", "actual": "" },
+    { "indikator": "Engagement IG",                "target": "min 3%", "actual": "" }
+  ]
+}

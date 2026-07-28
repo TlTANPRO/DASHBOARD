@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "source": "data/tim.json (jobdesk_harian + proker_mingguan)",
+    "generated_at": "2026-07-28"
+  },
+  "jobdesk": [
+    { "pic": "Pak Ardian", "harian": [
+      { "jam": "Pagi",   "kegiatan": "Review dashboard Mada" },
+      { "jam": "Siang",  "kegiatan": "Meeting dengan bank/investor" },
+      { "jam": "Sore",   "kegiatan": "Approval dokumen besar" }
+    ], "mingguan": [
+      { "minggu": "W1", "kegiatan": "Review dashboard Mada, set target bulan" },
+      { "minggu": "W2", "kegiatan": "Site visit 1 cluster, meeting dengan bank" },
+      { "minggu": "W3", "kegiatan": "Approve budget marketing + operasional" },
+      { "minggu": "W4", "kegiatan": "Audit internal: profit, cashflow, SDM" }
+    ]},
+    { "pic": "Mada", "harian": [
+      { "jam": "08.00–08.30", "kegiatan": "Briefing pagi + cek absensi" },
+      { "jam": "08.30–12.00", "kegiatan": "Meeting dengan tim, site visit, closing support" },
+      { "jam": "13.00–16.00", "kegiatan": "Monitoring dashboard, coaching, administrasi" },
+      { "jam": "16.30–17.00", "kegiatan": "Laporan sore ke grup + dashboard update" }
+    ], "mingguan": [
+      { "minggu": "W1", "kegiatan": "Planning bulanan, set target individu, audit minggu lalu" },
+      { "minggu": "W2", "kegiatan": "Site visit semua cluster, evaluasi progress" },
+      { "minggu": "W3", "kegiatan": "Review KPI, coaching personal yang underperform" },
+      { "minggu": "W4", "kegiatan": "Evaluasi bulanan, planning bulan depan, laporan ke Owner" }
+    ]},
+    { "pic": "Riza", "harian": [
+      { "jam": "08.00–08.30", "kegiatan": "Briefing + cek lead baru semalam" },
+      { "jam": "08.30–12.00", "kegiatan": "Follow up 15 lead (WA blast + personal)" },
+      { "jam": "13.00–15.00", "kegiatan": "Survey lokasi 1–2 lead" },
+      { "jam": "15.00–16.30", "kegiatan": "Closing call 3 lead" },
+      { "jam": "16.30–17.00", "kegiatan": "Laporan ke grup + update Sheet" }
+    ], "mingguan": [
+      { "minggu": "W1", "kegiatan": "Lead: 50 | Survey: 8 | Closing: 1" },
+      { "minggu": "W2", "kegiatan": "Lead: 50 | Survey: 8 | Closing: 1" },
+      { "minggu": "W3", "kegiatan": "Lead: 50 | Survey: 8 | Closing: 2" },
+      { "minggu": "W4", "kegiatan": "Lead: 50 | Survey: 6 | Closing: 2 (Total: 200/30/6)" }
+    ]}
+  ]
+}

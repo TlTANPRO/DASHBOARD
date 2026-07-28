@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "source": "BAB 6 DOCX (KPI 6 Divisi)",
+    "generated_at": "2026-07-28",
+    "note": "KPI per divisi. Owner = aggregate of company L1+L2 (BAB 5)."
+  },
+  "divisi": [
+    {
+      "slug": "owner",
+      "nama": "Owner / Director",
+      "kpis": [
+        { "indikator": "Profit growth YoY",       "target": "min 15%",        "actual": "" },
+        { "indikator": "Cashflow positif",          "target": "setiap bulan",   "actual": "" },
+        { "indikator": "Ekspansi tercapai",         "target": "1 proyek/tahun",  "actual": "" },
+        { "indikator": "Meeting bulanan kehadiran","target": "100%",           "actual": "" }
+      ]
+    },
+    {
+      "slug": "legal",
+      "nama": "Legal / Compliance",
+      "kpis": [
+        { "indikator": "Pengajuan SHM selesai <30 hari", "target": "100%",  "actual": "" },
+        { "indikator": "Kontrak konsumen tanpa error",   "target": "100%",  "actual": "" },
+        { "indikator": "Compliance check triwulan",      "target": "4x/th", "actual": "" },
+        { "indikator": "Response time legal opinion",    "target": "max 3 hari kerja", "actual": "" }
+      ]
+    },
+    {
+      "slug": "marketing",
+      "nama": "Marketing & Sales",
+      "kpis": [
+        { "indikator": "Lead total",                  "target": "250/bulan",  "actual": "" },
+        { "indikator": "Survey lokasi",               "target": "38/bulan",   "actual": "" },
+        { "indikator": "Closing",                     "target": "6/bulan",    "actual": "" },
+        { "indikator": "Conversion rate",             "target": "min 2.4%",   "actual": "" },
+        { "indikator": "Response time lead baru",     "target": "<30 menit",  "actual": "" }
+      ]
+    },
+    {
+      "slug": "operasional",
+      "nama": "Operasional & Admin",
+      "kpis": [
+        { "indikator": "Pemberkasan selesai",         "target": "7 hari kerja",  "actual": "" },
+        { "indikator": "SP3K keluar",                 "target": "14 hari kerja", "actual": "" },
+        { "indikator": "Akad kredit on-time",         "target": "100%",          "actual": "" },
+        { "indikator": "Berkas error",                "target": "0",             "actual": "" },
+        { "indikator": "Material on-time",            "target": "100%",          "actual": "" },
+        { "indikator": "PO error",                    "target": "0",             "actual": "" }
+      ]
+    },
+    {
+      "slug": "proyek",
+      "nama": "Proyek & Konstruksi",
+      "kpis": [
+        { "indikator": "Proyek selesai on-time",      "target": "100%",          "actual": "" },
+        { "indikator": "QC PASS",                     "target": "100%",          "actual": "" },
+        { "indikator": "Budget variance",             "target": "max 5%",        "actual": "" },
+        { "indikator": "Serah terima on-time",        "target": "100%",          "actual": "" },
+        { "indikator": "Revenue proyek eksternal",    "target": "Rp 15 juta/bulan", "actual": "" }
+      ]
+    },
+    {
+      "slug": "media",
+      "nama": "Media & Konten Kreatif",
+      "kpis": [
+        { "indikator": "Konten published",            "target": "20/bulan",      "actual": "" },
+        { "indikator": "Engagement rate IG",          "target": "min 3%",        "actual": "" },
+        { "indikator": "Lead dari konten",            "target": "50/bulan",      "actual": "" },
+        { "indikator": "Konten viral (>10K views)",   "target": "1/bulan",       "actual": "" }
+      ]
+    }
+  ]
+}

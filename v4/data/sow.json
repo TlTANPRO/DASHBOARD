@@ -1,0 +1,127 @@
+{
+  "_meta": {
+    "source": "data/tim.json (SOW per PIC)",
+    "generated_at": "2026-07-28"
+  },
+  "sow": [
+    { "pic": "Pak Ardian", "items": [
+      "Menetapkan visi, misi, strategi bisnis grup",
+      "Approval akhir semua pengeluaran > Rp 10 juta",
+      "Audit triwulan: profit, cashflow, risiko, SDM",
+      "Keputusan ekspansi (proyek baru, cabang baru)",
+      "Review mingguan dashboard owner (via WA Mada)",
+      "Penandatanganan SHM, AJB, kontrak besar",
+      "Negosiasi dengan bank, investor, mitra strategis"
+    ]},
+    { "pic": "Bu Nisya", "items": [
+      "Urus semua dokumen legal grup (3 PT + Majang Mejeng)",
+      "SHM, AJB, IMB/PBG, perizinan konstruksi",
+      "Kontrak: konsumen, vendor, mitra, karyawan",
+      "Legal opinion untuk setiap keputusan bisnis > Rp 5 juta",
+      "Arsip dokumen (hardcopy + softcopy di Drive)",
+      "Koordinasi dengan notaris, BPN, pengadilan (jika ada sengketa)",
+      "Compliance check UU PDP, UU Cipta Kerja, FLPP regulations"
+    ]},
+    { "pic": "Mada", "items": [
+      "Eksekusi harian seluruh operasional grup",
+      "Manajemen tim 11 personal + delegation",
+      "Briefing pagi (08.00) + laporan sore (16.30)",
+      "Monitoring KPI semua personal via dashboard",
+      "Closing support untuk lead VIP/stuck",
+      "Approval pengeluaran Rp 0–1 juta (operasional rutin)",
+      "Laporan mingguan ke Owner via WA + dashboard",
+      "Backup survey lokasi (saat Riza overload)",
+      "Koordinasi lintas divisi (marketing → legal → project)",
+      "Update Google Sheet harian (data real-time)"
+    ]},
+    { "pic": "Riza", "items": [
+      "Handle lead masuk dari semua channel (IG, FB, TikTok, Web, Walk-in)",
+      "Follow up semua lead sampai closing atau diskualifikasi",
+      "Survey lokasi (cover) + matching lead dengan unit",
+      "Closing call + negosiasi harga, cara bayar, timeline",
+      "Input data lead ke Google Sheet (real-time)",
+      "Koordinasi dengan Novita untuk pemberkasan",
+      "Update CRM setiap ada perubahan status lead",
+      "Briefing content brief ke tim media (Rifki+Reta+Reni)",
+      "Hadiri serah terima sebagai tim marketing"
+    ]},
+    { "pic": "Yudi/Sdek", "items": [
+      "Handle lead walk-in + lead dari acara/pameran",
+      "Maintenance rumah contoh + fasum (fasilitas umum)",
+      "Bantu pelaksanaan proyek di lapangan (Rizal)",
+      "QC pergudangan (cover Amir, back cover QC)",
+      "Pemeliharaan infrastruktur cluster (jalan, lampu, taman)",
+      "Update progress ke Rizal setiap hari",
+      "Input data ke Google Sheet (lead + maintenance log)",
+      "Backup closing Riza (saat overload)",
+      "Hadiri serah terima sebagai tim marketing"
+    ]},
+    { "pic": "Amir", "items": [
+      "Eksekusi proyek internal (Syahfalah) + eksternal (client Majang Mejeng)",
+      "Bantu penjualan rumah proyek (closing support)",
+      "QC pergudangan material + alat",
+      "Survey lokasi (back cover Riza)",
+      "Handle lead referral (back cover Riza untuk lead entry)",
+      "Update progress proyek ke Rizal",
+      "Lapor fee konstruksi eksternal ke Mada",
+      "Hadiri serah terima sebagai tim marketing"
+    ]},
+    { "pic": "Novita", "items": [
+      "Administrasi keuangan harian (cash opname, bon, reimbursement)",
+      "Pemberkasan FLPP konsumen (KTP, KK, NPWP, slip gaji, dsb.)",
+      "Submit SP3K ke bank + follow up analis",
+      "Koordinasi akad kredit dengan bank, konsumen, notaris",
+      "Rekonsiliasi bank mingguan",
+      "Backup survey lokasi (back cover Riza)",
+      "Input data ke Google Sheet (berkas + SP3K tracker)",
+      "Update CRM status berkas konsumen",
+      "Hadiri serah terima sebagai admin bank"
+    ]},
+    { "pic": "Rizal", "items": [
+      "Perencanaan proyek (timeline, budget, material, manpower)",
+      "Pelaksanaan proyek di lapangan",
+      "Manajemen vendor (subkon, supplier material)",
+      "Quality control rumah + fasum",
+      "QC pergudangan (dengan Amir + Yudi)",
+      "Budget proyek + kontrol biaya",
+      "Koordinasi dengan Bu Nisya (legal site) + Novita (progress akad)",
+      "Serah terima (cover, lead)",
+      "Manajemen tim proyek (Amir, Yudi, tukang)",
+      "Update progress real-time ke Sheet"
+    ]},
+    { "pic": "Sinta", "items": [
+      "Beli material sesuai request Rizal",
+      "Manage vendor (database, negosiasi, evaluasi)",
+      "Stok material di gudang (min 50 sak semen, dll)",
+      "PO (Purchase Order) untuk semua pembelian",
+      "Penerimaan material + cek kualitas",
+      "Stock opname mingguan",
+      "Budget purchasing + kontrol biaya",
+      "Update database vendor di Google Sheet"
+    ]},
+    { "pic": "Reni", "items": [
+      "Strategi media internal grup (Majang Mejeng Media)",
+      "Content calendar mingguan/bulanan",
+      "Brief tim kreatif (Rifki + Reta) untuk produksi konten",
+      "Koordinasi dengan Riza untuk content brief dari sisi marketing",
+      "Monitoring engagement IG/TikTok/Web",
+      "Laporan mingguan ke Mada (reach, engagement, lead source)",
+      "Fee tracking (Rp 250.000/closing dari konten mereka)"
+    ]},
+    { "pic": "Rifki", "items": [
+      "Lead produksi konten Majang Mejeng Kreatif",
+      "Script + visual brief untuk Reta",
+      "Editing final konten (video, desain)",
+      "Quality control konten sebelum posting",
+      "Trend research mingguan (IG Reels, TikTok viral)",
+      "Kolaborasi dengan Reni (strategi) + Riza (marketing brief)"
+    ]},
+    { "pic": "Reta", "items": [
+      "Tulis script untuk video, caption, artikel",
+      "Riset topik + trending content",
+      "Copywriting untuk landing page, WA blast",
+      "SEO artikel blog (jika ada)",
+      "Kolaborasi dengan Rifki + Reni"
+    ]}
+  ]
+}
