@@ -1,7 +1,7 @@
 // views/admin.js — Jobdesk harian/mingguan, SP3K tracker, KPI operasional (Novita, Sinta).
 
 import { fetchData } from "../ssot.js";
-import { kpiCard, sectionLabel, dataTable, kanbanBoard, evidenceBanner, toast } from "./_partials.js";
+import { kpiCard, sectionLabel, dataTable, kanbanBoard, evidenceBanner, toast } from "./partials.js";
 import { getCurrentUser } from "../auth.js";
 import { formatPercent } from "../lib/format.js";
 

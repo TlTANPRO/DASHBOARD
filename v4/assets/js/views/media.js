@@ -1,7 +1,7 @@
 // views/media.js — Engagement trend, content calendar, type mix, top performing (Reni, Rifki, Reta).
 
 import { fetchData } from "../ssot.js";
-import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./_partials.js";
+import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
 import { getCurrentUser } from "../auth.js";
 import { formatNumber, formatPercent } from "../lib/format.js";
 import * as charts from "../charts/index.js";

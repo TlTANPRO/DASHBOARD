@@ -2,7 +2,7 @@
 // BEAT-Notion UX: bento grid, 4 scorecards, KPI perusahaan + PIC ranking + personal detail.
 
 import { fetchData } from "../ssot.js";
-import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./_partials.js";
+import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
 import { formatPercent } from "../lib/format.js";
 import { getCurrentUser } from "../auth.js";
 

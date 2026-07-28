@@ -1,7 +1,7 @@
 // views/legal.js — SOW compliance, izin tracker, expiry timeline (Bu Nisya).
 
 import { fetchData } from "../ssot.js";
-import { kpiCard, sectionLabel, dataTable, kanbanBoard, evidenceBanner, toast } from "./_partials.js";
+import { kpiCard, sectionLabel, dataTable, kanbanBoard, evidenceBanner, toast } from "./partials.js";
 import { getCurrentUser } from "../auth.js";
 import { formatDate, formatNumber, formatPercent } from "../lib/format.js";
 

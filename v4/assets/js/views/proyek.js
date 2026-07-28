@@ -1,7 +1,7 @@
 // views/proyek.js — Gantt timeline, budget vs actual, vendor score, QC heatmap (Rizal, Amir).
 
 import { fetchData } from "../ssot.js";
-import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./_partials.js";
+import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
 import { getCurrentUser } from "../auth.js";
 import { formatIDR, formatPercent } from "../lib/format.js";
 import * as charts from "../charts/index.js";

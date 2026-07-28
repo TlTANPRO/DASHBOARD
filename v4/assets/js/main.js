@@ -9,7 +9,7 @@ import { init as initSidebar, setActive } from "./shell/sidebar.js";
 import { init as initTopbar, showLoginModal, hideLoginModal } from "./shell/topbar.js";
 import { init as initPWA } from "./pwa.js";
 import { startPolling } from "./poller.js";
-import { mountGlobalSearch } from "./views/_partials.js";
+import { mountGlobalSearch } from "./views/partials.js";
 
 async function boot() {
   // 1) Fetch all data in parallel (bundled JSON fallback)
