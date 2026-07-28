@@ -277,6 +277,10 @@
   padding-top: 12vh;
   animation: palette-in var(--duration-normal) var(--ease-out-expo);
 }
+/* M12 fix: hidden attr must override display:flex */
+.search-palette[hidden] { display: none; }
+.pwa-prompt[hidden] { display: none; }
+.topbar__search[hidden] { display: none; }
 @keyframes palette-in {
   from { opacity: 0; }
   to { opacity: 1; }
