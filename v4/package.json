@@ -1,18 +1,16 @@
 {
   "name": "dashboard-v4",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "description": "V4 ISOLATED dashboard — beat-Notion UX, 6 views, PWA, Cloudflare Worker proxy",
+  "main": "index.html",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/run.mjs",
+    "test:watch": "node --watch tests/run.mjs"
   },
-  "keywords": [],
+  "keywords": ["dashboard", "syahfalah", "notion", "pwa"],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "mammoth": "^1.12.0"
   }
