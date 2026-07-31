@@ -33,8 +33,7 @@
     { "id": "P9",  "nama": "Rizal",      "divisi": "D4", "peran": "Kepala proyek, timeline konstruksi",       "parent_id": "P1", "channel": "WA" },
     { "id": "P10", "nama": "Sinta",      "divisi": "D5", "peran": "Admin, arsip, Notion entry",               "parent_id": "P9", "channel": "WA" },
     { "id": "P11", "nama": "Reni",       "divisi": "D5", "peran": "Keuangan, AR/AP, payroll",                 "parent_id": "P9", "channel": "WA" },
-    { "id": "P12", "nama": "Rifki",      "divisi": "D5", "peran": "HRD, absensi, kontrak kerja",              "parent_id": "P9", "channel": "WA" },
-    { "id": "P13", "nama": "Reta",       "divisi": "D5", "peran": "Administrasi umum, ATK, logistik",         "parent_id": "P9", "channel": "WA" }
+    { "id": "P12", "nama": "Rifki",      "divisi": "D5", "peran": "HRD, absensi, kontrak kerja",              "parent_id": "P9", "channel": "WA" }
   ],
 
   "program_kerja": {
@@ -74,7 +73,7 @@
   "v6_roadmap": {
     "weeks_total": 16,
     "phases": [
-      { "phase": 1, "weeks": "1-2",   "label": "P0a Blocker Resolution",      "tasks": ["token rotation", "WA gateway decision", "contact harvest"] },
+      { "phase": 1, "weeks": "1-2",   "label": "P0a Blocker Resolution",      "tasks": ["token rotation", "WA gateway decision", "12 PIC contact WA harvest"] },
       { "phase": 2, "weeks": "3-6",   "label": "P0b Foundation",              "tasks": ["schema migration", "import wizard", "RBAC", "audit", "security"] },
       { "phase": 3, "weeks": "7-10",  "label": "P1 AI + Notif",                "tasks": ["worker LLM", "brief pagi/sore", "chat widget", "WA gateway"] },
       { "phase": 4, "weeks": "11-13", "label": "P2 Operational Polish",        "tasks": ["reward tracker", "KPI dashboard", "Notion sync"] },
@@ -85,7 +84,7 @@
   "p0_blockers": [
     { "id": "B1", "desc": "Cloudflare token rotation",                              "owner": "Pak Ardian", "due": "2026-08-02" },
     { "id": "B2", "desc": "WA gateway decision (Business API vs Baileys vs Mustika)","owner": "Pak Ardian", "due": "2026-08-05" },
-    { "id": "B3", "desc": "18 PIC contact WA harvest",                               "owner": "Pak Ardian", "due": "2026-08-08" },
+    { "id": "B3", "desc": "12 PIC contact WA harvest",                               "owner": "Pak Ardian", "due": "2026-08-08" },
     { "id": "B4", "desc": "Notion DB schema final",                                 "owner": "Bu Nisya",  "due": "2026-08-08" }
   ]
 }
