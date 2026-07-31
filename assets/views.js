@@ -163,6 +163,10 @@ Views.pic = async ({ id }) => {
       el('div', { class: 'task-actions' }, [
         el('select', {
           class: 'task-status-select',
+          name: `status-${t.id}`,
+          id: `status-${t.id}`,
+          'aria-label': `Status task ${t.id}`,
+          autocomplete: 'off',
           onchange: async (e) => {
             await API.patchJobdesk(t.id, { status: e.target.value }, 'owner');
             State.invalidate();
@@ -223,16 +227,28 @@ Views.jobdesk = async () => {
 
   const filterBar = el('div', { class: 'filter-bar' }, [
     el('select', {
+      name: 'filter-pic',
+      id: 'filter-pic',
+      'aria-label': 'Filter PIC',
+      autocomplete: 'off',
       onchange: (e) => { filterPic = e.target.value; renderList(); },
     }, [el('option', { value: '' }, 'Semua PIC')].concat(state.pic.map(p =>
       el('option', { value: p.id }, `${p.id} ${p.nama}`)
     ))),
     el('select', {
+      name: 'filter-status',
+      id: 'filter-status',
+      'aria-label': 'Filter status',
+      autocomplete: 'off',
       onchange: (e) => { filterStatus = e.target.value; renderList(); },
     }, ['', 'todo', 'in_progress', 'blocked', 'done', 'cancelled'].map(s =>
       el('option', { value: s }, s || 'Semua status')
     )),
     el('select', {
+      name: 'filter-divisi',
+      id: 'filter-divisi',
+      'aria-label': 'Filter divisi',
+      autocomplete: 'off',
       onchange: (e) => { filterDivisi = e.target.value; renderList(); },
     }, ['', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6'].map(d =>
       el('option', { value: d }, d || 'Semua divisi')
