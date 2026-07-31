@@ -32,5 +32,5 @@
   // Boot
   Router.dispatch();
 
-  console.info('[Syahfalah OS] SPA v1 · localStorage demo mode');
+  console.info('[Syahfalah OS] SPA v1 booted');
 })();

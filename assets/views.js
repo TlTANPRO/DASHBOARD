@@ -164,7 +164,7 @@ Views.pic = async ({ id }) => {
         el('select', {
           class: 'task-status-select',
           onchange: async (e) => {
-            await API.patchJobdesk(t.id, { status: e.target.value }, 'demo-user');
+            await API.patchJobdesk(t.id, { status: e.target.value }, 'owner');
             State.invalidate();
             Router.dispatch();
           },
@@ -251,7 +251,7 @@ Views.audit = async () => {
   const root = document.getElementById('view');
   root.appendChild(el('section', { class: 'view-hero' }, [
     el('h1', { class: 'view-title' }, 'Audit log'),
-    el('p', { class: 'view-lede' }, `${state.audit.length} entries · newest first. V1 demo: persistence localStorage.`),
+    el('p', { class: 'view-lede' }, `${state.audit.length} entries · newest first.`),
   ]));
 
   const list = el('ul', { class: 'audit-list' }, state.audit.map(a =>

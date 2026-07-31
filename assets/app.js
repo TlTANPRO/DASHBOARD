@@ -56,7 +56,7 @@ const API = (() => {
     return jobdesk;
   };
 
-  const patchJobdesk = async (id, patch, actor = 'system') => {
+  const patchJobdesk = async (id, patch, actor = 'owner') => {
     const jobdesk = await getJobdesk();
     const idx = jobdesk.findIndex(j => j.id === id);
     if (idx === -1) throw new Error(`jobdesk ${id} not found`);
@@ -68,7 +68,7 @@ const API = (() => {
     return after;
   };
 
-  const createJobdesk = async (data, actor = 'system') => {
+  const createJobdesk = async (data, actor = 'owner') => {
     const jobdesk = await getJobdesk();
     const id = 'J' + String(jobdesk.length + 1).padStart(4, '0');
     const now = new Date().toISOString();
