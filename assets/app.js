@@ -132,17 +132,22 @@ const Router = (() => {
 
   const dispatch = async () => {
     const raw = window.location.pathname;
-    // Strip base path /DASHBOARD (or any base path with leading slash + segment)
-    // Treat root "/" as home
-    let path = raw;
+    // First-load rewrite: 404.html redirects ?r=/pic/P2 → parse and pushState.
+    const qs = new URLSearchParams(window.location.search);
+    const rewrite = qs.get('r');
+    if (rewrite !== null) {
+      // Drop query, push real path, then dispatch
+      const target = rewrite.startsWith('/') ? rewrite : '/' + rewrite;
+      const cleanUrl = basename + target;
+      window.history.replaceState({}, '', cleanUrl);
+      return dispatch();
+    }
     // Match /DASHBOARD/path or /DASHBOARD
     const m = raw.match(/^\/[^\/]+(\/.*)?$/);
     const tail = (m && m[1]) ? m[1] : (raw === '/' || raw === '/DASHBOARD' || raw === '/DASHBOARD/') ? '/' : raw;
-    if (tail === '/' || tail === '') path = '/home';
-    else path = tail;
-    const fullPath = path;
+    const path = (tail === '/' || tail === '') ? '/home' : tail;
     for (const r of routes) {
-      const mm = fullPath.match(r.regex);
+      const mm = path.match(r.regex);
       if (mm) {
         const params = {};
         r.keys.forEach((k, i) => { params[k] = mm[i + 1]; });
