@@ -1,0 +1,14 @@
+[
+  { "id": "P1",  "nama": "Pak Ardian", "divisi": "D1", "peran": "Owner, pengambil keputusan akhir",          "parent_id": null,  "channel": "WA langsung", "status": "active", "joined_at": "2024-01-01", "is_owner": true },
+  { "id": "P2",  "nama": "Bu Nisya",   "divisi": "D2", "peran": "Drafting kontrak, perizinan",              "parent_id": "P1",  "channel": "WA + email", "status": "active", "joined_at": "2024-01-15", "is_owner": false },
+  { "id": "P3",  "nama": "Mada",       "divisi": "D3", "peran": "Kepala kantor, lead gen offline, event",   "parent_id": "P1",  "channel": "WA",          "status": "active", "joined_at": "2024-02-01", "is_owner": false },
+  { "id": "P4",  "nama": "Riza",       "divisi": "D3", "peran": "Sales rumah, closing KPR, showroom",       "parent_id": "P3",  "channel": "WA",          "status": "active", "joined_at": "2024-03-01", "is_owner": false },
+  { "id": "P5",  "nama": "Yudi",       "divisi": "D3", "peran": "Sales counter showroom",                   "parent_id": "P3",  "channel": "WA",          "status": "active", "joined_at": "2024-03-15", "is_owner": false },
+  { "id": "P6",  "nama": "Sdek",       "divisi": "D5", "peran": "Maintenance, perbaikan, handover",          "parent_id": "P9",  "channel": "WA",          "status": "active", "joined_at": "2024-04-01", "is_owner": false },
+  { "id": "P7",  "nama": "Amir",       "divisi": "D5", "peran": "Marketing + operasional (dual-role)",      "parent_id": "P3",  "channel": "WA",          "status": "active", "joined_at": "2024-04-15", "is_owner": false, "secondary_parent": "P9" },
+  { "id": "P8",  "nama": "Novita",     "divisi": "D6", "peran": "Desain, feed IG, story",                   "parent_id": "P3",  "channel": "WA",          "status": "active", "joined_at": "2024-05-01", "is_owner": false },
+  { "id": "P9",  "nama": "Rizal",      "divisi": "D4", "peran": "Kepala proyek, timeline konstruksi",       "parent_id": "P1",  "channel": "WA",          "status": "active", "joined_at": "2024-05-15", "is_owner": false },
+  { "id": "P10", "nama": "Sinta",      "divisi": "D5", "peran": "Admin, arsip, Notion entry",               "parent_id": "P9",  "channel": "WA",          "status": "active", "joined_at": "2024-06-01", "is_owner": false },
+  { "id": "P11", "nama": "Reni",       "divisi": "D5", "peran": "Keuangan, AR/AP, payroll",                 "parent_id": "P9",  "channel": "WA",          "status": "active", "joined_at": "2024-06-15", "is_owner": false },
+  { "id": "P12", "nama": "Rifki",      "divisi": "D5", "peran": "HRD, absensi, kontrak kerja",              "parent_id": "P9",  "channel": "WA",          "status": "active", "joined_at": "2024-07-01", "is_owner": false }
+]
