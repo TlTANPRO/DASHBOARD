@@ -1,0 +1,91 @@
+{
+  "$schema": "https://syahfalah.os/v6-snapshot.schema.json",
+  "version": "6.0-stub",
+  "generated_at": "2026-07-31T00:00:00Z",
+  "status": "STUB - PRE-IMPLEMENTATION",
+  "ssot_source": "PROGRAM KERJA-1.docx (10 BAB, 57 tabel)",
+
+  "company": {
+    "name": "PT Syahfalah Global + Lembayung Aquila / Majang Mejeng Group",
+    "employees": 12,
+    "divisions": 6,
+    "owner": "Pak Ardian"
+  },
+
+  "divisi": [
+    { "kode": "D1", "nama": "Owner", "pic_utama": "Pak Ardian", "fokus": "Keputusan strategis, lintas divisi, signing" },
+    { "kode": "D2", "nama": "Legal", "pic_utama": "Bu Nisya", "fokus": "Kontrak, perizinan, sengketa" },
+    { "kode": "D3", "nama": "Marketing", "pic_utama": "Mada", "fokus": "Lead gen, closing, posting sosmed" },
+    { "kode": "D4", "nama": "Proyek", "pic_utama": "Rizal", "fokus": "Pembangunan, handover, mutu konstruksi" },
+    { "kode": "D5", "nama": "Operasional", "pic_utama": "Rizal", "fokus": "Admin, keuangan, maintenance, HRD" },
+    { "kode": "D6", "nama": "Media", "pic_utama": "Novita", "fokus": "Konten sosmed, visual, event" }
+  ],
+
+  "pic_roster": [
+    { "id": "P1",  "nama": "Pak Ardian", "divisi": "D1", "peran": "Owner, pengambil keputusan akhir",          "parent_id": null, "channel": "WA langsung" },
+    { "id": "P2",  "nama": "Bu Nisya",   "divisi": "D2", "peran": "Drafting kontrak, perizinan",              "parent_id": "P1", "channel": "WA + email" },
+    { "id": "P3",  "nama": "Mada",       "divisi": "D3", "peran": "Kepala kantor, lead gen offline, event",   "parent_id": "P1", "channel": "WA" },
+    { "id": "P4",  "nama": "Riza",       "divisi": "D3", "peran": "Sales rumah, closing KPR, showroom",       "parent_id": "P3", "channel": "WA" },
+    { "id": "P5",  "nama": "Yudi",       "divisi": "D3", "peran": "Sales counter showroom",                   "parent_id": "P3", "channel": "WA" },
+    { "id": "P6",  "nama": "Sdek",       "divisi": "D5", "peran": "Maintenance, perbaikan, handover",          "parent_id": "P9", "channel": "WA" },
+    { "id": "P7",  "nama": "Amir",       "divisi": "D5", "peran": "Marketing + operasional (dual-role)",      "parent_id": "P3", "channel": "WA", "secondary_parent": "P9" },
+    { "id": "P8",  "nama": "Novita",     "divisi": "D6", "peran": "Desain, feed IG, story",                   "parent_id": "P3", "channel": "WA" },
+    { "id": "P9",  "nama": "Rizal",      "divisi": "D4", "peran": "Kepala proyek, timeline konstruksi",       "parent_id": "P1", "channel": "WA" },
+    { "id": "P10", "nama": "Sinta",      "divisi": "D5", "peran": "Admin, arsip, Notion entry",               "parent_id": "P9", "channel": "WA" },
+    { "id": "P11", "nama": "Reni",       "divisi": "D5", "peran": "Keuangan, AR/AP, payroll",                 "parent_id": "P9", "channel": "WA" },
+    { "id": "P12", "nama": "Rifki",      "divisi": "D5", "peran": "HRD, absensi, kontrak kerja",              "parent_id": "P9", "channel": "WA" },
+    { "id": "P13", "nama": "Reta",       "divisi": "D5", "peran": "Administrasi umum, ATK, logistik",         "parent_id": "P9", "channel": "WA" }
+  ],
+
+  "program_kerja": {
+    "source_file": "PROGRAM KERJA-1.docx",
+    "bab_count": 10,
+    "table_count": 57,
+    "bab_list": [
+      { "bab": 1,  "judul": "Pendahuluan & Latar Belakang",                "tables": 2 },
+      { "bab": 2,  "judul": "Struktur Organisasi & Jobdesk",                "tables": 8 },
+      { "bab": 3,  "judul": "Program Kerja Divisi Marketing",              "tables": 7 },
+      { "bab": 4,  "judul": "Program Kerja Divisi Operasional",            "tables": 6 },
+      { "bab": 5,  "judul": "KPI & Target Per PIC",                         "tables": 5 },
+      { "bab": 6,  "judul": "SOP Operasional Harian",                       "tables": 6 },
+      { "bab": 7,  "judul": "Standar Kualitas & SLA",                       "tables": 4 },
+      { "bab": 8,  "judul": "Reward & Punishment",                          "tables": 6 },
+      { "bab": 9,  "judul": "RACI Matrix & Approval Workflow",              "tables": 7 },
+      { "bab": 10, "judul": "Penutup & Tanda Tangan",                       "tables": 6 }
+    ]
+  },
+
+  "audit_baseline": {
+    "v4_score": "7.25/10 (B+)",
+    "v5_template_score": "3.2/10",
+    "v6_target_score": "10/10",
+    "audit_findings_critical": [
+      "9 PIC hilang di V4 jobdesk.json",
+      "PIN default 0000 flat (no auth)",
+      "Reward table mismatch (V4: 4+4, PROGRAM KERJA: 6+12)",
+      "Notion DBs semua kosong",
+      "Tidak ada reporting line / parent_id",
+      "Tidak ada audit trail",
+      "Tidak ada reminder otomatis",
+      "Tidak ada real-time update"
+    ]
+  },
+
+  "v6_roadmap": {
+    "weeks_total": 16,
+    "phases": [
+      { "phase": 1, "weeks": "1-2",   "label": "P0a Blocker Resolution",      "tasks": ["token rotation", "WA gateway decision", "contact harvest"] },
+      { "phase": 2, "weeks": "3-6",   "label": "P0b Foundation",              "tasks": ["schema migration", "import wizard", "RBAC", "audit", "security"] },
+      { "phase": 3, "weeks": "7-10",  "label": "P1 AI + Notif",                "tasks": ["worker LLM", "brief pagi/sore", "chat widget", "WA gateway"] },
+      { "phase": 4, "weeks": "11-13", "label": "P2 Operational Polish",        "tasks": ["reward tracker", "KPI dashboard", "Notion sync"] },
+      { "phase": 5, "weeks": "14-16", "label": "P3 Stretch + Hardening",      "tasks": ["offline mode", "performance", "monitoring"] }
+    ]
+  },
+
+  "p0_blockers": [
+    { "id": "B1", "desc": "Cloudflare token rotation",                              "owner": "Pak Ardian", "due": "2026-08-02" },
+    { "id": "B2", "desc": "WA gateway decision (Business API vs Baileys vs Mustika)","owner": "Pak Ardian", "due": "2026-08-05" },
+    { "id": "B3", "desc": "18 PIC contact WA harvest",                               "owner": "Pak Ardian", "due": "2026-08-08" },
+    { "id": "B4", "desc": "Notion DB schema final",                                 "owner": "Bu Nisya",  "due": "2026-08-08" }
+  ]
+}

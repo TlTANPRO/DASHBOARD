@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syahfalah OS V6 — Stub</title>
+  <meta name="description" content="Syahfalah OS V6 stub landing. Pre-implementation review.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="./assets/v6-stub.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Langsung ke konten</a>
+
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="brand-mark">SY</span>
+      <span class="brand-text">Syahfalah OS <span class="brand-version">V6</span></span>
+    </div>
+    <div class="topbar__meta">
+      <span class="badge badge-stub">STUB</span>
+      <span class="badge badge-mig">Migration target</span>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Syahfalah OS · 31 Juli 2026</p>
+        <h1 id="hero-h" class="hero__title">Operating system untuk 2 PT, 12 PIC, 6 divisi.</h1>
+        <p class="hero__lede">Bukan dashboard pajangan. Live jobdesk mirror PROGRAM KERJA, AI push notifikasi personal, audit trail setiap perubahan.</p>
+        <div class="hero__cta">
+          <a class="btn btn-primary" href="#struktur">Lihat struktur</a>
+          <a class="btn btn-ghost" href="#roadmap">Roadmap 16 minggu</a>
+        </div>
+        <p class="hero__note">Halaman ini stub statis. Tidak ada live data, tidak ada auth, tidak ada AI. Tujuan: review rancangan sebelum implement.</p>
+      </div>
+      <div class="hero__counters" aria-label="Ringkasan perusahaan">
+        <div class="counter">
+          <div class="counter__value" data-counter="employees">12</div>
+          <div class="counter__label">PIC</div>
+        </div>
+        <div class="counter">
+          <div class="counter__value" data-counter="divisions">6</div>
+          <div class="counter__label">Divisi</div>
+        </div>
+        <div class="counter">
+          <div class="counter__value" data-counter="bab">10</div>
+          <div class="counter__label">BAB</div>
+        </div>
+        <div class="counter">
+          <div class="counter__value" data-counter="tables">57</div>
+          <div class="counter__label">Tabel SSOT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORG CHART -->
+    <section id="struktur" class="section" aria-labelledby="struktur-h">
+      <p class="section__num">01</p>
+      <h2 id="struktur-h" class="section__title">Struktur organisasi</h2>
+      <p class="section__lede">12 PIC. Pohon COMMAND tegas, bukan flat. Amir dual-role resmi (D3+D5), Yudi pure D3, Sdek D5.</p>
+
+      <div class="org" role="tree">
+        <!-- Owner -->
+        <div class="org__row org__row--top">
+          <article class="org-card org-card--owner" role="treeitem" aria-label="Pak Ardian Owner">
+            <span class="org-card__id">P1</span>
+            <span class="org-card__name">Pak Ardian</span>
+            <span class="org-card__divisi">D1 Owner</span>
+          </article>
+        </div>
+        <!-- Direct reports -->
+        <div class="org__row">
+          <article class="org-card" role="treeitem">
+            <span class="org-card__id">P2</span>
+            <span class="org-card__name">Bu Nisya</span>
+            <span class="org-card__divisi">D2 Legal</span>
+          </article>
+          <article class="org-card" role="treeitem">
+            <span class="org-card__id">P3</span>
+            <span class="org-card__name">Mada</span>
+            <span class="org-card__divisi">D3 Marketing (kepala)</span>
+          </article>
+          <article class="org-card" role="treeitem">
+            <span class="org-card__id">P9</span>
+            <span class="org-card__name">Rizal</span>
+            <span class="org-card__divisi">D4 Proyek (kepala)</span>
+          </article>
+        </div>
+        <!-- L3 -->
+        <div class="org__row">
+          <article class="org-card" role="treeitem"><span class="org-card__id">P4</span><span class="org-card__name">Riza</span><span class="org-card__divisi">D3 Sales</span></article>
+          <article class="org-card" role="treeitem"><span class="org-card__id">P5</span><span class="org-card__name">Yudi</span><span class="org-card__divisi">D3 Sales counter</span></article>
+          <article class="org-card org-card--dual" role="treeitem" title="Dual-role: marketing + operasional"><span class="org-card__id">P7</span><span class="org-card__name">Amir</span><span class="org-card__divisi">D3+D5 dual</span></article>
+          <article class="org-card" role="treeitem"><span class="org-card__id">P8</span><span class="org-card__name">Novita</span><span class="org-card__divisi">D6 Media</span></article>
+          <article class="org-card" role="treeitem"><span class="org-card__id">P6</span><span class="org-card__name">Sdek</span><span class="org-card__divisi">D5 Maintenance</span></article>
+          <article class="org-card" role="treeitem"><span class="org-card__id">P10</span><span class="org-card__name">Sinta</span><span class="org-card__divisi">D5 Admin</span></article>
+          <article class="org-card" role="treeitem"><span class="org-card__id">P11</span><span class="org-card__name">Reni</span><span class="org-card__divisi">D5 Keuangan</span></article>
+          <article class="org-card" role="treeitem"><span class="org-card__id">P12</span><span class="org-card__name">Rifki</span><span class="org-card__divisi">D5 HRD</span></article>
+          <article class="org-card" role="treeitem"><span class="org-card__id">P13</span><span class="org-card__name">Reta</span><span class="org-card__divisi">D5 Logistik</span></article>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span class="legend__item"><span class="dot dot--owner"></span>Top</span>
+        <span class="legend__item"><span class="dot dot--dual"></span>Dual-role resmi</span>
+        <span class="legend__item"><span class="dot"></span>Single role</span>
+      </div>
+    </section>
+
+    <!-- PROGRAM KERJA -->
+    <section class="section" aria-labelledby="prog-h">
+      <p class="section__num">02</p>
+      <h2 id="prog-h" class="section__title">SSOT: PROGRAM KERJA</h2>
+      <p class="section__lede">10 BAB, 57 tabel. V6 mirror persis struktur ini. Setiap cell operasional = task di jobdesk.</p>
+      <ol class="bab-list">
+        <li><strong>BAB 1</strong> · Pendahuluan &amp; Latar Belakang <span class="bab-meta">2 tabel</span></li>
+        <li><strong>BAB 2</strong> · Struktur Organisasi &amp; Jobdesk <span class="bab-meta">8 tabel</span></li>
+        <li><strong>BAB 3</strong> · Program Kerja Divisi Marketing <span class="bab-meta">7 tabel</span></li>
+        <li><strong>BAB 4</strong> · Program Kerja Divisi Operasional <span class="bab-meta">6 tabel</span></li>
+        <li><strong>BAB 5</strong> · KPI &amp; Target Per PIC <span class="bab-meta">5 tabel</span></li>
+        <li><strong>BAB 6</strong> · SOP Operasional Harian <span class="bab-meta">6 tabel</span></li>
+        <li><strong>BAB 7</strong> · Standar Kualitas &amp; SLA <span class="bab-meta">4 tabel</span></li>
+        <li><strong>BAB 8</strong> · Reward &amp; Punishment <span class="bab-meta">6 tabel · 6 reward + 12 punishment</span></li>
+        <li><strong>BAB 9</strong> · RACI Matrix &amp; Approval Workflow <span class="bab-meta">7 tabel</span></li>
+        <li><strong>BAB 10</strong> · Penutup &amp; Tanda Tangan <span class="bab-meta">6 tabel</span></li>
+      </ol>
+    </section>
+
+    <!-- AUDIT -->
+    <section class="section" aria-labelledby="audit-h">
+      <p class="section__num">03</p>
+      <h2 id="audit-h" class="section__title">Audit baseline</h2>
+      <p class="section__lede">Sebelum V6 dibangun, audit apa yang gagal di versi sebelumnya.</p>
+      <div class="audit-grid">
+        <article class="audit-card audit-card--fail">
+          <p class="audit-card__score">7.25/10</p>
+          <p class="audit-card__label">V4 dashboard</p>
+          <p class="audit-card__desc">Template sudah bagus, semua actual/evidence kosong.</p>
+        </article>
+        <article class="audit-card audit-card--fail">
+          <p class="audit-card__score">3.2/10</p>
+          <p class="audit-card__label">V5 template root</p>
+          <p class="audit-card__desc">8 section anchor, semua "Memuat…" panels, data hardcoded.</p>
+        </article>
+        <article class="audit-card audit-card--goal">
+          <p class="audit-card__score">10/10</p>
+          <p class="audit-card__label">V6 target</p>
+          <p class="audit-card__desc">Live data, audit trail, AI push, RBAC, real-time.</p>
+        </article>
+      </div>
+      <h3 class="sub-h">Findings Kritis</h3>
+      <ul class="finding-list">
+        <li>9 PIC hilang di V4 jobdesk.json (Yudi, Sdek, Amir, Novita, Rizal, Sinta, Reni, Rifki, Reta invisible).</li>
+        <li>PIN default 0000 flat untuk seluruh karyawan = no auth.</li>
+        <li>Reward table mismatch: V4 = 4+4 jenis, PROGRAM KERJA BAB 8 = 6 reward + 12 punishment.</li>
+        <li>Notion DBs semua kosong (per memory project-buku-mgt-dashboard-kacau).</li>
+        <li>Tidak ada reporting line / parent_id → command chain putus.</li>
+        <li>Tidak ada audit trail perubahan status.</li>
+        <li>Tidak ada reminder otomatis, karyawan harus buka manual.</li>
+        <li>Tidak ada real-time update, data static.</li>
+      </ul>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="section" aria-labelledby="road-h">
+      <p class="section__num">04</p>
+      <h2 id="road-h" class="section__title">Roadmap 16 minggu</h2>
+      <p class="section__lede">5 fase. P0a blocker dulu, baru P0b foundation, lalu P1 AI + notif, P2 polish, P3 hardening.</p>
+      <ol class="phase-list">
+        <li class="phase">
+          <p class="phase__num">Fase 1</p>
+          <p class="phase__weeks">Minggu 1-2</p>
+          <p class="phase__label">P0a Blocker Resolution</p>
+          <ul class="phase__tasks"><li>Token rotation Cloudflare</li><li>WA gateway decision</li><li>18 PIC contact harvest</li></ul>
+        </li>
+        <li class="phase">
+          <p class="phase__num">Fase 2</p>
+          <p class="phase__weeks">Minggu 3-6</p>
+          <p class="phase__label">P0b Foundation</p>
+          <ul class="phase__tasks"><li>Schema migration V6</li><li>Import wizard DOCX</li><li>RBAC + audit trigger</li><li>Security baseline</li></ul>
+        </li>
+        <li class="phase">
+          <p class="phase__num">Fase 3</p>
+          <p class="phase__weeks">Minggu 7-10</p>
+          <p class="phase__label">P1 AI + Notif</p>
+          <ul class="phase__tasks"><li>Worker LLM (proxy isolated)</li><li>Brief pagi 07:00 + sore 17:00</li><li>Chat widget on-demand</li><li>WA gateway integration</li></ul>
+        </li>
+        <li class="phase">
+          <p class="phase__num">Fase 4</p>
+          <p class="phase__weeks">Minggu 11-13</p>
+          <p class="phase__label">P2 Operational Polish</p>
+          <ul class="phase__tasks"><li>Reward tracker BAB 8</li><li>KPI dashboard BAB 5</li><li>Notion sync one-way</li></ul>
+        </li>
+        <li class="phase">
+          <p class="phase__num">Fase 5</p>
+          <p class="phase__weeks">Minggu 14-16</p>
+          <p class="phase__label">P3 Stretch + Hardening</p>
+          <ul class="phase__tasks"><li>Offline mode + queue</li><li>Performance budget</li><li>Monitoring + alerting</li></ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- BLOCKERS -->
+    <section class="section" aria-labelledby="block-h">
+      <p class="section__num">05</p>
+      <h2 id="block-h" class="section__title">P0 blockers · butuh keputusan</h2>
+      <p class="section__lede">4 blocker harus selesai sebelum Fase 1.</p>
+      <table class="blocker-table">
+        <thead><tr><th>ID</th><th>Blocker</th><th>Owner</th><th>Due</th></tr></thead>
+        <tbody>
+          <tr><td>B1</td><td>Cloudflare token rotation</td><td>Pak Ardian</td><td>2 Agu 2026</td></tr>
+          <tr><td>B2</td><td>WA gateway decision</td><td>Pak Ardian</td><td>5 Agu 2026</td></tr>
+          <tr><td>B3</td><td>18 PIC contact WA harvest</td><td>Pak Ardian</td><td>8 Agu 2026</td></tr>
+          <tr><td>B4</td><td>Notion DB schema final</td><td>Bu Nisya</td><td>8 Agu 2026</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- NEXT -->
+    <section class="section section--cta" aria-labelledby="next-h">
+      <h2 id="next-h" class="section__title">Apa下一步</h2>
+      <p>Halaman stub ini baru preview. Real implementation butuh keputusan 4 blocker di atas. Setelah B1-B4 clear, mulai Fase 1 implementasi.</p>
+      <p>Sementara, dokumen lengkap ada di <a href="https://github.com/TlTANPRO/DASHBOARD">repo dashboard</a> dan PRD markdown.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Syahfalah OS V6 stub · 31 Juli 2026 · SSOT: PROGRAM KERJA-1.docx · <a href="../../index.html">V5.2 root (legacy)</a> · <a href="../../v4/">V4 (legacy)</a></p>
+  </footer>
+
+  <script src="./assets/v6-stub.js" defer></script>
+</body>
+</html>
