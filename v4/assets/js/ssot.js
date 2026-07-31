@@ -13,6 +13,14 @@ const DATA_FILES = [
   "jobdesk.json",
   "reward.json",
   "schema-map.json",
+  "leads.json",
+  "sp3k.json",
+  "budget.json",
+  "vendors.json",
+  "content.json",
+  "calendar.json",
+  "audit-trail.json",
+  "reference.json",
 ];
 
 const cache = new Map(); // filename -> { data, ts }

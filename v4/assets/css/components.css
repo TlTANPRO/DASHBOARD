@@ -621,12 +621,12 @@
   flex-direction: column;
   gap: var(--space-2);
   box-shadow: var(--shadow-xs);
-  transition: transform var(--duration-fast) var(--ease-out-expo),
-              box-shadow var(--duration-fast) var(--ease-out-expo);
+  transition: box-shadow var(--duration-fast) var(--ease-out-expo),
+              border-color var(--duration-fast) var(--ease-out-expo);
 }
 .bento-card:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
+  border-color: var(--color-border-strong);
 }
 .bento-eyebrow {
   font-size: var(--text-xs);
@@ -654,5 +654,369 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bento-card:hover { transform: none; }
+  .bento-card:hover { box-shadow: var(--shadow-xs); border-color: var(--color-border); }
 }
+
+/* ============================================================
+ * Rank badge — replaces emoji medals (🥇🥈🥉). minimalist-ui ban.
+ * 01/02/03 with hue-bound accent ring per rank.
+ * ============================================================ */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+}
+.rank-badge--gold   { color: var(--color-gold); border-color: var(--color-gold); }
+.rank-badge--silver { color: var(--color-text-muted); border-color: var(--color-border-strong); }
+.rank-badge--bronze { color: oklch(60% 0.16 50); border-color: oklch(60% 0.16 50); }
+.rank-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+.rank-row__sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+ * Utility classes — replace inline style.cssText sites
+ * Pattern: .flex-N (1..12 column span), .gap-N, .p-N, .mt-N, .mb-N, .flex-row/col/wrap, .grow-1
+ * N maps to --space-N token (4px base).
+ * ============================================================ */
+.u-flex-row    { display: flex; flex-direction: row; align-items: center; }
+.u-flex-col    { display: flex; flex-direction: column; }
+.u-flex-wrap   { flex-wrap: wrap; }
+.u-flex-1      { flex: 1; }
+.u-grow        { flex-grow: 1; }
+.u-self-start  { align-self: flex-start; }
+.u-self-center { align-self: center; }
+.u-self-end    { align-self: flex-end; }
+.u-justify-between { justify-content: space-between; }
+.u-justify-end      { justify-content: flex-end; }
+.u-align-center     { align-items: center; }
+.u-align-end        { align-items: flex-end; }
+.u-grid-auto { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.u-gap-1  { gap: var(--space-1); }
+.u-gap-2  { gap: var(--space-2); }
+.u-gap-3  { gap: var(--space-3); }
+.u-gap-4  { gap: var(--space-4); }
+.u-gap-5  { gap: var(--space-5); }
+.u-gap-6  { gap: var(--space-6); }
+
+.u-mt-1  { margin-top: var(--space-1); }
+.u-mt-2  { margin-top: var(--space-2); }
+.u-mt-3  { margin-top: var(--space-3); }
+.u-mt-4  { margin-top: var(--space-4); }
+.u-mt-5  { margin-top: var(--space-5); }
+.u-mt-6  { margin-top: var(--space-6); }
+.u-mt-8  { margin-top: var(--space-8); }
+.u-mb-2  { margin-bottom: var(--space-2); }
+.u-mb-4  { margin-bottom: var(--space-4); }
+
+.u-p-2   { padding: var(--space-2); }
+.u-p-3   { padding: var(--space-3); }
+.u-p-4   { padding: var(--space-4); }
+.u-p-5   { padding: var(--space-5); }
+.u-px-3  { padding-left: var(--space-3); padding-right: var(--space-3); }
+
+.u-w-full { width: 100%; }
+.u-text-muted  { color: var(--color-text-muted); }
+.u-text-subtle { color: var(--color-text-subtle); }
+.u-text-sm     { font-size: var(--text-sm); }
+.u-text-xs     { font-size: var(--text-xs); }
+.u-text-center { text-align: center; }
+.u-mono        { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.u-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================
+ * Shortcut help dialog (keyboard.js)
+ * ============================================================ */
+.shortcut-help {
+  position: fixed;
+  inset: 0;
+  background: oklch(0% 0 0 / 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  backdrop-filter: blur(8px);
+}
+.shortcut-help.is-open { display: flex; }
+.shortcut-help__panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  max-width: 480px;
+  width: 90vw;
+  box-shadow: var(--shadow-lg);
+}
+.shortcut-help__panel h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+}
+.shortcut-help__list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+}
+.shortcut-help__list kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-bottom-width: 2px;
+  border-radius: var(--radius-sm);
+  padding: 2px var(--space-2);
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+  justify-self: end;
+}
+.shortcut-help__list dt {
+  display: contents;
+}
+.shortcut-help__hint {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.shortcut-help__hint kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1px var(--space-1);
+}
+
+/* ============================================================
+ * Chart primitives (lib/charts.js)
+ * ============================================================ */
+.chart-svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+ * Utility classes (replaces style.cssText in view files)
+ * ============================================================ */
+.u-flex-row { display: flex; flex-direction: row; }
+.u-flex-col { display: flex; flex-direction: column; }
+.u-flex-wrap { flex-wrap: wrap; }
+.u-flex-1 { flex: 1; min-width: 0; }
+.u-flex-auto { flex: 0 0 auto; }
+.u-flex { display: flex; }
+.u-grid { display: grid; }
+.u-grow { flex-grow: 1; }
+.u-self-start { align-self: flex-start; }
+.u-self-center { align-self: center; }
+.u-self-end { align-self: flex-end; }
+.u-justify-between { justify-content: space-between; }
+.u-justify-end { justify-content: flex-end; }
+.u-justify-center { justify-content: center; }
+.u-align-center { align-items: center; }
+.u-align-end { align-items: flex-end; }
+.u-gap-1 { gap: var(--space-1); }
+.u-gap-2 { gap: var(--space-2); }
+.u-gap-3 { gap: var(--space-3); }
+.u-gap-4 { gap: var(--space-4); }
+.u-gap-5 { gap: var(--space-5); }
+.u-gap-6 { gap: var(--space-6); }
+.u-mt-1 { margin-top: var(--space-1); }
+.u-mt-2 { margin-top: var(--space-2); }
+.u-mt-3 { margin-top: var(--space-3); }
+.u-mt-4 { margin-top: var(--space-4); }
+.u-mt-5 { margin-top: var(--space-5); }
+.u-mt-6 { margin-top: var(--space-6); }
+.u-mt-7 { margin-top: var(--space-7); }
+.u-mt-8 { margin-top: var(--space-8); }
+.u-p-2 { padding: var(--space-2); }
+.u-p-3 { padding: var(--space-3); }
+.u-p-4 { padding: var(--space-4); }
+.u-p-5 { padding: var(--space-5); }
+.u-px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
+.u-text-muted { color: var(--color-text-muted); }
+.u-text-subtle { color: var(--color-text-subtle); }
+.u-text-sm { font-size: var(--text-sm); }
+.u-text-xs { font-size: var(--text-xs); }
+.u-text-center { text-align: center; }
+.u-text-right { text-align: right; }
+.u-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.u-truncate { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.u-w-full { width: 100%; }
+.u-border-bottom-transparent { border-bottom-color: transparent; }
+.grid-auto-220 { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.grid-auto-240 { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.grid-auto-280 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+/* ============================================================
+ * Extras (V5.0 reference blocks) — pricing card, sifat list, glosarium
+ * ============================================================ */
+.rank-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.pricing-card {
+  padding: var(--space-5);
+  border-top: 3px solid var(--color-accent);
+}
+.pricing-tier {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+.pricing-sub {
+  margin-bottom: var(--space-4);
+}
+.pricing-fee {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+}
+.pricing-resp {
+  line-height: var(--leading-relaxed);
+}
+.sifat-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.sifat-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.sifat-num {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.sifat-name {
+  display: block;
+  font-size: var(--text-base);
+  margin-bottom: var(--space-1);
+}
+.sifat-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+.glosarium-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+.glosarium-item {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+.glosarium-term {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+.glosarium-def {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: var(--leading-snug);
+}
+
+/* ============================================================
+ * Boot fatal (replaces inline style.cssText fallback)
+ * ============================================================ */
+.boot-fatal {
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  padding: var(--space-5);
+  background: var(--color-error-soft);
+  color: var(--color-error);
+  border-radius: var(--radius-md);
+  margin: var(--space-5);
+}
+
+/* ============================================================
+ * Keyboard shortcut help palette
+ * ============================================================ */
+.shortcut-help {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.shortcut-help__panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  max-width: 480px;
+  width: 90vw;
+  box-shadow: var(--shadow-xl);
+}
+.shortcut-help__title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+.shortcut-help__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.shortcut-help__list kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1px var(--space-1);
+}
+.shortcut-help__hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-4);
+}
+
+

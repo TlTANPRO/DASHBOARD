@@ -1,0 +1,5009 @@
+{
+  "_meta": {
+    "generated_at": "2026-07-29",
+    "count": 200,
+    "note": "200 leads CRM across 7 pipeline stages + 3 marketing PICs"
+  },
+  "leads": [
+    {
+      "id": "LEAD-0001",
+      "name": "Budi Santoso",
+      "phone": "081287544022",
+      "source": "Marketplace",
+      "stage": "Lead",
+      "value": 425000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-31",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-10",
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-05-29",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-31",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0002",
+      "name": "Siti Aminah",
+      "phone": "081246425196",
+      "source": "TikTok",
+      "stage": "Qualified",
+      "value": 850000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-07-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-16",
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 70,
+      "history": [
+        {
+          "date": "2026-06-28",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-08",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0003",
+      "name": "Andi Wijaya",
+      "phone": "081244330954",
+      "source": "Website",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-05-03",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-16",
+      "notes": "Inquiry via Website, interest on type 45",
+      "score": 29,
+      "history": [
+        {
+          "date": "2026-04-19",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-03",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0004",
+      "name": "Dewi Lestari",
+      "phone": "081287866308",
+      "source": "FB",
+      "stage": "Proposal",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Amir",
+      "last_contact": "2026-07-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-16",
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 90,
+      "history": [
+        {
+          "date": "2026-06-30",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-08",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0005",
+      "name": "Rian Hidayat",
+      "phone": "081245227409",
+      "source": "Marketplace",
+      "stage": "Negotiation",
+      "value": 650000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-12",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-21",
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 27,
+      "history": [
+        {
+          "date": "2026-04-19",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-12",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0006",
+      "name": "Maya Sari",
+      "phone": "081298851408",
+      "source": "Referral",
+      "stage": "Won",
+      "value": 650000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-30",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via OLX, interest on type 45",
+      "score": 72,
+      "history": [
+        {
+          "date": "2026-05-20",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-30",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0007",
+      "name": "Fajar Nugraha",
+      "phone": "081273668974",
+      "source": "Walk-in",
+      "stage": "Lost",
+      "value": 350000000,
+      "cluster": "Cluster D",
+      "pic": "Amir",
+      "last_contact": "2026-04-30",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 61,
+      "history": [
+        {
+          "date": "2026-04-23",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0008",
+      "name": "Indah Permata",
+      "phone": "081269588142",
+      "source": "TikTok",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-02",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 34,
+      "history": [
+        {
+          "date": "2026-04-11",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-02",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0009",
+      "name": "Bayu Pratama",
+      "phone": "081242163520",
+      "source": "Walk-in",
+      "stage": "Lead",
+      "value": 425000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-05-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-17",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 51,
+      "history": [
+        {
+          "date": "2026-04-27",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-09",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0010",
+      "name": "Nur Hidayah",
+      "phone": "081261616442",
+      "source": "OLX",
+      "stage": "Qualified",
+      "value": 500000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-26",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-07",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 76,
+      "history": [
+        {
+          "date": "2026-06-14",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-26",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0011",
+      "name": "Hendra Kurniawan",
+      "phone": "081263701413",
+      "source": "FB",
+      "stage": "Survey",
+      "value": 575000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-16",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-17",
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-06-14",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-16",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0012",
+      "name": "Ratna Wulandari",
+      "phone": "081253485605",
+      "source": "Walk-in",
+      "stage": "Proposal",
+      "value": 650000000,
+      "cluster": "Cluster F",
+      "pic": "Riza",
+      "last_contact": "2026-05-03",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-07",
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 69,
+      "history": [
+        {
+          "date": "2026-04-15",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-03",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0013",
+      "name": "Eko Susanto",
+      "phone": "081288709525",
+      "source": "Referral",
+      "stage": "Negotiation",
+      "value": 750000000,
+      "cluster": "Cluster D",
+      "pic": "Amir",
+      "last_contact": "2026-06-29",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-12",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 50,
+      "history": [
+        {
+          "date": "2026-05-30",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-29",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0014",
+      "name": "Yuni Astuti",
+      "phone": "081219630604",
+      "source": "TikTok",
+      "stage": "Won",
+      "value": 850000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-23",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 66,
+      "history": [
+        {
+          "date": "2026-07-13",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-23",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0015",
+      "name": "Dedi Irawan",
+      "phone": "081286711057",
+      "source": "Marketplace",
+      "stage": "Lost",
+      "value": 500000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-06-02",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 78,
+      "history": [
+        {
+          "date": "2026-05-09",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-02",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0016",
+      "name": "Lina Marlina",
+      "phone": "081299207974",
+      "source": "TikTok",
+      "stage": "Dormant",
+      "value": 850000000,
+      "cluster": "Cluster E",
+      "pic": "Amir",
+      "last_contact": "2026-06-25",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 45",
+      "score": 31,
+      "history": [
+        {
+          "date": "2026-06-16",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-25",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0017",
+      "name": "Agus Setiawan",
+      "phone": "081273748017",
+      "source": "Website",
+      "stage": "Lead",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-06-22",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-27",
+      "notes": "Inquiry via Referral, interest on type 45",
+      "score": 93,
+      "history": [
+        {
+          "date": "2026-05-29",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-22",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0018",
+      "name": "Tuti Hartati",
+      "phone": "081214299108",
+      "source": "Referral",
+      "stage": "Qualified",
+      "value": 350000000,
+      "cluster": "Cluster B",
+      "pic": "Mada",
+      "last_contact": "2026-06-21",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-28",
+      "notes": "Inquiry via Walk-in, interest on type 36",
+      "score": 53,
+      "history": [
+        {
+          "date": "2026-06-09",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-06-21",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0019",
+      "name": "Wahyu Saputra",
+      "phone": "081288622353",
+      "source": "Walk-in",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-07-27",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-09",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 50,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-27",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0020",
+      "name": "Rina Anggraini",
+      "phone": "081214312699",
+      "source": "Marketplace",
+      "stage": "Proposal",
+      "value": 750000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-06-17",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-19",
+      "notes": "Inquiry via OLX, interest on type 54",
+      "score": 52,
+      "history": [
+        {
+          "date": "2026-05-28",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-17",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0021",
+      "name": "Budi Santoso #2",
+      "phone": "081273293512",
+      "source": "Referral",
+      "stage": "Negotiation",
+      "value": 575000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-05-14",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-18",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 34,
+      "history": [
+        {
+          "date": "2026-05-08",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-14",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0022",
+      "name": "Siti Aminah #2",
+      "phone": "081254384924",
+      "source": "TikTok",
+      "stage": "Won",
+      "value": 850000000,
+      "cluster": "Cluster E",
+      "pic": "Amir",
+      "last_contact": "2026-07-01",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 45,
+      "history": [
+        {
+          "date": "2026-06-29",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-07-01",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0023",
+      "name": "Andi Wijaya #2",
+      "phone": "081271679744",
+      "source": "TikTok",
+      "stage": "Lost",
+      "value": 575000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-05-11",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 54",
+      "score": 74,
+      "history": [
+        {
+          "date": "2026-04-26",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-11",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0024",
+      "name": "Dewi Lestari #2",
+      "phone": "081292724813",
+      "source": "Website",
+      "stage": "Dormant",
+      "value": 575000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-06-17",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 45,
+      "history": [
+        {
+          "date": "2026-06-04",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-17",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0025",
+      "name": "Rian Hidayat #2",
+      "phone": "081244435570",
+      "source": "Referral",
+      "stage": "Lead",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-07-22",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-24",
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 31,
+      "history": [
+        {
+          "date": "2026-06-24",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-07-22",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0026",
+      "name": "Maya Sari #2",
+      "phone": "081295558167",
+      "source": "FB",
+      "stage": "Qualified",
+      "value": 350000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-06-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-20",
+      "notes": "Inquiry via OLX, interest on type 54",
+      "score": 52,
+      "history": [
+        {
+          "date": "2026-06-10",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-18",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0027",
+      "name": "Fajar Nugraha #2",
+      "phone": "081215293869",
+      "source": "Marketplace",
+      "stage": "Survey",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-07-05",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-16",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 71,
+      "history": [
+        {
+          "date": "2026-06-26",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-05",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0028",
+      "name": "Indah Permata #2",
+      "phone": "081299297232",
+      "source": "Walk-in",
+      "stage": "Proposal",
+      "value": 500000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-07-27",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-10",
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 92,
+      "history": [
+        {
+          "date": "2026-07-07",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-27",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0029",
+      "name": "Bayu Pratama #2",
+      "phone": "081270172972",
+      "source": "OLX",
+      "stage": "Negotiation",
+      "value": 850000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-02",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-09",
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 90,
+      "history": [
+        {
+          "date": "2026-04-08",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-02",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0030",
+      "name": "Nur Hidayah #2",
+      "phone": "081295060556",
+      "source": "IG",
+      "stage": "Won",
+      "value": 575000000,
+      "cluster": "Cluster D",
+      "pic": "Amir",
+      "last_contact": "2026-07-13",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via OLX, interest on type 45",
+      "score": 60,
+      "history": [
+        {
+          "date": "2026-07-01",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-13",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0031",
+      "name": "Hendra Kurniawan #2",
+      "phone": "081243909051",
+      "source": "FB",
+      "stage": "Lost",
+      "value": 650000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-06-21",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Referral, interest on type 45",
+      "score": 56,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-21",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0032",
+      "name": "Ratna Wulandari #2",
+      "phone": "081232035253",
+      "source": "Website",
+      "stage": "Dormant",
+      "value": 425000000,
+      "cluster": "Cluster F",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-14",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 21,
+      "history": [
+        {
+          "date": "2026-06-22",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-14",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0033",
+      "name": "Eko Susanto #2",
+      "phone": "081221964719",
+      "source": "Website",
+      "stage": "Lead",
+      "value": 575000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-06-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-19",
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 26,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-18",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0034",
+      "name": "Yuni Astuti #2",
+      "phone": "081282400561",
+      "source": "Referral",
+      "stage": "Qualified",
+      "value": 425000000,
+      "cluster": "Cluster F",
+      "pic": "Amir",
+      "last_contact": "2026-05-24",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-25",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 65,
+      "history": [
+        {
+          "date": "2026-05-15",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-24",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0035",
+      "name": "Dedi Irawan #2",
+      "phone": "081266683898",
+      "source": "TikTok",
+      "stage": "Survey",
+      "value": 350000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-07-21",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-23",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 89,
+      "history": [
+        {
+          "date": "2026-07-02",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-21",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0036",
+      "name": "Lina Marlina #2",
+      "phone": "081287482633",
+      "source": "Walk-in",
+      "stage": "Proposal",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-05-21",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-24",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 92,
+      "history": [
+        {
+          "date": "2026-05-06",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-21",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0037",
+      "name": "Agus Setiawan #2",
+      "phone": "081252612798",
+      "source": "Website",
+      "stage": "Negotiation",
+      "value": 575000000,
+      "cluster": "Cluster C",
+      "pic": "Mada",
+      "last_contact": "2026-07-02",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-03",
+      "notes": "Inquiry via Website, interest on type 45",
+      "score": 95,
+      "history": [
+        {
+          "date": "2026-06-25",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-02",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0038",
+      "name": "Tuti Hartati #2",
+      "phone": "081268180288",
+      "source": "Walk-in",
+      "stage": "Won",
+      "value": 425000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-06-01",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 29,
+      "history": [
+        {
+          "date": "2026-05-15",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-01",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0039",
+      "name": "Wahyu Saputra #2",
+      "phone": "081296140971",
+      "source": "Marketplace",
+      "stage": "Lost",
+      "value": 650000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-06-09",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 76,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-06-09",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0040",
+      "name": "Rina Anggraini #2",
+      "phone": "081286660037",
+      "source": "OLX",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster C",
+      "pic": "Mada",
+      "last_contact": "2026-06-09",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 51,
+      "history": [
+        {
+          "date": "2026-05-10",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-09",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0041",
+      "name": "Budi Santoso #3",
+      "phone": "081293126101",
+      "source": "Referral",
+      "stage": "Lead",
+      "value": 850000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-07-20",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-30",
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 73,
+      "history": [
+        {
+          "date": "2026-06-20",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-20",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0042",
+      "name": "Siti Aminah #3",
+      "phone": "081261079099",
+      "source": "Referral",
+      "stage": "Qualified",
+      "value": 500000000,
+      "cluster": "Cluster D",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-21",
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 70,
+      "history": [
+        {
+          "date": "2026-06-19",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-07-08",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0043",
+      "name": "Andi Wijaya #3",
+      "phone": "081240582408",
+      "source": "TikTok",
+      "stage": "Survey",
+      "value": 500000000,
+      "cluster": "Cluster D",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-31",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 54,
+      "history": [
+        {
+          "date": "2026-04-23",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-18",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0044",
+      "name": "Dewi Lestari #3",
+      "phone": "081285738451",
+      "source": "Marketplace",
+      "stage": "Proposal",
+      "value": 650000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-06-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-26",
+      "notes": "Inquiry via OLX, interest on type 45",
+      "score": 79,
+      "history": [
+        {
+          "date": "2026-06-07",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-06-18",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0045",
+      "name": "Rian Hidayat #3",
+      "phone": "081259108912",
+      "source": "OLX",
+      "stage": "Negotiation",
+      "value": 575000000,
+      "cluster": "Cluster E",
+      "pic": "Amir",
+      "last_contact": "2026-07-12",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-20",
+      "notes": "Inquiry via OLX, interest on type 36",
+      "score": 20,
+      "history": [
+        {
+          "date": "2026-07-10",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-12",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0046",
+      "name": "Maya Sari #3",
+      "phone": "081214368059",
+      "source": "Walk-in",
+      "stage": "Won",
+      "value": 350000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-05-08",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 40,
+      "history": [
+        {
+          "date": "2026-05-05",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-08",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0047",
+      "name": "Fajar Nugraha #3",
+      "phone": "081267108449",
+      "source": "Website",
+      "stage": "Lost",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-10",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 95,
+      "history": [
+        {
+          "date": "2026-05-16",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-10",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0048",
+      "name": "Indah Permata #3",
+      "phone": "081223432528",
+      "source": "IG",
+      "stage": "Dormant",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-05",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 47,
+      "history": [
+        {
+          "date": "2026-05-22",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-05",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0049",
+      "name": "Bayu Pratama #3",
+      "phone": "081246018913",
+      "source": "IG",
+      "stage": "Lead",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-05-31",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-09",
+      "notes": "Inquiry via IG, interest on type 45",
+      "score": 73,
+      "history": [
+        {
+          "date": "2026-05-30",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-31",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0050",
+      "name": "Nur Hidayah #3",
+      "phone": "081276664182",
+      "source": "TikTok",
+      "stage": "Qualified",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-21",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-23",
+      "notes": "Inquiry via FB, interest on type 36",
+      "score": 40,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-06-21",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0051",
+      "name": "Hendra Kurniawan #3",
+      "phone": "081282449206",
+      "source": "Referral",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-09",
+      "notes": "Inquiry via Website, interest on type 45",
+      "score": 65,
+      "history": [
+        {
+          "date": "2026-05-16",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-30",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0052",
+      "name": "Ratna Wulandari #3",
+      "phone": "081212836184",
+      "source": "Walk-in",
+      "stage": "Proposal",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-05-02",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-08",
+      "notes": "Inquiry via FB, interest on type 36",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-04-25",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-02",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0053",
+      "name": "Eko Susanto #3",
+      "phone": "081298223818",
+      "source": "Marketplace",
+      "stage": "Negotiation",
+      "value": 750000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-04-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-01",
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 44,
+      "history": [
+        {
+          "date": "2026-04-11",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0054",
+      "name": "Yuni Astuti #3",
+      "phone": "081217276605",
+      "source": "Referral",
+      "stage": "Won",
+      "value": 350000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-06-15",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 39,
+      "history": [
+        {
+          "date": "2026-05-18",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-15",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0055",
+      "name": "Dedi Irawan #3",
+      "phone": "081211773791",
+      "source": "FB",
+      "stage": "Lost",
+      "value": 850000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-07-29",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via OLX, interest on type 54",
+      "score": 25,
+      "history": [
+        {
+          "date": "2026-06-29",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-29",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0056",
+      "name": "Lina Marlina #3",
+      "phone": "081280900950",
+      "source": "Walk-in",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster D",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-13",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 22,
+      "history": [
+        {
+          "date": "2026-05-02",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-13",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0057",
+      "name": "Agus Setiawan #3",
+      "phone": "081261243199",
+      "source": "IG",
+      "stage": "Lead",
+      "value": 500000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-05-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-15",
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 72,
+      "history": [
+        {
+          "date": "2026-04-15",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-09",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0058",
+      "name": "Tuti Hartati #3",
+      "phone": "081232022508",
+      "source": "Marketplace",
+      "stage": "Qualified",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-07-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-27",
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 83,
+      "history": [
+        {
+          "date": "2026-07-15",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-18",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0059",
+      "name": "Wahyu Saputra #3",
+      "phone": "081279541056",
+      "source": "Marketplace",
+      "stage": "Survey",
+      "value": 575000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-23",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-04",
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 84,
+      "history": [
+        {
+          "date": "2026-06-07",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-23",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0060",
+      "name": "Rina Anggraini #3",
+      "phone": "081294470097",
+      "source": "Referral",
+      "stage": "Proposal",
+      "value": 850000000,
+      "cluster": "Cluster F",
+      "pic": "Amir",
+      "last_contact": "2026-06-11",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-12",
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 51,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-06-11",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0061",
+      "name": "Budi Santoso #4",
+      "phone": "081265933333",
+      "source": "Referral",
+      "stage": "Negotiation",
+      "value": 425000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-06-03",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-13",
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 26,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-03",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0062",
+      "name": "Siti Aminah #4",
+      "phone": "081231543615",
+      "source": "OLX",
+      "stage": "Won",
+      "value": 850000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-05-25",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 23,
+      "history": [
+        {
+          "date": "2026-05-24",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-25",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0063",
+      "name": "Andi Wijaya #4",
+      "phone": "081270088797",
+      "source": "Referral",
+      "stage": "Lost",
+      "value": 350000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-05-29",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 67,
+      "history": [
+        {
+          "date": "2026-05-12",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-29",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0064",
+      "name": "Dewi Lestari #4",
+      "phone": "081254005515",
+      "source": "FB",
+      "stage": "Dormant",
+      "value": 500000000,
+      "cluster": "Cluster B",
+      "pic": "Amir",
+      "last_contact": "2026-06-01",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 52,
+      "history": [
+        {
+          "date": "2026-05-17",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-06-01",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0065",
+      "name": "Rian Hidayat #4",
+      "phone": "081285862072",
+      "source": "IG",
+      "stage": "Lead",
+      "value": 350000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-04",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-07",
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 57,
+      "history": [
+        {
+          "date": "2026-04-24",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-04",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0066",
+      "name": "Maya Sari #4",
+      "phone": "081294842228",
+      "source": "Referral",
+      "stage": "Qualified",
+      "value": 650000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-06-04",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-10",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 22,
+      "history": [
+        {
+          "date": "2026-05-24",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-04",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0067",
+      "name": "Fajar Nugraha #4",
+      "phone": "081246530870",
+      "source": "Marketplace",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-04-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-05",
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 25,
+      "history": [
+        {
+          "date": "2026-04-02",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0068",
+      "name": "Indah Permata #4",
+      "phone": "081269666892",
+      "source": "Marketplace",
+      "stage": "Proposal",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-11",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-19",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 65,
+      "history": [
+        {
+          "date": "2026-06-03",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-11",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0069",
+      "name": "Bayu Pratama #4",
+      "phone": "081225956558",
+      "source": "OLX",
+      "stage": "Negotiation",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-05-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-23",
+      "notes": "Inquiry via OLX, interest on type 45",
+      "score": 69,
+      "history": [
+        {
+          "date": "2026-04-21",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-18",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0070",
+      "name": "Nur Hidayah #4",
+      "phone": "081271901832",
+      "source": "Referral",
+      "stage": "Won",
+      "value": 850000000,
+      "cluster": "Cluster D",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-06",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 64,
+      "history": [
+        {
+          "date": "2026-04-18",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-06",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0071",
+      "name": "Hendra Kurniawan #4",
+      "phone": "081296302663",
+      "source": "Referral",
+      "stage": "Lost",
+      "value": 575000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-06-14",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 94,
+      "history": [
+        {
+          "date": "2026-05-28",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-14",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0072",
+      "name": "Ratna Wulandari #4",
+      "phone": "081267488157",
+      "source": "OLX",
+      "stage": "Dormant",
+      "value": 575000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-07-25",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 94,
+      "history": [
+        {
+          "date": "2026-06-26",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-25",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0073",
+      "name": "Eko Susanto #4",
+      "phone": "081278857396",
+      "source": "Referral",
+      "stage": "Lead",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-06-29",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-12",
+      "notes": "Inquiry via Website, interest on type 45",
+      "score": 61,
+      "history": [
+        {
+          "date": "2026-06-20",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-06-29",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0074",
+      "name": "Yuni Astuti #4",
+      "phone": "081249383955",
+      "source": "Website",
+      "stage": "Qualified",
+      "value": 850000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-06-12",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-16",
+      "notes": "Inquiry via Walk-in, interest on type 36",
+      "score": 83,
+      "history": [
+        {
+          "date": "2026-06-03",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-12",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0075",
+      "name": "Dedi Irawan #4",
+      "phone": "081222978043",
+      "source": "Website",
+      "stage": "Survey",
+      "value": 750000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-05-13",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-25",
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 44,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-13",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0076",
+      "name": "Lina Marlina #4",
+      "phone": "081277120649",
+      "source": "Walk-in",
+      "stage": "Proposal",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-05-16",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-29",
+      "notes": "Inquiry via Referral, interest on type 45",
+      "score": 64,
+      "history": [
+        {
+          "date": "2026-04-27",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-16",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0077",
+      "name": "Agus Setiawan #4",
+      "phone": "081263033133",
+      "source": "FB",
+      "stage": "Negotiation",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-12",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-17",
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 84,
+      "history": [
+        {
+          "date": "2026-04-12",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-12",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0078",
+      "name": "Tuti Hartati #4",
+      "phone": "081283705543",
+      "source": "Referral",
+      "stage": "Won",
+      "value": 650000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-07-11",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 95,
+      "history": [
+        {
+          "date": "2026-06-17",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-11",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0079",
+      "name": "Wahyu Saputra #4",
+      "phone": "081248696530",
+      "source": "Website",
+      "stage": "Lost",
+      "value": 500000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-17",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 24,
+      "history": [
+        {
+          "date": "2026-04-23",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-17",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0080",
+      "name": "Rina Anggraini #4",
+      "phone": "081258493736",
+      "source": "IG",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-05-17",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Referral, interest on type 36",
+      "score": 73,
+      "history": [
+        {
+          "date": "2026-04-25",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-17",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0081",
+      "name": "Budi Santoso #5",
+      "phone": "081286586643",
+      "source": "FB",
+      "stage": "Lead",
+      "value": 575000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-05-10",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-18",
+      "notes": "Inquiry via OLX, interest on type 45",
+      "score": 66,
+      "history": [
+        {
+          "date": "2026-04-25",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-10",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0082",
+      "name": "Siti Aminah #5",
+      "phone": "081285432962",
+      "source": "Marketplace",
+      "stage": "Qualified",
+      "value": 850000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-06-28",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-09",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 95,
+      "history": [
+        {
+          "date": "2026-06-26",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-28",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0083",
+      "name": "Andi Wijaya #5",
+      "phone": "081263103687",
+      "source": "Walk-in",
+      "stage": "Survey",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-05-12",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-22",
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 29,
+      "history": [
+        {
+          "date": "2026-04-15",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-12",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0084",
+      "name": "Dewi Lestari #5",
+      "phone": "081281530080",
+      "source": "Website",
+      "stage": "Proposal",
+      "value": 850000000,
+      "cluster": "Cluster B",
+      "pic": "Amir",
+      "last_contact": "2026-05-23",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-03",
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 57,
+      "history": [
+        {
+          "date": "2026-05-22",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-23",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0085",
+      "name": "Rian Hidayat #5",
+      "phone": "081264145721",
+      "source": "IG",
+      "stage": "Negotiation",
+      "value": 350000000,
+      "cluster": "Cluster B",
+      "pic": "Mada",
+      "last_contact": "2026-05-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-19",
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-04-22",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-08",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0086",
+      "name": "Maya Sari #5",
+      "phone": "081233376149",
+      "source": "Referral",
+      "stage": "Won",
+      "value": 750000000,
+      "cluster": "Cluster F",
+      "pic": "Amir",
+      "last_contact": "2026-07-24",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via OLX, interest on type 36",
+      "score": 58,
+      "history": [
+        {
+          "date": "2026-07-11",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-24",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0087",
+      "name": "Fajar Nugraha #5",
+      "phone": "081291520270",
+      "source": "Website",
+      "stage": "Lost",
+      "value": 650000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-06-16",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 56,
+      "history": [
+        {
+          "date": "2026-05-20",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-06-16",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0088",
+      "name": "Indah Permata #5",
+      "phone": "081226968518",
+      "source": "Referral",
+      "stage": "Dormant",
+      "value": 850000000,
+      "cluster": "Cluster D",
+      "pic": "Amir",
+      "last_contact": "2026-07-18",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 91,
+      "history": [
+        {
+          "date": "2026-06-23",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-18",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0089",
+      "name": "Bayu Pratama #5",
+      "phone": "081250634865",
+      "source": "OLX",
+      "stage": "Lead",
+      "value": 750000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-07-04",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-16",
+      "notes": "Inquiry via OLX, interest on type 45",
+      "score": 46,
+      "history": [
+        {
+          "date": "2026-06-05",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-04",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0090",
+      "name": "Nur Hidayah #5",
+      "phone": "081232679221",
+      "source": "Walk-in",
+      "stage": "Qualified",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-07-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-22",
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 28,
+      "history": [
+        {
+          "date": "2026-07-02",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-08",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0091",
+      "name": "Hendra Kurniawan #5",
+      "phone": "081261324387",
+      "source": "Website",
+      "stage": "Survey",
+      "value": 750000000,
+      "cluster": "Cluster E",
+      "pic": "Amir",
+      "last_contact": "2026-05-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-26",
+      "notes": "Inquiry via Walk-in, interest on type 36",
+      "score": 74,
+      "history": [
+        {
+          "date": "2026-04-24",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-18",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0092",
+      "name": "Ratna Wulandari #5",
+      "phone": "081289856829",
+      "source": "Referral",
+      "stage": "Proposal",
+      "value": 350000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-07-25",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-26",
+      "notes": "Inquiry via OLX, interest on type 54",
+      "score": 27,
+      "history": [
+        {
+          "date": "2026-07-10",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-25",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0093",
+      "name": "Eko Susanto #5",
+      "phone": "081277931793",
+      "source": "Marketplace",
+      "stage": "Negotiation",
+      "value": 500000000,
+      "cluster": "Cluster F",
+      "pic": "Riza",
+      "last_contact": "2026-05-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-23",
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 46,
+      "history": [
+        {
+          "date": "2026-04-28",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-09",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0094",
+      "name": "Yuni Astuti #5",
+      "phone": "081298452004",
+      "source": "FB",
+      "stage": "Won",
+      "value": 650000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-05-24",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 62,
+      "history": [
+        {
+          "date": "2026-05-02",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-24",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0095",
+      "name": "Dedi Irawan #5",
+      "phone": "081275467648",
+      "source": "Referral",
+      "stage": "Lost",
+      "value": 425000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-05-18",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 50,
+      "history": [
+        {
+          "date": "2026-04-23",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-18",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0096",
+      "name": "Lina Marlina #5",
+      "phone": "081281330285",
+      "source": "Referral",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-07-21",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 22,
+      "history": [
+        {
+          "date": "2026-07-08",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-21",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0097",
+      "name": "Agus Setiawan #5",
+      "phone": "081292419520",
+      "source": "Referral",
+      "stage": "Lead",
+      "value": 750000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-07-16",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-24",
+      "notes": "Inquiry via FB, interest on type 36",
+      "score": 85,
+      "history": [
+        {
+          "date": "2026-06-18",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-16",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0098",
+      "name": "Tuti Hartati #5",
+      "phone": "081227969163",
+      "source": "Website",
+      "stage": "Qualified",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-25",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-02",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 65,
+      "history": [
+        {
+          "date": "2026-05-06",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-25",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0099",
+      "name": "Wahyu Saputra #5",
+      "phone": "081230542199",
+      "source": "TikTok",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster C",
+      "pic": "Mada",
+      "last_contact": "2026-05-23",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-05",
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 84,
+      "history": [
+        {
+          "date": "2026-05-09",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-23",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0100",
+      "name": "Rina Anggraini #5",
+      "phone": "081224787530",
+      "source": "TikTok",
+      "stage": "Proposal",
+      "value": 750000000,
+      "cluster": "Cluster B",
+      "pic": "Amir",
+      "last_contact": "2026-07-06",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-17",
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 75,
+      "history": [
+        {
+          "date": "2026-06-29",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-06",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0101",
+      "name": "Budi Santoso #6",
+      "phone": "081248753466",
+      "source": "Website",
+      "stage": "Negotiation",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-05-12",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-14",
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 23,
+      "history": [
+        {
+          "date": "2026-05-07",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-12",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0102",
+      "name": "Siti Aminah #6",
+      "phone": "081251032756",
+      "source": "IG",
+      "stage": "Won",
+      "value": 425000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-18",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 78,
+      "history": [
+        {
+          "date": "2026-04-19",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-18",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0103",
+      "name": "Andi Wijaya #6",
+      "phone": "081276045804",
+      "source": "Website",
+      "stage": "Lost",
+      "value": 425000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-28",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 56,
+      "history": [
+        {
+          "date": "2026-07-05",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-28",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0104",
+      "name": "Dewi Lestari #6",
+      "phone": "081269423472",
+      "source": "IG",
+      "stage": "Dormant",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-07-08",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 58,
+      "history": [
+        {
+          "date": "2026-06-23",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-08",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0105",
+      "name": "Rian Hidayat #6",
+      "phone": "081282875091",
+      "source": "Referral",
+      "stage": "Lead",
+      "value": 350000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-05-05",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-06",
+      "notes": "Inquiry via FB, interest on type 36",
+      "score": 87,
+      "history": [
+        {
+          "date": "2026-04-06",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-05",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0106",
+      "name": "Maya Sari #6",
+      "phone": "081255672959",
+      "source": "Website",
+      "stage": "Qualified",
+      "value": 350000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-06-15",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-28",
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 50,
+      "history": [
+        {
+          "date": "2026-05-22",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-06-15",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0107",
+      "name": "Fajar Nugraha #6",
+      "phone": "081267995939",
+      "source": "FB",
+      "stage": "Survey",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-07-19",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-28",
+      "notes": "Inquiry via FB, interest on type 36",
+      "score": 65,
+      "history": [
+        {
+          "date": "2026-07-17",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-07-19",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0108",
+      "name": "Indah Permata #6",
+      "phone": "081289407676",
+      "source": "TikTok",
+      "stage": "Proposal",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-07-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-16",
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 41,
+      "history": [
+        {
+          "date": "2026-07-01",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-07-08",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0109",
+      "name": "Bayu Pratama #6",
+      "phone": "081244068505",
+      "source": "Website",
+      "stage": "Negotiation",
+      "value": 425000000,
+      "cluster": "Cluster F",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-17",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-24",
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 29,
+      "history": [
+        {
+          "date": "2026-07-13",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-17",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0110",
+      "name": "Nur Hidayah #6",
+      "phone": "081296055247",
+      "source": "Marketplace",
+      "stage": "Won",
+      "value": 750000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-04-30",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via OLX, interest on type 54",
+      "score": 21,
+      "history": [
+        {
+          "date": "2026-04-08",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0111",
+      "name": "Hendra Kurniawan #6",
+      "phone": "081289205345",
+      "source": "Marketplace",
+      "stage": "Lost",
+      "value": 575000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-05-03",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 48,
+      "history": [
+        {
+          "date": "2026-04-29",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-03",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0112",
+      "name": "Ratna Wulandari #6",
+      "phone": "081246495923",
+      "source": "IG",
+      "stage": "Dormant",
+      "value": 500000000,
+      "cluster": "Cluster F",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-01",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 45",
+      "score": 21,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-01",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0113",
+      "name": "Eko Susanto #6",
+      "phone": "081218533560",
+      "source": "Walk-in",
+      "stage": "Lead",
+      "value": 650000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-05-06",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-10",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 64,
+      "history": [
+        {
+          "date": "2026-04-08",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-06",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0114",
+      "name": "Yuni Astuti #6",
+      "phone": "081275826816",
+      "source": "Marketplace",
+      "stage": "Qualified",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-10",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-24",
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 81,
+      "history": [
+        {
+          "date": "2026-06-07",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-10",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0115",
+      "name": "Dedi Irawan #6",
+      "phone": "081264517620",
+      "source": "Website",
+      "stage": "Survey",
+      "value": 500000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-05-28",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-03",
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 81,
+      "history": [
+        {
+          "date": "2026-05-09",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-28",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0116",
+      "name": "Lina Marlina #6",
+      "phone": "081286951586",
+      "source": "Referral",
+      "stage": "Proposal",
+      "value": 650000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-07-05",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-11",
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 31,
+      "history": [
+        {
+          "date": "2026-06-25",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-05",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0117",
+      "name": "Agus Setiawan #6",
+      "phone": "081246462475",
+      "source": "FB",
+      "stage": "Negotiation",
+      "value": 750000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-27",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-05",
+      "notes": "Inquiry via IG, interest on type 45",
+      "score": 71,
+      "history": [
+        {
+          "date": "2026-07-06",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-27",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0118",
+      "name": "Tuti Hartati #6",
+      "phone": "081250099694",
+      "source": "Marketplace",
+      "stage": "Won",
+      "value": 350000000,
+      "cluster": "Cluster B",
+      "pic": "Amir",
+      "last_contact": "2026-05-12",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 81,
+      "history": [
+        {
+          "date": "2026-04-25",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-12",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0119",
+      "name": "Wahyu Saputra #6",
+      "phone": "081218328551",
+      "source": "OLX",
+      "stage": "Lost",
+      "value": 750000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-18",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 69,
+      "history": [
+        {
+          "date": "2026-06-26",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-18",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0120",
+      "name": "Rina Anggraini #6",
+      "phone": "081270210466",
+      "source": "Walk-in",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster B",
+      "pic": "Mada",
+      "last_contact": "2026-05-05",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 36",
+      "score": 77,
+      "history": [
+        {
+          "date": "2026-04-15",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-05",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0121",
+      "name": "Budi Santoso #7",
+      "phone": "081230925300",
+      "source": "TikTok",
+      "stage": "Lead",
+      "value": 425000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-06-28",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-01",
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 67,
+      "history": [
+        {
+          "date": "2026-06-27",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-28",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0122",
+      "name": "Siti Aminah #7",
+      "phone": "081224809669",
+      "source": "Marketplace",
+      "stage": "Qualified",
+      "value": 575000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-07-15",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-17",
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 22,
+      "history": [
+        {
+          "date": "2026-06-16",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-15",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0123",
+      "name": "Andi Wijaya #7",
+      "phone": "081224566973",
+      "source": "OLX",
+      "stage": "Survey",
+      "value": 350000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-05-29",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-02",
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 71,
+      "history": [
+        {
+          "date": "2026-05-17",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-29",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0124",
+      "name": "Dewi Lestari #7",
+      "phone": "081254373377",
+      "source": "IG",
+      "stage": "Proposal",
+      "value": 750000000,
+      "cluster": "Cluster F",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-04-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-10",
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 43,
+      "history": [
+        {
+          "date": "2026-04-03",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0125",
+      "name": "Rian Hidayat #7",
+      "phone": "081220700189",
+      "source": "TikTok",
+      "stage": "Negotiation",
+      "value": 650000000,
+      "cluster": "Cluster D",
+      "pic": "Mada",
+      "last_contact": "2026-07-29",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-03",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 63,
+      "history": [
+        {
+          "date": "2026-07-16",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-07-29",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0126",
+      "name": "Maya Sari #7",
+      "phone": "081259426812",
+      "source": "IG",
+      "stage": "Won",
+      "value": 425000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-27",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 64,
+      "history": [
+        {
+          "date": "2026-05-01",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-27",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0127",
+      "name": "Fajar Nugraha #7",
+      "phone": "081231467578",
+      "source": "Marketplace",
+      "stage": "Lost",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-13",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 53,
+      "history": [
+        {
+          "date": "2026-04-23",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-13",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0128",
+      "name": "Indah Permata #7",
+      "phone": "081211437809",
+      "source": "Walk-in",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-06",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 82,
+      "history": [
+        {
+          "date": "2026-04-24",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-06",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0129",
+      "name": "Bayu Pratama #7",
+      "phone": "081284744670",
+      "source": "FB",
+      "stage": "Lead",
+      "value": 650000000,
+      "cluster": "Cluster F",
+      "pic": "Riza",
+      "last_contact": "2026-07-26",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-04",
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 95,
+      "history": [
+        {
+          "date": "2026-07-15",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-26",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0130",
+      "name": "Nur Hidayah #7",
+      "phone": "081261966374",
+      "source": "IG",
+      "stage": "Qualified",
+      "value": 650000000,
+      "cluster": "Cluster F",
+      "pic": "Riza",
+      "last_contact": "2026-05-31",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-07",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 79,
+      "history": [
+        {
+          "date": "2026-05-20",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-31",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0131",
+      "name": "Hendra Kurniawan #7",
+      "phone": "081261100336",
+      "source": "Website",
+      "stage": "Survey",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-07-05",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-07",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 83,
+      "history": [
+        {
+          "date": "2026-06-20",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-05",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0132",
+      "name": "Ratna Wulandari #7",
+      "phone": "081231372664",
+      "source": "Website",
+      "stage": "Proposal",
+      "value": 500000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-05-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-19",
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 36,
+      "history": [
+        {
+          "date": "2026-04-18",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-09",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0133",
+      "name": "Eko Susanto #7",
+      "phone": "081233911171",
+      "source": "Website",
+      "stage": "Negotiation",
+      "value": 500000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-05-03",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-05",
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 74,
+      "history": [
+        {
+          "date": "2026-04-04",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-03",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0134",
+      "name": "Yuni Astuti #7",
+      "phone": "081282218964",
+      "source": "Website",
+      "stage": "Won",
+      "value": 575000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-06-04",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 77,
+      "history": [
+        {
+          "date": "2026-05-17",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-04",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0135",
+      "name": "Dedi Irawan #7",
+      "phone": "081235091201",
+      "source": "OLX",
+      "stage": "Lost",
+      "value": 575000000,
+      "cluster": "Cluster C",
+      "pic": "Mada",
+      "last_contact": "2026-07-27",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 64,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-07-27",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0136",
+      "name": "Lina Marlina #7",
+      "phone": "081263608814",
+      "source": "TikTok",
+      "stage": "Dormant",
+      "value": 500000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-06-02",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via OLX, interest on type 54",
+      "score": 44,
+      "history": [
+        {
+          "date": "2026-05-06",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-02",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0137",
+      "name": "Agus Setiawan #7",
+      "phone": "081273190070",
+      "source": "Website",
+      "stage": "Lead",
+      "value": 650000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-05-11",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-13",
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 68,
+      "history": [
+        {
+          "date": "2026-05-02",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-11",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0138",
+      "name": "Tuti Hartati #7",
+      "phone": "081244495258",
+      "source": "Marketplace",
+      "stage": "Qualified",
+      "value": 575000000,
+      "cluster": "Cluster F",
+      "pic": "Amir",
+      "last_contact": "2026-05-31",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-13",
+      "notes": "Inquiry via Walk-in, interest on type 36",
+      "score": 73,
+      "history": [
+        {
+          "date": "2026-05-18",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-31",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0139",
+      "name": "Wahyu Saputra #7",
+      "phone": "081230536277",
+      "source": "Marketplace",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-25",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-27",
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 31,
+      "history": [
+        {
+          "date": "2026-05-08",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-25",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0140",
+      "name": "Rina Anggraini #7",
+      "phone": "081237063955",
+      "source": "Marketplace",
+      "stage": "Proposal",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-07-04",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-16",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 82,
+      "history": [
+        {
+          "date": "2026-06-11",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-04",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0141",
+      "name": "Budi Santoso #8",
+      "phone": "081244168726",
+      "source": "IG",
+      "stage": "Negotiation",
+      "value": 500000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-05-07",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-19",
+      "notes": "Inquiry via IG, interest on type 45",
+      "score": 69,
+      "history": [
+        {
+          "date": "2026-04-17",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-07",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0142",
+      "name": "Siti Aminah #8",
+      "phone": "081263928904",
+      "source": "Marketplace",
+      "stage": "Won",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-07-17",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 49,
+      "history": [
+        {
+          "date": "2026-07-07",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-17",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0143",
+      "name": "Andi Wijaya #8",
+      "phone": "081280791664",
+      "source": "Referral",
+      "stage": "Lost",
+      "value": 850000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-07-12",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 88,
+      "history": [
+        {
+          "date": "2026-07-10",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-12",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0144",
+      "name": "Dewi Lestari #8",
+      "phone": "081278588243",
+      "source": "Walk-in",
+      "stage": "Dormant",
+      "value": 425000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-06-05",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Website, interest on type 45",
+      "score": 24,
+      "history": [
+        {
+          "date": "2026-05-15",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-05",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0145",
+      "name": "Rian Hidayat #8",
+      "phone": "081236623335",
+      "source": "Walk-in",
+      "stage": "Lead",
+      "value": 750000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-07-29",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-04",
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-29",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0146",
+      "name": "Maya Sari #8",
+      "phone": "081250141619",
+      "source": "Walk-in",
+      "stage": "Qualified",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Riza",
+      "last_contact": "2026-06-01",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-12",
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 53,
+      "history": [
+        {
+          "date": "2026-05-27",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-01",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0147",
+      "name": "Fajar Nugraha #8",
+      "phone": "081262962823",
+      "source": "IG",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-04-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-07",
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 78,
+      "history": [
+        {
+          "date": "2026-04-22",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0148",
+      "name": "Indah Permata #8",
+      "phone": "081265202088",
+      "source": "IG",
+      "stage": "Proposal",
+      "value": 750000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-06-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-11",
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 49,
+      "history": [
+        {
+          "date": "2026-05-10",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-09",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0149",
+      "name": "Bayu Pratama #8",
+      "phone": "081223792452",
+      "source": "TikTok",
+      "stage": "Negotiation",
+      "value": 500000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-05-15",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-29",
+      "notes": "Inquiry via Marketplace, interest on type 54",
+      "score": 68,
+      "history": [
+        {
+          "date": "2026-04-30",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-15",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0150",
+      "name": "Nur Hidayah #8",
+      "phone": "081261881400",
+      "source": "OLX",
+      "stage": "Won",
+      "value": 650000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-01",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 34,
+      "history": [
+        {
+          "date": "2026-04-22",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-01",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0151",
+      "name": "Hendra Kurniawan #8",
+      "phone": "081268397401",
+      "source": "Website",
+      "stage": "Lost",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-05-30",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 36",
+      "score": 29,
+      "history": [
+        {
+          "date": "2026-05-19",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-30",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0152",
+      "name": "Ratna Wulandari #8",
+      "phone": "081248596499",
+      "source": "Marketplace",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-27",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 73,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-27",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0153",
+      "name": "Eko Susanto #8",
+      "phone": "081237027281",
+      "source": "Referral",
+      "stage": "Lead",
+      "value": 650000000,
+      "cluster": "Cluster D",
+      "pic": "Amir",
+      "last_contact": "2026-06-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-08",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 58,
+      "history": [
+        {
+          "date": "2026-06-08",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-30",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0154",
+      "name": "Yuni Astuti #8",
+      "phone": "081266225276",
+      "source": "IG",
+      "stage": "Qualified",
+      "value": 425000000,
+      "cluster": "Cluster F",
+      "pic": "Riza",
+      "last_contact": "2026-05-28",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-29",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 86,
+      "history": [
+        {
+          "date": "2026-05-04",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-28",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0155",
+      "name": "Dedi Irawan #8",
+      "phone": "081236823310",
+      "source": "IG",
+      "stage": "Survey",
+      "value": 750000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-05-14",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-28",
+      "notes": "Inquiry via IG, interest on type 45",
+      "score": 50,
+      "history": [
+        {
+          "date": "2026-04-15",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-14",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0156",
+      "name": "Lina Marlina #8",
+      "phone": "081268587117",
+      "source": "FB",
+      "stage": "Proposal",
+      "value": 350000000,
+      "cluster": "Cluster C",
+      "pic": "Amir",
+      "last_contact": "2026-05-04",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-18",
+      "notes": "Inquiry via Website, interest on type 36",
+      "score": 87,
+      "history": [
+        {
+          "date": "2026-04-13",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-04",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0157",
+      "name": "Agus Setiawan #8",
+      "phone": "081283871067",
+      "source": "Referral",
+      "stage": "Negotiation",
+      "value": 350000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-06-22",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-03",
+      "notes": "Inquiry via OLX, interest on type 54",
+      "score": 81,
+      "history": [
+        {
+          "date": "2026-05-31",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-06-22",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0158",
+      "name": "Tuti Hartati #8",
+      "phone": "081291660329",
+      "source": "Referral",
+      "stage": "Won",
+      "value": 500000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-05-05",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 25,
+      "history": [
+        {
+          "date": "2026-04-18",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-05",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0159",
+      "name": "Wahyu Saputra #8",
+      "phone": "081281329654",
+      "source": "Website",
+      "stage": "Lost",
+      "value": 850000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-06-16",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 54",
+      "score": 35,
+      "history": [
+        {
+          "date": "2026-05-17",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-16",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0160",
+      "name": "Rina Anggraini #8",
+      "phone": "081244432785",
+      "source": "Website",
+      "stage": "Dormant",
+      "value": 575000000,
+      "cluster": "Cluster F",
+      "pic": "Amir",
+      "last_contact": "2026-05-05",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 54",
+      "score": 30,
+      "history": [
+        {
+          "date": "2026-05-04",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-05",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0161",
+      "name": "Budi Santoso #9",
+      "phone": "081258698795",
+      "source": "Marketplace",
+      "stage": "Lead",
+      "value": 425000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-05-05",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-06",
+      "notes": "Inquiry via Referral, interest on type 54",
+      "score": 83,
+      "history": [
+        {
+          "date": "2026-04-14",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-05",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0162",
+      "name": "Siti Aminah #9",
+      "phone": "081293797150",
+      "source": "TikTok",
+      "stage": "Qualified",
+      "value": 850000000,
+      "cluster": "Cluster D",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-25",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-30",
+      "notes": "Inquiry via Marketplace, interest on type 36",
+      "score": 31,
+      "history": [
+        {
+          "date": "2026-05-22",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-25",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0163",
+      "name": "Andi Wijaya #9",
+      "phone": "081211091476",
+      "source": "Walk-in",
+      "stage": "Survey",
+      "value": 575000000,
+      "cluster": "Cluster F",
+      "pic": "Riza",
+      "last_contact": "2026-05-15",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-22",
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 49,
+      "history": [
+        {
+          "date": "2026-05-07",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-15",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0164",
+      "name": "Dewi Lestari #9",
+      "phone": "081249094230",
+      "source": "TikTok",
+      "stage": "Proposal",
+      "value": 350000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-07-20",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-22",
+      "notes": "Inquiry via Website, interest on type 45",
+      "score": 69,
+      "history": [
+        {
+          "date": "2026-06-27",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-20",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0165",
+      "name": "Rian Hidayat #9",
+      "phone": "081279554001",
+      "source": "Referral",
+      "stage": "Negotiation",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-07-29",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-09",
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 57,
+      "history": [
+        {
+          "date": "2026-06-29",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-29",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0166",
+      "name": "Maya Sari #9",
+      "phone": "081285684919",
+      "source": "FB",
+      "stage": "Won",
+      "value": 750000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-29",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 86,
+      "history": [
+        {
+          "date": "2026-05-06",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-29",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0167",
+      "name": "Fajar Nugraha #9",
+      "phone": "081212212553",
+      "source": "Website",
+      "stage": "Lost",
+      "value": 750000000,
+      "cluster": "Cluster D",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-04-30",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 82,
+      "history": [
+        {
+          "date": "2026-04-23",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0168",
+      "name": "Indah Permata #9",
+      "phone": "081218930755",
+      "source": "Referral",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster B",
+      "pic": "Amir",
+      "last_contact": "2026-05-06",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Referral, interest on type 45",
+      "score": 71,
+      "history": [
+        {
+          "date": "2026-04-14",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-06",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0169",
+      "name": "Bayu Pratama #9",
+      "phone": "081245618164",
+      "source": "Website",
+      "stage": "Lead",
+      "value": 575000000,
+      "cluster": "Cluster D",
+      "pic": "Amir",
+      "last_contact": "2026-06-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-20",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 49,
+      "history": [
+        {
+          "date": "2026-06-04",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-09",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0170",
+      "name": "Nur Hidayah #9",
+      "phone": "081279953503",
+      "source": "Website",
+      "stage": "Qualified",
+      "value": 750000000,
+      "cluster": "Cluster F",
+      "pic": "Amir",
+      "last_contact": "2026-06-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-13",
+      "notes": "Inquiry via TikTok, interest on type 45",
+      "score": 88,
+      "history": [
+        {
+          "date": "2026-06-22",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-06-30",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0171",
+      "name": "Hendra Kurniawan #9",
+      "phone": "081271823910",
+      "source": "Walk-in",
+      "stage": "Survey",
+      "value": 500000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-05-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-12",
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 49,
+      "history": [
+        {
+          "date": "2026-04-19",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-08",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0172",
+      "name": "Ratna Wulandari #9",
+      "phone": "081251965780",
+      "source": "FB",
+      "stage": "Proposal",
+      "value": 575000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-06-18",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-01",
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 66,
+      "history": [
+        {
+          "date": "2026-06-01",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-18",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0173",
+      "name": "Eko Susanto #9",
+      "phone": "081224911169",
+      "source": "IG",
+      "stage": "Negotiation",
+      "value": 750000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-07-29",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-03",
+      "notes": "Inquiry via Website, interest on type 54",
+      "score": 75,
+      "history": [
+        {
+          "date": "2026-07-21",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-07-29",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0174",
+      "name": "Yuni Astuti #9",
+      "phone": "081222060020",
+      "source": "TikTok",
+      "stage": "Won",
+      "value": 750000000,
+      "cluster": "Cluster A",
+      "pic": "Mada",
+      "last_contact": "2026-05-23",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Referral, interest on type 45",
+      "score": 54,
+      "history": [
+        {
+          "date": "2026-05-09",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-23",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0175",
+      "name": "Dedi Irawan #9",
+      "phone": "081225455539",
+      "source": "OLX",
+      "stage": "Lost",
+      "value": 575000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-05-21",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 49,
+      "history": [
+        {
+          "date": "2026-05-18",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-21",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0176",
+      "name": "Lina Marlina #9",
+      "phone": "081210870275",
+      "source": "Referral",
+      "stage": "Dormant",
+      "value": 575000000,
+      "cluster": "Cluster D",
+      "pic": "Amir",
+      "last_contact": "2026-05-21",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 38,
+      "history": [
+        {
+          "date": "2026-05-03",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-21",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0177",
+      "name": "Agus Setiawan #9",
+      "phone": "081281210666",
+      "source": "Marketplace",
+      "stage": "Lead",
+      "value": 575000000,
+      "cluster": "Cluster F",
+      "pic": "Mada",
+      "last_contact": "2026-06-04",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-09",
+      "notes": "Inquiry via Referral, interest on type 45",
+      "score": 74,
+      "history": [
+        {
+          "date": "2026-05-19",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-06-04",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0178",
+      "name": "Tuti Hartati #9",
+      "phone": "081246317745",
+      "source": "FB",
+      "stage": "Qualified",
+      "value": 350000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-07",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-12",
+      "notes": "Inquiry via Website, interest on type 45",
+      "score": 54,
+      "history": [
+        {
+          "date": "2026-05-30",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-06-07",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0179",
+      "name": "Wahyu Saputra #9",
+      "phone": "081233271815",
+      "source": "Walk-in",
+      "stage": "Survey",
+      "value": 500000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-06-11",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-25",
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-05-26",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-06-11",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0180",
+      "name": "Rina Anggraini #9",
+      "phone": "081263596358",
+      "source": "FB",
+      "stage": "Proposal",
+      "value": 575000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-05-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-17",
+      "notes": "Inquiry via FB, interest on type 45",
+      "score": 22,
+      "history": [
+        {
+          "date": "2026-05-05",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-09",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0181",
+      "name": "Budi Santoso #10",
+      "phone": "081271752177",
+      "source": "TikTok",
+      "stage": "Negotiation",
+      "value": 500000000,
+      "cluster": "Cluster A",
+      "pic": "Amir",
+      "last_contact": "2026-05-02",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-07",
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-04-18",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-05-02",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0182",
+      "name": "Siti Aminah #10",
+      "phone": "081296603363",
+      "source": "FB",
+      "stage": "Won",
+      "value": 500000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-07-17",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via OLX, interest on type 36",
+      "score": 52,
+      "history": [
+        {
+          "date": "2026-06-20",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-07-17",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0183",
+      "name": "Andi Wijaya #10",
+      "phone": "081286058253",
+      "source": "FB",
+      "stage": "Lost",
+      "value": 575000000,
+      "cluster": "Cluster D",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-04-30",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Referral, interest on type 36",
+      "score": 31,
+      "history": [
+        {
+          "date": "2026-04-28",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-04-30",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0184",
+      "name": "Dewi Lestari #10",
+      "phone": "081287980090",
+      "source": "OLX",
+      "stage": "Dormant",
+      "value": 650000000,
+      "cluster": "Cluster A",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-04",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 45",
+      "score": 27,
+      "history": [
+        {
+          "date": "2026-05-05",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-04",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0185",
+      "name": "Rian Hidayat #10",
+      "phone": "081289903075",
+      "source": "TikTok",
+      "stage": "Lead",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Amir",
+      "last_contact": "2026-07-23",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-08-03",
+      "notes": "Inquiry via Walk-in, interest on type 36",
+      "score": 24,
+      "history": [
+        {
+          "date": "2026-06-29",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-23",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0186",
+      "name": "Maya Sari #10",
+      "phone": "081234428439",
+      "source": "OLX",
+      "stage": "Qualified",
+      "value": 750000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-07",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-19",
+      "notes": "Inquiry via OLX, interest on type 36",
+      "score": 69,
+      "history": [
+        {
+          "date": "2026-04-09",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-07",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0187",
+      "name": "Fajar Nugraha #10",
+      "phone": "081260758287",
+      "source": "FB",
+      "stage": "Survey",
+      "value": 850000000,
+      "cluster": "Cluster B",
+      "pic": "Riza",
+      "last_contact": "2026-06-08",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-21",
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 27,
+      "history": [
+        {
+          "date": "2026-05-25",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-08",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0188",
+      "name": "Indah Permata #10",
+      "phone": "081231163051",
+      "source": "OLX",
+      "stage": "Proposal",
+      "value": 850000000,
+      "cluster": "Cluster F",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-15",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-20",
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 85,
+      "history": [
+        {
+          "date": "2026-05-02",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-15",
+          "action": "Kirim SP3K"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0189",
+      "name": "Bayu Pratama #10",
+      "phone": "081242214278",
+      "source": "OLX",
+      "stage": "Negotiation",
+      "value": 350000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-06-09",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-10",
+      "notes": "Inquiry via OLX, interest on type 36",
+      "score": 45,
+      "history": [
+        {
+          "date": "2026-05-15",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-06-09",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0190",
+      "name": "Nur Hidayah #10",
+      "phone": "081221041667",
+      "source": "TikTok",
+      "stage": "Won",
+      "value": 750000000,
+      "cluster": "Cluster F",
+      "pic": "Amir",
+      "last_contact": "2026-07-18",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Walk-in, interest on type 54",
+      "score": 30,
+      "history": [
+        {
+          "date": "2026-07-02",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-07-18",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0191",
+      "name": "Hendra Kurniawan #10",
+      "phone": "081283252858",
+      "source": "Marketplace",
+      "stage": "Lost",
+      "value": 500000000,
+      "cluster": "Cluster D",
+      "pic": "Riza",
+      "last_contact": "2026-07-23",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 40,
+      "history": [
+        {
+          "date": "2026-06-29",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-07-23",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0192",
+      "name": "Ratna Wulandari #10",
+      "phone": "081295150704",
+      "source": "Website",
+      "stage": "Dormant",
+      "value": 425000000,
+      "cluster": "Cluster E",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-03",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 54",
+      "score": 75,
+      "history": [
+        {
+          "date": "2026-04-05",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-03",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0193",
+      "name": "Eko Susanto #10",
+      "phone": "081273835133",
+      "source": "TikTok",
+      "stage": "Lead",
+      "value": 425000000,
+      "cluster": "Cluster A",
+      "pic": "Riza",
+      "last_contact": "2026-05-07",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-13",
+      "notes": "Inquiry via Referral, interest on type 36",
+      "score": 80,
+      "history": [
+        {
+          "date": "2026-04-16",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-07",
+          "action": "Reminder DP"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0194",
+      "name": "Yuni Astuti #10",
+      "phone": "081298661787",
+      "source": "Marketplace",
+      "stage": "Qualified",
+      "value": 350000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-30",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-07-05",
+      "notes": "Inquiry via Referral, interest on type 45",
+      "score": 48,
+      "history": [
+        {
+          "date": "2026-06-10",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-30",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0195",
+      "name": "Dedi Irawan #10",
+      "phone": "081260897332",
+      "source": "IG",
+      "stage": "Survey",
+      "value": 750000000,
+      "cluster": "Cluster B",
+      "pic": "Mada",
+      "last_contact": "2026-05-05",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-06",
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 26,
+      "history": [
+        {
+          "date": "2026-04-11",
+          "action": "Follow up"
+        },
+        {
+          "date": "2026-05-05",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0196",
+      "name": "Lina Marlina #10",
+      "phone": "081218256641",
+      "source": "Marketplace",
+      "stage": "Proposal",
+      "value": 500000000,
+      "cluster": "Cluster E",
+      "pic": "Mada",
+      "last_contact": "2026-05-05",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-05-08",
+      "notes": "Inquiry via IG, interest on type 36",
+      "score": 70,
+      "history": [
+        {
+          "date": "2026-04-09",
+          "action": "Survey lokasi"
+        },
+        {
+          "date": "2026-05-05",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0197",
+      "name": "Agus Setiawan #10",
+      "phone": "081247233267",
+      "source": "Walk-in",
+      "stage": "Negotiation",
+      "value": 750000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-04",
+      "next_action": "Follow up WA",
+      "next_action_date": "2026-06-08",
+      "notes": "Inquiry via TikTok, interest on type 54",
+      "score": 61,
+      "history": [
+        {
+          "date": "2026-05-22",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-06-04",
+          "action": "Ttd booking"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0198",
+      "name": "Tuti Hartati #10",
+      "phone": "081283517332",
+      "source": "Referral",
+      "stage": "Won",
+      "value": 850000000,
+      "cluster": "Cluster C",
+      "pic": "Riza",
+      "last_contact": "2026-05-09",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via Marketplace, interest on type 45",
+      "score": 43,
+      "history": [
+        {
+          "date": "2026-04-13",
+          "action": "Kirim brosur"
+        },
+        {
+          "date": "2026-05-09",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0199",
+      "name": "Wahyu Saputra #10",
+      "phone": "081232737493",
+      "source": "OLX",
+      "stage": "Lost",
+      "value": 750000000,
+      "cluster": "Cluster C",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-05-07",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via IG, interest on type 45",
+      "score": 48,
+      "history": [
+        {
+          "date": "2026-04-26",
+          "action": "Personal call"
+        },
+        {
+          "date": "2026-05-07",
+          "action": "Closing"
+        }
+      ]
+    },
+    {
+      "id": "LEAD-0200",
+      "name": "Rina Anggraini #10",
+      "phone": "081228996938",
+      "source": "OLX",
+      "stage": "Dormant",
+      "value": 500000000,
+      "cluster": "Cluster B",
+      "pic": "Yudi/Sdek",
+      "last_contact": "2026-06-26",
+      "next_action": null,
+      "next_action_date": null,
+      "notes": "Inquiry via TikTok, interest on type 36",
+      "score": 33,
+      "history": [
+        {
+          "date": "2026-06-05",
+          "action": "WA blast"
+        },
+        {
+          "date": "2026-06-26",
+          "action": "Closing"
+        }
+      ]
+    }
+  ]
+}

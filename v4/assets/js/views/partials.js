@@ -6,6 +6,7 @@ import { formatNumber, formatPercent, formatDate, initials } from "../lib/format
 import { downloadCsv } from "../lib/export.js";
 import { getCurrentUser } from "../auth.js";
 import { fetchData } from "../ssot.js";
+import { h, build } from "../lib/dom.js";
 
 // ============================================================
 // Score card
@@ -13,13 +14,11 @@ import { fetchData } from "../ssot.js";
 export function kpiCard({ label, value, target, unit = "num", chip, accent = false, delta }) {
   const card = document.createElement("div");
   card.className = `scorecard ${accent ? "scorecard--accent" : ""}`;
-  card.innerHTML = `
-    <span class="scorecard__label">${escapeHtml(label)}</span>
-    <span class="scorecard__value num">${escapeHtml(value)}</span>
-    ${delta ? `<span class="scorecard__delta scorecard__delta--${delta.kind || "flat"}">${escapeHtml(delta.text)}</span>` : ""}
-    ${chip ? `<span class="chip chip--${chip.kind || "info"}">${escapeHtml(chip.text)}</span>` : ""}
-    ${target ? `<span class="scorecard__delta scorecard__delta--flat">target: ${escapeHtml(target)}</span>` : ""}
-  `;
+  card.appendChild(h("span", { class: "scorecard__label" }, label));
+  card.appendChild(h("span", { class: "scorecard__value num" }, value));
+  if (delta) card.appendChild(h("span", { class: `scorecard__delta scorecard__delta--${delta.kind || "flat"}` }, delta.text));
+  if (chip) card.appendChild(h("span", { class: `chip chip--${chip.kind || "info"}` }, chip.text));
+  if (target) card.appendChild(h("span", { class: "scorecard__delta scorecard__delta--flat" }, `target: ${target}`));
   return card;
 }
 
@@ -29,11 +28,9 @@ export function kpiCard({ label, value, target, unit = "num", chip, accent = fal
 export function sectionLabel(index, title, sub) {
   const wrap = document.createElement("div");
   wrap.className = "section-label";
-  wrap.innerHTML = `
-    <span class="section-label__index">${String(index).padStart(2, "0")}</span>
-    <span class="section-label__title">${escapeHtml(title)}</span>
-    ${sub ? `<span class="section-label__sub">${escapeHtml(sub)}</span>` : ""}
-  `;
+  wrap.appendChild(h("span", { class: "section-label__index" }, String(index).padStart(2, "0")));
+  wrap.appendChild(h("span", { class: "section-label__title" }, title));
+  if (sub) wrap.appendChild(h("span", { class: "section-label__sub" }, sub));
   return wrap;
 }
 
@@ -267,6 +264,11 @@ export function dataTable({
           const td = document.createElement("td");
           if (c.numeric) td.className = "num";
           const v = typeof c.value === "function" ? c.value(row) : row[c.key];
+          if (c.mono) td.classList.add("u-mono");
+          if (c.truncate) {
+            td.classList.add("u-truncate");
+            td.title = String(v ?? "—");
+          }
 
           // evidence warning
           if (c.key === "evidence_required" && evidenceRequired && !row.evidence) {
@@ -582,9 +584,7 @@ export function evidenceBanner(missingCount) {
   if (!missingCount) return null;
   const div = document.createElement("div");
   div.className = "banner banner--cached";
-  div.style.background = "var(--color-warning-soft)";
-  div.style.color = "var(--color-warning)";
-  div.innerHTML = `${missingCount} KPI belum diupload evidence — buka Notion untuk upload`;
+  div.appendChild(h("span", { class: "banner__text" }, `${missingCount} KPI belum diupload evidence — buka Notion untuk upload`));
   return div;
 }
 
@@ -613,7 +613,7 @@ export function mountGlobalSearch() {
   overlay.hidden = true;
   overlay.innerHTML = `
     <div class="search-palette__panel" role="dialog" aria-label="Pencarian global">
-      <input type="search" class="search-palette__input" id="cmdk-input" placeholder="Cari PIC, KPI, jobdesk…" autocomplete="off" />
+      <input type="search" class="search-palette__input" name="cmdk-input" id="cmdk-input" placeholder="Cari PIC, KPI, jobdesk…" autocomplete="off" />
       <div class="search-palette__results" id="cmdk-results"></div>
       <div class="search-palette__hint">↑↓ pilih · ↵ buka · esc tutup</div>
     </div>

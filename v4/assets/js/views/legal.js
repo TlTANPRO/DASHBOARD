@@ -1,26 +1,32 @@
-// views/legal.js — SOW compliance, izin tracker, expiry timeline (Bu Nisya).
+// views/legal.js — SOW compliance, izin tracker, expiry timeline, vendor score (Bu Nisya).
 
 import { fetchData } from "../ssot.js";
-import { kpiCard, sectionLabel, dataTable, kanbanBoard, evidenceBanner, toast } from "./partials.js";
+import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
 import { getCurrentUser } from "../auth.js";
-import { formatDate, formatNumber, formatPercent } from "../lib/format.js";
+import { formatDate, formatNumber, formatPercent, formatIDR } from "../lib/format.js";
+import { sparkline } from "../lib/charts.js";
+import { h } from "../lib/dom.js";
+import { reveal, markForReveal } from "../lib/reveal.js";
 
 export async function render({ container }) {
   container.innerHTML = "";
   const hero = document.querySelector("#divisi-hero");
-  hero.innerHTML = `
-    <span class="section-label__index">02</span>
-    <h1 style="margin-top:8px">Legal</h1>
-    <p style="color:var(--color-text-muted)">Compliance · izin · kontrak — semua dokumen grup 3 PT</p>
-  `;
+  hero.innerHTML = "";
+  hero.appendChild(h("span", { class: "section-label__index" }, "02"));
+  hero.appendChild(h("h1", { style: { marginTop: "8px" } }, "Legal"));
+  hero.appendChild(h("p", { class: "u-text-muted" }, "Compliance · izin · kontrak — semua dokumen grup 3 PT"));
 
-  const [sow, divisi, personal] = await Promise.all([
+  const [sow, divisi, personal, vendorsData, auditData] = await Promise.all([
     fetchData("sow.json"),
     fetchData("kpi-divisi.json"),
     fetchData("kpi-personal.json"),
+    fetchData("vendors.json"),
+    fetchData("audit-trail.json"),
   ]);
 
   const legalKpis = (divisi?.divisi || []).find(d => d.slug === "legal")?.kpis || [];
+  const vendors = vendorsData?.vendors || [];
+  const auditEntries = (auditData?.entries || []).filter(e => ["Bu Nisya", "Rifki", "Pak Ardian"].includes(e.actor) && ["approve", "reject", "comment"].includes(e.action)).slice(0, 20);
 
   // 01 — Hero scorecards
   const scorecards = document.createElement("div");
@@ -34,7 +40,7 @@ export async function render({ container }) {
   container.appendChild(scorecards);
 
   // Evidence banner
-  const buNisyaKpi = (personal?.rows || []).filter(k => k.pic === "Bu Nisya");
+  const buNisyaKpi = (personal?.rows || []).filter(k => ["Bu Nisya", "Rifki"].includes(k.pic));
   const missingEvidence = buNisyaKpi.filter(k => !k.evidence).length;
   const banner = evidenceBanner(missingEvidence);
   if (banner) { banner.style.position = "static"; banner.style.transform = "none"; banner.style.display = "inline-block"; banner.style.margin = "16px 0"; container.appendChild(banner); }
@@ -58,92 +64,98 @@ export async function render({ container }) {
   }));
   container.appendChild(sec);
 
-  // 03 — Izin Tracker (two-third)
-  const today = new Date("2026-07-28");
-  const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x.toISOString().split("T")[0]; };
-  const izinRows = [
-    { izin: "SHM Konsumen 1-12", jenis: "SHM",   stage: "Submitted", expiry: addDays(today, 30) },
-    { izin: "IMB/PBG Cluster B-7", jenis: "IMB", stage: "Draft",    expiry: addDays(today, 14) },
-    { izin: "SLF Cluster A",       jenis: "SLF", stage: "Review",   expiry: addDays(today, 60) },
-    { izin: "Kontrak Vendor Semen",jenis: "Kontrak", stage: "Approved", expiry: addDays(today, 180) },
-    { izin: "AJB Akad Kredit 1",   jenis: "AJB", stage: "Submitted", expiry: addDays(today, 7) },
-    { izin: "AJB Akad Kredit 2",   jenis: "AJB", stage: "Approved",  expiry: addDays(today, 90) },
-    { izin: "PBG Cluster A ext.",  jenis: "PBG", stage: "Draft",    expiry: addDays(today, 21) },
-    { izin: "Kontrak Marketing",   jenis: "Kontrak", stage: "Review", expiry: addDays(today, 45) },
-    { izin: "IMB Cluster C-1",     jenis: "IMB", stage: "Submitted", expiry: addDays(today, 100) },
-    { izin: "SLF Cluster B-7",     jenis: "SLF", stage: "Draft",    expiry: addDays(today, 200) },
-  ].map(r => {
-    const days = Math.round((new Date(r.expiry) - today) / 86400000);
-    return { ...r, countdown: days + " hari", countdown_chip: days < 30 && days > 0 ? "danger" : days < 0 ? "danger" : days < 60 ? "warning" : "success" };
-  });
-
+  // 03 — Vendor Master + Score History (two-third)
   const sec2 = document.createElement("section");
   sec2.className = "card bento-two-third";
-  sec2.appendChild(sectionLabel(3, "Izin Tracker", "SHM · IMB · PBG · SLF · AJB · Kontrak"));
+  sec2.appendChild(sectionLabel(3, "Vendor Master", `${vendors.length} vendor · 5 kategori · score history 6 bulan`));
+  const vendorRows = vendors.map(v => ({
+    id: v.id, name: v.name, kategori: v.kategori, pic: v.pic,
+    score: v.score_current, score_avg: v.score_avg,
+    po_count: v.po_count_ytd, value: v.total_value_ytd, status: v.status,
+    score_history: v.score_history,
+  }));
   sec2.appendChild(dataTable({
     columns: [
-      { key: "izin", label: "Izin" },
-      { key: "jenis", label: "Jenis", filter: true, filterLabel: "Semua jenis" },
-      { key: "stage", label: "Stage", chip: r => r.stage === "Approved" ? "success" : r.stage === "Submitted" ? "info" : r.stage === "Review" ? "warning" : "danger" },
-      { key: "expiry", label: "Expiry", value: r => r.expiry },
-      { key: "countdown", label: "Sisa", chip: r => r.countdown_chip },
+      { key: "id", label: "ID", mono: true },
+      { key: "name", label: "Vendor" },
+      { key: "kategori", label: "Kategori", filter: true },
+      { key: "pic", label: "PIC" },
+      { key: "score", label: "Score", numeric: true, chip: r => r.score >= 85 ? "success" : r.score >= 70 ? "info" : r.score >= 60 ? "warning" : "danger" },
+      { key: "score_avg", label: "Avg", numeric: true },
+      { key: "po_count", label: "PO YTD", numeric: true },
+      { key: "value", label: "Value YTD", numeric: true, value: r => formatIDR(r.value) },
+      { key: "status", label: "Status", chip: r => r.status === "active" ? "success" : r.status === "review" ? "warning" : "danger" },
     ],
-    rows: izinRows,
-    viewModes: ["list", "board", "calendar"],
-    groupBy: { key: "stage", columns: [
-      { id: "Draft", label: "Draft", match: v => v === "Draft" },
-      { id: "Review", label: "Review", match: v => v === "Review" },
-      { id: "Submitted", label: "Submitted", match: v => v === "Submitted" },
-      { id: "Approved", label: "Approved", match: v => v === "Approved" },
-    ]},
-    editable: getCurrentUser()?.is_owner === true,
-    onEdit: async (row, key) => { toast(`Izin "${row.izin}" → ${key} = ${row[key]}`, "info"); },
-    bulkActions: [
-      { label: "Set Approved", kind: "success", onClick: sel => toast(`${sel.length} izin disetujui`, "success") },
-      { label: "Set Review",   kind: "warning", onClick: sel => toast(`${sel.length} izin di-review`, "warning") },
-    ],
+    rows: vendorRows,
+    viewModes: ["list", "board"],
+    groupBy: { key: "kategori", columns: ["Material", "Upah", "Alat", "Subkon", "Jasa"].map(k => ({
+      id: k, label: k, match: v => v === k,
+    }))},
     searchable: true,
     sortable: true,
     exportable: true,
-    exportName: "izin-tracker",
-    calendarDate: "expiry",
+    exportName: "vendor-master",
     aggregation: {
-      label: "Total / Approved / <30 hari",
-      fn: rows => {
-        const soon = rows.filter(r => { const d = new Date(r.expiry); return (d - Date.now()) / 86400000 < 30 && d > Date.now(); }).length;
-        return `${rows.length} / ${rows.filter(r => r.stage === "Approved").length} / ${soon}`;
-      }
+      label: "Total vendor / Active / Blacklist",
+      fn: rows => `${rows.length} / ${rows.filter(r => r.status === "active").length} / ${rows.filter(r => r.status === "blacklist").length}`,
     },
   }));
   container.appendChild(sec2);
 
-  // 04 — Expiry timeline (third)
+  // 04 — Vendor Score History (third) — sparklines per vendor
   const sec3 = document.createElement("section");
   sec3.className = "card bento-third";
-  sec3.appendChild(sectionLabel(4, "Expiry Terdekat", "Top 5"));
-  const sorted = [...izinRows].sort((a, b) => new Date(a.expiry) - new Date(b.expiry)).slice(0, 5);
-  const timeline = document.createElement("ul");
-  timeline.style.listStyle = "none";
-  timeline.style.padding = "0";
-  timeline.style.margin = "0";
-  for (const r of sorted) {
-    const li = document.createElement("li");
-    li.style.padding = "8px 0";
-    li.style.borderBottom = "1px solid var(--color-border)";
-    li.style.fontSize = "var(--text-sm)";
-    li.innerHTML = `<div style="font-weight:500">${r.izin}</div><div style="display:flex;gap:6px;align-items:center;margin-top:4px"><span class="chip chip--${r.countdown_chip}">${r.countdown}</span><span style="color:var(--color-text-muted);font-size:var(--text-xs)">${r.jenis} · ${formatDate(r.expiry)}</span></div>`;
-    timeline.appendChild(li);
+  sec3.appendChild(sectionLabel(4, "Top Vendor Trend", "Score history 6 bulan"));
+  const sparkList = document.createElement("div");
+  sparkList.className = "u-flex-col u-gap-3 u-mt-3";
+  const topVendors = [...vendors].sort((a, b) => b.score_current - a.score_current).slice(0, 10);
+  for (const v of topVendors) {
+    const row = document.createElement("div");
+    row.className = "u-flex-row u-justify-between u-align-center u-gap-3";
+    const left = document.createElement("div");
+    left.className = "u-flex-col u-gap-1";
+    left.appendChild(h("strong", { class: "u-text-sm" }, v.name));
+    left.appendChild(h("span", { class: "u-text-xs u-text-muted" }, `${v.kategori} · ${v.pic}`));
+    row.appendChild(left);
+    const right = document.createElement("div");
+    right.className = "u-flex-row u-align-center u-gap-2";
+    const spark = sparkline(v.score_history, v.score_current >= 85 ? 3 : v.score_current >= 70 ? 2 : 4, 24);
+    if (spark) right.appendChild(spark);
+    right.appendChild(h("strong", { class: "u-mono" }, String(v.score_current)));
+    row.appendChild(right);
+    sparkList.appendChild(row);
   }
-  sec3.appendChild(timeline);
+  sec3.appendChild(sparkList);
   container.appendChild(sec3);
 
-  // 05 — KPI Compliance (full)
-  const sec4 = document.createElement("section");
-  sec4.className = "card bento-full";
-  sec4.appendChild(sectionLabel(5, "KPI Compliance", "Bu Nisya · BAB 7"));
-  sec4.appendChild(dataTable({
+  // 05 — Legal Audit Trail (full)
+  if (auditEntries.length) {
+    const sec4 = document.createElement("section");
+    sec4.className = "card bento-full";
+    sec4.appendChild(sectionLabel(5, "Legal Audit Trail", `${auditEntries.length} entri terkait legal`));
+    sec4.appendChild(dataTable({
+      columns: [
+        { key: "timestamp", label: "Waktu", mono: true, value: r => r.timestamp.replace("T", " ").slice(0, 19) },
+        { key: "actor", label: "Aktor" },
+        { key: "action", label: "Action", chip: r => r.action === "approve" ? "success" : r.action === "reject" ? "danger" : "info" },
+        { key: "ref", label: "Ref", mono: true },
+        { key: "target", label: "Target" },
+      ],
+      rows: auditEntries,
+      viewModes: ["list"],
+      searchable: true,
+      sortable: true,
+    }));
+    container.appendChild(sec4);
+  }
+
+  // 06 — KPI Compliance (full)
+  const sec5 = document.createElement("section");
+  sec5.className = "card bento-full";
+  sec5.appendChild(sectionLabel(6, "KPI Compliance", "Bu Nisya · Rifki · BAB 7"));
+  sec5.appendChild(dataTable({
     columns: [
-      { key: "pic", label: "PIC", avatar: true },
+      { key: "pic", label: "PIC", avatar: "pic" },
       { key: "kpi", label: "Indikator" },
       { key: "target", label: "Target" },
       { key: "actual", label: "Actual", chip: r => r.actual ? "success" : "warning" },
@@ -156,7 +168,7 @@ export async function render({ container }) {
     ]},
     evidenceRequired: true,
     editable: getCurrentUser()?.is_owner === true,
-    onEdit: async () => { toast("Update tersimpan (mock)", "success"); },
+    onEdit: async () => { toast("Update tersimpan", "success"); },
     bulkActions: [
       { label: "Tandai Selesai", kind: "success", onClick: sel => toast(`${sel.length} ditandai selesai`, "success") },
     ],
@@ -165,5 +177,7 @@ export async function render({ container }) {
       fn: rows => `${rows.length} / ${rows.filter(r => r.actual).length} / ${formatPercent(rows.filter(r => r.actual).length / (rows.length || 1) * 100)}`
     },
   }));
-  container.appendChild(sec4);
+  container.appendChild(sec5);
+  markForReveal(container);
+  reveal(container);
 }

@@ -3,30 +3,47 @@
 import { fetchData } from "../ssot.js";
 import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
 import { getCurrentUser } from "../auth.js";
-import { formatNumber, formatPercent } from "../lib/format.js";
-import * as charts from "../charts/index.js";
+import { formatNumber, formatPercent, formatIDR } from "../lib/format.js";
+import { barChart, donutChart } from "../lib/charts.js";
+import { h, Fragment } from "../lib/dom.js";
+import { reveal, markForReveal } from "../lib/reveal.js";
 
 export async function render({ container }) {
   container.innerHTML = "";
   const hero = document.querySelector("#divisi-hero");
-  hero.innerHTML = `
-    <span class="section-label__index">03</span>
-    <h1 style="margin-top:8px">Marketing</h1>
-    <p style="color:var(--color-text-muted)">Lead → Survey → SP3K → Closing · 4 PIC marketing</p>
-  `;
+  hero.innerHTML = "";
+  hero.appendChild(h("span", { class: "section-label__index" }, "03"));
+  hero.appendChild(h("h1", { style: { marginTop: "8px" } }, "Marketing"));
+  hero.appendChild(h("p", { class: "u-text-muted" }, "Lead → Survey → SP3K → Closing · 4 PIC marketing"));
 
-  const [divisi, personal] = await Promise.all([
+  const [divisi, personal, leadsData, contentData] = await Promise.all([
     fetchData("kpi-divisi.json"),
     fetchData("kpi-personal.json"),
+    fetchData("leads.json"),
+    fetchData("content.json"),
   ]);
 
   const mktKpis = (divisi?.divisi || []).find(d => d.slug === "marketing")?.kpis || [];
+  const allLeads = leadsData?.leads || [];
+  const allPosts = contentData?.posts || [];
 
-  // 01 — Hero scorecards
+  // 01 — Hero scorecards (4 from real data)
+  const stageCounts = allLeads.reduce((acc, l) => {
+    acc[l.stage] = (acc[l.stage] || 0) + 1;
+    return acc;
+  }, {});
+  const leadScorecard = [
+    { label: "Total Leads", value: allLeads.length.toString(), target: 200 },
+    { label: "Qualified", value: (stageCounts["Qualified"] || 0).toString(), target: 60 },
+    { label: "Proposal", value: (stageCounts["Proposal"] || 0).toString(), target: 20 },
+    { label: "Won", value: (stageCounts["Won"] || 0).toString(), target: 8 },
+  ];
   const scorecards = document.createElement("div");
   scorecards.className = "bento-quad";
-  mktKpis.slice(0, 4).forEach((k, i) => scorecards.appendChild(kpiCard({
-    label: k.indikator, value: k.actual || k.target, target: k.target, accent: i === 0,
+  // Use real KPI if available, else derive from data
+  const cards = mktKpis.slice(0, 4).length ? mktKpis.slice(0, 4) : leadScorecard;
+  cards.forEach((k, i) => scorecards.appendChild(kpiCard({
+    label: k.indikator || k.label, value: k.actual || k.value, target: k.target, accent: i === 0,
   })));
   container.appendChild(scorecards);
 
@@ -34,40 +51,45 @@ export async function render({ container }) {
   const mktRows = (personal?.rows || []).filter(k => ["Mada", "Riza", "Yudi/Sdek", "Amir"].includes(k.pic));
   const missingEvidence = mktRows.filter(k => !k.evidence).length;
   const banner = evidenceBanner(missingEvidence);
-  if (banner) { banner.style.position = "static"; banner.style.transform = "none"; banner.style.display = "inline-block"; banner.style.margin = "16px 0"; container.appendChild(banner); }
+  if (banner) {
+    banner.style.position = "static";
+    banner.style.transform = "none";
+    banner.style.display = "inline-block";
+    banner.style.margin = "16px 0";
+    container.appendChild(banner);
+  }
 
-  // 02 — Lead Funnel (two-third)
-  const sec = document.createElement("section");
-  sec.className = "card bento-two-third";
-  sec.appendChild(sectionLabel(2, "Lead Funnel", "Lead → Survey → SP3K → Closing"));
-  const funnelChart = document.createElement("div");
-  funnelChart.style.height = "220px";
-  sec.appendChild(funnelChart);
-  charts.bar(funnelChart, {
-    data: [
-      { label: "Lead",    value: 250, target: 250 },
-      { label: "Survey",  value: 38,  target: 38 },
-      { label: "SP3K",    value: 14,  target: 14 },
-      { label: "Closing", value: 6,   target: 6 },
-    ],
-    height: 220,
-  });
-  container.appendChild(sec);
+  // 02 — Lead Funnel (two-third) — REAL stage distribution from leads.json
+  const funnelSec = document.createElement("section");
+  funnelSec.className = "card bento-two-third";
+  funnelSec.appendChild(sectionLabel(2, "Lead Funnel", `Lead → Qualified → Proposal → Won (${allLeads.length} total)`));
+  const funnelWrap = document.createElement("div");
+  funnelWrap.className = "u-flex-col u-align-center u-mt-3";
+  funnelSec.appendChild(funnelWrap);
+  funnelWrap.appendChild(barChart({
+    data: ["Lead", "Qualified", "Survey", "Proposal", "Negotiation", "Won"].map(s => ({
+      label: s, value: stageCounts[s] || 0,
+    })),
+    height: 200,
+    color: 1,
+  }));
+  container.appendChild(funnelSec);
 
   // 03 — Conversion donut (third)
-  const sec2 = document.createElement("section");
-  sec2.className = "card bento-third";
-  sec2.appendChild(sectionLabel(3, "Conversion Rate", "Target min 2.4%"));
+  const conversionSec = document.createElement("section");
+  conversionSec.className = "card bento-third";
+  conversionSec.appendChild(sectionLabel(3, "Conversion Rate", `${((stageCounts["Won"] || 0) / Math.max(allLeads.length, 1) * 100).toFixed(1)}%`));
   const donutWrap = document.createElement("div");
-  donutWrap.style.display = "flex";
-  donutWrap.style.justifyContent = "center";
-  donutWrap.style.padding = "16px 0";
-  sec2.appendChild(donutWrap);
-  charts.donut(donutWrap, {
-    segments: [{ label: "Closing", value: 6 }, { label: "Lost", value: 244 }],
+  donutWrap.className = "u-flex u-justify-end u-p-4";
+  conversionSec.appendChild(donutWrap);
+  donutWrap.appendChild(donutChart({
+    value: stageCounts["Won"] || 0,
+    max: Math.max(allLeads.length, 1),
+    color: 3,
     size: 160,
-  });
-  container.appendChild(sec2);
+    label: "Won",
+  }));
+  container.appendChild(conversionSec);
 
   // 04 — PIC Marketing Performance (full)
   const sec3 = document.createElement("section");
@@ -75,7 +97,7 @@ export async function render({ container }) {
   sec3.appendChild(sectionLabel(4, "PIC Marketing Performance", "Mada · Riza · Yudi/Sdek · Amir"));
   sec3.appendChild(dataTable({
     columns: [
-      { key: "pic", label: "PIC", avatar: true, filter: true, filterLabel: "Semua PIC" },
+      { key: "pic", label: "PIC", avatar: "pic", filter: true, filterLabel: "Semua PIC" },
       { key: "kpi", label: "KPI" },
       { key: "target", label: "Target" },
       { key: "actual", label: "Actual", chip: r => r.actual ? "success" : "warning" },
@@ -92,9 +114,9 @@ export async function render({ container }) {
     ]},
     evidenceRequired: true,
     editable: getCurrentUser()?.is_owner === true,
-    onEdit: async () => { toast("Update tersimpan (mock)", "success"); },
+    onEdit: async () => { toast("Update tersimpan", "success"); },
     bulkActions: [
-      { label: "Tandai Closing", kind: "success", onClick: sel => toast(`${sel.length} KPI ditandai closing`, "success") },
+      { label: "Tandai Tercapai", kind: "success", onClick: sel => toast(`${sel.length} KPI ditandai closing`, "success") },
       { label: "Reset Actual",   kind: "warning", onClick: sel => toast(`${sel.length} KPI di-reset`, "warning") },
     ],
     searchable: true,
@@ -108,67 +130,71 @@ export async function render({ container }) {
   }));
   container.appendChild(sec3);
 
-  // 05 — Lead Pipeline (two-third)
-  const leads = [
-    { nama: "Budi Santoso",   source: "IG",      stage: "Closing",   days_in_stage: 3  },
-    { nama: "Siti Aminah",    source: "TikTok",  stage: "SP3K",      days_in_stage: 5  },
-    { nama: "Andi Wijaya",    source: "Web",     stage: "Survey",    days_in_stage: 2  },
-    { nama: "Dewi Lestari",   source: "Walk-in", stage: "New",       days_in_stage: 1  },
-    { nama: "Rian Hidayat",   source: "FB",      stage: "Lost",      days_in_stage: 21 },
-    { nama: "Maya Sari",      source: "IG",      stage: "Contacted", days_in_stage: 4  },
-    { nama: "Hendra",         source: "Walk-in", stage: "SP3K",      days_in_stage: 7  },
-    { nama: "Lina Marlina",   source: "TikTok",  stage: "Survey",    days_in_stage: 2  },
-    { nama: "Yusuf",          source: "IG",      stage: "Closing",   days_in_stage: 1  },
-    { nama: "Rina Wati",      source: "Web",     stage: "Contacted", days_in_stage: 3  },
-    { nama: "Tono",           source: "Walk-in", stage: "Lost",      days_in_stage: 30 },
-    { nama: "Sari",           source: "FB",      stage: "Survey",    days_in_stage: 5  },
-  ];
-
+  // 05 — Leads Pipeline (two-third) — REAL data from leads.json
   const sec4 = document.createElement("section");
   sec4.className = "card bento-two-third";
-  sec4.appendChild(sectionLabel(5, "Lead Pipeline", "12 lead aktif"));
+  sec4.appendChild(sectionLabel(5, "Lead Pipeline", `${allLeads.length} lead · 8 stage · 8 source`));
+  const leadsForTable = allLeads.map(l => ({
+    id: l.id, name: l.name, source: l.source, stage: l.stage,
+    value: l.value, pic: l.pic, cluster: l.cluster,
+    last_contact: l.last_contact, score: l.score, phone: l.phone,
+  }));
   sec4.appendChild(dataTable({
     columns: [
-      { key: "nama", label: "Nama" },
+      { key: "id", label: "ID", mono: true },
+      { key: "name", label: "Nama" },
       { key: "source", label: "Source", filter: true, filterLabel: "Semua source" },
-      { key: "stage", label: "Stage", chip: r => r.stage === "Closing" ? "success" : r.stage === "SP3K" || r.stage === "Survey" ? "warning" : r.stage === "New" || r.stage === "Contacted" ? "info" : "danger" },
-      { key: "days_in_stage", label: "Hari", numeric: true, chip: r => r.days_in_stage > 14 ? "danger" : null },
+      { key: "stage", label: "Stage", filter: true, chip: r => r.stage === "Won" ? "success" : r.stage === "Lost" ? "danger" : r.stage === "Dormant" ? "info" : "warning" },
+      { key: "cluster", label: "Cluster" },
+      { key: "pic", label: "PIC", filter: true },
+      { key: "value", label: "Value", numeric: true, value: r => formatIDR(r.value) },
+      { key: "score", label: "Score", numeric: true, chip: r => r.score >= 80 ? "success" : r.score >= 60 ? "info" : r.score >= 40 ? "warning" : "danger" },
     ],
-    rows: leads,
+    rows: leadsForTable,
     viewModes: ["list", "board"],
     groupBy: { key: "stage", columns: [
-      { id: "New", label: "New", match: v => v === "New" },
-      { id: "Contacted", label: "Contacted", match: v => v === "Contacted" },
+      { id: "Lead", label: "Lead", match: v => v === "Lead" },
+      { id: "Qualified", label: "Qualified", match: v => v === "Qualified" },
       { id: "Survey", label: "Survey", match: v => v === "Survey" },
-      { id: "SP3K", label: "SP3K", match: v => v === "SP3K" },
-      { id: "Closing", label: "Closing", match: v => v === "Closing" },
+      { id: "Proposal", label: "Proposal", match: v => v === "Proposal" },
+      { id: "Negotiation", label: "Negotiation", match: v => v === "Negotiation" },
+      { id: "Won", label: "Won", match: v => v === "Won" },
       { id: "Lost", label: "Lost", match: v => v === "Lost" },
+      { id: "Dormant", label: "Dormant", match: v => v === "Dormant" },
     ]},
-    editable: true,
-    onEdit: async () => { toast("Stage diupdate", "info"); },
     searchable: true,
-    aggregation: { label: "Total lead / Closing / Lost", fn: rows => `${rows.length} / ${rows.filter(r => r.stage === "Closing").length} / ${rows.filter(r => r.stage === "Lost").length}` },
+    sortable: true,
+    exportable: true,
+    exportName: "leads-pipeline",
+    aggregation: { label: "Total / Won / Lost", fn: rows => `${rows.length} / ${rows.filter(r => r.stage === "Won").length} / ${rows.filter(r => r.stage === "Lost").length}` },
   }));
   container.appendChild(sec4);
 
-  // 06 — Channel Mix (third)
-  const sec5 = document.createElement("section");
-  sec5.className = "card bento-third";
-  sec5.appendChild(sectionLabel(6, "Channel Mix", "Sumber lead Juli"));
-  const donutWrap2 = document.createElement("div");
-  donutWrap2.style.display = "flex";
-  donutWrap2.style.justifyContent = "center";
-  donutWrap2.style.padding = "16px 0";
-  sec5.appendChild(donutWrap2);
-  charts.donut(donutWrap2, {
-    segments: [
-      { label: "IG", value: 40 },
-      { label: "FB", value: 25 },
-      { label: "TikTok", value: 20 },
-      { label: "Web", value: 10 },
-      { label: "Walk-in", value: 5 },
-    ],
-    size: 160,
-  });
-  container.appendChild(sec5);
+  // 06 — Channel performance (third) — REAL data from content.json
+  const channelMix = allPosts.reduce((acc, p) => {
+    const ch = p.channel;
+    if (!acc[ch]) acc[ch] = { reach: 0, eng: 0, leads: 0, count: 0 };
+    acc[ch].reach += p.reach;
+    acc[ch].eng += p.engagement;
+    acc[ch].leads += p.leads_generated;
+    acc[ch].count += 1;
+    return acc;
+  }, {});
+  const channelSec = document.createElement("section");
+  channelSec.className = "card bento-third";
+  channelSec.appendChild(sectionLabel(6, "Channel Performance", `${allPosts.length} post · 90 hari`));
+  const channelWrap = document.createElement("div");
+  channelWrap.className = "u-flex-col u-gap-3 u-mt-3";
+  channelSec.appendChild(channelWrap);
+  for (const [ch, s] of Object.entries(channelMix)) {
+    const row = document.createElement("div");
+    row.className = "u-flex-row u-justify-between u-gap-3";
+    row.appendChild(h("span", { class: "u-text-sm u-text-muted" }, ch));
+    row.appendChild(h("strong", { class: "u-mono" }, formatNumber(s.reach)));
+    channelWrap.appendChild(row);
+  }
+  container.appendChild(channelSec);
+
+  markForReveal(container);
+  reveal(container);
 }

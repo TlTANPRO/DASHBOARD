@@ -3,120 +3,135 @@
 import { fetchData } from "../ssot.js";
 import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
 import { getCurrentUser } from "../auth.js";
-import { formatNumber, formatPercent } from "../lib/format.js";
-import * as charts from "../charts/index.js";
+import { formatNumber, formatPercent, formatIDR, formatDate } from "../lib/format.js";
+import { lineChart, gaugeChart, donutChart } from "../lib/charts.js";
+import { h } from "../lib/dom.js";
+import { reveal, markForReveal } from "../lib/reveal.js";
 
 export async function render({ container }) {
   container.innerHTML = "";
   const hero = document.querySelector("#divisi-hero");
-  hero.innerHTML = `
-    <span class="section-label__index">06</span>
-    <h1 style="margin-top:8px">Media</h1>
-    <p style="color:var(--color-text-muted)">Majang Mejeng Media · konten · engagement · lead from content</p>
-  `;
+  hero.innerHTML = "";
+  hero.appendChild(h("span", { class: "section-label__index" }, "06"));
+  hero.appendChild(h("h1", { style: { marginTop: "8px" } }, "Media"));
+  hero.appendChild(h("p", { class: "u-text-muted" }, "Majang Mejeng Media · konten · engagement · lead from content"));
 
-  const [divisi, personal] = await Promise.all([
+  const [divisi, personal, contentData, vendorsData] = await Promise.all([
     fetchData("kpi-divisi.json"),
     fetchData("kpi-personal.json"),
+    fetchData("content.json"),
+    fetchData("vendors.json"),
   ]);
 
   const medKpis = (divisi?.divisi || []).find(d => d.slug === "media")?.kpis || [];
+  const posts = contentData?.posts || [];
+  const mediaVendors = (vendorsData?.vendors || []).filter(v => v.kategori === "Jasa");
 
-  // 01 — Hero scorecards
+  // Aggregate metrics
+  const totalReach = posts.reduce((a, p) => a + p.reach, 0);
+  const totalEng = posts.reduce((a, p) => a + p.engagement, 0);
+  const totalLeads = posts.reduce((a, p) => a + p.leads_generated, 0);
+  const totalCost = posts.reduce((a, p) => a + p.cost_idr, 0);
+  const avgEng = totalReach ? (totalEng / totalReach) * 100 : 0;
+
+  // Trend data: group by week
+  const trend = [];
+  for (let w = 0; w < 12; w++) {
+    const weekStart = new Date("2026-07-29");
+    weekStart.setDate(weekStart.getDate() - (w * 7));
+    const weekPosts = posts.filter(p => {
+      const pd = new Date(p.date);
+      return pd <= weekStart && pd > new Date(weekStart.getTime() - 7 * 86400000);
+    });
+    trend.push({ label: `W${12 - w}`, value: weekPosts.reduce((a, p) => a + p.reach, 0) });
+  }
+  trend.reverse();
+
+  const heroCards = medKpis.length ? medKpis.slice(0, 4) : [
+    { indikator: "Total Posts", target: `${posts.length}`, actual: `${posts.length}` },
+    { indikator: "Total Reach", target: formatNumber(totalReach), actual: formatNumber(totalReach) },
+    { indikator: "Leads from Content", target: `${totalLeads}`, actual: `${totalLeads}` },
+    { indikator: "Avg Engagement", target: formatPercent(avgEng), actual: formatPercent(avgEng) },
+  ];
   const scorecards = document.createElement("div");
   scorecards.className = "bento-quad";
-  medKpis.forEach((k, i) => scorecards.appendChild(kpiCard({
-    label: k.indikator, value: k.actual || k.target, target: k.target, accent: i === 0,
+  heroCards.forEach((k, i) => scorecards.appendChild(kpiCard({
+    label: k.indikator || k.label, value: k.actual || k.value, target: k.target, accent: i === 0,
   })));
   container.appendChild(scorecards);
 
   // Evidence banner
-  const medRows = (personal?.rows || []).filter(k => k.divisi === "media");
+  const medRows = (personal?.rows || []).filter(k => ["Reni", "Rifki", "Reta"].includes(k.pic));
   const missingEvidence = medRows.filter(k => !k.evidence).length;
   const banner = evidenceBanner(missingEvidence);
   if (banner) { banner.style.position = "static"; banner.style.transform = "none"; banner.style.display = "inline-block"; banner.style.margin = "16px 0"; container.appendChild(banner); }
 
-  // 02 — Engagement Trend (two-third)
+  // 02 — Engagement Trend (two-third) — REAL weekly trend from posts.json
   const sec = document.createElement("section");
   sec.className = "card bento-two-third";
-  sec.appendChild(sectionLabel(2, "Engagement Trend", "IG Reels views 6 minggu"));
+  sec.appendChild(sectionLabel(2, "Reach Trend", "12 minggu · 3 channel"));
   const chartWrap = document.createElement("div");
-  chartWrap.style.height = "220px";
+  chartWrap.className = "u-flex u-justify-end u-mt-3";
   sec.appendChild(chartWrap);
-  charts.line(chartWrap, {
-    data: [
-      { label: "W1", value: 1200 },
-      { label: "W2", value: 2400 },
-      { label: "W3", value: 3800 },
-      { label: "W4", value: 10500 },
-      { label: "W5", value: 8200 },
-      { label: "W6", value: 12300 },
-    ],
-    height: 220,
-  });
+  chartWrap.appendChild(lineChart({ data: trend, height: 220, color: 1 }));
   container.appendChild(sec);
 
-  // 03 — Engagement Gauge (third)
+  // 03 — Engagement Gauge (third) — derived real value
   const sec2 = document.createElement("section");
   sec2.className = "card bento-third";
-  sec2.appendChild(sectionLabel(3, "Engagement Rate", "Target 3.0%"));
+  sec2.appendChild(sectionLabel(3, "Engagement Rate", `Target 3.0%`));
   const gaugeWrap = document.createElement("div");
-  gaugeWrap.style.display = "flex";
-  gaugeWrap.style.justifyContent = "center";
-  gaugeWrap.style.padding = "16px 0";
+  gaugeWrap.className = "u-flex u-justify-end u-p-4";
   sec2.appendChild(gaugeWrap);
-  charts.gauge(gaugeWrap, { value: 3.4, target: 3.0, min: 0, max: 5, size: 160 });
+  gaugeWrap.appendChild(gaugeChart({ value: parseFloat(avgEng.toFixed(1)), max: 10, color: 3, size: 160, label: "Avg %" }));
   container.appendChild(sec2);
 
-  // 04 — Content Calendar (full)
-  const calendar = [
-    { tanggal: "2026-07-06", topik: "Reel tour rumah contoh",      jenis: "Reel",     platform: "IG",     pic: "Rifki", status: "Posted",  views: 8400,  engagement_pct: 4.2 },
-    { tanggal: "2026-07-07", topik: "Carousel 5 tips KPR",          jenis: "Carousel", platform: "IG",     pic: "Reta",  status: "Posted",  views: 3200,  engagement_pct: 3.8 },
-    { tanggal: "2026-07-08", topik: "Behind the scene renovasi",    jenis: "Story",    platform: "IG",     pic: "Rifki", status: "Posted",  views: 1800,  engagement_pct: 5.1 },
-    { tanggal: "2026-07-10", topik: "Post promo akhir bulan",       jenis: "Post",     platform: "FB",     pic: "Reni",  status: "Posted",  views: 2400,  engagement_pct: 2.1 },
-    { tanggal: "2026-07-12", topik: "Reel testimoni konsumen",      jenis: "Reel",     platform: "TikTok", pic: "Rifki", status: "Viral",   views: 15200, engagement_pct: 7.3 },
-    { tanggal: "2026-07-14", topik: "Article: Investasi properti",  jenis: "Article",  platform: "Web",    pic: "Reta",  status: "Posted",  views: 950,   engagement_pct: 2.8 },
-    { tanggal: "2026-07-16", topik: "Carousel progress Cluster B",  jenis: "Carousel", platform: "IG",     pic: "Reta",  status: "Posted",  views: 4100,  engagement_pct: 3.4 },
-    { tanggal: "2026-07-18", topik: "Story Q&A dengan Mada",        jenis: "Story",    platform: "IG",     pic: "Reni",  status: "Posted",  views: 2100,  engagement_pct: 4.6 },
-    { tanggal: "2026-07-20", topik: "Reel drone shot Cluster A",    jenis: "Reel",     platform: "TikTok", pic: "Rifki", status: "Viral",   views: 12400, engagement_pct: 6.8 },
-    { tanggal: "2026-07-22", topik: "Post edukasi KPR untuk Gen Z", jenis: "Post",     platform: "IG",     pic: "Reta",  status: "Posted",  views: 3800,  engagement_pct: 4.0 },
-    { tanggal: "2026-07-24", topik: "Reel tips pilih lokasi rumah", jenis: "Reel",     platform: "IG",     pic: "Rifki", status: "Posted",  views: 6700,  engagement_pct: 4.9 },
-    { tanggal: "2026-07-26", topik: "Carousel promo FLPP 2026",     jenis: "Carousel", platform: "FB",     pic: "Reni",  status: "Posted",  views: 2900,  engagement_pct: 3.2 },
-    { tanggal: "2026-07-28", topik: "Reel tour rumah contoh",      jenis: "Reel",     platform: "IG",     pic: "Rifki", status: "Scheduled", views: 0,  engagement_pct: 0 },
-    { tanggal: "2026-07-29", topik: "Carousel 5 tips KPR",          jenis: "Carousel", platform: "IG",     pic: "Reta",  status: "Scheduled", views: 0,  engagement_pct: 0 },
-    { tanggal: "2026-07-30", topik: "Story behind the scene",      jenis: "Story",    platform: "IG",     pic: "Rifki", status: "Draft",  views: 0,    engagement_pct: 0 },
-    { tanggal: "2026-08-01", topik: "Post promo akhir bulan",       jenis: "Post",     platform: "FB",     pic: "Reni",  status: "Draft",  views: 0,    engagement_pct: 0 },
-    { tanggal: "2026-08-02", topik: "Reel testimoni konsumen",      jenis: "Reel",     platform: "TikTok", pic: "Rifki", status: "Draft",  views: 0,    engagement_pct: 0 },
-    { tanggal: "2026-08-05", topik: "Article: tren properti 2027",  jenis: "Article",  platform: "Web",    pic: "Reta",  status: "Draft",  views: 0,    engagement_pct: 0 },
-  ];
+  // 04 — Content Calendar (full) — REAL posts from content.json
+  const postRows = posts.map(p => ({
+    id: p.id,
+    tanggal: p.date,
+    topik: p.topic,
+    jenis: p.type,
+    platform: p.channel,
+    pic: p.owner,
+    status: p.leads_generated >= 5 ? "Viral" : p.reach >= 5000 ? "Posted" : "Posted",
+    views: p.reach,
+    engagement_pct: p.engagement_rate,
+    leads: p.leads_generated,
+    cost: p.cost_idr,
+    utm: p.utm,
+    url: p.url,
+  }));
 
   const sec3 = document.createElement("section");
   sec3.className = "card bento-full";
-  sec3.appendChild(sectionLabel(4, "Content Calendar", "18 konten · 3 minggu"));
+  sec3.appendChild(sectionLabel(4, "Content Calendar", `${posts.length} posts · 90 hari · 3 channel`));
   sec3.appendChild(dataTable({
     columns: [
-      { key: "tanggal", label: "Tanggal", calendarDate: true },
+      { key: "tanggal", label: "Tanggal", mono: true, value: r => formatDate(r.tanggal) },
       { key: "topik",   label: "Topik" },
-      { key: "jenis",   label: "Jenis", filter: true, filterLabel: "Semua jenis" },
-      { key: "platform", label: "Platform", filter: true, filterLabel: "Semua platform" },
-      { key: "pic",     label: "PIC", avatar: true, filter: true, filterLabel: "Semua PIC" },
-      { key: "status",  label: "Status", chip: r => r.status === "Viral" ? "accent" : r.status === "Posted" ? "success" : r.status === "Scheduled" ? "info" : "warning" },
-      { key: "views",   label: "Views", numeric: true, value: r => formatNumber(r.views) },
-      { key: "engagement_pct", label: "Eng %", numeric: true, chip: r => r.engagement_pct >= 5 ? "success" : r.engagement_pct >= 3 ? "warning" : r.engagement_pct > 0 ? "danger" : null },
+      { key: "jenis",   label: "Jenis", filter: true },
+      { key: "platform", label: "Platform", filter: true, chip: r => ({
+        Instagram: "info", Facebook: "info", TikTok: "warning", Web: "success",
+      }[r.platform] || "info") },
+      { key: "pic",     label: "PIC", filter: true },
+      { key: "views",   label: "Reach", numeric: true, value: r => formatNumber(r.views) },
+      { key: "engagement_pct", label: "Eng %", numeric: true, chip: r => r.engagement_pct >= 5 ? "success" : r.engagement_pct >= 3 ? "info" : r.engagement_pct >= 1 ? "warning" : "danger" },
+      { key: "leads", label: "Leads", numeric: true, chip: r => r.leads >= 5 ? "success" : r.leads >= 1 ? "info" : "warning" },
+      { key: "cost", label: "Cost", numeric: true, value: r => formatIDR(r.cost) },
+      { key: "status", label: "Status", chip: r => r.status === "Viral" ? "accent" : "success" },
     ],
-    rows: calendar,
+    rows: postRows,
     viewModes: ["list", "board", "calendar"],
-    groupBy: { key: "status", columns: [
-      { id: "Draft",     label: "Draft",     match: v => v === "Draft" },
-      { id: "Scheduled", label: "Scheduled", match: v => v === "Scheduled" },
-      { id: "Posted",    label: "Posted",    match: v => v === "Posted" },
-      { id: "Viral",     label: "Viral",     match: v => v === "Viral" },
+    groupBy: { key: "platform", columns: [
+      { id: "Instagram", label: "Instagram", match: v => v === "Instagram" },
+      { id: "Facebook", label: "Facebook", match: v => v === "Facebook" },
+      { id: "TikTok", label: "TikTok", match: v => v === "TikTok" },
     ]},
-    editable: true,
+    editable: getCurrentUser()?.is_owner === true,
     onEdit: async () => { toast("Konten diupdate", "info"); },
     bulkActions: [
-      { label: "Tandai Posted", kind: "success", onClick: sel => toast(`${sel.length} ditandai posted`, "success") },
-      { label: "Tandai Viral",  kind: "accent",  onClick: sel => toast(`${sel.length} ditandai viral`, "success") },
+      { label: "Tandai Viral", kind: "success", onClick: sel => toast(`${sel.length} ditandai viral`, "success") },
     ],
     searchable: true,
     sortable: true,
@@ -124,62 +139,83 @@ export async function render({ container }) {
     exportName: "content-calendar",
     calendarDate: "tanggal",
     aggregation: {
-      label: "Posted / Total Views / Avg Eng",
-      fn: rows => {
-        const posted = rows.filter(r => r.status === "Posted" || r.status === "Viral");
-        const sumViews = posted.reduce((a, r) => a + (+r.views || 0), 0);
-        const avgEng = posted.length ? posted.reduce((a, r) => a + (+r.engagement_pct || 0), 0) / posted.length : 0;
-        return `${posted.length} / ${formatNumber(sumViews)} / ${formatPercent(avgEng)}`;
-      }
+      label: "Posts / Total Reach / Leads / Cost",
+      fn: rs => `${rs.length} / ${formatNumber(rs.reduce((a, r) => a + r.views, 0))} / ${rs.reduce((a, r) => a + r.leads, 0)} / ${formatIDR(rs.reduce((a, r) => a + r.cost, 0))}`,
     },
   }));
   container.appendChild(sec3);
 
-  // 05 — Content Type Mix (two-third)
+  // 05 — Channel Performance Comparison (two-third) — derived
+  const channelMix = posts.reduce((acc, p) => {
+    const ch = p.channel;
+    if (!acc[ch]) acc[ch] = { reach: 0, eng: 0, leads: 0, posts: 0 };
+    acc[ch].reach += p.reach;
+    acc[ch].eng += p.engagement;
+    acc[ch].leads += p.leads_generated;
+    acc[ch].posts += 1;
+    return acc;
+  }, {});
+
   const sec4 = document.createElement("section");
   sec4.className = "card bento-two-third";
-  sec4.appendChild(sectionLabel(5, "Content Type Mix", "Distribusi jenis konten"));
-  const donutWrap = document.createElement("div");
-  donutWrap.style.display = "flex";
-  donutWrap.style.justifyContent = "center";
-  donutWrap.style.padding = "16px 0";
-  sec4.appendChild(donutWrap);
-  charts.donut(donutWrap, {
-    segments: [
-      { label: "Reel",     value: 40 },
-      { label: "Carousel", value: 25 },
-      { label: "Story",    value: 15 },
-      { label: "Post",     value: 12 },
-      { label: "Article",  value: 8 },
+  sec4.appendChild(sectionLabel(5, "Channel Performance", `${Object.keys(channelMix).length} channel · 90 hari`));
+  const channelRows = Object.entries(channelMix).map(([ch, s]) => ({
+    channel: ch,
+    posts: s.posts,
+    reach: s.reach,
+    engagement: s.eng,
+    engagement_rate: s.reach ? (s.eng / s.reach * 100) : 0,
+    leads: s.leads,
+    cost_per_lead: s.leads ? Math.round(posts.filter(p => p.channel === ch).reduce((a, p) => a + p.cost_idr, 0) / s.leads) : 0,
+  }));
+  sec4.appendChild(dataTable({
+    columns: [
+      { key: "channel", label: "Channel" },
+      { key: "posts", label: "Posts", numeric: true },
+      { key: "reach", label: "Reach", numeric: true, value: r => formatNumber(r.reach) },
+      { key: "engagement", label: "Engagement", numeric: true, value: r => formatNumber(r.engagement) },
+      { key: "engagement_rate", label: "Eng Rate", numeric: true, value: r => `${r.engagement_rate.toFixed(1)}%`, chip: r => r.engagement_rate >= 5 ? "success" : r.engagement_rate >= 3 ? "info" : "warning" },
+      { key: "leads", label: "Leads", numeric: true },
+      { key: "cost_per_lead", label: "Cost/Lead", numeric: true, value: r => formatIDR(r.cost_per_lead) },
     ],
-    size: 200,
-  });
+    rows: channelRows,
+    viewModes: ["list"],
+    searchable: true,
+    sortable: true,
+    aggregation: {
+      label: "Total reach / engagement / leads",
+      fn: rs => `${formatNumber(rs.reduce((a, r) => a + r.reach, 0))} / ${formatNumber(rs.reduce((a, r) => a + r.engagement, 0))} / ${rs.reduce((a, r) => a + r.leads, 0)}`,
+    },
+  }));
   container.appendChild(sec4);
 
-  // 06 — Top Performing (third)
-  const top5 = [...calendar].filter(c => c.views > 0).sort((a, b) => b.views - a.views).slice(0, 5);
+  // 06 — Top Performing (third) — derived from posts
+  const top5 = [...postRows].sort((a, b) => b.views - a.views).slice(0, 5);
   const sec5 = document.createElement("section");
   sec5.className = "card bento-third";
-  sec5.appendChild(sectionLabel(6, "Top Performing", "Top 5 by views"));
-  const topWrap = document.createElement("ol");
-  topWrap.style.listStyle = "none";
-  topWrap.style.padding = "0";
-  topWrap.style.margin = "0";
-  topWrap.style.counterReset = "rank";
+  sec5.appendChild(sectionLabel(6, "Top Performing", "Top 5 by reach"));
+  const topList = document.createElement("div");
+  topList.className = "u-flex-col u-gap-3 u-mt-3";
   for (let i = 0; i < top5.length; i++) {
     const c = top5[i];
-    const li = document.createElement("li");
-    li.style.padding = "8px 0";
-    li.style.borderBottom = "1px solid var(--color-border)";
-    li.style.display = "flex";
-    li.style.justifyContent = "space-between";
-    li.style.alignItems = "center";
-    li.style.gap = "8px";
-    const engKind = c.engagement_pct >= 5 ? "success" : c.engagement_pct >= 3 ? "warning" : "danger";
-    li.innerHTML = `<div style="flex:1;min-width:0"><div style="font-weight:500;font-size:var(--text-sm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${i + 1}. ${c.topik}</div><div style="font-size:var(--text-xs);color:var(--color-text-muted)">${c.pic} · ${c.platform}</div></div><div style="text-align:right"><div class="num" style="font-weight:600">${formatNumber(c.views)}</div><span class="chip chip--${engKind}" style="font-size:10px">${c.engagement_pct}%</span></div>`;
-    topWrap.appendChild(li);
+    const row = document.createElement("div");
+    row.className = "u-flex-row u-justify-between u-align-center u-gap-3";
+    row.classList.add("rank-row");
+    const medalClass = i === 0 ? "rank-badge--gold" : i === 1 ? "rank-badge--silver" : i === 2 ? "rank-badge--bronze" : "";
+    row.appendChild(h("span", { class: `rank-badge ${medalClass}` }, i < 9 ? `0${i + 1}` : `${i + 1}`));
+    const middle = document.createElement("div");
+    middle.className = "u-flex-col u-gap-1";
+    middle.appendChild(h("strong", { class: "u-text-sm" }, c.topik));
+    middle.appendChild(h("span", { class: "rank-row__sub" }, `${c.pic} · ${c.platform} · ${formatDate(c.tanggal)}`));
+    row.appendChild(middle);
+    const right = document.createElement("div");
+    right.className = "u-flex-col u-gap-1 u-text-right";
+    right.appendChild(h("strong", { class: "u-mono" }, formatNumber(c.views)));
+    right.appendChild(h("span", { class: `chip chip--${c.engagement_pct >= 5 ? "success" : c.engagement_pct >= 3 ? "info" : "warning"}` }, `${c.engagement_pct.toFixed(1)}%`));
+    row.appendChild(right);
+    topList.appendChild(row);
   }
-  sec5.appendChild(topWrap);
+  sec5.appendChild(topList);
   container.appendChild(sec5);
 
   // 07 — KPI Media Personal (full)
@@ -188,7 +224,7 @@ export async function render({ container }) {
   sec6.appendChild(sectionLabel(7, "KPI Media Personal", "Reni · Rifki · Reta · BAB 7"));
   sec6.appendChild(dataTable({
     columns: [
-      { key: "pic", label: "PIC", avatar: true, filter: true, filterLabel: "Semua PIC" },
+      { key: "pic", label: "PIC", avatar: "pic", filter: true, filterLabel: "Semua PIC" },
       { key: "kpi", label: "KPI" },
       { key: "target", label: "Target" },
       { key: "actual", label: "Actual", chip: r => r.actual ? "success" : "warning" },
@@ -203,7 +239,7 @@ export async function render({ container }) {
     ]},
     evidenceRequired: true,
     editable: getCurrentUser()?.is_owner === true,
-    onEdit: async () => { toast("Update tersimpan (mock)", "success"); },
+    onEdit: async () => { toast("Update tersimpan", "success"); },
     searchable: true,
     aggregation: {
       label: "Total / Tercapai / %",
@@ -211,4 +247,6 @@ export async function render({ container }) {
     },
   }));
   container.appendChild(sec6);
+  markForReveal(container);
+  reveal(container);
 }

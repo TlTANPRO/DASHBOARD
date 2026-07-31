@@ -1,7 +1,7 @@
 {
   "_meta": {
     "stack": "V4-isolated",
-    "generated_at": "2026-07-28T12:30:00+07:00",
+    "generated_at": "2026-07-29",
     "parent_page": "3ab4cf7e-9f24-81e6-85ec-f26143f06941",
     "parent_url": "https://app.notion.com/p/Syahfalah-V4-Stack-3ab4cf7e9f2481e685ecf26143f06941",
     "note": "V4 ISOLATED STACK. UUIDs from setup-notion-v4. Do NOT use with V2 (titan-notion-proxy)."
@@ -42,6 +42,99 @@
     "Divisi": {
       "id": "3ab4cf7e-9f24-811e-a26c-c5796094e7a3",
       "file": "divisi.json"
+    }
+  },
+  "tables": {
+    "Leads": {
+      "fields": [
+        "id",
+        "name",
+        "phone",
+        "source",
+        "stage",
+        "value",
+        "cluster",
+        "pic",
+        "last_contact",
+        "next_action",
+        "score",
+        "history[]"
+      ]
+    },
+    "SP3K": {
+      "fields": [
+        "id",
+        "client",
+        "value",
+        "stage",
+        "sp3k_date",
+        "ots_date",
+        "spk_date",
+        "milestones[]",
+        "blockers[]",
+        "pic"
+      ]
+    },
+    "Budget": {
+      "fields": [
+        "line_id",
+        "kategori",
+        "planned",
+        "actual",
+        "variance",
+        "pic",
+        "status",
+        "quarter"
+      ]
+    },
+    "Vendor": {
+      "fields": [
+        "id",
+        "name",
+        "kategori",
+        "pic",
+        "score_current",
+        "score_history[]",
+        "po_count_ytd",
+        "status"
+      ]
+    },
+    "Content": {
+      "fields": [
+        "id",
+        "date",
+        "channel",
+        "type",
+        "topic",
+        "owner",
+        "reach",
+        "engagement",
+        "leads_generated"
+      ]
+    },
+    "Calendar": {
+      "fields": [
+        "id",
+        "date",
+        "type",
+        "title",
+        "attendees[]",
+        "location"
+      ]
+    },
+    "AuditTrail": {
+      "fields": [
+        "id",
+        "timestamp",
+        "actor",
+        "action",
+        "target",
+        "ref",
+        "before",
+        "after",
+        "ip",
+        "device"
+      ]
     }
   }
 }

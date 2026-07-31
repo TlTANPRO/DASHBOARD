@@ -10,6 +10,11 @@ import { init as initTopbar, showLoginModal, hideLoginModal } from "./shell/topb
 import { init as initPWA } from "./pwa.js";
 import { startPolling } from "./poller.js";
 import { mountGlobalSearch } from "./views/partials.js";
+import { createLogger } from "./lib/logger.js";
+import { mountKeyboard } from "./lib/keyboard.js";
+import { reveal } from "./lib/reveal.js";
+
+const log = createLogger("boot");
 
 async function boot() {
   // 1) Fetch all data in parallel (bundled JSON fallback)
@@ -17,7 +22,7 @@ async function boot() {
   try {
     data = await fetchAll();
   } catch (e) {
-    console.error("[boot] data fetch failed", e);
+    log.error("data fetch failed", e);
   }
 
   // 2) Init auth (loads people + pin hashes)
@@ -62,6 +67,9 @@ async function boot() {
 
   // 11) Global Cmd+K search palette
   mountGlobalSearch();
+
+  // 12) Keyboard shortcuts (g+o/m/l/a/p/c, Cmd+K, ?)
+  mountKeyboard();
 
   // 11) Update sidebar/tabbar active state on route change
   window.addEventListener("hashchange", () => {
@@ -143,6 +151,9 @@ function setupLogin() {
 }
 
 boot().catch(e => {
-  console.error("[boot] fatal", e);
-  document.body.innerHTML = `<div style="padding:24px;color:#dc2626;font-family:monospace;white-space:pre-wrap">Boot error: ${e.message}\n\n${e.stack || ''}</div>`;
+  log.error("fatal", e);
+  const err = document.createElement("div");
+  err.className = "boot-fatal";
+  err.textContent = `Boot error: ${e.message}\n\n${e.stack || ""}`;
+  document.body.replaceChildren(err);
 });

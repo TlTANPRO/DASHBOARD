@@ -1,41 +1,510 @@
 {
   "_meta": {
     "source": "data/tim.json (jobdesk_harian + proker_mingguan)",
-    "generated_at": "2026-07-28"
+    "generated_at": "2026-07-29",
+    "count": 12,
+    "note": "Lengkap 12 PIC (sebelumnya hanya 3). Sinkron DOCX BAB 7 + tim.json"
   },
   "jobdesk": [
-    { "pic": "Pak Ardian", "harian": [
-      { "jam": "Pagi",   "kegiatan": "Review dashboard Mada" },
-      { "jam": "Siang",  "kegiatan": "Meeting dengan bank/investor" },
-      { "jam": "Sore",   "kegiatan": "Approval dokumen besar" }
-    ], "mingguan": [
-      { "minggu": "W1", "kegiatan": "Review dashboard Mada, set target bulan" },
-      { "minggu": "W2", "kegiatan": "Site visit 1 cluster, meeting dengan bank" },
-      { "minggu": "W3", "kegiatan": "Approve budget marketing + operasional" },
-      { "minggu": "W4", "kegiatan": "Audit internal: profit, cashflow, SDM" }
-    ]},
-    { "pic": "Mada", "harian": [
-      { "jam": "08.00–08.30", "kegiatan": "Briefing pagi + cek absensi" },
-      { "jam": "08.30–12.00", "kegiatan": "Meeting dengan tim, site visit, closing support" },
-      { "jam": "13.00–16.00", "kegiatan": "Monitoring dashboard, coaching, administrasi" },
-      { "jam": "16.30–17.00", "kegiatan": "Laporan sore ke grup + dashboard update" }
-    ], "mingguan": [
-      { "minggu": "W1", "kegiatan": "Planning bulanan, set target individu, audit minggu lalu" },
-      { "minggu": "W2", "kegiatan": "Site visit semua cluster, evaluasi progress" },
-      { "minggu": "W3", "kegiatan": "Review KPI, coaching personal yang underperform" },
-      { "minggu": "W4", "kegiatan": "Evaluasi bulanan, planning bulan depan, laporan ke Owner" }
-    ]},
-    { "pic": "Riza", "harian": [
-      { "jam": "08.00–08.30", "kegiatan": "Briefing + cek lead baru semalam" },
-      { "jam": "08.30–12.00", "kegiatan": "Follow up 15 lead (WA blast + personal)" },
-      { "jam": "13.00–15.00", "kegiatan": "Survey lokasi 1–2 lead" },
-      { "jam": "15.00–16.30", "kegiatan": "Closing call 3 lead" },
-      { "jam": "16.30–17.00", "kegiatan": "Laporan ke grup + update Sheet" }
-    ], "mingguan": [
-      { "minggu": "W1", "kegiatan": "Lead: 50 | Survey: 8 | Closing: 1" },
-      { "minggu": "W2", "kegiatan": "Lead: 50 | Survey: 8 | Closing: 1" },
-      { "minggu": "W3", "kegiatan": "Lead: 50 | Survey: 8 | Closing: 2" },
-      { "minggu": "W4", "kegiatan": "Lead: 50 | Survey: 6 | Closing: 2 (Total: 200/30/6)" }
-    ]}
+    {
+      "pic": "Pak Ardian",
+      "harian": [
+        {
+          "jam": "Pagi",
+          "kegiatan": "Review dashboard Mada"
+        },
+        {
+          "jam": "Siang",
+          "kegiatan": "Meeting dengan bank/investor"
+        },
+        {
+          "jam": "Sore",
+          "kegiatan": "Approval dokumen besar"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Review dashboard Mada, set target bulan"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Site visit 1 cluster, meeting dengan bank"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Approve budget marketing + operasional"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Audit internal: profit, cashflow, SDM"
+        }
+      ]
+    },
+    {
+      "pic": "Mada",
+      "harian": [
+        {
+          "jam": "08.00–08.30",
+          "kegiatan": "Briefing pagi + cek absensi"
+        },
+        {
+          "jam": "08.30–12.00",
+          "kegiatan": "Meeting dengan tim, site visit, closing support"
+        },
+        {
+          "jam": "13.00–16.00",
+          "kegiatan": "Monitoring dashboard, coaching, administrasi"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Laporan sore ke grup + dashboard update"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Planning bulanan, set target individu, audit minggu lalu"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Site visit semua cluster, evaluasi progress"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Review KPI, coaching personal yang underperform"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Evaluasi bulanan, planning bulan depan, laporan ke Owner"
+        }
+      ]
+    },
+    {
+      "pic": "Riza",
+      "harian": [
+        {
+          "jam": "08.00–08.30",
+          "kegiatan": "Briefing + cek lead baru semalam"
+        },
+        {
+          "jam": "08.30–12.00",
+          "kegiatan": "Follow up 15 lead (WA blast + personal)"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Survey lokasi 1–2 lead"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Closing call 3 lead"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Laporan ke grup + update Sheet"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Lead: 50 | Survey: 8 | Closing: 1"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Lead: 50 | Survey: 8 | Closing: 1"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Lead: 50 | Survey: 8 | Closing: 2"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Lead: 50 | Survey: 6 | Closing: 2 (Total: 200/30/6)"
+        }
+      ]
+    },
+    {
+      "pic": "Bu Nisya",
+      "harian": [
+        {
+          "jam": "08.30–09.00",
+          "kegiatan": "Review legal docket + pending contracts"
+        },
+        {
+          "jam": "09.00–11.30",
+          "kegiatan": "Drafting/draft review kontrak + SHM docs"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Koordinasi dengan notaris BPN terkait SHM"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Legal opinion untuk owner/pemasaran"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Update legal dashboard + laporan ke grup"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Compliance audit bulanan, submit laporan"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Site visit cluster, verifikasi dokumen"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Coaching Rifki untuk kontrak rutin"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Legal risk assessment + rekomendasi owner"
+        }
+      ]
+    },
+    {
+      "pic": "Yudi/Sdek",
+      "harian": [
+        {
+          "jam": "08.00–09.00",
+          "kegiatan": "Briefing sales + cek counter display"
+        },
+        {
+          "jam": "09.00–12.00",
+          "kegiatan": "Walk-in customer handling + sales counter"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Maintenance unit (listrik, plumbing, dll)"
+        },
+        {
+          "jam": "15.00–17.00",
+          "kegiatan": "Site visit konsumen existing + closing"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Stok unit display + update harga"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Maintenance schedule unit delivered"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Survey lokasi konsumen + foto progres"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Rekap closing + maintenance report"
+        }
+      ]
+    },
+    {
+      "pic": "Amir",
+      "harian": [
+        {
+          "jam": "08.30–09.00",
+          "kegiatan": "Briefing tim proyek + cek job board"
+        },
+        {
+          "jam": "09.00–12.00",
+          "kegiatan": "Site visit konstruksi + supervisi mandor"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Koordinasi vendor material + subkon"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Marketing support: site plan, video progres"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Update dashboard proyek + laporan"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Planning mingguan progres konstruksi"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Vendor evaluation + PO material"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Quality control site visit semua cluster"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Laporan progres bulanan + RAB review"
+        }
+      ]
+    },
+    {
+      "pic": "Novita",
+      "harian": [
+        {
+          "jam": "08.30–09.00",
+          "kegiatan": "Cek mutasi bank + rekonsiliasi"
+        },
+        {
+          "jam": "09.00–12.00",
+          "kegiatan": "Input transaksi + invoice + payment"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Penagihan konsumen + follow up KPR"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Laporan harian kas + bank"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Arsip dokumen + update ledger"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Rekonsiliasi bank mingguan"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Aging schedule piutang konsumen"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Cashflow forecast update"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Bulanan: tutup buku + PPh final"
+        }
+      ]
+    },
+    {
+      "pic": "Rizal",
+      "harian": [
+        {
+          "jam": "08.00–08.30",
+          "kegiatan": "Briefing tim proyek + safety briefing"
+        },
+        {
+          "jam": "08.30–12.00",
+          "kegiatan": "Site visit 2–3 cluster + supervisi"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Review gambar kerja + approval progres"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Koordinasi dengan owner tentang target"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Update dashboard + laporan harian"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Planning target mingguan semua proyek"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Evaluasi progres vs target"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Evaluasi vendor + subkon"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Laporan bulanan progres + cashflow"
+        }
+      ]
+    },
+    {
+      "pic": "Sinta",
+      "harian": [
+        {
+          "jam": "08.30–09.00",
+          "kegiatan": "Cek purchase request masuk"
+        },
+        {
+          "jam": "09.00–12.00",
+          "kegiatan": "Cari vendor + nego harga + PO material"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Terima barang + QC + stock opname"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Distribusi material ke site"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Update kartu stok + laporan"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Stock opname mingguan"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Vendor review + scoring"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "PO material mingguan depan"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Laporan inventaris bulanan"
+        }
+      ]
+    },
+    {
+      "pic": "Reni",
+      "harian": [
+        {
+          "jam": "08.30–09.00",
+          "kegiatan": "Briefing tim kreatif + cek content pipeline"
+        },
+        {
+          "jam": "09.00–12.00",
+          "kegiatan": "Produksi konten (Majang Mejeng schedule)"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "QA konten + approval publish"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Koordinasi dengan marketing untuk promo"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Update dashboard media + laporan"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Content planning mingguan (3 channel)"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Trend research + audit kompetitor"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Brief ke Rifki + Reta untuk produksi"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Performance review + laporan bulanan"
+        }
+      ]
+    },
+    {
+      "pic": "Rifki",
+      "harian": [
+        {
+          "jam": "08.30–09.00",
+          "kegiatan": "Briefing tim + cek project board"
+        },
+        {
+          "jam": "09.00–12.00",
+          "kegiatan": "Desain grafis (IG post, banner, flyer)"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Video editing + motion graphics"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Revisi + approval klien internal"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Update portfolio + laporan"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Asset library update"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Template refresh per brand guideline"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Coaching tim tentang brand consistency"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Performance review output tim"
+        }
+      ]
+    },
+    {
+      "pic": "Reta",
+      "harian": [
+        {
+          "jam": "08.30–09.00",
+          "kegiatan": "Cek topic queue + headline draft"
+        },
+        {
+          "jam": "09.00–12.00",
+          "kegiatan": "Penulisan caption + script video"
+        },
+        {
+          "jam": "13.00–15.00",
+          "kegiatan": "Editing copy + SEO optimization"
+        },
+        {
+          "jam": "15.00–16.30",
+          "kegiatan": "Koordinasi dengan desainer"
+        },
+        {
+          "jam": "16.30–17.00",
+          "kegiatan": "Publish konten + laporan"
+        }
+      ],
+      "mingguan": [
+        {
+          "minggu": "W1",
+          "kegiatan": "Content calendar update"
+        },
+        {
+          "minggu": "W2",
+          "kegiatan": "Copy bank optimization"
+        },
+        {
+          "minggu": "W3",
+          "kegiatan": "Storytelling workshop internal"
+        },
+        {
+          "minggu": "W4",
+          "kegiatan": "Performance review copy"
+        }
+      ]
+    }
   ]
 }

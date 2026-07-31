@@ -4,8 +4,9 @@
 import { fetchData } from "../ssot.js";
 import { kpiCard, sectionLabel, dataTable, evidenceBanner, toast } from "./partials.js";
 import { leaderboardSection, kpiDimensiSection, feeMediaSection, pricingTiersSection, managerSection, glosariumSection } from "./extras.js";
-import { formatPercent } from "../lib/format.js";
+import { formatPercent, formatIDR } from "../lib/format.js";
 import { getCurrentUser } from "../auth.js";
+import { reveal, markForReveal } from "../lib/reveal.js";
 
 export async function render({ container }) {
   container.innerHTML = "";
@@ -13,10 +14,12 @@ export async function render({ container }) {
   const isOwner = !!getCurrentUser()?.is_owner;
 
   // ---------- Load data ----------
-  const [perusahaan, personal, ref] = await Promise.all([
+  const [perusahaan, personal, ref, budget, audit] = await Promise.all([
     fetchData("kpi-perusahaan.json"),
     fetchData("kpi-personal.json"),
     fetchData("reference.json"),
+    fetchData("budget.json"),
+    fetchData("audit-trail.json"),
   ]);
 
   const l1 = perusahaan?.level_1 || [];
@@ -282,4 +285,83 @@ export async function render({ container }) {
     const glos = glosariumSection(ref);
     if (glos) container.appendChild(glos);
   }
+
+  // ============================================================
+  // 13 — Budget line-item Q3-2026 (50 lines)
+  // ============================================================
+  const budgetLines = budget?.lines || [];
+  if (budgetLines.length) {
+    const budgetSec = document.createElement("section");
+    budgetSec.className = "card bento-full";
+    budgetSec.appendChild(sectionLabel(8, "Budget Q3-2026 · Line Item",
+      `${budgetLines.length} baris · 8 kategori · planned vs actual`));
+    budgetSec.appendChild(dataTable({
+      columns: [
+        { key: "line_id", label: "Line", mono: true },
+        { key: "kategori", label: "Kategori", filter: true },
+        { key: "deskripsi", label: "Deskripsi", truncate: true },
+        { key: "planned", label: "Planned", numeric: true, value: r => formatIDR(r.planned) },
+        { key: "actual", label: "Actual", numeric: true, value: r => formatIDR(r.actual) },
+        {
+          key: "variance",
+          label: "Variance",
+          numeric: true,
+          value: r => formatIDR(r.variance),
+          chip: r => r.variance > 0 ? "danger" : r.variance < 0 ? "success" : "info",
+        },
+        { key: "pic", label: "PIC" },
+        {
+          key: "status",
+          label: "Status",
+          chip: r => r.status === "over" ? "danger" : r.status === "under" ? "warning" : "success",
+        },
+      ],
+      rows: budgetLines,
+      viewModes: ["list", "board"],
+      groupBy: {
+        key: "kategori",
+        columns: ["Material", "Upah", "Overhead", "Marketing", "Legal", "Admin", "Maintenance", "IT"].map(k => ({
+          id: k, label: k, match: v => v === k,
+        })),
+      },
+      searchable: true,
+      sortable: true,
+      aggregation: {
+        label: "Total Planned / Actual / Variance",
+        fn: rs => `${formatIDR(rs.reduce((a, r) => a + r.planned, 0))} / ${formatIDR(rs.reduce((a, r) => a + r.actual, 0))} / ${formatIDR(rs.reduce((a, r) => a + r.variance, 0))}`,
+      },
+    }));
+    container.appendChild(budgetSec);
+  }
+
+  // ============================================================
+  // 14 — Audit Trail (latest 50 entries)
+  // ============================================================
+  const auditEntries = audit?.entries || [];
+  if (auditEntries.length) {
+    const auditSec = document.createElement("section");
+    auditSec.className = "card bento-full";
+    auditSec.appendChild(sectionLabel(9, "Audit Trail",
+      `${auditEntries.length} entri · append-only log`));
+    auditSec.appendChild(dataTable({
+      columns: [
+        { key: "timestamp", label: "Waktu", mono: true, value: r => r.timestamp.replace("T", " ").slice(0, 19) },
+        { key: "actor", label: "Aktor" },
+        { key: "action", label: "Action", chip: r => r.action === "approve" ? "success" : r.action === "reject" ? "danger" : "info" },
+        { key: "target", label: "Target" },
+        { key: "ref", label: "Ref", mono: true },
+        { key: "ip", label: "IP", mono: true },
+        { key: "device", label: "Device" },
+      ],
+      rows: auditEntries,
+      viewModes: ["list"],
+      searchable: true,
+      sortable: true,
+    }));
+    container.appendChild(auditSec);
+  }
+
+  // Reveal motion choreography
+  markForReveal(container);
+  reveal(container);
 }

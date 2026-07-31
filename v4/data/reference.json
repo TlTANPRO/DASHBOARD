@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "V5.0 dashboard (root /DASHBOARD/) — ported sections: Leaderboard + Pricing + Fee + STB + Manager + Glosarium",
-    "generated_at": "2026-07-28",
+    "generated_at": "2026-07-29",
     "note": "Reference blocks untuk owner view. Tidak sync dengan PROGRAM KERJA.docx — baca V5.0 sebagai acuan operasional + reward."
   },
   "leaderboard": {
@@ -11,54 +11,172 @@
       {
         "nama": "Marketing & Sales",
         "top": [
-          { "rank": 1, "pic": "Riza", "metrik_utama": "Lead 38", "metrik_sekunder": "Closing 4", "score": 0.94 },
-          { "rank": 2, "pic": "Yudi (Sdek)", "metrik_utama": "Closing pojok 3", "metrik_sekunder": "Walk-in 22", "score": 0.88 },
-          { "rank": 3, "pic": "Reni (media support)", "metrik_utama": "Konten 26", "metrik_sekunder": "Engagement 8.2%", "score": 0.81 }
+          {
+            "rank": 1,
+            "pic": "Riza",
+            "metrik_utama": "Lead 38",
+            "metrik_sekunder": "Closing 4",
+            "score": 0.94
+          },
+          {
+            "rank": 2,
+            "pic": "Yudi (Sdek)",
+            "metrik_utama": "Closing pojok 3",
+            "metrik_sekunder": "Walk-in 22",
+            "score": 0.88
+          },
+          {
+            "rank": 3,
+            "pic": "Reni (media support)",
+            "metrik_utama": "Konten 26",
+            "metrik_sekunder": "Engagement 8.2%",
+            "score": 0.81
+          }
         ]
       },
       {
         "nama": "Proyek & Konstruksi",
         "top": [
-          { "rank": 1, "pic": "Rizal", "metrik_utama": "On-time BAST 100%", "metrik_sekunder": "Waste 0%", "score": 0.95 },
-          { "rank": 2, "pic": "Amir", "metrik_utama": "Daily report 30/30", "metrik_sekunder": "Subkon score 4.7", "score": 0.89 },
-          { "rank": 3, "pic": "Sinta (purchasing)", "metrik_utama": "Best price 12x", "metrik_sekunder": "Retensi 0 komplain", "score": 0.86 }
+          {
+            "rank": 1,
+            "pic": "Rizal",
+            "metrik_utama": "On-time BAST 100%",
+            "metrik_sekunder": "Waste 0%",
+            "score": 0.95
+          },
+          {
+            "rank": 2,
+            "pic": "Amir",
+            "metrik_utama": "Daily report 30/30",
+            "metrik_sekunder": "Subkon score 4.7",
+            "score": 0.89
+          },
+          {
+            "rank": 3,
+            "pic": "Sinta (purchasing)",
+            "metrik_utama": "Best price 12x",
+            "metrik_sekunder": "Retensi 0 komplain",
+            "score": 0.86
+          }
         ]
       },
       {
         "nama": "Media & Konten Kreatif",
         "top": [
-          { "rank": 1, "pic": "Reni", "metrik_utama": "Engagement 8.2%", "metrik_sekunder": "Closing assist 4", "score": 0.92 },
-          { "rank": 2, "pic": "Rifki", "metrik_utama": "Reels 12", "metrik_sekunder": "Reach 24k", "score": 0.84 },
-          { "rank": 3, "pic": "Reta", "metrik_utama": "Carousel 14", "metrik_sekunder": "Save rate 4.1%", "score": 0.79 }
+          {
+            "rank": 1,
+            "pic": "Reni",
+            "metrik_utama": "Engagement 8.2%",
+            "metrik_sekunder": "Closing assist 4",
+            "score": 0.92
+          },
+          {
+            "rank": 2,
+            "pic": "Rifki",
+            "metrik_utama": "Reels 12",
+            "metrik_sekunder": "Reach 24k",
+            "score": 0.84
+          },
+          {
+            "rank": 3,
+            "pic": "Reta",
+            "metrik_utama": "Carousel 14",
+            "metrik_sekunder": "Save rate 4.1%",
+            "score": 0.79
+          }
         ]
       },
       {
         "nama": "Operasional & Admin",
         "top": [
-          { "rank": 1, "pic": "Novita", "metrik_utama": "Closing file 8", "metrik_sekunder": "On-time SP3K 100%", "score": 0.93 },
-          { "rank": 2, "pic": "Sinta (cross-admin)", "metrik_utama": "Berkas legal 6", "metrik_sekunder": "Retensi vendor 0", "score": 0.87 }
+          {
+            "rank": 1,
+            "pic": "Novita",
+            "metrik_utama": "Closing file 8",
+            "metrik_sekunder": "On-time SP3K 100%",
+            "score": 0.93
+          },
+          {
+            "rank": 2,
+            "pic": "Sinta (cross-admin)",
+            "metrik_utama": "Berkas legal 6",
+            "metrik_sekunder": "Retensi vendor 0",
+            "score": 0.87
+          }
         ]
       }
     ]
   },
   "kpi_dimensi": [
-    { "nama": "Hasil", "bobot": "40%", "desc": "Output terukur (closing, lead, progres, konten)" },
-    { "nama": "Peran", "bobot": "20%", "desc": "Cross-support + cover role + generalis" },
-    { "nama": "Kompetisi", "bobot": "15%", "desc": "Ranking leaderboard internal divisi" },
-    { "nama": "Disiplin", "bobot": "15%", "desc": "Tertib + SOP + dashboard updated" },
-    { "nama": "Growth", "bobot": "10%", "desc": "Improvement skill + coaching + cert baru" }
+    {
+      "nama": "Hasil",
+      "bobot": "40%",
+      "desc": "Output terukur (closing, lead, progres, konten)"
+    },
+    {
+      "nama": "Peran",
+      "bobot": "20%",
+      "desc": "Cross-support + cover role + generalis"
+    },
+    {
+      "nama": "Kompetisi",
+      "bobot": "15%",
+      "desc": "Ranking leaderboard internal divisi"
+    },
+    {
+      "nama": "Disiplin",
+      "bobot": "15%",
+      "desc": "Tertib + SOP + dashboard updated"
+    },
+    {
+      "nama": "Growth",
+      "bobot": "10%",
+      "desc": "Improvement skill + coaching + cert baru"
+    }
   ],
   "grading": [
-    { "skor": "90-100", "grade": "A", "color": "success", "akibat": "Bonus +1 bulan + kandidat co-director" },
-    { "skor": "75-89", "grade": "B", "color": "info", "akibat": "Standar, eligible bonus reguler" },
-    { "skor": "60-74", "grade": "C", "color": "warning", "akibat": "Coaching 1-on-1 + pembinaan 1 Q" },
-    { "skor": "<60", "grade": "D", "color": "danger", "akibat": "Kontrak review + rotasi PIC senior" }
+    {
+      "skor": "90-100",
+      "grade": "A",
+      "color": "success",
+      "akibat": "Bonus +1 bulan + kandidat co-director"
+    },
+    {
+      "skor": "75-89",
+      "grade": "B",
+      "color": "info",
+      "akibat": "Standar, eligible bonus reguler"
+    },
+    {
+      "skor": "60-74",
+      "grade": "C",
+      "color": "warning",
+      "akibat": "Coaching 1-on-1 + pembinaan 1 Q"
+    },
+    {
+      "skor": "<60",
+      "grade": "D",
+      "color": "danger",
+      "akibat": "Kontrak review + rotasi PIC senior"
+    }
   ],
   "fee_media": {
     "pilar": [
-      { "nama": "Product Knowledge", "bobot": "30%", "desc": "Konten edukasi spek rumah, material, harga. Tunjukkan expertise internal." },
-      { "nama": "Brand Awareness", "bobot": "20%", "desc": "Story behind-the-scene, tim, progres, testimoni. Bangun trust + recall." },
-      { "nama": "Closing Trigger", "bobot": "50%", "desc": "CTA kuat, promo terbatas, urgency soft. Konten yang convert lead → closing." }
+      {
+        "nama": "Product Knowledge",
+        "bobot": "30%",
+        "desc": "Konten edukasi spek rumah, material, harga. Tunjukkan expertise internal."
+      },
+      {
+        "nama": "Brand Awareness",
+        "bobot": "20%",
+        "desc": "Story behind-the-scene, tim, progres, testimoni. Bangun trust + recall."
+      },
+      {
+        "nama": "Closing Trigger",
+        "bobot": "50%",
+        "desc": "CTA kuat, promo terbatas, urgency soft. Konten yang convert lead → closing."
+      }
     ],
     "pool": "Rp 500rb / closing · base pool cair tiap akhir bulan ke Reni/Rifki/Reta",
     "min_konten": "min 6 konten / minggu"
@@ -93,44 +211,302 @@
     }
   ],
   "stb_wajib": [
-    { "nama": "Report Harian", "desc": "Auto dashboard internal. Mada konsolidasi, Rizal update progres harian, Amir kirim foto + catatan lapangan." },
-    { "nama": "Notion Reminder", "desc": "H-7, H-3, H-1, H-0 reminder ke Novita + Bu Nisya. Tidak ada yang miss deadline karena lupa." },
-    { "nama": "Dokumen STB", "desc": "Masa kadaluarsa maks 6 bulan. Hardcopy di Sinta, softcopy di Notion + Drive. BAST ditandatangani kedua pihak." }
+    {
+      "nama": "Report Harian",
+      "desc": "Auto dashboard internal. Mada konsolidasi, Rizal update progres harian, Amir kirim foto + catatan lapangan."
+    },
+    {
+      "nama": "Notion Reminder",
+      "desc": "H-7, H-3, H-1, H-0 reminder ke Novita + Bu Nisya. Tidak ada yang miss deadline karena lupa."
+    },
+    {
+      "nama": "Dokumen STB",
+      "desc": "Masa kadaluarsa maks 6 bulan. Hardcopy di Sinta, softcopy di Notion + Drive. BAST ditandatangani kedua pihak."
+    }
   ],
   "stb_punish": [
-    { "jenjang": 1, "konsekuensi": "Lembur hangus", "trigger": "Telat report 1×", "recovery": "Submit sebelum tutup hari" },
-    { "jenjang": 2, "konsekuensi": "Hari Minggu kerja", "trigger": "Telat report 2× berturut", "recovery": "Bukti progress 100%" },
-    { "jenjang": 3, "konsekuensi": "Visit konsumen + konten", "trigger": "Telat report 3×", "recovery": "Laporan konsumen verbatim" },
-    { "jenjang": 4, "konsekuensi": "Potong gaji 10%", "trigger": "Telat report 4×", "recovery": "Recovery plan 30 hari" },
-    { "jenjang": 5, "konsekuensi": "Kontrak review", "trigger": "Telat report 5× / komplain klien", "recovery": "Kontrak baru 3 bulan probasi" }
+    {
+      "jenjang": 1,
+      "konsekuensi": "Lembur hangus",
+      "trigger": "Telat report 1×",
+      "recovery": "Submit sebelum tutup hari"
+    },
+    {
+      "jenjang": 2,
+      "konsekuensi": "Hari Minggu kerja",
+      "trigger": "Telat report 2× berturut",
+      "recovery": "Bukti progress 100%"
+    },
+    {
+      "jenjang": 3,
+      "konsekuensi": "Visit konsumen + konten",
+      "trigger": "Telat report 3×",
+      "recovery": "Laporan konsumen verbatim"
+    },
+    {
+      "jenjang": 4,
+      "konsekuensi": "Potong gaji 10%",
+      "trigger": "Telat report 4×",
+      "recovery": "Recovery plan 30 hari"
+    },
+    {
+      "jenjang": 5,
+      "konsekuensi": "Kontrak review",
+      "trigger": "Telat report 5× / komplain klien",
+      "recovery": "Kontrak baru 3 bulan probasi"
+    }
   ],
   "manager": {
     "sifat": [
-      { "nama": "Tertib & Disiplin", "desc": "Manager V5 = contoh untuk tim. Datang tepat waktu, pakai sistem (dashboard, SOP), konsisten. Indikator: absensi 100%, dashboard real-time, audit finding manager = 0." },
-      { "nama": "Memahami Karyawan & Atasan", "desc": "Paham karakter + kekuatan + kelemahan bawahan. Tahu apa atasan mau. 1-on-1 tiap bulan. Assign task sesuai kekuatan, bukan random." },
-      { "nama": "Generalis (Cross-Function)", "desc": "Paham lintas divisi (marketing, proyek, media, admin, legal) di level overview. Bisa diskusi sama PIC tanpa gap. Paham financial/pricing/margin." }
+      {
+        "nama": "Tertib & Disiplin",
+        "desc": "Manager V5 = contoh untuk tim. Datang tepat waktu, pakai sistem (dashboard, SOP), konsisten. Indikator: absensi 100%, dashboard real-time, audit finding manager = 0."
+      },
+      {
+        "nama": "Memahami Karyawan & Atasan",
+        "desc": "Paham karakter + kekuatan + kelemahan bawahan. Tahu apa atasan mau. 1-on-1 tiap bulan. Assign task sesuai kekuatan, bukan random."
+      },
+      {
+        "nama": "Generalis (Cross-Function)",
+        "desc": "Paham lintas divisi (marketing, proyek, media, admin, legal) di level overview. Bisa diskusi sama PIC tanpa gap. Paham financial/pricing/margin."
+      }
     ],
     "manager_list": [
-      { "nama": "Mada", "peran": "Chief of Staff — supervise 11 PIC + lintas fungsi", "tier": "operasional" },
-      { "nama": "Bu Nisya", "peran": "Co-Director Legal — supervise Novita + audit", "tier": "legal" },
-      { "nama": "Rizal", "peran": "Kepala Pelaksana — supervise Amir + mandor + subkon", "tier": "proyek" },
-      { "nama": "Reni", "peran": "Ketua Media — supervise Rifki + Reta", "tier": "media" },
-      { "nama": "Riza", "peran": "Senior Digital Marketing (jika promosi)", "tier": "marketing" }
+      {
+        "nama": "Mada",
+        "peran": "Chief of Staff — supervise 11 PIC + lintas fungsi",
+        "tier": "operasional"
+      },
+      {
+        "nama": "Bu Nisya",
+        "peran": "Co-Director Legal — supervise Novita + audit",
+        "tier": "legal"
+      },
+      {
+        "nama": "Rizal",
+        "peran": "Kepala Pelaksana — supervise Amir + mandor + subkon",
+        "tier": "proyek"
+      },
+      {
+        "nama": "Reni",
+        "peran": "Ketua Media — supervise Rifki + Reta",
+        "tier": "media"
+      },
+      {
+        "nama": "Riza",
+        "peran": "Senior Digital Marketing (jika promosi)",
+        "tier": "marketing"
+      }
     ]
   },
   "glosarium": [
-    ["AHS", "Analisa Harga Satuan"], ["BAST", "Berita Acara Serah Terima"], ["BPN", "Badan Pertanahan Nasional"], ["BPJS", "Badan Penyelenggara Jaminan Sosial"],
-    ["CPL", "Cost Per Lead"], ["CS", "Customer Service"], ["CTA", "Call To Action"], ["FLPP", "Fasilitas Likuiditas Pembiayaan Perumahan"],
-    ["HPP", "Harga Pokok Penjualan / Produksi"], ["HR", "Human Resources"], ["IG", "Instagram"], ["JHT", "Jaminan Hari Tua"],
-    ["JP", "Jaminan Pensiun"], ["KPI", "Key Performance Indicator"], ["KPP", "Komunikasi Pemberkasan Pembayaran (admin)"], ["K3", "Keselamatan dan Kesehatan Kerja"],
-    ["MADA", "Mada (B10 PIC internal code)"], ["NIP", "Nomor Induk Pegawai"], ["OOH", "Out Of Home (advertising)"], ["PIC", "Person In Charge (penanggung jawab)"],
-    ["PIP", "Performance Improvement Plan"], ["PO", "Purchase Order"], ["PPh", "Pajak Penghasilan"], ["QC", "Quality Control"],
-    ["RAB", "Rencana Anggaran Biaya"], ["ROI", "Return On Investment"], ["SDM", "Sumber Daya Manusia"], ["SHM", "Sertifikat Hak Milik"],
-    ["SLA", "Service Level Agreement"], ["SOP", "Standard Operating Procedure"], ["SPK", "Surat Perintah Kerja"], ["SP3K", "Surat Penawaran Pemesanan Kredit (FLPP)"],
-    ["SSOT", "Single Source Of Truth"], ["STB", "Serah Terima Bangunan"], ["THR", "Tunjangan Hari Raya"], ["TT", "TikTok"],
-    ["UMR", "Upah Minimum Regional"], ["UTM", "Urchin Tracking Module (web analytics)"], ["WA", "WhatsApp"], ["KPR", "Kredit Pemilikan Rumah"],
-    ["LPB", "Laporan Penerimaan Barang"], ["RKS", "Rencana Kerja dan Syarat-Syarat"], ["BAP", "Berita Acara Pemeriksaan"], ["Retensi", "Potongan 5% ditahan 30 hari pasca BAST"],
-    ["Subkon", "Subkontraktor"], ["Mandor", "Ketua tukang di lapangan"], ["Cross-train", "Pelatihan skill lintas fungsi"], ["Polyvalent", "Mampu multi-skill (admin polyvalent)"],
-    ["Leaderboard", "Ranking internal per divisi"], ["Mel", "Istilah internal: insertif per file closing"], ["BAST 1", "BAST Tahap 1 (50% pekerjaan)"], ["BAST 2", "BAST Tahap 2 (100% pekerjaan)"]
+    [
+      "AHS",
+      "Analisa Harga Satuan"
+    ],
+    [
+      "BAST",
+      "Berita Acara Serah Terima"
+    ],
+    [
+      "BPN",
+      "Badan Pertanahan Nasional"
+    ],
+    [
+      "BPJS",
+      "Badan Penyelenggara Jaminan Sosial"
+    ],
+    [
+      "CPL",
+      "Cost Per Lead"
+    ],
+    [
+      "CS",
+      "Customer Service"
+    ],
+    [
+      "CTA",
+      "Call To Action"
+    ],
+    [
+      "FLPP",
+      "Fasilitas Likuiditas Pembiayaan Perumahan"
+    ],
+    [
+      "HPP",
+      "Harga Pokok Penjualan / Produksi"
+    ],
+    [
+      "HR",
+      "Human Resources"
+    ],
+    [
+      "IG",
+      "Instagram"
+    ],
+    [
+      "JHT",
+      "Jaminan Hari Tua"
+    ],
+    [
+      "JP",
+      "Jaminan Pensiun"
+    ],
+    [
+      "KPI",
+      "Key Performance Indicator"
+    ],
+    [
+      "KPP",
+      "Komunikasi Pemberkasan Pembayaran (admin)"
+    ],
+    [
+      "K3",
+      "Keselamatan dan Kesehatan Kerja"
+    ],
+    [
+      "MADA",
+      "Mada (B10 PIC internal code)"
+    ],
+    [
+      "NIP",
+      "Nomor Induk Pegawai"
+    ],
+    [
+      "OOH",
+      "Out Of Home (advertising)"
+    ],
+    [
+      "PIC",
+      "Person In Charge (penanggung jawab)"
+    ],
+    [
+      "PIP",
+      "Performance Improvement Plan"
+    ],
+    [
+      "PO",
+      "Purchase Order"
+    ],
+    [
+      "PPh",
+      "Pajak Penghasilan"
+    ],
+    [
+      "QC",
+      "Quality Control"
+    ],
+    [
+      "RAB",
+      "Rencana Anggaran Biaya"
+    ],
+    [
+      "ROI",
+      "Return On Investment"
+    ],
+    [
+      "SDM",
+      "Sumber Daya Manusia"
+    ],
+    [
+      "SHM",
+      "Sertifikat Hak Milik"
+    ],
+    [
+      "SLA",
+      "Service Level Agreement"
+    ],
+    [
+      "SOP",
+      "Standard Operating Procedure"
+    ],
+    [
+      "SPK",
+      "Surat Perintah Kerja"
+    ],
+    [
+      "SP3K",
+      "Surat Penawaran Pemesanan Kredit (FLPP)"
+    ],
+    [
+      "SSOT",
+      "Single Source Of Truth"
+    ],
+    [
+      "STB",
+      "Serah Terima Bangunan"
+    ],
+    [
+      "THR",
+      "Tunjangan Hari Raya"
+    ],
+    [
+      "TT",
+      "TikTok"
+    ],
+    [
+      "UMR",
+      "Upah Minimum Regional"
+    ],
+    [
+      "UTM",
+      "Urchin Tracking Module (web analytics)"
+    ],
+    [
+      "WA",
+      "WhatsApp"
+    ],
+    [
+      "KPR",
+      "Kredit Pemilikan Rumah"
+    ],
+    [
+      "LPB",
+      "Laporan Penerimaan Barang"
+    ],
+    [
+      "RKS",
+      "Rencana Kerja dan Syarat-Syarat"
+    ],
+    [
+      "BAP",
+      "Berita Acara Pemeriksaan"
+    ],
+    [
+      "Retensi",
+      "Potongan 5% ditahan 30 hari pasca BAST"
+    ],
+    [
+      "Subkon",
+      "Subkontraktor"
+    ],
+    [
+      "Mandor",
+      "Ketua tukang di lapangan"
+    ],
+    [
+      "Cross-train",
+      "Pelatihan skill lintas fungsi"
+    ],
+    [
+      "Polyvalent",
+      "Mampu multi-skill (admin polyvalent)"
+    ],
+    [
+      "Leaderboard",
+      "Ranking internal per divisi"
+    ],
+    [
+      "Mel",
+      "Istilah internal: insertif per file closing"
+    ],
+    [
+      "BAST 1",
+      "BAST Tahap 1 (50% pekerjaan)"
+    ],
+    [
+      "BAST 2",
+      "BAST Tahap 2 (100% pekerjaan)"
+    ]
   ]
 }

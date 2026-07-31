@@ -1,0 +1,2048 @@
+{
+  "_meta": {
+    "generated_at": "2026-07-29",
+    "count": 151,
+    "note": "90-day company calendar (151 events) across 5 types"
+  },
+  "events": [
+    {
+      "id": "EVT-2026-07-29-540",
+      "date": "2026-07-29",
+      "type": "deadline",
+      "title": "SP3K submission",
+      "attendees": [
+        "Sinta",
+        "Amir",
+        "Riza",
+        "Novita"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-29-726",
+      "date": "2026-07-29",
+      "type": "meeting",
+      "title": "Vendor sync",
+      "attendees": [
+        "Sinta",
+        "Novita",
+        "Riza",
+        "Reni"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-29-343",
+      "date": "2026-07-29",
+      "type": "meeting",
+      "title": "PIC 1-on-1",
+      "attendees": [
+        "Bu Nisya",
+        "Mada",
+        "Novita"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-28-956",
+      "date": "2026-07-28",
+      "type": "site-visit",
+      "title": "Cluster A tour",
+      "attendees": [
+        "Rifki",
+        "Bu Nisya",
+        "Reni",
+        "Riza",
+        "Yudi/Sdek"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-27-399",
+      "date": "2026-07-27",
+      "type": "deadline",
+      "title": "SP3K submission",
+      "attendees": [
+        "Yudi/Sdek",
+        "Rifki",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-26-773",
+      "date": "2026-07-26",
+      "type": "milestone",
+      "title": "Project launch",
+      "attendees": [
+        "Reta",
+        "Mada",
+        "Riza",
+        "Amir"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-26-276",
+      "date": "2026-07-26",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Rifki",
+        "Bu Nisya",
+        "Reta"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-26-874",
+      "date": "2026-07-26",
+      "type": "meeting",
+      "title": "Vendor sync",
+      "attendees": [
+        "Sinta",
+        "Rifki",
+        "Pak Ardian"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-25-504",
+      "date": "2026-07-25",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Yudi/Sdek",
+        "Mada",
+        "Rizal",
+        "Pak Ardian",
+        "Novita"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-25-284",
+      "date": "2026-07-25",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Rizal",
+        "Yudi/Sdek",
+        "Rifki",
+        "Mada"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-24-337",
+      "date": "2026-07-24",
+      "type": "meeting",
+      "title": "Vendor sync",
+      "attendees": [
+        "Yudi/Sdek",
+        "Rifki",
+        "Rizal",
+        "Sinta"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-23-981",
+      "date": "2026-07-23",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Novita",
+        "Amir",
+        "Rizal",
+        "Pak Ardian",
+        "Sinta"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-22-116",
+      "date": "2026-07-22",
+      "type": "meeting",
+      "title": "PIC 1-on-1",
+      "attendees": [
+        "Reni",
+        "Riza",
+        "Rifki",
+        "Reta"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-21-573",
+      "date": "2026-07-21",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Novita",
+        "Sinta",
+        "Amir"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-21-585",
+      "date": "2026-07-21",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Pak Ardian",
+        "Novita"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-21-295",
+      "date": "2026-07-21",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Bu Nisya",
+        "Reta",
+        "Riza",
+        "Rizal",
+        "Amir"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-20-615",
+      "date": "2026-07-20",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Novita",
+        "Mada"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-20-710",
+      "date": "2026-07-20",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Bu Nisya",
+        "Rizal",
+        "Yudi/Sdek"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-20-949",
+      "date": "2026-07-20",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Rifki",
+        "Rizal",
+        "Riza"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-19-562",
+      "date": "2026-07-19",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Novita",
+        "Rifki"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-19-394",
+      "date": "2026-07-19",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Reta",
+        "Yudi/Sdek"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-19-908",
+      "date": "2026-07-19",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Amir",
+        "Novita"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-18-771",
+      "date": "2026-07-18",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Bu Nisya",
+        "Rifki",
+        "Amir",
+        "Mada"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-18-392",
+      "date": "2026-07-18",
+      "type": "holiday",
+      "title": "Libur Bersama",
+      "attendees": [
+        "Yudi/Sdek",
+        "Mada",
+        "Rizal"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-18-667",
+      "date": "2026-07-18",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Bu Nisya",
+        "Reta",
+        "Yudi/Sdek",
+        "Mada"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-17-382",
+      "date": "2026-07-17",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Reta",
+        "Rifki"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-16-231",
+      "date": "2026-07-16",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Bu Nisya",
+        "Novita",
+        "Reta"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-15-501",
+      "date": "2026-07-15",
+      "type": "deadline",
+      "title": "SP3K submission",
+      "attendees": [
+        "Mada",
+        "Sinta",
+        "Rizal",
+        "Rifki",
+        "Amir"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-15-526",
+      "date": "2026-07-15",
+      "type": "meeting",
+      "title": "Vendor sync",
+      "attendees": [
+        "Bu Nisya",
+        "Rifki",
+        "Reni",
+        "Amir",
+        "Riza"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-15-262",
+      "date": "2026-07-15",
+      "type": "milestone",
+      "title": "Project launch",
+      "attendees": [
+        "Sinta",
+        "Amir"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-14-153",
+      "date": "2026-07-14",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Reni",
+        "Amir"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-14-758",
+      "date": "2026-07-14",
+      "type": "meeting",
+      "title": "PIC 1-on-1",
+      "attendees": [
+        "Reta",
+        "Amir",
+        "Mada",
+        "Pak Ardian"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-13-655",
+      "date": "2026-07-13",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Yudi/Sdek",
+        "Riza"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-13-681",
+      "date": "2026-07-13",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Amir",
+        "Riza"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-13-685",
+      "date": "2026-07-13",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Rifki",
+        "Sinta",
+        "Yudi/Sdek",
+        "Amir",
+        "Reni"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-12-969",
+      "date": "2026-07-12",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Bu Nisya",
+        "Reta"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-12-332",
+      "date": "2026-07-12",
+      "type": "holiday",
+      "title": "Libur Bersama",
+      "attendees": [
+        "Reni",
+        "Novita",
+        "Mada",
+        "Rizal"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-11-675",
+      "date": "2026-07-11",
+      "type": "deadline",
+      "title": "Retensi batch",
+      "attendees": [
+        "Bu Nisya",
+        "Rizal",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-11-163",
+      "date": "2026-07-11",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Reta",
+        "Bu Nisya",
+        "Rizal"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-10-610",
+      "date": "2026-07-10",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Rizal",
+        "Reta",
+        "Pak Ardian"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-09-211",
+      "date": "2026-07-09",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Bu Nisya",
+        "Reta",
+        "Novita"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-09-563",
+      "date": "2026-07-09",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Sinta",
+        "Rifki"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-08-802",
+      "date": "2026-07-08",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Rizal",
+        "Rifki",
+        "Sinta"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-07-966",
+      "date": "2026-07-07",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Pak Ardian",
+        "Riza",
+        "Mada",
+        "Novita"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-06-344",
+      "date": "2026-07-06",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Reni",
+        "Yudi/Sdek",
+        "Mada"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-05-723",
+      "date": "2026-07-05",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Rizal",
+        "Riza",
+        "Mada",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-05-481",
+      "date": "2026-07-05",
+      "type": "meeting",
+      "title": "PIC 1-on-1",
+      "attendees": [
+        "Pak Ardian",
+        "Mada",
+        "Novita",
+        "Rifki",
+        "Yudi/Sdek"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-04-949",
+      "date": "2026-07-04",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Novita",
+        "Reta",
+        "Yudi/Sdek",
+        "Bu Nisya",
+        "Rizal"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-03-840",
+      "date": "2026-07-03",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Amir",
+        "Reta",
+        "Sinta",
+        "Novita"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-02-781",
+      "date": "2026-07-02",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Pak Ardian",
+        "Rizal",
+        "Amir",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-02-724",
+      "date": "2026-07-02",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Novita",
+        "Rizal"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-07-01-926",
+      "date": "2026-07-01",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Rizal",
+        "Reta"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-07-01-829",
+      "date": "2026-07-01",
+      "type": "holiday",
+      "title": "Tahun Baru Hijriyah",
+      "attendees": [
+        "Rifki",
+        "Bu Nisya",
+        "Riza"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-30-243",
+      "date": "2026-06-30",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Amir",
+        "Bu Nisya",
+        "Mada",
+        "Sinta",
+        "Novita"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-29-592",
+      "date": "2026-06-29",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Yudi/Sdek",
+        "Riza",
+        "Amir",
+        "Novita",
+        "Reta"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-29-490",
+      "date": "2026-06-29",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Amir",
+        "Reni",
+        "Sinta"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-28-870",
+      "date": "2026-06-28",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Bu Nisya",
+        "Reni",
+        "Sinta",
+        "Amir"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-27-472",
+      "date": "2026-06-27",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Rizal",
+        "Rifki",
+        "Novita",
+        "Yudi/Sdek",
+        "Amir"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-27-717",
+      "date": "2026-06-27",
+      "type": "holiday",
+      "title": "Libur Bersama",
+      "attendees": [
+        "Sinta",
+        "Rizal",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-26-629",
+      "date": "2026-06-26",
+      "type": "milestone",
+      "title": "Project launch",
+      "attendees": [
+        "Rifki",
+        "Amir",
+        "Pak Ardian",
+        "Rizal",
+        "Yudi/Sdek"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-25-433",
+      "date": "2026-06-25",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Novita",
+        "Rizal",
+        "Reni",
+        "Amir"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-24-631",
+      "date": "2026-06-24",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Novita",
+        "Reni",
+        "Riza"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-24-517",
+      "date": "2026-06-24",
+      "type": "deadline",
+      "title": "SPK closing",
+      "attendees": [
+        "Sinta",
+        "Yudi/Sdek"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-23-470",
+      "date": "2026-06-23",
+      "type": "site-visit",
+      "title": "Cluster A tour",
+      "attendees": [
+        "Sinta",
+        "Reni",
+        "Rizal",
+        "Riza"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-22-270",
+      "date": "2026-06-22",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Rifki",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-22-611",
+      "date": "2026-06-22",
+      "type": "deadline",
+      "title": "SPK closing",
+      "attendees": [
+        "Rizal",
+        "Yudi/Sdek",
+        "Reni",
+        "Novita",
+        "Sinta"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-21-554",
+      "date": "2026-06-21",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Rizal",
+        "Rifki",
+        "Reta",
+        "Pak Ardian"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-20-538",
+      "date": "2026-06-20",
+      "type": "meeting",
+      "title": "Vendor sync",
+      "attendees": [
+        "Reni",
+        "Mada",
+        "Sinta",
+        "Bu Nisya",
+        "Amir"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-19-497",
+      "date": "2026-06-19",
+      "type": "milestone",
+      "title": "Project launch",
+      "attendees": [
+        "Mada",
+        "Pak Ardian",
+        "Amir",
+        "Novita"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-18-944",
+      "date": "2026-06-18",
+      "type": "site-visit",
+      "title": "Cluster A tour",
+      "attendees": [
+        "Reta",
+        "Rifki",
+        "Reni",
+        "Bu Nisya",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-17-284",
+      "date": "2026-06-17",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Sinta",
+        "Reta",
+        "Reni",
+        "Riza",
+        "Bu Nisya"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-16-607",
+      "date": "2026-06-16",
+      "type": "site-visit",
+      "title": "Cluster A tour",
+      "attendees": [
+        "Novita",
+        "Mada",
+        "Yudi/Sdek"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-16-821",
+      "date": "2026-06-16",
+      "type": "deadline",
+      "title": "SP3K submission",
+      "attendees": [
+        "Amir",
+        "Reni",
+        "Yudi/Sdek"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-16-293",
+      "date": "2026-06-16",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Sinta",
+        "Mada",
+        "Yudi/Sdek",
+        "Bu Nisya"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-15-382",
+      "date": "2026-06-15",
+      "type": "deadline",
+      "title": "SPK closing",
+      "attendees": [
+        "Yudi/Sdek",
+        "Rizal",
+        "Sinta",
+        "Reni",
+        "Bu Nisya"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-14-838",
+      "date": "2026-06-14",
+      "type": "milestone",
+      "title": "Project launch",
+      "attendees": [
+        "Pak Ardian",
+        "Sinta",
+        "Rizal",
+        "Amir"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-14-246",
+      "date": "2026-06-14",
+      "type": "deadline",
+      "title": "SP3K submission",
+      "attendees": [
+        "Amir",
+        "Yudi/Sdek",
+        "Reni",
+        "Novita",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-13-615",
+      "date": "2026-06-13",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Novita",
+        "Amir",
+        "Pak Ardian"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-12-221",
+      "date": "2026-06-12",
+      "type": "deadline",
+      "title": "SPK closing",
+      "attendees": [
+        "Riza",
+        "Novita"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-11-647",
+      "date": "2026-06-11",
+      "type": "holiday",
+      "title": "Idul Adha",
+      "attendees": [
+        "Novita",
+        "Reta",
+        "Mada",
+        "Bu Nisya",
+        "Sinta"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-11-433",
+      "date": "2026-06-11",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Bu Nisya",
+        "Reni",
+        "Mada"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-10-967",
+      "date": "2026-06-10",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Mada",
+        "Riza",
+        "Amir"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-09-211",
+      "date": "2026-06-09",
+      "type": "meeting",
+      "title": "PIC 1-on-1",
+      "attendees": [
+        "Sinta",
+        "Reni",
+        "Rizal",
+        "Bu Nisya"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-08-787",
+      "date": "2026-06-08",
+      "type": "site-visit",
+      "title": "Cluster A tour",
+      "attendees": [
+        "Yudi/Sdek",
+        "Rizal",
+        "Reta",
+        "Sinta"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-08-330",
+      "date": "2026-06-08",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Novita",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-07-522",
+      "date": "2026-06-07",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Bu Nisya",
+        "Yudi/Sdek",
+        "Sinta",
+        "Pak Ardian"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-07-489",
+      "date": "2026-06-07",
+      "type": "meeting",
+      "title": "PIC 1-on-1",
+      "attendees": [
+        "Amir",
+        "Mada"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-06-568",
+      "date": "2026-06-06",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Yudi/Sdek",
+        "Riza",
+        "Pak Ardian",
+        "Novita",
+        "Rizal"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-05-864",
+      "date": "2026-06-05",
+      "type": "holiday",
+      "title": "Idul Adha",
+      "attendees": [
+        "Rizal",
+        "Mada",
+        "Amir",
+        "Riza",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-05-823",
+      "date": "2026-06-05",
+      "type": "site-visit",
+      "title": "Cluster A tour",
+      "attendees": [
+        "Reta",
+        "Riza",
+        "Yudi/Sdek",
+        "Novita"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-04-318",
+      "date": "2026-06-04",
+      "type": "meeting",
+      "title": "PIC 1-on-1",
+      "attendees": [
+        "Pak Ardian",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-04-419",
+      "date": "2026-06-04",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Pak Ardian",
+        "Mada",
+        "Rizal"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-03-300",
+      "date": "2026-06-03",
+      "type": "holiday",
+      "title": "Tahun Baru Hijriyah",
+      "attendees": [
+        "Riza",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-06-02-959",
+      "date": "2026-06-02",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Reni",
+        "Mada",
+        "Pak Ardian"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-01-107",
+      "date": "2026-06-01",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Reta",
+        "Reni",
+        "Pak Ardian"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-06-01-984",
+      "date": "2026-06-01",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Yudi/Sdek",
+        "Bu Nisya",
+        "Pak Ardian",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-31-846",
+      "date": "2026-05-31",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Yudi/Sdek",
+        "Riza",
+        "Bu Nisya",
+        "Amir"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-31-403",
+      "date": "2026-05-31",
+      "type": "holiday",
+      "title": "Idul Adha",
+      "attendees": [
+        "Yudi/Sdek",
+        "Sinta",
+        "Bu Nisya",
+        "Reni",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-30-536",
+      "date": "2026-05-30",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Pak Ardian",
+        "Amir",
+        "Sinta"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-30-881",
+      "date": "2026-05-30",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Rizal",
+        "Yudi/Sdek",
+        "Amir"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-30-381",
+      "date": "2026-05-30",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Novita",
+        "Reni"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-29-323",
+      "date": "2026-05-29",
+      "type": "holiday",
+      "title": "Tahun Baru Hijriyah",
+      "attendees": [
+        "Rizal",
+        "Amir",
+        "Yudi/Sdek"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-29-242",
+      "date": "2026-05-29",
+      "type": "holiday",
+      "title": "Idul Adha",
+      "attendees": [
+        "Riza",
+        "Bu Nisya"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-28-462",
+      "date": "2026-05-28",
+      "type": "deadline",
+      "title": "Retensi batch",
+      "attendees": [
+        "Sinta",
+        "Rifki",
+        "Reni",
+        "Mada",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-27-336",
+      "date": "2026-05-27",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Mada",
+        "Novita"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-27-548",
+      "date": "2026-05-27",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Mada",
+        "Bu Nisya",
+        "Riza",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-27-517",
+      "date": "2026-05-27",
+      "type": "deadline",
+      "title": "SPK closing",
+      "attendees": [
+        "Rifki",
+        "Reni",
+        "Mada"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-26-504",
+      "date": "2026-05-26",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Riza",
+        "Amir",
+        "Reni",
+        "Pak Ardian"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-26-902",
+      "date": "2026-05-26",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Rizal",
+        "Amir"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-25-735",
+      "date": "2026-05-25",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Riza",
+        "Rifki",
+        "Reni"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-25-987",
+      "date": "2026-05-25",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Amir",
+        "Pak Ardian",
+        "Rifki",
+        "Sinta"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-24-129",
+      "date": "2026-05-24",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Mada",
+        "Pak Ardian",
+        "Rifki",
+        "Riza"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-23-750",
+      "date": "2026-05-23",
+      "type": "deadline",
+      "title": "Retensi batch",
+      "attendees": [
+        "Reta",
+        "Yudi/Sdek",
+        "Mada",
+        "Sinta",
+        "Amir"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-22-195",
+      "date": "2026-05-22",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Pak Ardian",
+        "Sinta"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-22-330",
+      "date": "2026-05-22",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Bu Nisya",
+        "Sinta",
+        "Rizal"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-21-720",
+      "date": "2026-05-21",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Riza",
+        "Rifki",
+        "Bu Nisya",
+        "Novita"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-20-530",
+      "date": "2026-05-20",
+      "type": "holiday",
+      "title": "Idul Adha",
+      "attendees": [
+        "Rizal",
+        "Sinta",
+        "Novita",
+        "Mada",
+        "Reta"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-19-378",
+      "date": "2026-05-19",
+      "type": "meeting",
+      "title": "Vendor sync",
+      "attendees": [
+        "Bu Nisya",
+        "Amir",
+        "Sinta",
+        "Novita",
+        "Mada"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-19-546",
+      "date": "2026-05-19",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Pak Ardian",
+        "Riza",
+        "Rifki"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-18-274",
+      "date": "2026-05-18",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Sinta",
+        "Pak Ardian"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-17-948",
+      "date": "2026-05-17",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Sinta",
+        "Riza",
+        "Mada",
+        "Bu Nisya"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-16-706",
+      "date": "2026-05-16",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Mada",
+        "Pak Ardian",
+        "Bu Nisya",
+        "Riza"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-16-932",
+      "date": "2026-05-16",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Bu Nisya",
+        "Rizal"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-16-938",
+      "date": "2026-05-16",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Pak Ardian",
+        "Reni",
+        "Reta",
+        "Riza"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-15-193",
+      "date": "2026-05-15",
+      "type": "holiday",
+      "title": "Idul Adha",
+      "attendees": [
+        "Bu Nisya",
+        "Rizal"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-14-263",
+      "date": "2026-05-14",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Rizal",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-14-205",
+      "date": "2026-05-14",
+      "type": "deadline",
+      "title": "SP3K submission",
+      "attendees": [
+        "Rifki",
+        "Yudi/Sdek",
+        "Novita",
+        "Pak Ardian",
+        "Reni"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-13-190",
+      "date": "2026-05-13",
+      "type": "holiday",
+      "title": "Tahun Baru Hijriyah",
+      "attendees": [
+        "Mada",
+        "Amir"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-13-734",
+      "date": "2026-05-13",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Bu Nisya",
+        "Amir",
+        "Riza",
+        "Sinta",
+        "Reta"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-12-122",
+      "date": "2026-05-12",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Reta",
+        "Novita",
+        "Riza",
+        "Rifki",
+        "Sinta"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-11-726",
+      "date": "2026-05-11",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Pak Ardian",
+        "Yudi/Sdek",
+        "Sinta",
+        "Novita"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-10-469",
+      "date": "2026-05-10",
+      "type": "deadline",
+      "title": "SPK closing",
+      "attendees": [
+        "Sinta",
+        "Amir",
+        "Yudi/Sdek",
+        "Novita",
+        "Reni"
+      ],
+      "location": "Online",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-10-174",
+      "date": "2026-05-10",
+      "type": "deadline",
+      "title": "SPK closing",
+      "attendees": [
+        "Yudi/Sdek",
+        "Rifki",
+        "Reni",
+        "Mada",
+        "Riza"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-10-873",
+      "date": "2026-05-10",
+      "type": "deadline",
+      "title": "OTS target",
+      "attendees": [
+        "Riza",
+        "Pak Ardian",
+        "Mada",
+        "Amir"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-09-230",
+      "date": "2026-05-09",
+      "type": "holiday",
+      "title": "Tahun Baru Hijriyah",
+      "attendees": [
+        "Reni",
+        "Riza"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-09-166",
+      "date": "2026-05-09",
+      "type": "meeting",
+      "title": "Weekly review",
+      "attendees": [
+        "Bu Nisya",
+        "Riza",
+        "Amir",
+        "Yudi/Sdek"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-09-288",
+      "date": "2026-05-09",
+      "type": "site-visit",
+      "title": "Cluster B inspection",
+      "attendees": [
+        "Pak Ardian",
+        "Bu Nisya",
+        "Reni",
+        "Rizal"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-08-179",
+      "date": "2026-05-08",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Pak Ardian",
+        "Reni",
+        "Yudi/Sdek",
+        "Amir",
+        "Bu Nisya"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-08-301",
+      "date": "2026-05-08",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Novita",
+        "Reni"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-08-603",
+      "date": "2026-05-08",
+      "type": "holiday",
+      "title": "Independence Day",
+      "attendees": [
+        "Novita",
+        "Riza"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-07-515",
+      "date": "2026-05-07",
+      "type": "holiday",
+      "title": "Idul Adha",
+      "attendees": [
+        "Reni",
+        "Riza",
+        "Bu Nisya",
+        "Novita"
+      ],
+      "location": "Online",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-06-259",
+      "date": "2026-05-06",
+      "type": "site-visit",
+      "title": "Material warehouse check",
+      "attendees": [
+        "Sinta",
+        "Bu Nisya",
+        "Reni",
+        "Reta",
+        "Riza"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-05-694",
+      "date": "2026-05-05",
+      "type": "deadline",
+      "title": "Retensi batch",
+      "attendees": [
+        "Riza",
+        "Reta"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-05-475",
+      "date": "2026-05-05",
+      "type": "holiday",
+      "title": "Libur Bersama",
+      "attendees": [
+        "Bu Nisya",
+        "Riza",
+        "Reta",
+        "Reni"
+      ],
+      "location": "Kantor pusat",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-04-920",
+      "date": "2026-05-04",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Bu Nisya",
+        "Mada",
+        "Amir",
+        "Rizal",
+        "Rifki"
+      ],
+      "location": "Cluster A",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-03-891",
+      "date": "2026-05-03",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Bu Nisya",
+        "Reta",
+        "Pak Ardian"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-02-449",
+      "date": "2026-05-02",
+      "type": "meeting",
+      "title": "Monthly board",
+      "attendees": [
+        "Yudi/Sdek",
+        "Sinta",
+        "Riza"
+      ],
+      "location": "Cluster B",
+      "notes": "Konfirmasi via WA grup"
+    },
+    {
+      "id": "EVT-2026-05-02-897",
+      "date": "2026-05-02",
+      "type": "milestone",
+      "title": "Cluster handover",
+      "attendees": [
+        "Rizal",
+        "Sinta"
+      ],
+      "location": "Cluster A",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-02-291",
+      "date": "2026-05-02",
+      "type": "milestone",
+      "title": "PIC promotion",
+      "attendees": [
+        "Reni",
+        "Pak Ardian",
+        "Novita"
+      ],
+      "location": "Cluster B",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-01-448",
+      "date": "2026-05-01",
+      "type": "deadline",
+      "title": "SP3K submission",
+      "attendees": [
+        "Reta",
+        "Amir",
+        "Reni",
+        "Bu Nisya"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    },
+    {
+      "id": "EVT-2026-05-01-596",
+      "date": "2026-05-01",
+      "type": "milestone",
+      "title": "Vendor award",
+      "attendees": [
+        "Reni",
+        "Sinta",
+        "Riza"
+      ],
+      "location": "Kantor pusat",
+      "notes": ""
+    }
+  ]
+}

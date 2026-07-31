@@ -1,0 +1,649 @@
+{
+  "_meta": {
+    "generated_at": "2026-07-29",
+    "count": 15,
+    "note": "15 SP3K pipeline entries across 5 stages (SP3K → OTS → SPK → Retensi → Selesai)"
+  },
+  "projects": [
+    {
+      "id": "SP3K-001",
+      "client": "Cluster Harmoni Residence",
+      "value": 29000000000,
+      "stage": "SP3K",
+      "sp3k_date": "2026-02-18",
+      "ots_date": "2026-05-14",
+      "spk_date": "2026-05-24",
+      "retensi_date": null,
+      "pic": "Rizal",
+      "progress_pct": 72,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-05-23",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-04-28",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-06-01",
+          "done": false
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-10-01",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2027-01-26",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 28,
+      "budget_used_pct": 76
+    },
+    {
+      "id": "SP3K-002",
+      "client": "Cluster Permata Asri",
+      "value": 37000000000,
+      "stage": "OTS",
+      "sp3k_date": "2026-01-28",
+      "ots_date": "2026-05-20",
+      "spk_date": "2026-06-06",
+      "retensi_date": null,
+      "pic": "Rizal",
+      "progress_pct": 57,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-03-28",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-06-23",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-06-24",
+          "done": false
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-09-13",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-12-12",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 26,
+      "budget_used_pct": 84
+    },
+    {
+      "id": "SP3K-003",
+      "client": "Cluster Bukit Hijau",
+      "value": 51000000000,
+      "stage": "SPK",
+      "sp3k_date": "2026-02-24",
+      "ots_date": "2026-03-28",
+      "spk_date": "2026-05-01",
+      "retensi_date": null,
+      "pic": "Amir",
+      "progress_pct": 39,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-04-13",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-05-18",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-07-10",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-09-09",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-12-28",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 41,
+      "budget_used_pct": 52
+    },
+    {
+      "id": "SP3K-004",
+      "client": "Cluster Griya Sentosa",
+      "value": 53000000000,
+      "stage": "Retensi",
+      "sp3k_date": "2026-03-31",
+      "ots_date": "2026-06-26",
+      "spk_date": "2026-06-22",
+      "retensi_date": "2026-10-02",
+      "pic": "Mada",
+      "progress_pct": 44,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-05-27",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-03-31",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-05-02",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-09-27",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2027-02-15",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 21,
+      "budget_used_pct": 66
+    },
+    {
+      "id": "SP3K-005",
+      "client": "Cluster Taman Anggrek",
+      "value": 70000000000,
+      "stage": "Selesai",
+      "sp3k_date": "2026-01-12",
+      "ots_date": "2026-05-25",
+      "spk_date": "2026-07-01",
+      "retensi_date": "2026-10-26",
+      "pic": "Amir",
+      "progress_pct": 28,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-02-09",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-05-25",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-07-07",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-09-27",
+          "done": true
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-12-03",
+          "done": false
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Material delay",
+          "eta_days": 15
+        }
+      ],
+      "budget_line_count": 48,
+      "budget_used_pct": 52
+    },
+    {
+      "id": "SP3K-006",
+      "client": "Cluster Puri Indah",
+      "value": 75000000000,
+      "stage": "SP3K",
+      "sp3k_date": "2026-03-16",
+      "ots_date": "2026-06-21",
+      "spk_date": "2026-04-27",
+      "retensi_date": null,
+      "pic": "Rizal",
+      "progress_pct": 16,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-01-11",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-03-30",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-04-27",
+          "done": false
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-10-26",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2027-03-15",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 23,
+      "budget_used_pct": 62
+    },
+    {
+      "id": "SP3K-007",
+      "client": "Cluster Mahoni Park",
+      "value": 30000000000,
+      "stage": "OTS",
+      "sp3k_date": "2026-02-13",
+      "ots_date": "2026-06-14",
+      "spk_date": "2026-05-22",
+      "retensi_date": null,
+      "pic": "Amir",
+      "progress_pct": 91,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-05-07",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-05-12",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-06-17",
+          "done": false
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-11-10",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2027-02-24",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 47,
+      "budget_used_pct": 76
+    },
+    {
+      "id": "SP3K-008",
+      "client": "Cluster Villa Nusa",
+      "value": 21000000000,
+      "stage": "SPK",
+      "sp3k_date": "2026-04-20",
+      "ots_date": "2026-04-06",
+      "spk_date": "2026-06-03",
+      "retensi_date": null,
+      "pic": "Rizal",
+      "progress_pct": 77,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-03-24",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-03-14",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-06-02",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-09-18",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2027-03-08",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 20,
+      "budget_used_pct": 62
+    },
+    {
+      "id": "SP3K-009",
+      "client": "Cluster Cempaka Putih",
+      "value": 57000000000,
+      "stage": "Retensi",
+      "sp3k_date": "2026-05-23",
+      "ots_date": "2026-04-07",
+      "spk_date": "2026-05-18",
+      "retensi_date": "2026-11-15",
+      "pic": "Amir",
+      "progress_pct": 92,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-01-21",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-05-15",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-05-23",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-09-05",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-12-13",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 23,
+      "budget_used_pct": 44
+    },
+    {
+      "id": "SP3K-010",
+      "client": "Cluster Legenda Residence",
+      "value": 48000000000,
+      "stage": "Selesai",
+      "sp3k_date": "2026-01-12",
+      "ots_date": "2026-06-05",
+      "spk_date": "2026-05-19",
+      "retensi_date": "2026-09-26",
+      "pic": "Mada",
+      "progress_pct": 38,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-02-28",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-05-11",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-06-04",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-11-20",
+          "done": true
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2027-01-02",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 19,
+      "budget_used_pct": 77
+    },
+    {
+      "id": "SP3K-011",
+      "client": "Cluster Surya Abadi",
+      "value": 58000000000,
+      "stage": "SP3K",
+      "sp3k_date": "2026-04-06",
+      "ots_date": "2026-03-20",
+      "spk_date": "2026-05-01",
+      "retensi_date": null,
+      "pic": "Amir",
+      "progress_pct": 35,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-03-06",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-03-18",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-07-10",
+          "done": false
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-11-24",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-11-16",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 39,
+      "budget_used_pct": 81
+    },
+    {
+      "id": "SP3K-012",
+      "client": "Cluster Kemang Hijau",
+      "value": 40000000000,
+      "stage": "OTS",
+      "sp3k_date": "2026-03-25",
+      "ots_date": "2026-05-24",
+      "spk_date": "2026-05-30",
+      "retensi_date": null,
+      "pic": "Mada",
+      "progress_pct": 40,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-04-22",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-05-11",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-05-26",
+          "done": false
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-08-30",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-11-16",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 17,
+      "budget_used_pct": 79
+    },
+    {
+      "id": "SP3K-013",
+      "client": "Cluster Sentul Asri",
+      "value": 73000000000,
+      "stage": "SPK",
+      "sp3k_date": "2026-02-04",
+      "ots_date": "2026-06-16",
+      "spk_date": "2026-06-07",
+      "retensi_date": null,
+      "pic": "Mada",
+      "progress_pct": 32,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-04-27",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-04-24",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-06-23",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-09-19",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-09-29",
+          "done": false
+        }
+      ],
+      "blockers": [
+        {
+          "issue": "Material delay",
+          "eta_days": 27
+        }
+      ],
+      "budget_line_count": 30,
+      "budget_used_pct": 60
+    },
+    {
+      "id": "SP3K-014",
+      "client": "Cluster Pamulang Indah",
+      "value": 53000000000,
+      "stage": "Retensi",
+      "sp3k_date": "2026-01-11",
+      "ots_date": "2026-04-30",
+      "spk_date": "2026-07-04",
+      "retensi_date": "2026-09-27",
+      "pic": "Rizal",
+      "progress_pct": 83,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-02-09",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-03-24",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-06-18",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-11-16",
+          "done": false
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-12-26",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 32,
+      "budget_used_pct": 68
+    },
+    {
+      "id": "SP3K-015",
+      "client": "Cluster Bintaro Lestari",
+      "value": 23000000000,
+      "stage": "Selesai",
+      "sp3k_date": "2026-04-06",
+      "ots_date": "2026-04-07",
+      "spk_date": "2026-06-15",
+      "retensi_date": "2026-09-07",
+      "pic": "Amir",
+      "progress_pct": 65,
+      "milestones": [
+        {
+          "name": "SP3K",
+          "date": "2026-04-26",
+          "done": true
+        },
+        {
+          "name": "OTS",
+          "date": "2026-03-06",
+          "done": true
+        },
+        {
+          "name": "SPK",
+          "date": "2026-07-04",
+          "done": true
+        },
+        {
+          "name": "Retensi",
+          "date": "2026-10-24",
+          "done": true
+        },
+        {
+          "name": "Serah Terima",
+          "date": "2026-10-23",
+          "done": false
+        }
+      ],
+      "blockers": [],
+      "budget_line_count": 39,
+      "budget_used_pct": 48
+    }
+  ]
+}
