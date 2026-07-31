@@ -43,11 +43,6 @@ body {
   }
 }
 
-/* Geist loaded from Google Fonts CDN (variable font, 100-900 weight range).
-   Fallback chain: Geist → system-ui → Segoe UI → Roboto → sans-serif.
-   Previous jsdelivr path 404'd; Google Fonts is the stable CDN. */
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap");
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   margin: 0;

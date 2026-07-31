@@ -80,7 +80,9 @@ export function dataTable({
     searchInput = document.createElement("input");
     searchInput.type = "search";
     searchInput.className = "input table-toolbar__search";
+    searchInput.name = "tableSearch";
     searchInput.placeholder = "Cari di tabel…";
+    searchInput.setAttribute("aria-label", "Cari di tabel");
     searchInput.addEventListener("input", (e) => { state.q = e.target.value; render(); });
     toolbar.appendChild(searchInput);
   }
@@ -89,6 +91,7 @@ export function dataTable({
   columns.filter(c => c.filter).forEach(c => {
     const sel = document.createElement("select");
     sel.className = "select table-toolbar__filter";
+    sel.name = `filter-${c.key}`;
     sel.innerHTML = `<option value="">${escapeHtml(c.filterLabel || c.label)}</option>`;
     const distinct = [...new Set(baseRows.map(r => String(r[c.key] ?? "")))].sort();
     distinct.forEach(v => {
@@ -207,6 +210,8 @@ export function dataTable({
       th.style.width = "32px";
       const cb = document.createElement("input");
       cb.type = "checkbox";
+      cb.name = "selectAll";
+      cb.setAttribute("aria-label", "Pilih semua baris");
       cb.addEventListener("change", () => {
         const rows = filteredRows();
         if (cb.checked) rows.forEach(r => state.selected.add(r[idKey]));
@@ -251,6 +256,9 @@ export function dataTable({
           const td = document.createElement("td");
           const cb = document.createElement("input");
           cb.type = "checkbox";
+          cb.name = "rowSelect";
+          cb.value = row[idKey];
+          cb.setAttribute("aria-label", `Pilih baris ${row[idKey]}`);
           cb.checked = state.selected.has(row[idKey]);
           cb.addEventListener("change", () => {
             if (cb.checked) state.selected.add(row[idKey]);
@@ -311,6 +319,7 @@ export function dataTable({
               const input = document.createElement("input");
               input.type = c.editType || "text";
               input.className = "input input--inline";
+              input.name = c.key;
               input.value = cur;
               input.style.width = "100%";
               td.textContent = "";
